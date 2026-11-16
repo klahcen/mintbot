@@ -1,0 +1,191 @@
+{
+  "scope": "Offline recorded-fixture quote regression. Local test clocks are reset; no current-chain freshness or paper eligibility asserted.",
+  "fixtureCapturedAt": "2026-11-06T15:30:11Z",
+  "state": {
+    "venue": "pump",
+    "launch": {
+      "id": "pump:3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5:0",
+      "program": "pump",
+      "signature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+      "slot": 465020951,
+      "kind": "launch",
+      "address": "BpUpaZAVBi4bmYyKx1F8iTMzjFbMtydvjgkMAtxnMhGg",
+      "mints": [
+        "33gPhVj2UAqC5Es4sJTr8XT6cD9kujzDzKV2X8BDpump"
+      ],
+      "creator": "7KtbPfNU3XHAfW3fNvxeAjGbbAxs7w9sEbXJXs2oVnSX",
+      "chainTimestamp": "1793735095",
+      "instruction": "create_v2",
+      "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+      "accountContextSlot": 465024467,
+      "executionEligible": false
+    },
+    "provider": "api.mainnet-beta.solana.com",
+    "slot": 466160414,
+    "commitment": "finalized",
+    "retrievedAt": 1793983202838,
+    "retrievedMono": 1721.131215,
+    "digest": "b5ee6dd61d9520d9023bff13e508b0dc25023e5cbd21c68fdf06e3d25633a623",
+    "revision": "pump-public-docs@639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22; pump-sdk@4.3.1",
+    "mint": "33gPhVj2UAqC5Es4sJTr8XT6cD9kujzDzKV2X8BDpump",
+    "decimals": 6,
+    "supply": "956235512897782",
+    "baseReserve": "1029235512897782",
+    "quoteReserve": "346416232546",
+    "liquidityLamports": "41424",
+    "protocolFeeBps": "95",
+    "creatorFeeBps": "30",
+    "accounts": [
+      {
+        "address": "33gPhVj2UAqC5Es4sJTr8XT6cD9kujzDzKV2X8BDpump",
+        "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+        "sha256": "9de6ac533306668a85f1c6ff048c85efcf7f2c9b6149fdbed632937bfa976c83"
+      },
+      {
+        "address": "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+        "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+        "sha256": "9185b23ad4dd0f42965b1abf4d911c52382e86a5315ab3a72d4540bc31dde297"
+      },
+      {
+        "address": "8Wf5TiAheLUqBrKXeYg2JtAFFMWtKdG2BSFgqUcPVwTt",
+        "owner": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+        "sha256": "ddbe0abb29c2271056fb520864df84d308799500f9f3cc2ef2ace352cddc849d"
+      },
+      {
+        "address": "BpUpaZAVBi4bmYyKx1F8iTMzjFbMtydvjgkMAtxnMhGg",
+        "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+        "sha256": "d68c36f11fd244eddd969804feadebdb74a6ab36d451ec64e782b7cfe9de55dd"
+      },
+      {
+        "address": "fGTEityjk6vZy8VuohHawE1P3JsBxq72PZsvRf4fe9c",
+        "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+        "sha256": "5d3714f8522f22afa6de0c6458e2c05a22542de0dce8f1c868d5d9dc67d3282b"
+      }
+    ],
+    "source": "https://www.npmjs.com/package/@pump-fun/pump-sdk/v/4.3.1",
+    "signals": {
+      "mintAuthority": {
+        "status": "verified",
+        "value": false,
+        "reason": "Mint authority disabled",
+        "slot": 466160414
+      },
+      "freezeAuthority": {
+        "status": "verified",
+        "value": false,
+        "reason": "Freeze authority disabled",
+        "slot": 466160414
+      },
+      "transferRestrictions": {
+        "status": "verified",
+        "value": false,
+        "reason": "Legacy token or metadata-only Token-2022 extension set",
+        "slot": 466160414
+      },
+      "extensions": {
+        "status": "verified",
+        "value": [
+          "MetadataPointer",
+          "TokenMetadata"
+        ],
+        "reason": "Exact mint TLV extension identifiers",
+        "slot": 466160414
+      },
+      "mintDecimals": {
+        "status": "verified",
+        "value": {
+          "decimals": 6,
+          "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "supply": "956235512897782"
+        },
+        "reason": "Mint account decimals, program and integer supply",
+        "slot": 466160414
+      },
+      "feeSchedule": {
+        "status": "verified",
+        "value": {
+          "threshold": "0",
+          "protocolFeeBps": "95",
+          "creatorFeeBps": "30",
+          "globalConfigurable": true,
+          "curveCreatorFeeBps": "0"
+        },
+        "reason": "Selected on-chain fee tier and creator override",
+        "slot": 466160414
+      },
+      "custody": {
+        "status": "verified",
+        "value": {
+          "tokenAccount": "fGTEityjk6vZy8VuohHawE1P3JsBxq72PZsvRf4fe9c",
+          "tokenAtoms": "956235512897782",
+          "solLamports": "1534944",
+          "realQuoteLamports": "41424",
+          "creatorFeeLamports": "0",
+          "protocolFeeLamports": "0"
+        },
+        "reason": "Actual custody covers claimed real reserves and fee buckets",
+        "slot": 466160414
+      },
+      "realTokenReserves": {
+        "status": "verified",
+        "value": "749335512897782",
+        "reason": "Curve and token custody reconciled",
+        "slot": 466160414
+      },
+      "liquidity": {
+        "status": "verified",
+        "value": "41424",
+        "reason": "Real SOL reserves; virtual SOL excluded",
+        "slot": 466160414
+      },
+      "holderConcentration": {
+        "status": "unknown",
+        "reason": "Complete holder enumeration unavailable; largest accounts cannot establish owner concentration"
+      },
+      "creatorHistory": {
+        "status": "unknown",
+        "reason": "Creator trading history has not been independently established"
+      },
+      "liquidityChanges": {
+        "status": "unknown",
+        "reason": "First observation; no prior reserve evidence"
+      },
+      "protocolVersion": {
+        "status": "verified",
+        "value": "166/1045|1088/2512|4073|4097",
+        "reason": "Strict pinned account variants; upgrade drift must be separately checked",
+        "slot": 466160414
+      }
+    }
+  },
+  "buy": {
+    "side": "buy",
+    "input": "10000",
+    "output": "29339561",
+    "minimumOutput": "29046165",
+    "poolFee": "124",
+    "poolFeeAsset": "So11111111111111111111111111111111111111112",
+    "impactBps": "126",
+    "stateDigest": "b5ee6dd61d9520d9023bff13e508b0dc25023e5cbd21c68fdf06e3d25633a623",
+    "slot": 466160414,
+    "provider": "api.mainnet-beta.solana.com",
+    "computedMono": 1756.240803,
+    "expiresMono": 3221.1312150000003,
+    "kind": "account-state-estimate"
+  },
+  "sell": {
+    "side": "sell",
+    "input": "29339561",
+    "output": "9750",
+    "minimumOutput": "9652",
+    "poolFee": "124",
+    "poolFeeAsset": "So11111111111111111111111111111111111111112",
+    "impactBps": "126",
+    "stateDigest": "b5ee6dd61d9520d9023bff13e508b0dc25023e5cbd21c68fdf06e3d25633a623",
+    "slot": 466160414,
+    "provider": "api.mainnet-beta.solana.com",
+    "computedMono": 1756.44977,
+    "expiresMono": 3221.1312150000003,
+    "kind": "account-state-estimate"
+  }
+}

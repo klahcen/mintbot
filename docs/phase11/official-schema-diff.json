@@ -1,0 +1,1241 @@
+{
+  "rows": [
+    {
+      "reviewedLocal": "src/market/pumpswap-layouts.json",
+      "currentOfficial": "docs/phase11/official-schemas/pump-fun-pump-public-docs-idl-pump_amm.json",
+      "types": [
+        {
+          "name": "Pool",
+          "reviewedTypePresent": true,
+          "currentTypePresent": true,
+          "fieldsEqualIgnoringDocs": true,
+          "reviewedFields": {
+            "name": "Pool",
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "pool_bump",
+                  "type": "u8"
+                },
+                {
+                  "name": "index",
+                  "type": "u16"
+                },
+                {
+                  "name": "creator",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "base_mint",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "quote_mint",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "lp_mint",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "pool_base_token_account",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "pool_quote_token_account",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "lp_supply",
+                  "type": "u64"
+                },
+                {
+                  "name": "coin_creator",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "is_mayhem_mode",
+                  "type": "bool"
+                },
+                {
+                  "name": "is_cashback_coin",
+                  "type": "bool"
+                },
+                {
+                  "name": "virtual_quote_reserves",
+                  "type": "i128"
+                },
+                {
+                  "name": "creator_fee_bps",
+                  "type": "u64"
+                },
+                {
+                  "name": "can_edit_creator_fee",
+                  "type": "bool"
+                },
+                {
+                  "name": "is_holder_reward",
+                  "type": "bool"
+                },
+                {
+                  "name": "protocol_fees",
+                  "type": "u64"
+                },
+                {
+                  "name": "creator_fees",
+                  "type": "u64"
+                }
+              ]
+            }
+          },
+          "currentFields": {
+            "name": "Pool",
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "pool_bump",
+                  "type": "u8"
+                },
+                {
+                  "name": "index",
+                  "type": "u16"
+                },
+                {
+                  "name": "creator",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "base_mint",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "quote_mint",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "lp_mint",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "pool_base_token_account",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "pool_quote_token_account",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "lp_supply",
+                  "docs": [
+                    "True circulating supply without burns and lock-ups"
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "coin_creator",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "is_mayhem_mode",
+                  "type": "bool"
+                },
+                {
+                  "name": "is_cashback_coin",
+                  "type": "bool"
+                },
+                {
+                  "name": "virtual_quote_reserves",
+                  "docs": [
+                    "For non-boost pools, value is 0, so the behavior is identical to legacy pools."
+                  ],
+                  "type": "i128"
+                },
+                {
+                  "name": "creator_fee_bps",
+                  "type": "u64"
+                },
+                {
+                  "name": "can_edit_creator_fee",
+                  "type": "bool"
+                },
+                {
+                  "name": "is_holder_reward",
+                  "type": "bool"
+                },
+                {
+                  "name": "protocol_fees",
+                  "type": "u64"
+                },
+                {
+                  "name": "creator_fees",
+                  "type": "u64"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GlobalConfig",
+          "reviewedTypePresent": true,
+          "currentTypePresent": true,
+          "fieldsEqualIgnoringDocs": true,
+          "reviewedFields": {
+            "name": "GlobalConfig",
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "admin",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "lp_fee_basis_points",
+                  "type": "u64"
+                },
+                {
+                  "name": "protocol_fee_basis_points",
+                  "type": "u64"
+                },
+                {
+                  "name": "disable_flags",
+                  "type": "u8"
+                },
+                {
+                  "name": "protocol_fee_recipients",
+                  "type": {
+                    "array": [
+                      "pubkey",
+                      8
+                    ]
+                  }
+                },
+                {
+                  "name": "coin_creator_fee_basis_points",
+                  "type": "u64"
+                },
+                {
+                  "name": "admin_set_coin_creator_authority",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "whitelist_pda",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "reserved_fee_recipient",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "mayhem_mode_enabled",
+                  "type": "bool"
+                },
+                {
+                  "name": "reserved_fee_recipients",
+                  "type": {
+                    "array": [
+                      "pubkey",
+                      7
+                    ]
+                  }
+                },
+                {
+                  "name": "is_cashback_enabled",
+                  "type": "bool"
+                },
+                {
+                  "name": "buyback_fee_recipients",
+                  "type": {
+                    "array": [
+                      "pubkey",
+                      8
+                    ]
+                  }
+                },
+                {
+                  "name": "buyback_basis_points",
+                  "type": "u64"
+                },
+                {
+                  "name": "boost_authority",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "boost_enabled",
+                  "type": "bool"
+                },
+                {
+                  "name": "creator_fee_configurable",
+                  "type": "bool"
+                },
+                {
+                  "name": "max_configurable_creator_fee_bps",
+                  "type": "u64"
+                }
+              ]
+            }
+          },
+          "currentFields": {
+            "name": "GlobalConfig",
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "admin",
+                  "docs": [
+                    "The admin pubkey"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "lp_fee_basis_points",
+                  "type": "u64"
+                },
+                {
+                  "name": "protocol_fee_basis_points",
+                  "type": "u64"
+                },
+                {
+                  "name": "disable_flags",
+                  "docs": [
+                    "Flags to disable certain functionality",
+                    "bit 0 - Disable create pool",
+                    "bit 1 - Disable deposit",
+                    "bit 2 - Disable withdraw",
+                    "bit 3 - Disable buy",
+                    "bit 4 - Disable sell"
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "protocol_fee_recipients",
+                  "docs": [
+                    "Addresses of the protocol fee recipients"
+                  ],
+                  "type": {
+                    "array": [
+                      "pubkey",
+                      8
+                    ]
+                  }
+                },
+                {
+                  "name": "coin_creator_fee_basis_points",
+                  "type": "u64"
+                },
+                {
+                  "name": "admin_set_coin_creator_authority",
+                  "docs": [
+                    "The admin authority for setting coin creators"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "whitelist_pda",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "reserved_fee_recipient",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "mayhem_mode_enabled",
+                  "type": "bool"
+                },
+                {
+                  "name": "reserved_fee_recipients",
+                  "type": {
+                    "array": [
+                      "pubkey",
+                      7
+                    ]
+                  }
+                },
+                {
+                  "name": "is_cashback_enabled",
+                  "type": "bool"
+                },
+                {
+                  "name": "buyback_fee_recipients",
+                  "type": {
+                    "array": [
+                      "pubkey",
+                      8
+                    ]
+                  }
+                },
+                {
+                  "name": "buyback_basis_points",
+                  "type": "u64"
+                },
+                {
+                  "name": "boost_authority",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "boost_enabled",
+                  "type": "bool"
+                },
+                {
+                  "name": "creator_fee_configurable",
+                  "type": "bool"
+                },
+                {
+                  "name": "max_configurable_creator_fee_bps",
+                  "type": "u64"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "scope": "Schema text comparison only; type names and equality do not tie SDK/source to deployed binary or authorize a variant."
+    },
+    {
+      "reviewedLocal": "src/market/meteora-layouts.json",
+      "currentOfficial": "docs/phase11/official-schemas/MeteoraAg-dlmm-sdk-idls-dlmm.json",
+      "types": [
+        {
+          "name": "LbPair",
+          "reviewedTypePresent": true,
+          "currentTypePresent": true,
+          "fieldsEqualIgnoringDocs": true,
+          "reviewedFields": {
+            "name": "LbPair",
+            "serialization": "bytemuck",
+            "repr": {
+              "kind": "c"
+            },
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "parameters",
+                  "type": {
+                    "defined": {
+                      "name": "StaticParameters"
+                    }
+                  }
+                },
+                {
+                  "name": "v_parameters",
+                  "type": {
+                    "defined": {
+                      "name": "VariableParameters"
+                    }
+                  }
+                },
+                {
+                  "name": "bump_seed",
+                  "type": {
+                    "array": [
+                      "u8",
+                      1
+                    ]
+                  }
+                },
+                {
+                  "name": "bin_step_seed",
+                  "type": {
+                    "array": [
+                      "u8",
+                      2
+                    ]
+                  }
+                },
+                {
+                  "name": "pair_type",
+                  "type": "u8"
+                },
+                {
+                  "name": "active_id",
+                  "type": "i32"
+                },
+                {
+                  "name": "bin_step",
+                  "type": "u16"
+                },
+                {
+                  "name": "status",
+                  "type": "u8"
+                },
+                {
+                  "name": "require_base_factor_seed",
+                  "type": "u8"
+                },
+                {
+                  "name": "base_factor_seed",
+                  "type": {
+                    "array": [
+                      "u8",
+                      2
+                    ]
+                  }
+                },
+                {
+                  "name": "activation_type",
+                  "type": "u8"
+                },
+                {
+                  "name": "creator_pool_on_off_control",
+                  "type": "u8"
+                },
+                {
+                  "name": "token_x_mint",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "token_y_mint",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "reserve_x",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "reserve_y",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "protocol_fee",
+                  "type": {
+                    "defined": {
+                      "name": "ProtocolFee"
+                    }
+                  }
+                },
+                {
+                  "name": "_padding_1",
+                  "type": {
+                    "array": [
+                      "u8",
+                      32
+                    ]
+                  }
+                },
+                {
+                  "name": "reward_infos",
+                  "type": {
+                    "array": [
+                      {
+                        "defined": {
+                          "name": "RewardInfo"
+                        }
+                      },
+                      2
+                    ]
+                  }
+                },
+                {
+                  "name": "oracle",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "bin_array_bitmap",
+                  "type": {
+                    "array": [
+                      "u64",
+                      16
+                    ]
+                  }
+                },
+                {
+                  "name": "last_updated_at",
+                  "type": "i64"
+                },
+                {
+                  "name": "_padding_2",
+                  "type": {
+                    "array": [
+                      "u8",
+                      32
+                    ]
+                  }
+                },
+                {
+                  "name": "pre_activation_swap_address",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "base_key",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "activation_point",
+                  "type": "u64"
+                },
+                {
+                  "name": "pre_activation_duration",
+                  "type": "u64"
+                },
+                {
+                  "name": "_padding_3",
+                  "type": {
+                    "array": [
+                      "u8",
+                      8
+                    ]
+                  }
+                },
+                {
+                  "name": "_padding_4",
+                  "type": "u64"
+                },
+                {
+                  "name": "creator",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "token_mint_x_program_flag",
+                  "type": "u8"
+                },
+                {
+                  "name": "token_mint_y_program_flag",
+                  "type": "u8"
+                },
+                {
+                  "name": "version",
+                  "type": "u8"
+                },
+                {
+                  "name": "_reserved",
+                  "type": {
+                    "array": [
+                      "u8",
+                      21
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "currentFields": {
+            "name": "LbPair",
+            "serialization": "bytemuck",
+            "repr": {
+              "kind": "c"
+            },
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "parameters",
+                  "type": {
+                    "defined": {
+                      "name": "StaticParameters"
+                    }
+                  }
+                },
+                {
+                  "name": "v_parameters",
+                  "type": {
+                    "defined": {
+                      "name": "VariableParameters"
+                    }
+                  }
+                },
+                {
+                  "name": "bump_seed",
+                  "type": {
+                    "array": [
+                      "u8",
+                      1
+                    ]
+                  }
+                },
+                {
+                  "name": "bin_step_seed",
+                  "docs": [
+                    "Bin step signer seed"
+                  ],
+                  "type": {
+                    "array": [
+                      "u8",
+                      2
+                    ]
+                  }
+                },
+                {
+                  "name": "pair_type",
+                  "docs": [
+                    "Type of the pair"
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "active_id",
+                  "docs": [
+                    "Active bin id"
+                  ],
+                  "type": "i32"
+                },
+                {
+                  "name": "bin_step",
+                  "docs": [
+                    "Bin step. Represent the price increment / decrement."
+                  ],
+                  "type": "u16"
+                },
+                {
+                  "name": "status",
+                  "docs": [
+                    "Status of the pair. Check PairStatus enum."
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "require_base_factor_seed",
+                  "docs": [
+                    "Require base factor seed"
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "base_factor_seed",
+                  "docs": [
+                    "Base factor seed"
+                  ],
+                  "type": {
+                    "array": [
+                      "u8",
+                      2
+                    ]
+                  }
+                },
+                {
+                  "name": "activation_type",
+                  "docs": [
+                    "Activation type"
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "creator_pool_on_off_control",
+                  "docs": [
+                    "Allow pool creator to enable/disable pool with restricted validation. Only applicable for customizable permissionless pair type."
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "token_x_mint",
+                  "docs": [
+                    "Token X mint"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "token_y_mint",
+                  "docs": [
+                    "Token Y mint"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "reserve_x",
+                  "docs": [
+                    "LB token X vault"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "reserve_y",
+                  "docs": [
+                    "LB token Y vault"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "protocol_fee",
+                  "docs": [
+                    "Uncollected protocol fee"
+                  ],
+                  "type": {
+                    "defined": {
+                      "name": "ProtocolFee"
+                    }
+                  }
+                },
+                {
+                  "name": "_padding_1",
+                  "docs": [
+                    "padding 1"
+                  ],
+                  "type": {
+                    "array": [
+                      "u8",
+                      32
+                    ]
+                  }
+                },
+                {
+                  "name": "reward_infos",
+                  "docs": [
+                    "Farming reward information"
+                  ],
+                  "type": {
+                    "array": [
+                      {
+                        "defined": {
+                          "name": "RewardInfo"
+                        }
+                      },
+                      2
+                    ]
+                  }
+                },
+                {
+                  "name": "oracle",
+                  "docs": [
+                    "Oracle pubkey"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "bin_array_bitmap",
+                  "docs": [
+                    "Packed initialized bin array state"
+                  ],
+                  "type": {
+                    "array": [
+                      "u64",
+                      16
+                    ]
+                  }
+                },
+                {
+                  "name": "last_updated_at",
+                  "docs": [
+                    "Last time the pool fee parameter was updated"
+                  ],
+                  "type": "i64"
+                },
+                {
+                  "name": "_padding_2",
+                  "docs": [
+                    "_padding_2"
+                  ],
+                  "type": {
+                    "array": [
+                      "u8",
+                      32
+                    ]
+                  }
+                },
+                {
+                  "name": "pre_activation_swap_address",
+                  "docs": [
+                    "Address allowed to swap when the current point is greater than or equal to the pre-activation point. The pre-activation point is calculated as `activation_point - pre_activation_duration`."
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "base_key",
+                  "docs": [
+                    "Base keypair. Only required for permission pair"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "activation_point",
+                  "docs": [
+                    "Time point to enable the pair. Only applicable for permission pair."
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "pre_activation_duration",
+                  "docs": [
+                    "Duration before activation activation_point. Used to calculate pre-activation time point for pre_activation_swap_address"
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "_padding_3",
+                  "docs": [
+                    "_padding 3"
+                  ],
+                  "type": {
+                    "array": [
+                      "u8",
+                      8
+                    ]
+                  }
+                },
+                {
+                  "name": "_padding_4",
+                  "docs": [
+                    "_padding_4"
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "creator",
+                  "docs": [
+                    "Pool creator"
+                  ],
+                  "type": "pubkey"
+                },
+                {
+                  "name": "token_mint_x_program_flag",
+                  "docs": [
+                    "token_mint_x_program_flag"
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "token_mint_y_program_flag",
+                  "docs": [
+                    "token_mint_y_program_flag"
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "version",
+                  "docs": [
+                    "version to know whether we have reset tombstone fields"
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "_reserved",
+                  "docs": [
+                    "Reserved space for future use"
+                  ],
+                  "type": {
+                    "array": [
+                      "u8",
+                      21
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "BinArray",
+          "reviewedTypePresent": true,
+          "currentTypePresent": true,
+          "fieldsEqualIgnoringDocs": true,
+          "reviewedFields": {
+            "name": "BinArray",
+            "serialization": "bytemuck",
+            "repr": {
+              "kind": "c"
+            },
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "index",
+                  "type": "i64"
+                },
+                {
+                  "name": "version",
+                  "type": "u8"
+                },
+                {
+                  "name": "_padding_1",
+                  "type": {
+                    "array": [
+                      "u8",
+                      7
+                    ]
+                  }
+                },
+                {
+                  "name": "lb_pair",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "bins",
+                  "type": {
+                    "array": [
+                      {
+                        "defined": {
+                          "name": "Bin"
+                        }
+                      },
+                      70
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "currentFields": {
+            "name": "BinArray",
+            "docs": [
+              "An account to contain a range of bin. For example: Bin 100 <-> 200.",
+              "For example:",
+              "BinArray index: 0 contains bin 0 <-> 599",
+              "index: 2 contains bin 600 <-> 1199, ..."
+            ],
+            "serialization": "bytemuck",
+            "repr": {
+              "kind": "c"
+            },
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "index",
+                  "type": "i64"
+                },
+                {
+                  "name": "version",
+                  "type": "u8"
+                },
+                {
+                  "name": "_padding_1",
+                  "type": {
+                    "array": [
+                      "u8",
+                      7
+                    ]
+                  }
+                },
+                {
+                  "name": "lb_pair",
+                  "type": "pubkey"
+                },
+                {
+                  "name": "bins",
+                  "type": {
+                    "array": [
+                      {
+                        "defined": {
+                          "name": "Bin"
+                        }
+                      },
+                      70
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Bin",
+          "reviewedTypePresent": true,
+          "currentTypePresent": true,
+          "fieldsEqualIgnoringDocs": true,
+          "reviewedFields": {
+            "name": "Bin",
+            "serialization": "bytemuck",
+            "repr": {
+              "kind": "c"
+            },
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "amount_x",
+                  "type": "u64"
+                },
+                {
+                  "name": "amount_y",
+                  "type": "u64"
+                },
+                {
+                  "name": "price",
+                  "type": "u128"
+                },
+                {
+                  "name": "liquidity_supply",
+                  "type": "u128"
+                },
+                {
+                  "name": "fulfilled_order_amount_x",
+                  "type": "u64"
+                },
+                {
+                  "name": "fulfilled_order_amount_y",
+                  "type": "u64"
+                },
+                {
+                  "name": "limit_order_fee_ask_side",
+                  "type": "u64"
+                },
+                {
+                  "name": "limit_order_fee_bid_side",
+                  "type": "u64"
+                },
+                {
+                  "name": "fee_amount_x_per_token_stored",
+                  "type": "u128"
+                },
+                {
+                  "name": "fee_amount_y_per_token_stored",
+                  "type": "u128"
+                },
+                {
+                  "name": "open_order_amount",
+                  "type": "u64"
+                },
+                {
+                  "name": "total_processing_order_amount",
+                  "type": "u64"
+                },
+                {
+                  "name": "processed_order_remaining_amount",
+                  "type": "u64"
+                },
+                {
+                  "name": "order_age",
+                  "type": "u32"
+                },
+                {
+                  "name": "limit_order_ask_side",
+                  "type": "u8"
+                },
+                {
+                  "name": "_padding_1",
+                  "type": {
+                    "array": [
+                      "u8",
+                      3
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "currentFields": {
+            "name": "Bin",
+            "serialization": "bytemuck",
+            "repr": {
+              "kind": "c"
+            },
+            "type": {
+              "kind": "struct",
+              "fields": [
+                {
+                  "name": "amount_x",
+                  "docs": [
+                    "Amount of token X in the bin for market making. This already excluded protocol fees."
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "amount_y",
+                  "docs": [
+                    "Amount of token Y in the bin for market making. This already excluded protocol fees."
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "price",
+                  "docs": [
+                    "Bin price"
+                  ],
+                  "type": "u128"
+                },
+                {
+                  "name": "liquidity_supply",
+                  "docs": [
+                    "Bin MM liquidity supply."
+                  ],
+                  "type": "u128"
+                },
+                {
+                  "name": "fulfilled_order_amount_x",
+                  "docs": [
+                    "Total fulfilled order amount x"
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "fulfilled_order_amount_y",
+                  "docs": [
+                    "Total fulfilled order amount y"
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "limit_order_fee_ask_side",
+                  "docs": [
+                    "Limit order fee collected by ask side orders"
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "limit_order_fee_bid_side",
+                  "docs": [
+                    "Limit order fee collected by bid side orders"
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "fee_amount_x_per_token_stored",
+                  "docs": [
+                    "Swap fee amount of token X per liquidity deposited."
+                  ],
+                  "type": "u128"
+                },
+                {
+                  "name": "fee_amount_y_per_token_stored",
+                  "docs": [
+                    "Swap fee amount of token Y per liquidity deposited."
+                  ],
+                  "type": "u128"
+                },
+                {
+                  "name": "open_order_amount",
+                  "docs": [
+                    "Pending open limit orders amount in the bin."
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "total_processing_order_amount",
+                  "docs": [
+                    "Total processing order amount"
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "processed_order_remaining_amount",
+                  "docs": [
+                    "Remaining in processing open limit orders amount in the bin."
+                  ],
+                  "type": "u64"
+                },
+                {
+                  "name": "order_age",
+                  "docs": [
+                    "Age"
+                  ],
+                  "type": "u32"
+                },
+                {
+                  "name": "limit_order_ask_side",
+                  "docs": [
+                    "limit order flag"
+                  ],
+                  "type": "u8"
+                },
+                {
+                  "name": "_padding_1",
+                  "docs": [
+                    "padding"
+                  ],
+                  "type": {
+                    "array": [
+                      "u8",
+                      3
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "scope": "Schema text comparison only; type names and equality do not tie SDK/source to deployed binary or authorize a variant."
+    }
+  ],
+  "newVariantsEnabled": false
+}

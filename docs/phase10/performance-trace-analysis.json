@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-11-14T17:26:22.355960+00:00",
+  "walSyscalls": [
+    {
+      "syscall": "write",
+      "count": 800,
+      "p50Ms": 0.041,
+      "p95Ms": 0.11299999999999999,
+      "maxMs": 1.7619999999999998
+    },
+    {
+      "syscall": "fsync",
+      "count": 357,
+      "p50Ms": 1.9269999999999998,
+      "p95Ms": 3.4749999999999996,
+      "maxMs": 6.169
+    }
+  ],
+  "joinedUnfinishedResumedCalls": 408,
+  "unmatchedPendingCalls": 0,
+  "unparsedWalLines": 0,
+  "failedParsedWalSyscalls": 0,
+  "walThreadIds": [
+    "195725",
+    "195812"
+  ],
+  "threads": [
+    {
+      "side": "before",
+      "elapsedMs": 2745.1631510000007,
+      "main": {
+        "tid": "195583",
+        "name": "node",
+        "main": true,
+        "observedSamples": 131,
+        "firstAtMs": 15533.016322,
+        "lastAtMs": 18285.569647,
+        "runtimeMs": 1460.638192,
+        "runqueueWaitMs": 226.266686,
+        "schedulingSlices": 45697
+      },
+      "walWritingThreads": [
+        {
+          "tid": "195725",
+          "name": "node",
+          "main": false,
+          "observedSamples": 131,
+          "firstAtMs": 15533.016322,
+          "lastAtMs": 18285.569647,
+          "runtimeMs": 253.977017,
+          "runqueueWaitMs": 78.028491,
+          "schedulingSlices": 4927
+        }
+      ],
+      "walThreadIdentification": "Linux thread IDs observed writing the WAL path in this exact trace",
+      "scope": "Observed 20ms sampling endpoints; tracing overhead included; not a production CPU SLO."
+    },
+    {
+      "side": "after",
+      "elapsedMs": 2505.935551999999,
+      "main": {
+        "tid": "195583",
+        "name": "node",
+        "main": true,
+        "observedSamples": 120,
+        "firstAtMs": 22259.578584,
+        "lastAtMs": 24772.342966,
+        "runtimeMs": 1265.560984,
+        "runqueueWaitMs": 225.921505,
+        "schedulingSlices": 43089
+      },
+      "walWritingThreads": [
+        {
+          "tid": "195812",
+          "name": "node",
+          "main": false,
+          "observedSamples": 120,
+          "firstAtMs": 22259.578584,
+          "lastAtMs": 24772.342966,
+          "runtimeMs": 230.592479,
+          "runqueueWaitMs": 77.188412,
+          "schedulingSlices": 4739
+        }
+      ],
+      "walThreadIdentification": "Linux thread IDs observed writing the WAL path in this exact trace",
+      "scope": "Observed 20ms sampling endpoints; tracing overhead included; not a production CPU SLO."
+    }
+  ],
+  "scope": "Complete path-annotated calls plus matched unfinished/resumed pairs. Syscall wall durations include tracing/scheduling effects, not isolated device latency. Kernel global sched_schedstats=0 is retained as context; per-task nonzero counters are reported as observed, not assumed unavailable."
+}

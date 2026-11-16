@@ -1,0 +1,24 @@
+{
+  "scope": "disposable local containers; internal test CA; no public ACME or VPS deployment",
+  "project": "mintbot-cloud-test-ce40e1bdf3",
+  "checks": {
+    "composeSyntax": true,
+    "isolationSecretsAndRestartPolicy": true,
+    "researchStoppedByDefault": true,
+    "authenticatedDatabaseReadiness": true,
+    "authenticationAndPaperFence": true,
+    "requestErrorAndLogRedaction": true,
+    "databaseRuntimeCannotCreateTables": true,
+    "databaseAndPaperVolumeRecreation": true,
+    "restartRequiresOperatorResume": true,
+    "encryptedBackupAndIsolatedRestore": true,
+    "corruptBackupRejected": true,
+    "databaseFailureDetected": true,
+    "databaseRecovery": true,
+    "httpRedirectToExternal443": true,
+    "localTrustedTLSAndProxyAuth": true,
+    "monitorReturnsBlockedWarnings": true,
+    "stickyStopPersists": true,
+    "imageExcludesPrivateFiles": true
+  }
+}

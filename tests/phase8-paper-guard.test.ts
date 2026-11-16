@@ -1,0 +1,21 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { constructionCase } from "./simulation-fixtures.js";
+import { SimulationGatedPaper } from "../src/simulation/paper-gate.js";
+import { SimulationRpc } from "../src/simulation/rpc.js";
+import { RealMarketPaper,initializeMarketLedger } from "../src/market/paper.js";
+import { marketPolicy } from "../src/market/policy.js";
+import { Store,initial } from "../src/store.js";
+import { PumpMarketAdapter } from "../src/market/pump.js";
+import { verified,type MarketState } from "../src/market/types.js";
+import { json } from "./market-fixtures.js";
+for(const status of ["unknown","failed"] as const)test(`Configured ${status} provider agreement blocks paper admission before RPC construction`,async()=>{
+ const fixture=await constructionCase("pump"),state=fixture.evidence.state as MarketState,strategy=await json("config/strategy.json");
+ const store=new Store(initializeMarketLedger(initial(strategy)));store.state.running=true;
+ const paper=new RealMarketPaper(store,undefined,marketPolicy("finalized-paper-research"));
+ state.launch.slot=state.slot;state.launch.creationCommitment="finalized";state.launch.freshness={origin:"live",eventSlot:state.slot,chainHeadSlot:state.slot,receiptAt:Date.now(),eventTimeMs:Date.now()};state.signals.holderConcentration=verified({topOwnerBps:100},"UNIT safety evidence only");
+ let reads=0;const gate=new SimulationGatedPaper(paper,{provider:state.provider,accounts:async()=>{reads++;throw Error("Unexpected construction");},largest:async()=>({slot:state.slot,amounts:[]})},new SimulationRpc("http://127.0.0.1:1"),{providerAgreement:async()=>({status,reasons:["UNIT disagreement"]})});
+ const sell=new PumpMarketAdapter().quote(state,"sell",fixture.evidence.quote.minimumOutput,100),fees=verified({baseLamports:"1",priorityLamports:"0",rentLamports:"0",computeUnitLimit:200000,observedAt:Date.now()},"UNIT fees");
+ const r=await gate.review(state,fixture.evidence.quote,sell,fees,verified(true,"UNIT deployment"));
+ assert(r.reasons.some((s:string)=>s.includes(`agreement ${status}`)));assert.equal(reads,0);assert.equal(store.state.trades.length,0);assert.equal(store.state.marketReviews!.length,1);
+});

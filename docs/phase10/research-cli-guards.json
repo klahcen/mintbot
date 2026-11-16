@@ -1,0 +1,24 @@
+{
+  "image": "mintbot:phase10-readonly",
+  "results": [
+    {
+      "case": "missing-run",
+      "exitCode": 1,
+      "expectedReason": "Explicit --run required",
+      "verified": true
+    },
+    {
+      "case": "live-mode",
+      "exitCode": 1,
+      "expectedReason": "Live mode unavailable",
+      "verified": true
+    },
+    {
+      "case": "existing-evidence",
+      "exitCode": 1,
+      "expectedReason": "EEXIST",
+      "verified": true
+    }
+  ],
+  "scope": "Actual compiled CLI; network disabled and evidence bind mount read-only. No existing source/WAL opened or modified."
+}

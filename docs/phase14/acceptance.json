@@ -1,0 +1,65 @@
+{
+  "overall": "PARTIAL / EXTERNALLY BLOCKED",
+  "criteria": [
+    {
+      "criterion": 1,
+      "status": "PARTIAL",
+      "reason": "Fresh controls reproduce 27,100 Solana public notifications versus zero PublicNode. Finalized program-log verification is blocked by version1; remote cause remains unproven."
+    },
+    {
+      "criterion": 2,
+      "status": "PASS",
+      "reason": "Per-venue ACK, valid delivery, freshness, counters and evidence timestamp; silent required venues block researchCoverage."
+    },
+    {
+      "criterion": 3,
+      "status": "PASS",
+      "reason": "Zero/invalid identities remain refused; malformed mapped envelopes retain subscription/venue provenance; original byte-exact proofs preserved."
+    },
+    {
+      "criterion": 4,
+      "status": "PARTIAL",
+      "reason": "Fresh supported PumpSwap two-sided diagnostics; Raydium sell succeeds, buy capacity gate blocks. Full independent market risk approval absent."
+    },
+    {
+      "criterion": 5,
+      "status": "PARTIAL",
+      "reason": "Four authentic finalized fixtures decode; latest Phase13 Raydium fixture reread succeeds. Legacy Meteora retained fixture passes; current historical reread unavailable; no new variant enabled."
+    },
+    {
+      "criterion": 6,
+      "status": "PASS",
+      "reason": "Historical gaps and quarantines unchanged; clipped sampled history never marks recovery complete."
+    },
+    {
+      "criterion": 7,
+      "status": "EXTERNALLY BLOCKED",
+      "reason": "No authenticated independently operated provider pair available in inspected environment."
+    },
+    {
+      "criterion": 8,
+      "status": "EXTERNALLY BLOCKED",
+      "reason": "Independent reviewer and explicit coverage-epoch policy authority unavailable."
+    },
+    {
+      "criterion": 9,
+      "status": "EXTERNALLY BLOCKED",
+      "reason": "Zero genuine fresh entries/exits. No eligible research lifecycle attempted after prerequisite stop."
+    },
+    {
+      "criterion": 10,
+      "status": "PASS",
+      "reason": "All 328 TypeScript tests (original 323 retained), five Python clock tests, final clean Node22 typecheck/build, Docker smoke, PostgreSQL fault/recovery and zero-advisory audit; initial startup failures retained."
+    },
+    {
+      "criterion": 11,
+      "status": "PASS",
+      "reason": "Live mode rejected; no signer, broadcaster or funded execution introduced."
+    }
+  ],
+  "paperEntries": 0,
+  "paperExits": 0,
+  "providerAuthorization": false,
+  "epochAuthorization": false,
+  "liveTrading": false
+}

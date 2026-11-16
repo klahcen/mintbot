@@ -1,0 +1,219 @@
+{
+  "generatedAt": "2026-11-15T18:50:42.359Z",
+  "cluster": "/tmp/mintbot-phase19-clean-_bkh0fgb/test-user/.local/state/mintbot-phase8-postgres",
+  "persistent": true,
+  "reused": false,
+  "retainedAfterStop": true,
+  "singleNode": true,
+  "highAvailability": false,
+  "events": [
+    {
+      "case": "authenticated-runtime-privileges",
+      "health": {
+        "current_user": "mintbot_runtime8",
+        "fsync": "on",
+        "synchronous_commit": "on",
+        "full_page_writes": "on",
+        "listen_addresses": "",
+        "database_bytes": "7937047",
+        "roundTripMs": 15.322856000000002,
+        "pools": {
+          "migrationMax": 1,
+          "runtimeMax": 2,
+          "administrationMax": 1
+        },
+        "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+      },
+      "roles": [
+        {
+          "rolname": "mintbot_migration8",
+          "rolsuper": false,
+          "rolcreaterole": false,
+          "rolcreatedb": false,
+          "rolreplication": false,
+          "scram": true
+        },
+        {
+          "rolname": "mintbot_runtime8",
+          "rolsuper": false,
+          "rolcreaterole": false,
+          "rolcreatedb": false,
+          "rolreplication": false,
+          "scram": true
+        }
+      ]
+    },
+    {
+      "case": "scram-rotation",
+      "oldCredentialRejected": true,
+      "newCredentialAccepted": true
+    },
+    {
+      "case": "immediate-crash-recovery",
+      "id": "8258172ae53eb4e49eea161518394b6109b37629b3311483d03f0f4fe7f1ec61",
+      "priorFence": "1",
+      "uncertainFence": "2",
+      "retainedCapacityBeforeReview": "10"
+    },
+    {
+      "case": "backup-restore",
+      "sha256": "178b96c011742a2e27307c1df550751c7f2a4b26050c221e3e92162c1583d73e",
+      "bytes": 17312,
+      "auditRows": 4
+    }
+  ],
+  "responsiveness": [
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 2.2471260000002076,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.356181000000106,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.1268879999997807,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.105431000000408,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.0814839999998185,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.375430999999935,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.2830040000003464,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.1253090000000157,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.0634879999997793,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    },
+    {
+      "current_user": "mintbot_runtime8",
+      "fsync": "on",
+      "synchronous_commit": "on",
+      "full_page_writes": "on",
+      "listen_addresses": "",
+      "database_bytes": "7994391",
+      "roundTripMs": 1.0370399999997062,
+      "pools": {
+        "migrationMax": 1,
+        "runtimeMax": 2,
+        "administrationMax": 1
+      },
+      "authentication": "local SCRAM-SHA-256 runtime and migration owner; local peer administrator"
+    }
+  ],
+  "liveAuthorized": false,
+  "submitted": false
+}

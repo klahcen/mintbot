@@ -1,0 +1,4 @@
+# Only when HTTPS/domain is deferred. Access through an SSH tunnel.
+services:
+  app:
+    ports: ["127.0.0.1:3001:3001"]

@@ -1,0 +1,35 @@
+{
+  "node": "v22.22.0",
+  "directory": "/tmp/mintbot-phase18-clean-0qxqugna",
+  "checks": [
+    {
+      "name": "install",
+      "args": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 6.839516205000109
+    },
+    {
+      "name": "typecheck",
+      "args": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 48.432841948000714
+    },
+    {
+      "name": "build",
+      "args": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 97.27025876900007
+    }
+  ]
+}

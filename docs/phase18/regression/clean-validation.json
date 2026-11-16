@@ -1,0 +1,69 @@
+{
+  "node": "v22.22.0",
+  "directory": "/tmp/mintbot-phase18-clean-2ksfnya4",
+  "checks": [
+    {
+      "name": "install",
+      "args": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 6.450137334999454
+    },
+    {
+      "name": "typecheck",
+      "args": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 20.113974122999934
+    },
+    {
+      "name": "build",
+      "args": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 29.259847307999735
+    },
+    {
+      "name": "tests",
+      "args": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 102.35596428199642
+    },
+    {
+      "name": "python-clock-tests",
+      "args": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_phase12_host_health.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.17262638400279684
+    },
+    {
+      "name": "audit",
+      "args": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 1.3850536609970732
+    }
+  ]
+}

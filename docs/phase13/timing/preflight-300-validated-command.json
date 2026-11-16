@@ -1,0 +1,18 @@
+{
+  "args": [
+    "systemd-inhibit",
+    "--what=sleep:idle",
+    "--who=Mintbot",
+    "--why=Corrected Phase13 fresh 300-second preflight launch",
+    "--mode=block",
+    "python3",
+    "scripts/phase12-host-health.py",
+    "--seconds",
+    "300",
+    "--container",
+    "mintbot-phase12-clock",
+    "--output",
+    "docs/phase13/timing/preflight-300-validated"
+  ],
+  "startedAt": "2026-11-15T12:43:32.276050+00:00"
+}

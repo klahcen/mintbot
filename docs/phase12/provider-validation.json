@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-11-14T23:16:38.116Z",
+  "status": "unknown",
+  "eligible": false,
+  "reasons": [
+    "Account banks differ; state agreement unknown",
+    "Independent provider operation lacks distinct source attribution"
+  ],
+  "observations": [
+    {
+      "provider": "solana-public",
+      "host": "api.mainnet-beta.solana.com",
+      "observedAt": 1794698197409,
+      "genesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "finalizedSlot": 469508619,
+      "state": {
+        "slot": 469508619,
+        "digest": "144768da2042546f589b672f79e40d708e36d17c52c9ae419f9e7c56d27fa390",
+        "missingAccounts": 0
+      }
+    },
+    {
+      "provider": "publicnode",
+      "host": "solana-rpc.publicnode.com",
+      "operator": "Allnodes PublicNode",
+      "observedAt": 1794698197503,
+      "genesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "finalizedSlot": 469508617,
+      "state": {
+        "slot": 469508617,
+        "digest": "144768da2042546f589b672f79e40d708e36d17c52c9ae419f9e7c56d27fa390",
+        "missingAccounts": 0
+      }
+    }
+  ],
+  "independence": "unknown",
+  "quarantined": [],
+  "gaps": [],
+  "liveAuthorized": false,
+  "operatorAttributionLimit": "Public endpoint service brands differ; Solana endpoint's underlying operator and independence from Allnodes were not established. No independent-infrastructure agreement claim."
+}

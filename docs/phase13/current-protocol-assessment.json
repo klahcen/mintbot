@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-11-15T12:53:20.188634+00:00",
+  "pump": {
+    "deploymentObservations": [
+      {
+        "provider": "api.mainnet-beta.solana.com",
+        "startedAt": "2026-11-15T12:46:46.443Z",
+        "context": {
+          "apiVersion": "4.4.0",
+          "slot": 469734688
+        },
+        "request": {
+          "method": "getMultipleAccounts",
+          "params": [
+            [
+              "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+              "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu"
+            ],
+            {
+              "commitment": "finalized",
+              "encoding": "base64"
+            }
+          ]
+        },
+        "programHeader": {
+          "data": [
+            "AgAAAJWy2WSqUxLsq7FiccnW8C83EAraitR45YMsvQmTvwu6",
+            "base64"
+          ],
+          "executable": true,
+          "lamports": 9910912472,
+          "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+          "rentEpoch": 18446744073709552000,
+          "space": 36
+        },
+        "programDataHeader": {
+          "data": [
+            "AwAAAKw49RsAAAAAAWNI+4ICMfurc9wwg+Hz8Un/EltxiCDzLrGhW/781hsJ",
+            "base64"
+          ],
+          "executable": false,
+          "lamports": 53268311040,
+          "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+          "rentEpoch": 18446744073709552000,
+          "space": 10485760
+        },
+        "observedDeploymentSlot": "469055660",
+        "programDataBytes": 10485760,
+        "programDataSha256": "c849155c1d5bf990c564bad8df406d704ed05b8d3dc4ee30ce2350bfbc4edf3a",
+        "allocatedPayloadBytes": 10485715,
+        "allocatedPayloadSha256": "f0a9c1e2b65decfef63d807cbf2cedcfd24040634d1a9a3443b63eccecd809d6",
+        "elfReferencedBytes": 1936536,
+        "elfReferencedSha256": "0630a8108569c1c7a5b833c6e11276ebac03c801c495b1685fcfac99bf865cc5",
+        "trailingBytesAllZero": true,
+        "elfMachine": 263,
+        "elfFlags": 0,
+        "authorityOption": 1,
+        "reviewedPinMatches": false
+      }
+    ],
+    "globalBytes": 1096,
+    "globalOwner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "globalSha256": "9c53bc25f36148aae196e87d00e44a60ff397aa042a68e3e892a965908fb551c",
+    "officialGlobalLastField": "max_curve_depth",
+    "unknownGlobalTailHex": "1e00000000000000",
+    "unknownTailSemanticsEstablished": false,
+    "approved": false
+  },
+  "pumpswap": {
+    "pool": "DLEu6cVEPJ9Y64WG9Qs9ZtciWV4e9EjLWP8QH7vki5VA",
+    "baseVault": {
+      "mint": "So11111111111111111111111111111111111111112",
+      "owner": "DLEu6cVEPJ9Y64WG9Qs9ZtciWV4e9EjLWP8QH7vki5VA",
+      "atoms": "585"
+    },
+    "quoteVault": {
+      "mint": "Bj1XKzJ4MRj5gpJ9K4VWEjQsEvSyGuCP8JDjF53pAEHX",
+      "owner": "DLEu6cVEPJ9Y64WG9Qs9ZtciWV4e9EjLWP8QH7vki5VA",
+      "atoms": "498740597"
+    },
+    "signedVirtualQuoteAtoms": "0",
+    "effectiveQuoteAtoms": "498740597",
+    "reference": {
+      "package": "@pump-fun/pump-swap-sdk",
+      "version": "2.2.0",
+      "operation": "poolMarketCap in quote atoms, no native denomination inferred",
+      "actual": "0",
+      "sdk": "0",
+      "equal": true,
+      "nonDegenerateSupply": false,
+      "scope": "Zero native mint supply makes this equality trivial; it is not quote validation"
+    },
+    "strategyLiquidityEligible": false,
+    "reason": "Observed SOL-base custody holds 585 lamports in this finalized capture, below the unchanged strategy liquidity minimum; reversed route and financial variant remain unvalidated. No forced nonzero quote or synthetic custody.",
+    "approved": false
+  },
+  "newVariantsEnabled": false,
+  "liveTrading": false
+}

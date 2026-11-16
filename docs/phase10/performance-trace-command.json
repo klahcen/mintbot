@@ -1,0 +1,31 @@
+{
+  "cwd": "/tmp/mintbot-phase10-phase9-final-k4l7lpn_",
+  "args": [
+    "strace",
+    "-f",
+    "-tt",
+    "-T",
+    "-yy",
+    "-e",
+    "trace=write,pwrite64,fsync,fdatasync",
+    "-o",
+    "/home/lkazaz/Desktop/mintbot/docs/phase10/burst-filesystem.trace",
+    "node",
+    "--import",
+    "tsx",
+    "scripts/phase9-performance-benchmark.ts",
+    "--before-root",
+    "/tmp/mintbot-phase10-before-djrj0gqn",
+    "--runs",
+    "1",
+    "--scenarios",
+    "durable-burst-200",
+    "--scheduling",
+    "--profile",
+    "--load-scope",
+    "Single Node22 mainnet observer; paired strace/scheduler/JSON instrumentation; large instrumentation overhead, not comparable absolute throughput",
+    "--output",
+    "/home/lkazaz/Desktop/mintbot/docs/phase10/performance-traced-pair.json"
+  ],
+  "scope": "One paired forensic run; trace file descriptor paths identify WAL-writing thread IDs. These traced timings cannot establish production SLOs."
+}

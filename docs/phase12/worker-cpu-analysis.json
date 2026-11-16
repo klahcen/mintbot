@@ -1,0 +1,39 @@
+{
+  "threads": [
+    {
+      "kind": "main",
+      "tid": "1",
+      "pid": 1,
+      "threadId": null,
+      "entrypoint": null,
+      "samples": 414,
+      "observedSpanMs": 29166.674366,
+      "observedUserMs": 19575.567,
+      "observedSystemMs": 490.511
+    },
+    {
+      "kind": "wal-worker",
+      "tid": "26",
+      "pid": 1,
+      "threadId": 2,
+      "entrypoint": "file:///tmp/mintbot-phase12-before-ac0tkqlt/src/journal-worker-bootstrap.mjs",
+      "samples": 78,
+      "observedSpanMs": 4276.261279,
+      "observedUserMs": 1846.577,
+      "observedSystemMs": 166.065
+    },
+    {
+      "kind": "wal-worker",
+      "tid": "27",
+      "pid": 1,
+      "threadId": 3,
+      "entrypoint": "file:///home/lkazaz/Desktop/mintbot/src/journal-worker-bootstrap.mjs",
+      "samples": 50,
+      "observedSpanMs": 4215.126524,
+      "observedUserMs": 1928.171,
+      "observedSystemMs": 245.641
+    }
+  ],
+  "scope": "Actual /proc/thread-self identities and process.threadCpuUsage from main and wrapped original WAL workers. Observed endpoints include startup/observer overhead, omit unsampled tails, and are not isolated physical-device or pure WAL CPU cost. Original worker protocol/acknowledgement was not changed.",
+  "discardedFirstObserverAsCleanAttribution": "worker-cpu.jsonl also emits misleading main labels from inherited worker preloads; raw TIDs expose this. Corrected worker-cpu-final.jsonl is the reported population."
+}

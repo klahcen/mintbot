@@ -1,0 +1,42 @@
+{
+  "unauthorized": 401,
+  "authorized": 200,
+  "cache": "no-store",
+  "dashboard": 200,
+  "beforeAt": 1794687527129,
+  "afterAt": 1794687532039,
+  "runStatus": "running",
+  "notifications": 4694,
+  "liveTrading": false,
+  "readiness": [
+    {
+      "name": "Epoch research policy",
+      "status": "unknown",
+      "detail": "Independent policy review unmet; new window never clears historical authorization"
+    },
+    {
+      "name": "Research coverage",
+      "status": "unknown",
+      "detail": "Research chain coverage unresolved"
+    },
+    {
+      "name": "Funded execution",
+      "status": "blocked",
+      "detail": "No signer or broadcaster; live mode rejected"
+    },
+    {
+      "name": "Independent provider agreement",
+      "status": "unknown",
+      "detail": "Separate provider validation evidence required; notification head is not a finalized-provider agreement"
+    },
+    {
+      "name": "Qualifying real paper entry",
+      "status": "unknown",
+      "detail": "No synthetic opportunities or mandatory-risk overrides"
+    }
+  ],
+  "status": "available",
+  "image": "mintbot:phase11-readonly",
+  "sourceRun": "mainnet-validated",
+  "scope": "Actual existing authenticated API and dashboard read a directory-mounted live research sidecar snapshot through atomic renames. No public ports, no external container network, no new monitor started by server. Independent agreement and coverage readiness remain separate."
+}

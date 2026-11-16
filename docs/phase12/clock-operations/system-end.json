@@ -1,0 +1,112 @@
+{
+  "capturedClocks": {
+    "realtime": 1794744047057834631,
+    "monotonic": 29072154438914,
+    "boottime": 152320103752561,
+    "raw": 29071523200270
+  },
+  "pid": 429653,
+  "clockInfo": {
+    "time": {
+      "implementation": "clock_gettime(CLOCK_REALTIME)",
+      "monotonic": false,
+      "adjustable": true,
+      "resolution": 1e-09
+    },
+    "monotonic": {
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-09
+    },
+    "perf_counter": {
+      "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-09
+    }
+  },
+  "clocksource": "tsc\n",
+  "availableClocksource": "tsc acpi_pm \n",
+  "bootIdSha256": "92829466dccffaeae7fd055c113fb0ad0770bcb7db2fa1c26e56a1beb9dc0045",
+  "timeNamespace": "time:[4026531834]",
+  "powerSuspendStats": {
+    "unavailable": "IsADirectoryError"
+  },
+  "commands": [
+    {
+      "args": [
+        "timedatectl",
+        "show",
+        "-p",
+        "NTPSynchronized",
+        "-p",
+        "NTP",
+        "-p",
+        "TimeUSec",
+        "-p",
+        "RTCTimeUSec"
+      ],
+      "exitCode": 0,
+      "stdout": "NTP=yes\nNTPSynchronized=yes\nTimeUSec=Sun 2026-11-15 12:00:47 +00\nRTCTimeUSec=Sun 2026-11-15 12:00:47 +00\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chronyc",
+        "tracking"
+      ],
+      "unavailable": "command not installed"
+    },
+    {
+      "args": [
+        "adjtimex",
+        "--print"
+      ],
+      "unavailable": "command not installed"
+    },
+    {
+      "args": [
+        "systemd-detect-virt"
+      ],
+      "exitCode": 1,
+      "stdout": "none\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "journalctl",
+        "--no-pager",
+        "-n",
+        "150",
+        "-k",
+        "--since",
+        "2026-11-14 20:00:00 UTC",
+        "--grep",
+        "(?i)suspend|resume|timekeeping|clocksource|clock.*jump"
+      ],
+      "exitCode": 0,
+      "stdout": "Nov 15 11:52:52 lkazaz kernel: PM: suspend exit\nNov 15 11:52:52 lkazaz kernel: printk: Suspending console(s) (use no_console_suspend to debug)\nNov 14 23:46:15 lkazaz kernel: PM: suspend entry (s2idle)\nNov 14 22:28:56 lkazaz kernel: PM: suspend exit\nNov 14 22:28:56 lkazaz kernel: printk: Suspending console(s) (use no_console_suspend to debug)\nNov 14 20:27:44 lkazaz kernel: PM: suspend entry (s2idle)\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "journalctl",
+        "--no-pager",
+        "-n",
+        "150",
+        "-u",
+        "systemd-timesyncd",
+        "-u",
+        "chronyd",
+        "-u",
+        "chrony",
+        "--since",
+        "2026-11-14 20:00:00 UTC"
+      ],
+      "exitCode": 0,
+      "stdout": "Nov 14 23:03:04 lkazaz systemd-timesyncd[1725]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).\n",
+      "stderr": ""
+    }
+  ]
+}

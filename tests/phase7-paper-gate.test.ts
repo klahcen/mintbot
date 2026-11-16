@@ -1,0 +1,24 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { constructionCase } from "./simulation-fixtures.js";
+import { SimulationGatedPaper } from "../src/simulation/paper-gate.js";
+import { SimulationRpc } from "../src/simulation/rpc.js";
+import { RealMarketPaper, initializeMarketLedger } from "../src/market/paper.js";
+import { Store, initial } from "../src/store.js";
+import { PumpMarketAdapter } from "../src/market/pump.js";
+import { verified, type MarketState } from "../src/market/types.js";
+import { marketPolicy } from "../src/market/policy.js";
+import { json } from "./market-fixtures.js";
+for(const eligible of [false,true])test(`Live research gate retains risk checks and durable rejection when ${eligible?"simulation evidence unavailable":"mandatory evidence unknown"}`,async()=>{
+ const fixture=await constructionCase("pump"),state=fixture.evidence.state as MarketState;
+ const strategy=await json("config/strategy.json"),store=new Store(initializeMarketLedger(initial(strategy)));store.state.running=true;
+ const paper=new RealMarketPaper(store,undefined,marketPolicy("finalized-paper-research"));let reads=0;
+ const gate=new SimulationGatedPaper(paper,{provider:state.provider,accounts:async()=>{reads++;throw Error("UNIT provider unavailable");},largest:async()=>({slot:state.slot,amounts:[]})},new SimulationRpc("http://127.0.0.1:1"));
+ state.launch.freshness={origin:"live",eventSlot:state.launch.slot,chainHeadSlot:state.slot,receiptAt:Date.now(),eventTimeMs:Date.now()};state.launch.slot=state.slot;state.launch.freshness.eventSlot=state.slot;state.launch.creationCommitment="finalized";
+ state.signals.holderConcentration=eligible?verified({topOwnerBps:100},"UNIT evidence"): {status:"unknown",reason:"UNIT missing concentration"};
+ const sell=new PumpMarketAdapter().quote(state,"sell",fixture.evidence.quote.minimumOutput,100);
+ const fees=verified({baseLamports:"1",priorityLamports:"0",rentLamports:"0",computeUnitLimit:200000,observedAt:Date.now()},"UNIT fee");
+ const result=await gate.review(state,fixture.evidence.quote,sell,fees,verified(true,"UNIT deployment"));
+ assert(result.reasons.length);assert.equal(store.state.positions.length,0);assert.equal(store.state.trades.length,0);assert.equal(store.state.marketReviews!.length,1);
+ if(eligible){assert(reads>0);assert(result.reasons.some((r:string)=>r.includes("simulationGate")));}else assert.equal(reads,0);
+});

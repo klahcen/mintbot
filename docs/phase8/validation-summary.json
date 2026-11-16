@@ -1,0 +1,77 @@
+{
+  "scope": "Actual bounded read-only monitoring and separate controls; no signed/submitted/funded operations",
+  "configuredObservationSeconds": 900,
+  "totalReceiptToStopWallSeconds": 901.658,
+  "reconnectBudgetExhausted": true,
+  "exhaustionOffsetSeconds": 408.891,
+  "remainingProcessSecondsAfterExhaustion": 492.767,
+  "notifications": 57518,
+  "creationNotifications": 54,
+  "sampledCandidates": 18,
+  "skippedSampling": 36,
+  "verifiedCreations": 8,
+  "paperDecisions": 8,
+  "marketStatesAvailable": 0,
+  "paperTrades": 0,
+  "simulationAttempts": 0,
+  "marketRpcCalls": 54,
+  "marketRpcErrors": 6,
+  "taggedRateLimits": 0,
+  "verificationReasons": {
+    "Pump instruction/event mismatch": 7,
+    "Truncated binary layout": 3
+  },
+  "paperReasonCounts": {
+    "Curve identity, supply or decimals mismatch": 4,
+    "Unsupported completed, configurable or non-native Pump curve": 2,
+    "Unknown or stale chain event time": 2
+  },
+  "rpcIssues": 20,
+  "observedDisconnectGapRecords": 11,
+  "captureDropped": 0,
+  "peakSampledRssMiB": 260.44921875,
+  "peakSampledHeapMiB": 49.832679748535156,
+  "receiptToPaperDecisionMs": {
+    "count": 8,
+    "samples": 8,
+    "p50": 1051.6445449999883,
+    "p95": 1253.6017270000011,
+    "p99": 1253.6017270000011,
+    "max": 1664.5793780000022
+  },
+  "cpuMicroseconds": {
+    "user": 15261974,
+    "system": 1317906
+  },
+  "wal": {
+    "pending": 0,
+    "pendingPeak": 1,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 0,
+    "quarantined": 0,
+    "completedRetained": 18,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 0,
+    "walBytes": 168632,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {
+      "pump": {
+        "signature": "7NJttECNp9yB8fb1dLEw36rdjp2r49E5mnk3HBJsdRFPqFG1U67wVxQzrCn3SeapD9LMWX9p8YYukfwXgPr4WJS",
+        "slot": 467796386
+      }
+    },
+    "dedupeFloors": {},
+    "gaps": [],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 71539314688,
+    "fsyncBatches": 37,
+    "writerFailure": null
+  },
+  "tests": 266,
+  "allOriginalTestsRetained": 241,
+  "liveTrading": false
+}

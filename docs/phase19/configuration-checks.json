@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "name": "local-compose",
+      "exitCode": 0
+    },
+    {
+      "name": "local-research-compose",
+      "exitCode": 0
+    },
+    {
+      "name": "cloud-compose",
+      "exitCode": 0
+    },
+    {
+      "name": "cloud-tunnel-compose",
+      "exitCode": 0
+    },
+    {
+      "name": "host-prerequisites",
+      "exitCode": 0
+    }
+  ],
+  "cloudIsolationChecks": {
+    "noAppDatabaseResearchHostPorts": true,
+    "databaseNetworkInternal": true,
+    "researchNeverRestarts": true,
+    "researchProfileOptIn": true,
+    "allRootsReadOnly": true,
+    "allCapabilitiesDropped": true,
+    "allNoNewPrivileges": true,
+    "clockPreflightRequired": true,
+    "paperOnly": true,
+    "fileSecretsCannotCreateMissingHostPaths": true
+  }
+}

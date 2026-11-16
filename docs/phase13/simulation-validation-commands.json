@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-11-15T12:51:03.813345+00:00",
+  "jobs": [
+    {
+      "name": "current-buy-simulations",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase6-mainnet-simulation.ts",
+        "--run",
+        "--output",
+        "docs/phase13/current-buy-simulations.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "current-sell-simulations",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase7-sell-simulation.ts",
+        "--run",
+        "--output",
+        "docs/phase13/current-sell-simulations.json"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

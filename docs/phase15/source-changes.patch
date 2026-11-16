@@ -1,0 +1,80 @@
+--- before/src/backfill.ts
++++ after/src/backfill.ts
+@@ -10,6 +10,7 @@
+ }
+ export interface HistoricalTransaction {
+   slot: number;
++  version?: number | "legacy";
+   meta: { err: unknown; logMessages: string[] | null } | null;
+   transaction: {
+     signatures: string[];
+@@ -114,15 +115,18 @@
+       { ...options, commitment: this.commitment },
+     ]);
+   }
+-  getTransaction(signature: string) {
+-    return this.call<HistoricalTransaction | null>("getTransaction", [
++  async getTransaction(signature: string) {
++    const tx = await this.call<HistoricalTransaction | null>("getTransaction", [
+       signature,
+       {
+         encoding: "jsonParsed",
+         commitment: this.commitment,
+-        maxSupportedTransactionVersion: 1,
++        maxSupportedTransactionVersion: 0,
+       },
+     ]);
++    if (tx !== null && tx.version !== 0 && tx.version !== "legacy")
++      throw new RecoveryRpcError(false);
++    return tx;
+   }
+ }
+ export interface BackfillOptions {
+--- before/src/verified-rpc.ts
++++ after/src/verified-rpc.ts
+@@ -16,7 +16,7 @@
+   metrics?: Telemetry;
+ }
+ export class UnknownProtocolLayoutError extends Error {}
+-/** Native JSON RPC reader supports parsed legacy/v0/v1 without the legacy SDK's response validator. */
++/** Parsed legacy/v0 reader. New versions require a separately validated encoding and provenance chain. */
+ export class VerifiedReadRpc extends HttpRecoveryRpc {
+   private schedule?: BoundedStage;
+   private nextReadMonoMs = 0;
+@@ -94,12 +94,15 @@
+     const body = JSON.parse(Buffer.concat(chunks).toString("utf8"));
+     if (body.error || body.id !== 1 || body.jsonrpc !== '2.0' || !Object.prototype.hasOwnProperty.call(body, 'result'))
+       throw Error("Read-only verification RPC error or invalid response identity");
++    if (method === "getTransaction" && body.result !== null &&
++        body.result?.version !== 0 && body.result?.version !== "legacy")
++      throw new UnknownProtocolLayoutError("Unsupported transaction version; validated legacy/v0 reader required");
+     return body.result;
+   }
+   /** Confirmed preparation only: exposes candidate keys, never a VerifiedLaunch or finalized account evidence. */
+   async provisional(program: string, signature: string, expectedSlot: number) {
+     const tx: ParsedChainTransaction | null = await this.read("getTransaction", [signature, {
+-      commitment: "confirmed", encoding: "jsonParsed", maxSupportedTransactionVersion: 1,
++      commitment: "confirmed", encoding: "jsonParsed", maxSupportedTransactionVersion: 0,
+     }]);
+     if (!tx) return null;
+     if (tx.transaction.signatures[0] !== signature || tx.slot !== expectedSlot)
+@@ -115,7 +118,7 @@
+       {
+         commitment: "finalized",
+         encoding: "jsonParsed",
+-        maxSupportedTransactionVersion: 1,
++        maxSupportedTransactionVersion: 0,
+       },
+     ]);
+   }
+--- before/src/verified-decoders.ts
++++ after/src/verified-decoders.ts
+@@ -136,7 +136,7 @@
+ function creations(program: string, tx: ParsedChainTransaction): Creation[] {
+   const address = VERIFIED_PROGRAMS.find((p) => p.name === program)?.address;
+   if (!address) throw Error("Unknown program");
+-  if (tx.version !== 0 && tx.version !== 1 && tx.version !== "legacy")
++  if (tx.version !== 0 && tx.version !== "legacy")
+     throw Error("Unsupported transaction version");
+   if (!tx.meta || tx.meta.err !== null)
+     throw Error("Failed or unavailable transaction");

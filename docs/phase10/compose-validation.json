@@ -1,0 +1,37 @@
+{
+  "composeVersion": "5.5.1",
+  "research": {
+    "command": [
+      "node",
+      "dist/scripts/phase10-mainnet.js",
+      "--run",
+      "--seconds",
+      "7200",
+      "--output",
+      "/app/data/validation-fresh-run"
+    ],
+    "readOnly": true,
+    "restart": "no",
+    "init": true,
+    "profiles": [
+      "research"
+    ],
+    "healthcheck": {
+      "test": [
+        "CMD",
+        "node",
+        "-e",
+        "const f=require('fs');try{const e=JSON.parse(f.readFileSync(process.env.RESEARCH_PROGRESS_PATH));process.exit(Date.now()-e.updatedAt<15000&&e.supervisor.liveReady&&!e.pipeline.fatal&&!e.journal.writerFailure&&e.journal.quarantined===0&&e.journal.gaps.every(g=>g.status==='recovered')?0:1)}catch{process.exit(1)}"
+      ],
+      "timeout": "3s",
+      "interval": "15s",
+      "retries": 2
+    },
+    "progressPath": "/app/data/validation-fresh-run/run-progress.json"
+  },
+  "app": {
+    "monitorPrograms": "",
+    "researchStatusPath": "/app/research-data/validation-fresh-run/research-status.json"
+  },
+  "scope": "Configuration expansion only; no default app, database or redis services started; random validation-only API/DB placeholders discarded, never persisted."
+}

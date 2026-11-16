@@ -1,0 +1,2092 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-03T19:23:53.960Z",
+  "environment": {
+    "node": "v20.19.5",
+    "cpu": "11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz",
+    "platform": "linux"
+  },
+  "sourceRoot": "/tmp/mintbot-phase2-before",
+  "staged": false,
+  "sourceSha256": {
+    "engine": "0d59b7219190d82671e30718de242a3e7ca59bbef4ce7737ed94a62314f7f3b9",
+    "store": "842e8fa391f6c4e91ee8ab1da29f31d0a81e3de9690cbacf8b9709c199d33a99",
+    "chain": "c71cf38030b9574a9c0a1506a1151e8ede0c7cf175d2f31dde1f38eb058558c9",
+    "model": "86a277fe56de7514e068438cff558fea46f42762a2b20d365fbd8728d50058b9",
+    "queue": "2d216059da36ab41446297c0d47f7de8da52ae1eed3dfb68f343fc991c4aaca4"
+  },
+  "harnessSha256": "ca4fab09540f7bc6584fe2ddc604508e6f625863043a0f712836c8957301680d",
+  "scope": "Offline synthetic Pump logs and independent paper quotes; mocked historical swap reads and bounded RPC backfill. Each scenario is one run. Before/after use the same harness with legacy/staged adapters and identical offers. Legacy queue capacity 1024 (64 in saturation); new RAM flow 128 and journal pending 10000 (64 in saturation). Durable-burst includes actual filesystem writes, new WAL fsync and Store snapshots. Other scenarios are in-memory. Withheld fixture emission times are known only to this harness; they are not blockchain detection times. Memory peaks are sampled, process maxRSS includes earlier scenarios, event-loop delay uses 10ms sampling. One repeated mint in main fixtures has deliberate PDA cache locality; unique-mint cold decode is measured separately.",
+  "results": [
+    {
+      "scenario": "burst-1000",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 0,
+      "completed": 1000,
+      "completedEventsPerSecond": 250.05393275745982,
+      "elapsedMs": 3999.137262,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 59,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 1947.6168409999998,
+          "p95": 3711.19052,
+          "p99": 3908.5295090000004,
+          "max": 3955.240713
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 4065.5022160000003,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "legacy.observations.offered": 1000,
+          "legacy.observations.admitted": 1000,
+          "observations.delivered": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "rpc.calls": 1000,
+          "rpc.errors": 59,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "legacy.observations.completed": 1000,
+          "strategy.rejected": 995
+        },
+        "gauges": {
+          "legacy.observations.pending": {
+            "current": 0,
+            "peak": 1000
+          },
+          "legacy.observations.queue_depth": {
+            "current": 0,
+            "peak": 1000
+          },
+          "legacy.observations.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.006102999999939129,
+            "p95": 0.010422000000062326,
+            "p99": 0.02246700000000601,
+            "max": 0.06435999999985142
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.021255999999993946,
+            "p95": 0.038250000000061846,
+            "p99": 0.08716499999991356,
+            "max": 0.566047000000026
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0019389999999930296,
+            "p95": 0.003376000000116619,
+            "p99": 0.006864999999834254,
+            "max": 0.10818899999981113
+          },
+          "legacy.observations.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1944.2954759999998,
+            "p95": 3704.4999250000005,
+            "p99": 3904.176313,
+            "max": 3950.10973
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.6354590000000826,
+            "p95": 1.1546450000000732,
+            "p99": 1.8458780000000843,
+            "max": 5.780635999999959
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0054129999998622225,
+            "p95": 0.05028700000002573,
+            "p99": 0.08026900000004389,
+            "max": 0.3624849999998787
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0150260000000344,
+            "p95": 0.04130099999997583,
+            "p99": 0.11348199999997632,
+            "max": 4.6782100000000355
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.004745999999613559,
+            "p95": 0.009383000000070751,
+            "p99": 0.019887999999809836,
+            "max": 0.9124790000000758
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1.7440669999996317,
+            "p95": 3.133734999999433,
+            "p99": 3.506847999999991,
+            "max": 8.698782000000392
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.04755299999987983,
+            "p95": 0.10377500000049622,
+            "p99": 0.15223900000000867,
+            "max": 1.2133229999999458
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.00536400000055437,
+            "p95": 0.01675999999997657,
+            "p99": 0.031970000000001164,
+            "max": 0.17603599999984
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.010277000000314729,
+            "p95": 0.020481999999901745,
+            "p99": 0.03310499999952299,
+            "max": 0.24185299999999188
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.08738599999992402,
+            "p95": 0.20479999999997744,
+            "p99": 0.20479999999997744,
+            "max": 0.33789999999999054
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.9639139999999315,
+            "p95": 1.9578930000002401,
+            "p99": 3.4788900000003196,
+            "max": 12.306100000000242
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 2.832647000000179,
+            "p95": 5.115796999999475,
+            "p99": 6.662070999999742,
+            "max": 15.915427999999793
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 2.8570370000002185,
+            "p95": 5.15362499999992,
+            "p99": 6.700568000000203,
+            "max": 16.48719200000005
+          },
+          "legacy.observations.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 3.65279400000054,
+            "p95": 6.419906999999512,
+            "p99": 9.090330999999878,
+            "max": 22.19659700000011
+          },
+          "legacy.observations.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1947.5858730000002,
+            "p95": 3711.1944569999996,
+            "p99": 3908.51958,
+            "max": 3955.2316849999997
+          }
+        }
+      },
+      "recovery": null,
+      "journal": null,
+      "memory": {
+        "before": {
+          "rss": 136421376,
+          "heapTotal": 60518400,
+          "heapUsed": 32461832,
+          "external": 4167919,
+          "arrayBuffers": 50685
+        },
+        "after": {
+          "rss": 152690688,
+          "heapTotal": 63791104,
+          "heapUsed": 34744184,
+          "external": 4125795,
+          "arrayBuffers": 59077
+        },
+        "sampledPeakRssBytes": 153374720,
+        "sampledPeakHeapUsedBytes": 37906832,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "stress-10000",
+      "offered": 10000,
+      "uniqueOffered": 10000,
+      "networkWithheld": 0,
+      "completed": 1024,
+      "completedEventsPerSecond": 243.17793478197004,
+      "elapsedMs": 4210.908366,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 8976,
+      "droppedOffers": 8976,
+      "uncompletedFixtureEvents": 8976,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 61,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1024,
+          "samples": 1024,
+          "p50": 2132.332775,
+          "p95": 3980.0122200000005,
+          "p99": 4129.007161,
+          "max": 4170.694713
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 4364.730409,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 10001,
+          "observations.received": 10000,
+          "legacy.observations.offered": 10000,
+          "legacy.observations.admitted": 1024,
+          "observations.delivered": 10000,
+          "legacy.observations.dropped": 8976,
+          "decoding.completed": 1024,
+          "decoding.launches": 1024,
+          "rpc.calls": 1024,
+          "rpc.errors": 61,
+          "ingestion.received": 1024,
+          "strategy.decisions": 1024,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1024,
+          "ingestion.completed": 1024,
+          "ingestion.buys_committed": 5,
+          "legacy.observations.completed": 1024,
+          "strategy.rejected": 1019
+        },
+        "gauges": {
+          "legacy.observations.pending": {
+            "current": 0,
+            "peak": 1024
+          },
+          "legacy.observations.queue_depth": {
+            "current": 0,
+            "peak": 1024
+          },
+          "legacy.observations.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 10001,
+            "samples": 10000,
+            "p50": 0.0053089999992153025,
+            "p95": 0.009895000000142318,
+            "p99": 0.013686999999663385,
+            "max": 8.952556999999615
+          },
+          "monitor.ingestion_ms": {
+            "count": 10001,
+            "samples": 10000,
+            "p50": 0.012531999999737309,
+            "p95": 0.025040999999873748,
+            "p99": 0.03393400000004476,
+            "max": 9.008182999999917
+          },
+          "monitor.deduplication_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.001568000000588654,
+            "p95": 0.0030999999999039574,
+            "p99": 0.004711999999926775,
+            "max": 0.8284190000003946
+          },
+          "legacy.observations.queue_wait_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 2128.300537,
+            "p95": 3975.598732999999,
+            "p99": 4124.971174,
+            "max": 4166.947595
+          },
+          "decoding_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 0.6129540000001725,
+            "p95": 0.9914209999988088,
+            "p99": 1.1601410000002943,
+            "max": 4.939846999999645
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 0.005465999998705229,
+            "p95": 0.05875899999955436,
+            "p99": 0.08314200000040728,
+            "max": 1.50960699999996
+          },
+          "ingestion.validation_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 0.01466699999946286,
+            "p95": 0.03020500000093307,
+            "p99": 0.0436119999994844,
+            "max": 0.19396000000051572
+          },
+          "store.queue_wait_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 0.0034159999995608814,
+            "p95": 0.006820999999945343,
+            "p99": 0.00963300000057643,
+            "max": 0.03135000000020227
+          },
+          "store.clone_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 1.8054689999999027,
+            "p95": 2.4858540000004723,
+            "p99": 3.1999150000001464,
+            "max": 4.30325399999856
+          },
+          "engine.deduplication_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 0.046644000000014785,
+            "p95": 0.10040800000024319,
+            "p99": 0.1383380000006582,
+            "max": 1.2714300000006915
+          },
+          "risk_evaluation_ms": {
+            "count": 2048,
+            "samples": 2048,
+            "p50": 0.0037510000001930166,
+            "p95": 0.013084000000162632,
+            "p99": 0.019104999999399297,
+            "max": 0.03715999999985797
+          },
+          "strategy_decision_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 0.0047660000000178115,
+            "p95": 0.010925999999926717,
+            "p99": 0.01867500000025757,
+            "max": 0.09375300000010611
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.11539100000027247,
+            "p95": 0.1587710000003426,
+            "p99": 0.1587710000003426,
+            "max": 0.2761239999999816
+          },
+          "store.validation_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 1.0195699999994758,
+            "p95": 1.8833050000002913,
+            "p99": 2.198464999999487,
+            "max": 2.772797999999966
+          },
+          "store.transaction_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 2.955605000000105,
+            "p95": 4.160125000000335,
+            "p99": 5.167808999999579,
+            "max": 6.668496999998752
+          },
+          "ingestion_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 2.9857460000002902,
+            "p95": 4.214324000000488,
+            "p99": 5.2191740000007485,
+            "max": 6.7119910000001255
+          },
+          "legacy.observations.processing_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 3.7690169999996215,
+            "p95": 5.1495310000000245,
+            "p99": 6.48327000000063,
+            "max": 7.932232999999542
+          },
+          "legacy.observations.end_to_end_ms": {
+            "count": 1024,
+            "samples": 1024,
+            "p50": 2132.4011819999996,
+            "p95": 3979.9885189999995,
+            "p99": 4128.996499999999,
+            "max": 4170.747317
+          }
+        }
+      },
+      "recovery": null,
+      "journal": null,
+      "memory": {
+        "before": {
+          "rss": 152821760,
+          "heapTotal": 63791104,
+          "heapUsed": 35698728,
+          "external": 4133312,
+          "arrayBuffers": 59077
+        },
+        "after": {
+          "rss": 168812544,
+          "heapTotal": 80125952,
+          "heapUsed": 53676184,
+          "external": 4124168,
+          "arrayBuffers": 67469
+        },
+        "sampledPeakRssBytes": 169394176,
+        "sampledPeakHeapUsedBytes": 60725112,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "sustained",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 0,
+      "completed": 1000,
+      "completedEventsPerSecond": 247.70403096542546,
+      "elapsedMs": 4037.0760059999993,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 59,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 20.47400799999923,
+          "p95": 42.88632499999949,
+          "p99": 57.87142700000004,
+          "max": 73.03283100000044
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 4087.342434,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "legacy.observations.offered": 1000,
+          "legacy.observations.admitted": 1000,
+          "observations.delivered": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "rpc.calls": 1000,
+          "rpc.errors": 59,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "legacy.observations.completed": 1000,
+          "strategy.rejected": 995
+        },
+        "gauges": {
+          "legacy.observations.pending": {
+            "current": 0,
+            "peak": 10
+          },
+          "legacy.observations.queue_depth": {
+            "current": 0,
+            "peak": 10
+          },
+          "legacy.observations.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.005720999999539345,
+            "p95": 0.030452000000877888,
+            "p99": 0.04061399999955029,
+            "max": 0.13937900000019
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.012705000001005828,
+            "p95": 0.055126999999629334,
+            "p99": 0.07662700000037148,
+            "max": 0.14814599999954225
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0015679999996791594,
+            "p95": 0.004154000000198721,
+            "p99": 0.0059179999989282805,
+            "max": 0.033724000000802334
+          },
+          "legacy.observations.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 16.25331499999993,
+            "p95": 38.63771199999974,
+            "p99": 50.51283400000102,
+            "max": 66.29610099999991
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.6379820000001928,
+            "p95": 1.0702019999989716,
+            "p99": 1.2846480000007432,
+            "max": 2.129391000000396
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.003731000000698259,
+            "p95": 0.062283000001116307,
+            "p99": 0.10172199999942677,
+            "max": 0.20218999999997322
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.015110999998796615,
+            "p95": 0.03253500000027998,
+            "p99": 0.06917099999918719,
+            "max": 0.22640599999976985
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.003473999999187072,
+            "p95": 0.006588999998712097,
+            "p99": 0.010319999999410356,
+            "max": 0.06578699999954551
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1.9156849999999395,
+            "p95": 3.1966969999994035,
+            "p99": 3.634749999999258,
+            "max": 6.669128999999884
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.050401000000420026,
+            "p95": 0.12329700000009325,
+            "p99": 0.17859300000054645,
+            "max": 0.2834919999986596
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.0035349999998288695,
+            "p95": 0.01555000000007567,
+            "p99": 0.022772999998778687,
+            "max": 0.10033199999998033
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.005071999999927357,
+            "p95": 0.00926400000025751,
+            "p99": 0.021464999999807333,
+            "max": 0.11703899999884015
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.01569300000119256,
+            "p95": 0.015980000000126893,
+            "p99": 0.015980000000126893,
+            "max": 0.05141100000037113
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.9712999999992462,
+            "p95": 1.9223670000010316,
+            "p99": 2.497591999999713,
+            "max": 6.24005600000055
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 3.0456000000012864,
+            "p95": 5.16361599999982,
+            "p99": 5.907171000000744,
+            "max": 10.40632000000005
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 3.073304999999891,
+            "p95": 5.2289939999991475,
+            "p99": 5.949258999999074,
+            "max": 10.45611099999951
+          },
+          "legacy.observations.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 3.902672000000166,
+            "p95": 6.461806999999681,
+            "p99": 7.297758000000613,
+            "max": 11.925893999999971
+          },
+          "legacy.observations.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 20.443724999999176,
+            "p95": 42.88225500000044,
+            "p99": 57.86180599999898,
+            "max": 73.01936100000057
+          }
+        }
+      },
+      "recovery": null,
+      "journal": null,
+      "memory": {
+        "before": {
+          "rss": 168943616,
+          "heapTotal": 80125952,
+          "heapUsed": 54569992,
+          "external": 4124168,
+          "arrayBuffers": 67469
+        },
+        "after": {
+          "rss": 171565056,
+          "heapTotal": 82747392,
+          "heapUsed": 50360816,
+          "external": 4132360,
+          "arrayBuffers": 75661
+        },
+        "sampledPeakRssBytes": 171302912,
+        "sampledPeakHeapUsedBytes": 62817848,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 40.94181877551021,
+        "p95": 53.379071,
+        "p99": 72.024063,
+        "max": 73.793535
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "duplicate-heavy",
+      "offered": 1000,
+      "uniqueOffered": 100,
+      "networkWithheld": 0,
+      "completed": 100,
+      "completedEventsPerSecond": 377.3031764965766,
+      "elapsedMs": 265.0388500000008,
+      "duplicateOffers": 900,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 6,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 100,
+          "samples": 100,
+          "p50": 150.06588399999964,
+          "p95": 227.34503600000062,
+          "p99": 234.35819099999935,
+          "max": 236.18929500000013
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 277.309792,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "legacy.observations.offered": 100,
+          "legacy.observations.admitted": 100,
+          "observations.delivered": 100,
+          "observations.duplicates": 900,
+          "decoding.completed": 100,
+          "decoding.launches": 100,
+          "rpc.calls": 100,
+          "rpc.errors": 6,
+          "ingestion.received": 100,
+          "strategy.decisions": 100,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 100,
+          "ingestion.completed": 100,
+          "ingestion.buys_committed": 5,
+          "legacy.observations.completed": 100,
+          "strategy.rejected": 95
+        },
+        "gauges": {
+          "legacy.observations.pending": {
+            "current": 0,
+            "peak": 100
+          },
+          "legacy.observations.queue_depth": {
+            "current": 0,
+            "peak": 100
+          },
+          "legacy.observations.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.00825299999996787,
+            "p95": 0.009645000000091386,
+            "p99": 0.020166999998764368,
+            "max": 0.03939399999944726
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.01311600000008184,
+            "p95": 0.024441000001388602,
+            "p99": 0.03218199999901117,
+            "max": 0.05089899999984482
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.001511999998911051,
+            "p95": 0.002319000001079985,
+            "p99": 0.003501999999571126,
+            "max": 0.018329000000449014
+          },
+          "legacy.observations.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 147.8570610000006,
+            "p95": 225.42977100000098,
+            "p99": 232.33416399999987,
+            "max": 234.0792110000002
+          },
+          "decoding_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.8111620000017865,
+            "p95": 1.1130300000004354,
+            "p99": 4.067187999999078,
+            "max": 4.395175999999992
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.004606000000421773,
+            "p95": 0.057735000000320724,
+            "p99": 0.10731299999861221,
+            "max": 0.11075399999936053
+          },
+          "ingestion.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01598299999932351,
+            "p95": 0.02704000000085216,
+            "p99": 0.04857900000024529,
+            "max": 0.05507199999919976
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0034140000007027993,
+            "p95": 0.0053079999997862615,
+            "p99": 0.007821999999578111,
+            "max": 0.014339999999720021
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.6857700000000477,
+            "p95": 1.0514860000002955,
+            "p99": 3.836310999999114,
+            "max": 5.835921999998391
+          },
+          "engine.deduplication_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.002480999999534106,
+            "p95": 0.005313999999998487,
+            "p99": 0.012611000000106287,
+            "max": 0.014632000000347034
+          },
+          "risk_evaluation_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.003254999999626307,
+            "p95": 0.01020799999969313,
+            "p99": 0.017648999999437365,
+            "max": 0.049607999999352614
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.005529000000024098,
+            "p95": 0.00880200000028708,
+            "p99": 0.01898299999993469,
+            "max": 1.1120780000001105
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.028360000000247965,
+            "p95": 0.03565399999934016,
+            "p99": 0.03565399999934016,
+            "max": 0.05511499999920488
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.3722010000001319,
+            "p95": 0.591004999998404,
+            "p99": 2.6319899999998597,
+            "max": 11.55254099999911
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.1131069999992178,
+            "p95": 2.290058999999019,
+            "p99": 6.442360000000917,
+            "max": 12.272617000000537
+          },
+          "ingestion_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.1266279999999824,
+            "p95": 2.3049530000007508,
+            "p99": 6.475983000000269,
+            "max": 12.310679999998683
+          },
+          "legacy.observations.processing_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.8773369999998977,
+            "p95": 5.483124000000316,
+            "p99": 7.615939000001163,
+            "max": 13.3072659999998
+          },
+          "legacy.observations.end_to_end_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 150.05734099999972,
+            "p95": 227.3199220000006,
+            "p99": 234.33299400000033,
+            "max": 236.16359799999918
+          }
+        }
+      },
+      "recovery": null,
+      "journal": null,
+      "memory": {
+        "before": {
+          "rss": 171696128,
+          "heapTotal": 82747392,
+          "heapUsed": 51501616,
+          "external": 4132360,
+          "arrayBuffers": 75661
+        },
+        "after": {
+          "rss": 171827200,
+          "heapTotal": 82747392,
+          "heapUsed": 49486104,
+          "external": 4194512,
+          "arrayBuffers": 84053
+        },
+        "sampledPeakRssBytes": 171827200,
+        "sampledPeakHeapUsedBytes": 61509352,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "saturation",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 0,
+      "completed": 64,
+      "completedEventsPerSecond": 587.0792336627334,
+      "elapsedMs": 109.01424599999882,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 936,
+      "droppedOffers": 936,
+      "uncompletedFixtureEvents": 936,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 4,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 64,
+          "samples": 64,
+          "p50": 61.050185000000056,
+          "p95": 100.52152299999943,
+          "p99": 105.57297800000015,
+          "max": 107.01423299999988
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 120.19347899999957,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "legacy.observations.offered": 1000,
+          "legacy.observations.admitted": 64,
+          "observations.delivered": 1000,
+          "legacy.observations.dropped": 936,
+          "decoding.completed": 64,
+          "decoding.launches": 64,
+          "rpc.calls": 64,
+          "rpc.errors": 4,
+          "ingestion.received": 64,
+          "strategy.decisions": 64,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 64,
+          "ingestion.completed": 64,
+          "ingestion.buys_committed": 5,
+          "legacy.observations.completed": 64,
+          "strategy.rejected": 59
+        },
+        "gauges": {
+          "legacy.observations.pending": {
+            "current": 0,
+            "peak": 64
+          },
+          "legacy.observations.queue_depth": {
+            "current": 0,
+            "peak": 64
+          },
+          "legacy.observations.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.005112000000735861,
+            "p95": 0.00915799999893352,
+            "p99": 0.015768999999636435,
+            "max": 0.11830600000030245
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.011926999999559484,
+            "p95": 0.021754999999757274,
+            "p99": 0.03435499999977765,
+            "max": 0.13127700000040932
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0011020000001735752,
+            "p95": 0.0022230000013223616,
+            "p99": 0.0030470000001514563,
+            "max": 0.023530999998911284
+          },
+          "legacy.observations.queue_wait_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 59.888285999999425,
+            "p95": 98.7087190000002,
+            "p99": 103.94009499999993,
+            "max": 105.5424439999988
+          },
+          "decoding_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.4789939999991475,
+            "p95": 0.5899640000006912,
+            "p99": 0.704979000000094,
+            "max": 0.7377390000001469
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.0026319999997213017,
+            "p95": 0.005262000000584521,
+            "p99": 0.07784600000013597,
+            "max": 0.2805929999994987
+          },
+          "ingestion.validation_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.009458000000449829,
+            "p95": 0.014989999999670545,
+            "p99": 0.023430999999618507,
+            "max": 0.03652999999940221
+          },
+          "store.queue_wait_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.0020260000001144363,
+            "p95": 0.0032359999986510957,
+            "p99": 0.004496000001381617,
+            "max": 0.005441999999675318
+          },
+          "store.clone_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.3374490000005608,
+            "p95": 0.580097999998543,
+            "p99": 0.7596799999992072,
+            "max": 0.804496000000654
+          },
+          "engine.deduplication_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.0016840000007505296,
+            "p95": 0.002494000000297092,
+            "p99": 0.002935000000434229,
+            "max": 0.002981999999974505
+          },
+          "risk_evaluation_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0024259999991045333,
+            "p95": 0.00482699999884062,
+            "p99": 0.005893000001378823,
+            "max": 0.0073130000000674045
+          },
+          "strategy_decision_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.00342599999930826,
+            "p95": 0.005423999999038642,
+            "p99": 0.007241999999678228,
+            "max": 0.008278999999674852
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.02017100000011851,
+            "p95": 0.023114999999961583,
+            "p99": 0.023114999999961583,
+            "max": 0.03931200000079116
+          },
+          "store.validation_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.18507300000055693,
+            "p95": 0.3284770000009303,
+            "p99": 0.4150179999996908,
+            "max": 1.5223370000003342
+          },
+          "store.transaction_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.5423789999986184,
+            "p95": 0.9530070000000705,
+            "p99": 1.21665799999937,
+            "max": 2.009683000000223
+          },
+          "ingestion_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 0.5539040000003297,
+            "p95": 0.9688210000003892,
+            "p99": 1.2302450000006502,
+            "max": 2.032065999999759
+          },
+          "legacy.observations.processing_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 1.2084599999998318,
+            "p95": 1.6014529999993101,
+            "p99": 1.8696760000002541,
+            "max": 2.8810759999996662
+          },
+          "legacy.observations.end_to_end_ms": {
+            "count": 64,
+            "samples": 64,
+            "p50": 61.03655599999911,
+            "p95": 100.51249800000005,
+            "p99": 105.55984799999896,
+            "max": 107.10554200000115
+          }
+        }
+      },
+      "recovery": null,
+      "journal": null,
+      "memory": {
+        "before": {
+          "rss": 171958272,
+          "heapTotal": 82747392,
+          "heapUsed": 49923352,
+          "external": 4194512,
+          "arrayBuffers": 84053
+        },
+        "after": {
+          "rss": 172744704,
+          "heapTotal": 83533824,
+          "heapUsed": 62564120,
+          "external": 4195096,
+          "arrayBuffers": 138397
+        },
+        "sampledPeakRssBytes": 172744704,
+        "sampledPeakHeapUsedBytes": 58640152,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "disconnect-backfill",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 100,
+      "completed": 900,
+      "completedEventsPerSecond": 291.5911869514648,
+      "elapsedMs": 3086.513036999999,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 100,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 53,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 900,
+          "samples": 900,
+          "p50": 703.7125209999995,
+          "p95": 1720.173361000001,
+          "p99": 1857.5049639999997,
+          "max": 1891.6418269999995
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 3123.4041869999983,
+        "counters": {
+          "rpc.subscription_requests": 2,
+          "rpc.messages": 902,
+          "observations.received": 900,
+          "legacy.observations.offered": 900,
+          "legacy.observations.admitted": 900,
+          "observations.delivered": 900,
+          "rpc.disconnects": 1,
+          "rpc.reconnects": 1,
+          "decoding.completed": 900,
+          "decoding.launches": 900,
+          "rpc.calls": 900,
+          "rpc.errors": 53,
+          "ingestion.received": 900,
+          "strategy.decisions": 900,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 900,
+          "ingestion.completed": 900,
+          "ingestion.buys_committed": 5,
+          "legacy.observations.completed": 900,
+          "strategy.rejected": 895,
+          "rpc.reconnect_succeeded": 1
+        },
+        "gauges": {
+          "legacy.observations.pending": {
+            "current": 0,
+            "peak": 500
+          },
+          "legacy.observations.queue_depth": {
+            "current": 0,
+            "peak": 500
+          },
+          "legacy.observations.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 902,
+            "samples": 902,
+            "p50": 0.005031000000599306,
+            "p95": 0.007508000000598258,
+            "p99": 0.015434999999342836,
+            "max": 0.02839000000130909
+          },
+          "monitor.ingestion_ms": {
+            "count": 902,
+            "samples": 902,
+            "p50": 0.012701999999990221,
+            "p95": 0.018672000000151456,
+            "p99": 0.03410099999928207,
+            "max": 0.07771800000045914
+          },
+          "monitor.deduplication_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.000954999999521533,
+            "p95": 0.001759999999194406,
+            "p99": 0.0037549999997281702,
+            "max": 0.03956600000128674
+          },
+          "legacy.observations.queue_wait_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 700.4263250000004,
+            "p95": 1715.2260129999995,
+            "p99": 1853.8727800000015,
+            "max": 1887.977729000002
+          },
+          "decoding_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.5448730000025535,
+            "p95": 0.8437119999998686,
+            "p99": 1.0940260000006674,
+            "max": 2.2801799999997456
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.0035479999969538767,
+            "p95": 0.060183000001416076,
+            "p99": 0.0890030000009574,
+            "max": 0.1396550000008574
+          },
+          "ingestion.validation_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.011282999999821186,
+            "p95": 0.020523000001048786,
+            "p99": 0.03539299999829382,
+            "max": 0.1213869999992312
+          },
+          "store.queue_wait_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.0027799999988928903,
+            "p95": 0.004933000000164611,
+            "p99": 0.006841000000349595,
+            "max": 0.01794299999892246
+          },
+          "store.clone_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 1.7313930000000255,
+            "p95": 2.4952979999980016,
+            "p99": 3.177625000000262,
+            "max": 3.915650999999343
+          },
+          "engine.deduplication_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.04136899999866728,
+            "p95": 0.08828700000231038,
+            "p99": 0.10436599999957252,
+            "max": 0.13622400000167545
+          },
+          "risk_evaluation_ms": {
+            "count": 1800,
+            "samples": 1800,
+            "p50": 0.003108000000793254,
+            "p95": 0.01088999999956286,
+            "p99": 0.01823300000069139,
+            "max": 0.05262900000161608
+          },
+          "strategy_decision_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.004307000001062988,
+            "p95": 0.007949000000735396,
+            "p99": 0.015210999998089392,
+            "max": 0.045883999999205116
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.02704500000072585,
+            "p95": 0.028637999999773456,
+            "p99": 0.028637999999773456,
+            "max": 0.04838999999992666
+          },
+          "store.validation_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.886238000000958,
+            "p95": 1.6919999999990978,
+            "p99": 2.08934600000066,
+            "max": 4.361516000000847
+          },
+          "store.transaction_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 2.712309999998979,
+            "p95": 3.851974999997765,
+            "p99": 4.983647999999448,
+            "max": 7.136287999999695
+          },
+          "ingestion_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 2.7315309999994497,
+            "p95": 3.875235999999859,
+            "p99": 5.02023200000076,
+            "max": 7.160352000000785
+          },
+          "legacy.observations.processing_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 3.4305420000000595,
+            "p95": 4.7045429999998305,
+            "p99": 6.215986999999586,
+            "max": 8.000578999999561
+          },
+          "legacy.observations.end_to_end_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 703.6913480000003,
+            "p95": 1720.1636809999982,
+            "p99": 1857.4939810000014,
+            "max": 1891.6247139999996
+          },
+          "rpc.reconnect_wait_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 1172.6682149999997,
+            "p95": 1172.6682149999997,
+            "p99": 1172.6682149999997,
+            "max": 1172.6682149999997
+          },
+          "rpc.recovery_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 1172.9578439999987,
+            "p95": 1172.9578439999987,
+            "p99": 1172.9578439999987,
+            "max": 1172.9578439999987
+          }
+        }
+      },
+      "recovery": null,
+      "journal": null,
+      "memory": {
+        "before": {
+          "rss": 173400064,
+          "heapTotal": 83795968,
+          "heapUsed": 48417656,
+          "external": 4195096,
+          "arrayBuffers": 84053
+        },
+        "after": {
+          "rss": 166252544,
+          "heapTotal": 86155264,
+          "heapUsed": 53867408,
+          "external": 4141336,
+          "arrayBuffers": 84253
+        },
+        "sampledPeakRssBytes": 175628288,
+        "sampledPeakHeapUsedBytes": 66552384,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "out-of-order",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 0,
+      "completed": 1000,
+      "completedEventsPerSecond": 295.70417728791847,
+      "elapsedMs": 3381.758110999999,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 59,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 1523.0009119999995,
+          "p95": 3166.3410589999985,
+          "p99": 3319.333018999998,
+          "max": 3355.636542
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 3425.943379999997,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "legacy.observations.offered": 1000,
+          "legacy.observations.admitted": 1000,
+          "observations.delivered": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "rpc.calls": 1000,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "legacy.observations.completed": 1000,
+          "strategy.rejected": 995,
+          "rpc.errors": 59
+        },
+        "gauges": {
+          "legacy.observations.pending": {
+            "current": 0,
+            "peak": 1000
+          },
+          "legacy.observations.queue_depth": {
+            "current": 0,
+            "peak": 1000
+          },
+          "legacy.observations.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.005023000001528999,
+            "p95": 0.008648999999422813,
+            "p99": 0.011114999997516861,
+            "max": 0.03170500000123866
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.01276799999686773,
+            "p95": 0.02228300000206218,
+            "p99": 0.030671000000438653,
+            "max": 0.05859400000190362
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0010159999983443413,
+            "p95": 0.0018319999981031287,
+            "p99": 0.0025569999997969717,
+            "max": 0.019964999999501742
+          },
+          "legacy.observations.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1519.8323060000002,
+            "p95": 3160.5578120000027,
+            "p99": 3315.053101999998,
+            "max": 3351.6217380000016
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.5241779999996652,
+            "p95": 0.7883399999991525,
+            "p99": 1.0740650000007008,
+            "max": 1.695093000002089
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.003572999998141313,
+            "p95": 0.060764000001654495,
+            "p99": 0.07999799999743118,
+            "max": 1.018060999998852
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.010617999996611616,
+            "p95": 0.019957000000431435,
+            "p99": 0.03125999999974738,
+            "max": 3.6354909999972733
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0025940000014088582,
+            "p95": 0.004697000000305707,
+            "p99": 0.006153999998787185,
+            "max": 0.01613999999972293
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1.7211659999993572,
+            "p95": 2.3271849999982805,
+            "p99": 2.899990000001708,
+            "max": 3.5654040000008536
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.045727000000624685,
+            "p95": 0.09097800000017742,
+            "p99": 0.13669600000139326,
+            "max": 1.144414999998844
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.0029689999973925296,
+            "p95": 0.010152999999263557,
+            "p99": 0.016904000000067754,
+            "max": 0.03678000000218162
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.004854999999224674,
+            "p95": 0.009634000001824461,
+            "p99": 0.022081999999500113,
+            "max": 0.06243700000050012
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.01844400000118185,
+            "p95": 0.020661999998992542,
+            "p99": 0.020661999998992542,
+            "max": 0.039354000000457745
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.8733130000000529,
+            "p95": 1.6847069999967061,
+            "p99": 2.1014439999999013,
+            "max": 4.353297999998176
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 2.7144199999966077,
+            "p95": 3.8115099999995437,
+            "p99": 4.714825999999448,
+            "max": 5.244242999997368
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 2.7317240000011225,
+            "p95": 3.8446860000003653,
+            "p99": 4.743475999999646,
+            "max": 5.283785999999964
+          },
+          "legacy.observations.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 3.3988270000008924,
+            "p95": 4.60858300000109,
+            "p99": 5.7888979999988806,
+            "max": 6.490323000001808
+          },
+          "legacy.observations.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1522.9890360000027,
+            "p95": 3166.337394000002,
+            "p99": 3319.327272999999,
+            "max": 3355.628845000003
+          }
+        }
+      },
+      "recovery": null,
+      "journal": null,
+      "memory": {
+        "before": {
+          "rss": 166383616,
+          "heapTotal": 86155264,
+          "heapUsed": 54751304,
+          "external": 4141336,
+          "arrayBuffers": 84253
+        },
+        "after": {
+          "rss": 170184704,
+          "heapTotal": 88776704,
+          "heapUsed": 69577496,
+          "external": 4176032,
+          "arrayBuffers": 92645
+        },
+        "sampledPeakRssBytes": 170184704,
+        "sampledPeakHeapUsedBytes": 68818312,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "durable-burst",
+      "offered": 200,
+      "uniqueOffered": 200,
+      "networkWithheld": 0,
+      "completed": 200,
+      "completedEventsPerSecond": 259.4448470769018,
+      "elapsedMs": 770.8767480000024,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 12,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 293.92905800000153,
+          "p95": 709.5774789999996,
+          "p99": 752.271351000003,
+          "max": 766.1276570000009
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 779.3814689999999,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 201,
+          "observations.received": 200,
+          "legacy.observations.offered": 200,
+          "legacy.observations.admitted": 200,
+          "observations.delivered": 200,
+          "decoding.completed": 200,
+          "decoding.launches": 200,
+          "rpc.calls": 200,
+          "rpc.errors": 12,
+          "ingestion.received": 200,
+          "strategy.decisions": 200,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 200,
+          "ingestion.completed": 200,
+          "ingestion.buys_committed": 5,
+          "legacy.observations.completed": 200,
+          "strategy.rejected": 195
+        },
+        "gauges": {
+          "legacy.observations.pending": {
+            "current": 0,
+            "peak": 200
+          },
+          "legacy.observations.queue_depth": {
+            "current": 0,
+            "peak": 200
+          },
+          "legacy.observations.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 201,
+            "samples": 201,
+            "p50": 0.005131999998411629,
+            "p95": 0.0076069999995524995,
+            "p99": 0.014179999998304993,
+            "max": 0.07530499999847962
+          },
+          "monitor.ingestion_ms": {
+            "count": 201,
+            "samples": 201,
+            "p50": 0.011003000003256602,
+            "p95": 0.018631999999342952,
+            "p99": 0.05138199999782955,
+            "max": 0.08217599999989034
+          },
+          "monitor.deduplication_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.0009260000006179325,
+            "p95": 0.0014340000016090926,
+            "p99": 0.005027000002883142,
+            "max": 0.013638000000355532
+          },
+          "legacy.observations.queue_wait_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 290.2239929999996,
+            "p95": 703.657008000002,
+            "p99": 746.599374999998,
+            "max": 759.9149460000008
+          },
+          "decoding_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.5517140000010841,
+            "p95": 0.7609029999985069,
+            "p99": 0.9028049999978975,
+            "max": 1.0265399999989313
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.005844999999681022,
+            "p95": 0.05551200000263634,
+            "p99": 0.06919100000231992,
+            "max": 0.0854959999996936
+          },
+          "ingestion.validation_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.01608999999734806,
+            "p95": 0.028061999997589737,
+            "p99": 0.03825499999948079,
+            "max": 0.07303800000227056
+          },
+          "store.queue_wait_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.003284999998868443,
+            "p95": 0.005156999999599066,
+            "p99": 0.006403000003047055,
+            "max": 0.0075670000005629845
+          },
+          "store.clone_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.9472600000008242,
+            "p95": 1.6327999999994063,
+            "p99": 1.7898090000016964,
+            "max": 2.2659310000017285
+          },
+          "engine.deduplication_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.0049490000019432046,
+            "p95": 0.014676999999210238,
+            "p99": 0.023242999999638414,
+            "max": 0.03500100000019302
+          },
+          "risk_evaluation_ms": {
+            "count": 400,
+            "samples": 400,
+            "p50": 0.0028720000009343494,
+            "p95": 0.008176999999705004,
+            "p99": 0.01473700000133249,
+            "max": 0.024545000000216532
+          },
+          "strategy_decision_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.0044140000027255155,
+            "p95": 0.00734799999918323,
+            "p99": 0.015452999999979511,
+            "max": 0.019185999997716863
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.02413200000228244,
+            "p95": 0.02682700000150362,
+            "p99": 0.02682700000150362,
+            "max": 0.04018999999971129
+          },
+          "store.validation_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.5051740000017162,
+            "p95": 0.8693080000011832,
+            "p99": 1.1485020000000077,
+            "max": 1.2538339999991877
+          },
+          "store.persistence_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 1.2702019999996992,
+            "p95": 2.2642239999986487,
+            "p99": 3.0363190000025497,
+            "max": 3.172322999998869
+          },
+          "store.transaction_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 2.81482799999867,
+            "p95": 4.61280799999804,
+            "p99": 5.4267809999983,
+            "max": 6.536035000000993
+          },
+          "ingestion_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 2.8407589999987977,
+            "p95": 4.644508000001224,
+            "p99": 5.456066999999166,
+            "max": 6.565914999999222
+          },
+          "legacy.observations.processing_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 3.7748670000000857,
+            "p95": 5.917550000001938,
+            "p99": 6.56218699999954,
+            "max": 7.657461999999214
+          },
+          "legacy.observations.end_to_end_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 293.92425300000104,
+            "p95": 709.5816950000008,
+            "p99": 752.267490000002,
+            "max": 766.1320240000023
+          }
+        }
+      },
+      "recovery": null,
+      "journal": null,
+      "memory": {
+        "before": {
+          "rss": 170446848,
+          "heapTotal": 89563136,
+          "heapUsed": 54193496,
+          "external": 4149344,
+          "arrayBuffers": 92645
+        },
+        "after": {
+          "rss": 171757568,
+          "heapTotal": 90087424,
+          "heapUsed": 59550664,
+          "external": 4345089,
+          "arrayBuffers": 288390
+        },
+        "sampledPeakRssBytes": 171757568,
+        "sampledPeakHeapUsedBytes": 68105248,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 10.472675555555556,
+        "p95": 12.099583,
+        "p99": 12.148735,
+        "max": 13.369343
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    }
+  ]
+}

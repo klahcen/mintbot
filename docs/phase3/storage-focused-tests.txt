@@ -1,0 +1,45 @@
+TAP version 13
+# Subtest: raw rotation has bounded retention with persistent cumulative coverage tombstones and intact pending WAL
+ok 1 - raw rotation has bounded retention with persistent cumulative coverage tombstones and intact pending WAL
+  ---
+  duration_ms: 124.177387
+  ...
+# Subtest: raw persistence rejects oversized records rather than silently truncating them
+ok 2 - raw persistence rejects oversized records rather than silently truncating them
+  ---
+  duration_ms: 20.034081
+  ...
+# Subtest: raw writer ownership is exclusive and journal/raw path overlap is rejected before opening storage
+ok 3 - raw writer ownership is exclusive and journal/raw path overlap is rejected before opening storage
+  ---
+  duration_ms: 1370.294133
+  ...
+# Subtest: overlapping providers commit one discovery and initial secondary subscription creates no false gap
+ok 4 - overlapping providers commit one discovery and initial secondary subscription creates no false gap
+  ---
+  duration_ms: 1784.878455
+  ...
+# Subtest: runtime service reconnects via WebSocket and performs real HTTP-format read-only backfill
+ok 5 - runtime service reconnects via WebSocket and performs real HTTP-format read-only backfill
+  ---
+  duration_ms: 2207.966482
+  ...
+# Subtest: HTTP recovery has abortable lifetime and bounded response memory
+ok 6 - HTTP recovery has abortable lifetime and bounded response memory
+  ---
+  duration_ms: 36.387827
+  ...
+# Subtest: silent socket loss is detected by monotonic scheduled heartbeat and creates an explicit reconnect
+ok 7 - silent socket loss is detected by monotonic scheduled heartbeat and creates an explicit reconnect
+  ---
+  duration_ms: 1.819281
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5886.004638

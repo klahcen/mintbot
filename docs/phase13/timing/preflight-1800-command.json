@@ -1,0 +1,18 @@
+{
+  "args": [
+    "systemd-inhibit",
+    "--what=sleep:idle",
+    "--who=Mintbot",
+    "--why=Authorized Phase13 same-budget timing preflight",
+    "--mode=block",
+    "python3",
+    "scripts/phase12-host-health.py",
+    "--seconds",
+    "1800",
+    "--container",
+    "mintbot-phase12-clock",
+    "--output",
+    "docs/phase13/timing/preflight-1800"
+  ],
+  "startedAt": "2026-11-15T12:39:41.976633+00:00"
+}

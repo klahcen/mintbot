@@ -1,0 +1,66 @@
+{
+  "baseline": [
+    {
+      "phase": 13,
+      "venue": "pump",
+      "providerAttribution": "See each byte-exact proof; run may reconnect",
+      "normalizedDelivered": 268353,
+      "invalidIdentities": 65,
+      "invalidRate": 0.00024221827220116787
+    },
+    {
+      "phase": 13,
+      "venue": "pumpswap",
+      "providerAttribution": "See each byte-exact proof; run may reconnect",
+      "normalizedDelivered": 2235,
+      "invalidIdentities": 0,
+      "invalidRate": 0.0
+    },
+    {
+      "phase": 13,
+      "venue": "raydium-cpmm",
+      "providerAttribution": "See each byte-exact proof; run may reconnect",
+      "normalizedDelivered": 5172,
+      "invalidIdentities": 4,
+      "invalidRate": 0.0007733952049497294
+    },
+    {
+      "phase": 13,
+      "venue": "meteora-dlmm",
+      "providerAttribution": "See each byte-exact proof; run may reconnect",
+      "normalizedDelivered": 0,
+      "invalidIdentities": 0,
+      "invalidRate": null
+    }
+  ],
+  "current": [
+    {
+      "phase": 14,
+      "host": "solana-rpc.publicnode.com",
+      "venue": "meteora-dlmm",
+      "normalizedDelivered": 0,
+      "logEnvelopes": 0,
+      "invalidIdentities": 0,
+      "invalidRate": null,
+      "wireOutcomes": {},
+      "wireDropped": 0
+    },
+    {
+      "phase": 14,
+      "host": "api.mainnet-beta.solana.com",
+      "venue": "meteora-dlmm",
+      "normalizedDelivered": 27100,
+      "logEnvelopes": 27100,
+      "invalidIdentities": 5,
+      "invalidRate": 0.00018450184501845018,
+      "wireOutcomes": {
+        "normalized-observation": 41,
+        "unverifiable-zero-signature": 5
+      },
+      "wireDropped": 0
+    }
+  ],
+  "phase13Proofs": 69,
+  "denominator": "Delivered normalized observations including invalid identities, not sampled wire records, distinct transactions, or total finalized chain activity",
+  "unavailable": "Phase13 exact per-provider notification denominator; invalid-envelope all-shape rates outside this bounded control"
+}

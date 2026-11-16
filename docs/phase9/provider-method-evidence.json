@@ -1,0 +1,194 @@
+{
+  "generatedAt": "2026-11-11T02:05:17.025Z",
+  "observations": [
+    {
+      "provider": "solana-public",
+      "host": "api.mainnet-beta.solana.com",
+      "calls": [
+        {
+          "method": "getGenesisHash",
+          "result": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+          "observedAt": 1794362716580,
+          "elapsedMs": 869.440122
+        },
+        {
+          "method": "getSlot",
+          "result": 467949133,
+          "observedAt": 1794362716716,
+          "elapsedMs": 136.40504499999997
+        },
+        {
+          "method": "getSignatureStatuses",
+          "result": {
+            "context": {
+              "apiVersion": "4.4.0",
+              "slot": 467949134
+            },
+            "value": [
+              {
+                "confirmationStatus": "finalized",
+                "confirmations": null,
+                "err": null,
+                "slot": 467795920,
+                "status": {
+                  "Ok": null
+                }
+              }
+            ]
+          },
+          "observedAt": 1794362716889,
+          "elapsedMs": 172.36186799999996
+        },
+        {
+          "method": "getMultipleAccounts",
+          "result": {
+            "context": {
+              "apiVersion": "4.4.0",
+              "slot": 467949134
+            },
+            "value": [
+              {
+                "data": [
+                  "F7f4N2DYrGAkUngOvtADAEh/zdoEAAAAJLplwizSAgACAAAAAAAAAACAxqR+jQMAAKWqbZ0h5XC0WT0q/xpvxYvg90RKdtzUutoSVM0m9Z7QAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADKnQMAAAAAAAAAAAAAAAAAAACsI/wGAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+                  "base64"
+                ],
+                "executable": false,
+                "lamports": 1730524,
+                "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+                "rentEpoch": 18446744073709552000,
+                "space": 166
+              },
+              {
+                "data": [
+                  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACNSf0aBwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMoBqV709Y/qsnHYKnlyUgFEBk0lIchkkYBGEMcQpPfEwCfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIygGpXvT1j+qycdgqeXJSAUQGTSUhyGSRgEYQxxCk98IAAAAQ0FURUNPSU4EAAAAJENBVEMAAABodHRwczovL2lwZnMuaW8vaXBmcy9RbVZXUndGZUJlNmZmYksydWNFbkJ3aHRzNnBwdkZhRkR2UGt6ZXZMaWhReWh3AAAAAA==",
+                  "base64"
+                ],
+                "executable": false,
+                "lamports": 2667000,
+                "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+                "rentEpoch": 18446744073709552000,
+                "space": 397
+              }
+            ]
+          },
+          "observedAt": 1794362717025,
+          "elapsedMs": 135.91116999999986
+        }
+      ]
+    },
+    {
+      "provider": "publicnode",
+      "host": "solana-rpc.publicnode.com",
+      "calls": [
+        {
+          "method": "getGenesisHash",
+          "result": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+          "observedAt": 1794362716363,
+          "elapsedMs": 606.829494
+        },
+        {
+          "method": "getSlot",
+          "result": 467949131,
+          "observedAt": 1794362716495,
+          "elapsedMs": 132.22605399999986
+        },
+        {
+          "method": "getSignatureStatuses",
+          "result": {
+            "context": {
+              "apiVersion": "4.4.1",
+              "slot": 467949133
+            },
+            "value": [
+              {
+                "confirmationStatus": "finalized",
+                "confirmations": null,
+                "err": null,
+                "slot": 467795920,
+                "status": {
+                  "Ok": null
+                }
+              }
+            ]
+          },
+          "observedAt": 1794362716793,
+          "elapsedMs": 297.81683599999997
+        },
+        {
+          "method": "getMultipleAccounts",
+          "result": {
+            "context": {
+              "apiVersion": "4.4.1",
+              "slot": 467949132
+            },
+            "value": [
+              {
+                "data": [
+                  "F7f4N2DYrGAkUngOvtADAEh/zdoEAAAAJLplwizSAgACAAAAAAAAAACAxqR+jQMAAKWqbZ0h5XC0WT0q/xpvxYvg90RKdtzUutoSVM0m9Z7QAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADKnQMAAAAAAAAAAAAAAAAAAACsI/wGAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+                  "base64"
+                ],
+                "executable": false,
+                "lamports": 1730524,
+                "owner": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+                "rentEpoch": 18446744073709552000,
+                "space": 166
+              },
+              {
+                "data": [
+                  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACNSf0aBwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMoBqV709Y/qsnHYKnlyUgFEBk0lIchkkYBGEMcQpPfEwCfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIygGpXvT1j+qycdgqeXJSAUQGTSUhyGSRgEYQxxCk98IAAAAQ0FURUNPSU4EAAAAJENBVEMAAABodHRwczovL2lwZnMuaW8vaXBmcy9RbVZXUndGZUJlNmZmYksydWNFbkJ3aHRzNnBwdkZhRkR2UGt6ZXZMaWhReWh3AAAAAA==",
+                  "base64"
+                ],
+                "executable": false,
+                "lamports": 2667000,
+                "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+                "rentEpoch": 18446744073709552000,
+                "space": 397
+              }
+            ]
+          },
+          "observedAt": 1794362716910,
+          "elapsedMs": 116.801921
+        }
+      ]
+    }
+  ],
+  "retainedLaunch": {
+    "id": "pump:5gMLuFCwMLyWCSAm9RaMntqcaTaLA8ofytkriqZS8qbvgMWUtpu469bbxJcjzcqM3EsATp2L1CiFhV6MVRjYiCkh:0",
+    "program": "pump",
+    "signature": "5gMLuFCwMLyWCSAm9RaMntqcaTaLA8ofytkriqZS8qbvgMWUtpu469bbxJcjzcqM3EsATp2L1CiFhV6MVRjYiCkh",
+    "slot": 467795920,
+    "kind": "launch",
+    "address": "CAx5SoA8y4JJJ3zPtQrPUhVifZXynNJ3pYcdkQd7pVYr",
+    "mints": [
+      "3NEfn88BFkMSAtBszze26KbaSpobZGS8NxarrsCcpump"
+    ],
+    "creator": "C9gzsBZMesKiTat5RiawwXb9h5mwcLdNK8nWEiG8EkAb",
+    "chainTimestamp": "1794329846",
+    "instruction": "create_v2",
+    "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+    "accountContextSlot": 467796175,
+    "executionEligible": false,
+    "verifiedAt": 1794329901781,
+    "blockTimeMs": 1794329846000,
+    "sourceProvider": "api.mainnet-beta.solana.com",
+    "creationCommitment": "finalized",
+    "freshness": {
+      "origin": "live",
+      "receiptAt": 1794329901265,
+      "eventSlot": 467795920,
+      "chainHeadSlot": 467795922,
+      "eventTimeMs": 1794329846000
+    }
+  },
+  "expectedGenesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "exactBank": "unknown",
+  "exactBytesEqual": "unknown",
+  "accountDigests": [
+    "d1e6fdb54fbd3d5e316f88bbca139b0242520a7ff98b49de0d21341f3d59290a",
+    "d1e6fdb54fbd3d5e316f88bbca139b0242520a7ff98b49de0d21341f3d59290a"
+  ],
+  "independence": "unknown",
+  "eligible": false,
+  "liveTrading": false,
+  "scope": "Diagnostic current per-method results for one historical identity; differing state banks cannot certify agreement. Service brands do not establish independent operators, recovery completeness, or authorization."
+}

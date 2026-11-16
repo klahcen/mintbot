@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-11-15T13:01:12.525166+00:00",
+  "directory": "/tmp/mintbot-phase13-clean-delivery-9xep4e38",
+  "node": "v22.22.0",
+  "checks": [
+    {
+      "check": "install",
+      "args": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "typecheck",
+      "args": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "build",
+      "args": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "audit",
+      "args": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "python-clock-tests",
+      "exitCode": 0
+    }
+  ]
+}

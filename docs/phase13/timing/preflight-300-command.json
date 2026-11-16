@@ -1,0 +1,13 @@
+{
+  "args": [
+    "systemd-inhibit",
+    "--what=sleep:idle",
+    "--who=Mintbot",
+    "--why=Authorized Phase13 bounded read-only timing preflight",
+    "--mode=block",
+    "python3",
+    "-c",
+    "import subprocess; a=subprocess.run(['python3','scripts/phase12-host-health.py','--seconds','300','--container','mintbot-phase12-clock','--output','docs/phase13/timing/preflight-300']); raise SystemExit(a.returncode) if a.returncode else None"
+  ],
+  "startedAt": "2026-11-15T12:36:07.497165+00:00"
+}

@@ -1,0 +1,99 @@
+{
+  "scope": "Offline decode only; fixture generation excluded; repeated mint has deliberate cache locality; unique-mint workload exposes cold misses; cache disabled/enabled ordered pairs, not randomized",
+  "rows": [
+    {
+      "workload": "repeated-mint",
+      "pdaCache": false,
+      "events": 1000,
+      "elapsedMs": 473.8812860000003,
+      "uptimeMs": 474.1677870000001,
+      "counters": {
+        "decoding.pda_cache_misses": 1000,
+        "decoding.completed": 1000,
+        "decoding.launches": 1000
+      },
+      "gauges": {},
+      "histograms": {
+        "decoding_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.41705799999999726,
+          "p95": 0.8121129999999539,
+          "p99": 1.2337720000000445,
+          "max": 3.387474999999995
+        }
+      }
+    },
+    {
+      "workload": "repeated-mint",
+      "pdaCache": true,
+      "events": 1000,
+      "elapsedMs": 90.14980700000024,
+      "uptimeMs": 90.17662900000005,
+      "counters": {
+        "decoding.pda_cache_misses": 1,
+        "decoding.completed": 1000,
+        "decoding.launches": 1000,
+        "decoding.pda_cache_hits": 999
+      },
+      "gauges": {},
+      "histograms": {
+        "decoding_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.07276400000000649,
+          "p95": 0.13714699999991353,
+          "p99": 0.1653040000001056,
+          "max": 1.173471999999947
+        }
+      }
+    },
+    {
+      "workload": "unique-mints",
+      "pdaCache": false,
+      "events": 1000,
+      "elapsedMs": 731.498153,
+      "uptimeMs": 731.5245459999996,
+      "counters": {
+        "decoding.pda_cache_misses": 1000,
+        "decoding.completed": 1000,
+        "decoding.launches": 1000
+      },
+      "gauges": {},
+      "histograms": {
+        "decoding_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.6427300000000287,
+          "p95": 1.5974240000000464,
+          "p99": 2.1962979999998424,
+          "max": 3.751132000000325
+        }
+      }
+    },
+    {
+      "workload": "unique-mints",
+      "pdaCache": true,
+      "events": 1000,
+      "elapsedMs": 733.244909,
+      "uptimeMs": 733.2790370000002,
+      "counters": {
+        "decoding.pda_cache_misses": 1000,
+        "decoding.completed": 1000,
+        "decoding.launches": 1000,
+        "decoding.pda_cache_evictions": 489
+      },
+      "gauges": {},
+      "histograms": {
+        "decoding_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.6460900000001857,
+          "p95": 1.5798329999997804,
+          "p99": 2.4791779999995924,
+          "max": 3.7914359999995213
+        }
+      }
+    }
+  ]
+}

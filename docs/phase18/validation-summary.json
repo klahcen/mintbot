@@ -1,0 +1,40 @@
+{
+  "status": "INTEGRATED / LOCALLY VALIDATED / EXTERNALLY BLOCKED; retained-test-database preservation exception",
+  "typescriptTests": 365,
+  "typescriptPassed": 365,
+  "typescriptFailed": 0,
+  "testFileConcurrency": 1,
+  "originalTypeScriptTestsUnchanged": true,
+  "pythonClockTests": 5,
+  "typecheck": "PASS",
+  "build": "PASS",
+  "auditAdvisories": 0,
+  "node": "v22.22.0",
+  "productionImageBuild": "PASS",
+  "productionCompiledModulesMatchTestedBuild": 147,
+  "sourceFilesMatchCleanInstallation": 293,
+  "finalDatabaseIsolation": [
+    {
+      "test": "docs/phase7/persistent-database-validation.json",
+      "disposable": true,
+      "reused": false
+    },
+    {
+      "test": "docs/phase8/database-validation.json",
+      "disposable": true,
+      "reused": false
+    }
+  ],
+  "ordinaryNpmTestFourWorkers": "Initial 363-test run passed; later 365-test isolated run 363 passed / 2 short HTTP deadline failures. Full unchanged 365-test suite passed with one worker.",
+  "httpsAndWssConnected": true,
+  "sameBankFourProgramAccountObservation": true,
+  "providerIndependentlyApproved": false,
+  "coverageEpochApproved": false,
+  "chainstackHistoricalMethod": "getFirstAvailableBlock HTTP 403",
+  "paperEntries": 0,
+  "paperExits": 0,
+  "fullResearchExperimentRun": false,
+  "liveTrading": false,
+  "retainedLocalRegressionDatabasePreservation": "EXCEPTION; initial test writes and runtime credential rotation, not undone",
+  "applicationComposeDatabaseUsed": false
+}

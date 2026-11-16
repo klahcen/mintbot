@@ -1,0 +1,7 @@
+# Zero-signature incident analysis — Phase 14
+
+The original [69 byte-exact remote zero-signature proofs](phase13/identity-mainnet-analysis.json) and raw audit files remain unchanged. No valid signature fallback exists or was added. Existing admission tests establish refusal before WAL ownership, recovery-anchor promotion, finalized verification or paper admission. A malformed mapped notification now retains venue, subscription, available slot and `envelopeIssue`, while preserving the established `message-rejected` outcome and never fabricating a signature.
+
+[Rates and denominators](phase14/identity-rates.json) use all normalized delivered observations, including invalid identities. The Phase13 run is 69/275,760 (65/268,353 Pump; 4/5,172 Raydium; 0/2,235 PumpSwap). Meteora has denominator zero, so its rate is undefined, not zero. Wire traces are sampled and cannot supply full-rate denominators. Repeated identical invalid envelopes are still observations, not distinct signed transactions.
+
+Fresh Meteora endpoint rows include normalized counts, all message and log-envelope counts, issue counts and connection-tagged traces. These support bounded per-endpoint/venue attribution. The Phase13 run-wide denominator is not split by provider unless full per-provider counters exist. Invalid proof records expose endpoint, subscription and connection; coincidence with a reconnect is not a causal explanation. Unsupported/malformed envelopes remain diagnosed separately from normalized identity rates. No invalid payload is treated as a proven Solana fork.

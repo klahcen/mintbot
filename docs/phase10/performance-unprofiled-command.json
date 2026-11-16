@@ -1,0 +1,20 @@
+{
+  "cwd": "/tmp/mintbot-phase10-phase9-final-k4l7lpn_",
+  "args": [
+    "node",
+    "--import",
+    "tsx",
+    "scripts/phase9-performance-benchmark.ts",
+    "--before-root",
+    "/tmp/mintbot-phase10-before-djrj0gqn",
+    "--runs",
+    "5",
+    "--scenarios",
+    "durable-burst-200",
+    "--load-scope",
+    "Single bounded Node22 mainnet research container only; no concurrent Mintbot tests, builds or DB probes during measurement; other shared-host load uncontrolled",
+    "--output",
+    "/home/lkazaz/Desktop/mintbot/docs/phase10/performance-unprofiled-control.json"
+  ],
+  "scope": "Same archived source, seed, workload and repetitions without intrusive scheduler/JSON sampling."
+}

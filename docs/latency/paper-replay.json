@@ -1,0 +1,180 @@
+{
+  "scope": "SYNTHETIC paper simulation; not historical or mainnet executions",
+  "balanceSol": 10.047472437810946,
+  "realizedPnlSol": 0.0474724378109453,
+  "trades": [
+    {
+      "id": "27bf6b53-1f33-4bd2-bbe2-fe29984568d7",
+      "positionId": "6cf6bf15-f0c2-4072-9c76-891642761f51",
+      "symbol": "SIM2",
+      "side": "sell",
+      "amountSol": 0.04949248756218906,
+      "quantity": 995.0248756218907,
+      "feeSol": 0.00001,
+      "slippageSol": 0.00024875621890547273,
+      "pnlSol": -0.05051751243781094,
+      "status": "paper-filled",
+      "at": 1793729997754,
+      "reason": "stop-loss",
+      "source": "synthetic"
+    },
+    {
+      "id": "a429acc9-6b76-4e27-85a2-a7419ca6fe75",
+      "positionId": "6cf6bf15-f0c2-4072-9c76-891642761f51",
+      "symbol": "SIM2",
+      "side": "buy",
+      "amountSol": 0.1,
+      "quantity": 995.0248756218907,
+      "feeSol": 0.00001,
+      "slippageSol": 0.0004975124378109319,
+      "pnlSol": 0,
+      "status": "paper-filled",
+      "at": 1793729997753,
+      "reason": "strategy",
+      "source": "synthetic"
+    },
+    {
+      "id": "cff4f47a-379f-4a38-b48c-8b044534bd80",
+      "positionId": "d984748a-6a00-4f67-bbff-9d2d6afc95ac",
+      "symbol": "SIM1",
+      "side": "sell",
+      "amountSol": 0.19799995024875625,
+      "quantity": 995.0248756218907,
+      "feeSol": 0.00001,
+      "slippageSol": 0.000995024875621891,
+      "pnlSol": 0.09798995024875624,
+      "status": "paper-filled",
+      "at": 1793729997751,
+      "reason": "take-profit",
+      "source": "synthetic"
+    },
+    {
+      "id": "ea305c26-cf7e-4e02-9861-b7c70f025cbf",
+      "positionId": "d984748a-6a00-4f67-bbff-9d2d6afc95ac",
+      "symbol": "SIM1",
+      "side": "buy",
+      "amountSol": 0.1,
+      "quantity": 995.0248756218907,
+      "feeSol": 0.00001,
+      "slippageSol": 0.0004975124378109319,
+      "pnlSol": 0,
+      "status": "paper-filled",
+      "at": 1793729997737,
+      "reason": "strategy",
+      "source": "synthetic"
+    }
+  ],
+  "telemetry": {
+    "uptimeMs": 65.40389900000002,
+    "counters": {
+      "ingestion.received": 2,
+      "strategy.decisions": 2,
+      "strategy.allowed": 2,
+      "paper.buy_attempts": 2,
+      "store.committed": 4,
+      "ingestion.completed": 2,
+      "ingestion.buys_committed": 2,
+      "paper.sell_attempts": 2
+    },
+    "gauges": {
+      "store.queue_depth": {
+        "current": 0,
+        "peak": 1
+      },
+      "store.in_flight": {
+        "current": 0,
+        "peak": 1
+      }
+    },
+    "histograms": {
+      "ingestion.validation_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 0.11675000000002456,
+        "p95": 0.11675000000002456,
+        "p99": 0.11675000000002456,
+        "max": 4.522221000000059
+      },
+      "store.queue_wait_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 0.03733599999998205,
+        "p95": 0.039344000000028245,
+        "p99": 0.039344000000028245,
+        "max": 0.24687300000005052
+      },
+      "store.clone_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 0.11234699999999975,
+        "p95": 0.13143800000000283,
+        "p99": 0.13143800000000283,
+        "max": 0.2322510000000193
+      },
+      "engine.deduplication_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 0.006094000000075539,
+        "p95": 0.006094000000075539,
+        "p99": 0.006094000000075539,
+        "max": 0.04814200000009805
+      },
+      "risk_evaluation_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 0.024272999999993772,
+        "p95": 0.12099100000000362,
+        "p99": 0.12099100000000362,
+        "max": 0.13216399999998885
+      },
+      "strategy_decision_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 0.032278999999903135,
+        "p95": 0.032278999999903135,
+        "p99": 0.032278999999903135,
+        "max": 0.26600200000007135
+      },
+      "paper_execution_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 0.14776800000004187,
+        "p95": 0.34513800000001993,
+        "p99": 0.34513800000001993,
+        "max": 0.44608499999992546
+      },
+      "store.validation_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 0.8664939999999888,
+        "p95": 1.2515690000000177,
+        "p99": 1.2515690000000177,
+        "max": 11.68549100000007
+      },
+      "store.transaction_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 1.2990619999999353,
+        "p95": 2.7886440000000903,
+        "p99": 2.7886440000000903,
+        "max": 13.31758000000002
+      },
+      "ingestion_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 1.437080999999921,
+        "p95": 1.437080999999921,
+        "p99": 1.437080999999921,
+        "max": 18.401854999999955
+      },
+      "exit_decision_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 0.00435400000003483,
+        "p95": 0.00435400000003483,
+        "p99": 0.00435400000003483,
+        "max": 0.1330560000000105
+      }
+    }
+  }
+}

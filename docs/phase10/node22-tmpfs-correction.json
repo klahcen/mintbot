@@ -1,0 +1,13 @@
+{
+  "performance-node22-current.json": {
+    "sha256": "cbd416923baec7ff980c0b7bb717c506a15a1fd02be204d86e6f39a09ed0a071",
+    "classification": "RAM-backed tmpfs diagnostic; excluded from persistent-storage durability/comparability claims",
+    "reason": "Container --tmpfs /tmp put the benchmark temporary journal on RAM. Fsync calls remained in code, but power-loss persistence and physical filesystem latency were not measured. Raw outcomes retained unmodified."
+  },
+  "performance-node22-counterbalanced.json": {
+    "sha256": "033e7d9bdd04ae1333e345a426e099eaa800941bf27447d3e6fae42bd4f0b654",
+    "classification": "RAM-backed tmpfs diagnostic; excluded from persistent-storage durability/comparability claims",
+    "reason": "Container --tmpfs /tmp put the benchmark temporary journal on RAM. Fsync calls remained in code, but power-loss persistence and physical filesystem latency were not measured. Raw outcomes retained unmodified.",
+    "scopeMetadataNote": "The raw inherited scope text says randomized; explicit jobOrder and row order show the actual paired alternating sequence. The retained harness-at-run is authoritative."
+  }
+}

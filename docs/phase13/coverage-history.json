@@ -1,0 +1,101 @@
+{
+  "endedAt": 1794750109047,
+  "journal": {
+    "pending": 752,
+    "pendingPeak": 805,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 1799113,
+    "activePending": 0,
+    "oldestActiveAgeMs": 0,
+    "quarantined": 752,
+    "completedRetained": 20000,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 8253599,
+    "walBytes": 25899735,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {
+      "raydium-cpmm": {
+        "signature": "md9888gnz96m2QWNLi1AzUv2BzNDUq6xfWYAU7eTMzvwiqZ5ZkmNNQ3dQ287NM8SdvVfAWxk4GBYGQFfmtzV4NB",
+        "slot": 469750065
+      },
+      "pump": {
+        "signature": "3okr96kHyhc9AHy8rrhY99xQZdRmUF6YZyUtRwrxnYkcj2KmHYdLk4WsgLVPXBYdjNv9n8jtw4XNnDWQe2abS1jX",
+        "slot": 469749972
+      },
+      "pumpswap": {
+        "signature": "4MsHA8HiZRkox8kpzCoys28F4uTE7gdT2jD9yqeJAscXWQk712UnAuEtmkWHFWCVs9bvPYyX19ctvgnntLFZ2W4Y",
+        "slot": 469744164
+      },
+      "meteora-dlmm": {
+        "signature": "2Hr45oGCj1S3UKwwCaxiQ7RPPXYEmQMQCqDjCYKZhpBT5xEPhahbxRtrFpkAR9cmaZe31tc6oSc3UoqH8CuMB22a",
+        "slot": 469743450
+      }
+    },
+    "dedupeFloors": {
+      "raydium-cpmm": 469749738,
+      "pump": 469749739,
+      "pumpswap": 469744164,
+      "meteora-dlmm": 469743450
+    },
+    "gaps": [
+      {
+        "program": "pump",
+        "fromSlot": 469741732,
+        "toSlot": 469749958,
+        "reason": "unverifiable-zero-signature",
+        "anchor": {
+          "signature": "42TAbzKWbp5bcTvRNgHqnFWFi9XB6HzxEheoa43x5wnfi8kThpFqxA3zhVSomavcDDdA58eUZszdnqpYRgQkkm6o",
+          "slot": 469741764
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 87
+      },
+      {
+        "program": "raydium-cpmm",
+        "fromSlot": 469748730,
+        "toSlot": 469748771,
+        "reason": "provider-window-covered",
+        "anchor": {
+          "signature": "4stdBMXM176M7vANdYkxSbQpEYGP6e42KkDfEJY8SgxXzcQuz6cptqmSMX5FSy5GGAoTsoDXbYtAR5dRKd7p1Hcb",
+          "slot": 469748761
+        },
+        "attempts": 1,
+        "status": "recovered",
+        "knownRefused": 1
+      },
+      {
+        "program": "pumpswap",
+        "fromSlot": 469742908,
+        "toSlot": 469746544,
+        "reason": "supervised-websocket-disconnect",
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 1
+      },
+      {
+        "program": "meteora-dlmm",
+        "fromSlot": 469742908,
+        "toSlot": 469746544,
+        "reason": "supervised-websocket-disconnect",
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 0
+      }
+    ],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 57194078208,
+    "fsyncBatches": 150937,
+    "writerFailure": null
+  },
+  "sourceArtifact": {
+    "path": "docs/phase13/runtime/mainnet-validated/evidence.json",
+    "sha256": "b8c911d6b1d291db7b7b304e1e4901789c6e059b3a7857f564a210528e135e32",
+    "bytes": 5623954
+  },
+  "scope": "One completed Phase13 primary window, unresolved evidence retained; epoch approval remains unmet."
+}

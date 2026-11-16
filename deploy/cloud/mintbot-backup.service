@@ -1,0 +1,12 @@
+[Unit]
+Description=Mintbot encrypted database and evidence backup
+After=docker.service
+Requires=docker.service
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/mintbot
+ExecStart=/usr/bin/python3 /opt/mintbot/scripts/cloud/manage.py backup
+UMask=0077
+TimeoutStartSec=30min
+KillSignal=SIGINT
+TimeoutStopSec=60

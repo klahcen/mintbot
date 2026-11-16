@@ -1,0 +1,110 @@
+TAP version 13
+# Subtest: weighted fairness gives live work prompt admission and eventual service to historical work
+ok 1 - weighted fairness gives live work prompt admission and eventual service to historical work
+  ---
+  duration_ms: 119.34149
+  ...
+# Subtest: missing chain head/time and recovered launches cannot silently become fresh paper entries
+ok 2 - missing chain head/time and recovered launches cannot silently become fresh paper entries
+  ---
+  duration_ms: 40.143159
+  ...
+# Subtest: 1000-event duplicate burst, provider overlap and out-of-order slots process once with bounded concurrent stages
+ok 3 - 1000-event duplicate burst, provider overlap and out-of-order slots process once with bounded concurrent stages
+  ---
+  duration_ms: 927.495897
+  ...
+# Subtest: saturation persists deferred work, exposes rejected unpersistable offers and recovers the pending WAL after restart
+ok 4 - saturation persists deferred work, exposes rejected unpersistable offers and recovers the pending WAL after restart
+  ---
+  duration_ms: 51.001106
+  ...
+# Subtest: dedupe eviction rejects too-old unknown work explicitly rather than double processing
+ok 5 - dedupe eviction rejects too-old unknown work explicitly rather than double processing
+  ---
+  duration_ms: 12.694998
+  ...
+# Subtest: malformed receipt does not poison healthy ingestion and permanent decode failures are quarantined
+ok 6 - malformed receipt does not poison healthy ingestion and permanent decode failures are quarantined
+  ---
+  duration_ms: 20.549086
+  ...
+# Subtest: historical pagination recovers disconnected slots through verified decoder and dedupes live/history overlap
+ok 7 - historical pagination recovers disconnected slots through verified decoder and dedupes live/history overlap
+  ---
+  duration_ms: 34.929799
+  ...
+# Subtest: missing transactions and pagination/retention caps never report full recovery
+ok 8 - missing transactions and pagination/retention caps never report full recovery
+  ---
+  duration_ms: 46.002389
+  ...
+# Subtest: 429 retry-after is honored within a bounded retry budget
+ok 9 - 429 retry-after is honored within a bounded retry budget
+  ---
+  duration_ms: 27.661628
+  ...
+# Subtest: bounded stage worker budget and failure isolation remain observable
+ok 10 - bounded stage worker budget and failure isolation remain observable
+  ---
+  duration_ms: 2.186835
+  ...
+# Subtest: RPC failure before getSlot still consumes a persisted bounded recovery cycle
+ok 11 - RPC failure before getSlot still consumes a persisted bounded recovery cycle
+  ---
+  duration_ms: 9.644091
+  ...
+# Subtest: group acknowledgements follow fsync, duplicates await ownership and checkpoints preserve pending work
+ok 12 - group acknowledgements follow fsync, duplicates await ownership and checkpoints preserve pending work
+  ---
+  duration_ms: 2225.661762
+  ...
+# Subtest: write ENOSPC failure never acknowledges ownership and surfaces durable failure
+ok 13 - write ENOSPC failure never acknowledges ownership and surfaces durable failure
+  ---
+  duration_ms: 1767.955879
+  ...
+# Subtest: sync ENOSPC failure never acknowledges ownership and surfaces durable failure
+ok 14 - sync ENOSPC failure never acknowledges ownership and surfaces durable failure
+  ---
+  duration_ms: 1615.238061
+  ...
+# Subtest: worker journal pipeline drains only fsynced ownership and bounded completion acknowledgements
+ok 15 - worker journal pipeline drains only fsynced ownership and bounded completion acknowledgements
+  ---
+  duration_ms: 1682.414665
+  ...
+# Subtest: complete WAL corruption fails closed; a truncated final record is discarded explicitly on restart
+ok 16 - complete WAL corruption fails closed; a truncated final record is discarded explicitly on restart
+  ---
+  duration_ms: 4696.402264
+  ...
+# Subtest: overlapping providers commit one discovery and initial secondary subscription creates no false gap
+ok 17 - overlapping providers commit one discovery and initial secondary subscription creates no false gap
+  ---
+  duration_ms: 2228.342131
+  ...
+# Subtest: runtime service reconnects via WebSocket and performs real HTTP-format read-only backfill
+ok 18 - runtime service reconnects via WebSocket and performs real HTTP-format read-only backfill
+  ---
+  duration_ms: 2381.766174
+  ...
+# Subtest: HTTP recovery has abortable lifetime and bounded response memory
+ok 19 - HTTP recovery has abortable lifetime and bounded response memory
+  ---
+  duration_ms: 37.305146
+  ...
+# Subtest: silent socket loss is detected by monotonic scheduled heartbeat and creates an explicit reconnect
+ok 20 - silent socket loss is detected by monotonic scheduled heartbeat and creates an explicit reconnect
+  ---
+  duration_ms: 2.082858
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15236.33702

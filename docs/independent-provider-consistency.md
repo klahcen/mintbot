@@ -1,0 +1,7 @@
+# Phase 15 independent provider consistency
+
+**EXTERNALLY BLOCKED.** No selected authenticated pair, independently reviewed operating attribution or consistency-policy approval was supplied. No agreement is claimed and no configuration was fabricated.
+
+The existing ProviderConsistency class compares genesis, finalized status/slot, and canonical account state digests at equal slots, persists process-local quarantines and returns unknown for differing account banks. Distinct configured operator strings and origins are attribution hints, not independently reviewed operating proof. Status/slot agreement alone is not signed transaction-byte identity. This helper is not a complete implementation of the requested approved policy; no eligibility result from it supplies external authority.
+
+The operator must bind service identity and reviewed ownership to authenticated connections, verify full finalized signed transaction identity, market account owners and deployment pins, and provide a reviewed comparison method. Equal numeric slots need justified common-bank identity; minContextSlot is a lower bound. For different finalized banks retain both contexts, account bytes/hashes and observed changes under an explicitly reviewed consistency policy. Persist missing history, conflicts, partial reads, provider provenance and quarantine decisions durably. No fresh comparison was attempted after Gate 0. [Gate matrix](external-gate-assessment.md).

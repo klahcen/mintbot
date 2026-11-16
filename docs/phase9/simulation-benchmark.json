@@ -1,0 +1,985 @@
+{
+  "generatedAt": "2026-11-11T02:04:14.460Z",
+  "environment": {
+    "node": "v20.19.5",
+    "cpu": "11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz"
+  },
+  "builds": [
+    {
+      "venue": "pump",
+      "run": 0,
+      "builds": 50,
+      "elapsedMs": 446.28664000000003,
+      "buildsPerSecond": 112.0356190810462,
+      "packetBytes": 821,
+      "cpuMicroseconds": {
+        "user": 644483,
+        "system": 8641
+      },
+      "telemetry": {
+        "uptimeMs": 446.531295,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 7.051607999999987,
+            "p95": 11.386171999999988,
+            "p99": 14.146528999999987,
+            "max": 23.98786599999994
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6864909999999327,
+            "p95": 1.3699440000000322,
+            "p99": 2.572492999999895,
+            "max": 2.9875429999999596
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6098589999999149,
+            "p95": 1.051315000000045,
+            "p99": 1.4606539999999768,
+            "max": 4.885009999999966
+          }
+        }
+      }
+    },
+    {
+      "venue": "pumpswap",
+      "run": 0,
+      "builds": 50,
+      "elapsedMs": 482.5157199999999,
+      "buildsPerSecond": 103.62356691715664,
+      "packetBytes": 1052,
+      "cpuMicroseconds": {
+        "user": 590167,
+        "system": 1893
+      },
+      "telemetry": {
+        "uptimeMs": 482.55158400000005,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 8.663294000000178,
+            "p95": 10.248802999999953,
+            "p99": 11.002097000000049,
+            "max": 12.084217999999964
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.795359999999846,
+            "p95": 0.9513320000000931,
+            "p99": 1.36176300000011,
+            "max": 1.6968449999999393
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6830790000001343,
+            "p95": 1.0021229999999832,
+            "p99": 1.2074099999999817,
+            "max": 1.4677500000000236
+          }
+        }
+      }
+    },
+    {
+      "venue": "raydium-cpmm",
+      "run": 0,
+      "builds": 50,
+      "elapsedMs": 486.0072530000002,
+      "buildsPerSecond": 102.87912308172895,
+      "packetBytes": 725,
+      "cpuMicroseconds": {
+        "user": 607282,
+        "system": 1764
+      },
+      "telemetry": {
+        "uptimeMs": 486.0582320000001,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 8.192659000000276,
+            "p95": 12.149927999999818,
+            "p99": 12.583959999999934,
+            "max": 12.622256000000107
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.8260239999999612,
+            "p95": 1.23853199999985,
+            "p99": 1.3394140000000334,
+            "max": 1.3708599999999933
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.7799300000001494,
+            "p95": 1.1295129999998608,
+            "p99": 1.1526260000000548,
+            "max": 1.4861800000003313
+          }
+        }
+      }
+    },
+    {
+      "venue": "meteora-dlmm",
+      "run": 0,
+      "builds": 50,
+      "elapsedMs": 846.819657,
+      "buildsPerSecond": 59.0444489410335,
+      "packetBytes": 831,
+      "cpuMicroseconds": {
+        "user": 918378,
+        "system": 2036
+      },
+      "telemetry": {
+        "uptimeMs": 846.8690120000001,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 14.724972999999864,
+            "p95": 23.47027100000014,
+            "p99": 24.663767000000007,
+            "max": 24.790637999999944
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.8007760000000417,
+            "p95": 1.2882540000000517,
+            "p99": 1.4019760000001042,
+            "max": 1.9789160000000265
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6802259999999478,
+            "p95": 1.0764869999998155,
+            "p99": 1.1152939999997216,
+            "max": 1.1225509999999304
+          }
+        }
+      }
+    },
+    {
+      "venue": "pump",
+      "run": 1,
+      "builds": 50,
+      "elapsedMs": 357.9206829999998,
+      "buildsPerSecond": 139.69575488321257,
+      "packetBytes": 821,
+      "cpuMicroseconds": {
+        "user": 366231,
+        "system": 1015
+      },
+      "telemetry": {
+        "uptimeMs": 357.96107699999993,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 6.329485000000204,
+            "p95": 7.64563599999974,
+            "p99": 7.971711000000141,
+            "max": 8.395684000000074
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6094570000000203,
+            "p95": 0.9000169999999343,
+            "p99": 1.014013999999861,
+            "max": 1.58414700000003
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.516943000000083,
+            "p95": 0.6104049999999006,
+            "p99": 1.332061000000067,
+            "max": 4.469489999999951
+          }
+        }
+      }
+    },
+    {
+      "venue": "pumpswap",
+      "run": 1,
+      "builds": 50,
+      "elapsedMs": 482.48093100000006,
+      "buildsPerSecond": 103.6310386326957,
+      "packetBytes": 1052,
+      "cpuMicroseconds": {
+        "user": 514785,
+        "system": 99
+      },
+      "telemetry": {
+        "uptimeMs": 482.52107700000033,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 8.528729999999996,
+            "p95": 10.012521000000106,
+            "p99": 13.841823000000204,
+            "max": 14.300310999999965
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.7629949999995915,
+            "p95": 1.2699820000002546,
+            "p99": 1.354403000000275,
+            "max": 1.513904999999795
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6436220000000503,
+            "p95": 0.9484969999998611,
+            "p99": 0.9738609999999426,
+            "max": 3.166226999999708
+          }
+        }
+      }
+    },
+    {
+      "venue": "raydium-cpmm",
+      "run": 1,
+      "builds": 50,
+      "elapsedMs": 393.1426649999994,
+      "buildsPerSecond": 127.18029471566022,
+      "packetBytes": 725,
+      "cpuMicroseconds": {
+        "user": 421234,
+        "system": 973
+      },
+      "telemetry": {
+        "uptimeMs": 393.1799199999996,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 6.595060999999987,
+            "p95": 9.00061099999948,
+            "p99": 10.82915899999989,
+            "max": 12.416046999999708
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.7065080000002126,
+            "p95": 1.0882460000002538,
+            "p99": 1.1615609999998924,
+            "max": 1.2078659999997399
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.5910729999995965,
+            "p95": 0.9963400000006004,
+            "p99": 1.376655000000028,
+            "max": 1.4589130000003934
+          }
+        }
+      }
+    },
+    {
+      "venue": "meteora-dlmm",
+      "run": 1,
+      "builds": 50,
+      "elapsedMs": 774.4065970000001,
+      "buildsPerSecond": 64.56556567789671,
+      "packetBytes": 831,
+      "cpuMicroseconds": {
+        "user": 834031,
+        "system": 3025
+      },
+      "telemetry": {
+        "uptimeMs": 774.4428099999996,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 14.12064399999963,
+            "p95": 17.486723999999413,
+            "p99": 23.394055000000662,
+            "max": 24.725768999999673
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.7830579999999827,
+            "p95": 1.2680700000000797,
+            "p99": 1.554414000000179,
+            "max": 1.6592639999998937
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6381709999996019,
+            "p95": 0.9373739999991813,
+            "p99": 1.2884289999992689,
+            "max": 1.4495030000007318
+          }
+        }
+      }
+    },
+    {
+      "venue": "pump",
+      "run": 2,
+      "builds": 50,
+      "elapsedMs": 360.4061009999996,
+      "buildsPerSecond": 138.73239065950236,
+      "packetBytes": 821,
+      "cpuMicroseconds": {
+        "user": 370796,
+        "system": 1017
+      },
+      "telemetry": {
+        "uptimeMs": 360.4414710000001,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 6.173264000000017,
+            "p95": 9.7287409999999,
+            "p99": 10.840599000000111,
+            "max": 11.13762399999996
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.5891969999993307,
+            "p95": 0.774754999999459,
+            "p99": 1.046198999999433,
+            "max": 1.7430110000004788
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.4574139999995168,
+            "p95": 0.755895999999666,
+            "p99": 0.8365979999998672,
+            "max": 0.8696239999999307
+          }
+        }
+      }
+    },
+    {
+      "venue": "pumpswap",
+      "run": 2,
+      "builds": 50,
+      "elapsedMs": 471.40748599999915,
+      "buildsPerSecond": 106.06535001016104,
+      "packetBytes": 1052,
+      "cpuMicroseconds": {
+        "user": 650391,
+        "system": 10007
+      },
+      "telemetry": {
+        "uptimeMs": 471.4460479999998,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 8.318561000000045,
+            "p95": 10.740282000000661,
+            "p99": 12.59071700000004,
+            "max": 12.65584300000046
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.7562070000003587,
+            "p95": 1.236510000000635,
+            "p99": 1.425694000000476,
+            "max": 1.7654860000002373
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.5934079999997266,
+            "p95": 0.7399780000005194,
+            "p99": 1.4441329999999653,
+            "max": 1.523827999999412
+          }
+        }
+      }
+    },
+    {
+      "venue": "raydium-cpmm",
+      "run": 2,
+      "builds": 50,
+      "elapsedMs": 353.25165300000026,
+      "buildsPerSecond": 141.54215436891377,
+      "packetBytes": 725,
+      "cpuMicroseconds": {
+        "user": 370011,
+        "system": 0
+      },
+      "telemetry": {
+        "uptimeMs": 353.30294700000013,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 6.2818999999999505,
+            "p95": 7.471779999999853,
+            "p99": 8.249718999999459,
+            "max": 8.389470000000074
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6967940000004091,
+            "p95": 0.8058169999994789,
+            "p99": 0.8997929999995904,
+            "max": 1.0163989999991827
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.5284070000006977,
+            "p95": 0.5786119999993389,
+            "p99": 0.6520529999997962,
+            "max": 0.7884309999999459
+          }
+        }
+      }
+    },
+    {
+      "venue": "meteora-dlmm",
+      "run": 2,
+      "builds": 50,
+      "elapsedMs": 746.7121749999997,
+      "buildsPerSecond": 66.96020457949547,
+      "packetBytes": 831,
+      "cpuMicroseconds": {
+        "user": 879879,
+        "system": 7994
+      },
+      "telemetry": {
+        "uptimeMs": 746.7432559999997,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "build_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 14.199634999999944,
+            "p95": 15.34997199999998,
+            "p99": 15.703074999999444,
+            "max": 17.40692500000023
+          },
+          "serialization_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.7991480000000593,
+            "p95": 0.9662760000001072,
+            "p99": 0.993228000000272,
+            "max": 1.0770999999995183
+          },
+          "wire_policy_ms": {
+            "count": 50,
+            "samples": 50,
+            "p50": 0.6387039999999615,
+            "p95": 0.8447699999996985,
+            "p99": 1.0992089999999735,
+            "max": 1.4820220000001427
+          }
+        }
+      }
+    }
+  ],
+  "database": [
+    {
+      "run": 0,
+      "intents": 100,
+      "transactions": 300,
+      "elapsedMs": 1081.0613140000005,
+      "intentsPerSecond": 92.50169135180056,
+      "telemetry": {
+        "uptimeMs": 1081.1482350000006,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "intent.commit_ms": {
+            "count": 300,
+            "samples": 300,
+            "p50": 3.398425999999745,
+            "p95": 5.519842000001518,
+            "p99": 6.2357800000008865,
+            "max": 7.367084999999861
+          }
+        }
+      }
+    },
+    {
+      "run": 1,
+      "intents": 100,
+      "transactions": 300,
+      "elapsedMs": 1058.9435169999997,
+      "intentsPerSecond": 94.4337430605376,
+      "telemetry": {
+        "uptimeMs": 1059.011731999999,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "intent.commit_ms": {
+            "count": 300,
+            "samples": 300,
+            "p50": 3.311948000000484,
+            "p95": 5.137230000000272,
+            "p99": 5.609489000000394,
+            "max": 7.733775999999125
+          }
+        }
+      }
+    },
+    {
+      "run": 2,
+      "intents": 100,
+      "transactions": 300,
+      "elapsedMs": 982.6914130000005,
+      "intentsPerSecond": 101.76134509481051,
+      "telemetry": {
+        "uptimeMs": 982.7074320000011,
+        "counters": {},
+        "gauges": {},
+        "histograms": {
+          "intent.commit_ms": {
+            "count": 300,
+            "samples": 300,
+            "p50": 3.150604000000385,
+            "p95": 4.496014000000287,
+            "p99": 5.478308000001562,
+            "max": 8.472634000001563
+          }
+        }
+      }
+    }
+  ],
+  "bursts": [
+    {
+      "run": 0,
+      "offered": 64,
+      "admitted": 16,
+      "refused": 48,
+      "providerFailures": 2,
+      "completed": 14,
+      "elapsedMs": 993.2663310000007,
+      "telemetry": {
+        "uptimeMs": 1003.0249870000007,
+        "counters": {
+          "simulation.pipeline.offered": 64,
+          "simulation.pipeline.admitted": 16,
+          "simulation.pipeline.backpressure": 48,
+          "rpc.calls": 80,
+          "simulation.pipeline.completed": 14,
+          "rpc.errors": 2,
+          "simulation.pipeline.errors": 2
+        },
+        "gauges": {
+          "simulation.pipeline.pending": {
+            "current": 0,
+            "peak": 16
+          },
+          "simulation.pipeline.queue_depth": {
+            "current": 0,
+            "peak": 16
+          },
+          "simulation.pipeline.in_flight": {
+            "current": 0,
+            "peak": 2
+          }
+        },
+        "histograms": {
+          "intent.commit_ms": {
+            "count": 66,
+            "samples": 66,
+            "p50": 5.113659999999072,
+            "p95": 21.057906000000003,
+            "p99": 26.355564999999842,
+            "max": 29.970240000000558
+          },
+          "simulation.pipeline.queue_wait_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 378.9486589999997,
+            "p95": 862.7458189999998,
+            "p99": 862.7458189999998,
+            "max": 866.1428049999995
+          },
+          "rpc.simulation.getLatestBlockhash_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 25.533986000000368,
+            "p95": 40.13299000000006,
+            "p99": 40.13299000000006,
+            "max": 69.878028000001
+          },
+          "rpc.simulation.getMinimumBalanceForRentExemption_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 24.961495999999897,
+            "p95": 40.2182159999993,
+            "p99": 54.5928559999993,
+            "max": 55.597294999999576
+          },
+          "simulation.build_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 14.458274000000529,
+            "p95": 16.70835099999931,
+            "p99": 16.70835099999931,
+            "max": 16.89906499999961
+          },
+          "simulation.serialization_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 1.3060020000011718,
+            "p95": 1.6761189999997441,
+            "p99": 1.6761189999997441,
+            "max": 1.6912240000001475
+          },
+          "rpc.simulation.getBlockHeight_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 18.16509599999881,
+            "p95": 20.723829000000478,
+            "p99": 20.723829000000478,
+            "max": 20.739637999999104
+          },
+          "rpc.simulation.simulateTransaction_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 18.426471000000674,
+            "p95": 19.93315000000075,
+            "p99": 19.93315000000075,
+            "max": 20.640198999999484
+          },
+          "simulation.rpc_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 18.465868999999657,
+            "p95": 19.953915000000052,
+            "p99": 19.953915000000052,
+            "max": 20.76498299999912
+          },
+          "simulation.pipeline.processing_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 120.08547999999973,
+            "p95": 156.43847099999948,
+            "p99": 156.43847099999948,
+            "max": 160.92040400000042
+          },
+          "simulation.pipeline.end_to_end_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 504.4305089999998,
+            "p95": 984.5894819999994,
+            "p99": 984.5894819999994,
+            "max": 986.2417929999992
+          }
+        }
+      },
+      "scope": "15ms injected per read, protocol failure for every response and HTTP429 every seventh simulation. No real CU, fills or mainnet latency inferred."
+    },
+    {
+      "run": 1,
+      "offered": 64,
+      "admitted": 16,
+      "refused": 48,
+      "providerFailures": 2,
+      "completed": 14,
+      "elapsedMs": 941.8470440000001,
+      "telemetry": {
+        "uptimeMs": 945.940403999999,
+        "counters": {
+          "simulation.pipeline.offered": 64,
+          "simulation.pipeline.admitted": 16,
+          "simulation.pipeline.backpressure": 48,
+          "rpc.calls": 80,
+          "simulation.pipeline.completed": 14,
+          "rpc.errors": 2,
+          "simulation.pipeline.errors": 2
+        },
+        "gauges": {
+          "simulation.pipeline.pending": {
+            "current": 0,
+            "peak": 16
+          },
+          "simulation.pipeline.queue_depth": {
+            "current": 0,
+            "peak": 16
+          },
+          "simulation.pipeline.in_flight": {
+            "current": 0,
+            "peak": 2
+          }
+        },
+        "histograms": {
+          "intent.commit_ms": {
+            "count": 66,
+            "samples": 66,
+            "p50": 4.9222330000011425,
+            "p95": 22.572002999999313,
+            "p99": 26.327854000001025,
+            "max": 29.887731000000713
+          },
+          "simulation.pipeline.queue_wait_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 372.1401160000005,
+            "p95": 814.8952580000005,
+            "p99": 814.8952580000005,
+            "max": 819.5036990000008
+          },
+          "rpc.simulation.getLatestBlockhash_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 24.644975000001068,
+            "p95": 39.97062899999946,
+            "p99": 39.97062899999946,
+            "max": 42.104324999998425
+          },
+          "rpc.simulation.getMinimumBalanceForRentExemption_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 24.953568999999334,
+            "p95": 39.99375300000065,
+            "p99": 42.16121299999941,
+            "max": 42.209695999999894
+          },
+          "simulation.build_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 13.64645400000154,
+            "p95": 18.209530000000086,
+            "p99": 18.209530000000086,
+            "max": 19.9977600000002
+          },
+          "simulation.serialization_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 1.2153239999988728,
+            "p95": 1.6065350000008038,
+            "p99": 1.6065350000008038,
+            "max": 1.8651829999998881
+          },
+          "rpc.simulation.getBlockHeight_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 18.10812100000112,
+            "p95": 20.927899000000252,
+            "p99": 20.927899000000252,
+            "max": 21.260779999998704
+          },
+          "rpc.simulation.simulateTransaction_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 17.945510000001377,
+            "p95": 19.165171000000555,
+            "p99": 19.165171000000555,
+            "max": 22.17949099999896
+          },
+          "simulation.rpc_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 17.96943300000021,
+            "p95": 19.191106000000218,
+            "p99": 19.191106000000218,
+            "max": 22.21315499999946
+          },
+          "simulation.pipeline.processing_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 117.23927000000003,
+            "p95": 127.44593700000041,
+            "p99": 127.44593700000041,
+            "max": 128.28170900000077
+          },
+          "simulation.pipeline.end_to_end_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 494.5780159999995,
+            "p95": 937.7789129999983,
+            "p99": 937.7789129999983,
+            "max": 939.3264070000005
+          }
+        }
+      },
+      "scope": "15ms injected per read, protocol failure for every response and HTTP429 every seventh simulation. No real CU, fills or mainnet latency inferred."
+    },
+    {
+      "run": 2,
+      "offered": 64,
+      "admitted": 16,
+      "refused": 48,
+      "providerFailures": 2,
+      "completed": 14,
+      "elapsedMs": 893.9348020000016,
+      "telemetry": {
+        "uptimeMs": 898.6892779999998,
+        "counters": {
+          "simulation.pipeline.offered": 64,
+          "simulation.pipeline.admitted": 16,
+          "simulation.pipeline.backpressure": 48,
+          "rpc.calls": 80,
+          "simulation.pipeline.completed": 14,
+          "rpc.errors": 2,
+          "simulation.pipeline.errors": 2
+        },
+        "gauges": {
+          "simulation.pipeline.pending": {
+            "current": 0,
+            "peak": 16
+          },
+          "simulation.pipeline.queue_depth": {
+            "current": 0,
+            "peak": 16
+          },
+          "simulation.pipeline.in_flight": {
+            "current": 0,
+            "peak": 2
+          }
+        },
+        "histograms": {
+          "intent.commit_ms": {
+            "count": 66,
+            "samples": 66,
+            "p50": 3.7787659999994503,
+            "p95": 21.173446999999214,
+            "p99": 23.198010999998587,
+            "max": 26.377550000001065
+          },
+          "simulation.pipeline.queue_wait_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 329.9922179999994,
+            "p95": 768.2893679999997,
+            "p99": 768.2893679999997,
+            "max": 771.3582129999995
+          },
+          "rpc.simulation.getLatestBlockhash_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 21.478046999998696,
+            "p95": 36.68949199999952,
+            "p99": 36.68949199999952,
+            "max": 38.62725099999989
+          },
+          "rpc.simulation.getMinimumBalanceForRentExemption_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 21.150104999998803,
+            "p95": 36.61218900000131,
+            "p99": 38.69173799999953,
+            "max": 38.69451599999957
+          },
+          "simulation.build_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 12.33497399999942,
+            "p95": 15.376744999999573,
+            "p99": 15.376744999999573,
+            "max": 15.5010340000008
+          },
+          "simulation.serialization_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 1.0604440000006434,
+            "p95": 1.5807009999989532,
+            "p99": 1.5807009999989532,
+            "max": 2.160760000000664
+          },
+          "rpc.simulation.getBlockHeight_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 18.453897999999754,
+            "p95": 21.157537999999477,
+            "p99": 21.157537999999477,
+            "max": 21.514705999999933
+          },
+          "rpc.simulation.simulateTransaction_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 18.015183999999863,
+            "p95": 21.7105219999994,
+            "p99": 21.7105219999994,
+            "max": 23.893457000000126
+          },
+          "simulation.rpc_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 18.04620199999954,
+            "p95": 21.7338090000012,
+            "p99": 21.7338090000012,
+            "max": 23.922099999999773
+          },
+          "simulation.pipeline.processing_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 113.17272400000002,
+            "p95": 123.29275499999858,
+            "p99": 123.29275499999858,
+            "max": 125.53580800000054
+          },
+          "simulation.pipeline.end_to_end_ms": {
+            "count": 16,
+            "samples": 16,
+            "p50": 445.2484509999995,
+            "p95": 889.8096150000001,
+            "p99": 889.8096150000001,
+            "max": 891.5928320000003
+          }
+        }
+      },
+      "scope": "15ms injected per read, protocol failure for every response and HTTP429 every seventh simulation. No real CU, fills or mainnet latency inferred."
+    }
+  ],
+  "sourceSha256": {
+    "builders.ts": "3b4276992175b0f02c49441f628e763a7c46be1b834c7b4e79abd07137134d7d",
+    "policy.ts": "d3c14dc62e16fb18e289f0327d4974e4a16272836d44bf7b087ffa8b1e7a4a90",
+    "rpc.ts": "1fe010e8ac487d839b749ca28218f4dd49d82db80940a18083b7f0a9f6353113",
+    "types.ts": "d4a65a2a74d58b33476b2506c42e802a9ef2015d5850e66e9a70c32e67dd665b",
+    "prepare.ts": "1429f8c405b621eab2dcd7032f255ed94a27deb807810ed5ca0db710a03dcdfe",
+    "accounting.ts": "5bda3aebe61681bf4bd226539744184bd6cff7b88e16afdc907f83706a87d32c",
+    "intent-ledger.ts": "6ea78c59cfea5e1af746a5dfdf41fd98bacea233ded41c70ff2311d3dc248934",
+    "intent-schema.sql": "da59731a50d80809301a30256f06c286e9a9a13f6a2d65c41d8f0b38134bf96e",
+    "service.ts": "bd54d438b8b4ab052f961d9ce16cebff3118e4f0725ebbf9811475b7015ea66d"
+  },
+  "scope": "Three repetitions. Real recorded market bytes plus UNIT execution-account evidence and refreshed UNIT clocks. Build preparation excluded. Database is actual local PostgreSQL16 with file durability enabled. Provider delays/failures are injected. No synthetic result is represented as real-chain simulation."
+}

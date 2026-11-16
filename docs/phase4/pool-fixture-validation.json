@@ -1,0 +1,382 @@
+[
+  {
+    "venue": "pumpswap",
+    "state": {
+      "venue": "pumpswap",
+      "launch": {
+        "id": "pumpswap:HFpY9yKmATDEtLUMsJwHm7MgdbPCNecxuBa8p5VHkC4AjuJfdK7Ra9qWhJ7XwaEsTe1VW2RunirTLKmJ5A8tQKw:0",
+        "program": "pumpswap",
+        "signature": "HFpY9yKmATDEtLUMsJwHm7MgdbPCNecxuBa8p5VHkC4AjuJfdK7Ra9qWhJ7XwaEsTe1VW2RunirTLKmJ5A8tQKw",
+        "slot": 465023570,
+        "kind": "pool",
+        "address": "CeJfcbzgrQxWs1jbfTsFmR1Ae4iREN5Y3nMN8G72h4Xy",
+        "mints": [
+          "7R6AYvHyU5MyaTt5MPtRdt2daRUKedvCz8CXZkaspump",
+          "So11111111111111111111111111111111111111112"
+        ],
+        "creator": "J25LiCXpV4ETcaLDFWGJxCtEboyKqz3jJeeqSnTbn5KL",
+        "chainTimestamp": "1793735648",
+        "instruction": "create_pool",
+        "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+        "accountContextSlot": 465024498,
+        "executionEligible": false
+      },
+      "provider": "api.mainnet-beta.solana.com",
+      "slot": 466161987,
+      "commitment": "finalized",
+      "retrievedAt": 1793983204587,
+      "retrievedMono": 1675.926896,
+      "digest": "aea94abe3702c12164b6d06aaf64ef192702618ce26f3ee1bbc2dd633730a9f1",
+      "revision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+      "mint": "7R6AYvHyU5MyaTt5MPtRdt2daRUKedvCz8CXZkaspump",
+      "decimals": 6,
+      "supply": "966308630586202",
+      "baseReserve": "878896746504613",
+      "quoteReserve": "20493040672",
+      "liquidityLamports": "2908960632",
+      "protocolFeeBps": "0",
+      "creatorFeeBps": "0",
+      "signals": {
+        "mintAuthority": {
+          "status": "verified",
+          "value": false,
+          "reason": "Mint authority disabled",
+          "slot": 466161987
+        },
+        "freezeAuthority": {
+          "status": "verified",
+          "value": false,
+          "reason": "Freeze authority disabled",
+          "slot": 466161987
+        },
+        "transferRestrictions": {
+          "status": "verified",
+          "value": false,
+          "reason": "Legacy token or metadata-only Token-2022 extension set",
+          "slot": 466161987
+        },
+        "extensions": {
+          "status": "verified",
+          "value": [
+            "MetadataPointer",
+            "TokenMetadata"
+          ],
+          "reason": "Exact mint TLV extension identifiers",
+          "slot": 466161987
+        },
+        "mintDecimals": {
+          "status": "verified",
+          "value": {
+            "decimals": 6,
+            "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+            "supply": "966308630586202"
+          },
+          "reason": "Mint account decimals, owner and integer supply",
+          "slot": 466161987
+        },
+        "custody": {
+          "status": "verified",
+          "value": {
+            "baseVault": "HdgpPkEvixaPFaj2aGwW4szAYLTS7W3vrMnvXWDr8wZD",
+            "quoteVault": "GCMvSrWS5DRZ2oTuZ7hRYbV8bVVGuKXoTztbts71efH2",
+            "baseAtoms": "878896746504613",
+            "quoteAtoms": "2908960632"
+          },
+          "reason": "Actual vault balances before fee-bucket/bin exclusions",
+          "slot": 466161987
+        },
+        "holderConcentration": {
+          "status": "unknown",
+          "reason": "Complete holder enumeration unavailable"
+        },
+        "creatorHistory": {
+          "status": "unknown",
+          "reason": "Creator history unavailable"
+        },
+        "liquidityChanges": {
+          "status": "unknown",
+          "reason": "First observation"
+        },
+        "virtualQuoteReserves": {
+          "status": "verified",
+          "value": "17584080040",
+          "reason": "Virtual quote reserves affect pricing but are excluded from liquidity",
+          "slot": 466161987
+        },
+        "feeBuckets": {
+          "status": "verified",
+          "value": "425584",
+          "reason": "Accumulated quote fee buckets excluded from sell liquidity",
+          "slot": 466161987
+        },
+        "quoteModel": {
+          "status": "verified",
+          "value": {
+            "kind": "pumpswap",
+            "fees": [
+              "2",
+              "93",
+              "30"
+            ],
+            "denominator": "10000",
+            "feeOnBuyInput": true,
+            "feeOnSellInput": true,
+            "price": "0"
+          },
+          "reason": "Pinned protocol integer quote model",
+          "slot": 466161987
+        },
+        "liquidity": {
+          "status": "verified",
+          "value": "20493040672",
+          "reason": "Actual spendable pool/bin SOL reserves",
+          "slot": 466161987
+        }
+      },
+      "accounts": [
+        {
+          "address": "5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx",
+          "owner": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+          "sha256": "e84ad11788f90613c61b58722ca9a721ed08a1c8e953bc6d0fcc6ae8648c8996"
+        },
+        {
+          "address": "7R6AYvHyU5MyaTt5MPtRdt2daRUKedvCz8CXZkaspump",
+          "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "sha256": "be5a1ff57932b1d167e931bba39328bf534abb8dedb2f01728d46af2c3319570"
+        },
+        {
+          "address": "ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw",
+          "owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+          "sha256": "420ed1180108935def454d1f2300ab9eea5102aacabfb131bdbd38b54ea86af1"
+        },
+        {
+          "address": "CeJfcbzgrQxWs1jbfTsFmR1Ae4iREN5Y3nMN8G72h4Xy",
+          "owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+          "sha256": "6ae8f0537cd1b745bb2d42cd5ccffc84c67f43cb5686f1e019230d012a6cdab3"
+        },
+        {
+          "address": "GCMvSrWS5DRZ2oTuZ7hRYbV8bVVGuKXoTztbts71efH2",
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "sha256": "4cb60b7228b9d883bac3d8c92e232ddb8d6ac5ce4ab44ff365affc323df5e964"
+        },
+        {
+          "address": "HdgpPkEvixaPFaj2aGwW4szAYLTS7W3vrMnvXWDr8wZD",
+          "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+          "sha256": "3198ef99b7d5918d2589ff7995bf003ec412d61089ca58ff51e54337a9ae0731"
+        },
+        {
+          "address": "So11111111111111111111111111111111111111112",
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "sha256": "b6e11fbffa63327f3600e2b760a84a8dc5aa3730c437b290b6f3ccae81ce8a17"
+        }
+      ],
+      "source": "https://www.npmjs.com/package/@pump-fun/pump-sdk/v/4.3.1"
+    },
+    "buy": {
+      "side": "buy",
+      "input": "1000000",
+      "output": "42355954415",
+      "minimumOutput": "41932394870",
+      "poolFee": "12347",
+      "poolFeeAsset": "So11111111111111111111111111111111111111112",
+      "impactBps": "124",
+      "stateDigest": "aea94abe3702c12164b6d06aaf64ef192702618ce26f3ee1bbc2dd633730a9f1",
+      "slot": 466161987,
+      "provider": "api.mainnet-beta.solana.com",
+      "computedMono": 1720.631901,
+      "expiresMono": 3175.926896,
+      "kind": "account-state-estimate"
+    },
+    "sell": {
+      "side": "sell",
+      "input": "42355954415",
+      "output": "975210",
+      "minimumOutput": "965457",
+      "poolFee": "12346",
+      "poolFeeAsset": "So11111111111111111111111111111111111111112",
+      "impactBps": "126",
+      "stateDigest": "aea94abe3702c12164b6d06aaf64ef192702618ce26f3ee1bbc2dd633730a9f1",
+      "slot": 466161987,
+      "provider": "api.mainnet-beta.solana.com",
+      "computedMono": 1720.807579,
+      "expiresMono": 3175.926896,
+      "kind": "account-state-estimate"
+    },
+    "scope": "Offline recorded-fixture quote regression. Local test clocks are reset; no current-chain freshness or paper eligibility asserted."
+  },
+  {
+    "venue": "raydium-cpmm",
+    "state": {
+      "venue": "raydium-cpmm",
+      "launch": {
+        "id": "raydium-cpmm:5HL3QqKSpHGGRgxkos1oyESwRaHA1gBDToFt9jv61v4QvMQPRFUCiHD87TwDXa9C9vBGmzvaWk2at4ogiX5m5EwW:0",
+        "program": "raydium-cpmm",
+        "signature": "5HL3QqKSpHGGRgxkos1oyESwRaHA1gBDToFt9jv61v4QvMQPRFUCiHD87TwDXa9C9vBGmzvaWk2at4ogiX5m5EwW",
+        "slot": 465015705,
+        "kind": "pool",
+        "address": "HgLwgvWuogbCNY1izVDZbnLX8BMPeJFNduGg8VrfcEyB",
+        "mints": [
+          "So11111111111111111111111111111111111111112",
+          "7oA8VmVwBqc5vaZ79WynmpSjN7pumF5Jea5h8K5P2dVu"
+        ],
+        "creator": "CwZQdmpt8ScsMGUTnidJvNHEQx79PuGqqb2va6Zdzc7V",
+        "chainTimestamp": null,
+        "instruction": "initialize",
+        "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+        "accountContextSlot": 465024527,
+        "executionEligible": false
+      },
+      "provider": "api.mainnet-beta.solana.com",
+      "slot": 466161794,
+      "commitment": "finalized",
+      "retrievedAt": 1793983204655,
+      "retrievedMono": 1744.774552,
+      "digest": "ad79b32cbd8b1c39f92cef91f3d5305a51b58cfc5e253376ee7547b30075cf87",
+      "revision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+      "mint": "7oA8VmVwBqc5vaZ79WynmpSjN7pumF5Jea5h8K5P2dVu",
+      "decimals": 6,
+      "supply": "999750806793400",
+      "baseReserve": "163168",
+      "quoteReserve": "1",
+      "liquidityLamports": "1",
+      "protocolFeeBps": "0",
+      "creatorFeeBps": "0",
+      "signals": {
+        "mintAuthority": {
+          "status": "verified",
+          "value": false,
+          "reason": "Mint authority disabled",
+          "slot": 466161794
+        },
+        "freezeAuthority": {
+          "status": "verified",
+          "value": false,
+          "reason": "Freeze authority disabled",
+          "slot": 466161794
+        },
+        "transferRestrictions": {
+          "status": "verified",
+          "value": false,
+          "reason": "Legacy token or metadata-only Token-2022 extension set",
+          "slot": 466161794
+        },
+        "extensions": {
+          "status": "verified",
+          "value": [],
+          "reason": "Exact mint TLV extension identifiers",
+          "slot": 466161794
+        },
+        "mintDecimals": {
+          "status": "verified",
+          "value": {
+            "decimals": 6,
+            "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "supply": "999750806793400"
+          },
+          "reason": "Mint account decimals, owner and integer supply",
+          "slot": 466161794
+        },
+        "custody": {
+          "status": "verified",
+          "value": {
+            "baseVault": "6P8pvbdt5zui4CXUhYEHhkpGjwwE1hEwQ6c7VnEKsVaY",
+            "quoteVault": "GQJ3q9jFBuJELuaQDpnB8QaEMmoVDYzyxcPtCjeMc7pf",
+            "baseAtoms": "163168",
+            "quoteAtoms": "1"
+          },
+          "reason": "Actual vault balances before fee-bucket/bin exclusions",
+          "slot": 466161794
+        },
+        "holderConcentration": {
+          "status": "unknown",
+          "reason": "Complete holder enumeration unavailable"
+        },
+        "creatorHistory": {
+          "status": "unknown",
+          "reason": "Creator history unavailable"
+        },
+        "liquidityChanges": {
+          "status": "unknown",
+          "reason": "First observation"
+        },
+        "feeDistribution": {
+          "status": "verified",
+          "value": {
+            "protocolRate": "120000",
+            "fundRate": "40000",
+            "creatorShareRate": "50000"
+          },
+          "reason": "Protocol/fund shares split the trade fee; never charged a second time",
+          "slot": 466161794
+        },
+        "quoteModel": {
+          "status": "verified",
+          "value": {
+            "kind": "raydium-cpmm",
+            "fees": [
+              "2500",
+              "0"
+            ],
+            "denominator": "1000000",
+            "feeOnBuyInput": true,
+            "feeOnSellInput": true,
+            "price": "0"
+          },
+          "reason": "Pinned protocol integer quote model",
+          "slot": 466161794
+        },
+        "liquidity": {
+          "status": "verified",
+          "value": "1",
+          "reason": "Actual spendable pool/bin SOL reserves",
+          "slot": 466161794
+        }
+      },
+      "accounts": [
+        {
+          "address": "6P8pvbdt5zui4CXUhYEHhkpGjwwE1hEwQ6c7VnEKsVaY",
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "sha256": "5c297503f91968da75a6d85918aaf562f89299107599362682452f5f4cb12497"
+        },
+        {
+          "address": "7oA8VmVwBqc5vaZ79WynmpSjN7pumF5Jea5h8K5P2dVu",
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "sha256": "09e9a615fd7019b07b6e0747b521dd59d5c093c270d9791021b53525e9a35cfd"
+        },
+        {
+          "address": "D4FPEruKEHrG5TenZ2mpDGEfu1iUvTiqBxvpU8HLBvC2",
+          "owner": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+          "sha256": "23cd13f45c5ff0ed5010736c00357ccece125ec5a5d967b5f13d9eed26c13300"
+        },
+        {
+          "address": "GQJ3q9jFBuJELuaQDpnB8QaEMmoVDYzyxcPtCjeMc7pf",
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "sha256": "51c5aa7528ac90cb3b01fb775d005db9c51140bde8ba403d6f2a2f25c8423741"
+        },
+        {
+          "address": "HgLwgvWuogbCNY1izVDZbnLX8BMPeJFNduGg8VrfcEyB",
+          "owner": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+          "sha256": "8dbc664aed595e02cce4c8026bfd6dc9182ff1d22b1639fbe790faaea487896b"
+        },
+        {
+          "address": "So11111111111111111111111111111111111111112",
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "sha256": "b6e11fbffa63327f3600e2b760a84a8dc5aa3730c437b290b6f3ccae81ce8a17"
+        },
+        {
+          "address": "SysvarC1ock11111111111111111111111111111111",
+          "owner": "Sysvar1111111111111111111111111111111111111",
+          "sha256": "b122c4a03350fcd94b078c095e20cfecdb8ea8d53278cee746a08c82a060f8a3"
+        }
+      ],
+      "source": "https://github.com/raydium-io/raydium-cp-swap/tree/3d69122790e97cd6aff24e8ba95940793773f58c"
+    },
+    "quoteError": "Insufficient executable liquidity",
+    "scope": "Offline recorded-fixture quote regression. Local test clocks are reset; no current-chain freshness or paper eligibility asserted."
+  },
+  {
+    "venue": "meteora-dlmm",
+    "error": "Insufficient liquidity or unsupported fees",
+    "scope": "Offline recorded-fixture quote regression. Local test clocks are reset; no current-chain freshness or paper eligibility asserted."
+  }
+]

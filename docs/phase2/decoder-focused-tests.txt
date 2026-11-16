@@ -1,0 +1,90 @@
+TAP version 13
+# Subtest: verified programs are valid and missing protocol decoder fails closed
+ok 1 - verified programs are valid and missing protocol decoder fails closed
+  ---
+  duration_ms: 3.853703
+  ...
+# Subtest: pinned Pump CreateEvent decodes bounded strings, verifies PDA and rejects failed or malformed data
+ok 2 - pinned Pump CreateEvent decodes bounded strings, verifies PDA and rejects failed or malformed data
+  ---
+  duration_ms: 13.074414
+  ...
+# Subtest: spoofed event from nested malicious program is ignored despite a genuine Pump parent
+ok 3 - spoofed event from nested malicious program is ignored despite a genuine Pump parent
+  ---
+  duration_ms: 3.744365
+  ...
+# Subtest: historical finalized mainnet fixture replays observed compute and CPI inventory
+ok 4 - historical finalized mainnet fixture replays observed compute and CPI inventory
+  ---
+  duration_ms: 20.115413
+  ...
+# Subtest: official compute budget binary encoding including u64 precision
+ok 5 - official compute budget binary encoding including u64 precision
+  ---
+  duration_ms: 2.695754
+  ...
+# Subtest: WebSocket subscribes per program, deduplicates, tracks monotonic slot and stops
+ok 6 - WebSocket subscribes per program, deduplicates, tracks monotonic slot and stops
+  ---
+  duration_ms: 3.832759
+  ...
+# Subtest: WebSocket reconnect budget terminates after repeated disconnection
+ok 7 - WebSocket reconnect budget terminates after repeated disconnection
+  ---
+  duration_ms: 12.558146
+  ...
+# Subtest: transaction inspection inventories top-level, inner and compute instructions
+ok 8 - transaction inspection inventories top-level, inner and compute instructions
+  ---
+  duration_ms: 1.449517
+  ...
+# Subtest: mint scanner decodes official token layout and keeps unknown evidence explicit
+ok 9 - mint scanner decodes official token layout and keeps unknown evidence explicit
+  ---
+  duration_ms: 4.001001
+  ...
+# Subtest: cached and uncached Pump decoding agree and a warm cache still rejects a forged curve
+ok 10 - cached and uncached Pump decoding agree and a warm cache still rejects a forged curve
+  ---
+  duration_ms: 16.774813
+  ...
+# Subtest: registry exposes observation-only coverage for future protocols
+ok 11 - registry exposes observation-only coverage for future protocols
+  ---
+  duration_ms: 1.013942
+  ...
+# Subtest: cached rows are deeply immutable, active positions remain isolated and generic transactions remain editable
+ok 12 - cached rows are deeply immutable, active positions remain isolated and generic transactions remain editable
+  ---
+  duration_ms: 51.926246
+  ...
+# Subtest: cached row schemas reject new malformed records, numeric invalidity and bounds exactly as full state
+ok 13 - cached row schemas reject new malformed records, numeric invalidity and bounds exactly as full state
+  ---
+  duration_ms: 23.990889
+  ...
+# Subtest: Store admission is bounded and rejected work is explicit without poisoning FIFO
+ok 14 - Store admission is bounded and rejected work is explicit without poisoning FIFO
+  ---
+  duration_ms: 12.956361
+  ...
+# Subtest: restart restores last acknowledged state and ignores orphan temporary writes
+ok 15 - restart restores last acknowledged state and ignores orphan temporary writes
+  ---
+  duration_ms: 49.04198
+  ...
+# Subtest: frozen outer rows with mutable nested arrays are recursively frozen before cache reuse
+ok 16 - frozen outer rows with mutable nested arrays are recursively frozen before cache reuse
+  ---
+  duration_ms: 4.272395
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1938.205044

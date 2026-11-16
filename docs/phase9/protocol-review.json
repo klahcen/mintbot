@@ -1,0 +1,175 @@
+{
+  "generatedAt": "2026-11-11T01:58:43.397Z",
+  "sources": [
+    {
+      "repository": "https://github.com/pump-fun/pump-public-docs",
+      "enabled": false,
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/README.md",
+          "local": "docs/phase9/protocol-sources/pump-fun-pump-public-docs-README.md",
+          "bytes": 12216,
+          "sha256": "04ea2475df06df632ca4c013ae2f6d9063599f669f4c8acf53e2eeae2277427f"
+        },
+        {
+          "path": "idl/pump.json",
+          "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json",
+          "local": "docs/phase9/protocol-sources/pump-fun-pump-public-docs-idl-pump.json",
+          "bytes": 328788,
+          "sha256": "7616681ea557975f9f623ac211080f22a93060781eaf4765b0a488d980997207"
+        },
+        {
+          "path": "idl/pump_amm.json",
+          "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump_amm.json",
+          "local": "docs/phase9/protocol-sources/pump-fun-pump-public-docs-idl-pump_amm.json",
+          "bytes": 191835,
+          "sha256": "b7d8c57a4d9c4dd0109a9ab893052352333252d4eedced10ac091d4d66cab89b"
+        }
+      ],
+      "commit": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22"
+    },
+    {
+      "repository": "https://github.com/raydium-io/raydium-cp-swap",
+      "enabled": false,
+      "files": [
+        {
+          "path": "programs/cp-swap/src/states/pool.rs",
+          "url": "https://raw.githubusercontent.com/raydium-io/raydium-cp-swap/3d69122790e97cd6aff24e8ba95940793773f58c/programs/cp-swap/src/states/pool.rs",
+          "local": "docs/phase9/protocol-sources/raydium-io-raydium-cp-swap-programs-cp-swap-src-states-pool.rs",
+          "bytes": 18660,
+          "sha256": "e2a836869400bf3cbe3aa52e664235620f82a5c701edd4ced75789f6d7d124ad"
+        },
+        {
+          "path": "programs/cp-swap/src/instructions/swap_base_input.rs",
+          "url": "https://raw.githubusercontent.com/raydium-io/raydium-cp-swap/3d69122790e97cd6aff24e8ba95940793773f58c/programs/cp-swap/src/instructions/swap_base_input.rs",
+          "local": "docs/phase9/protocol-sources/raydium-io-raydium-cp-swap-programs-cp-swap-src-instructions-swap_base_input.rs",
+          "bytes": 7746,
+          "sha256": "5878ed09654745b5725030c5d84a8794a07088e836330890cbae2b0d7d7b1349"
+        }
+      ],
+      "commit": "3d69122790e97cd6aff24e8ba95940793773f58c"
+    },
+    {
+      "repository": "https://github.com/MeteoraAg/dlmm-sdk",
+      "enabled": false,
+      "files": [
+        {
+          "path": "idls/dlmm.json",
+          "url": "https://raw.githubusercontent.com/MeteoraAg/dlmm-sdk/1532e540db41ac405dbf4c5bb2ddfceaa1f98ff1/idls/dlmm.json",
+          "local": "docs/phase9/protocol-sources/MeteoraAg-dlmm-sdk-idls-dlmm.json",
+          "bytes": 210551,
+          "sha256": "045c0f4af044be046b6a14b350077e4242e8ac026b64a855803dab30fcdd8b35"
+        }
+      ],
+      "commit": "1532e540db41ac405dbf4c5bb2ddfceaa1f98ff1"
+    }
+  ],
+  "deployments": [
+    {
+      "name": "pump",
+      "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "source": "https://github.com/pump-fun/pump-public-docs/blob/main/docs/PUMP_PROGRAM_README.md",
+      "cluster": "mainnet-beta",
+      "provider": "api.mainnet-beta.solana.com",
+      "evidence": {
+        "status": "verified",
+        "value": {
+          "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+          "deploymentSlot": 458921440,
+          "programData": "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu"
+        },
+        "reason": "Observed upgradeable-loader deployment slot equals reviewed pin; ELF hash/semantic equivalence not proven",
+        "slot": 467947300,
+        "observedAt": 1794362322831,
+        "provider": "api.mainnet-beta.solana.com",
+        "commitment": "finalized"
+      }
+    },
+    {
+      "name": "pumpswap",
+      "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+      "source": "https://github.com/pump-fun/pump-public-docs/blob/main/docs/PUMP_SWAP_README.md",
+      "cluster": "mainnet-beta",
+      "provider": "api.mainnet-beta.solana.com",
+      "evidence": {
+        "status": "verified",
+        "value": {
+          "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+          "deploymentSlot": 458921517,
+          "programData": "6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc"
+        },
+        "reason": "Observed upgradeable-loader deployment slot equals reviewed pin; ELF hash/semantic equivalence not proven",
+        "slot": 467947301,
+        "observedAt": 1794362322949,
+        "provider": "api.mainnet-beta.solana.com",
+        "commitment": "finalized"
+      }
+    },
+    {
+      "name": "raydium-cpmm",
+      "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+      "source": "https://github.com/raydium-io/raydium-docs-v1/blob/main/reference/program-addresses.mdx",
+      "cluster": "mainnet-beta",
+      "provider": "api.mainnet-beta.solana.com",
+      "evidence": {
+        "status": "verified",
+        "value": {
+          "program": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+          "deploymentSlot": 463522946,
+          "programData": "DMawCQzbgNTmbzaESc7o6pvL1KAeetY8zA7jNpzntHhU"
+        },
+        "reason": "Observed upgradeable-loader deployment slot equals reviewed pin; ELF hash/semantic equivalence not proven",
+        "slot": 467947301,
+        "observedAt": 1794362323075,
+        "provider": "api.mainnet-beta.solana.com",
+        "commitment": "finalized"
+      }
+    },
+    {
+      "name": "meteora-dlmm",
+      "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "source": "https://github.com/MeteoraAg/docs/blob/main/developer-guides/dlmm/index.mdx",
+      "cluster": "mainnet-beta",
+      "provider": "api.mainnet-beta.solana.com",
+      "evidence": {
+        "status": "verified",
+        "value": {
+          "program": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+          "deploymentSlot": 423977638,
+          "programData": "HZcJwcJ2njPDxZtpPoKnF8v2w9QAx2rS7TdJPSRkbEhu"
+        },
+        "reason": "Observed upgradeable-loader deployment slot equals reviewed pin; ELF hash/semantic equivalence not proven",
+        "slot": 467947302,
+        "observedAt": 1794362323396,
+        "provider": "api.mainnet-beta.solana.com",
+        "commitment": "finalized"
+      }
+    }
+  ],
+  "retainedDeploymentPins": {
+    "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": {
+      "dataAddress": "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu",
+      "deploymentSlot": 458921440
+    },
+    "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA": {
+      "dataAddress": "6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc",
+      "deploymentSlot": 458921517
+    },
+    "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C": {
+      "dataAddress": "DMawCQzbgNTmbzaESc7o6pvL1KAeetY8zA7jNpzntHhU",
+      "deploymentSlot": 463522946
+    },
+    "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo": {
+      "dataAddress": "HZcJwcJ2njPDxZtpPoKnF8v2w9QAx2rS7TdJPSRkbEhu",
+      "deploymentSlot": 423977638
+    },
+    "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ": {
+      "dataAddress": "75Uu23mqWBb8LM8vDppqC1mQAnCcBuLXhVaDezVMQLRw",
+      "deploymentSlot": 456132171
+    }
+  },
+  "newVariantsEnabled": [],
+  "liveTrading": false,
+  "scope": "Current source revision and finalized loader header evidence only; no proof of ELF equivalence, new quotes, wire compatibility or positive simulation for unsupported variants."
+}

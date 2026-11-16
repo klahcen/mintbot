@@ -1,0 +1,18 @@
+{
+  "args": [
+    "systemd-inhibit",
+    "--what=sleep:idle",
+    "--who=Mintbot",
+    "--why=Authorized Phase13 bounded read-only monitoring",
+    "--mode=block",
+    "python3",
+    "/home/lkazaz/Desktop/mintbot/scripts/phase13-stable-monitor.py",
+    "--run",
+    "--inside-inhibitor",
+    "--run-name",
+    "mainnet-validated",
+    "--launch-record",
+    "validated-runtime-launch.json"
+  ],
+  "startedAt": "2026-11-15T13:11:45.553124+00:00"
+}

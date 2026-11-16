@@ -1,0 +1,69 @@
+{
+  "node": "v22.22.0",
+  "directory": "/tmp/mintbot-phase14-clean-tqa8pars",
+  "checks": [
+    {
+      "name": "install",
+      "args": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 7.988212620999548
+    },
+    {
+      "name": "typecheck",
+      "args": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 24.588801361998776
+    },
+    {
+      "name": "build",
+      "args": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 29.724374284000078
+    },
+    {
+      "name": "tests",
+      "args": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 1,
+      "durationSeconds": 68.13356835299783
+    },
+    {
+      "name": "python-clock-tests",
+      "args": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_phase12_host_health.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.16903734600055031
+    },
+    {
+      "name": "audit",
+      "args": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 1.4378466999987722
+    }
+  ]
+}

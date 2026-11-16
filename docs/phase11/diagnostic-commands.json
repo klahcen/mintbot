@@ -1,0 +1,67 @@
+{
+  "commands": [
+    {
+      "artifact": "current-buy-simulations.json",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase6-mainnet-simulation.ts",
+        "--run",
+        "--output",
+        "docs/phase11/new-current-buy.json"
+      ],
+      "publicPayer": "Historical public identities selected by original helper; current balances/inventory rechecked"
+    },
+    {
+      "artifact": "current-sell-simulations.json",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase7-sell-simulation.ts",
+        "--run",
+        "--output",
+        "docs/phase11/new-current-sell.json"
+      ],
+      "publicPayer": "Actual bounded public holder discovery recorded in artifact"
+    },
+    {
+      "artifact": "raydium-buy-simulation.json",
+      "environment": {
+        "SIMULATION_PUBLIC_PAYER": "7KtbPfNU3XHAfW3fNvxeAjGbbAxs7w9sEbXJXs2oVnSX"
+      },
+      "publicPayerSource": "Current Raydium sell diagnostic inventory owner; never signer authorization",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase6-mainnet-simulation.ts",
+        "--run",
+        "--venues",
+        "raydium-cpmm",
+        "--output",
+        "docs/phase11/new-raydium-buy-simulation.json"
+      ]
+    },
+    {
+      "artifact": "raydium-buy-public-creator-simulation.json",
+      "environment": {
+        "SIMULATION_PUBLIC_PAYER": "3caaNeD9C9hENBRzm1qsJ9iFCdqLq6Z3WGG22h9Vm9T5"
+      },
+      "publicPayerSource": "Actual current PumpSwap creation creator preserved in alternate-candidate-inspections.json; never signer authorization",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase6-mainnet-simulation.ts",
+        "--run",
+        "--venues",
+        "raydium-cpmm",
+        "--output",
+        "docs/phase11/new-raydium-buy-public-creator-simulation.json"
+      ]
+    }
+  ],
+  "scope": "Existing output paths are immutable. Choose new paths to reproduce current observations; network state will change. Public payer impersonation is sigVerify:false simulation only. No credentials, private keys, signing, airdrops or submission."
+}

@@ -1,0 +1,80 @@
+{
+  "Image": "sha256:5b048e530e6b746aba8f4204ded72a606e0ccbf5d9ecd228cc410b8c707e8fff",
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-11-14T23:38:05.643547787Z",
+    "FinishedAt": "2026-11-14T23:40:09.886782909Z",
+    "Health": {
+      "Status": "unhealthy",
+      "FailingStreak": 8,
+      "Log": [
+        {
+          "Start": "2026-11-14T23:39:06.61606654Z",
+          "End": "2026-11-14T23:39:06.875457175Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T23:39:21.876963424Z",
+          "End": "2026-11-14T23:39:22.09199039Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T23:39:37.095373792Z",
+          "End": "2026-11-14T23:39:37.30464349Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T23:39:52.306747225Z",
+          "End": "2026-11-14T23:39:52.51546878Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T23:40:07.517480532Z",
+          "End": "2026-11-14T23:40:07.849671008Z",
+          "ExitCode": 1,
+          "Output": ""
+        }
+      ]
+    }
+  },
+  "Args": [
+    "node",
+    "dist/scripts/phase11-mainnet.js",
+    "--run",
+    "--seconds",
+    "120",
+    "--max-candidates",
+    "120",
+    "--history-evidence",
+    "/app/history/input-0.json,/app/history/input-1.json,/app/history/input-2.json",
+    "--output",
+    "/app/data/final-mainnet"
+  ],
+  "HostConfig": {
+    "ReadonlyRootfs": true,
+    "CapDrop": [
+      "ALL"
+    ],
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "NetworkMode": "host",
+    "Init": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "originalPoolBytes": 287,
+  "originalVirtualQuoteAtoms": "-8859839",
+  "originalProtocolFeeAtoms": "8859839",
+  "originalCreatorFeeAtoms": "0",
+  "originalSignedOffsetExactlyNegatesRecordedFees": true,
+  "documentedMeaning": "Signed offset removes protocol/creator fees retained in quote custody from effective pricing reserves; never clamp or treat as unsigned.",
+  "authoritativeDocuments": [
+    "official/pump-fun-pump-public-docs-docs-NEGATIVE_VIRTUAL_QUOTE_RESERVES.md",
+    "official/pump-fun-pump-public-docs-docs-VIRTUAL_QUOTE_RESERVES_FEE_ADJUSTMENT.md"
+  ],
+  "originalHistoricalQuoteVaultAtSameBankAvailable": false,
+  "currentSignedOffset": "0",
+  "currentRetainedFeeAtoms": "0",
+  "currentSDKReferenceIsDegenerateZeroSupply": true,
+  "independentVariantQuotesValidated": false,
+  "bidirectionalVariantWireAndSimulationValidated": false,
+  "variantEnabled": false,
+  "scope": "Exact original/current field correspondence, not historical bank reconstruction. Current offset/fees are zero; that change does not prove which intervening transaction changed them. Zero-supply SDK market-cap equality is trivial and is not counted as successful quote validation."
+}

@@ -1,0 +1,26 @@
+{
+  "unauthorized": 401,
+  "absentBeforeAuth": true,
+  "authorized": 200,
+  "result": {
+    "running": false,
+    "killed": true,
+    "researchStop": {
+      "status": "requested",
+      "action": "kill",
+      "scope": "Durable stop intent; sidecar completion must be confirmed from its stopped status. No restart/reset granted."
+    }
+  },
+  "stop": {
+    "schemaVersion": 1,
+    "action": "kill",
+    "requestedAt": 1794695850718,
+    "liveTrading": false
+  },
+  "reset": 200,
+  "stickyAfterReset": true,
+  "doubleOwnerTopologyRejected": true,
+  "image": "mintbot:phase11-readonly",
+  "liveTrading": false,
+  "scope": "Isolated network-disabled application. No stop intent was sent to the measured live observer. API acknowledgement is durable requested, not sidecar completion."
+}

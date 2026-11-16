@@ -1,0 +1,1107 @@
+{
+  "startedAt": 1794746916191,
+  "endedAt": 1794746927882,
+  "seconds": 120,
+  "stopRequested": true,
+  "maxCandidates": 120,
+  "notifications": 380,
+  "venueCounts": {
+    "pump": {
+      "notifications": 194,
+      "creationHints": 0,
+      "selected": 0,
+      "unverifiableIdentities": 0
+    },
+    "pumpswap": {
+      "notifications": 136,
+      "creationHints": 0,
+      "selected": 0,
+      "unverifiableIdentities": 0
+    },
+    "raydium-cpmm": {
+      "notifications": 15,
+      "creationHints": 0,
+      "selected": 0,
+      "unverifiableIdentities": 0
+    },
+    "meteora-dlmm": {
+      "notifications": 35,
+      "creationHints": 0,
+      "selected": 0,
+      "unverifiableIdentities": 0
+    }
+  },
+  "unverifiableIdentities": 0,
+  "identityAudit": {
+    "enabled": false,
+    "records": 0,
+    "bytes": 0,
+    "dropped": 0,
+    "scope": "Bounded first/every-1000th/invalid wire population and linked admission results; public incoming envelopes only. Sanitized captures expose byteExact and original SHA; no raw endpoint credentials."
+  },
+  "coverageEpoch": {
+    "schemaVersion": 1,
+    "id": "4381b9a4-c8e3-4b11-826f-624cc96c4749",
+    "createdAt": 1794746915874,
+    "programs": [
+      "pump",
+      "pumpswap",
+      "raydium-cpmm",
+      "meteora-dlmm"
+    ],
+    "history": [
+      {
+        "path": "/app/history/input-0.json",
+        "sha256": "0141b530953d1b29115f76ad5a6af9698fa0dac605fad03e11d4d75ae192fefd",
+        "unresolvedGaps": 1,
+        "quarantined": 79,
+        "sourceArtifact": {
+          "path": "docs/phase10/runtime/mainnet-validated/evidence.json",
+          "sha256": "96a68a63fa6bd53b3cc8a6f27d765a58bc213618e8592725c936755ddeab7998",
+          "bytes": 90981342
+        }
+      },
+      {
+        "path": "/app/history/input-1.json",
+        "sha256": "c1b5df65b4ab4a73f882bdd7f60be3c03c619990d834c324dc8d024706438836",
+        "unresolvedGaps": 4,
+        "quarantined": 1,
+        "sourceArtifact": {
+          "path": "docs/phase11/runtime/mainnet-validated/evidence.json",
+          "sha256": "f6025d44645e6af6baa2bd787c21734d45a80a97ca76aad57a559771c7f029d2",
+          "bytes": 1797230
+        }
+      },
+      {
+        "path": "/app/history/input-2.json",
+        "sha256": "4fc8a3cd7f349360c9aa87d33e6eb9978484cdb2d122876acd28b705f892b2a1",
+        "unresolvedGaps": 3,
+        "quarantined": 0,
+        "sourceArtifact": {
+          "path": "docs/phase12/runtime/final-mainnet/evidence.json",
+          "sha256": "86a05c427a8b09d710a7ef1a5aec6233f364e60cc9ea56cd143fcec1c78bc5f4",
+          "bytes": 507866
+        }
+      }
+    ],
+    "researchPolicyReview": "unmet",
+    "fundedAuthorized": false
+  },
+  "refused": 0,
+  "refusalCounts": {},
+  "creationNotifications": 0,
+  "skippedSampling": 0,
+  "captureDropped": 0,
+  "captureBytes": 151,
+  "samples": [
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 0,
+        "admissionPending": 0,
+        "admissionBytes": 0
+      },
+      "at": 1794746922792,
+      "elapsedMs": 6600.720849,
+      "notifications": 0,
+      "candidates": 0,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 159633408,
+        "heapTotal": 39960576,
+        "heapUsed": 25089424,
+        "external": 3919574,
+        "arrayBuffers": 264058
+      },
+      "cpuMicroseconds": {
+        "user": 1846333,
+        "system": 189905
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.135935,
+        "p95": 20.463615,
+        "p99": 21.512191,
+        "max": 106.627071
+      },
+      "gc": {
+        "count": 1,
+        "totalMs": 3.658168002963066
+      },
+      "wal": {
+        "pending": 0,
+        "pendingPeak": 0,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "activePending": 0,
+        "oldestActiveAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 0,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 0,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {},
+        "dedupeFloors": {},
+        "gaps": [],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 58403893248,
+        "fsyncBatches": 0,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "connecting",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 5005.114745999999,
+        "wallElapsedMs": 5005,
+        "clockDiscontinuityMs": -0.11474599999928614,
+        "connectedMs": 0,
+        "acknowledgedMs": 0,
+        "disconnectedMs": 5005.114745999999,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [],
+        "events": [],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    },
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 0,
+        "admissionPending": 0,
+        "admissionBytes": 0
+      },
+      "at": 1794746927805,
+      "elapsedMs": 11614.214934,
+      "notifications": 380,
+      "candidates": 0,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 181522432,
+        "heapTotal": 59883520,
+        "heapUsed": 34506136,
+        "external": 4357505,
+        "arrayBuffers": 705206
+      },
+      "cpuMicroseconds": {
+        "user": 3335109,
+        "system": 419692
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.135935,
+        "p95": 21.544959,
+        "p99": 26.099711,
+        "max": 106.627071
+      },
+      "gc": {
+        "count": 5,
+        "totalMs": 22.676012005656958
+      },
+      "wal": {
+        "pending": 0,
+        "pendingPeak": 34,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "activePending": 0,
+        "oldestActiveAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 380,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 1079579,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pumpswap": {
+            "signature": "3gMANEW3UfkVbZLoZTgAbofEngXYuL9THboThVNwaEWn9UKw4HYsjUZmYkqbn68PeCLwuProdSEja75kHMnHyxZt",
+            "slot": 469735237
+          },
+          "meteora-dlmm": {
+            "signature": "n3375UdrGRNFLZXt1tZxgCtQSMUAc5Cmx4NrrLEmFP2oVQkd2FoMkvNw53zFqNWgpRJB9we7eFjXZTdyvppXcXB",
+            "slot": 469735237
+          },
+          "pump": {
+            "signature": "2TYYALuZYFTFQB2BoyVcmUCnXXKWj3gQL3bDrXq22PbHegJLcAxaJoF3fEQaDrbYdFez3hc2jhFZ4iwy2tG5hHp8",
+            "slot": 469735238
+          },
+          "raydium-cpmm": {
+            "signature": "n3375UdrGRNFLZXt1tZxgCtQSMUAc5Cmx4NrrLEmFP2oVQkd2FoMkvNw53zFqNWgpRJB9we7eFjXZTdyvppXcXB",
+            "slot": 469735237
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 58399662080,
+        "fsyncBatches": 223,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 9999.839001999999,
+        "wallElapsedMs": 10000,
+        "clockDiscontinuityMs": 0.16099800000120013,
+        "connectedMs": 4590.211284999999,
+        "acknowledgedMs": 4468.085873,
+        "disconnectedMs": 5409.627716999999,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 5409.591766,
+            "toMs": 9999.803050999999,
+            "subscribed": true,
+            "acknowledgedFromMs": 5531.717177999999,
+            "lastReceiptMs": 9957.839206999999
+          }
+        ],
+        "events": [
+          {
+            "atMs": 5409.6669569999995,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 5531.73191,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 10001.091811,
+            "provider": 0,
+            "kind": "operator-stop"
+          }
+        ],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    },
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 0,
+        "admissionPending": 0,
+        "admissionBytes": 0
+      },
+      "at": 1794746927844,
+      "elapsedMs": 11653.536853,
+      "notifications": 380,
+      "candidates": 0,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 181522432,
+        "heapTotal": 59883520,
+        "heapUsed": 36299992,
+        "external": 4382301,
+        "arrayBuffers": 730002
+      },
+      "cpuMicroseconds": {
+        "user": 3348563,
+        "system": 420888
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.135935,
+        "p95": 21.544959,
+        "p99": 26.099711,
+        "max": 106.627071
+      },
+      "gc": {
+        "count": 5,
+        "totalMs": 22.676012005656958
+      },
+      "wal": {
+        "pending": 0,
+        "pendingPeak": 34,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "activePending": 0,
+        "oldestActiveAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 380,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 1079579,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pumpswap": {
+            "signature": "3gMANEW3UfkVbZLoZTgAbofEngXYuL9THboThVNwaEWn9UKw4HYsjUZmYkqbn68PeCLwuProdSEja75kHMnHyxZt",
+            "slot": 469735237
+          },
+          "meteora-dlmm": {
+            "signature": "n3375UdrGRNFLZXt1tZxgCtQSMUAc5Cmx4NrrLEmFP2oVQkd2FoMkvNw53zFqNWgpRJB9we7eFjXZTdyvppXcXB",
+            "slot": 469735237
+          },
+          "pump": {
+            "signature": "2TYYALuZYFTFQB2BoyVcmUCnXXKWj3gQL3bDrXq22PbHegJLcAxaJoF3fEQaDrbYdFez3hc2jhFZ4iwy2tG5hHp8",
+            "slot": 469735238
+          },
+          "raydium-cpmm": {
+            "signature": "n3375UdrGRNFLZXt1tZxgCtQSMUAc5Cmx4NrrLEmFP2oVQkd2FoMkvNw53zFqNWgpRJB9we7eFjXZTdyvppXcXB",
+            "slot": 469735237
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 58399662080,
+        "fsyncBatches": 223,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 9999.839001999999,
+        "wallElapsedMs": 10000,
+        "clockDiscontinuityMs": 0.16099800000120013,
+        "connectedMs": 4590.211284999999,
+        "acknowledgedMs": 4468.085873,
+        "disconnectedMs": 5409.627716999999,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 5409.591766,
+            "toMs": 9999.803050999999,
+            "subscribed": true,
+            "acknowledgedFromMs": 5531.717177999999,
+            "lastReceiptMs": 9957.839206999999
+          }
+        ],
+        "events": [
+          {
+            "atMs": 5409.6669569999995,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 5531.73191,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 10001.091811,
+            "provider": 0,
+            "kind": "operator-stop"
+          }
+        ],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    }
+  ],
+  "gaps": [],
+  "rpcIssues": [],
+  "supervisor": {
+    "state": "stopped",
+    "liveReady": false,
+    "provider": 0,
+    "providerHosts": [
+      "api.mainnet-beta.solana.com",
+      "solana-rpc.publicnode.com"
+    ],
+    "elapsedMs": 9999.839001999999,
+    "wallElapsedMs": 10000,
+    "clockDiscontinuityMs": 0.16099800000120013,
+    "connectedMs": 4590.211284999999,
+    "acknowledgedMs": 4468.085873,
+    "disconnectedMs": 5409.627716999999,
+    "connections": 1,
+    "incidents": 0,
+    "attemptsThisIncident": 1,
+    "cooldownsUntilMono": [
+      0,
+      0
+    ],
+    "intervals": [
+      {
+        "provider": 0,
+        "fromMs": 5409.591766,
+        "toMs": 9999.803050999999,
+        "subscribed": true,
+        "acknowledgedFromMs": 5531.717177999999,
+        "lastReceiptMs": 9957.839206999999
+      }
+    ],
+    "events": [
+      {
+        "atMs": 5409.6669569999995,
+        "provider": 0,
+        "kind": "socket-open"
+      },
+      {
+        "atMs": 5531.73191,
+        "provider": 0,
+        "kind": "subscriptions-ready"
+      },
+      {
+        "atMs": 10001.091811,
+        "provider": 0,
+        "kind": "operator-stop"
+      }
+    ],
+    "liveTrading": false
+  },
+  "recoveryProgress": [],
+  "rawStorage": {
+    "removedCoverage": {
+      "fromSlot": null,
+      "toSlot": null,
+      "unknown": false
+    },
+    "bytes": 851323,
+    "archives": 0,
+    "archiveBytes": 0,
+    "deletedFiles": 0,
+    "deletedBytes": 0,
+    "diskAvailableBytes": 58399662080,
+    "maxBytes": 8388608,
+    "maxArchives": 2
+  },
+  "refusalStorage": {
+    "removedCoverage": {
+      "fromSlot": null,
+      "toSlot": null,
+      "unknown": false
+    },
+    "bytes": 0,
+    "archives": 0,
+    "archiveBytes": 0,
+    "deletedFiles": 0,
+    "deletedBytes": 0,
+    "diskAvailableBytes": null,
+    "maxBytes": 4194304,
+    "maxArchives": 2
+  },
+  "resources": {
+    "cpuMicroseconds": {
+      "user": 3366691,
+      "system": 437102
+    },
+    "resourceBefore": {
+      "userCPUTime": 1530032,
+      "systemCPUTime": 244924,
+      "maxRSS": 96012,
+      "sharedMemorySize": 0,
+      "unsharedDataSize": 0,
+      "unsharedStackSize": 0,
+      "minorPageFault": 15272,
+      "majorPageFault": 1,
+      "swappedOut": 0,
+      "fsRead": 40,
+      "fsWrite": 1944,
+      "ipcSent": 0,
+      "ipcReceived": 0,
+      "signalsCount": 0,
+      "voluntaryContextSwitches": 1458,
+      "involuntaryContextSwitches": 1128
+    },
+    "resourceAfter": {
+      "userCPUTime": 4896703,
+      "systemCPUTime": 682022,
+      "maxRSS": 177268,
+      "sharedMemorySize": 0,
+      "unsharedDataSize": 0,
+      "unsharedStackSize": 0,
+      "minorPageFault": 38909,
+      "majorPageFault": 16,
+      "swappedOut": 0,
+      "fsRead": 1976,
+      "fsWrite": 7832,
+      "ipcSent": 0,
+      "ipcReceived": 0,
+      "signalsCount": 0,
+      "voluntaryContextSwitches": 6609,
+      "involuntaryContextSwitches": 2408
+    },
+    "memory": {
+      "rss": 134418432,
+      "heapTotal": 59883520,
+      "heapUsed": 37276784,
+      "external": 4402114,
+      "arrayBuffers": 749815
+    },
+    "gcCount": 5,
+    "gcMs": 22.676012005656958
+  },
+  "provider": "api.mainnet-beta.solana.com",
+  "policy": {
+    "name": "finalized-paper-research",
+    "requiredCommitment": "finalized",
+    "maxReceiptAgeMs": 60000,
+    "maxEventAgeMs": 60000,
+    "maxSlotLag": 160,
+    "maxMarketSlotLag": 160,
+    "allowHistorical": false
+  },
+  "rows": [],
+  "captured": [
+    {
+      "method": "getGenesisHash",
+      "provider": "api.mainnet-beta.solana.com",
+      "observedAt": 1794746916761,
+      "result": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+    }
+  ],
+  "pipeline": {
+    "fatal": null,
+    "inFlight": 0,
+    "admissionPending": 0,
+    "admissionBytes": 0
+  },
+  "journal": {
+    "pending": 0,
+    "pendingPeak": 34,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 0,
+    "activePending": 0,
+    "oldestActiveAgeMs": 0,
+    "quarantined": 0,
+    "completedRetained": 380,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 0,
+    "walBytes": 1079579,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {
+      "pumpswap": {
+        "signature": "3gMANEW3UfkVbZLoZTgAbofEngXYuL9THboThVNwaEWn9UKw4HYsjUZmYkqbn68PeCLwuProdSEja75kHMnHyxZt",
+        "slot": 469735237
+      },
+      "meteora-dlmm": {
+        "signature": "n3375UdrGRNFLZXt1tZxgCtQSMUAc5Cmx4NrrLEmFP2oVQkd2FoMkvNw53zFqNWgpRJB9we7eFjXZTdyvppXcXB",
+        "slot": 469735237
+      },
+      "pump": {
+        "signature": "2TYYALuZYFTFQB2BoyVcmUCnXXKWj3gQL3bDrXq22PbHegJLcAxaJoF3fEQaDrbYdFez3hc2jhFZ4iwy2tG5hHp8",
+        "slot": 469735238
+      },
+      "raydium-cpmm": {
+        "signature": "n3375UdrGRNFLZXt1tZxgCtQSMUAc5Cmx4NrrLEmFP2oVQkd2FoMkvNw53zFqNWgpRJB9we7eFjXZTdyvppXcXB",
+        "slot": 469735237
+      }
+    },
+    "dedupeFloors": {},
+    "gaps": [],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 58399653888,
+    "fsyncBatches": 224,
+    "writerFailure": null
+  },
+  "telemetry": {
+    "uptimeMs": 11691.405508,
+    "counters": {
+      "store.committed": 4,
+      "ingest.resumed_from_wal": 0,
+      "supervisor.connections": 1,
+      "rpc.subscription_requests": 4,
+      "rpc.messages": 384,
+      "observations.received": 380,
+      "supervisor.notifications": 380,
+      "research.admission.offered": 380,
+      "research.admission.admitted": 380,
+      "observations.delivered": 380,
+      "ingest.offered": 380,
+      "journal.fsync_batches": 223,
+      "journal.ownership_acks": 380,
+      "ingest.decode.offered": 380,
+      "ingest.decode.admitted": 380,
+      "ingest.decode.completed": 380,
+      "ingest.observation_only": 186,
+      "ingest.enrichment.offered": 380,
+      "ingest.enrichment.admitted": 380,
+      "ingest.enrichment.completed": 380,
+      "ingest.strategy.offered": 380,
+      "ingest.strategy.admitted": 380,
+      "ingest.strategy.completed": 380,
+      "ingest.persistence.offered": 380,
+      "ingest.persistence.admitted": 380,
+      "raw.persistence.offered": 380,
+      "raw.persistence.admitted": 380,
+      "raw.persistence.completed": 380,
+      "journal.completion_acks": 380,
+      "ingest.persistence.completed": 380,
+      "ingest.completed": 380,
+      "research.admission.completed": 380,
+      "ingest.deferred": 155,
+      "ingest.deferred_completed": 155,
+      "decoding.completed": 57,
+      "decoding.launches": 0
+    },
+    "gauges": {
+      "store.queue_depth": {
+        "current": 0,
+        "peak": 1
+      },
+      "store.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "research.admission.pending": {
+        "current": 0,
+        "peak": 83
+      },
+      "research.admission.queue_depth": {
+        "current": 0,
+        "peak": 75
+      },
+      "research.admission.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "journal.unacked": {
+        "current": 0,
+        "peak": 16
+      },
+      "journal.unacked_bytes": {
+        "current": 0,
+        "peak": 47704
+      },
+      "ingest.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.queue_depth": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "ingest.enrichment.pending": {
+        "current": 0,
+        "peak": 3
+      },
+      "ingest.enrichment.queue_depth": {
+        "current": 0,
+        "peak": 3
+      },
+      "ingest.enrichment.in_flight": {
+        "current": 0,
+        "peak": 2
+      },
+      "ingest.strategy.pending": {
+        "current": 0,
+        "peak": 4
+      },
+      "ingest.strategy.queue_depth": {
+        "current": 0,
+        "peak": 4
+      },
+      "ingest.strategy.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "ingest.persistence.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.persistence.queue_depth": {
+        "current": 0,
+        "peak": 3
+      },
+      "ingest.persistence.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "raw.persistence.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "raw.persistence.queue_depth": {
+        "current": 0,
+        "peak": 7
+      },
+      "raw.persistence.in_flight": {
+        "current": 0,
+        "peak": 1
+      }
+    },
+    "histograms": {
+      "store.queue_wait_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 0.016588999998930376,
+        "p95": 0.05139500000041153,
+        "p99": 0.05139500000041153,
+        "max": 0.6862639999999374
+      },
+      "store.clone_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 0.1868190000004688,
+        "p95": 0.312207999999373,
+        "p99": 0.312207999999373,
+        "max": 0.46340699999996104
+      },
+      "store.validation_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 0.336420999999973,
+        "p95": 0.39302799999859417,
+        "p99": 0.39302799999859417,
+        "max": 0.6810010000001512
+      },
+      "store.persistence_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 8.352050999999847,
+        "p95": 8.584110000001601,
+        "p99": 8.584110000001601,
+        "max": 13.307864000000109
+      },
+      "store.transaction_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 9.051744999998846,
+        "p95": 9.507666999999856,
+        "p99": 9.507666999999856,
+        "max": 15.614237000000003
+      },
+      "monitor.json_decoding_ms": {
+        "count": 384,
+        "samples": 384,
+        "p50": 0.035119999998642015,
+        "p95": 0.08213699999942037,
+        "p99": 0.11348700000053213,
+        "max": 1.6367200000004232
+      },
+      "monitor.ingestion_ms": {
+        "count": 384,
+        "samples": 384,
+        "p50": 0.3326290000004519,
+        "p95": 1.5285810000004858,
+        "p99": 6.143825999999535,
+        "max": 15.021545999999944
+      },
+      "monitor.deduplication_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 0.0010870000005525071,
+        "p95": 0.005444000000352389,
+        "p99": 0.01751200000035169,
+        "max": 0.11022400000001653
+      },
+      "research.admission.queue_wait_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 52.71047499999986,
+        "p95": 292.9836320000013,
+        "p99": 352.13220099999853,
+        "max": 354.84623099999953
+      },
+      "journal.worker_append_ms": {
+        "count": 223,
+        "samples": 223,
+        "p50": 0.5860310000007303,
+        "p95": 2.924539999999979,
+        "p99": 11.400014000000738,
+        "max": 19.097741999999926
+      },
+      "journal.worker_fsync_ms": {
+        "count": 223,
+        "samples": 223,
+        "p50": 3.3275809999995545,
+        "p95": 6.291153000000122,
+        "p99": 9.329421999998885,
+        "max": 19.972373999999036
+      },
+      "journal.batch_records": {
+        "count": 223,
+        "samples": 223,
+        "p50": 3,
+        "p95": 8,
+        "p99": 8,
+        "max": 8
+      },
+      "journal.ownership_ack_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 9.791345999999976,
+        "p95": 38.5680339999999,
+        "p99": 79.78087199999936,
+        "max": 81.85737300000073
+      },
+      "ingest.receipt_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 10.073898000000554,
+        "p95": 39.79300599999988,
+        "p99": 80.27650499999982,
+        "max": 82.58588400000008
+      },
+      "ingest.decode.queue_wait_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 0.20563899999979185,
+        "p95": 1.5310709999994288,
+        "p99": 3.5103519999993296,
+        "max": 14.298268000000462
+      },
+      "ingest.decode.processing_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 0.05244999999922584,
+        "p95": 0.266023000000132,
+        "p99": 0.4723809999995865,
+        "max": 2.581955999999991
+      },
+      "ingest.decode.end_to_end_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 82.68614300000081,
+        "p95": 325.9014850000003,
+        "p99": 376.7865490000004,
+        "max": 384.75990099999945
+      },
+      "ingest.enrichment.queue_wait_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 0.02764299999944342,
+        "p95": 0.1167459999996936,
+        "p99": 0.3795330000011745,
+        "max": 1.482504000001427
+      },
+      "ingest.enrichment.processing_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 0.12720199999967008,
+        "p95": 0.4112839999997959,
+        "p99": 0.6050059999997757,
+        "max": 2.641777999999249
+      },
+      "ingest.enrichment.end_to_end_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 82.87093699999969,
+        "p95": 326.04467699999987,
+        "p99": 377.1910560000015,
+        "max": 384.87494700000025
+      },
+      "ingest.strategy.queue_wait_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 0.08839299999999639,
+        "p95": 0.36423999999897205,
+        "p99": 0.7762279999988095,
+        "max": 2.503833000000668
+      },
+      "ingest.strategy.processing_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 0.08373699999901874,
+        "p95": 0.31048999999984517,
+        "p99": 0.5151270000005752,
+        "max": 0.7624940000005154
+      },
+      "ingest.strategy.end_to_end_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 83.19263099999989,
+        "p95": 326.14535199999955,
+        "p99": 377.6198660000009,
+        "max": 385.13018700000066
+      },
+      "ingest.persistence.queue_wait_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 0.025017999998453888,
+        "p95": 0.07994300000063959,
+        "p99": 0.5470649999988382,
+        "max": 0.659444999999323
+      },
+      "raw.persistence.queue_wait_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 4.748131000000285,
+        "p95": 20.893371000000116,
+        "p99": 133.63224600000103,
+        "max": 150.93917800000054
+      },
+      "raw.persistence.processing_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 1.2114559999990888,
+        "p95": 6.132193999999799,
+        "p99": 11.521217999999863,
+        "max": 152.76840599999923
+      },
+      "raw.persistence.end_to_end_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 6.422797999999602,
+        "p95": 26.11421700000028,
+        "p99": 142.6340369999998,
+        "max": 153.25371300000006
+      },
+      "ingest.end_to_end_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 104.9261979999992,
+        "p95": 351.06244700000025,
+        "p99": 400.51979200000096,
+        "max": 404.9499620000006
+      },
+      "ingest.persistence.processing_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 15.895478999998886,
+        "p95": 41.15603899999951,
+        "p99": 148.74267299999883,
+        "max": 179.3962420000007
+      },
+      "ingest.persistence.end_to_end_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 104.92949799999951,
+        "p95": 351.0652420000006,
+        "p99": 400.52394900000036,
+        "max": 404.95949400000063
+      },
+      "research.admission.processing_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 22.218879000000015,
+        "p95": 82.39229399999931,
+        "p99": 128.15904299999966,
+        "max": 128.16291199999978
+      },
+      "research.admission.end_to_end_ms": {
+        "count": 380,
+        "samples": 380,
+        "p50": 74.67176599999948,
+        "p95": 353.57498000000123,
+        "p99": 373.75228400000015,
+        "max": 408.1805289999993
+      },
+      "decoding_ms": {
+        "count": 57,
+        "samples": 57,
+        "p50": 0.06058599999960279,
+        "p95": 0.2552250000007916,
+        "p99": 0.3618580000002112,
+        "max": 2.233432000000903
+      }
+    }
+  },
+  "ledger": {
+    "version": 1,
+    "mode": "paper",
+    "running": false,
+    "killed": true,
+    "balanceSol": 10,
+    "day": "2026-11-15",
+    "dailySpendSol": 0,
+    "failures": 0,
+    "strategies": [
+      {
+        "name": "Conservative launch",
+        "kind": "launch",
+        "enabled": true,
+        "tradeSol": 0.1,
+        "maxTradeSol": 0.25,
+        "maxDailySpendSol": 1,
+        "maxPositions": 5,
+        "maxSlippageBps": 100,
+        "reserveSol": 1,
+        "maxRiskScore": 30,
+        "maxFailures": 3,
+        "minLiquiditySol": 20,
+        "minMarketCapSol": 0,
+        "maxMarketCapSol": 100000,
+        "minVolumeSol": 0,
+        "minMomentumBps": 0,
+        "delayMs": 0,
+        "maxPriceAgeMs": 15000,
+        "takeProfitBps": 3000,
+        "stopLossBps": 1500,
+        "trailingStopBps": 1000,
+        "maxHoldMs": 3600000,
+        "creatorAllowlist": [],
+        "creatorBlocklist": []
+      }
+    ],
+    "launches": [],
+    "positions": [],
+    "trades": [],
+    "alerts": [],
+    "seen": [],
+    "pendingLaunches": [],
+    "metrics": {},
+    "rpc": {
+      "status": "not-configured"
+    },
+    "realizedPnlSol": 0,
+    "marketLedger": {
+      "balanceLamports": "10000000000",
+      "dailySpendLamports": "0",
+      "realizedPnlLamports": "0",
+      "day": "2026-11-15"
+    },
+    "marketReviews": []
+  },
+  "restart": {
+    "running": false,
+    "positions": 0,
+    "trades": 0,
+    "seenRetained": true
+  },
+  "simulationDiagnostics": [],
+  "providerAssessments": [],
+  "verificationRejectionCounts": {},
+  "rejectionCounts": {},
+  "liveTrading": false,
+  "scope": "Supervised bounded mainnet transport and WAL of delivered notifications; market candidates sampled. Connected transport is not proof of chain coverage. Recovery status is explicit provider-reported evidence.  No database pool is attached to this monitor; database responsiveness is separately validated. Current confirmed WebSocket receipts; strict finalized creation verification; current finalized accounts. Both actual buy and sell simulations required before an entry; mandatory-risk failures are durably rejected before simulation. No invented fill or risk overrides. Public RPC errors and unsupported variants are retained."
+}

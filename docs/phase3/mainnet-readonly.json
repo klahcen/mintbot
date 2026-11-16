@@ -1,0 +1,154 @@
+{
+  "generatedAt": "2026-11-06T15:03:13Z",
+  "providerHost": "api.mainnet-beta.solana.com",
+  "requestedDurationSeconds": 15,
+  "observationLimit": 500,
+  "captureElapsedSeconds": 10.598491949000163,
+  "observationsPerSecond": 47.176523075735204,
+  "status": "observed",
+  "metrics": {
+    "rpc_success": 10,
+    "observations": 501,
+    "duplicates": 1,
+    "controlled_reconnects": 1,
+    "observation_limit_reached": 1
+  },
+  "latencies": {
+    "rpc_getSlot_ms": {
+      "count": 1,
+      "p50": 985.5847569997422,
+      "p95": 985.5847569997422,
+      "p99": 985.5847569997422,
+      "max": 985.5847569997422
+    },
+    "local_receipt_handling_ms": {
+      "count": 500,
+      "p50": 0.08550599886802956,
+      "p95": 0.21568000011029653,
+      "p99": 0.26859300123760477,
+      "max": 0.3026919985131826
+    },
+    "reconnect_to_all_acks_ms": {
+      "count": 1,
+      "p50": 2671.6509409998253,
+      "p95": 2671.6509409998253,
+      "p99": 2671.6509409998253,
+      "max": 2671.6509409998253
+    },
+    "rpc_getTransaction_ms": {
+      "count": 5,
+      "p50": 1115.7078420001199,
+      "p95": 1544.8749140014115,
+      "p99": 1544.8749140014115,
+      "max": 1650.4715369992482
+    },
+    "rpc_getSignaturesForAddress_ms": {
+      "count": 4,
+      "p50": 1747.620875998109,
+      "p95": 2048.781372999656,
+      "p99": 2048.781372999656,
+      "max": 2353.674335001415
+    }
+  },
+  "sampledHeadSlot": 466152777,
+  "slotLagSigned": {
+    "count": 500,
+    "p50": -25,
+    "p95": -8,
+    "p99": -7,
+    "max": -7
+  },
+  "slotLagMethod": "Single confirmed head snapshot before capture; negative lag means head sample is older than receipt, not negative network latency. No slot-to-ms conversion.",
+  "recovery": [
+    {
+      "program": "pump",
+      "window": [
+        466152784,
+        466152803
+      ],
+      "signaturesScanned": 100,
+      "sampledMissingReceipts": 0,
+      "coverage": "partial sample; no exhaustive recovery proof",
+      "pageCap": true
+    },
+    {
+      "program": "pumpswap",
+      "window": [
+        466152785,
+        466152803
+      ],
+      "signaturesScanned": 100,
+      "sampledMissingReceipts": 0,
+      "coverage": "partial sample; no exhaustive recovery proof",
+      "pageCap": true
+    },
+    {
+      "program": "raydium-cpmm",
+      "window": [
+        466152786,
+        466152803
+      ],
+      "signaturesScanned": 100,
+      "sampledMissingReceipts": 10,
+      "coverage": "partial sample; no exhaustive recovery proof",
+      "pageCap": true
+    },
+    {
+      "program": "meteora-dlmm",
+      "window": [
+        466152785,
+        466152803
+      ],
+      "signaturesScanned": 100,
+      "sampledMissingReceipts": 0,
+      "coverage": "partial sample; no exhaustive recovery proof",
+      "pageCap": true
+    }
+  ],
+  "retrieval": [
+    {
+      "signature": "4PmM6JZ3HEMkTA2sHgxbHgfo5Shatq5h2oxTFe79rgRe6VJje9nn1mkdjLCq9V4bpbobuQX4E3GKALxSANYBMx2w",
+      "available": true,
+      "version": 1
+    },
+    {
+      "signature": "5gv7cwAuwmkz4bZa1FCVzk2oo2pt1UfG1XQGLXukk2AQ6sjyCkCvgxtqf4uDtSAHiqQbJWcEuNqnSrWDDZXGmkLY",
+      "available": true,
+      "version": 1
+    },
+    {
+      "signature": "4gW2pyBCFC3BeVUV2Tx3D9eK6LNFnhyhMZX3oUVejVdGj8SgX4wGSFBD3qCg7hnYoC7SiKkptCPKVmLqfZQbVGv5",
+      "available": true,
+      "version": 1
+    },
+    {
+      "signature": "n5GrQWgPPSdLBvUvQZKhXAgup6rghYHA64LPeZvBoBc612NvMLRCxzPcoVSnL6wCBZqd9YupLTv8uMHagSqzBSs",
+      "available": true,
+      "version": 0
+    },
+    {
+      "signature": "5UfsK3yZSu3uau44F8JVtuGwPtBuge3Dk7QE9C5A3SSqKfZfkNbNWQ1QxeweRfkg7nuc9J22EwPM97n9v3nH7Htf",
+      "available": true,
+      "version": 1
+    }
+  ],
+  "retrievedMintDistribution": {
+    "CEtKJzRBu1R4fhELHQqPi353mfDGBBWfUHagxR6Npump": 1,
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 1,
+    "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": 2,
+    "EFBGoDWTVCNA6Gb5vpnMDefX5L3pmd62W6k3hnM7drTj": 2,
+    "So11111111111111111111111111111111111111112": 1,
+    "Fi3M9GeBqLwnQNdvdwhYafph44j3CrLNxmPheAdUpump": 1,
+    "3gG3iCR7rhbaB9m8yCNyBpvmKJ2ifWAAGNB4MCDWpump": 1
+  },
+  "mintDistributionScope": "Token-balance mint fields from the bounded transaction retrieval sample; not all observations and not a launch assertion.",
+  "retrievalSampleSource": "observed receipts",
+  "captureBytes": 1348434,
+  "pythonResourceUsage": {
+    "userSeconds": 0.803908,
+    "systemSeconds": 0.119819,
+    "maxRssKiB": 344188
+  },
+  "errors": [],
+  "scope": "Read-only getSlot/getSignaturesForAddress/getTransaction and logsSubscribe. Bounded 16-message WebSocket queue, 256KiB message, 16MiB capture, 5-second RPC/connection deadlines, two failed connection budget. Confirmed observations with finalized retrieval sample; observations are not claimed finalized. Controlled reconnect only if time/window permits before cap. Missing sampled history does not prove permanent loss. No on-chain event-to-receipt latency claim."
+}

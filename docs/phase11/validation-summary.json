@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-11-14T22:48:17.421732+00:00",
+  "engineeringDelivered": true,
+  "endToEndCurrentPaperValidated": false,
+  "fullPhaseAcceptance": false,
+  "originalTestsRetained": 299,
+  "tests": {
+    "total": 307,
+    "passed": 307,
+    "failed": 0
+  },
+  "originalTestFixtureFilesUnchanged": 60,
+  "priorArtifactFilesUnchanged": 1166,
+  "compiledFinalReleaseAssetsAndEntrypointsMatching": 69,
+  "primaryRunPredatesExitFencePropagation": [
+    "dist/src/market/paper.js",
+    "dist/src/simulation/paper-gate.js"
+  ],
+  "advisories": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "monitoring": {
+    "state": "terminal",
+    "elapsedMs": 584319.3883669999,
+    "wallElapsedMs": 7854626,
+    "clockDiscontinuityMs": 7270306.611633,
+    "connectedMs": 573906.9001550002,
+    "acknowledgedMs": 566379.545868,
+    "disconnectedMs": 10412.488211999764,
+    "connections": 11,
+    "incidents": 10
+  },
+  "monotonic1800SecondTargetMet": false,
+  "continuousCoverage": false,
+  "independentProviders": "unmet",
+  "independentlyReviewedEpochPolicy": "unmet",
+  "venueCounts": {
+    "pump": {
+      "notifications": 20565,
+      "creationHints": 17,
+      "selected": 5
+    },
+    "pumpswap": {
+      "notifications": 27088,
+      "creationHints": 3,
+      "selected": 2
+    },
+    "raydium-cpmm": {
+      "notifications": 256,
+      "creationHints": 0,
+      "selected": 0
+    },
+    "meteora-dlmm": {
+      "notifications": 13727,
+      "creationHints": 0,
+      "selected": 0
+    }
+  },
+  "notifications": 61636,
+  "selectedCandidates": 7,
+  "verifiedCreations": 2,
+  "candidateOutcomes": {
+    "verification-http-429": 2,
+    "market-rejected": 2,
+    "strict-creation-verification-rejected": 3
+  },
+  "marketReasons": {
+    "Unsupported Pump global version": 1,
+    "Unsupported PumpSwap pool version": 1
+  },
+  "verificationReasons": {
+    "Read-only verification HTTP 429": 2,
+    "Pump instruction/event mismatch": 3
+  },
+  "paperEntries": 0,
+  "paperExits": 0,
+  "activePending": 0,
+  "quarantined": 1,
+  "admissionRefusals": 260,
+  "refusalCounts": {
+    "fork-or-provider-conflict": 260
+  },
+  "historicalPhase10QuarantinesRetained": 79,
+  "historicalPhase10Gap": "unrecoverable",
+  "currentGapStatuses": {
+    "meteora-dlmm": "unrecoverable",
+    "pump": "unrecoverable",
+    "pumpswap": "unrecoverable",
+    "raydium-cpmm": "unrecoverable"
+  },
+  "writerFailure": null,
+  "pipelineFatal": null,
+  "termination": "terminal-clock-discontinuity; unobserved wall interval excluded",
+  "sdkWireVectorsEqual": 8,
+  "sdkQuoteVectorsEqual": 16,
+  "currentUnsignedSimulations": "PumpSwap buy and Raydium sell succeeded as separate diagnostic subjects; current buys/sells on other attempted routes failed construction/inventory/liquidity/budget checks. No fresh paper eligibility inferred.",
+  "operationalProbeSecondsExcluded": [
+    10.00016031,
+    10.000672393
+  ],
+  "liveTrading": false,
+  "signingBroadcastSpending": false
+}

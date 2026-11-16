@@ -1,0 +1,30 @@
+{
+  "rows": [
+    {
+      "case": "missing",
+      "exitCode": 1,
+      "stderr": "file:///app/dist/scripts/phase11-mainnet.js:31\n    throw Error('Clock-stability preflight required');\n          ^\n\nError: Clock-stability preflight required\n    at file:///app/dist/scripts/phase11-mainnet.js:31:11\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.23.4\n",
+      "noNetwork": true
+    },
+    {
+      "case": "longer-than-proof",
+      "exitCode": 1,
+      "stderr": "file:///app/dist/src/research/host-health.js:7\n        throw Error('Host health interval/bounds not established');\n              ^\n\nError: Host health interval/bounds not established\n    at validateHostHealth (file:///app/dist/src/research/host-health.js:7:15)\n    at loadHostHealth (file:///app/dist/src/research/host-health.js:23:20)\n    at async file:///app/dist/scripts/phase11-mainnet.js:32:33\n\nNode.js v22.23.4\n",
+      "noNetwork": true
+    },
+    {
+      "case": "wrong-boot",
+      "exitCode": 1,
+      "stderr": "file:///app/dist/src/research/host-health.js:22\n        throw Error('Host health evidence boot identity mismatch');\n              ^\n\nError: Host health evidence boot identity mismatch\n    at loadHostHealth (file:///app/dist/src/research/host-health.js:22:15)\n    at async file:///app/dist/scripts/phase11-mainnet.js:32:33\n\nNode.js v22.23.4\n",
+      "noNetwork": true
+    },
+    {
+      "case": "expired-after-suspend",
+      "exitCode": 1,
+      "stderr": "file:///app/dist/src/research/host-health.js:11\n        throw Error('Host health evidence stale, clock-discontinuous, or from another monotonic origin');\n              ^\n\nError: Host health evidence stale, clock-discontinuous, or from another monotonic origin\n    at validateHostHealth (file:///app/dist/src/research/host-health.js:11:15)\n    at loadHostHealth (file:///app/dist/src/research/host-health.js:23:20)\n    at async file:///app/dist/scripts/phase11-mainnet.js:32:33\n\nNode.js v22.23.4\n",
+      "noNetwork": true
+    }
+  ],
+  "scope": "Actual compiled final wrapper in network-disabled read-only containers. Rejected before source/WAL/ledger startup; historical certificate became stale across the observed overnight suspension.",
+  "liveTrading": false
+}

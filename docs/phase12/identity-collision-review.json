@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "source": "phase11-forensics.json",
+      "totalRefusals": 260,
+      "allZeroSignatureRefusals": 259,
+      "otherRefusals": 1,
+      "retainedPredecessorPayloads": 0,
+      "scope": "Same zero identity reused across changing slots/logs is a concrete collision pattern. Why those transport observations contain zero signatures is unknown; do not label them independently finalized transactions, simulations, malicious tokens or proven chain forks."
+    },
+    {
+      "source": "current-run-forensics.json",
+      "totalRefusals": 216,
+      "allZeroSignatureRefusals": 210,
+      "otherRefusals": 6,
+      "retainedPredecessorPayloads": 0,
+      "scope": "Same zero identity reused across changing slots/logs is a concrete collision pattern. Why those transport observations contain zero signatures is unknown; do not label them independently finalized transactions, simulations, malicious tokens or proven chain forks."
+    }
+  ],
+  "originalWalsUnchanged": true,
+  "futureHandling": "Research-only policy refuses unverifiable zero signatures before ownership/candidate/head/anchor promotion, persists a coverage gap and retains full original refusal diagnostics. Generic ingestion defaults and historical evidence remain unchanged.",
+  "liveTrading": false
+}

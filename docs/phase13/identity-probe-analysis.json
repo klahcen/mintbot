@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-11-15T12:44:28.277100+00:00",
+  "runDirectory": "docs/phase13/runtime/identity-probe",
+  "sourceManifest": "docs/phase13/runtime/identity-probe/runtime-manifest.json",
+  "recordCounts": {
+    "wire-to-observation": 30,
+    "stable-identity-and-wal-admission": 30
+  },
+  "wireOutcomeCounts": {
+    "normalized-observation": 28,
+    "unverifiable-zero-signature": 2
+  },
+  "byteExactZeroProofs": [
+    {
+      "providerHost": "api.mainnet-beta.solana.com",
+      "connection": 1,
+      "slot": 469733135,
+      "program": "pump",
+      "wireSha256": "c61d7ff4c0d00a15733574e0b6b7cb7908de35cf6f1772426b06bf4e3e34c436",
+      "wireBytes": 2297,
+      "incomingSignature": "1111111111111111111111111111111111111111111111111111111111111111",
+      "normalizedSignature": "1111111111111111111111111111111111111111111111111111111111111111",
+      "admission": [
+        {
+          "stage": "stable-identity-and-wal-admission",
+          "at": 1794746481000,
+          "program": "pump",
+          "signature": "1111111111111111111111111111111111111111111111111111111111111111",
+          "slot": 469733135,
+          "wireIdentitySha256": "c61d7ff4c0d00a15733574e0b6b7cb7908de35cf6f1772426b06bf4e3e34c436",
+          "stableIdentity": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P:1111111111111111111111111111111111111111111111111111111111111111",
+          "result": {
+            "status": "unrecoverable",
+            "reason": "unverifiable-zero-signature"
+          },
+          "durable": true
+        }
+      ]
+    },
+    {
+      "providerHost": "api.mainnet-beta.solana.com",
+      "connection": 1,
+      "slot": 469733179,
+      "program": "pump",
+      "wireSha256": "b4dc8a860f5f97ac4ede67a1c3cfa2ab6984c4e5ba6eede070c80a90f51f203b",
+      "wireBytes": 2297,
+      "incomingSignature": "1111111111111111111111111111111111111111111111111111111111111111",
+      "normalizedSignature": "1111111111111111111111111111111111111111111111111111111111111111",
+      "admission": [
+        {
+          "stage": "stable-identity-and-wal-admission",
+          "at": 1794746523749,
+          "program": "pump",
+          "signature": "1111111111111111111111111111111111111111111111111111111111111111",
+          "slot": 469733179,
+          "wireIdentitySha256": "b4dc8a860f5f97ac4ede67a1c3cfa2ab6984c4e5ba6eede070c80a90f51f203b",
+          "stableIdentity": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P:1111111111111111111111111111111111111111111111111111111111111111",
+          "result": {
+            "status": "unrecoverable",
+            "reason": "unverifiable-zero-signature"
+          },
+          "durable": true
+        }
+      ]
+    }
+  ],
+  "remotePayloadOriginDemonstrated": true,
+  "remoteServerInternalReason": "unknown; incoming envelopes do not identify the remote emission mechanism",
+  "applicationFallbackResponsibleForCapturedCases": false,
+  "captureLimits": {
+    "enabled": true,
+    "records": 60,
+    "bytes": 155137,
+    "dropped": 0,
+    "storage": {
+      "removedCoverage": {
+        "fromSlot": null,
+        "toSlot": null,
+        "unknown": false
+      },
+      "bytes": 155137,
+      "archives": 0,
+      "archiveBytes": 0,
+      "deletedFiles": 0,
+      "deletedBytes": 0,
+      "diskAvailableBytes": 59973222400,
+      "maxBytes": 16777216,
+      "maxArchives": 2
+    },
+    "scope": "Bounded first/every-1000th/invalid wire population and linked admission results; public incoming envelopes only. Sanitized captures expose byteExact and original SHA; no raw endpoint credentials."
+  },
+  "notifications": 16833,
+  "refusals": {
+    "unverifiable-zero-signature": 2,
+    "fork-or-provider-conflict": 2
+  },
+  "paperEntries": 0,
+  "paperExits": 0,
+  "artifacts": {
+    "docs/phase13/runtime/identity-probe/wire-identity.jsonl": "31ebcc9d39d160949a8d563c6af3f09271d1ee389ed6890ebe46c87125627168"
+  },
+  "scope": "Proves the supplied sampled bytes at the local WebSocket receive boundary, not an upstream chain transaction, provider culpability, or the historical cause of unavailable Phase12 envelopes. No signature is substituted. Non-exact/redacted/truncated captures are excluded from byte-exact proof.",
+  "liveTrading": false
+}

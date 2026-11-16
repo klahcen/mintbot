@@ -1,0 +1,1128 @@
+{
+  "kind": "A/A unchanged implementation, concurrent research load; no optimization claim",
+  "sourceHashesMatch": true,
+  "scenarios": [
+    {
+      "scenario": "durable-burst-200",
+      "adapters": {
+        "before": {
+          "throughputMedian": 736.9477661187959,
+          "throughputMin": 498.5858223915506,
+          "throughputMax": 791.2978224746125,
+          "offeredTotal": 600,
+          "completedTotal": 600,
+          "duplicatesTotal": 0,
+          "refusedTotal": 0,
+          "allIntegrityPass": true
+        },
+        "after": {
+          "throughputMedian": 756.2737549604113,
+          "throughputMin": 578.2076798133795,
+          "throughputMax": 777.7271814397834,
+          "offeredTotal": 600,
+          "completedTotal": 600,
+          "duplicatesTotal": 0,
+          "refusedTotal": 0,
+          "allIntegrityPass": true
+        }
+      },
+      "observedDifferencePct": 2.622436722129917
+    },
+    {
+      "scenario": "sustained-stream",
+      "adapters": {
+        "before": {
+          "throughputMedian": 2913.973541965287,
+          "throughputMin": 2913.3664682543535,
+          "throughputMax": 2936.883498410245,
+          "offeredTotal": 3000,
+          "completedTotal": 3000,
+          "duplicatesTotal": 0,
+          "refusedTotal": 0,
+          "allIntegrityPass": true
+        },
+        "after": {
+          "throughputMedian": 2970.4595226620213,
+          "throughputMin": 2519.5546542022307,
+          "throughputMax": 2982.0129096467927,
+          "offeredTotal": 3000,
+          "completedTotal": 3000,
+          "duplicatesTotal": 0,
+          "refusedTotal": 0,
+          "allIntegrityPass": true
+        }
+      },
+      "observedDifferencePct": 1.9384520786910775
+    },
+    {
+      "scenario": "concurrent-history-live",
+      "adapters": {
+        "before": {
+          "throughputMedian": 3462.26621779161,
+          "throughputMin": 2360.3210800554584,
+          "throughputMax": 4081.1491088230355,
+          "offeredTotal": 3300,
+          "completedTotal": 3300,
+          "duplicatesTotal": 0,
+          "refusedTotal": 0,
+          "allIntegrityPass": true
+        },
+        "after": {
+          "throughputMedian": 4018.7816958800736,
+          "throughputMin": 3823.8629047535833,
+          "throughputMax": 4300.3182278491995,
+          "offeredTotal": 3300,
+          "completedTotal": 3300,
+          "duplicatesTotal": 0,
+          "refusedTotal": 0,
+          "allIntegrityPass": true
+        }
+      },
+      "observedDifferencePct": 16.073734458335043
+    }
+  ],
+  "scheduling": [
+    {
+      "scenario": "sustained-stream",
+      "adapter": "after",
+      "elapsedMs": 355.65575999999965,
+      "mainRuntimeMs": 305.047255,
+      "mainRunqueueWaitMs": 0.045901,
+      "otherThreadsRuntimeMs": 261.007266,
+      "otherThreadsRunqueueWaitMs": 1.232625,
+      "sampleCount": 18,
+      "gc": {
+        "observedCount": 11,
+        "totalMs": 7.141285993158817
+      },
+      "json": {
+        "stringifyCalls": 4060,
+        "stringifyMs": 10.87125000000242,
+        "stringifyCharacters": 3080917,
+        "parseCalls": 0,
+        "parseMs": 0
+      },
+      "eventLoopDelayMs": {
+        "p95": 15.343615,
+        "p99": 35.848191,
+        "max": 35.848191
+      },
+      "processCpuMicroseconds": {
+        "user": 549329,
+        "system": 21944
+      },
+      "workerHistograms": {}
+    },
+    {
+      "scenario": "concurrent-history-live",
+      "adapter": "after",
+      "elapsedMs": 269.91326200000003,
+      "mainRuntimeMs": 267.708389,
+      "mainRunqueueWaitMs": 0.013853,
+      "otherThreadsRuntimeMs": 176.472219,
+      "otherThreadsRunqueueWaitMs": 0.783649,
+      "sampleCount": 14,
+      "gc": {
+        "observedCount": 13,
+        "totalMs": 7.6778949946165085
+      },
+      "json": {
+        "stringifyCalls": 4400,
+        "stringifyMs": 12.66196399996943,
+        "stringifyCharacters": 3398040,
+        "parseCalls": 0,
+        "parseMs": 0
+      },
+      "eventLoopDelayMs": {
+        "p95": 14.712831,
+        "p99": 23.773183,
+        "max": 23.773183
+      },
+      "processCpuMicroseconds": {
+        "user": 432534,
+        "system": 17942
+      },
+      "workerHistograms": {}
+    },
+    {
+      "scenario": "durable-burst-200",
+      "adapter": "before",
+      "elapsedMs": 194.5671640000005,
+      "mainRuntimeMs": 159.68103,
+      "mainRunqueueWaitMs": 0.049261,
+      "otherThreadsRuntimeMs": 114.136071,
+      "otherThreadsRunqueueWaitMs": 2.152705,
+      "sampleCount": 11,
+      "gc": {
+        "observedCount": 5,
+        "totalMs": 3.539033994078636
+      },
+      "json": {
+        "stringifyCalls": 1660,
+        "stringifyMs": 35.07310200000984,
+        "stringifyCharacters": 12393409,
+        "parseCalls": 0,
+        "parseMs": 0
+      },
+      "eventLoopDelayMs": {
+        "p95": 10.690559,
+        "p99": 16.973823,
+        "max": 16.973823
+      },
+      "processCpuMicroseconds": {
+        "user": 235817,
+        "system": 41584
+      },
+      "workerHistograms": {
+        "journal.worker_append_ms": {
+          "count": 23,
+          "samples": 23,
+          "p50": 0.3419699999999466,
+          "p95": 1.9176680000000488,
+          "p99": 2.473399999999856,
+          "max": 7.95884500000011
+        },
+        "journal.worker_fsync_ms": {
+          "count": 23,
+          "samples": 23,
+          "p50": 4.970094000000245,
+          "p95": 7.551324000000022,
+          "p99": 7.778231000000233,
+          "max": 8.236898999999994
+        },
+        "store.persistence_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 0.42162299999972674,
+          "p95": 1.388727999999901,
+          "p99": 2.728360000000066,
+          "max": 11.07609599999978
+        }
+      }
+    },
+    {
+      "scenario": "durable-burst-200",
+      "adapter": "after",
+      "elapsedMs": 274.921378,
+      "mainRuntimeMs": 237.196213,
+      "mainRunqueueWaitMs": 0.489915,
+      "otherThreadsRuntimeMs": 216.497166,
+      "otherThreadsRunqueueWaitMs": 2.586202,
+      "sampleCount": 15,
+      "gc": {
+        "observedCount": 5,
+        "totalMs": 4.496532998979092
+      },
+      "json": {
+        "stringifyCalls": 1600,
+        "stringifyMs": 55.76590399998349,
+        "stringifyCharacters": 12392832,
+        "parseCalls": 0,
+        "parseMs": 0
+      },
+      "eventLoopDelayMs": {
+        "p95": 10.657791,
+        "p99": 14.499839,
+        "max": 14.499839
+      },
+      "processCpuMicroseconds": {
+        "user": 380457,
+        "system": 78353
+      },
+      "workerHistograms": {
+        "journal.worker_append_ms": {
+          "count": 37,
+          "samples": 37,
+          "p50": 0.23702900000080263,
+          "p95": 2.623237999999219,
+          "p99": 4.62799300000006,
+          "max": 8.562387999999373
+        },
+        "journal.worker_fsync_ms": {
+          "count": 37,
+          "samples": 37,
+          "p50": 4.136822999999822,
+          "p95": 6.604064000000108,
+          "p99": 6.659071999999469,
+          "max": 6.944362999999612
+        },
+        "store.persistence_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 0.7684929999995802,
+          "p95": 1.5044320000006337,
+          "p99": 2.532546000000366,
+          "max": 15.262988000000405
+        }
+      }
+    },
+    {
+      "scenario": "sustained-stream",
+      "adapter": "before",
+      "elapsedMs": 394.6237579999997,
+      "mainRuntimeMs": 386.544522,
+      "mainRunqueueWaitMs": 4.832162,
+      "otherThreadsRuntimeMs": 339.805481,
+      "otherThreadsRunqueueWaitMs": 0.66594,
+      "sampleCount": 18,
+      "gc": {
+        "observedCount": 12,
+        "totalMs": 10.709545001387596
+      },
+      "json": {
+        "stringifyCalls": 4000,
+        "stringifyMs": 16.511139000018375,
+        "stringifyCharacters": 3080340,
+        "parseCalls": 0,
+        "parseMs": 0
+      },
+      "eventLoopDelayMs": {
+        "p95": 17.154047,
+        "p99": 25.640959,
+        "max": 25.640959
+      },
+      "processCpuMicroseconds": {
+        "user": 699452,
+        "system": 29596
+      },
+      "workerHistograms": {}
+    },
+    {
+      "scenario": "concurrent-history-live",
+      "adapter": "before",
+      "elapsedMs": 376.1823770000001,
+      "mainRuntimeMs": 372.764886,
+      "mainRunqueueWaitMs": 0.38798,
+      "otherThreadsRuntimeMs": 240.221806,
+      "otherThreadsRunqueueWaitMs": 1.691092,
+      "sampleCount": 18,
+      "gc": {
+        "observedCount": 13,
+        "totalMs": 12.047214984893799
+      },
+      "json": {
+        "stringifyCalls": 4400,
+        "stringifyMs": 18.624798999988343,
+        "stringifyCharacters": 3398040,
+        "parseCalls": 0,
+        "parseMs": 0
+      },
+      "eventLoopDelayMs": {
+        "p95": 20.398079,
+        "p99": 28.688383,
+        "max": 28.688383
+      },
+      "processCpuMicroseconds": {
+        "user": 581492,
+        "system": 34299
+      },
+      "workerHistograms": {}
+    }
+  ],
+  "cpuProfiles": [
+    {
+      "file": "docs/phase8/cpu-profile-final/CPU.20261110.165806.670801.0.001.cpuprofile",
+      "sha256": "c0eb95c2b3f2f2f86b2e65d83f20df1ef534f84156749a84461bb041095b8d0d",
+      "sampleCount": 6681,
+      "observedSampleTimeMs": 7232.918,
+      "topSelfSamples": [
+        {
+          "function": "pow2",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@noble/curves/abstract/modular.js",
+          "sampleTimeMs": 2094.164
+        },
+        {
+          "function": "(idle)",
+          "url": "",
+          "sampleTimeMs": 1584.236
+        },
+        {
+          "function": "decodeUnsafe",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/base-x/src/esm/index.js",
+          "sampleTimeMs": 175.549
+        },
+        {
+          "function": "JSON.stringify",
+          "url": "file:///home/lkazaz/Desktop/mintbot/scripts/phase8-performance-benchmark.ts",
+          "sampleTimeMs": 160.13
+        },
+        {
+          "function": "ed25519_pow_2_252_3",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@noble/curves/ed25519.js",
+          "sampleTimeMs": 157.056
+        },
+        {
+          "function": "fromBytes",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@noble/curves/abstract/edwards.js",
+          "sampleTimeMs": 157.036
+        },
+        {
+          "function": "inst._zod.parse",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/zod/v4/core/schemas.js",
+          "sampleTimeMs": 145.418
+        },
+        {
+          "function": "",
+          "url": "",
+          "sampleTimeMs": 121.815
+        },
+        {
+          "function": "inst._zod.run",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/zod/v4/core/schemas.js",
+          "sampleTimeMs": 121.508
+        },
+        {
+          "function": "(garbage collector)",
+          "url": "",
+          "sampleTimeMs": 113.766
+        },
+        {
+          "function": "",
+          "url": "file:///tmp/mintbot-phase8-before/src/store.ts",
+          "sampleTimeMs": 107.845
+        },
+        {
+          "function": "decodeUnsafe",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@solana/web3.js/node_modules/base-x/src/index.js",
+          "sampleTimeMs": 101.462
+        },
+        {
+          "function": "createProgramAddressSync",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@solana/web3.js/lib/index.cjs.js",
+          "sampleTimeMs": 88.707
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/src/store.ts",
+          "sampleTimeMs": 85.481
+        },
+        {
+          "function": "(program)",
+          "url": "",
+          "sampleTimeMs": 79.071
+        },
+        {
+          "function": "mod",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@noble/curves/abstract/modular.js",
+          "sampleTimeMs": 71.59
+        },
+        {
+          "function": "encode",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@solana/web3.js/node_modules/base-x/src/index.js",
+          "sampleTimeMs": 71.167
+        },
+        {
+          "function": "makeAsyncRequest",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 62.694
+        },
+        {
+          "function": "compileSourceTextModule",
+          "url": "node:internal/modules/esm/utils",
+          "sampleTimeMs": 52.624
+        },
+        {
+          "function": "uvRatio",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@noble/curves/ed25519.js",
+          "sampleTimeMs": 51.231
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/scripts/phase8-performance-benchmark.ts",
+          "sampleTimeMs": 46.29
+        },
+        {
+          "function": "runChecks",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/zod/v4/core/schemas.js",
+          "sampleTimeMs": 42.925
+        },
+        {
+          "function": "plainData",
+          "url": "file:///tmp/mintbot-phase8-before/src/store.ts",
+          "sampleTimeMs": 41.818
+        },
+        {
+          "function": "makeSyncRequest",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 41.558
+        },
+        {
+          "function": "adjustGauge",
+          "url": "file:///home/lkazaz/Desktop/mintbot/src/telemetry.ts",
+          "sampleTimeMs": 34.221
+        }
+      ],
+      "allFsyncSelfSampleTimeMs": 0.0
+    },
+    {
+      "file": "docs/phase8/cpu-profile-final/CPU.20261110.165806.670801.1.002.cpuprofile",
+      "sha256": "3662ee61fc09880ffd3d56914830a60d5a77accec7dd008154daa31b1cb0f7b5",
+      "sampleCount": 6517,
+      "observedSampleTimeMs": 7150.919,
+      "topSelfSamples": [
+        {
+          "function": "(idle)",
+          "url": "",
+          "sampleTimeMs": 6797.715
+        },
+        {
+          "function": "parse",
+          "url": "",
+          "sampleTimeMs": 27.591
+        },
+        {
+          "function": "(program)",
+          "url": "",
+          "sampleTimeMs": 24.693
+        },
+        {
+          "function": "compileForInternalLoader",
+          "url": "node:internal/bootstrap/realm",
+          "sampleTimeMs": 16.072
+        },
+        {
+          "function": "handleMessage",
+          "url": "node:internal/modules/esm/worker",
+          "sampleTimeMs": 13.798
+        },
+        {
+          "function": "ObjectDefineProperty.__proto__",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 12.736
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/register-nyXW-TH3.mjs",
+          "sampleTimeMs": 12.655
+        },
+        {
+          "function": "(garbage collector)",
+          "url": "",
+          "sampleTimeMs": 10.58
+        },
+        {
+          "function": "detectModuleFormat",
+          "url": "node:internal/modules/esm/get_format",
+          "sampleTimeMs": 9.608
+        },
+        {
+          "function": "receiveMessageOnPort",
+          "url": "node:internal/worker/io",
+          "sampleTimeMs": 9.557
+        },
+        {
+          "function": "internalModuleStat",
+          "url": "",
+          "sampleTimeMs": 9.534
+        },
+        {
+          "function": "URL",
+          "url": "node:internal/url",
+          "sampleTimeMs": 8.503
+        },
+        {
+          "function": "wasm-function[20]",
+          "url": "wasm://wasm/f757504a",
+          "sampleTimeMs": 7.425
+        },
+        {
+          "function": "set natives",
+          "url": "",
+          "sampleTimeMs": 6.468
+        },
+        {
+          "function": "c",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/lexer-CanA6ArK.mjs",
+          "sampleTimeMs": 6.328
+        },
+        {
+          "function": "parseCJS",
+          "url": "node:internal/deps/cjs-module-lexer/lexer",
+          "sampleTimeMs": 5.331
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/require-CBjy4Foe.mjs",
+          "sampleTimeMs": 5.299
+        },
+        {
+          "function": "compileSourceTextModule",
+          "url": "node:internal/modules/esm/utils",
+          "sampleTimeMs": 5.288
+        },
+        {
+          "function": "finalizeResolution",
+          "url": "node:internal/modules/esm/resolve",
+          "sampleTimeMs": 5.248
+        },
+        {
+          "function": "getPathFromURLPosix",
+          "url": "node:internal/url",
+          "sampleTimeMs": 4.347
+        },
+        {
+          "function": "resolve",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 4.324
+        },
+        {
+          "function": "read",
+          "url": "node:internal/modules/package_json_reader",
+          "sampleTimeMs": 4.293
+        },
+        {
+          "function": "realpathSync",
+          "url": "node:fs",
+          "sampleTimeMs": 4.269
+        },
+        {
+          "function": "setOwnProperty",
+          "url": "node:internal/util",
+          "sampleTimeMs": 4.26
+        },
+        {
+          "function": "normalizeString",
+          "url": "node:path",
+          "sampleTimeMs": 4.241
+        }
+      ],
+      "allFsyncSelfSampleTimeMs": 0.0
+    },
+    {
+      "file": "docs/phase8/cpu-profile-final/CPU.20261110.165810.670801.2.003.cpuprofile",
+      "sha256": "b08eeea89f83b62bd3b8f77ef271c48acaaef76cbaf7fd8d04d51e2a36f6100c",
+      "sampleCount": 685,
+      "observedSampleTimeMs": 809.423,
+      "topSelfSamples": [
+        {
+          "function": "(idle)",
+          "url": "",
+          "sampleTimeMs": 154.962
+        },
+        {
+          "function": "fsync",
+          "url": "",
+          "sampleTimeMs": 125.556
+        },
+        {
+          "function": "makeAsyncRequest",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 57.497
+        },
+        {
+          "function": "makeSyncRequest",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 47.152
+        },
+        {
+          "function": "compileSourceTextModule",
+          "url": "node:internal/modules/esm/utils",
+          "sampleTimeMs": 46.599
+        },
+        {
+          "function": "waitForWorker",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 31.097
+        },
+        {
+          "function": "wrapSafe",
+          "url": "node:internal/modules/cjs/loader",
+          "sampleTimeMs": 29.769
+        },
+        {
+          "function": "(garbage collector)",
+          "url": "",
+          "sampleTimeMs": 22.231
+        },
+        {
+          "function": "(program)",
+          "url": "",
+          "sampleTimeMs": 22.079
+        },
+        {
+          "function": "parseCJS",
+          "url": "node:internal/deps/cjs-module-lexer/lexer",
+          "sampleTimeMs": 19.317
+        },
+        {
+          "function": "compileForInternalLoader",
+          "url": "node:internal/bootstrap/realm",
+          "sampleTimeMs": 14.95
+        },
+        {
+          "function": "",
+          "url": "node:internal/modules/cjs/loader",
+          "sampleTimeMs": 10.61
+        },
+        {
+          "function": "parseSource",
+          "url": "node:internal/deps/cjs-module-lexer/lexer",
+          "sampleTimeMs": 10.318
+        },
+        {
+          "function": "setOwnProperty",
+          "url": "node:internal/util",
+          "sampleTimeMs": 8.531
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/require-CBjy4Foe.mjs",
+          "sampleTimeMs": 7.434
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/register-B1c7OH6V.cjs",
+          "sampleTimeMs": 6.376
+        },
+        {
+          "function": "receiveMessageOnPort",
+          "url": "",
+          "sampleTimeMs": 6.372
+        },
+        {
+          "function": "_link",
+          "url": "node:internal/modules/esm/module_job",
+          "sampleTimeMs": 5.309
+        },
+        {
+          "function": "lineLengths",
+          "url": "node:internal/source_map/source_map_cache",
+          "sampleTimeMs": 5.307
+        },
+        {
+          "function": "receiveMessageOnPort",
+          "url": "node:internal/worker/io",
+          "sampleTimeMs": 5.288
+        },
+        {
+          "function": "R",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/lexer-CGfpMDSb.cjs",
+          "sampleTimeMs": 4.271
+        },
+        {
+          "function": "read",
+          "url": "node:internal/modules/package_json_reader",
+          "sampleTimeMs": 4.26
+        },
+        {
+          "function": "getOptions",
+          "url": "node:internal/fs/utils",
+          "sampleTimeMs": 4.203
+        },
+        {
+          "function": "normalizeString",
+          "url": "node:path",
+          "sampleTimeMs": 3.834
+        },
+        {
+          "function": "readFileSync",
+          "url": "node:fs",
+          "sampleTimeMs": 3.68
+        }
+      ],
+      "allFsyncSelfSampleTimeMs": 125.556
+    },
+    {
+      "file": "docs/phase8/cpu-profile-final/CPU.20261110.165810.670801.3.004.cpuprofile",
+      "sha256": "f0ee5bea33514ba9879a6140150dd93c09ee06f19d6625305a25e29094ad4a8b",
+      "sampleCount": 639,
+      "observedSampleTimeMs": 708.247,
+      "topSelfSamples": [
+        {
+          "function": "(idle)",
+          "url": "",
+          "sampleTimeMs": 378.854
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/register-nyXW-TH3.mjs",
+          "sampleTimeMs": 22.636
+        },
+        {
+          "function": "URL",
+          "url": "node:internal/url",
+          "sampleTimeMs": 15.993
+        },
+        {
+          "function": "parse",
+          "url": "",
+          "sampleTimeMs": 12.886
+        },
+        {
+          "function": "compileForInternalLoader",
+          "url": "node:internal/bootstrap/realm",
+          "sampleTimeMs": 11.89
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/require-CBjy4Foe.mjs",
+          "sampleTimeMs": 11.737
+        },
+        {
+          "function": "(garbage collector)",
+          "url": "",
+          "sampleTimeMs": 11.106
+        },
+        {
+          "function": "ObjectDefineProperty.__proto__",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 10.638
+        },
+        {
+          "function": "detectModuleFormat",
+          "url": "node:internal/modules/esm/get_format",
+          "sampleTimeMs": 10.596
+        },
+        {
+          "function": "getPathFromURLPosix",
+          "url": "node:internal/url",
+          "sampleTimeMs": 10.556
+        },
+        {
+          "function": "(program)",
+          "url": "",
+          "sampleTimeMs": 10.02
+        },
+        {
+          "function": "handleMessage",
+          "url": "node:internal/modules/esm/worker",
+          "sampleTimeMs": 9.561
+        },
+        {
+          "function": "receiveMessageOnPort",
+          "url": "node:internal/worker/io",
+          "sampleTimeMs": 9.511
+        },
+        {
+          "function": "c",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/lexer-CanA6ArK.mjs",
+          "sampleTimeMs": 5.358
+        },
+        {
+          "function": "resolve",
+          "url": "node:path",
+          "sampleTimeMs": 5.32
+        },
+        {
+          "function": "realpathSync",
+          "url": "node:fs",
+          "sampleTimeMs": 5.301
+        },
+        {
+          "function": "receiveMessageOnPort",
+          "url": "",
+          "sampleTimeMs": 5.294
+        },
+        {
+          "function": "N",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/lexer-CanA6ArK.mjs",
+          "sampleTimeMs": 5.29
+        },
+        {
+          "function": "compileSourceTextModule",
+          "url": "node:internal/modules/esm/utils",
+          "sampleTimeMs": 4.303
+        },
+        {
+          "function": "parseSource",
+          "url": "node:internal/deps/cjs-module-lexer/lexer",
+          "sampleTimeMs": 4.29
+        },
+        {
+          "function": "update",
+          "url": "",
+          "sampleTimeMs": 4.262
+        },
+        {
+          "function": "finalizeResolution",
+          "url": "node:internal/modules/esm/resolve",
+          "sampleTimeMs": 4.23
+        },
+        {
+          "function": "readFileHandle",
+          "url": "node:internal/fs/promises",
+          "sampleTimeMs": 4.23
+        },
+        {
+          "function": "fstat",
+          "url": "",
+          "sampleTimeMs": 4.219
+        },
+        {
+          "function": "setOwnProperty",
+          "url": "node:internal/util",
+          "sampleTimeMs": 4.212
+        }
+      ],
+      "allFsyncSelfSampleTimeMs": 0.0
+    },
+    {
+      "file": "docs/phase8/cpu-profile-final/CPU.20261110.165810.670801.4.005.cpuprofile",
+      "sha256": "377e99f0f5ec14b08566a47b67efdd5a08529182dd943fac06f0da173161283c",
+      "sampleCount": 761,
+      "observedSampleTimeMs": 906.82,
+      "topSelfSamples": [
+        {
+          "function": "fsync",
+          "url": "",
+          "sampleTimeMs": 181.807
+        },
+        {
+          "function": "(idle)",
+          "url": "",
+          "sampleTimeMs": 163.222
+        },
+        {
+          "function": "makeAsyncRequest",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 72.964
+        },
+        {
+          "function": "makeSyncRequest",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 39.603
+        },
+        {
+          "function": "compileSourceTextModule",
+          "url": "node:internal/modules/esm/utils",
+          "sampleTimeMs": 39.178
+        },
+        {
+          "function": "(program)",
+          "url": "",
+          "sampleTimeMs": 38.495
+        },
+        {
+          "function": "waitForWorker",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 30.953
+        },
+        {
+          "function": "wrapSafe",
+          "url": "node:internal/modules/cjs/loader",
+          "sampleTimeMs": 29.849
+        },
+        {
+          "function": "(garbage collector)",
+          "url": "",
+          "sampleTimeMs": 22.488
+        },
+        {
+          "function": "parseSource",
+          "url": "node:internal/deps/cjs-module-lexer/lexer",
+          "sampleTimeMs": 14.861
+        },
+        {
+          "function": "parseCJS",
+          "url": "node:internal/deps/cjs-module-lexer/lexer",
+          "sampleTimeMs": 14.377
+        },
+        {
+          "function": "",
+          "url": "node:internal/modules/cjs/loader",
+          "sampleTimeMs": 12.738
+        },
+        {
+          "function": "receiveMessageOnPort",
+          "url": "",
+          "sampleTimeMs": 11.748
+        },
+        {
+          "function": "compileForInternalLoader",
+          "url": "node:internal/bootstrap/realm",
+          "sampleTimeMs": 8.69
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/register-B1c7OH6V.cjs",
+          "sampleTimeMs": 8.632
+        },
+        {
+          "function": "R",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/lexer-CGfpMDSb.cjs",
+          "sampleTimeMs": 6.32
+        },
+        {
+          "function": "wasm-function[20]",
+          "url": "wasm://wasm/f757504a",
+          "sampleTimeMs": 5.368
+        },
+        {
+          "function": "maybeCacheSourceMap",
+          "url": "node:internal/source_map/source_map_cache",
+          "sampleTimeMs": 5.32
+        },
+        {
+          "function": "readFileUtf8",
+          "url": "",
+          "sampleTimeMs": 5.301
+        },
+        {
+          "function": "readFileSync",
+          "url": "node:fs",
+          "sampleTimeMs": 4.288
+        },
+        {
+          "function": "append",
+          "url": "file:///home/lkazaz/Desktop/mintbot/src/event-journal.ts?tsx-namespace=b938a61b-7b35-4f0d-877d-a54622bb5681",
+          "sampleTimeMs": 4.285
+        },
+        {
+          "function": "read",
+          "url": "node:internal/modules/package_json_reader",
+          "sampleTimeMs": 4.262
+        },
+        {
+          "function": "inst._zod.parse",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/zod/v4/core/schemas.js?tsx-namespace=b938a61b-7b35-4f0d-877d-a54622bb5681",
+          "sampleTimeMs": 4.237
+        },
+        {
+          "function": "writeBuffer",
+          "url": "",
+          "sampleTimeMs": 3.241
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/@solana/web3.js/lib/index.cjs.js",
+          "sampleTimeMs": 3.219
+        }
+      ],
+      "allFsyncSelfSampleTimeMs": 181.807
+    },
+    {
+      "file": "docs/phase8/cpu-profile-final/CPU.20261110.165811.670801.5.006.cpuprofile",
+      "sha256": "1ed1f4a2c5d3d416731112f08436464841e5d21ac579c15dbbf5b1d82ae4bac7",
+      "sampleCount": 741,
+      "observedSampleTimeMs": 809.505,
+      "topSelfSamples": [
+        {
+          "function": "(idle)",
+          "url": "",
+          "sampleTimeMs": 480.035
+        },
+        {
+          "function": "URL",
+          "url": "node:internal/url",
+          "sampleTimeMs": 20.125
+        },
+        {
+          "function": "parse",
+          "url": "",
+          "sampleTimeMs": 16.933
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/register-nyXW-TH3.mjs",
+          "sampleTimeMs": 14.921
+        },
+        {
+          "function": "handleMessage",
+          "url": "node:internal/modules/esm/worker",
+          "sampleTimeMs": 14.828
+        },
+        {
+          "function": "ObjectDefineProperty.__proto__",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 12.702
+        },
+        {
+          "function": "getPathFromURLPosix",
+          "url": "node:internal/url",
+          "sampleTimeMs": 11.664
+        },
+        {
+          "function": "compileForInternalLoader",
+          "url": "node:internal/bootstrap/realm",
+          "sampleTimeMs": 10.742
+        },
+        {
+          "function": "receiveMessageOnPort",
+          "url": "node:internal/worker/io",
+          "sampleTimeMs": 10.557
+        },
+        {
+          "function": "(program)",
+          "url": "",
+          "sampleTimeMs": 9.854
+        },
+        {
+          "function": "detectModuleFormat",
+          "url": "node:internal/modules/esm/get_format",
+          "sampleTimeMs": 9.59
+        },
+        {
+          "function": "resolve",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 8.517
+        },
+        {
+          "function": "nextHookFactory",
+          "url": "node:internal/modules/esm/hooks",
+          "sampleTimeMs": 6.357
+        },
+        {
+          "function": "realpathSync",
+          "url": "node:fs",
+          "sampleTimeMs": 6.334
+        },
+        {
+          "function": "internalModuleStat",
+          "url": "",
+          "sampleTimeMs": 5.33
+        },
+        {
+          "function": "compileSourceTextModule",
+          "url": "node:internal/modules/esm/utils",
+          "sampleTimeMs": 5.329
+        },
+        {
+          "function": "(garbage collector)",
+          "url": "",
+          "sampleTimeMs": 4.236
+        },
+        {
+          "function": "",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/require-CBjy4Foe.mjs",
+          "sampleTimeMs": 4.225
+        },
+        {
+          "function": "wasm-function[20]",
+          "url": "wasm://wasm/f757504a",
+          "sampleTimeMs": 4.225
+        },
+        {
+          "function": "set natives",
+          "url": "",
+          "sampleTimeMs": 4.225
+        },
+        {
+          "function": "c",
+          "url": "file:///home/lkazaz/Desktop/mintbot/node_modules/tsx/dist/lexer-CanA6ArK.mjs",
+          "sampleTimeMs": 4.221
+        },
+        {
+          "function": "setOwnProperty",
+          "url": "node:internal/util",
+          "sampleTimeMs": 4.199
+        },
+        {
+          "function": "checkForMessages",
+          "url": "node:internal/modules/esm/worker",
+          "sampleTimeMs": 3.198
+        },
+        {
+          "function": "defaultResolve",
+          "url": "node:internal/modules/esm/resolve",
+          "sampleTimeMs": 3.188
+        },
+        {
+          "function": "#ensureSearchParamsUpdated",
+          "url": "node:internal/url",
+          "sampleTimeMs": 3.186
+        }
+      ],
+      "allFsyncSelfSampleTimeMs": 0.0
+    }
+  ]
+}

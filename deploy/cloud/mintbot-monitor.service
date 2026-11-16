@@ -1,0 +1,8 @@
+[Unit]
+Description=Mintbot operator health and safety alerts
+After=docker.service
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/mintbot
+ExecStart=/usr/bin/python3 /opt/mintbot/scripts/cloud/manage.py monitor
+UMask=0077

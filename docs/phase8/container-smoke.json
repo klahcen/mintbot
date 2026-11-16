@@ -1,0 +1,33 @@
+{
+  "scope": "Current npm-built artifacts mounted read-only into existing Node22 image; no application image rebuilt, no external network, private tmpfs state. Not full Compose/production deployment.",
+  "image": "node:22-bookworm-slim",
+  "checks": {
+    "health": {
+      "ok": true,
+      "mode": "paper"
+    },
+    "unauthorized": 401,
+    "authorized": 200,
+    "dashboard": 200,
+    "researchUnauthorized": 401,
+    "researchHttp": 200,
+    "researchCache": "no-store",
+    "researchStatus": "stale",
+    "researchLive": false,
+    "researchRunStatus": "stopped",
+    "researchIntents": 3,
+    "sqlAssets": [
+      true,
+      true
+    ],
+    "liveModeRejected": true
+  },
+  "liveTrading": false,
+  "containerIdentity": "sha256:c469fbffcbb0086ddfb92598192d3e09eab25f2d81b9750a00f77f0910fed744",
+  "serverLogs": "{\"level\":30,\"time\":1794360429553,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"msg\":\"Server listening at http://127.0.0.1:3001\"}\n{\"level\":30,\"time\":1794360429660,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-1\",\"req\":{\"method\":\"GET\",\"url\":\"/health\",\"host\":\"127.0.0.1:3001\",\"remoteAddress\":\"127.0.0.1\",\"remotePort\":46992},\"msg\":\"incoming request\"}\n{\"level\":30,\"time\":1794360429671,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-1\",\"res\":{\"statusCode\":200},\"responseTime\":9.506215999999995,\"msg\":\"request completed\"}\n{\"level\":30,\"time\":1794360429685,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-2\",\"req\":{\"method\":\"GET\",\"url\":\"/health\",\"host\":\"127.0.0.1:3001\",\"remoteAddress\":\"127.0.0.1\",\"remotePort\":47006},\"msg\":\"incoming request\"}\n{\"level\":30,\"time\":1794360429686,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-2\",\"res\":{\"statusCode\":200},\"responseTime\":0.8512560000000349,\"msg\":\"request completed\"}\n{\"level\":30,\"time\":1794360429695,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-3\",\"req\":{\"method\":\"GET\",\"url\":\"/api/state\",\"host\":\"127.0.0.1:3001\",\"remoteAddress\":\"127.0.0.1\",\"remotePort\":46992},\"msg\":\"incoming request\"}\n{\"level\":30,\"time\":1794360429696,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-3\",\"res\":{\"statusCode\":401},\"responseTime\":0.9964310000000296,\"msg\":\"request completed\"}\n{\"level\":30,\"time\":1794360429700,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-4\",\"req\":{\"method\":\"GET\",\"url\":\"/api/state\",\"host\":\"127.0.0.1:3001\",\"remoteAddress\":\"127.0.0.1\",\"remotePort\":47006},\"msg\":\"incoming request\"}\n{\"level\":30,\"time\":1794360429702,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-4\",\"res\":{\"statusCode\":200},\"responseTime\":1.1719869999999446,\"msg\":\"request completed\"}\n{\"level\":30,\"time\":1794360429705,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-5\",\"req\":{\"method\":\"GET\",\"url\":\"/\",\"host\":\"127.0.0.1:3001\",\"remoteAddress\":\"127.0.0.1\",\"remotePort\":46992},\"msg\":\"incoming request\"}\n{\"level\":30,\"time\":1794360429708,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-5\",\"res\":{\"statusCode\":200},\"responseTime\":2.187185999999997,\"msg\":\"request completed\"}\n{\"level\":30,\"time\":1794360429711,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-6\",\"req\":{\"method\":\"GET\",\"url\":\"/api/research/status\",\"host\":\"127.0.0.1:3001\",\"remoteAddress\":\"127.0.0.1\",\"remotePort\":47006},\"msg\":\"incoming request\"}\n{\"level\":30,\"time\":1794360429712,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-6\",\"res\":{\"statusCode\":401},\"responseTime\":0.7219599999999673,\"msg\":\"request completed\"}\n{\"level\":30,\"time\":1794360429713,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-7\",\"req\":{\"method\":\"GET\",\"url\":\"/api/research/status\",\"host\":\"127.0.0.1:3001\",\"remoteAddress\":\"127.0.0.1\",\"remotePort\":46992},\"msg\":\"incoming request\"}\n{\"level\":30,\"time\":1794360429731,\"pid\":1,\"hostname\":\"c0ebeefcccea\",\"reqId\":\"req-7\",\"res\":{\"statusCode\":200},\"responseTime\":17.350324,\"msg\":\"request completed\"}\n",
+  "liveModeExitCode": 1,
+  "sourceBuildAssets": {
+    "dist/src/simulation/intent-schema.sql": "da59731a50d80809301a30256f06c286e9a9a13f6a2d65c41d8f0b38134bf96e",
+    "dist/src/simulation/intent-migration-007.sql": "c3152cf1480950122eec208dd559b81801ceb88b5346c0f69e976a97e0fa2767"
+  }
+}

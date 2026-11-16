@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-11-14T23:43:59.189Z",
+  "cluster": "/home/lkazaz/.local/state/mintbot-phase7-postgres",
+  "persistent": true,
+  "reusedExistingDeployment": true,
+  "retainedAfterStop": true,
+  "settings": {
+    "version": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+    "fsync": "on",
+    "synchronous_commit": "on",
+    "full_page_writes": "on",
+    "listen_addresses": ""
+  },
+  "run": "run-1794699834216-421419",
+  "events": [
+    {
+      "case": "multiprocess",
+      "processes": 4,
+      "reservations": 1,
+      "owners": 1,
+      "id": "ef0904076f522a9834ad6fed142a9ea991e052cc6b95e9a17754fd8cf3bb480c",
+      "fence": "1"
+    },
+    {
+      "case": "audit-immutability",
+      "blocked": [
+        "update",
+        "delete",
+        "truncate",
+        "intent-delete",
+        "unfenced-owner"
+      ]
+    },
+    {
+      "case": "runtime-role",
+      "auditWrites": "trigger-only",
+      "ddl": "denied",
+      "migrationWrites": "denied"
+    },
+    {
+      "case": "immediate-restart",
+      "uncertainFence": "2",
+      "retainedReservations": true,
+      "manualCancellation": true
+    },
+    {
+      "case": "migration-checksum",
+      "tamperingRejected": true
+    },
+    {
+      "case": "backup-restore",
+      "sha256": "fa78077e21437837fc2e8fec2beff133b52a4e25cf19fbb30503744bcc55741b",
+      "bytes": 21468,
+      "restoredIdentity": "ef0904076f522a9834ad6fed142a9ea991e052cc6b95e9a17754fd8cf3bb480c",
+      "auditRows": 6
+    },
+    {
+      "case": "synchronous-commit-ack",
+      "samples": 50,
+      "unit": "ms",
+      "p50": 1.6077210000003106,
+      "p95": 4.860778000000209,
+      "p99": 6.883114000000205,
+      "max": 7.937504999999874,
+      "raw": [
+        3.9831089999997857,
+        2.021193999999923,
+        1.8362699999997858,
+        2.2553210000005492,
+        1.2784490000003643,
+        1.3637440000002243,
+        3.4352410000001328,
+        2.835794000000533,
+        3.050279000000046,
+        1.307292000000416,
+        1.0406370000000607,
+        1.0312730000005104,
+        1.0358519999999771,
+        1.6856809999999314,
+        1.0813660000003438,
+        6.883114000000205,
+        1.2661650000000009,
+        1.5248630000005505,
+        5.056773000000248,
+        1.2508229999994,
+        2.3260159999999814,
+        2.5384109999995417,
+        2.302497000000585,
+        1.6077210000003106,
+        3.386080999999649,
+        7.937504999999874,
+        1.2065419999998994,
+        1.364346000000296,
+        1.4170670000003156,
+        3.8348500000001877,
+        1.1789069999995263,
+        1.2399569999997766,
+        4.860778000000209,
+        3.5920969999997396,
+        2.9356470000002446,
+        1.2112130000004981,
+        1.1993560000000798,
+        1.2380999999995765,
+        2.0192779999997583,
+        1.8050920000005135,
+        3.354019000000335,
+        2.5779230000007374,
+        4.4281519999995,
+        1.134410000000571,
+        1.219185999999354,
+        1.7488530000000537,
+        1.3126250000004802,
+        1.1113930000001346,
+        1.169764999999643,
+        1.389074000000619
+      ],
+      "scope": "single-client same-host persistent deployment; UPDATE plus WAL; COMMIT acknowledgement only; no production latency claim"
+    }
+  ],
+  "liveAuthorized": false,
+  "submitted": false
+}

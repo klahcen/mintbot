@@ -1,0 +1,1234 @@
+{
+  "generatedAt": "2026-11-06T17:36:11.586Z",
+  "node": "v20.19.5",
+  "cpu": "11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz",
+  "rows": [
+    {
+      "label": "before",
+      "run": 0,
+      "durable": false,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 1072.1754340000002,
+      "reviewsPerSecond": 93.26831862480444,
+      "cpuMicroseconds": {
+        "user": 1203675,
+        "system": 8359
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 1221.5856840000001,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.005174000000124579,
+            "p95": 0.021183999999948355,
+            "p99": 0.15533799999991516,
+            "max": 0.1746410000000651
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 9.76337999999987,
+            "p95": 12.651731000000154,
+            "p99": 13.564228000000185,
+            "max": 13.569085000000086
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.06763599999999315,
+            "p95": 0.13449900000000525,
+            "p99": 0.18869000000006508,
+            "max": 0.4269730000000891
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.009459000000106244,
+            "p95": 0.02500699999995959,
+            "p99": 0.04006699999990815,
+            "max": 0.06841500000007272
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01791600000001381,
+            "p95": 0.04150700000013785,
+            "p99": 0.19153299999993578,
+            "max": 0.2077239999999847
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.020858999999973094,
+            "p95": 0.05145799999991141,
+            "p99": 0.1988929999999982,
+            "max": 0.24441999999999098
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.4368109999998069,
+            "p95": 1.7124810000000252,
+            "p99": 2.474384999999984,
+            "max": 3.220841999999948
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 10.923367000000098,
+            "p95": 13.732418000000052,
+            "p99": 14.360370999999986,
+            "max": 14.425241000000142
+          }
+        }
+      }
+    },
+    {
+      "label": "after",
+      "run": 0,
+      "durable": false,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 188.14083100000016,
+      "reviewsPerSecond": 531.5167338662383,
+      "cpuMicroseconds": {
+        "user": 212217,
+        "system": 7786
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 264.7626300000002,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.003658999999970547,
+            "p95": 0.008521000000200729,
+            "p99": 0.017323000000033062,
+            "max": 0.09160299999985
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.3265929999997752,
+            "p95": 0.7273509999999987,
+            "p99": 1.2269440000000031,
+            "max": 1.9703230000000076
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.16836999999986801,
+            "p95": 0.3091160000003583,
+            "p99": 0.4253889999999956,
+            "max": 0.4652360000000044
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.005911000000196509,
+            "p95": 0.015235999999731575,
+            "p99": 0.05444600000009814,
+            "max": 0.07621400000016365
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01529000000027736,
+            "p95": 0.0389669999999569,
+            "p99": 0.16607599999997547,
+            "max": 0.2106140000000778
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01947599999994054,
+            "p95": 0.04480999999987034,
+            "p99": 0.21203800000012052,
+            "max": 0.2208149999996749
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.6109919999998965,
+            "p95": 1.503711999999723,
+            "p99": 2.6670639999997547,
+            "max": 15.484140000000025
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.4725329999996575,
+            "p95": 3.0920750000000226,
+            "p99": 4.086127000000033,
+            "max": 17.0046940000002
+          }
+        }
+      }
+    },
+    {
+      "label": "before",
+      "run": 0,
+      "durable": true,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 2343.8550999999998,
+      "reviewsPerSecond": 42.66475346534861,
+      "cpuMicroseconds": {
+        "user": 1869227,
+        "system": 178606
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 2355.6740680000003,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.005730999999741471,
+            "p95": 0.010687999999845488,
+            "p99": 0.02962100000013379,
+            "max": 0.03903700000000754
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 9.781352999999854,
+            "p95": 13.312026000000515,
+            "p99": 17.522561000000223,
+            "max": 28.126358999999866
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07250400000020818,
+            "p95": 0.12437599999975646,
+            "p99": 0.16764399999965462,
+            "max": 0.3021929999999884
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.010575999999673513,
+            "p95": 0.01602999999977328,
+            "p99": 0.03963800000019546,
+            "max": 0.05173400000012407
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.017925000000104774,
+            "p95": 0.027395999999953347,
+            "p99": 0.06379999999990105,
+            "max": 0.08348500000010972
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.020297999999911553,
+            "p95": 0.030935000000226864,
+            "p99": 0.06744900000012422,
+            "max": 0.09144800000012765
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.45700600000009217,
+            "p95": 0.6749419999996462,
+            "p99": 0.9259680000000117,
+            "max": 1.0993620000008377
+          },
+          "store.persistence_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 12.123617000000195,
+            "p95": 15.696130999999696,
+            "p99": 16.9658500000005,
+            "max": 32.88337000000001
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 22.50868300000002,
+            "p95": 29.8275450000001,
+            "p99": 44.61902400000008,
+            "max": 45.14478999999983
+          }
+        }
+      }
+    },
+    {
+      "label": "after",
+      "run": 0,
+      "durable": true,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 1556.8856530000003,
+      "reviewsPerSecond": 64.23079293415519,
+      "cpuMicroseconds": {
+        "user": 914430,
+        "system": 207014
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 1587.8153119999997,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.006647000000157277,
+            "p95": 0.01124199999958364,
+            "p99": 0.03535199999987526,
+            "max": 0.052418000000216125
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.5104120000005423,
+            "p95": 1.0699890000005325,
+            "p99": 1.1807340000004842,
+            "max": 1.3598289999999906
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.24781499999971857,
+            "p95": 0.410225999999966,
+            "p99": 0.5440349999998944,
+            "max": 0.7276990000000296
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.011480000000119617,
+            "p95": 0.016978999999992084,
+            "p99": 0.022593000000597385,
+            "max": 0.027861000000484637
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.024683999999979278,
+            "p95": 0.03954799999974057,
+            "p99": 0.047317999999904714,
+            "max": 0.05801100000007864
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.030467999999927997,
+            "p95": 0.04926499999965017,
+            "p99": 0.06259000000045489,
+            "max": 0.06431799999973009
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.7738850000005186,
+            "p95": 1.1950500000002648,
+            "p99": 1.33728500000052,
+            "max": 1.3382799999999406
+          },
+          "store.persistence_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 13.272329999999783,
+            "p95": 16.157406000000265,
+            "p99": 18.298961999999847,
+            "max": 20.175530999999864
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 15.880595999999969,
+            "p95": 18.70690099999956,
+            "p99": 20.20327499999985,
+            "max": 21.47004300000026
+          }
+        }
+      }
+    },
+    {
+      "label": "after",
+      "run": 1,
+      "durable": false,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 142.9168010000003,
+      "reviewsPerSecond": 699.7077971259641,
+      "cpuMicroseconds": {
+        "user": 165837,
+        "system": 5866
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 169.94851800000015,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0028519999996206025,
+            "p95": 0.006655000000137079,
+            "p99": 0.01564700000017183,
+            "max": 0.026974999999765714
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.31644499999947584,
+            "p95": 0.6561410000003889,
+            "p99": 0.779037000000244,
+            "max": 0.8021680000001652
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.15935000000081345,
+            "p95": 0.2510259999999107,
+            "p99": 0.3180929999998625,
+            "max": 1.678367999999864
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.004264999999577412,
+            "p95": 0.01077400000031048,
+            "p99": 0.012924000000566593,
+            "max": 0.013492000000042026
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.011582000000089465,
+            "p95": 0.02504600000065693,
+            "p99": 0.03073800000038318,
+            "max": 0.04141299999992043
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01472600000033708,
+            "p95": 0.029598000000078173,
+            "p99": 0.03780499999993481,
+            "max": 0.047770000000127766
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.5193630000003395,
+            "p95": 0.9350459999996019,
+            "p99": 1.5820970000004309,
+            "max": 1.8303759999998874
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.315906000000723,
+            "p95": 2.2066640000002735,
+            "p99": 2.85841900000014,
+            "max": 2.94539099999929
+          }
+        }
+      }
+    },
+    {
+      "label": "before",
+      "run": 1,
+      "durable": false,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 1052.2938159999994,
+      "reviewsPerSecond": 95.03049289040015,
+      "cpuMicroseconds": {
+        "user": 1153827,
+        "system": 1880
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 1064.1465390000003,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.004407000000355765,
+            "p95": 0.00911400000040885,
+            "p99": 0.017190999999911583,
+            "max": 0.021475000000464206
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 9.1448249999994,
+            "p95": 13.385326000000532,
+            "p99": 14.689421000000038,
+            "max": 14.920170000000326
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.06681599999956234,
+            "p95": 0.11414799999965908,
+            "p99": 0.2651959999993778,
+            "max": 0.2760169999992286
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.009582000000591506,
+            "p95": 0.01571700000022247,
+            "p99": 0.031235999999807973,
+            "max": 0.03971399999954883
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01664100000016333,
+            "p95": 0.025931000000127824,
+            "p99": 0.054205999999794585,
+            "max": 0.07110599999941769
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0185219999993933,
+            "p95": 0.028150000000096043,
+            "p99": 0.057673000000249885,
+            "max": 0.07980000000043219
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.40319799999997485,
+            "p95": 1.2278580000001966,
+            "p99": 2.4448130000000674,
+            "max": 2.9894290000002
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 10.217066000000159,
+            "p95": 14.215420999999878,
+            "p99": 15.721637999999984,
+            "max": 15.997598000000835
+          }
+        }
+      }
+    },
+    {
+      "label": "after",
+      "run": 1,
+      "durable": true,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 1524.816726000001,
+      "reviewsPerSecond": 65.58165207324723,
+      "cpuMicroseconds": {
+        "user": 961019,
+        "system": 206269
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 1552.0729040000006,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0053299999999580905,
+            "p95": 0.012459999999919091,
+            "p99": 0.02140400000007503,
+            "max": 0.05211799999960931
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.43886399999973946,
+            "p95": 1.1389770000005228,
+            "p99": 1.3391080000001239,
+            "max": 1.3642840000011347
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.23474200000055134,
+            "p95": 0.3636340000002747,
+            "p99": 0.44417799999973795,
+            "max": 0.5031479999997828
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.011124000000563683,
+            "p95": 0.01756799999930081,
+            "p99": 0.03898799999933544,
+            "max": 0.04135500000029424
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.024037000001044362,
+            "p95": 0.03721200000018143,
+            "p99": 0.06149199999981647,
+            "max": 0.08752499999991414
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.029258999999910884,
+            "p95": 0.051609000000098604,
+            "p99": 0.08645900000010442,
+            "max": 0.1130380000004152
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.7010140000002139,
+            "p95": 1.1478470000001835,
+            "p99": 1.31024399999842,
+            "max": 1.369380000000092
+          },
+          "store.persistence_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 12.85135099999934,
+            "p95": 16.417975000000297,
+            "p99": 17.14298300000155,
+            "max": 19.85805700000037
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 14.921234000001277,
+            "p95": 19.60350600000129,
+            "p99": 20.03894300000138,
+            "max": 21.314491999999518
+          }
+        }
+      }
+    },
+    {
+      "label": "before",
+      "run": 1,
+      "durable": true,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 2278.114594999999,
+      "reviewsPerSecond": 43.895948087721216,
+      "cpuMicroseconds": {
+        "user": 1837255,
+        "system": 168506
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 2290.303120999999,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.004768999999214429,
+            "p95": 0.008078000000750762,
+            "p99": 0.014722999998411979,
+            "max": 0.033285999999861815
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 9.320292000000336,
+            "p95": 13.446428999999625,
+            "p99": 16.362617000000682,
+            "max": 17.1389790000012
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0722700000005716,
+            "p95": 0.09755799999948067,
+            "p99": 0.11627000000044063,
+            "max": 0.21307400000114285
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.010233999999400112,
+            "p95": 0.015271000000211643,
+            "p99": 0.018818000000464963,
+            "max": 0.02987300000131654
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.017261000000871718,
+            "p95": 0.024193000001105247,
+            "p99": 0.029780999999275082,
+            "max": 0.040068000000246684
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01935799999955634,
+            "p95": 0.02748299999984738,
+            "p99": 0.03329699999994773,
+            "max": 0.042787000000316766
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.41431399999964924,
+            "p95": 0.757236000001285,
+            "p99": 1.1169499999996333,
+            "max": 2.652430000000095
+          },
+          "store.persistence_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 11.992700999999215,
+            "p95": 15.34236299999975,
+            "p99": 17.148306999999477,
+            "max": 19.480601999999635
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 22.550967000001037,
+            "p95": 28.37364400000115,
+            "p99": 30.11285400000088,
+            "max": 31.923421000001326
+          }
+        }
+      }
+    },
+    {
+      "label": "before",
+      "run": 2,
+      "durable": false,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 1051.4823610000003,
+      "reviewsPerSecond": 95.1038302771871,
+      "cpuMicroseconds": {
+        "user": 1133270,
+        "system": 4988
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 1061.7008839999999,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.004198000000542379,
+            "p95": 0.00706499999978405,
+            "p99": 0.010906999999861,
+            "max": 0.021185999999943306
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 9.091449999999895,
+            "p95": 13.020771999999852,
+            "p99": 13.748020999999426,
+            "max": 20.756326999999146
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0660889999999199,
+            "p95": 0.1208230000011099,
+            "p99": 0.2835290000002715,
+            "max": 0.2947909999984404
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.009067999999388121,
+            "p95": 0.013898999999582884,
+            "p99": 0.016279999999824213,
+            "max": 0.019213999999919906
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.015698000001066248,
+            "p95": 0.023852000000260887,
+            "p99": 0.027347999999619788,
+            "max": 0.03334600000016508
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.017646000000240747,
+            "p95": 0.027491000000736676,
+            "p99": 0.03300099999978556,
+            "max": 0.039383000001180335
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.4053519999997661,
+            "p95": 0.7772249999998166,
+            "p99": 2.5122639999990497,
+            "max": 2.699414999999135
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 10.124480000000403,
+            "p95": 13.859463000000687,
+            "p99": 15.692016000000876,
+            "max": 21.931322000000364
+          }
+        }
+      }
+    },
+    {
+      "label": "after",
+      "run": 2,
+      "durable": false,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 145.43081600000005,
+      "reviewsPerSecond": 687.6121770505638,
+      "cpuMicroseconds": {
+        "user": 154580,
+        "system": 5797
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 174.62643200000093,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0027210000007471535,
+            "p95": 0.008163999998942018,
+            "p99": 0.008847000000969274,
+            "max": 0.014010000000780565
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.3265269999992597,
+            "p95": 0.8502470000003086,
+            "p99": 1.1810960000002524,
+            "max": 2.1255359999995562
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.15298800000164192,
+            "p95": 0.27901899999960733,
+            "p99": 0.33712999999988824,
+            "max": 0.44547099999908824
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.004765000001498265,
+            "p95": 0.011753000000680913,
+            "p99": 0.022746000000552158,
+            "max": 0.02674299999853247
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.013350999999602209,
+            "p95": 0.025322999999843887,
+            "p99": 0.03945000000021537,
+            "max": 0.04560999999921478
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.016901999999390682,
+            "p95": 0.03321200000027602,
+            "p99": 0.04541900000003807,
+            "max": 0.05319700000109151
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.5009810000010475,
+            "p95": 0.833253999999215,
+            "p99": 1.0766750000002503,
+            "max": 2.1263830000007147
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.2289330000003247,
+            "p95": 2.5763980000010633,
+            "p99": 2.7711900000012974,
+            "max": 3.3905610000001616
+          }
+        }
+      }
+    },
+    {
+      "label": "before",
+      "run": 2,
+      "durable": true,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 2424.486793,
+      "reviewsPerSecond": 41.24584233196109,
+      "cpuMicroseconds": {
+        "user": 1918377,
+        "system": 158219
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 2435.320907000001,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.004811000000700005,
+            "p95": 0.010109999999258434,
+            "p99": 0.03605699999934586,
+            "max": 0.0376429999996617
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 9.466678999999203,
+            "p95": 13.564879999999903,
+            "p99": 15.488703999999416,
+            "max": 23.37000099999932
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07013299999925948,
+            "p95": 0.11411000000043714,
+            "p99": 0.24444000000039523,
+            "max": 0.2585399999989022
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.010933999999906518,
+            "p95": 0.02456499999971129,
+            "p99": 0.02889300000060757,
+            "max": 0.06269199999951525
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.018796000000293134,
+            "p95": 0.03235600000152772,
+            "p99": 0.04794699999911245,
+            "max": 0.09468999999990046
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0209259999992355,
+            "p95": 0.03463499999998021,
+            "p99": 0.05737799999951676,
+            "max": 0.09978599999885773
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.42405200000030163,
+            "p95": 0.7656330000008893,
+            "p99": 1.3232810000008612,
+            "max": 3.3887349999986327
+          },
+          "store.persistence_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 12.36011900000085,
+            "p95": 16.280189000000973,
+            "p99": 21.225366000000577,
+            "max": 43.25607800000034
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 23.705391999999847,
+            "p95": 29.362590000000637,
+            "p99": 43.976018000001204,
+            "max": 52.43301900000006
+          }
+        }
+      }
+    },
+    {
+      "label": "after",
+      "run": 2,
+      "durable": true,
+      "reviews": 100,
+      "warmHistoryRows": 200,
+      "elapsedMs": 1574.7404669999996,
+      "reviewsPerSecond": 63.50252762000052,
+      "cpuMicroseconds": {
+        "user": 981003,
+        "system": 192877
+      },
+      "trades": 0,
+      "telemetry": {
+        "uptimeMs": 1604.2514769999998,
+        "counters": {
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.005573000000367756,
+            "p95": 0.011026999996829545,
+            "p99": 0.02227099999981874,
+            "max": 0.03529600000001665
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.48787499999889405,
+            "p95": 1.1798569999991741,
+            "p99": 1.2596560000001773,
+            "max": 1.2741430000005494
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.19529099999999744,
+            "p95": 0.3700920000010228,
+            "p99": 0.47163199999886274,
+            "max": 0.6752739999992627
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.012048000000504544,
+            "p95": 0.020807000000786502,
+            "p99": 0.02815999999984342,
+            "max": 0.04415499999959138
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.025342999999338645,
+            "p95": 0.04070300000057614,
+            "p99": 0.05720899999869289,
+            "max": 0.10718999999880907
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.031212999998388113,
+            "p95": 0.049522999999680906,
+            "p99": 0.06548499999917112,
+            "max": 0.13389199999983248
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.7003679999979795,
+            "p95": 1.1745740000005753,
+            "p99": 1.495809999998528,
+            "max": 3.8500480000002426
+          },
+          "store.persistence_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 13.639568999999028,
+            "p95": 17.368800000000192,
+            "p99": 20.420651000000362,
+            "max": 24.37839299999905
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 15.75891000000047,
+            "p95": 20.07915800000046,
+            "p99": 22.700184999997873,
+            "max": 26.422559999999066
+          }
+        }
+      }
+    }
+  ],
+  "sourceSha256": {
+    "before": {
+      "store.ts": "02c4d73a1cb8a5c2da34ec3759db16e7ab7eac4c24a17add6077d306ec1196c5",
+      "model.ts": "7ccfaa0cb6a1b00882f3f4e169e46c909018fd2cd5b06db329f36733281f558d",
+      "market/paper.ts": "f70cf3abe0985dde6f843ab4bb5b455e89a12a98817cba3d3b8d44bd4b36eaa0",
+      "market/risk.ts": "790581404e5cc68693df11ea4a313081f0e97e95b6a6f0e14f0229390d21c7eb"
+    },
+    "after": {
+      "store.ts": "a5f98bf2ec1f2fbf14ecdf1feab10f4ee10f4fc8eff4f6730257214c525c0300",
+      "model.ts": "a4170e92966260b586d60ff061c8be2c699e2ef7609fbcdf09549ccb6e7e40f0",
+      "market/paper.ts": "239ae94af1592ede35f6989c55e2da29bd370423f918177d35eda72135f44ade",
+      "market/risk.ts": "21c4876d9304fd1b08b51968bf8181ab64d35f31030490b1625c5cb0029e5a98"
+    }
+  },
+  "scope": "Identical recorded historical Pump account template; 200 preloaded review rows, 100 rejected reviews per job, three interleaved repetitions, in-memory and file+directory-fsync Store. No RPC, no eligible entries, fixture clocks reset for offline quote arithmetic only. Measures warm bounded review history; not end-to-end mainnet latency."
+}

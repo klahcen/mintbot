@@ -1,0 +1,69 @@
+{
+  "node": "v22.22.0",
+  "directory": "/tmp/mintbot-phase15-clean-c06cojdx",
+  "checks": [
+    {
+      "name": "install",
+      "args": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 6.187218817998655
+    },
+    {
+      "name": "typecheck",
+      "args": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 18.446612587002164
+    },
+    {
+      "name": "build",
+      "args": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 24.90032934800547
+    },
+    {
+      "name": "tests",
+      "args": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 91.88673394899524
+    },
+    {
+      "name": "python-clock-tests",
+      "args": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_phase12_host_health.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.2448895999987144
+    },
+    {
+      "name": "audit",
+      "args": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 1.2203037290018983
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "Id": "e666b3f3299151112d86e2c83013ec42b42c67def079daed1f66821ac32972ee",
+  "Image": "sha256:2aaf364ad108421d6d3a373f04ae91f3a02543718005551a5e34d1747821a781",
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-11-14T17:03:49.415258941Z",
+    "FinishedAt": "2026-11-14T19:03:57.790451554Z",
+    "Health": {
+      "Status": "unhealthy",
+      "FailingStreak": 475,
+      "Log": [
+        {
+          "Start": "2026-11-14T19:02:45.649271302Z",
+          "End": "2026-11-14T19:02:45.853310374Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T19:03:00.854809237Z",
+          "End": "2026-11-14T19:03:00.998978851Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T19:03:15.999973157Z",
+          "End": "2026-11-14T19:03:16.141666793Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T19:03:31.143072586Z",
+          "End": "2026-11-14T19:03:31.31472157Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T19:03:46.316268266Z",
+          "End": "2026-11-14T19:03:46.499958965Z",
+          "ExitCode": 1,
+          "Output": ""
+        }
+      ]
+    }
+  },
+  "Path": "docker-entrypoint.sh",
+  "Args": [
+    "node",
+    "dist/scripts/phase10-mainnet.js",
+    "--run",
+    "--seconds",
+    "7200",
+    "--max-candidates",
+    "120",
+    "--output",
+    "/app/data/mainnet-validated"
+  ],
+  "HostConfig": {
+    "ReadonlyRootfs": true,
+    "CapDrop": [
+      "ALL"
+    ],
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "NetworkMode": "host",
+    "Init": true
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "/home/lkazaz/Desktop/mintbot/docs/phase10/runtime",
+      "Destination": "/app/data",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    }
+  ]
+}

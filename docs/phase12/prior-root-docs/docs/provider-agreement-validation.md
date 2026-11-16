@@ -1,0 +1,5 @@
+# Provider agreement validation
+
+**UNMET.** No authenticated independent-provider configuration is present in the relevant environment or local configuration. [Configuration-presence audit](phase11/provider-configuration.json) excludes credentials and endpoint values. The two public endpoint diagnostics report unknown and eligibility False. Reasons: Account banks differ; state agreement unknown; Independent provider operation lacks distinct source attribution.
+
+[Provider-specific genesis, statuses, banks, owners/digests and failures](phase11/provider-validation.json), [per-method account/transaction evidence](phase11/provider-method-evidence.json). Distinct hostnames, attribution labels, matching genesis, equal bytes at different banks, availability or an SDK quote do not establish independent operators or exact bank equality. `minContextSlot` is only a lower bound. Unknown/disagreement remains blocked; no candidate quote-bank authorization is claimed. Source publication and loader matches do not provide infrastructure authentication.

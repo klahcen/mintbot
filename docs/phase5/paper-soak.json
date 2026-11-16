@@ -1,0 +1,131 @@
+{
+  "startedAt": "2026-11-06T17:32:50.326Z",
+  "elapsedMs": 60208.769653,
+  "requestedSeconds": 60,
+  "cycles": 333,
+  "duplicates": 333,
+  "restarts": 6,
+  "staleRetained": 34,
+  "peakRssBytes": 218677248,
+  "cpuMicroseconds": {
+    "user": 19392303,
+    "system": 3831155
+  },
+  "eventLoopDelayMs": {
+    "p50": 10.125311,
+    "p95": 19.955711,
+    "p99": 25.149439,
+    "max": 90.767359
+  },
+  "ledger": {
+    "balanceLamports": "9996522148",
+    "dailySpendLamports": "4995000",
+    "realizedPnlLamports": "-3477852",
+    "day": "2026-11-06"
+  },
+  "positions": 0,
+  "retainedTrades": 666,
+  "telemetry": {
+    "uptimeMs": 60225.338869,
+    "counters": {
+      "market.buys_committed": 333,
+      "store.committed": 1012,
+      "store.errors": 34,
+      "market.sells_committed": 333
+    },
+    "gauges": {
+      "store.queue_depth": {
+        "current": 0,
+        "peak": 1
+      },
+      "store.in_flight": {
+        "current": 0,
+        "peak": 1
+      }
+    },
+    "histograms": {
+      "store.queue_wait_ms": {
+        "count": 1046,
+        "samples": 1046,
+        "p50": 0.008509999999660067,
+        "p95": 0.01749299999937648,
+        "p99": 0.03231400000004214,
+        "max": 0.23365299999932176
+      },
+      "store.clone_ms": {
+        "count": 1046,
+        "samples": 1046,
+        "p50": 1.9234479999977339,
+        "p95": 3.4469610000014654,
+        "p99": 4.026656000001822,
+        "max": 6.3885709999995015
+      },
+      "market.risk_evaluation_ms": {
+        "count": 333,
+        "samples": 333,
+        "p50": 0.23249199999918346,
+        "p95": 0.4171389999992243,
+        "p99": 0.59499599999981,
+        "max": 0.768284999999878
+      },
+      "risk_evaluation_ms": {
+        "count": 333,
+        "samples": 333,
+        "p50": 0.010936999999103136,
+        "p95": 0.02025699999990138,
+        "p99": 0.02670799999987139,
+        "max": 0.07959499999992659
+      },
+      "strategy_decision_ms": {
+        "count": 333,
+        "samples": 333,
+        "p50": 0.02685899999778485,
+        "p95": 0.05230400000073132,
+        "p99": 0.08184600000004139,
+        "max": 0.2082429999999249
+      },
+      "market.strategy_decision_ms": {
+        "count": 333,
+        "samples": 333,
+        "p50": 0.03287599999748636,
+        "p95": 0.06495099999938247,
+        "p99": 0.1366840000000593,
+        "max": 0.2583720000000085
+      },
+      "market.paper_execution_ms": {
+        "count": 666,
+        "samples": 666,
+        "p50": 0.1155109999999695,
+        "p95": 0.2479299999995419,
+        "p99": 0.33614399999714806,
+        "max": 0.5526809999998932
+      },
+      "store.validation_ms": {
+        "count": 1012,
+        "samples": 1012,
+        "p50": 1.0879710000008345,
+        "p95": 2.13527299999987,
+        "p99": 2.615745000000061,
+        "max": 10.50825999999995
+      },
+      "store.persistence_ms": {
+        "count": 1012,
+        "samples": 1012,
+        "p50": 19.675999999999476,
+        "p95": 24.23287899999559,
+        "p99": 30.91998799999783,
+        "max": 65.74515600000086
+      },
+      "store.transaction_ms": {
+        "count": 1046,
+        "samples": 1046,
+        "p50": 23.234597999999096,
+        "p95": 29.11159100000077,
+        "p99": 36.416213000000425,
+        "max": 74.97913999999946
+      }
+    }
+  },
+  "liveTrading": false,
+  "scope": "60+ second fsynced dedicated paper-engine replay using explicit UNIT safety/fee overrides and perturbed receipt identity. Not current mainnet evidence, fills, return estimates, or network/provider endurance proof. Entry/exit, stale-quote retention, restart stop and deduplication exercised."
+}

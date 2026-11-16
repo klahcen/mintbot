@@ -1,0 +1,11 @@
+{
+  "detectedAt": "2026-11-14T13:36:51.676639+00:00",
+  "processWallElapsedMs": 71190082.6928711,
+  "retainedSupervisorElapsedMs": 3460581.3120790003,
+  "wallMinusMonotonicMs": 67729501.39812608,
+  "evidence": "experiment-watch.jsonl records adjacent 50-second observation ticks jumping from 2026-11-13T18:40:29Z to 2026-11-14T13:29:59Z while the retained supervisor duration advanced by about 50 seconds.",
+  "attribution": "Host suspension or wall-clock adjustment; exact mechanism not established. This interval is unobserved and cannot be called connected, disconnected-provider time, or covered chain history.",
+  "action": "Graceful SIGTERM of the verified owned experiment process after its two-hour wall budget was exceeded. Final evidence must record the shortened monitored duration.",
+  "liveTrading": false,
+  "runDirectory": "docs/phase9/mainnet-2026-11-13"
+}

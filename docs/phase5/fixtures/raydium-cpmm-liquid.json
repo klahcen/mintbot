@@ -1,0 +1,283 @@
+{
+  "venue": "raydium-cpmm",
+  "address": "7JuwJuNU88gurFnyWeiyGKbFmExMWcmRZntn9imEzdny",
+  "discoverySource": "https://github.com/raydium-io/raydium-sdk-V2-demo/blob/master/src/cpmm/swap.ts",
+  "state": {
+    "venue": "raydium-cpmm",
+    "launch": {
+      "purpose": "market-inspection",
+      "id": "inspection:raydium-cpmm:7JuwJuNU88gurFnyWeiyGKbFmExMWcmRZntn9imEzdny",
+      "program": "raydium-cpmm",
+      "slot": 466190548,
+      "kind": "pool",
+      "address": "7JuwJuNU88gurFnyWeiyGKbFmExMWcmRZntn9imEzdny",
+      "mints": [
+        "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "So11111111111111111111111111111111111111112"
+      ],
+      "creator": null,
+      "chainTimestamp": null,
+      "instruction": "market-inspection",
+      "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+      "accountContextSlot": 466190548,
+      "executionEligible": false
+    },
+    "provider": "api.mainnet-beta.solana.com",
+    "slot": 466190572,
+    "commitment": "finalized",
+    "retrievedAt": 1793985496655,
+    "retrievedMono": 6604.850693,
+    "digest": "3627a9e6f59f1a20ebff0d5255ec4e3358501593c16badb39c95a3fcfeabaa82",
+    "revision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "decimals": 6,
+    "supply": "8628555319977043",
+    "baseReserve": "40978952",
+    "quoteReserve": "453471035",
+    "liquidityLamports": "453471035",
+    "protocolFeeBps": "0",
+    "creatorFeeBps": "0",
+    "signals": {
+      "mintAuthority": {
+        "status": "failed",
+        "reason": "Mint authority remains enabled"
+      },
+      "freezeAuthority": {
+        "status": "failed",
+        "reason": "Freeze authority remains enabled"
+      },
+      "transferRestrictions": {
+        "status": "verified",
+        "value": false,
+        "reason": "Legacy token or metadata-only Token-2022 extension set",
+        "slot": 466190572
+      },
+      "extensions": {
+        "status": "verified",
+        "value": [],
+        "reason": "Exact mint TLV extension identifiers",
+        "slot": 466190572
+      },
+      "mintDecimals": {
+        "status": "verified",
+        "value": {
+          "decimals": 6,
+          "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "supply": "8628555319977043"
+        },
+        "reason": "Mint account decimals, owner and integer supply",
+        "slot": 466190572
+      },
+      "custody": {
+        "status": "verified",
+        "value": {
+          "baseVault": "3rzbbW5Q8MA7sCaowf28hNgACNPecdS2zceWy7Ptzua9",
+          "quoteVault": "7VLUXrnSSDo9BfCa4NWaQs68g7ddDY1sdXBKW6Xswj9Y",
+          "baseAtoms": "41385027",
+          "quoteAtoms": "454859764"
+        },
+        "reason": "Actual vault balances before fee-bucket/bin exclusions",
+        "slot": 466190572
+      },
+      "holderConcentration": {
+        "status": "unknown",
+        "reason": "Complete holder enumeration unavailable"
+      },
+      "creatorHistory": {
+        "status": "unknown",
+        "reason": "Creator history unavailable"
+      },
+      "liquidityChanges": {
+        "status": "unknown",
+        "reason": "First observation"
+      },
+      "feeDistribution": {
+        "status": "verified",
+        "value": {
+          "protocolRate": "120000",
+          "fundRate": "40000",
+          "creatorShareRate": "50000"
+        },
+        "reason": "Protocol/fund shares split the trade fee; never charged a second time",
+        "slot": 466190572
+      },
+      "quoteModel": {
+        "status": "verified",
+        "value": {
+          "kind": "raydium-cpmm",
+          "fees": [
+            "2500",
+            "0"
+          ],
+          "denominator": "1000000",
+          "feeOnBuyInput": true,
+          "feeOnSellInput": true,
+          "price": "0"
+        },
+        "reason": "Pinned protocol integer quote model",
+        "slot": 466190572
+      },
+      "liquidity": {
+        "status": "verified",
+        "value": "453471035",
+        "reason": "Actual spendable pool/bin SOL reserves",
+        "slot": 466190572
+      }
+    },
+    "accounts": [
+      {
+        "address": "3rzbbW5Q8MA7sCaowf28hNgACNPecdS2zceWy7Ptzua9",
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "sha256": "84ff8c25f77570a7d68c765a69a521e9304be410ca21beef2c51fe4d87d56b14"
+      },
+      {
+        "address": "7JuwJuNU88gurFnyWeiyGKbFmExMWcmRZntn9imEzdny",
+        "owner": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+        "sha256": "057d2deac35d4f0d49effff570a1131ecfb74124d33184336fc0f7203dcfe8c3"
+      },
+      {
+        "address": "7VLUXrnSSDo9BfCa4NWaQs68g7ddDY1sdXBKW6Xswj9Y",
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "sha256": "f522e4ccef581f697114c52a7e64af782c84279b9eb8cde5659d2d00a8e5f760"
+      },
+      {
+        "address": "D4FPEruKEHrG5TenZ2mpDGEfu1iUvTiqBxvpU8HLBvC2",
+        "owner": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+        "sha256": "23cd13f45c5ff0ed5010736c00357ccece125ec5a5d967b5f13d9eed26c13300"
+      },
+      {
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "sha256": "1aa060c6571fa143a003a444ac1ef8bd93036bf960913eb7ede15bc8ee18036c"
+      },
+      {
+        "address": "So11111111111111111111111111111111111111112",
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "sha256": "b6e11fbffa63327f3600e2b760a84a8dc5aa3730c437b290b6f3ccae81ce8a17"
+      },
+      {
+        "address": "SysvarC1ock11111111111111111111111111111111",
+        "owner": "Sysvar1111111111111111111111111111111111111",
+        "sha256": "2d2bb3c6785a88c2111c31ee6e97281036418b70c4a15dbe3dfd8cd991196904"
+      }
+    ],
+    "source": "https://github.com/raydium-io/raydium-cp-swap/tree/3d69122790e97cd6aff24e8ba95940793773f58c"
+  },
+  "buy": {
+    "side": "buy",
+    "input": "1000000",
+    "output": "89943",
+    "minimumOutput": "89043",
+    "poolFee": "2500",
+    "poolFeeAsset": "So11111111111111111111111111111111111111112",
+    "impactBps": "47",
+    "stateDigest": "3627a9e6f59f1a20ebff0d5255ec4e3358501593c16badb39c95a3fcfeabaa82",
+    "slot": 466190572,
+    "provider": "api.mainnet-beta.solana.com",
+    "computedMono": 6629.058384,
+    "expiresMono": 8104.850693,
+    "kind": "account-state-estimate"
+  },
+  "sell": {
+    "side": "sell",
+    "input": "89043",
+    "output": "980751",
+    "minimumOutput": "970943",
+    "poolFee": "223",
+    "poolFeeAsset": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "impactBps": "47",
+    "stateDigest": "3627a9e6f59f1a20ebff0d5255ec4e3358501593c16badb39c95a3fcfeabaa82",
+    "slot": 466190572,
+    "provider": "api.mainnet-beta.solana.com",
+    "computedMono": 6629.17103,
+    "expiresMono": 8104.850693,
+    "kind": "account-state-estimate"
+  },
+  "batch": {
+    "contextSlot": 466190572,
+    "commitment": "finalized",
+    "provider": "api.mainnet-beta.solana.com",
+    "retrievedAt": 1793985496655,
+    "retrievedMono": 6604.850693,
+    "accounts": {
+      "7JuwJuNU88gurFnyWeiyGKbFmExMWcmRZntn9imEzdny": {
+        "data": [
+          "9+3j9dfD3kazIT+6i/nIf6keR4GWKMOD4AvqfpjHoD4DuhBpz8P28w+jAIjpxrO4hg8wkpeIJkWLpb82ExPdmXlraB+ke2nsYGhngSyj0j/lZ9dFWFbcPxi4TkFhP4pIRMj8kXve4ecqhfVBKxwS12zO10bk8wUk+nNLLqZqFB2i/SowwT4QKtnFe8azvtkU9UqUud+B6Vlg6w/XFjX2D0vNroSmSj/EBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAHG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYQbd9uHXZaGT2cvhRs7reawctIXtX1s3kTqM9YV+/wCpBt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKkx1rEPw5lFSreBcq1oR8MwsMUbXGFPMBEKVo2jP2jElf0ACQkGhn1UAgAAAAAhBAwAAAAAAABRBAAAAAAAmCwJAAAAAAA74QEAAAAAAIs2RGYAAAAANwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 5324400,
+        "owner": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+        "rentEpoch": 18446744073709552000,
+        "space": 637
+      },
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+        "data": [
+          "AQAAAJj+huiNm+Lqi8HMpIeLKYjCQPUrhCS/tA7Rot3LXhmbU6TFFqCnHgAGAQEAAABicKqKWcWUBbRShshncubNEm6bil06OFNtN/e0FOi2Zw==",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 558837525946,
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "rentEpoch": 18446744073709552000,
+        "space": 82
+      },
+      "So11111111111111111111111111111111111111112": {
+        "data": [
+          "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 1863648131815,
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "rentEpoch": 18446744073709552000,
+        "space": 82
+      },
+      "3rzbbW5Q8MA7sCaowf28hNgACNPecdS2zceWy7Ptzua9": {
+        "data": [
+          "xvp6877brTo9ZfNqq8l0MbG75MLS9uDkfKYCA0UvXWHrANn1spK0IUrH0De01vBkULlkYA3zcwUrtehPL46aZ0N8dwIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 2039280,
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "rentEpoch": 18446744073709552000,
+        "space": 165
+      },
+      "7VLUXrnSSDo9BfCa4NWaQs68g7ddDY1sdXBKW6Xswj9Y": {
+        "data": [
+          "BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAHrANn1spK0IUrH0De01vBkULlkYA3zcwUrtehPL46aZ/SbHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAA4thYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 456348204,
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "rentEpoch": 18446744073709552000,
+        "space": 165
+      },
+      "D4FPEruKEHrG5TenZ2mpDGEfu1iUvTiqBxvpU8HLBvC2": {
+        "data": [
+          "2vQhaMvLK2//AAAAxAkAAAAAAADA1AEAAAAAAECcAAAAAAAAgNHwCAAAAAAF2xU6D/SH9pzeiQAf7ExGlbbUIV6iRLh71Otyh/hXqNcGSjj20XsRPl9m3PtjuHN//OJkSr8KALmLNDVtY4WD9AEAAAAAAABQwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 2584522,
+        "owner": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+        "rentEpoch": 18446744073709552000,
+        "space": 236
+      },
+      "SysvarC1ock11111111111111111111111111111111": {
+        "data": [
+          "7IDJGwAAAABc1+1qAAAAADcEAAAAAAAAOAQAAAAAAADYC+5qAAAAAA==",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 1169280,
+        "owner": "Sysvar1111111111111111111111111111111111111",
+        "rentEpoch": 18446744073709552000,
+        "space": 40
+      }
+    }
+  },
+  "creationProof": false
+}

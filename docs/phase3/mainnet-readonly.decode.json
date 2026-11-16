@@ -1,0 +1,30 @@
+{
+  "pumpObservations": 69,
+  "decodeFailures": 0,
+  "distinctDecodedMints": 0,
+  "mintSample": [],
+  "elapsedMs": 8.855002000000013,
+  "cpuMicroseconds": {
+    "user": 9068,
+    "system": 4
+  },
+  "telemetry": {
+    "uptimeMs": 9.395712999999887,
+    "counters": {
+      "decoding.completed": 69,
+      "decoding.launches": 0
+    },
+    "gauges": {},
+    "histograms": {
+      "decoding_ms": {
+        "count": 69,
+        "samples": 69,
+        "p50": 0.06967299999996612,
+        "p95": 0.19179400000007263,
+        "p99": 0.6700619999999162,
+        "max": 1.4210619999998926
+      }
+    }
+  },
+  "scope": "Local replay of actual bounded read-only observations through existing pinned Pump log decoder; no automatic trade or safety/price assertion. Other protocols require full finalized transaction/account verification, not log-only launch claims."
+}

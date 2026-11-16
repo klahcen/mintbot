@@ -1,0 +1,37 @@
+{
+  "unauthorized": 401,
+  "authorized": 200,
+  "cache": "no-store",
+  "dashboard": 200,
+  "beforeAt": 1794678307622,
+  "afterAt": 1794678312611,
+  "runStatus": "running",
+  "notifications": 322787,
+  "liveTrading": false,
+  "readiness": [
+    {
+      "name": "Research coverage",
+      "status": "unknown",
+      "detail": "Research chain coverage unresolved; Research observations quarantined; processing coverage unknown"
+    },
+    {
+      "name": "Funded execution",
+      "status": "blocked",
+      "detail": "No signer or broadcaster; live mode rejected"
+    },
+    {
+      "name": "Independent provider agreement",
+      "status": "unknown",
+      "detail": "Separate provider validation evidence required; notification head is not a finalized-provider agreement"
+    },
+    {
+      "name": "Qualifying real paper entry",
+      "status": "unknown",
+      "detail": "No synthetic opportunities or mandatory-risk overrides"
+    }
+  ],
+  "status": "available",
+  "image": "mintbot:phase10-readonly",
+  "sourceRun": "mainnet-validated",
+  "scope": "Actual existing authenticated API and dashboard read a directory-mounted live research sidecar snapshot through atomic renames. No public ports, no external container network, no new monitor started by server. Independent agreement and coverage readiness remain separate."
+}

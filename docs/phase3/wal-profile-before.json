@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-11-03T19:41:55.507Z",
+  "node": "v20.19.5",
+  "sourceRoot": "/tmp/mintbot-phase3-before",
+  "sourceSha256": "47683be912787116b98abaf6bc4fc1e2ecf3f8fdf32652bb5a4fe5c3cdb15f36",
+  "events": 1000,
+  "durable": true,
+  "elapsedMs": 3595.68622,
+  "zeroDelayTimerObservedMs": 3597.7483660000003,
+  "cpuMicroseconds": {
+    "user": 534665,
+    "system": 150318
+  },
+  "memoryBefore": {
+    "rss": 131825664,
+    "heapTotal": 57761792,
+    "heapUsed": 33607032,
+    "external": 4129467,
+    "arrayBuffers": 75293
+  },
+  "memoryAfter": {
+    "rss": 148848640,
+    "heapTotal": 61693952,
+    "heapUsed": 40142696,
+    "external": 5089765,
+    "arrayBuffers": 1028034
+  },
+  "gc": {
+    "count": 1,
+    "totalMs": 4.856858000159264,
+    "p50": 4.856858000159264,
+    "p95": 4.856858000159264,
+    "p99": 4.856858000159264,
+    "max": 4.856858000159264
+  },
+  "stages": {
+    "writeFileSync": {
+      "count": 2,
+      "totalMs": 0.448467000000619,
+      "p50": 0.148391000000629,
+      "p95": 0.148391000000629,
+      "p99": 0.148391000000629,
+      "max": 0.30007599999999
+    },
+    "JSON.stringify": {
+      "count": 5007,
+      "totalMs": 81.18959300001893,
+      "p50": 0.012325000000146247,
+      "p95": 0.03908499999988635,
+      "p99": 0.057538000000022294,
+      "max": 1.145463999999265
+    },
+    "writeSync": {
+      "count": 2001,
+      "totalMs": 70.51309199999469,
+      "p50": 0.03127099999983329,
+      "p95": 0.05967099999998027,
+      "p99": 0.08187399999997069,
+      "max": 0.2996259999999893
+    },
+    "fsyncSync": {
+      "count": 2002,
+      "totalMs": 3206.349430999999,
+      "p50": 1.5126749999999447,
+      "p95": 2.4872709999999643,
+      "p99": 3.0508570000001782,
+      "max": 7.07560999999987
+    },
+    "offer": {
+      "count": 1000,
+      "totalMs": 1897.9378500000028,
+      "p50": 1.7887310000005527,
+      "p95": 2.856213000000025,
+      "p99": 3.539309000000003,
+      "max": 10.89641800000004
+    },
+    "complete": {
+      "count": 1000,
+      "totalMs": 1681.8184540000066,
+      "p50": 1.596534000000247,
+      "p95": 2.5441259999997783,
+      "p99": 3.110149000000092,
+      "max": 7.24918499999967
+    },
+    "renameSync": {
+      "count": 1,
+      "totalMs": 0.16884899999968184,
+      "p50": 0.16884899999968184,
+      "p95": 0.16884899999968184,
+      "p99": 0.16884899999968184,
+      "max": 0.16884899999968184
+    },
+    "compact": {
+      "count": 1,
+      "totalMs": 5.2306640000006155,
+      "p50": 5.2306640000006155,
+      "p95": 5.2306640000006155,
+      "p99": 5.2306640000006155,
+      "max": 5.2306640000006155
+    }
+  },
+  "scope": "Instrumented offline direct journal offer+completion with real disk I/O, fsync per record and one forced compaction. Nested timings overlap; hook overhead and ordered execution apply. GC entries only observed before collector disconnect. Timer delay measures starvation of a ready callback, not chain latency."
+}

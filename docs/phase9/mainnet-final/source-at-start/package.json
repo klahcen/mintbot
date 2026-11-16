@@ -1,0 +1,70 @@
+{
+  "name": "mintbot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc -p tsconfig.json && node scripts/copy-simulation-assets.mjs && npm --prefix frontend run build",
+    "typecheck": "tsc --noEmit && npm --prefix frontend run typecheck",
+    "test": "tsx --test --test-concurrency=4 tests/*.test.ts",
+    "benchmark": "tsx scripts/benchmark.ts",
+    "monitor": "tsx scripts/monitor.ts",
+    "replay": "tsx scripts/replay.ts",
+    "benchmark:compare": "tsx scripts/compare-benchmarks.ts",
+    "benchmark:ingestion": "tsx scripts/ingestion-benchmark.ts",
+    "benchmark:decoder": "tsx scripts/decoder-benchmark.ts",
+    "benchmark:phase2-report": "tsx scripts/phase2-report.ts",
+    "benchmark:phase3": "tsx scripts/phase3-benchmark.ts",
+    "benchmark:journal": "tsx scripts/journal-benchmark.ts",
+    "benchmark:wal-profile": "tsx scripts/profile-journal.ts",
+    "benchmark:phase3-report": "python3 scripts/phase3-report.py",
+    "benchmark:soak": "tsx scripts/ingestion-soak.ts",
+    "benchmark:phase4": "tsx scripts/phase4-regression-benchmark.ts",
+    "benchmark:market": "tsx scripts/phase4-market-benchmark.ts",
+    "benchmark:market-reference": "tsx scripts/phase4-reference-vectors.ts",
+    "benchmark:phase5": "tsx scripts/phase4-regression-benchmark.ts --before-root /tmp/mintbot-phase5-before --output docs/phase5/regression-benchmark.json",
+    "benchmark:market-phase5": "tsx scripts/phase5-market-benchmark.ts",
+    "benchmark:paper-soak": "tsx scripts/phase5-paper-soak.ts",
+    "validate:mainnet-paper": "tsx scripts/phase5-mainnet.ts",
+    "validate:liquid-fixtures": "tsx scripts/phase5-liquid-fixtures.ts",
+    "validate:phase5-quotes": "tsx scripts/phase5-quote-reference.ts",
+    "validate:phase6-builders": "tsx scripts/phase6-builder-reference.ts",
+    "validate:swap-simulation": "tsx scripts/phase6-mainnet-simulation.ts",
+    "benchmark:phase6": "tsx scripts/phase4-regression-benchmark.ts --before-root /tmp/mintbot-phase6-before --output docs/phase6/regression-benchmark.json",
+    "benchmark:simulation": "tsx scripts/phase6-simulation-benchmark.ts",
+    "discover:dlmm-phase6": "tsx scripts/phase6-dlmm-discovery.ts",
+    "validate:sell-simulation": "tsx scripts/phase7-sell-simulation.ts",
+    "validate:phase7-mainnet": "tsx scripts/phase7-mainnet.ts",
+    "validate:persistent-intents": "tsx --test tests/simulation-persistent.test.ts",
+    "replay:execution": "tsx scripts/phase7-reconciliation-replay.ts",
+    "benchmark:phase7": "tsx scripts/phase7-performance-benchmark.ts --before-root /tmp/mintbot-phase6-before --runs 5 --output docs/phase7/new-matched-regression.json"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "bs58": "^6.0.0",
+    "fastify": "^5.6.2",
+    "pg": "^8.16.3",
+    "ws": "^8.18.3",
+    "zod": "^4.1.12",
+    "@solana/buffer-layout-utils": "file:vendor/solana-buffer-layout-utils-0.3.0-mintbot.1.tgz"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "@types/pg": "^8.15.6",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "overrides": {
+    "jayson": "5.0.0",
+    "@solana/buffer-layout-utils": "$@solana/buffer-layout-utils"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "scope": "Interrupted first Phase9 full-stream controller; partial cumulative snapshot only, not a completed extended validation.",
+  "minutes": 66.3375650469,
+  "notifications": 515049,
+  "refused": 256521,
+  "completed": 256420,
+  "ackHighWater": 1024,
+  "ackByteHighWater": 1880437,
+  "frontendJournalErrors": 2,
+  "writerFailure": null,
+  "integrationMistake": "The first controller directly invoked async admission for every socket message and omitted the existing service backpressure response. Refusal gap metadata could saturate the acknowledgement queue; fatal processing was omitted from its status export.",
+  "repair": "Bounded 1024-item/4MiB intake, eight concurrent jobs, flush refusal metadata, pause/resume within unchanged run budgets, report fatal state and end early, preserve shutdown diagnostics.",
+  "liveTrading": false
+}

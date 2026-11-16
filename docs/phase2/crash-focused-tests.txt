@@ -1,0 +1,45 @@
+TAP version 13
+# Subtest: cached rows are deeply immutable, active positions remain isolated and generic transactions remain editable
+ok 1 - cached rows are deeply immutable, active positions remain isolated and generic transactions remain editable
+  ---
+  duration_ms: 34.182784
+  ...
+# Subtest: cached row schemas reject new malformed records, numeric invalidity and bounds exactly as full state
+ok 2 - cached row schemas reject new malformed records, numeric invalidity and bounds exactly as full state
+  ---
+  duration_ms: 10.258389
+  ...
+# Subtest: Store admission is bounded and rejected work is explicit without poisoning FIFO
+ok 3 - Store admission is bounded and rejected work is explicit without poisoning FIFO
+  ---
+  duration_ms: 7.416537
+  ...
+# Subtest: restart restores last acknowledged state and ignores orphan temporary writes
+ok 4 - restart restores last acknowledged state and ignores orphan temporary writes
+  ---
+  duration_ms: 36.722677
+  ...
+# Subtest: frozen outer rows with mutable nested arrays are recursively frozen before cache reuse
+ok 5 - frozen outer rows with mutable nested arrays are recursively frozen before cache reuse
+  ---
+  duration_ms: 4.123532
+  ...
+# Subtest: accessor-backed histories are copied rather than trusted as immutable cached rows
+ok 6 - accessor-backed histories are copied rather than trusted as immutable cached rows
+  ---
+  duration_ms: 4.412299
+  ...
+# Subtest: hard crash between paper commit and journal acknowledgement replays without duplicate positions
+ok 7 - hard crash between paper commit and journal acknowledgement replays without duplicate positions
+  ---
+  duration_ms: 2591.049844
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3469.512609

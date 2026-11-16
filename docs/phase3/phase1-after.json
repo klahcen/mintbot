@@ -1,0 +1,2298 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-06T14:59:59.259Z",
+  "environment": {
+    "node": "v20.19.5",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz"
+  },
+  "sourceRoot": "/home/lkazaz/Desktop/mintbot",
+  "sourceSha256": {
+    "engine": "19fece5ccd8f759d683a58828c808ddc089f2caf3d83134b1c47101b8e32b161",
+    "store": "42c7168b3e5f26359b8c4db0b5b150ce5e438270ca11b4c98c0efd37065a07a1",
+    "chain": "81c9483f082e0625fa30975f95418be2b334fc605b5dca1829541ea42cce0459",
+    "risk": "4f721e2b949e9cfd2d9d5ebf0e6db904874b6caecc928795d2ddce82abeb880b",
+    "telemetry": "02de3cb166e41ddad94498d74e4c1a66c073de8ac6b1307e86b306a9921477a7"
+  },
+  "workload": {
+    "events": 1000,
+    "repetitions": 3,
+    "instrumentation": "on",
+    "warmupEventsPerScenario": 32,
+    "clock": "node:perf_hooks performance.now (monotonic)",
+    "scope": "Offline replay: synthetic Pump CreateEvent bytes plus independent synthetic paper prices/safety assertions; saved historical swap inspection via mock RPC; no network, signing, disk persistence, chain landing or real fills. Fake WebSocket reconnect uses a real local 1ms timer; no provider recovery claim.",
+    "percentiles": "floor((n-1)*p), rolling last 10000 samples; independent runs; no stage sum (nested spans)",
+    "harnessSha256": "ef06961b06a11d318e1c13be33cd56b32c498f006169401c456729218a42f2f3"
+  },
+  "results": [
+    {
+      "repetition": 1,
+      "scenario": "sequential",
+      "internalInstrumentationAvailable": true,
+      "offered": 1000,
+      "completed": 1000,
+      "duplicates": 0,
+      "dropped": 0,
+      "rpcErrors": 59,
+      "reconnects": 0,
+      "paperBuys": 5,
+      "capacity": 1001,
+      "elapsedMs": 917.7472070000001,
+      "completedEventsPerSecond": 1089.6246726469196,
+      "offeredEventsPerSecond": 1089.6246726469196,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 1
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 1
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.05422399999997651,
+          "p95": 0.09331900000006499,
+          "p99": 0.12199599999985367,
+          "max": 0.364605999999867
+        },
+        "replay.queue_wait_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.00662400000010166,
+          "p95": 0.01210599999990336,
+          "p99": 0.02038300000003801,
+          "max": 0.09913400000004913
+        },
+        "harness.decoding_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.1382690000000366,
+          "p95": 0.2460599999999431,
+          "p99": 0.34729799999990973,
+          "max": 3.129028000000062
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.11471400000004905,
+          "p95": 0.19685800000002018,
+          "p99": 0.24223800000004303,
+          "max": 0.3506760000000213
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.49087499999996,
+          "p95": 0.8373379999998178,
+          "p99": 1.3096700000000965,
+          "max": 1.959292000000005
+        },
+        "replay.processing_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.7560079999998379,
+          "p95": 1.2623419999999896,
+          "p99": 1.7412089999997988,
+          "max": 4.566453999999794
+        },
+        "replay.end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.8197909999998956,
+          "p95": 1.3606039999999666,
+          "p99": 1.8018459999998413,
+          "max": 4.686811999999918
+        }
+      },
+      "internal": {
+        "uptimeMs": 929.6425149999998,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "observations.delivered": 1000,
+          "decoding.pda_cache_hits": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "rpc.calls": 1000,
+          "rpc.errors": 59,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 995
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.011222000000088883,
+            "p95": 0.020759999999881984,
+            "p99": 0.03142799999977797,
+            "max": 0.14732100000037462
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.035992999999962194,
+            "p95": 0.06405700000004799,
+            "p99": 0.08235100000001694,
+            "max": 0.2298399999999674
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0032759999999143474,
+            "p95": 0.005309999999553838,
+            "p99": 0.007417000000032203,
+            "max": 0.03709200000002966
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.13622899999995752,
+            "p95": 0.2429700000000139,
+            "p99": 0.345002999999906,
+            "max": 3.124284000000216
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0029719999999997526,
+            "p95": 0.07534099999998034,
+            "p99": 0.1117589999998927,
+            "max": 0.27430100000015045
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.026566000000002532,
+            "p95": 0.05146100000001752,
+            "p99": 0.06624899999997069,
+            "max": 0.3075940000001083
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0035100000000056752,
+            "p95": 0.00806500000021515,
+            "p99": 0.014336999999841282,
+            "max": 0.07121300000017072
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.09370400000011614,
+            "p95": 0.16547300000001997,
+            "p99": 0.25033499999972264,
+            "max": 1.2402549999997063
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.05063600000039514,
+            "p95": 0.1091750000000502,
+            "p99": 0.155051000000185,
+            "max": 0.9297200000000885
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.004545000000007349,
+            "p95": 0.009088000000019747,
+            "p99": 0.013644999999996799,
+            "max": 0.050260999999864
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.008608000000094762,
+            "p95": 0.015222999999878084,
+            "p99": 0.028524000000288652,
+            "max": 0.08173100000021805
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.019864999999981592,
+            "p95": 0.02482400000008056,
+            "p99": 0.02482400000008056,
+            "max": 0.02822799999989911
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.2585599999999886,
+            "p95": 0.45857599999999366,
+            "p99": 0.7732350000001134,
+            "max": 1.6198819999999614
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.4562759999998889,
+            "p95": 0.7776300000000447,
+            "p99": 1.2711659999999938,
+            "max": 1.9229559999998855
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.4887519999997494,
+            "p95": 0.8340720000001056,
+            "p99": 1.3073939999999311,
+            "max": 1.9557560000002923
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    },
+    {
+      "repetition": 1,
+      "scenario": "dedupe-burst",
+      "internalInstrumentationAvailable": true,
+      "offered": 1000,
+      "completed": 750,
+      "duplicates": 250,
+      "dropped": 0,
+      "rpcErrors": 45,
+      "reconnects": 0,
+      "paperBuys": 5,
+      "capacity": 1001,
+      "elapsedMs": 560.413693,
+      "completedEventsPerSecond": 1338.2970640583544,
+      "offeredEventsPerSecond": 1784.3960854111394,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 750
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 750
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.02386000000024069,
+          "p95": 0.04135100000030434,
+          "p99": 0.07441599999992832,
+          "max": 0.2911579999999958
+        },
+        "replay.queue_wait_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 251.3095390000003,
+          "p95": 501.57017799999994,
+          "p99": 525.9178590000001,
+          "max": 531.4816249999999
+        },
+        "harness.decoding_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.11176500000010492,
+          "p95": 0.18809299999975337,
+          "p99": 0.2311610000001565,
+          "max": 0.4149050000000898
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.1062130000000252,
+          "p95": 0.18413199999986318,
+          "p99": 0.22541300000011688,
+          "max": 1.2893180000000939
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.39471199999979945,
+          "p95": 0.7037650000002031,
+          "p99": 1.0068689999998242,
+          "max": 3.709186999999929
+        },
+        "replay.processing_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.6282249999999294,
+          "p95": 1.0773840000001655,
+          "p99": 1.4080399999998008,
+          "max": 4.00496800000019
+        },
+        "replay.end_to_end_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 251.92945699999973,
+          "p95": 502.2847569999999,
+          "p99": 526.5705090000001,
+          "max": 532.276265
+        }
+      },
+      "internal": {
+        "uptimeMs": 569.3997520000003,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "observations.delivered": 750,
+          "observations.duplicates": 250,
+          "decoding.pda_cache_hits": 750,
+          "decoding.completed": 750,
+          "decoding.launches": 750,
+          "rpc.calls": 750,
+          "rpc.errors": 45,
+          "ingestion.received": 750,
+          "strategy.decisions": 750,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 750,
+          "ingestion.completed": 750,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 745
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.004973999999947409,
+            "p95": 0.008687000000008993,
+            "p99": 0.011797999999998865,
+            "max": 0.05029599999988932
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.015456000000085623,
+            "p95": 0.027615000000423606,
+            "p99": 0.04974100000026738,
+            "max": 0.28239399999984016
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0015690000000176951,
+            "p95": 0.0028739999997924315,
+            "p99": 0.005493999999998778,
+            "max": 0.0245519999998578
+          },
+          "decoding_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.11004800000000614,
+            "p95": 0.1843250000001717,
+            "p99": 0.22785400000020672,
+            "max": 0.4101709999999912
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.002856999999949039,
+            "p95": 0.09266600000000835,
+            "p99": 0.14042899999958536,
+            "max": 0.19798499999978958
+          },
+          "ingestion.validation_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.007956000000376662,
+            "p95": 0.017657999999755702,
+            "p99": 0.02492100000017672,
+            "max": 0.057295000000067375
+          },
+          "store.queue_wait_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.0029829999998582934,
+            "p95": 0.0057059999999182764,
+            "p99": 0.015903999999864027,
+            "max": 0.6218640000001869
+          },
+          "store.clone_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.0823009999999158,
+            "p95": 0.14789299999983996,
+            "p99": 0.20771500000000742,
+            "max": 1.1347279999999955
+          },
+          "engine.deduplication_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.037629999999808206,
+            "p95": 0.0925200000001496,
+            "p99": 0.11022500000035507,
+            "max": 0.1493969999996807
+          },
+          "risk_evaluation_ms": {
+            "count": 1500,
+            "samples": 1500,
+            "p50": 0.0028170000000500295,
+            "p95": 0.006413000000065949,
+            "p99": 0.008511999999882391,
+            "max": 0.07698099999970509
+          },
+          "strategy_decision_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.0035149999998793646,
+            "p95": 0.0062800000000606815,
+            "p99": 0.007356000000072527,
+            "max": 0.028576000000157364
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.02689200000031633,
+            "p95": 0.03324800000018513,
+            "p99": 0.03324800000018513,
+            "max": 0.05690599999979895
+          },
+          "store.validation_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.21765899999991234,
+            "p95": 0.40103599999974904,
+            "p99": 0.4830090000000382,
+            "max": 3.590983999999935
+          },
+          "store.transaction_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.3812049999996816,
+            "p95": 0.678356999999778,
+            "p99": 0.9593079999999645,
+            "max": 3.6896639999999934
+          },
+          "ingestion_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.3936039999998684,
+            "p95": 0.7006880000003548,
+            "p99": 1.0013159999998607,
+            "max": 3.7068880000001627
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    },
+    {
+      "repetition": 1,
+      "scenario": "overload-reconnect",
+      "internalInstrumentationAvailable": true,
+      "offered": 1001,
+      "completed": 128,
+      "duplicates": 251,
+      "dropped": 622,
+      "rpcErrors": 8,
+      "reconnects": 1,
+      "paperBuys": 5,
+      "capacity": 64,
+      "elapsedMs": 88.15572900000006,
+      "completedEventsPerSecond": 1451.9759685726142,
+      "offeredEventsPerSecond": 11354.905816728022,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 64
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 64
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1001,
+          "samples": 1001,
+          "p50": 0.018188000000009197,
+          "p95": 0.03368300000011004,
+          "p99": 0.04724000000032902,
+          "max": 0.1631120000001829
+        },
+        "replay.queue_wait_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 26.358236000000034,
+          "p95": 39.88500399999975,
+          "p99": 40.84037399999988,
+          "max": 41.303347999999914
+        },
+        "harness.decoding_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.09172400000034031,
+          "p95": 0.16518300000007002,
+          "p99": 0.20851700000002893,
+          "max": 0.28973599999972066
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.09914699999990262,
+          "p95": 0.15337099999987913,
+          "p99": 0.19375399999989895,
+          "max": 0.2939819999996871
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.22107499999992797,
+          "p95": 0.4337220000002162,
+          "p99": 0.6364659999999276,
+          "max": 2.8718529999996463
+        },
+        "replay.processing_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.42317199999979493,
+          "p95": 0.7837930000000597,
+          "p99": 1.2428829999998925,
+          "max": 3.0876290000001063
+        },
+        "replay.end_to_end_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 26.773073999999724,
+          "p95": 40.4307230000004,
+          "p99": 41.340124999999716,
+          "max": 41.747171999999864
+        }
+      },
+      "internal": {
+        "uptimeMs": 93.12690900000007,
+        "counters": {
+          "rpc.subscription_requests": 2,
+          "rpc.messages": 1003,
+          "observations.received": 1001,
+          "observations.delivered": 750,
+          "observations.duplicates": 251,
+          "rpc.errors": 8,
+          "rpc.disconnects": 1,
+          "rpc.reconnects": 1,
+          "decoding.pda_cache_hits": 128,
+          "decoding.completed": 128,
+          "decoding.launches": 128,
+          "rpc.calls": 128,
+          "ingestion.received": 128,
+          "strategy.decisions": 128,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 128,
+          "ingestion.completed": 128,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 123,
+          "rpc.reconnect_succeeded": 1
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1003,
+            "samples": 1003,
+            "p50": 0.004783000000315951,
+            "p95": 0.008921000000100321,
+            "p99": 0.011789000000135275,
+            "max": 0.06888200000003053
+          },
+          "monitor.ingestion_ms": {
+            "count": 1003,
+            "samples": 1003,
+            "p50": 0.011242000000038388,
+            "p95": 0.021207999999660387,
+            "p99": 0.03224900000031994,
+            "max": 0.14563200000020515
+          },
+          "monitor.deduplication_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.0012849999998252315,
+            "p95": 0.0026009999996858824,
+            "p99": 0.004397000000153639,
+            "max": 0.08477600000014718
+          },
+          "decoding_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.09075299999994968,
+            "p95": 0.16352599999981976,
+            "p99": 0.20195000000012442,
+            "max": 0.2820919999999205
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.00209099999983664,
+            "p95": 0.07708000000002357,
+            "p99": 0.11602600000014718,
+            "max": 0.27403800000001866
+          },
+          "ingestion.validation_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.006308999999873777,
+            "p95": 0.016301000000112253,
+            "p99": 0.027043999999932566,
+            "max": 0.04953900000009526
+          },
+          "store.queue_wait_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0019270000002507004,
+            "p95": 0.0038439999998445273,
+            "p99": 0.0054350000000340515,
+            "max": 0.01885600000014165
+          },
+          "store.clone_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.06764299999986179,
+            "p95": 0.1238549999998213,
+            "p99": 0.14073000000007596,
+            "max": 0.1839180000001761
+          },
+          "engine.deduplication_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.003968999999869993,
+            "p95": 0.012800999999853957,
+            "p99": 0.019918999999845255,
+            "max": 0.03173300000025847
+          },
+          "risk_evaluation_ms": {
+            "count": 256,
+            "samples": 256,
+            "p50": 0.0026410000000396394,
+            "p95": 0.004718000000139,
+            "p99": 0.0067450000001372246,
+            "max": 0.013765000000148575
+          },
+          "strategy_decision_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0032169999999496213,
+            "p95": 0.005811999999878026,
+            "p99": 0.010287999999945896,
+            "max": 0.05496400000038193
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.016261000000213244,
+            "p95": 0.0193080000003647,
+            "p99": 0.0193080000003647,
+            "max": 0.06591699999989942
+          },
+          "store.validation_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.11277199999994991,
+            "p95": 0.21683299999995143,
+            "p99": 0.34826499999962834,
+            "max": 2.7222830000000613
+          },
+          "store.transaction_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.2108330000000933,
+            "p95": 0.40835900000001857,
+            "p99": 0.5753159999999298,
+            "max": 2.832021000000168
+          },
+          "ingestion_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.22001799999998184,
+            "p95": 0.43150900000000547,
+            "p99": 0.6314760000000206,
+            "max": 2.86927199999991
+          },
+          "rpc.reconnect_wait_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 31.611051999999745,
+            "p95": 31.611051999999745,
+            "p99": 31.611051999999745,
+            "max": 31.611051999999745
+          },
+          "rpc.recovery_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 31.784271000000444,
+            "p95": 31.784271000000444,
+            "p99": 31.784271000000444,
+            "max": 31.784271000000444
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    },
+    {
+      "repetition": 2,
+      "scenario": "sequential",
+      "internalInstrumentationAvailable": true,
+      "offered": 1000,
+      "completed": 1000,
+      "duplicates": 0,
+      "dropped": 0,
+      "rpcErrors": 59,
+      "reconnects": 0,
+      "paperBuys": 5,
+      "capacity": 1001,
+      "elapsedMs": 637.079671,
+      "completedEventsPerSecond": 1569.6623915660937,
+      "offeredEventsPerSecond": 1569.6623915660937,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 1
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 1
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.037268999999923835,
+          "p95": 0.06552999999985332,
+          "p99": 0.08144099999981336,
+          "max": 0.21862000000010084
+        },
+        "replay.queue_wait_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.005129000000124506,
+          "p95": 0.009280000000217115,
+          "p99": 0.016454000000067026,
+          "max": 0.028523000000404863
+        },
+        "harness.decoding_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.09560800000008385,
+          "p95": 0.16386299999976472,
+          "p99": 0.19864900000038688,
+          "max": 1.3749049999996714
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.09761399999979403,
+          "p95": 0.15380000000004657,
+          "p99": 0.18487099999993006,
+          "max": 0.3433629999999539
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.34030699999993885,
+          "p95": 0.5778730000001815,
+          "p99": 0.8451169999998456,
+          "max": 1.6767989999998463
+        },
+        "replay.processing_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.5477289999998902,
+          "p95": 0.9296479999998155,
+          "p99": 1.5411739999999554,
+          "max": 1.9836549999999988
+        },
+        "replay.end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.5932420000003731,
+          "p95": 0.990233999999873,
+          "p99": 1.58037000000013,
+          "max": 2.043170000000373
+        }
+      },
+      "internal": {
+        "uptimeMs": 649.471063,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "observations.delivered": 1000,
+          "decoding.pda_cache_hits": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "rpc.calls": 1000,
+          "rpc.errors": 59,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 995
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.009614000000055967,
+            "p95": 0.017180000000280415,
+            "p99": 0.027818999999908556,
+            "max": 0.037080000000059954
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.0233989999996993,
+            "p95": 0.04415400000016234,
+            "p99": 0.05004300000018702,
+            "max": 0.17133300000023155
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0020140000001447333,
+            "p95": 0.0035859999998137937,
+            "p99": 0.009330999999747291,
+            "max": 0.14609299999983705
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.09462600000006205,
+            "p95": 0.1613430000002154,
+            "p99": 0.19681800000034855,
+            "max": 1.3718320000002677
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.001942999999755557,
+            "p95": 0.07661199999984092,
+            "p99": 0.10253899999997884,
+            "max": 0.17470400000001973
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.006957000000056723,
+            "p95": 0.015425999999933993,
+            "p99": 0.022435999999743217,
+            "max": 0.03641699999980119
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0017199999997501436,
+            "p95": 0.0036130000003140594,
+            "p99": 0.004812000000129046,
+            "max": 0.05455699999993158
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07504900000003545,
+            "p95": 0.14017400000011548,
+            "p99": 0.20162600000003295,
+            "max": 1.1741820000002008
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.04739599999993516,
+            "p95": 0.09894600000006903,
+            "p99": 0.1330750000001899,
+            "max": 1.006818000000294
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.0025300000002062006,
+            "p95": 0.004973999999947409,
+            "p99": 0.0074789999998756684,
+            "max": 0.028981999999814434
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0031589999998686835,
+            "p95": 0.005666999999903055,
+            "p99": 0.007344999999986612,
+            "max": 0.036283999999795924
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.01756100000011429,
+            "p95": 0.01787800000010975,
+            "p99": 0.01787800000010975,
+            "max": 0.030957999999827734
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.1735990000001948,
+            "p95": 0.29326899999978195,
+            "p99": 0.47760499999958483,
+            "max": 1.4501339999997072
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.32724800000005416,
+            "p95": 0.5515110000001187,
+            "p99": 0.8173529999999118,
+            "max": 1.6612599999998565
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.33889200000021447,
+            "p95": 0.573757999999998,
+            "p99": 0.842008000000078,
+            "max": 1.6744360000002416
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    },
+    {
+      "repetition": 2,
+      "scenario": "dedupe-burst",
+      "internalInstrumentationAvailable": true,
+      "offered": 1000,
+      "completed": 750,
+      "duplicates": 250,
+      "dropped": 0,
+      "rpcErrors": 45,
+      "reconnects": 0,
+      "paperBuys": 5,
+      "capacity": 1001,
+      "elapsedMs": 423.0119319999999,
+      "completedEventsPerSecond": 1772.9996325493728,
+      "offeredEventsPerSecond": 2363.9995100658302,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 750
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 750
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.017824000000018714,
+          "p95": 0.02249600000004648,
+          "p99": 0.03484200000002602,
+          "max": 0.08503400000017791
+        },
+        "replay.queue_wait_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 195.7936490000002,
+          "p95": 383.934307,
+          "p99": 399.5289130000001,
+          "max": 403.5941579999999
+        },
+        "harness.decoding_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.08984599999985221,
+          "p95": 0.14780100000007224,
+          "p99": 0.1857929999996486,
+          "max": 3.442432000000281
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.09558800000013434,
+          "p95": 0.1456239999997706,
+          "p99": 0.1692029999994702,
+          "max": 0.3021899999998823
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.29695700000002034,
+          "p95": 0.5248790000005101,
+          "p99": 0.652295000000322,
+          "max": 3.7532340000002478
+        },
+        "replay.processing_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.4984989999993559,
+          "p95": 0.7944170000000668,
+          "p99": 1.0783869999995659,
+          "max": 4.096887999999581
+        },
+        "replay.end_to_end_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 196.30400399999962,
+          "p95": 384.48051900000064,
+          "p99": 400.0648270000006,
+          "max": 404.0999980000006
+        }
+      },
+      "internal": {
+        "uptimeMs": 433.27860899999996,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "observations.delivered": 750,
+          "observations.duplicates": 250,
+          "decoding.pda_cache_hits": 750,
+          "decoding.completed": 750,
+          "decoding.launches": 750,
+          "rpc.calls": 750,
+          "rpc.errors": 45,
+          "ingestion.received": 750,
+          "strategy.decisions": 750,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 750,
+          "ingestion.completed": 750,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 745
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.0046729999999115535,
+            "p95": 0.005446000000119966,
+            "p99": 0.010190000000420696,
+            "max": 0.019235000000207947
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.011071000000356435,
+            "p95": 0.01338099999975384,
+            "p99": 0.02361799999971481,
+            "max": 0.07778800000005504
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.001164000000244414,
+            "p95": 0.0016560000003664754,
+            "p99": 0.002670999999736523,
+            "max": 0.024883999999929074
+          },
+          "decoding_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.08882200000016383,
+            "p95": 0.14583400000037727,
+            "p99": 0.18374999999923602,
+            "max": 3.439628999999968
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.0018749999999272404,
+            "p95": 0.06950599999981932,
+            "p99": 0.10735100000056264,
+            "max": 0.14588000000003376
+          },
+          "ingestion.validation_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.006028999999216467,
+            "p95": 0.013985999999931664,
+            "p99": 0.022080000000187283,
+            "max": 0.16538800000034826
+          },
+          "store.queue_wait_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.0015810000004421454,
+            "p95": 0.0033699999994496466,
+            "p99": 0.004101999999875261,
+            "max": 0.017246000000341155
+          },
+          "store.clone_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.06965299999956187,
+            "p95": 0.12421300000005431,
+            "p99": 0.175876999999673,
+            "max": 0.3756319999997686
+          },
+          "engine.deduplication_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.03492000000005646,
+            "p95": 0.06941399999959685,
+            "p99": 0.09970700000030774,
+            "max": 0.13489900000058697
+          },
+          "risk_evaluation_ms": {
+            "count": 1500,
+            "samples": 1500,
+            "p50": 0.0024980000007417402,
+            "p95": 0.004455000000234577,
+            "p99": 0.006754000000000815,
+            "max": 0.019839000000501983
+          },
+          "strategy_decision_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.003139000000373926,
+            "p95": 0.005411999999523687,
+            "p99": 0.00665599999956612,
+            "max": 0.03277299999990646
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.018515000000206783,
+            "p95": 0.029668000000128814,
+            "p99": 0.029668000000128814,
+            "max": 0.0348229999999603
+          },
+          "store.validation_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.1531669999994847,
+            "p95": 0.25900700000011057,
+            "p99": 0.32864799999970273,
+            "max": 3.628505000000132
+          },
+          "store.transaction_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.28488100000004124,
+            "p95": 0.4930450000001656,
+            "p99": 0.6217219999998633,
+            "max": 3.730119000000286
+          },
+          "ingestion_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.2959760000003371,
+            "p95": 0.5229229999995368,
+            "p99": 0.6496220000003632,
+            "max": 3.7510080000001835
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    },
+    {
+      "repetition": 2,
+      "scenario": "overload-reconnect",
+      "internalInstrumentationAvailable": true,
+      "offered": 1001,
+      "completed": 128,
+      "duplicates": 251,
+      "dropped": 622,
+      "rpcErrors": 8,
+      "reconnects": 1,
+      "paperBuys": 5,
+      "capacity": 64,
+      "elapsedMs": 77.4631330000002,
+      "completedEventsPerSecond": 1652.3989547388908,
+      "offeredEventsPerSecond": 12922.276200731481,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 64
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 64
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1001,
+          "samples": 1001,
+          "p50": 0.016983999999865773,
+          "p95": 0.027571999999963737,
+          "p99": 0.04257099999995262,
+          "max": 0.10948000000007596
+        },
+        "replay.queue_wait_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 23.337247999999818,
+          "p95": 35.00294099999974,
+          "p99": 36.31149199999982,
+          "max": 37.175867999999355
+        },
+        "harness.decoding_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.08906800000022486,
+          "p95": 0.15306599999985337,
+          "p99": 0.25316600000041944,
+          "max": 0.2820059999994555
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.09541399999943678,
+          "p95": 0.13839900000039052,
+          "p99": 0.1595020000004297,
+          "max": 0.24330100000042876
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.2035329999998794,
+          "p95": 0.3171299999994517,
+          "p99": 0.4102530000000115,
+          "max": 1.440628999999717
+        },
+        "replay.processing_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.4051680000002307,
+          "p95": 0.5888549999999668,
+          "p99": 0.8675929999999425,
+          "max": 1.639911000000211
+        },
+        "replay.end_to_end_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 23.709509999999682,
+          "p95": 35.4520509999993,
+          "p99": 36.72869199999968,
+          "max": 37.63106299999981
+        }
+      },
+      "internal": {
+        "uptimeMs": 83.07590600000003,
+        "counters": {
+          "rpc.subscription_requests": 2,
+          "rpc.messages": 1003,
+          "observations.received": 1001,
+          "observations.delivered": 750,
+          "observations.duplicates": 251,
+          "rpc.errors": 8,
+          "rpc.disconnects": 1,
+          "rpc.reconnects": 1,
+          "decoding.pda_cache_hits": 128,
+          "decoding.completed": 128,
+          "decoding.launches": 128,
+          "rpc.calls": 128,
+          "ingestion.received": 128,
+          "strategy.decisions": 128,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 128,
+          "ingestion.completed": 128,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 123,
+          "rpc.reconnect_succeeded": 1
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1003,
+            "samples": 1003,
+            "p50": 0.004723000000012689,
+            "p95": 0.00741199999993114,
+            "p99": 0.010905000000093423,
+            "max": 0.03324199999951816
+          },
+          "monitor.ingestion_ms": {
+            "count": 1003,
+            "samples": 1003,
+            "p50": 0.010091999999531254,
+            "p95": 0.016187000000172702,
+            "p99": 0.025819999999839638,
+            "max": 0.10250700000051438
+          },
+          "monitor.deduplication_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.0011790000007749768,
+            "p95": 0.0020549999999275315,
+            "p99": 0.003365999999914493,
+            "max": 0.023440999999365886
+          },
+          "decoding_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.08824100000038015,
+            "p95": 0.15150999999968917,
+            "p99": 0.2479170000005979,
+            "max": 0.2802369999999428
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0016740000000936561,
+            "p95": 0.06696300000021438,
+            "p99": 0.10281100000065635,
+            "max": 0.20258299999932206
+          },
+          "ingestion.validation_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0059160000000701984,
+            "p95": 0.01602699999966717,
+            "p99": 0.028744999999616994,
+            "max": 0.035979999999653955
+          },
+          "store.queue_wait_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0014450000007855124,
+            "p95": 0.0027740000004996546,
+            "p99": 0.0036840000002484885,
+            "max": 0.003928000000087195
+          },
+          "store.clone_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.06586599999991449,
+            "p95": 0.11573300000054587,
+            "p99": 0.14704499999970722,
+            "max": 0.15583199999946373
+          },
+          "engine.deduplication_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.004635000000234868,
+            "p95": 0.01191599999947357,
+            "p99": 0.029031999999460822,
+            "max": 0.04767699999956676
+          },
+          "risk_evaluation_ms": {
+            "count": 256,
+            "samples": 256,
+            "p50": 0.002480000000105065,
+            "p95": 0.004227000000355474,
+            "p99": 0.005834999999933643,
+            "max": 0.017566000000442727
+          },
+          "strategy_decision_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0030910000004951144,
+            "p95": 0.0052770000002055895,
+            "p99": 0.006030999999893538,
+            "max": 0.019430000000284053
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.01794999999947322,
+            "p95": 0.03434300000026269,
+            "p99": 0.03434300000026269,
+            "max": 0.07590199999958713
+          },
+          "store.validation_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.10018800000034389,
+            "p95": 0.16361800000049698,
+            "p99": 0.20388000000002648,
+            "max": 1.3367450000005192
+          },
+          "store.transaction_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.19117000000005646,
+            "p95": 0.30167099999925995,
+            "p99": 0.3635070000000269,
+            "max": 1.424232000000302
+          },
+          "ingestion_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.2025579999999536,
+            "p95": 0.31591000000025815,
+            "p99": 0.4059339999994336,
+            "max": 1.4386160000003656
+          },
+          "rpc.reconnect_wait_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 28.2478229999997,
+            "p95": 28.2478229999997,
+            "p99": 28.2478229999997,
+            "max": 28.2478229999997
+          },
+          "rpc.recovery_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 28.387158000000454,
+            "p95": 28.387158000000454,
+            "p99": 28.387158000000454,
+            "max": 28.387158000000454
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    },
+    {
+      "repetition": 3,
+      "scenario": "sequential",
+      "internalInstrumentationAvailable": true,
+      "offered": 1000,
+      "completed": 1000,
+      "duplicates": 0,
+      "dropped": 0,
+      "rpcErrors": 59,
+      "reconnects": 0,
+      "paperBuys": 5,
+      "capacity": 1001,
+      "elapsedMs": 599.8556660000004,
+      "completedEventsPerSecond": 1667.0676909134995,
+      "offeredEventsPerSecond": 1667.0676909134995,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 1
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 1
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.0334949999996752,
+          "p95": 0.05396699999982957,
+          "p99": 0.06676400000014837,
+          "max": 1.1579389999997147
+        },
+        "replay.queue_wait_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.004226000000016938,
+          "p95": 0.007110999999895284,
+          "p99": 0.013177999999243184,
+          "max": 0.045432000000801054
+        },
+        "harness.decoding_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.09349199999996927,
+          "p95": 0.13995499999964522,
+          "p99": 0.1768820000006599,
+          "max": 1.4035240000002887
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.0960109999996348,
+          "p95": 0.13789799999995012,
+          "p99": 0.17099799999959941,
+          "max": 1.2584209999995437
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.3326500000002852,
+          "p95": 0.46069100000022445,
+          "p99": 0.6586120000001756,
+          "max": 1.7678310000001147
+        },
+        "replay.processing_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.5358850000002349,
+          "p95": 0.7283350000006976,
+          "p99": 1.071802000000389,
+          "max": 2.081182999999328
+        },
+        "replay.end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.5765970000002199,
+          "p95": 0.7865030000002662,
+          "p99": 1.5091459999994186,
+          "max": 2.11884099999952
+        }
+      },
+      "internal": {
+        "uptimeMs": 609.443604,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "observations.delivered": 1000,
+          "decoding.pda_cache_hits": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "rpc.calls": 1000,
+          "rpc.errors": 59,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 995
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.009396999999808031,
+            "p95": 0.014891000000716303,
+            "p99": 0.023971999999957916,
+            "max": 0.0979219999999259
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.020754000000124506,
+            "p95": 0.034636999999747786,
+            "p99": 0.044152999999823805,
+            "max": 1.0015049999992698
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.001886999999442196,
+            "p95": 0.0030699999997523264,
+            "p99": 0.004087000000254193,
+            "max": 0.09075499999926251
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.09255800000028103,
+            "p95": 0.13872399999945628,
+            "p99": 0.1748120000002018,
+            "max": 1.40208900000016
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0017710000001898152,
+            "p95": 0.07501400000001013,
+            "p99": 0.11125600000013947,
+            "max": 0.14513199999964854
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0066079999996873084,
+            "p95": 0.013104000000566884,
+            "p99": 0.019785999999839987,
+            "max": 0.03249200000027486
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0016500000001542503,
+            "p95": 0.003246000000217464,
+            "p99": 0.004922000000078697,
+            "max": 0.03007400000024063
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07378200000039215,
+            "p95": 0.12138099999992846,
+            "p99": 0.20618500000000495,
+            "max": 0.2794160000003103
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.04744399999981397,
+            "p95": 0.09253800000078627,
+            "p99": 0.11820999999963533,
+            "max": 1.1713819999995394
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.0025139999997918494,
+            "p95": 0.004426999999850523,
+            "p99": 0.007212999999865133,
+            "max": 0.041326000000481145
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.003298000000540924,
+            "p95": 0.005468000000291795,
+            "p99": 0.012252999999873282,
+            "max": 0.04320000000006985
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.016670999999405467,
+            "p95": 0.017608999999538355,
+            "p99": 0.017608999999538355,
+            "max": 0.03246599999965838
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.16598500000054628,
+            "p95": 0.23161100000015722,
+            "p99": 0.31778899999972055,
+            "max": 1.3036259999998947
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.32010300000001735,
+            "p95": 0.44394000000011147,
+            "p99": 0.6343739999992977,
+            "max": 1.7514209999999366
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.3313289999996414,
+            "p95": 0.4586810000000696,
+            "p99": 0.6533550000003743,
+            "max": 1.7657630000003337
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    },
+    {
+      "repetition": 3,
+      "scenario": "dedupe-burst",
+      "internalInstrumentationAvailable": true,
+      "offered": 1000,
+      "completed": 750,
+      "duplicates": 250,
+      "dropped": 0,
+      "rpcErrors": 45,
+      "reconnects": 0,
+      "paperBuys": 5,
+      "capacity": 1001,
+      "elapsedMs": 428.1247290000001,
+      "completedEventsPerSecond": 1751.8259264112721,
+      "offeredEventsPerSecond": 2335.767901881696,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 750
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 750
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 0.018104000000676024,
+          "p95": 0.03289700000004814,
+          "p99": 0.045028999999885855,
+          "max": 2.7449219999998604
+        },
+        "replay.queue_wait_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 204.06241299999965,
+          "p95": 380.68130400000064,
+          "p99": 398.2396869999993,
+          "max": 402.69726900000023
+        },
+        "harness.decoding_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.08894099999997707,
+          "p95": 0.1498859999992419,
+          "p99": 0.18340400000033696,
+          "max": 3.2763149999991583
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.09546200000022509,
+          "p95": 0.14527499999985594,
+          "p99": 0.17737399999987247,
+          "max": 1.2020869999996648
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.2949109999999564,
+          "p95": 0.46655599999940023,
+          "p99": 0.6050649999997404,
+          "max": 2.505668999999216
+        },
+        "replay.processing_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 0.49420399999962683,
+          "p95": 0.7639699999999721,
+          "p99": 1.0049690000005285,
+          "max": 4.0281889999996565
+        },
+        "replay.end_to_end_ms": {
+          "count": 750,
+          "samples": 750,
+          "p50": 204.7046360000004,
+          "p95": 381.24679299999934,
+          "p99": 398.78138600000057,
+          "max": 403.24952399999984
+        }
+      },
+      "internal": {
+        "uptimeMs": 435.64766599999984,
+        "counters": {
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "observations.delivered": 750,
+          "observations.duplicates": 250,
+          "decoding.pda_cache_hits": 750,
+          "decoding.completed": 750,
+          "decoding.launches": 750,
+          "rpc.calls": 750,
+          "rpc.errors": 45,
+          "ingestion.received": 750,
+          "strategy.decisions": 750,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 750,
+          "ingestion.completed": 750,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 745
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.004852000000028056,
+            "p95": 0.008843999999953667,
+            "p99": 0.011318999999275547,
+            "max": 0.03967800000009447
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.011347999999998137,
+            "p95": 0.020916999999826658,
+            "p99": 0.029019999999945867,
+            "max": 0.14272799999980634
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.001247000000148546,
+            "p95": 0.0024530000000595464,
+            "p99": 0.0035339999994903337,
+            "max": 0.10504300000047806
+          },
+          "decoding_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.08789800000067771,
+            "p95": 0.14856700000018463,
+            "p99": 0.18165599999974802,
+            "max": 3.273471999999856
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.0018650000001798617,
+            "p95": 0.07856999999967229,
+            "p99": 0.10830199999963952,
+            "max": 0.8973249999999098
+          },
+          "ingestion.validation_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.005975000000034925,
+            "p95": 0.01414900000054331,
+            "p99": 0.027069000000665255,
+            "max": 0.9927950000001147
+          },
+          "store.queue_wait_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.0016209999994316604,
+            "p95": 0.003381999999874097,
+            "p99": 0.0045250000002852175,
+            "max": 0.020607999999811
+          },
+          "store.clone_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.06980099999964295,
+            "p95": 0.12610599999970873,
+            "p99": 0.20204399999965972,
+            "max": 1.5042560000001686
+          },
+          "engine.deduplication_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.03352199999972072,
+            "p95": 0.06861300000036863,
+            "p99": 0.09222899999986112,
+            "max": 0.28937500000029104
+          },
+          "risk_evaluation_ms": {
+            "count": 1500,
+            "samples": 1500,
+            "p50": 0.0024619999994683894,
+            "p95": 0.004567999999380845,
+            "p99": 0.006554999999934807,
+            "max": 0.029880000000048312
+          },
+          "strategy_decision_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.0030259999994086684,
+            "p95": 0.0053350000007412746,
+            "p99": 0.006750999999894702,
+            "max": 0.019578000000365137
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.015571999999338004,
+            "p95": 0.031827000000703265,
+            "p99": 0.031827000000703265,
+            "max": 0.03975099999934173
+          },
+          "store.validation_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.15462300000035611,
+            "p95": 0.23739699999987351,
+            "p99": 0.30047299999932875,
+            "max": 2.3933999999999287
+          },
+          "store.transaction_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.28349100000014005,
+            "p95": 0.4513569999999163,
+            "p99": 0.5744960000001811,
+            "max": 2.4897220000002562
+          },
+          "ingestion_ms": {
+            "count": 750,
+            "samples": 750,
+            "p50": 0.2937099999999191,
+            "p95": 0.4644659999994474,
+            "p99": 0.6026369999999588,
+            "max": 2.5039749999996275
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    },
+    {
+      "repetition": 3,
+      "scenario": "overload-reconnect",
+      "internalInstrumentationAvailable": true,
+      "offered": 1001,
+      "completed": 128,
+      "duplicates": 251,
+      "dropped": 622,
+      "rpcErrors": 8,
+      "reconnects": 1,
+      "paperBuys": 5,
+      "capacity": 64,
+      "elapsedMs": 84.45185800000036,
+      "completedEventsPerSecond": 1515.6564110170254,
+      "offeredEventsPerSecond": 11852.906776781581,
+      "queue": {
+        "replay.pending": {
+          "current": 0,
+          "peak": 64
+        },
+        "replay.queue_depth": {
+          "current": 0,
+          "peak": 64
+        },
+        "replay.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "latencies": {
+        "harness.monitor_ingestion_ms": {
+          "count": 1001,
+          "samples": 1001,
+          "p50": 0.023185000000012224,
+          "p95": 0.033241000000089116,
+          "p99": 0.05406200000015815,
+          "max": 0.30334099999981845
+        },
+        "replay.queue_wait_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 25.50351000000046,
+          "p95": 38.02596700000049,
+          "p99": 41.999840000000404,
+          "max": 42.723995999999715
+        },
+        "harness.decoding_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.0887059999995472,
+          "p95": 0.166374999999789,
+          "p99": 0.1817430000000968,
+          "max": 0.2781590000004144
+        },
+        "harness.rpc_inspection_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.09529300000031071,
+          "p95": 0.1548929999999018,
+          "p99": 0.2563540000001012,
+          "max": 0.27452199999970617
+        },
+        "harness.paper_ingestion_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.20403799999985495,
+          "p95": 0.34922499999993306,
+          "p99": 0.6929230000005191,
+          "max": 1.6942470000003595
+        },
+        "replay.processing_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 0.40176700000029086,
+          "p95": 0.6709160000000338,
+          "p99": 1.1713169999993625,
+          "max": 1.9191319999999905
+        },
+        "replay.end_to_end_ms": {
+          "count": 128,
+          "samples": 128,
+          "p50": 25.911747000000105,
+          "p95": 38.51827899999989,
+          "p99": 42.48540899999989,
+          "max": 43.173453999999765
+        }
+      },
+      "internal": {
+        "uptimeMs": 89.63390900000013,
+        "counters": {
+          "rpc.subscription_requests": 2,
+          "rpc.messages": 1003,
+          "observations.received": 1001,
+          "observations.delivered": 750,
+          "observations.duplicates": 251,
+          "rpc.errors": 8,
+          "rpc.disconnects": 1,
+          "rpc.reconnects": 1,
+          "decoding.pda_cache_hits": 128,
+          "decoding.completed": 128,
+          "decoding.launches": 128,
+          "rpc.calls": 128,
+          "ingestion.received": 128,
+          "strategy.decisions": 128,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 128,
+          "ingestion.completed": 128,
+          "ingestion.buys_committed": 5,
+          "strategy.rejected": 123,
+          "rpc.reconnect_succeeded": 1
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1003,
+            "samples": 1003,
+            "p50": 0.0074799999993047095,
+            "p95": 0.009151999999630789,
+            "p99": 0.01673899999968853,
+            "max": 0.27656200000001263
+          },
+          "monitor.ingestion_ms": {
+            "count": 1003,
+            "samples": 1003,
+            "p50": 0.012322999999923923,
+            "p95": 0.020543999999972584,
+            "p99": 0.03780499999993481,
+            "max": 0.2960480000001553
+          },
+          "monitor.deduplication_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.001299000000472006,
+            "p95": 0.0023830000000089058,
+            "p99": 0.0056759999997666455,
+            "max": 0.08993099999952392
+          },
+          "decoding_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.08756199999970704,
+            "p95": 0.16277899999931833,
+            "p99": 0.17944799999986571,
+            "max": 0.2726250000005166
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0016649999997753184,
+            "p95": 0.0711619999992763,
+            "p99": 0.09785099999953673,
+            "max": 0.23968299999978626
+          },
+          "ingestion.validation_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.006120000000009895,
+            "p95": 0.01515099999960512,
+            "p99": 0.04958199999964563,
+            "max": 1.1165090000004056
+          },
+          "store.queue_wait_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.0015079999993758975,
+            "p95": 0.003596999999899708,
+            "p99": 0.004780000000209839,
+            "max": 0.008259999999609136
+          },
+          "store.clone_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.06555800000023737,
+            "p95": 0.1209790000002613,
+            "p99": 0.24536299999999756,
+            "max": 0.3630120000007082
+          },
+          "engine.deduplication_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.003064000000449596,
+            "p95": 0.01034799999979441,
+            "p99": 0.014016999999512336,
+            "max": 0.027543999999579682
+          },
+          "risk_evaluation_ms": {
+            "count": 256,
+            "samples": 256,
+            "p50": 0.0024530000000595464,
+            "p95": 0.004815000000235159,
+            "p99": 0.006185000000186847,
+            "max": 0.03816899999947054
+          },
+          "strategy_decision_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.003004000000146334,
+            "p95": 0.004992000000129337,
+            "p99": 0.006784999999581487,
+            "max": 0.011774000000514206
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.02547800000047573,
+            "p95": 0.045794999999998254,
+            "p99": 0.045794999999998254,
+            "max": 0.051304999999956635
+          },
+          "store.validation_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.10445900000013353,
+            "p95": 0.1664329999994152,
+            "p99": 0.27561100000002625,
+            "max": 0.3985179999999673
+          },
+          "store.transaction_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.19478299999991577,
+            "p95": 0.33365000000048894,
+            "p99": 0.5644380000003366,
+            "max": 0.7319170000000668
+          },
+          "ingestion_ms": {
+            "count": 128,
+            "samples": 128,
+            "p50": 0.20295199999964098,
+            "p95": 0.34801400000014837,
+            "p99": 0.6878749999996217,
+            "max": 1.692258999999467
+          },
+          "rpc.reconnect_wait_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 31.18604999999934,
+            "p95": 31.18604999999934,
+            "p99": 31.18604999999934,
+            "max": 31.18604999999934
+          },
+          "rpc.recovery_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 31.358799999999974,
+            "p95": 31.358799999999974,
+            "p99": 31.358799999999974,
+            "max": 31.358799999999974
+          }
+        }
+      },
+      "conservation": {
+        "offeredEqualsCompletedDuplicatesDropped": true
+      }
+    }
+  ]
+}

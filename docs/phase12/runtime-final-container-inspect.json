@@ -1,0 +1,81 @@
+{
+  "Id": "0982f1cd5a86ab8440455d0536875c92f52f87f3d2a004ede83137f1a1d6af61",
+  "Image": "sha256:832343fc13888d3b2c02cff645a1a09a8348e6fea760b020e044259ee3c364fa",
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-11-14T23:08:27.467907571Z",
+    "FinishedAt": "2026-11-14T23:13:30.831406501Z",
+    "Health": {
+      "Status": "unhealthy",
+      "FailingStreak": 20,
+      "Log": [
+        {
+          "Start": "2026-11-14T23:12:29.866853803Z",
+          "End": "2026-11-14T23:12:29.997283339Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T23:12:44.998377079Z",
+          "End": "2026-11-14T23:12:45.120102191Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T23:13:00.121040188Z",
+          "End": "2026-11-14T23:13:00.248201939Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T23:13:15.250127761Z",
+          "End": "2026-11-14T23:13:15.407532662Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T23:13:30.409294795Z",
+          "End": "2026-11-14T23:13:30.547832391Z",
+          "ExitCode": 1,
+          "Output": ""
+        }
+      ]
+    }
+  },
+  "Args": [
+    "node",
+    "dist/scripts/phase11-mainnet.js",
+    "--run",
+    "--seconds",
+    "300",
+    "--max-candidates",
+    "120",
+    "--history-evidence",
+    "/app/history/phase10.json,/app/history/phase11.json",
+    "--output",
+    "/app/data/mainnet"
+  ],
+  "HostConfig": {
+    "ReadonlyRootfs": true,
+    "CapDrop": [
+      "ALL"
+    ],
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "NetworkMode": "host",
+    "Init": true
+  }
+}

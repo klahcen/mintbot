@@ -1,0 +1,142 @@
+{
+  "generatedAt": "2026-11-10T16:52:02.031332+00:00",
+  "node": "v20.19.5",
+  "npm": "11.18.0",
+  "beforeLockSha256": "42314ea6a6906a7a1186b19d3c51b0e983725c127539a4e302fa67409633c75f",
+  "afterLockSha256": "2c4e3614e3ce5a1b062cab4813b13fff6814462263b0dd7c0a82bc3e864b274f",
+  "changedLockEntries": [
+    {
+      "path": "node_modules/eyes",
+      "before": {
+        "version": "0.1.8",
+        "resolved": "https://registry.npmjs.org/eyes/-/eyes-0.1.8.tgz",
+        "integrity": "sha512-GipyPsXO1anza0AOZdy69Im7hGFCNB7Y/NGjDlZGJ3GJJLtwNSb2vrzYrTYJRrRloVx7pl+bhUaTB8yiccPvFQ==",
+        "engines": {
+          "node": "> 0.1.90"
+        }
+      },
+      "after": null
+    },
+    {
+      "path": "node_modules/jayson",
+      "before": {
+        "version": "4.3.0",
+        "resolved": "https://registry.npmjs.org/jayson/-/jayson-4.3.0.tgz",
+        "integrity": "sha512-AauzHcUcqs8OBnCHOkJY280VaTiCm57AbuO7lqzcw7JapGj50BisE3xhksye4zlTSR1+1tAz67wLTl8tEH1obQ==",
+        "license": "MIT",
+        "dependencies": {
+          "@types/connect": "^3.4.33",
+          "@types/node": "^12.12.54",
+          "@types/ws": "^7.4.4",
+          "commander": "^2.20.3",
+          "delay": "^5.0.0",
+          "es6-promisify": "^5.0.0",
+          "eyes": "^0.1.8",
+          "isomorphic-ws": "^4.0.1",
+          "json-stringify-safe": "^5.0.1",
+          "stream-json": "^1.9.1",
+          "uuid": "^8.3.2",
+          "ws": "^7.5.10"
+        },
+        "bin": {
+          "jayson": "bin/jayson.js"
+        },
+        "engines": {
+          "node": ">=8"
+        }
+      },
+      "after": {
+        "version": "5.0.0",
+        "resolved": "https://registry.npmjs.org/jayson/-/jayson-5.0.0.tgz",
+        "integrity": "sha512-FghxOWlJB5ZPsRsuMF1U4GFHjkJfOEYSlIHpI6Wt6MXIzvqWVo0Kpl7/SMfY36vWggA+b+L09zRGP6m4ROVnKg==",
+        "license": "MIT",
+        "dependencies": {
+          "@types/connect": "^3.4.33",
+          "@types/node": "^12.12.54",
+          "@types/ws": "^7.4.4",
+          "commander": "^2.20.3",
+          "delay": "^5.0.0",
+          "es6-promisify": "^5.0.0",
+          "isomorphic-ws": "^4.0.1",
+          "json-stringify-safe": "^5.0.1",
+          "ws": "^7.5.10"
+        },
+        "bin": {
+          "jayson": "bin/jayson.js"
+        },
+        "engines": {
+          "node": ">=20"
+        }
+      }
+    },
+    {
+      "path": "node_modules/jayson/node_modules/utf-8-validate",
+      "before": {
+        "version": "5.0.10",
+        "resolved": "https://registry.npmjs.org/utf-8-validate/-/utf-8-validate-5.0.10.tgz",
+        "integrity": "sha512-Z6czzLq4u8fPOyx7TU6X3dvUZVvoJmxSQ+IcrlmagKhilxlhZgxPK6C5Jqbkw1IDUmFTM+cz9QDnnLTwDz/2gQ==",
+        "hasInstallScript": true,
+        "license": "MIT",
+        "optional": true,
+        "peer": true,
+        "dependencies": {
+          "node-gyp-build": "^4.3.0"
+        },
+        "engines": {
+          "node": ">=6.14.2"
+        }
+      },
+      "after": null
+    },
+    {
+      "path": "node_modules/stream-chain",
+      "before": {
+        "version": "2.2.5",
+        "resolved": "https://registry.npmjs.org/stream-chain/-/stream-chain-2.2.5.tgz",
+        "integrity": "sha512-1TJmBx6aSWqZ4tx7aTpBDXK0/e2hhcNSTV8+CbFJtDjbb+I1mZ8lHit0Grw9GRT+6JbIrrDd8esncgBi8aBXGA==",
+        "license": "BSD-3-Clause"
+      },
+      "after": null
+    },
+    {
+      "path": "node_modules/stream-json",
+      "before": {
+        "version": "1.9.1",
+        "resolved": "https://registry.npmjs.org/stream-json/-/stream-json-1.9.1.tgz",
+        "integrity": "sha512-uWkjJ+2Nt/LO9Z/JyKZbMusL8Dkh97uUBTv3AJQ74y07lVahLY4eEFsPsE97pxYBwr8nnjMAIch5eqI0gPShyw==",
+        "license": "BSD-3-Clause",
+        "dependencies": {
+          "stream-chain": "^2.2.5"
+        }
+      },
+      "after": null
+    },
+    {
+      "path": "node_modules/uuid",
+      "before": {
+        "version": "11.1.1",
+        "resolved": "https://registry.npmjs.org/uuid/-/uuid-11.1.1.tgz",
+        "integrity": "sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==",
+        "funding": [
+          "https://github.com/sponsors/broofa",
+          "https://github.com/sponsors/ctavan"
+        ],
+        "license": "MIT",
+        "bin": {
+          "uuid": "dist/esm/bin/uuid"
+        }
+      },
+      "after": null
+    }
+  ],
+  "sources": [
+    "https://github.com/tedeh/jayson/releases/tag/v5.0.0",
+    "https://github.com/tedeh/jayson/blob/v5.0.0/lib/client/browser/index.js",
+    "https://github.com/advisories/GHSA-3gc7-fjrx-p6mg",
+    "https://github.com/advisories/GHSA-528h-pc64-c93x",
+    "https://github.com/advisories/GHSA-hqr4-qq8f-hg3x",
+    "https://github.com/advisories/GHSA-mjw6-4jj6-33hc"
+  ],
+  "modifiedApplicationModules": [],
+  "noIgnoredAdvisories": true
+}

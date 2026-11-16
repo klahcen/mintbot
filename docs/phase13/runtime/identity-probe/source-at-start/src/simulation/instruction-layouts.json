@@ -1,0 +1,470 @@
+{
+  "pump": {
+    "buy_exact_sol_in": {
+      "discriminator": [
+        56,
+        252,
+        116,
+        8,
+        158,
+        223,
+        205,
+        95
+      ],
+      "accounts": [
+        {
+          "name": "global"
+        },
+        {
+          "name": "fee_recipient",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "bonding_curve",
+          "writable": true
+        },
+        {
+          "name": "associated_bonding_curve",
+          "writable": true
+        },
+        {
+          "name": "associated_user",
+          "writable": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "creator_vault",
+          "writable": true
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program",
+          "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"
+        },
+        {
+          "name": "global_volume_accumulator"
+        },
+        {
+          "name": "user_volume_accumulator",
+          "writable": true
+        },
+        {
+          "name": "fee_config"
+        },
+        {
+          "name": "fee_program",
+          "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ"
+        }
+      ]
+    },
+    "sell": {
+      "discriminator": [
+        51,
+        230,
+        133,
+        164,
+        1,
+        127,
+        131,
+        173
+      ],
+      "accounts": [
+        {
+          "name": "global"
+        },
+        {
+          "name": "fee_recipient",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "bonding_curve",
+          "writable": true
+        },
+        {
+          "name": "associated_bonding_curve",
+          "writable": true
+        },
+        {
+          "name": "associated_user",
+          "writable": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "creator_vault",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program",
+          "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"
+        },
+        {
+          "name": "fee_config"
+        },
+        {
+          "name": "fee_program",
+          "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ"
+        }
+      ]
+    }
+  },
+  "pumpswap": {
+    "buy_exact_quote_in": {
+      "discriminator": [
+        198,
+        46,
+        21,
+        82,
+        180,
+        217,
+        232,
+        112
+      ],
+      "accounts": [
+        {
+          "name": "pool",
+          "writable": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_config"
+        },
+        {
+          "name": "base_mint"
+        },
+        {
+          "name": "quote_mint"
+        },
+        {
+          "name": "user_base_token_account",
+          "writable": true
+        },
+        {
+          "name": "user_quote_token_account",
+          "writable": true
+        },
+        {
+          "name": "pool_base_token_account",
+          "writable": true
+        },
+        {
+          "name": "pool_quote_token_account",
+          "writable": true
+        },
+        {
+          "name": "protocol_fee_recipient"
+        },
+        {
+          "name": "protocol_fee_recipient_token_account",
+          "writable": true
+        },
+        {
+          "name": "base_token_program"
+        },
+        {
+          "name": "quote_token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program",
+          "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA"
+        },
+        {
+          "name": "coin_creator_vault_ata",
+          "writable": true
+        },
+        {
+          "name": "coin_creator_vault_authority"
+        },
+        {
+          "name": "global_volume_accumulator"
+        },
+        {
+          "name": "user_volume_accumulator",
+          "writable": true
+        },
+        {
+          "name": "fee_config"
+        },
+        {
+          "name": "fee_program",
+          "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ"
+        }
+      ]
+    },
+    "sell": {
+      "discriminator": [
+        51,
+        230,
+        133,
+        164,
+        1,
+        127,
+        131,
+        173
+      ],
+      "accounts": [
+        {
+          "name": "pool",
+          "writable": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_config"
+        },
+        {
+          "name": "base_mint"
+        },
+        {
+          "name": "quote_mint"
+        },
+        {
+          "name": "user_base_token_account",
+          "writable": true
+        },
+        {
+          "name": "user_quote_token_account",
+          "writable": true
+        },
+        {
+          "name": "pool_base_token_account",
+          "writable": true
+        },
+        {
+          "name": "pool_quote_token_account",
+          "writable": true
+        },
+        {
+          "name": "protocol_fee_recipient"
+        },
+        {
+          "name": "protocol_fee_recipient_token_account",
+          "writable": true
+        },
+        {
+          "name": "base_token_program"
+        },
+        {
+          "name": "quote_token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program",
+          "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA"
+        },
+        {
+          "name": "coin_creator_vault_ata",
+          "writable": true
+        },
+        {
+          "name": "coin_creator_vault_authority"
+        },
+        {
+          "name": "fee_config"
+        },
+        {
+          "name": "fee_program",
+          "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ"
+        }
+      ]
+    }
+  },
+  "meteora": {
+    "swap2": {
+      "discriminator": [
+        65,
+        75,
+        63,
+        76,
+        235,
+        91,
+        91,
+        136
+      ],
+      "accounts": [
+        {
+          "name": "lb_pair",
+          "writable": true
+        },
+        {
+          "name": "bin_array_bitmap_extension",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "reserve_x",
+          "writable": true
+        },
+        {
+          "name": "reserve_y",
+          "writable": true
+        },
+        {
+          "name": "user_token_in",
+          "writable": true
+        },
+        {
+          "name": "user_token_out",
+          "writable": true
+        },
+        {
+          "name": "token_x_mint"
+        },
+        {
+          "name": "token_y_mint"
+        },
+        {
+          "name": "oracle",
+          "writable": true
+        },
+        {
+          "name": "host_fee_in",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "user",
+          "signer": true
+        },
+        {
+          "name": "token_x_program"
+        },
+        {
+          "name": "token_y_program"
+        },
+        {
+          "name": "memo_program",
+          "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+        },
+        {
+          "name": "event_authority"
+        },
+        {
+          "name": "program"
+        }
+      ]
+    }
+  },
+  "raydium-cpmm": {
+    "swap_base_input": {
+      "discriminator": [
+        143,
+        190,
+        90,
+        218,
+        196,
+        30,
+        51,
+        222
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "signer": true
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "amm_config"
+        },
+        {
+          "name": "pool_state",
+          "writable": true
+        },
+        {
+          "name": "input_token_account",
+          "writable": true
+        },
+        {
+          "name": "output_token_account",
+          "writable": true
+        },
+        {
+          "name": "input_vault",
+          "writable": true
+        },
+        {
+          "name": "output_vault",
+          "writable": true
+        },
+        {
+          "name": "input_token_program"
+        },
+        {
+          "name": "output_token_program"
+        },
+        {
+          "name": "input_token_mint"
+        },
+        {
+          "name": "output_token_mint"
+        },
+        {
+          "name": "observation_state",
+          "writable": true
+        }
+      ]
+    }
+  }
+}

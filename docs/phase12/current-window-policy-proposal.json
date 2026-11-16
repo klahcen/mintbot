@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "status": "DRAFT_REQUIRES_INDEPENDENT_REVIEW",
+  "independentlyApproved": false,
+  "paperAuthorized": false,
+  "fundedAuthorized": false,
+  "version": "phase12-current-window-proposal-v1",
+  "requiredEvidence": {
+    "historicalEpochs": "Retain every prior final evidence hash, gaps and quarantined identities; no automatic reset or silent deletion",
+    "clock": "Same-boot completed host/container clock probe at least the intended bounded interval; fresh coherent wall/monotonic ages; never count sleep",
+    "startBoundary": "Reviewed finalized anchor/lookback per venue from independently operated authenticated providers; exact start completeness must be demonstrated",
+    "providers": "Document actual independently authenticated operator provenance; identical finalized transaction and defensible common market-account bank/owners/bytes/deployment; minContextSlot is not equality",
+    "currentCoverage": "All subscriptions ACKed, receipts current, no unknown gap, unreviewed conflict or quarantined processing; pagination limits remain partial/unrecoverable",
+    "protocol": "Reviewed source/deployment/account/fee/custody model, precise unsigned wires and two-sided simulation evidence for the specific variant",
+    "freshness": "Keep existing finalized-paper-research or stricter policy; no history/restart receipt promoted to live, original times and slots retained",
+    "ownership": "One shared filesystem owner and sticky stop. Crashes require offline reconciliation; no inferred foreign PID lease takeover"
+  },
+  "invalidation": [
+    "Clock discontinuity or unexplained process pause",
+    "Transport incident/ACK failure or stale receipts",
+    "WAL failure or capacity refusal",
+    "Zero/unverifiable transaction identity, state/byte conflict or unknown predecessor",
+    "Partial/unrecoverable recovery or decoder quarantine",
+    "Unknown provider identity, changed deployment or unsupported account layout"
+  ],
+  "explicitIndependentDecisionRequired": "An external reviewer must justify any research-only isolation of a proven clean current window from retained historical gaps. Empty queue/new UUID is insufficient. This proposal does not implement or claim that approval.",
+  "noAutomaticPromotion": true,
+  "signingBroadcastSpending": false
+}

@@ -1,0 +1,8 @@
+# Explicit Phase12 timing preflight overlay; use RESEARCH_SECONDS no larger than the completed probe.
+services:
+  research:
+    environment:
+      RESEARCH_REQUIRE_HOST_HEALTH: "true"
+      RESEARCH_HOST_HEALTH_PATH: /app/host-health/evidence.json
+    volumes:
+      - ${RESEARCH_HOST_HEALTH_DIR:-./docs/phase12/clock-stability}:/app/host-health:ro

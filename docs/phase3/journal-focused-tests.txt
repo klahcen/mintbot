@@ -1,0 +1,80 @@
+TAP version 13
+# Subtest: 1000-event duplicate burst, provider overlap and out-of-order slots process once with bounded concurrent stages
+ok 1 - 1000-event duplicate burst, provider overlap and out-of-order slots process once with bounded concurrent stages
+  ---
+  duration_ms: 648.240905
+  ...
+# Subtest: saturation persists deferred work, exposes rejected unpersistable offers and recovers the pending WAL after restart
+ok 2 - saturation persists deferred work, exposes rejected unpersistable offers and recovers the pending WAL after restart
+  ---
+  duration_ms: 32.740157
+  ...
+# Subtest: dedupe eviction rejects too-old unknown work explicitly rather than double processing
+ok 3 - dedupe eviction rejects too-old unknown work explicitly rather than double processing
+  ---
+  duration_ms: 8.609327
+  ...
+# Subtest: malformed receipt does not poison healthy ingestion and permanent decode failures are quarantined
+ok 4 - malformed receipt does not poison healthy ingestion and permanent decode failures are quarantined
+  ---
+  duration_ms: 20.781186
+  ...
+# Subtest: historical pagination recovers disconnected slots through verified decoder and dedupes live/history overlap
+ok 5 - historical pagination recovers disconnected slots through verified decoder and dedupes live/history overlap
+  ---
+  duration_ms: 35.53083
+  ...
+# Subtest: missing transactions and pagination/retention caps never report full recovery
+ok 6 - missing transactions and pagination/retention caps never report full recovery
+  ---
+  duration_ms: 49.517593
+  ...
+# Subtest: 429 retry-after is honored within a bounded retry budget
+ok 7 - 429 retry-after is honored within a bounded retry budget
+  ---
+  duration_ms: 20.332253
+  ...
+# Subtest: bounded stage worker budget and failure isolation remain observable
+ok 8 - bounded stage worker budget and failure isolation remain observable
+  ---
+  duration_ms: 2.077019
+  ...
+# Subtest: RPC failure before getSlot still consumes a persisted bounded recovery cycle
+ok 9 - RPC failure before getSlot still consumes a persisted bounded recovery cycle
+  ---
+  duration_ms: 9.244492
+  ...
+# Subtest: group acknowledgements follow fsync, duplicates await ownership and checkpoints preserve pending work
+ok 10 - group acknowledgements follow fsync, duplicates await ownership and checkpoints preserve pending work
+  ---
+  duration_ms: 1736.044607
+  ...
+# Subtest: write ENOSPC failure never acknowledges ownership and surfaces durable failure
+ok 11 - write ENOSPC failure never acknowledges ownership and surfaces durable failure
+  ---
+  duration_ms: 1530.70495
+  ...
+# Subtest: sync ENOSPC failure never acknowledges ownership and surfaces durable failure
+ok 12 - sync ENOSPC failure never acknowledges ownership and surfaces durable failure
+  ---
+  duration_ms: 1525.684309
+  ...
+# Subtest: worker journal pipeline drains only fsynced ownership and bounded completion acknowledgements
+ok 13 - worker journal pipeline drains only fsynced ownership and bounded completion acknowledgements
+  ---
+  duration_ms: 1673.565727
+  ...
+# Subtest: complete WAL corruption fails closed; a truncated final record is discarded explicitly on restart
+ok 14 - complete WAL corruption fails closed; a truncated final record is discarded explicitly on restart
+  ---
+  duration_ms: 4654.685663
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13131.53626

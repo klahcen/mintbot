@@ -1,0 +1,115 @@
+{
+  "generatedAt": 1794763948314,
+  "inputSha256": "f10b3fc9a19bc89ea3f5da2afa4cdd6d4c22781a0be2dd70ad2ea4d5e5747834",
+  "rows": [
+    {
+      "provider": "primary",
+      "signature": "3fxCyuL6K5tiPp53bZSpkHkNq3q42zU9Hfw3bZm3qCJG4BmRc6uY9ffDb1vfxwkBeUiTxpVj9ivYWoMWg4CDibJX",
+      "origin": "bounded-current-history",
+      "result": {
+        "status": "signed-payload-matched",
+        "version": 1,
+        "slot": 469813973,
+        "signatures": 1,
+        "accountKeys": 61,
+        "instructions": 1,
+        "transactionConfig": {
+          "computeUnitLimit": 180166,
+          "heapSize": null,
+          "loadedAccountsDataSizeLimit": 12534881,
+          "priorityFee": 527
+        },
+        "wireSha256": "3427dacd7623ff3c475941ad36885340b4f5d41f864181c5d01e990fbb75ca0f",
+        "unresolved": [
+          "Independent provider attribution and signed payload agreement",
+          "v0 lookup-table provenance where applicable",
+          "Complete metadata/inner-instruction invocation and venue semantics",
+          "Version-specific fee/config economic validation",
+          "Fresh creation, risk and coverage-epoch approval"
+        ],
+        "executionEligible": false
+      }
+    },
+    {
+      "provider": "primary",
+      "signature": "5JLEAMg7ncqc757LmSKLofhf1KaQTYJaGrevUh1SmHP7UwHp8C8e5LnHFbeQJbBnVK8KeYTef1a43YhdTudrNNKk",
+      "origin": "retained-historical-control",
+      "result": {
+        "status": "signed-payload-matched",
+        "version": 1,
+        "slot": 469514659,
+        "signatures": 1,
+        "accountKeys": 19,
+        "instructions": 4,
+        "transactionConfig": {
+          "computeUnitLimit": 600000,
+          "heapSize": null,
+          "loadedAccountsDataSizeLimit": 8388608,
+          "priorityFee": 10001
+        },
+        "wireSha256": "761e596a947edbab434ec85eb122953135934dc22fb50a53dabf85193b6a8e2c",
+        "unresolved": [
+          "Independent provider attribution and signed payload agreement",
+          "v0 lookup-table provenance where applicable",
+          "Complete metadata/inner-instruction invocation and venue semantics",
+          "Version-specific fee/config economic validation",
+          "Fresh creation, risk and coverage-epoch approval"
+        ],
+        "executionEligible": false
+      }
+    },
+    {
+      "provider": "secondary",
+      "signature": "evr3UnzUSxdPY5LQQKF1jhbxsWWCyM8BJ4BKkUXd4buo6EwoqDcZ9fkSs8QkqnnixYuJMBKe6k5m6HnHq1TvG5c",
+      "origin": "bounded-current-history",
+      "result": {
+        "status": "signed-payload-matched",
+        "version": "legacy",
+        "slot": 469813969,
+        "signatures": 1,
+        "accountKeys": 22,
+        "instructions": 10,
+        "wireSha256": "23ee7d780b5a30962e712162f0ecad46fb52b7167360a40c009ac6b12a5906f2",
+        "unresolved": [
+          "Independent provider attribution and signed payload agreement",
+          "v0 lookup-table provenance where applicable",
+          "Complete metadata/inner-instruction invocation and venue semantics",
+          "Version-specific fee/config economic validation",
+          "Fresh creation, risk and coverage-epoch approval"
+        ],
+        "executionEligible": false
+      }
+    },
+    {
+      "provider": "secondary",
+      "signature": "5JLEAMg7ncqc757LmSKLofhf1KaQTYJaGrevUh1SmHP7UwHp8C8e5LnHFbeQJbBnVK8KeYTef1a43YhdTudrNNKk",
+      "origin": "retained-historical-control",
+      "result": {
+        "status": "signed-payload-matched",
+        "version": 1,
+        "slot": 469514659,
+        "signatures": 1,
+        "accountKeys": 19,
+        "instructions": 4,
+        "transactionConfig": {
+          "computeUnitLimit": 600000,
+          "heapSize": null,
+          "loadedAccountsDataSizeLimit": 8388608,
+          "priorityFee": 10001
+        },
+        "wireSha256": "761e596a947edbab434ec85eb122953135934dc22fb50a53dabf85193b6a8e2c",
+        "unresolved": [
+          "Independent provider attribution and signed payload agreement",
+          "v0 lookup-table provenance where applicable",
+          "Complete metadata/inner-instruction invocation and venue semantics",
+          "Version-specific fee/config economic validation",
+          "Fresh creation, risk and coverage-epoch approval"
+        ],
+        "executionEligible": false
+      }
+    }
+  ],
+  "retainedControlSignedBytesMatch": true,
+  "operatorIndependence": "unknown",
+  "executionEligible": false
+}

@@ -1,0 +1,63 @@
+node_modules/
+dist/
+frontend/dist/
+.env
+data/*
+!data/.gitkeep
+coverage/
+
+*.tsbuildinfo
+
+/private/
+
+.env.*
+!.env.example
+cloud.env
+backups/
+*.pem
+*.key
+*.dump
+*.cms
+
+# Local credentials
+.env
+.env.*
+!.env.example
+cloud.env
+private/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Runtime data and backups
+data/
+backups/
+*.sqlite
+*.db
+node_modules/
+dist/
+coverage/
+*.log
+
+# Editor/local files
+.codex/
+.vscode/settings.json
+
+# SSH keys
+*.key
+*.pub
+*.pem
+
+# Local dependencies
+node_modules/
+vendor/
+
+# Secrets and runtime data
+.env
+.env.*
+!.env.example
+cloud.env
+private/
+data/
+backups/

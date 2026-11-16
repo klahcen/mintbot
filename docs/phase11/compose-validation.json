@@ -1,0 +1,65 @@
+{
+  "valid": true,
+  "appMonitor": "",
+  "appMarketOwner": "false",
+  "researchCommand": [
+    "node",
+    "dist/scripts/phase11-mainnet.js",
+    "--run",
+    "--seconds",
+    "1800",
+    "--venues",
+    "pump,pumpswap,raydium-cpmm,meteora-dlmm",
+    "--history-evidence",
+    "/app/history/phase10.json",
+    "--output",
+    "/app/data/run"
+  ],
+  "researchEnvironment": {
+    "MODE": "paper",
+    "RESEARCH_OWNER_PATH": "/app/research-control/decision-owner.lock",
+    "RESEARCH_PROGRESS_PATH": "/app/data/run/run-progress.json",
+    "RESEARCH_STOP_PATH": "/app/research-control/global-stop.json",
+    "SOLANA_RPC_URL": "https://api.mainnet-beta.solana.com",
+    "SOLANA_SECONDARY_RPC_URL": "https://solana-rpc.publicnode.com",
+    "SOLANA_SECONDARY_WS_URL": "wss://solana-rpc.publicnode.com",
+    "SOLANA_WS_URL": "wss://api.mainnet-beta.solana.com"
+  },
+  "researchMounts": [
+    {
+      "type": "volume",
+      "source": "research-state",
+      "target": "/app/data",
+      "volume": {}
+    },
+    {
+      "type": "volume",
+      "source": "research-control",
+      "target": "/app/research-control",
+      "volume": {}
+    },
+    {
+      "type": "bind",
+      "source": "/home/lkazaz/Desktop/mintbot/docs/phase11/coverage-history.json",
+      "target": "/app/history/phase10.json",
+      "read_only": true,
+      "bind": {}
+    }
+  ],
+  "appResearchMounts": [
+    {
+      "type": "volume",
+      "source": "research-state",
+      "target": "/app/research-data",
+      "read_only": true,
+      "volume": {}
+    },
+    {
+      "type": "volume",
+      "source": "research-control",
+      "target": "/app/research-control",
+      "volume": {}
+    }
+  ],
+  "scope": "Compose expansion only; no app/PostgreSQL/Redis stack launched. Required placeholder credentials discarded, never serialized."
+}

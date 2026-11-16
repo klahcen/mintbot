@@ -1,0 +1,12 @@
+# Remaining funded-trading blockers after Phase 8
+
+Funded release is **blocked**. Live mode remains disabled; no transaction was signed, broadcast or funded.
+
+1. Remediate the remaining **three high audit paths** for one underlying unpatched bigint-buffer native advisory using an independently reviewed compatible replacement/migration. Three moderate findings were removed; native risk is not dismissed or hidden.
+2. Demonstrate a genuine eligible current-chain launch → linked unsigned buy/sell simulations → exact effects → durable paper entry → fresh paper exit. Actual research rejections are retained; no opportunity or inventory may be manufactured to fill this gap.
+3. Complete independently attributed/authenticated provider validation for relevant transactions and exact quote banks, broader route/account-lifecycle coverage and authoritative fee decomposition. Current two-public-endpoint observation remains unknown. Process-local quarantine/manual-resolution history needs durable multi-instance coordination.
+4. Complete production database service/OS isolation, protected migration credentials, off-host encrypted backup/PITR/retention automation, tested RPO/RTO and disaster/failover recovery, operational monitoring delivery and accountable incident response. Retained local SCRAM PostgreSQL and five-minute health sampling are not HA.
+5. Finish dedicated-host performance attribution and multi-hour realistic mainnet/load validation, including the observed reconnect-budget exhaustion/unrecovered coverage, worker GC/allocation, continuous external scheduling/I/O tracing and verified backfill/recovery coverage. A/A benchmark differences are measurement variability, not speedups or proof of the historical regressions' cause.
+6. Independently implement/review wallet custody, authenticated replay-proof signer authorization, exact spending/message policy, original-signature journaling, current-balance settlement and uncertain outcome recovery. Current signer work is design only.
+7. Prove distributed emergency-stop propagation and behavior during database/network outages. Neither WAL completion, dashboard bearer authorization, paper balance, read-only simulation nor research provider agreement can authorize spending.
+8. Obtain separate explicit authorization and independent security approval before any funded validation. No configuration flag alone may bypass these gates.

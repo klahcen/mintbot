@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-11-14T20:02:20.467Z",
+  "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "reviewedPin": {
+    "dataAddress": "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu",
+    "deploymentSlot": 458921440
+  },
+  "observations": [
+    {
+      "provider": "api.mainnet-beta.solana.com",
+      "startedAt": "2026-11-14T20:02:17.500Z",
+      "context": {
+        "apiVersion": "4.4.0",
+        "slot": 469454488
+      },
+      "request": {
+        "method": "getMultipleAccounts",
+        "params": [
+          [
+            "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu"
+          ],
+          {
+            "commitment": "finalized",
+            "encoding": "base64"
+          }
+        ]
+      },
+      "programHeader": {
+        "data": [
+          "AgAAAJWy2WSqUxLsq7FiccnW8C83EAraitR45YMsvQmTvwu6",
+          "base64"
+        ],
+        "executable": true,
+        "lamports": 9910912471,
+        "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+        "rentEpoch": 18446744073709552000,
+        "space": 36
+      },
+      "programDataHeader": {
+        "data": [
+          "AwAAAKw49RsAAAAAAWNI+4ICMfurc9wwg+Hz8Un/EltxiCDzLrGhW/781hsJ",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 53268311040,
+        "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+        "rentEpoch": 18446744073709552000,
+        "space": 10485760
+      },
+      "observedDeploymentSlot": "469055660",
+      "programDataBytes": 10485760,
+      "programDataSha256": "c849155c1d5bf990c564bad8df406d704ed05b8d3dc4ee30ce2350bfbc4edf3a",
+      "allocatedPayloadBytes": 10485715,
+      "allocatedPayloadSha256": "f0a9c1e2b65decfef63d807cbf2cedcfd24040634d1a9a3443b63eccecd809d6",
+      "elfReferencedBytes": 1936536,
+      "elfReferencedSha256": "0630a8108569c1c7a5b833c6e11276ebac03c801c495b1685fcfac99bf865cc5",
+      "trailingBytesAllZero": true,
+      "elfMachine": 263,
+      "elfFlags": 0,
+      "authorityOption": 1,
+      "reviewedPinMatches": false
+    }
+  ],
+  "sources": [
+    {
+      "repository": "pump-fun/pump-public-docs",
+      "commit": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/README.md",
+      "sha256": "04ea2475df06df632ca4c013ae2f6d9063599f669f4c8acf53e2eeae2277427f",
+      "bytes": 12216,
+      "local": "README.md"
+    },
+    {
+      "repository": "pump-fun/pump-public-docs",
+      "commit": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+      "path": "idl/pump.json",
+      "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json",
+      "sha256": "7616681ea557975f9f623ac211080f22a93060781eaf4765b0a488d980997207",
+      "bytes": 328788,
+      "local": "idl-pump.json"
+    },
+    {
+      "repository": "pump-fun/pump-public-docs",
+      "commit": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+      "path": "docs/PUMP_PROGRAM_README.md",
+      "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/docs/PUMP_PROGRAM_README.md",
+      "sha256": "ce6c84112e9ec870a2341562eaf825fe05059b157ce35cdf9d59a533262edc90",
+      "bytes": 9668,
+      "local": "docs-PUMP_PROGRAM_README.md"
+    },
+    {
+      "repository": "pump-fun/pump-public-docs",
+      "commit": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+      "path": "docs/instructions/CREATE_WITH_PUMP_COIN_QUOTE.md",
+      "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/docs/instructions/CREATE_WITH_PUMP_COIN_QUOTE.md",
+      "sha256": "ab4e501f9b4371536af45118baab2f75938f7672274cafa7b47460d72ce57fc6",
+      "bytes": 13370,
+      "local": "docs-instructions-CREATE_WITH_PUMP_COIN_QUOTE.md"
+    }
+  ],
+  "newVariantEnabled": false,
+  "sourceToBinaryEquivalence": "unknown",
+  "liveTrading": false,
+  "scope": "At most two full ProgramData fetches and five bounded official source reads. ELF extent is computed from file-backed headers/segments/sections; allocated payload hash includes storage padding. Neither hash proves source correspondence, correct arithmetic, unsigned swap compatibility or eligibility. Existing pin remains unchanged."
+}

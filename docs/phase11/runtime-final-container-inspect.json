@@ -1,0 +1,81 @@
+{
+  "Id": "738e1341293407679461b954ae7072912f0a5c67bcee9dbead4533fbb060a4b0",
+  "Image": "sha256:b37f6b69b73addace3107edee7ba68115157e2e600d1754085ef96fecf2bfd00",
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-11-14T20:17:57.826458864Z",
+    "FinishedAt": "2026-11-14T22:28:57.842080533Z",
+    "Health": {
+      "Status": "unhealthy",
+      "FailingStreak": 38,
+      "Log": [
+        {
+          "Start": "2026-11-14T20:26:33.368980234Z",
+          "End": "2026-11-14T20:26:33.505563427Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T20:26:48.506385916Z",
+          "End": "2026-11-14T20:26:48.65352211Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T20:27:03.654997072Z",
+          "End": "2026-11-14T20:27:03.787423794Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T20:27:18.788570402Z",
+          "End": "2026-11-14T20:27:18.930305809Z",
+          "ExitCode": 1,
+          "Output": ""
+        },
+        {
+          "Start": "2026-11-14T20:27:33.932011087Z",
+          "End": "2026-11-14T20:27:34.120359796Z",
+          "ExitCode": 1,
+          "Output": ""
+        }
+      ]
+    }
+  },
+  "Args": [
+    "node",
+    "dist/scripts/phase11-mainnet.js",
+    "--run",
+    "--seconds",
+    "1800",
+    "--max-candidates",
+    "120",
+    "--history-evidence",
+    "/app/history/phase10.json",
+    "--output",
+    "/app/data/mainnet-validated"
+  ],
+  "HostConfig": {
+    "ReadonlyRootfs": true,
+    "CapDrop": [
+      "ALL"
+    ],
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "NetworkMode": "host",
+    "Init": true
+  }
+}

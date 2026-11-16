@@ -1,0 +1,8 @@
+{
+  "generatedAt": "2026-11-13T18:02:54.386411+00:00",
+  "status": "invalidated",
+  "reason": "This heartbeat shared the retained cluster with the subsequently started full fault-test suite. SIGTERM was requested to stop overlap; cluster shutdown then failed because the suite had already stopped the cluster. Raw heartbeat/error log retained. No successful clean-soak claim.",
+  "log": "database-soak.log",
+  "replacement": "database-soak-clean.log",
+  "isolationCorrection": "Separate private cluster root for the new heartbeat; no test cluster lifecycle sharing. Output now survives shutdown failure."
+}

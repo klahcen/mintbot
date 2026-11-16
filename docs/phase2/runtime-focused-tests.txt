@@ -1,0 +1,90 @@
+TAP version 13
+# Subtest: 1000-event duplicate burst, provider overlap and out-of-order slots process once with bounded concurrent stages
+ok 1 - 1000-event duplicate burst, provider overlap and out-of-order slots process once with bounded concurrent stages
+  ---
+  duration_ms: 595.024617
+  ...
+# Subtest: saturation persists deferred work, exposes rejected unpersistable offers and recovers the pending WAL after restart
+ok 2 - saturation persists deferred work, exposes rejected unpersistable offers and recovers the pending WAL after restart
+  ---
+  duration_ms: 30.787001
+  ...
+# Subtest: dedupe eviction rejects too-old unknown work explicitly rather than double processing
+ok 3 - dedupe eviction rejects too-old unknown work explicitly rather than double processing
+  ---
+  duration_ms: 10.479701
+  ...
+# Subtest: malformed receipt does not poison healthy ingestion and permanent decode failures are quarantined
+ok 4 - malformed receipt does not poison healthy ingestion and permanent decode failures are quarantined
+  ---
+  duration_ms: 12.780601
+  ...
+# Subtest: historical pagination recovers disconnected slots through verified decoder and dedupes live/history overlap
+ok 5 - historical pagination recovers disconnected slots through verified decoder and dedupes live/history overlap
+  ---
+  duration_ms: 21.346971
+  ...
+# Subtest: missing transactions and pagination/retention caps never report full recovery
+ok 6 - missing transactions and pagination/retention caps never report full recovery
+  ---
+  duration_ms: 36.817677
+  ...
+# Subtest: 429 retry-after is honored within a bounded retry budget
+ok 7 - 429 retry-after is honored within a bounded retry budget
+  ---
+  duration_ms: 10.842545
+  ...
+# Subtest: bounded stage worker budget and failure isolation remain observable
+ok 8 - bounded stage worker budget and failure isolation remain observable
+  ---
+  duration_ms: 1.373055
+  ...
+# Subtest: runtime service reconnects via WebSocket and performs real HTTP-format read-only backfill
+ok 9 - runtime service reconnects via WebSocket and performs real HTTP-format read-only backfill
+  ---
+  duration_ms: 517.240023
+  ...
+# Subtest: HTTP recovery has abortable lifetime and bounded response memory
+ok 10 - HTTP recovery has abortable lifetime and bounded response memory
+  ---
+  duration_ms: 38.475537
+  ...
+# Subtest: silent socket loss is detected by monotonic scheduled heartbeat and creates an explicit reconnect
+ok 11 - silent socket loss is detected by monotonic scheduled heartbeat and creates an explicit reconnect
+  ---
+  duration_ms: 2.198685
+  ...
+# Subtest: cached rows are deeply immutable, active positions remain isolated and generic transactions remain editable
+ok 12 - cached rows are deeply immutable, active positions remain isolated and generic transactions remain editable
+  ---
+  duration_ms: 48.550329
+  ...
+# Subtest: cached row schemas reject new malformed records, numeric invalidity and bounds exactly as full state
+ok 13 - cached row schemas reject new malformed records, numeric invalidity and bounds exactly as full state
+  ---
+  duration_ms: 18.819821
+  ...
+# Subtest: Store admission is bounded and rejected work is explicit without poisoning FIFO
+ok 14 - Store admission is bounded and rejected work is explicit without poisoning FIFO
+  ---
+  duration_ms: 9.618695
+  ...
+# Subtest: restart restores last acknowledged state and ignores orphan temporary writes
+ok 15 - restart restores last acknowledged state and ignores orphan temporary writes
+  ---
+  duration_ms: 65.44729
+  ...
+# Subtest: frozen outer rows with mutable nested arrays are recursively frozen before cache reuse
+ok 16 - frozen outer rows with mutable nested arrays are recursively frozen before cache reuse
+  ---
+  duration_ms: 5.525998
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2881.651306

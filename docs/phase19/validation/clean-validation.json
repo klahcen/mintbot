@@ -1,0 +1,137 @@
+{
+  "node": "v22.22.0",
+  "directory": "/tmp/mintbot-phase19-clean-v5fcjyfy",
+  "testDatabaseIsolation": "disposable os.homedir override; HOME unchanged",
+  "isolatedTestHome": "/tmp/mintbot-phase19-clean-v5fcjyfy/test-user",
+  "checks": [
+    {
+      "name": "install",
+      "args": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 14.301350775000174
+    },
+    {
+      "name": "typecheck",
+      "args": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 30.53382036000403
+    },
+    {
+      "name": "build",
+      "args": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 44.59917934799887
+    },
+    {
+      "name": "tests",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/api.test.ts",
+        "tests/chain.test.ts",
+        "tests/decoders-phase2.test.ts",
+        "tests/dependency-compatibility.test.ts",
+        "tests/engine.test.ts",
+        "tests/execution-economics.test.ts",
+        "tests/execution-reconciliation.test.ts",
+        "tests/execution.test.ts",
+        "tests/freshness-phase3.test.ts",
+        "tests/ingestion-phase2.test.ts",
+        "tests/journal-phase3.test.ts",
+        "tests/latency.test.ts",
+        "tests/market-api.test.ts",
+        "tests/market-owners.test.ts",
+        "tests/market-paper.test.ts",
+        "tests/market-pools.test.ts",
+        "tests/market-pump.test.ts",
+        "tests/market-recovery.test.ts",
+        "tests/market-rpc.test.ts",
+        "tests/phase10-protocol.test.ts",
+        "tests/phase10-reliability.test.ts",
+        "tests/phase11-research.test.ts",
+        "tests/phase12-host-health.test.ts",
+        "tests/phase13-verification-scheduling.test.ts",
+        "tests/phase13-wire-identity.test.ts",
+        "tests/phase14-venue-delivery.test.ts",
+        "tests/phase15-version-boundary.test.ts",
+        "tests/phase16-automatic-paper.test.ts",
+        "tests/phase17-validation.test.ts",
+        "tests/phase18-providers.test.ts",
+        "tests/phase19-cloud.test.ts",
+        "tests/phase5-exits.test.ts",
+        "tests/phase5-lifecycle.test.ts",
+        "tests/phase5-provisional.test.ts",
+        "tests/phase5-reader.test.ts",
+        "tests/phase5-real-chain.test.ts",
+        "tests/phase7-paper-gate.test.ts",
+        "tests/phase7-sell-accounting.test.ts",
+        "tests/phase7-sell-recorded.test.ts",
+        "tests/phase8-database.test.ts",
+        "tests/phase8-feed-health.test.ts",
+        "tests/phase8-paper-guard.test.ts",
+        "tests/phase8-providers.test.ts",
+        "tests/phase8-research-projection.test.ts",
+        "tests/phase9-admission.test.ts",
+        "tests/phase9-bigint-migration.test.ts",
+        "tests/phase9-coverage.test.ts",
+        "tests/phase9-market-diagnostics.test.ts",
+        "tests/phase9-recovery.test.ts",
+        "tests/phase9-supervisor.test.ts",
+        "tests/protocol-phase3.test.ts",
+        "tests/research-dashboard.test.ts",
+        "tests/rotation-phase3.test.ts",
+        "tests/service-phase2.test.ts",
+        "tests/simulation-builders.test.ts",
+        "tests/simulation-intents.test.ts",
+        "tests/simulation-persistent.test.ts",
+        "tests/simulation-preparation.test.ts",
+        "tests/simulation-recorded.test.ts",
+        "tests/simulation-rpc.test.ts",
+        "tests/simulation-service.test.ts",
+        "tests/store-phase2.test.ts",
+        "tests/wallet.test.ts"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 199.69239884700073
+    },
+    {
+      "name": "python-clock-tests",
+      "args": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_phase*.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.21153649500047322
+    },
+    {
+      "name": "audit",
+      "args": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 1.3411976330025936
+    }
+  ]
+}

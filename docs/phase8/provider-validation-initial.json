@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-11-10T16:51:05.440Z",
+  "status": "unknown",
+  "eligible": false,
+  "reasons": [
+    "Provider failure or quarantine; failover cannot establish independent agreement"
+  ],
+  "observations": [
+    {
+      "provider": "solana-public",
+      "host": "api.mainnet-beta.solana.com",
+      "operator": "Solana public cluster endpoint (underlying operator not independently established)",
+      "observedAt": 1794329464307,
+      "genesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "finalizedSlot": 467794150,
+      "error": "Read-only provider unavailable or inconsistent evidence"
+    },
+    {
+      "provider": "publicnode",
+      "host": "solana-rpc.publicnode.com",
+      "operator": "Allnodes PublicNode",
+      "observedAt": 1794329464326,
+      "genesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+      "finalizedSlot": 467794147,
+      "error": "Read-only provider unavailable or inconsistent evidence"
+    }
+  ],
+  "independence": "unknown",
+  "quarantined": [
+    "publicnode",
+    "solana-public"
+  ],
+  "gaps": [],
+  "liveAuthorized": false,
+  "operatorAttributionLimit": "Public endpoint service brands differ; Solana endpoint's underlying operator and independence from Allnodes were not established. No independent-infrastructure agreement claim."
+}

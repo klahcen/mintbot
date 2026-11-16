@@ -1,0 +1,60 @@
+{
+  "rows": [
+    {
+      "host": "solana-rpc.publicnode.com",
+      "at": 1794751626537,
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "getTransaction",
+        "params": [
+          "4LMhuCxqVfDBZoLNgA1hubtAMfYiDZbMJvynJjmCTB8DUUjYXKrcucJRBKMpTebJBsiVNeyHSWWKKEf1468EHQVA",
+          {
+            "commitment": "finalized",
+            "encoding": "json",
+            "maxSupportedTransactionVersion": 0
+          }
+        ]
+      },
+      "httpStatus": 200,
+      "response": {
+        "jsonrpc": "2.0",
+        "error": {
+          "code": -32015,
+          "message": "Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: \"maxSupportedTransactionVersion\": 1"
+        },
+        "id": 1
+      },
+      "eligible": false
+    },
+    {
+      "host": "api.mainnet-beta.solana.com",
+      "at": 1794751627157,
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "getTransaction",
+        "params": [
+          "dWwWQWNqE8TNPD5uBadmtJwHaD9VnefUUaYLV7LFCvSPeaooyYiUCByjVuEvqfweTP6AVXv7bEhoGzQyQkfTRex",
+          {
+            "commitment": "finalized",
+            "encoding": "json",
+            "maxSupportedTransactionVersion": 0
+          }
+        ]
+      },
+      "httpStatus": 200,
+      "response": {
+        "jsonrpc": "2.0",
+        "error": {
+          "code": -32015,
+          "message": "Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: \"maxSupportedTransactionVersion\": 1"
+        },
+        "id": 1
+      },
+      "eligible": false
+    }
+  ],
+  "newVersionsEnabled": false,
+  "liveTrading": false
+}

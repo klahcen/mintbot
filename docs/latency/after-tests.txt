@@ -1,0 +1,264 @@
+
+> mintbot@0.1.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: authenticated HTTP paper lifecycle, rejection, persistence and restart
+ok 1 - authenticated HTTP paper lifecycle, rejection, persistence and restart
+  ---
+  duration_ms: 6608.809785
+  ...
+# Subtest: live mode remains rejected before serving requests
+ok 2 - live mode remains rejected before serving requests
+  ---
+  duration_ms: 2094.708664
+  ...
+# Subtest: verified programs are valid and missing protocol decoder fails closed
+ok 3 - verified programs are valid and missing protocol decoder fails closed
+  ---
+  duration_ms: 8.745647
+  ...
+# Subtest: pinned Pump CreateEvent decodes bounded strings, verifies PDA and rejects failed or malformed data
+ok 4 - pinned Pump CreateEvent decodes bounded strings, verifies PDA and rejects failed or malformed data
+  ---
+  duration_ms: 23.388221
+  ...
+# Subtest: spoofed event from nested malicious program is ignored despite a genuine Pump parent
+ok 5 - spoofed event from nested malicious program is ignored despite a genuine Pump parent
+  ---
+  duration_ms: 8.15408
+  ...
+# Subtest: historical finalized mainnet fixture replays observed compute and CPI inventory
+ok 6 - historical finalized mainnet fixture replays observed compute and CPI inventory
+  ---
+  duration_ms: 30.60467
+  ...
+# Subtest: official compute budget binary encoding including u64 precision
+ok 7 - official compute budget binary encoding including u64 precision
+  ---
+  duration_ms: 3.10616
+  ...
+# Subtest: WebSocket subscribes per program, deduplicates, tracks monotonic slot and stops
+ok 8 - WebSocket subscribes per program, deduplicates, tracks monotonic slot and stops
+  ---
+  duration_ms: 3.604013
+  ...
+# Subtest: WebSocket reconnect budget terminates after repeated disconnection
+ok 9 - WebSocket reconnect budget terminates after repeated disconnection
+  ---
+  duration_ms: 13.330363
+  ...
+# Subtest: transaction inspection inventories top-level, inner and compute instructions
+ok 10 - transaction inspection inventories top-level, inner and compute instructions
+  ---
+  duration_ms: 1.483303
+  ...
+# Subtest: mint scanner decodes official token layout and keeps unknown evidence explicit
+ok 11 - mint scanner decodes official token layout and keeps unknown evidence explicit
+  ---
+  duration_ms: 3.335229
+  ...
+# Subtest: default startup is stopped paper trading
+ok 12 - default startup is stopped paper trading
+  ---
+  duration_ms: 4.934432
+  ...
+# Subtest: safe fixture enters; duplicate event and concurrent event cannot double spend
+ok 13 - safe fixture enters; duplicate event and concurrent event cannot double spend
+  ---
+  duration_ms: 36.157774
+  ...
+# Subtest: reserve, daily spend, max risk, kill, position limits reject
+ok 14 - reserve, daily spend, max risk, kill, position limits reject
+  ---
+  duration_ms: 3.54179
+  ...
+# Subtest: stale and future prices never authorize entries
+ok 15 - stale and future prices never authorize entries
+  ---
+  duration_ms: 0.813259
+  ...
+# Subtest: partial sell conserves allocated basis and nets all modeled costs
+ok 16 - partial sell conserves allocated basis and nets all modeled costs
+  ---
+  duration_ms: 17.113017
+  ...
+# Subtest: concurrent full exits create one sell
+ok 17 - concurrent full exits create one sell
+  ---
+  duration_ms: 4.888525
+  ...
+# Subtest: failed sells and missing liquidity increment failures, preserve position
+ok 18 - failed sells and missing liquidity increment failures, preserve position
+  ---
+  duration_ms: 4.724871
+  ...
+# Subtest: take profit, stop loss, trailing and time exits evaluate fresh marks only
+ok 19 - take profit, stop loss, trailing and time exits evaluate fresh marks only
+  ---
+  duration_ms: 4.189573
+  ...
+# Subtest: stale manual sells and fees exceeding proceeds reject without mutation
+ok 20 - stale manual sells and fees exceeding proceeds reject without mutation
+  ---
+  duration_ms: 6.77279
+  ...
+# Subtest: failed transaction rolls back entire mutation and queue remains usable
+ok 21 - failed transaction rolls back entire mutation and queue remains usable
+  ---
+  duration_ms: 1.962544
+  ...
+# Subtest: all strategy filters and mandatory unknown signals reject independently
+ok 22 - all strategy filters and mandatory unknown signals reject independently
+  ---
+  duration_ms: 1.596169
+  ...
+# Subtest: position and failure caps remain enforced during concurrent entries
+ok 23 - position and failure caps remain enforced during concurrent entries
+  ---
+  duration_ms: 13.16196
+  ...
+# Subtest: malformed internal events and restored state fail closed
+ok 24 - malformed internal events and restored state fail closed
+  ---
+  duration_ms: 83.773417
+  ...
+# Subtest: delayed entries recheck current limits after delay and retain duplicate protection
+ok 25 - delayed entries recheck current limits after delay and retain duplicate protection
+  ---
+  duration_ms: 61.079379
+  ...
+# Subtest: stale delayed evidence rejects rather than inventing refreshed prices
+ok 26 - stale delayed evidence rejects rather than inventing refreshed prices
+  ---
+  duration_ms: 31.5518
+  ...
+# Subtest: timer can enforce time exit with fresh stored evidence, stale prices still block
+ok 27 - timer can enforce time exit with fresh stored evidence, stale prices still block
+  ---
+  duration_ms: 43.288619
+  ...
+# Subtest: unexpected automatic exit costs preserve new observations and halt on failure threshold
+ok 28 - unexpected automatic exit costs preserve new observations and halt on failure threshold
+  ---
+  duration_ms: 8.089481
+  ...
+# Subtest: submission success requires chain confirmation and duplicate IDs submit once
+ok 29 - submission success requires chain confirmation and duplicate IDs submit once
+  ---
+  duration_ms: 140.7874
+  ...
+# Subtest: RPC disconnect after submission remains unresolved and never re-signs
+ok 30 - RPC disconnect after submission remains unresolved and never re-signs
+  ---
+  duration_ms: 85.572013
+  ...
+# Subtest: simulation rejection prevents send
+ok 31 - simulation rejection prevents send
+  ---
+  duration_ms: 46.438587
+  ...
+# Subtest: expired blockhash without historical signature stays explicitly unobserved
+ok 32 - expired blockhash without historical signature stays explicitly unobserved
+  ---
+  duration_ms: 84.55812
+  ...
+# Subtest: confirmed instruction failure is failed despite accepted submission
+ok 33 - confirmed instruction failure is failed despite accepted submission
+  ---
+  duration_ms: 37.550803
+  ...
+# Subtest: bounded histograms preserve lifetime counts and expose retained sample percentiles
+ok 34 - bounded histograms preserve lifetime counts and expose retained sample percentiles
+  ---
+  duration_ms: 3.994267
+  ...
+# Subtest: duration clocks remain monotonic when wall time moves backwards; spans close once on error
+ok 35 - duration clocks remain monotonic when wall time moves backwards; spans close once on error
+  ---
+  duration_ms: 1.356872
+  ...
+# Subtest: async failures retain timing and RPC errors are counted exactly once per failed call
+ok 36 - async failures retain timing and RPC errors are counted exactly once per failed call
+  ---
+  duration_ms: 2.025872
+  ...
+# Subtest: disabled telemetry preserves return values and errors without retaining samples
+ok 37 - disabled telemetry preserves return values and errors without retaining samples
+  ---
+  duration_ms: 0.639753
+  ...
+# Subtest: deterministic burst bounds pending work, preserves FIFO, records drops and drains gauges
+ok 38 - deterministic burst bounds pending work, preserves FIFO, records drops and drains gauges
+  ---
+  duration_ms: 2.494182
+  ...
+# Subtest: queue fault and shutdown do not poison later accepted work or count failures as drops
+ok 39 - queue fault and shutdown do not poison later accepted work or count failures as drops
+  ---
+  duration_ms: 2.011789
+  ...
+# Subtest: deterministic reconnect retains dedupe window and ignores superseded sockets
+ok 40 - deterministic reconnect retains dedupe window and ignores superseded sockets
+  ---
+  duration_ms: 4.528573
+  ...
+# Subtest: stop cancels scheduled reconnect without sleeps or new socket generations
+ok 41 - stop cancels scheduled reconnect without sleeps or new socket generations
+  ---
+  duration_ms: 0.917666
+  ...
+# Subtest: bounded dedupe eviction is explicit and is not reported as a dropped event
+ok 42 - bounded dedupe eviction is explicit and is not reported as a dropped event
+  ---
+  duration_ms: 2.013357
+  ...
+# Subtest: malformed messages and callback failures remain distinct from transport RPC failures
+ok 43 - malformed messages and callback failures remain distinct from transport RPC failures
+  ---
+  duration_ms: 1.458484
+  ...
+# Subtest: decoder success and rejection each close their latency span
+ok 44 - decoder success and rejection each close their latency span
+  ---
+  duration_ms: 11.583828
+  ...
+# Subtest: paper pipeline exposes all stages, duplicate path skips risk and balances remain correct
+ok 45 - paper pipeline exposes all stages, duplicate path skips risk and balances remain correct
+  ---
+  duration_ms: 26.860628
+  ...
+# Subtest: delayed-entry retention drops are counted without changing its existing bound
+ok 46 - delayed-entry retention drops are counted without changing its existing bound
+  ---
+  duration_ms: 552.539395
+  ...
+# Subtest: failed subscription writes count one transport error and exhaust a zero reconnect budget
+ok 47 - failed subscription writes count one transport error and exhaust a zero reconnect budget
+  ---
+  duration_ms: 1.493937
+  ...
+# Subtest: offline replay benchmark emits complete and conserved deterministic workload counts
+ok 48 - offline replay benchmark emits complete and conserved deterministic workload counts
+  ---
+  duration_ms: 2624.632064
+  ...
+# Subtest: AES GCM vault authenticates password, identity and ciphertext
+ok 49 - AES GCM vault authenticates password, identity and ciphertext
+  ---
+  duration_ms: 1258.686668
+  ...
+# Subtest: API bearer auth rejects missing token and timing-safe mismatches
+ok 50 - API bearer auth rejects missing token and timing-safe mismatches
+  ---
+  duration_ms: 1.273192
+  ...
+1..50
+# tests 50
+# suites 0
+# pass 50
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9681.2372

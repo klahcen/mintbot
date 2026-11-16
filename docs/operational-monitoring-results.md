@@ -1,0 +1,7 @@
+# Operational monitoring results — Phase 14
+
+**PARTIAL.** A fresh probe with a shared 300-second deadline and concurrent Meteora-only transport controls is retained in [delivery evidence](phase14/delivery-control.json). Actual elapsed, ACK, receipt, disconnect and incident evidence is separate for each endpoint. This is not a four-venue research-supervisor run, continuous chain coverage or a 1,800-second research run. Follow-up finalized reads are excluded from transport duration.
+
+The independently measured 1,800-second Phase14 research run was not started: authenticated independent infrastructure and epoch policy authority are unavailable, triggering the user's external-prerequisite stop. Phase13's successful sleep-inhibited 1,800-second run remains historical and contributes zero new monitoring time. No new sleep-inhibition or host clock certification is claimed; the existing supervisor clock-discontinuity checks remain active in controls.
+
+Exclusive research ownership, sticky emergency stop, fsynced WAL acknowledgement, quarantine versus pending accounting, authenticated dashboard and bounded retry/backpressure are unchanged and exercised by the retained suite and isolated container smoke. Controls do not acquire research ownership. Initial diagnostic imports were not sealed by a separate loaded-module source manifest; the baseline and final source manifests are retained, and this limits source-at-start operational acceptance. Final Docker source/image identity is separately captured.

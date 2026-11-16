@@ -1,0 +1,1872 @@
+--- before/README.md
++++ after/README.md
+@@ -1,6 +1,8 @@
+ # Mintbot
+ 
+-Phase 12: **current-chain paper acceptance remains blocked**. The fresh suite passes 312/312 tests; a separate 300-second stable monitoring window was achieved. Current Pump, the observed PumpSwap variant, independent provider evidence and epoch approval remain blocked; genuine eligible paper entries/exits are 0/0. [Engineering report](docs/phase12-engineering-report.md), [reproducible evidence](docs/phase12/README.md), [funded blockers](docs/remaining-funded-trading-blockers.md).
++Phase 13: **full current-chain paper acceptance remains unmet**. The final suite passes 323/323 tests plus five Python clock tests. Incoming remote zero signatures are proven and refused. The single primary supervisor measured 1800.000 seconds; continuous required coverage remains unmet. Current observed protocol variants and independent provider/epoch approval remain blocked; paper entries/exits are 0/0. [Engineering report](docs/phase13-engineering-report.md), [evidence and commands](docs/phase13/README.md), [funded blockers](docs/remaining-funded-trading-blockers.md).
++
++
+ 
+ An original Solana monitoring and paper-trading research platform, with a React dashboard and a Node.js/TypeScript backend. **This is a tested paper prototype, not a production-ready funded sniper. Live mode is rejected at startup.** No private trading keys are needed to run it.
+ 
+--- before/docs/current-protocol-compatibility.md
++++ after/docs/current-protocol-compatibility.md
+@@ -0,0 +1,13 @@
++# Current protocol compatibility — Phase 13
++
++**Current Pump deployment and the observed reversed PumpSwap variant remain blocked. No financial adapter, deployment pin or allocation whitelist was broadened.**
++
++[Current finalized Pump capture](phase13/pump-deployment/evidence.json) again observes deployment slot 469055660 against reviewed slot 458921440. Referenced ELF SHA-256 remains `0630a8108569c1c7a5b833c6e11276ebac03c801c495b1685fcfac99bf865cc5`; full ProgramData and padded payload hashes are separately retained. The [Global read](phase13/current-network/evidence.json) is 1096 bytes, while the pinned official Global schema accounts for 1088. Tail `1e00000000000000` still has no established authoritative field meaning. Public source/interface publication is not deployed binary/financial-contract equivalence.
++
++The freshly captured [official revision and IDLs](phase13/official/evidence.json) remain pinned to commit `639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22` for Pump. Native/non-native quotes, Mayhem supply/reserves, recursive depth, configurable fees, reward custody, transfer restrictions and new instructions are not globally approved by matching selected fields. [Phase 12 financial review](current-pump-financial-contract.md) and the [current assessment](phase13/current-protocol-assessment.json) preserve the missing proof chain.
++
++The observed PumpSwap pool is `DLEu6cVEPJ9Y64WG9Qs9ZtciWV4e9EjLWP8QH7vki5VA`. Its base mint is wrapped SOL, quote mint `Bj1XKzJ4MRj5gpJ9K4VWEjQsEvSyGuCP8JDjF53pAEHX`. [Current equal-batch custody](phase13/pumpswap-contract.json) validates vault mint/authority relationships and signed accounting bounds. The SOL-side vault holds only **585 lamports**, below the unchanged strategy minimum. Current signed offset and retained fee buckets are zero; the original offset was -8,859,839 with matching retained protocol fees. No intervening sweep is inferred without transaction proof.
++
++Official [signed-reserve semantics](https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/docs/NEGATIVE_VIRTUAL_QUOTE_RESERVES.md) define effective quote reserves as quote custody plus a signed i128 offset. Retained fees are liabilities, not extra liquidity. Values are never clamped or reinterpreted as unsigned. SOL-base/native mint supply is zero, so the retained SDK market-cap equality is degenerate and cannot validate bidirectional quotes. Reversed routing, fee denomination, independent integer buy/sell wires, complete custody/authority evidence and actual two-sided variant simulations remain incomplete.
++
++Independent [wire vectors](phase13/builder-reference.json) match 8/8 and [captured-state quote vectors](phase13/quote-reference.json) match 16/16 for already reviewed subjects. UNIT wire accounts and historical fixtures remain diagnostic. [Current buy](phase13/current-buy-simulations.json) and [sell](phase13/current-sell-simulations.json) calls succeed on a separate supported PumpSwap subject; Raydium sell also reconciles. They do not validate the observed reversed route or establish an eligible paper entry, owned inventory, full fresh-position lifecycle or profitability. Fees, rent and balance effects remain in the exact simulation accounting records.
+--- before/docs/end-to-end-paper-evidence.md
++++ after/docs/end-to-end-paper-evidence.md
+@@ -0,0 +1,19 @@
++# End-to-end current-chain paper evidence — Phase 13
++
++**Acceptance FAIL / UNMET: 0 genuine paper entries, 0 exits. No realized paper P&L is inferred from diagnostics.** The existing shared supervisor, market adapter, mandatory risk engine, simulation gate and file-backed paper ledger are retained.
++
++Primary notifications: 275,760; selected receipts: 30; finalized creations during run: 22. Invalid-identity refusals occur before candidate admission and are separately retained. Original live receipt/time, wire links where captured, finalized verification and every selected outcome are in [the complete selected funnel](phase13/candidate-outcomes.json).
++
++| Selected outcome | Count |
++|---|---:|
++| market-rejected | 22 |
++| strict-creation-verification-rejected | 2 |
++| quarantined-processing | 6 |
++
++This is complete for selected receipts, not all launches on the network. Sampling limits and capture drops remain in [final evidence](phase13/runtime/mainnet-validated/evidence.json). Market rejection reasons are {'Unsupported Pump global version': 20, 'Market read failed or timed out': 2}; verification reasons are {'Truncated binary layout': 1, 'Pump instruction/event mismatch': 1}. Unresolved or quarantined work never becomes an eligible entry.
++
++The full required path remains original live receipt → finalized identity → current reviewed protocol/account custody → token/extension/holder/liquidity evidence → fresh integer buy/full-position sell quotes → independently validated unsigned instructions → reconciled simulation effects/costs → current provider/coverage/freshness/strategy/stop recheck → durable entry → fresh executable sell monitoring → normal exit and terminal ledger/P&L. Historical post-run proof cannot satisfy the original receipt's freshness or fill a missing stage.
++
++Unsigned [buy diagnostics](phase13/current-buy-simulations.json) and [sell diagnostics](phase13/current-sell-simulations.json) retain actual errors, fees, rent, public inventory and reconciled effects. Supported PumpSwap and Raydium diagnostic subjects are different from unapproved current variants. Public inventory impersonation with `sigVerify:false` is neither user-owned inventory nor a fresh paper entry. Separate buys/sells on different public accounts cannot form a synthetic round trip or establish profitability.
++
++With no qualified position, fresh full-position exit monitoring and terminal paper P&L remain unproved. No strategy limit, concentration requirement, deployment guard, provider rule or coverage policy was bypassed to force a trade.
+--- before/docs/independent-provider-and-coverage.md
++++ after/docs/independent-provider-and-coverage.md
+@@ -0,0 +1,11 @@
++# Independent provider and coverage evidence — Phase 13
++
++**Independent authenticated providers are unavailable; current-window authorization remains blocked.** No provider-related credentials were configured in the execution environment. Public endpoint brands cannot establish independent infrastructure or authentication.
++
++[Provider observations](phase13/provider-validation.json) retain genesis, finalized slots and account reads. [Historical transaction comparison](phase13/provider-history.json) compares the actual Raydium signed message/signatures across both public endpoints. Its matching selected payload does not prove equal account banks or operator independence. The market account reads have different reported banks; account agreement remains unknown. `minContextSlot` is never interpreted as exact-bank equality. Missing history, HTTP/RPC errors and any conflicts remain explicit; a conflicting diagnostic requires manual review, not automatic quarantine release or epoch approval.
++
++The primary run ended with gaps {'unrecoverable': 3, 'recovered': 1}, current quarantines 752, refusals {'unverifiable-zero-signature': 69, 'admission-capacity': 2, 'fork-or-provider-conflict': 21}. [WAL reconciliation](phase13/runtime-reconciliation.json), [forensics](phase13/run-forensics.json) and [coverage history](phase13/coverage-history.json) preserve status and original identities. Prior Phase 11/12 gaps and quarantines remain referenced by hash in the five supplied history artifacts; new run IDs and empty queues grant no permission. Zero identities remain a run-level coverage failure even if a provider scan labels a gap recovered.
++
++Recovery is bounded and provider-reported. Page/transaction/window limits cannot prove completeness once anchors or predecessor evidence are unavailable. No original WAL is rewritten by offline reconciliation, and no historical zero/refusal is relabeled a verified transaction or proven fork. Quarantine mutation still requires separate authorized, expiring WAL/plan/fingerprint-bound review with durable audit.
++
++The existing [draft epoch policy](phase12/current-window-policy-proposal.json) is unapproved. No new policy authority was manufactured for this run. Common-state evidence, authenticated independent operator provenance, complete required current-window coverage, reviewed protocol support and fresh strategy/risk checks remain entry prerequisites.
+--- before/docs/performance-and-security.md
++++ after/docs/performance-and-security.md
+@@ -1,13 +1,13 @@
+-# Performance and security — Phase 12
++# Performance and security — Phase 13
+ 
+-**Regression and build validation pass; no performance improvement is claimed.** See the machine-readable [delivery validation](phase12/validation-summary.json), fresh [test log](phase12/completion-validation/tests.log) and [clean-build record](phase12/completion-validation/clean-build.json). Node 22 clean npm install, backend/frontend typecheck/build and audit are run in an isolated temporary copy. All 307 original tests remain; the delivered TypeScript suite has 312 tests, with separate Python clock-classification checks.
++**Validation PASS; no speedup claim.** [Final regression](phase13/delivery-validation/after-tests.log): 323/323 TypeScript tests, all original 312 retained byte-for-byte. Five original Python clock tests pass. [Clean Node22 validation](phase13/clean-delivery-validation/clean-build.json) records isolated npm ci, typecheck, backend/frontend build and audit. Audit vulnerabilities at capture: 0. Earlier validation logs remain intact.
+ 
+-The retained final-validation run had a server-startup timeout (311/312 pass); the fresh completion run passes 312/312. Earlier failed build/test/monitoring logs remain intact. No passing rerun overwrites them. [Production smoke](phase12/production-delivery-smoke.json), [CLI guards](phase12/host-health-cli-guards.json), [owner/stop probe](phase12/final-release-probe-stop-owner-smoke.json) and [database faults](phase12/release-validation/prior-helper-rerun/docs/phase8/database-validation.json) test actual container and storage behavior.
++[Final image smoke](phase13/production-delivery-smoke.json) verifies authentication, dashboard, no-store research projection, SQL assets and live-mode rejection in an actual read-only, network-disabled container. [Final wrapper owner/stop probe](phase13/final-release-probe-stop-owner-smoke.json) refuses a concurrent shared-namespace owner, accepts authenticated sticky kill, drains the ledger and releases ownership. Its short duration is excluded from primary monitoring. No cross-host/distributed lease is claimed.
+ 
+-[Final performance controls](phase12/performance-final-node22.json) run three alternating paired repetitions on the same host and bind-mounted disk filesystem, with unchanged dependencies, durability and 2 ms batching. The ingestion admission hook is a real source difference; these controls are not A/A. The earlier [unchanged-source control](phase11/performance-node22.json) supplies A/A context. Host interference, sample size and large variability prevent a source-speedup claim. Durable-burst baseline rates span 183.4–498.3/s; final rates span 387.3–505.4/s. Scenario counts and integrity checks must match before comparing latencies.
++The unchanged regression suite executes PostgreSQL SCRAM privilege/rotation, immediate crash/restart, uncertainty fencing and backup/restore checks. Fresh [database evidence](phase13/delivery-validation/prior-helper-rerun/docs/phase8/database-validation.json) and [persistent intent evidence](phase13/delivery-validation/prior-helper-rerun/docs/phase7/persistent-database-validation.json) are retained. These private single-node test clusters are not HA or production deployment proof. The first Phase 13 regression invocation refreshed the mutable root summaries `docs/phase7/persistent-database-validation.json` and `docs/phase8/database-validation.json` before the preservation wrapper was used. Their pre-invocation bytes were not included in the Phase 13 snapshot and cannot be asserted unchanged. The new summaries are retained in `phase13/initial-database-evidence/`; subsequent passes preserve summaries and retain reruns separately. This is an archival limitation. Earlier per-phase logs and all hashed Phase 11/12 immutable artifacts remain unchanged.
+ 
+-Telemetry records WAL append/fsync times and group sizes, receipt/strategy latency, queue depth/backpressure, process CPU, RSS/heap, event-loop delay and provider errors. [Instrumented controls](phase12/performance-instrumented-final.json) add scheduler and serialization observations; their overhead excludes direct speed comparisons to uninstrumented runs. The corrected [worker attribution](phase12/worker-cpu-analysis.json) uses actual thread IDs and records 1,928.171 ms user and 245.641 ms system CPU on the current sampled WAL worker. Endpoints omit unsampled tails and include instrumentation overhead. The first observer's misleading inherited labels are explicitly retained and excluded.
++The implementation preserves worker fsync ownership and queue bounds. Wire diagnostics have explicit byte/record retention limits, sanitization/exactness flags and failure propagation. Research refuses ambiguous JSON keys and malformed identities; generic fixture compatibility does not grant research eligibility. Verification scheduling honors provider cooldown, limits admission/retries and never converts missing mandatory evidence into a verified result.
+ 
+-Current RPC and unsigned-simulation telemetry is in [buy](phase12/current-buy-simulations.json), [sell](phase12/current-sell-simulations.json) and both runtime evidence files. Synthetic benchmark strategy timing is not current-chain receipt-to-market acceptance. No qualifying fresh candidate reached simulation, so genuine eligible-event simulation queue latency is unavailable. Diagnostic simulation and RPC latency populations remain separate; HTTP 429, timeouts and reservation/liquidity failures are counted, not discarded.
++[Primary telemetry](phase13/runtime/mainnet-validated/evidence.json) records WAL fsync/group sizes, receipt-to-decision times, queue/backpressure, process CPU, memory, event-loop delay and RPC errors. Actual unsigned simulation queue/execution and account-retrieval timings are retained in the buy/sell diagnostic artifacts. There is no eligible-event simulation latency population when no entry qualifies. The separate [performance summary](phase13/performance-summary.json) preserves metric populations without comparing unequal live durations or claiming source improvements. Phase 12 A/A/source controls remain immutable and are not reused as Phase 13 speedup evidence.
+ 
+-The retained audit at capture has zero vulnerabilities; the completion audit refreshes it without modifying the lock. Funded deployment remains blocked by unapproved financial contracts, unknown coverage/provider evidence, incomplete token concentration/history checks and absent genuine lifecycle proof. No signing keys, signing, broadcasting or spending were introduced.
++Unapproved financial variants, independent-provider/epoch authority, complete coverage and genuine paper lifecycle remain deployment blockers. A zero npm audit does not establish external application security approval or funded readiness. Signing, broadcasting and spending remain disabled.
+--- before/docs/phase-status.md
++++ after/docs/phase-status.md
+@@ -1,6 +1,10 @@
+ # Delivery status by requested phase
+ 
+-## Current Phase 12 acceptance — November 15, 2026
++## Current Phase 13 acceptance — November 15, 2026
++
++Phase 13: **full current-chain paper acceptance remains unmet**. The final suite passes 323/323 tests plus five Python clock tests. Incoming remote zero signatures are proven and refused. The single primary supervisor measured 1800.000 seconds; continuous required coverage remains unmet. Current observed protocol variants and independent provider/epoch approval remain blocked; paper entries/exits are 0/0. [Engineering report](phase13-engineering-report.md), [evidence and commands](phase13/README.md), [funded blockers](remaining-funded-trading-blockers.md).
++
++## Historical Phase 12 acceptance — November 15, 2026
+ 
+ **FAIL / BLOCKED overall.** Delivered diagnostics and safety guards do not establish end-to-end paper execution. Fresh Node 22 suite: 312/312, plus five Python clock tests; all 307 Phase 11 tests retained. Clean install/build/typecheck and audit pass. A bounded 300-second stable window was achieved; the final identity guard has a separate 120-second monitoring run. Continuous coverage and the 1,800-second target are unmet. Current Pump and observed PumpSwap variant remain unapproved. Raydium creation was finalized after monitoring; Meteora creation acceptance is unmet. Independent authenticated providers and epoch approval are unavailable. Zero genuine eligible entries/exits; funded execution remains disabled. [Full verdict](phase12-engineering-report.md), [blockers](remaining-funded-trading-blockers.md).
+ 
+--- before/docs/phase13/README.md
++++ after/docs/phase13/README.md
+@@ -0,0 +1,68 @@
++# Phase 13 evidence and reproduction
++
++The [engineering report](../phase13-engineering-report.md) and [machine-readable assessment](validation-summary.json) distinguish source delivery, elapsed monitoring time, required coverage and genuine paper lifecycle acceptance. No diagnostic or new run automatically grants an epoch or trade authorization.
++
++| Evidence | Location |
++|---|---|
++| Original Phase 12 source/documents | `source-at-start-sha256.json`, `source-at-start.tar.gz`, `prior-root-docs/` |
++| Immutable Phase 11/12 artifact boundary | `prior-artifact-sha256.json` |
++| Byte-level identity origin | `runtime/identity-probe/wire-identity.jsonl`, `identity-probe-analysis.json`, `runtime/mainnet-validated/wire-identity.jsonl*`, `identity-mainnet-analysis.json` |
++| Clock and sleep inhibition | `timing/`, `mainnet-validated-stable-monitor-command.json`, `mainnet-validated-stable-monitor-exit.json` |
++| Single primary run | `runtime/mainnet-validated/evidence.json`, `validated-runtime-launch.json`, `mainnet-validated-runtime-container-inspect.json`, original WAL and runtime source snapshot |
++| Complete selected funnel | `candidate-outcomes.json`, `postrun-creation-verification.json` |
++| Coverage and refusal analysis | `runtime-reconciliation.json`, `run-forensics.json`, `coverage-history.json` |
++| Current protocol and SDK evidence | `official/`, `pump-deployment/`, `current-network/`, `pumpswap-contract.json`, `current-protocol-assessment.json`, `builder-reference.json`, `quote-reference.json` |
++| Raydium/Meteora | `creation-validation.json`, `dlmm-discovery/`, `venue-delivery-check.json`, `venue-controls.json`, post-run evidence |
++| Public provider comparisons | `provider-validation.json`, `provider-history.json` |
++| Actual unsigned diagnostics | `current-buy-simulations.json`, `current-sell-simulations.json`, simulation command records |
++| Final image/API/owner/stop checks | `production-delivery-smoke.json`, `final-release-probe-stop-owner-smoke.json` |
++| Regression, PostgreSQL and build | `delivery-validation/`, `clean-delivery-validation/`, Docker and earlier build/test logs |
++| Metric populations and runtime integrity | `performance-summary.json`, `loaded-runtime-coherence.json` |
++| Reviewable delivery | `delivery-source.diff`, `delivery-source-sha256.json`, `delivery-artifact-sha256.json` |
++
++Raw public envelopes carry original byte length/SHA-256 and sanitized base64. Only records explicitly marked `byteExact:true` enter the joined byte-level proof. URL/credential redaction or byte clipping makes that flag false. The diagnostic corpus is bounded and capture drops remain explicit. Ordinary normalized observations and refusal logs retain bounded rotation/tombstone metadata; their availability is not claimed to be an exhaustive wire archive. Missing predecessors or rotated payloads remain unknown. Local hash manifests are tamper evidence, not a remote notarization or write-once storage guarantee.
++
++The first 300-second observer completed, but its one-off outer launcher had an exit-handling TypeError; both its evidence and failed log remain. `timing/preflight-300-validated/` is the corrected independent run. The 120-second identity diagnostic predates the final verification scheduler and creation-hint wire capture. Its copied source remains exact. The final primary and final owner probe use the delivered compiled core; no hot reload or concatenation is claimed.
++
++Run from the repository root under Node 22. Outputs are exclusive: choose fresh filenames/directories when rerunning diagnostics. Current chain state, quotas and history availability can change.
++
++```sh
++npm ci
++npm run typecheck
++npm run build
++python3 scripts/phase9-regression-validation.py --output docs/phase13-recheck-tests
++python3 tests/test_phase12_host_health.py
++npm audit --json
++docker build --no-cache -t mintbot:phase13-readonly .
++```
++
++The regression wrapper preserves summaries refreshed by unchanged legacy database helpers and retains new outputs separately. The complete suite executes private PostgreSQL crash/restart, SCRAM rotation and backup/restore checks; no production database is attached to the monitor.
++
++To repeat timing and monitoring, create a fresh persistent clock container and fresh evidence root. The long preflight preserves the existing requirement that its duration cover the intended monitoring budget. A 300-second probe alone cannot authorize 1,800 seconds.
++
++```sh
++docker run -d --name mintbot-clock-recheck --read-only --network none --cap-drop ALL --security-opt no-new-privileges node:22-bookworm-slim node -e 'setInterval(()=>{},1000)'
++systemd-inhibit --what=sleep:idle --mode=block python3 scripts/phase12-host-health.py --seconds 300 --container mintbot-clock-recheck --output docs/phase13-recheck/preflight-300
++systemd-inhibit --what=sleep:idle --mode=block python3 scripts/phase12-host-health.py --seconds 1800 --container mintbot-clock-recheck --output docs/phase13-recheck/preflight-1800
++SOLANA_RPC_URL=https://solana-rpc.publicnode.com SOLANA_WS_URL=wss://solana-rpc.publicnode.com SOLANA_SECONDARY_RPC_URL=https://api.mainnet-beta.solana.com SOLANA_SECONDARY_WS_URL=wss://api.mainnet-beta.solana.com systemd-inhibit --what=sleep:idle --mode=block python3 scripts/phase12-launch-monitor.py --seconds 1800 --clock-directory docs/phase13-recheck/preflight-1800 --output-root docs/phase13-recheck --image mintbot:phase13-readonly --run-name mainnet --container-name mintbot-phase13-recheck --launch-record runtime-launch.json --history docs/phase11/coverage-history.json,docs/phase11/phase11-coverage-history.json,docs/phase12/coverage-history.json,docs/phase12/final-coverage-history.json --identity-diagnostics --bounded-verification --wait
++```
++
++The launch wrapper's `--wait` keeps the temporary inhibitor alive through the finite process. It preserves sticky stop, exclusive owner, fsynced WAL, strict finalized verification and unapproved epoch status. Do not reuse run directories or reset history to obtain a pass. Record a separate concurrent clock observer as in `timing/during-mainnet-validated-command.json`; periods are never added to the primary supervisor duration.
++
++Read-only protocol and provider diagnostics can be repeated into new paths:
++
++```sh
++python3 scripts/phase12-official-evidence.py --output /tmp/mintbot-official-new
++node --import tsx scripts/phase10-pump-evidence.ts --run --output-dir /tmp/mintbot-pump-new
++node --import tsx scripts/phase11-current-network.ts --run --output /tmp/mintbot-network-new
++node --import tsx scripts/phase12-pumpswap-contract.ts --run --output /tmp/mintbot-swap-new.json
++node --import tsx scripts/phase13-creation-validation.ts --run --output /tmp/mintbot-creations-new.json
++node --import tsx scripts/phase13-provider-history.ts --run --output /tmp/mintbot-providers-new.json
++python3 scripts/phase13-identity-report.py --run-directory docs/phase13/runtime/mainnet --output /tmp/mintbot-wire-analysis-new.json
++```
++
++The existing SDK reference commands depend on separately pinned temporary reference installations; exact package versions/integrities are retained in `builder-reference.json` and `quote-reference.json`. They are not application dependency upgrades. Unsigned public-inventory simulations are diagnostics with signature verification disabled; they never sign, submit, fund or create a fresh paper position.
++
++After final evidence and derived artifacts exist, `python3 scripts/phase13-report.py` regenerates reports and `python3 scripts/phase13-final-validation.py` verifies integrity, copied/clean compiled core and links, then seals delivery manifests. Neither command can approve a provider, coverage epoch or trade.
++
++The initial `runtime/mainnet/` container failed during the public RPC genesis bootstrap before a supervisor started. Its launch, copied modules, ledger and logs are retained and excluded from duration. The single primary experiment is `runtime/mainnet-validated/`, using PublicNode as primary and Solana public RPC as secondary. This endpoint change is public transport configuration, not independent-provider approval.
+--- before/docs/phase13-engineering-report.md
++++ after/docs/phase13-engineering-report.md
+@@ -0,0 +1,35 @@
++# Phase 13 engineering report
++
++**Full phase acceptance remains unmet.** The delivered pipeline identifies zero signatures at the incoming transport boundary and refuses invalid research identities. Current protocol, coverage/provider and genuine paper-lifecycle blockers remain explicit. Signing, broadcasting and spending remain disabled.
++
++| Acceptance gate | Result | Evidence-backed assessment |
++|---|---|---|
++| Zero-identity origin | **PASS** | Byte-exact incoming envelopes and linked admission evidence; remote internal cause remains unknown. |
++| Invalid-identity admission | **PASS** | Research rejects zero, malformed and wrong-width signatures; strict diagnostic profile rejects ambiguous/version/mapping payloads. |
++| 1,800-second stable monitoring | **PASS** | One supervisor: 1800.000344 monotonic seconds; wall discrepancy 0.656 ms. |
++| Continuous required coverage | **FAIL** | Current gaps {'unrecoverable': 3, 'recovered': 1}; quarantines 752; invalid identities 69. |
++| Current Pump/PumpSwap variants | **PARTIAL** | Both observed variants remain blocked. Reviewed diagnostic semantics do not complete financial compatibility. |
++| Raydium/Meteora creation detection | **PARTIAL** | Raydium: 1 actual selected creation verified after the run, excluded from entries. Meteora legacy detection is validated offline; current delivery/new initializer coverage remains incomplete. |
++| Independent providers | **PARTIAL** | Unavailable: public endpoints are not an authenticated independently operated pair; different account banks remain unknown. |
++| Genuine current paper entry/exit | **FAIL** | 0 entries / 0 exits. Historical unsigned public-inventory diagnostics are excluded. |
++| Tests/build/security checks | **PASS** | 323/323 TypeScript tests, five Python clock tests; clean Node22 install/build/typecheck, container and PostgreSQL checks; audit capture retained. |
++| Funded execution disabled | **PASS** | No signing, submission, funding or spending authorized or introduced. |
++
++The exact [Phase 12 starting source](phase13/source-at-start-sha256.json), [source archive](phase13/source-at-start.tar.gz), [prior evidence manifest](phase13/prior-artifact-sha256.json) and [earlier root documents](phase13/prior-root-docs/docs/phase12-engineering-report.md) preserve the baseline. No original test, deployment pin, reviewed financial layout or dependency lock was changed. Current source and loaded compiled modules are checked by the [delivery verifier](../scripts/phase13-final-validation.py).
++
++The first 120-second identity diagnostic captured 16,833 notifications and two exact zero-signature envelopes. Its raw bytes, parsed field, normalized signature, stable key and fsynced refusal are linked by SHA-256. The new primary run supplies 69 further byte-exact zero proofs. This establishes incoming remote-payload origin for these samples, not the remote server's internal reason or the missing historical Phase 12 envelopes. There was no signature fallback to remove. [Root-cause report](zero-signature-root-cause.md).
++
++The existing shared supervisor, risk/market services, simulation gate, WAL and paper ledger remain in use. Changes add bounded sanitized wire diagnostics, strict JSON-RPC envelope handling in the explicit diagnostic profile, canonical 64-byte signature checks at research admission, and a bounded single-reader verification schedule. HTTP 429 retries honor cooldown and stop at evidence deadlines; finality, ownership, schema, provider, coverage and freshness requirements remain mandatory. Creation hints retain wire provenance between regular samples and remain hints until finalized verification.
++
++The primary run measured 1800.000344 monotonic seconds, received 275,760 notifications, selected 30 receipts and verified 22 creations during monitoring. Fully ACKed time was 1778.861819 seconds, distinct from connected time 1789.034800 and disconnected time 10.965544. Final gaps: {'unrecoverable': 3, 'recovered': 1}; current quarantines: 752. Preflights, diagnostic and owner probes are excluded from that duration. [Monitoring](stable-monitoring-validation.md), [coverage/providers](independent-provider-and-coverage.md).
++
++| Venue | Notifications | Creation hints | Selected | Invalid identities |
++|---|---:|---:|---:|---:|
++| pump | 268353 | 709 | 29 | 65 |
++| pumpswap | 2235 | 0 | 0 | 0 |
++| raydium-cpmm | 5172 | 1 | 1 | 4 |
++| meteora-dlmm | 0 | 0 | 0 | 0 |
++
++Current Pump and the observed reversed PumpSwap route remain disabled. A current selected Raydium creation is verified after the run; Meteora's retained legacy fixture remains valid offline but its current historical reread is unavailable. Public discovery API HTTP 403 and unsupported initializers are recorded rather than inferred away. [Protocols](current-protocol-compatibility.md), [creation validation](raydium-meteora-creation-validation.md).
++
++All selected outcomes are accounted for, with **0 paper entries and 0 exits**. No historical public inventory is treated as a fresh position. [Execution evidence](end-to-end-paper-evidence.md). The delivered image also passes shared-owner refusal and authenticated sticky stop. Existing crash/restart and PostgreSQL recovery checks remain in the complete suite. [Performance/security](performance-and-security.md), [funded blockers](remaining-funded-trading-blockers.md), [commands and immutable artifacts](phase13/README.md).
+--- before/docs/raydium-meteora-creation-validation.md
++++ after/docs/raydium-meteora-creation-validation.md
+@@ -0,0 +1,18 @@
++# Raydium/Meteora creation validation — Phase 13
++
++**PARTIAL. Existing strict finalized creation detection is validated; exhaustive current coverage and newer initializer support are not claimed.** The [coverage matrix](phase13/creation-validation.json) separates supported variants, actual finalized fixtures and current reread availability.
++
++The actual Phase 12 Raydium `initialize` receipt at slot 469514659 is reverified against current finalized reads. Meteora's actual retained `initialize_lb_pair` fixture verifies against its retained finalized/account evidence; PublicNode returned null for its historical transaction reread, which remains unavailable, not zero creations. Neither historical receipt becomes a fresh entry. The public Meteora pool-discovery API returned HTTP 403; the failed requests are preserved under [discovery evidence](phase13/dlmm-discovery/). A separate [per-venue delivery check](phase13/venue-delivery-check.json) found recent successful Meteora history on both public RPC endpoints while the primary notification counter was zero. [Single-venue controls](phase13/venue-controls.json) are separate bounded experiments, never added to primary duration or interpreted as creation proof. In the 60-second controls, the same monitor received 6,591 Meteora notifications from Solana public RPC and zero from PublicNode despite acknowledgements; PublicNode reached the receipt-stale watchdog. This establishes a provider/connection-specific delivery gap in that sample, with the remote internal mechanism unknown. Subscription ACKs and aggregate traffic therefore cannot demonstrate all-venue delivery. These are observations and swaps, not 6,591 pool creations.
++
++Raydium `initialize_with_permission` and Meteora `initialize_lb_pair2`, permissioned and customizable variants remain unsupported without complete finalized fixtures and invocation/account/PDA proof. Pool creation is distinct from bin-array initialization, position initialization, liquidity changes and swaps. Existing decoder checks still require exact successful invocation attribution, instruction data, event identity and account relationships.
++
++| Venue | Notifications in primary run | Creation hints | Selected |
++|---|---:|---:|---:|
++| Raydium CPMM | 5172 | 1 | 1 |
++| Meteora DLMM | 0 | 0 | 0 |
++
++The primary run selected one new Raydium `initialize` receipt at slot 469745467, signature `25UYv2XuXoA5oXgeABN69icevLsGziurJoJewzpKeYhKsn7KQ8KaUEpRetUciqoMPui7vwMva6hXnqXAt7dHJMgx`. It was quarantined from incomplete/truncated live invocation logs. A bounded finalized post-run reread proves pool `Fy2GNqA73qDqDsFANKM2WrhDH6fppoyLT9hqStQdNJS1`; the [new actual creation fixture](phase13/raydium-current-creation-fixture.json) retains original receipt, wire provenance, quarantine cause and full finalized proof. It remains history-bound and ineligible for a fresh entry. This late proof is counted separately from creations verified during monitoring.
++
++[Primary selected outcomes](phase13/candidate-outcomes.json) retain every verification result. [Post-run rereads](phase13/postrun-creation-verification.json) preserve original timestamps and explicitly history-bound freshness. Hint counts are not verified creation counts, and missing/failed reads do not estimate genuine creation frequency. Sampling caps, gaps and rate limits remain visible.
++
++The existing verifier now optionally uses one bounded reader, capacity 16, minimum spacing 350 ms, at most two HTTP attempts and an eight-second per-request budget in this research run. HTTP 429 cooldown is honored, including refusal when Retry-After exceeds the evidence deadline. This does not relax finalized or mandatory account evidence, share a global quota with every RPC client, or prove an improvement across unequal live workloads. [Scheduling tests](../tests/phase13-verification-scheduling.test.ts).
+--- before/docs/remaining-funded-trading-blockers.md
++++ after/docs/remaining-funded-trading-blockers.md
+@@ -1,4 +1,17 @@
+-# Phase 12 remaining funded-trading blockers
++# Phase 13 remaining funded-trading blockers
++
++**Funded execution and genuine current-chain paper lifecycle acceptance remain blocked.** [Current verdict](phase13-engineering-report.md).
++
++- Pump's current executable/Global tail lacks approved financial-contract evidence; the observed reversed signed-reserve PumpSwap variant remains unvalidated and currently has only 585 lamports on its SOL side.
++- Current required continuous coverage is unmet; unresolved/unknown history and invalid identities remain retained. Duration success does not approve an epoch.
++- Authenticated independently operated providers and defensible common-state account evidence are unavailable. Independent epoch-policy review remains required.
++- Genuine eligible paper entry/exit and terminal exact P&L are 0/0; historical public inventory and unsigned diagnostics cannot supply missing fresh positions.
++- Selective WebSocket delivery must be resolved and per-venue receipt evidence reviewed: the Meteora control received 6,591 Solana-public notifications and zero PublicNode notifications despite ACKs. Newer initializer completeness, mandatory holder/authority/concentration evidence, operational recovery review and production alerting remain bounded or incomplete.
++- Distributed leases/storage, isolated signer/spend authorization, settlement/uncertainty controls, independent security review, HA/PITR and separately authorized funded validation remain outside the tested single-host paper system.
++
++Earlier phase assessments below are historical and do not satisfy current acceptance.
++
++## Retained Phase 12 funded-trading assessment
+ 
+ Current assessment: **funded execution and end-to-end current paper acceptance remain blocked**. See the [Phase 12 verdict](phase12-engineering-report.md) and [validation summary](phase12/validation-summary.json).
+ 
+--- before/docs/stable-monitoring-validation.md
++++ after/docs/stable-monitoring-validation.md
+@@ -0,0 +1,22 @@
++# Stable monitoring validation — Phase 13
++
++**Duration gate: PASS. Continuous required coverage: FAIL.** Elapsed time and complete event coverage are assessed separately.
++
++| Separate experiment | Monotonic seconds | Result |
++|---|---:|---|
++| Corrected fresh 300-second preflight | 300.000203099 | Stable: True |
++| Required same-budget preflight | 1800.000089956 | Stable: True |
++| Primary supervisor, one run | 1800.000344329 | State: stopped |
++| Concurrent independent clock observer | 1800.000107102 | Stable: True |
++
++The Phase 12 timing guard still requires a completed preflight at least as long as the proposed monitoring interval. The additional 1,800-second preflight preserves that rule after the requested fresh 300-second check. Their durations are never added to monitoring. The earlier 120-second identity probe and roughly ten-second owner probes are also excluded.
++
++Temporary `systemd-inhibit --what=sleep:idle --mode=block` locks are held during preflights and across launch/wait of the actual research container. [Inhibitor evidence](phase13/timing/inhibitors-during-preflight.json), [driver](../scripts/phase13-stable-monitor.py), [launch record](phase13/validated-runtime-launch.json). No permanent desktop sleep policy is changed. Kernel suspend counters, realtime/monotonic/boottime/raw clocks, scheduler/process/cgroup CPU and NTP journals are retained under `phase13/timing/`.
++
++Primary supervisor wall seconds: 1800.001000; wall/monotonic discrepancy: 0.655671 ms. Connected: 1789.034800 seconds; fully ACKed: 1778.861819; disconnected: 10.965544. Connections: 6; incidents: 5. Exact socket/ACK/fault chronology is in `supervisor.intervals` and `supervisor.events` in [final evidence](phase13/runtime/mainnet-validated/evidence.json). The clock observer uses a persistent same-host container; the research wrapper additionally checks its own current boot and coherent wall/monotonic ages.
++
++The initial `runtime/mainnet/` container failed a five-second public RPC genesis bootstrap before monitoring started. Its source/ledger/launch and container logs are preserved and contribute no supervisor time. The distinct primary `runtime/mainnet-validated/` uses PublicNode as primary and Solana public RPC as secondary; neither is authenticated or independently authorized.
++
++The first 300-second observer wrote successful evidence, but its one-off outer launch command raised an exit-handling TypeError. That failed log is preserved. A corrected separate fresh 300-second launch returned success. No failure was overwritten or counted as extra coverage.
++
++Final gap states are {'unrecoverable': 3, 'recovered': 1}, quarantines 752, invalid identities 69. WAL writer failure: None; pipeline fatal: None. These facts prevent a duration-only coverage claim. [Coverage reconciliation](independent-provider-and-coverage.md).
+--- before/docs/zero-signature-root-cause.md
++++ after/docs/zero-signature-root-cause.md
+@@ -0,0 +1,19 @@
++# Zero-signature root cause — Phase 13
++
++**PASS at the local transport boundary: captured zero identities are already present in incoming provider notification data.** Their remote emission mechanism remains unknown. Phase 12 retained normalized observations, so its unavailable raw envelopes cannot be retrospectively verified.
++
++| Stage | Result |
++|---|---|
++| Raw WebSocket bytes | Sanitized bounded base64 envelopes retain original SHA-256/length and an explicit byte-exact flag. Two probe samples and 69 primary-run samples are byte-exact zero proofs. |
++| Provider notification | JSON-RPC `params.result.value.signature` contains 64 base58 `1` characters, encoding 64 zero bytes. |
++| Subscription normalization | Acknowledged subscription IDs bind to the registered program; unbound mappings in the strict profile fail and open recovery gaps. |
++| ProgramObservation | `signature: value.signature` copies the field; no empty/default/generated signature is inserted. |
++| Signature extraction | Canonical base58 width and all-zero checks operate without replacing the input. |
++| Stable identity | The existing key is verified program address plus original signature. Cross-program signatures remain distinct. |
++| WAL admission | Invalid identities create a fsynced gap/refusal; no pending/completed ownership or anchor is created. The audit records the returned refusal after that boundary. |
++
++[Probe analysis](phase13/identity-probe-analysis.json), [primary analysis](phase13/identity-mainnet-analysis.json) and their `wire-identity.jsonl` files preserve the joins. Redacted or truncated envelopes are excluded from byte-exact proof. The corpus is bounded; retention and dropped-record counts are explicit. No endpoint path, request credential or authorization header is captured. Local hashes provide tamper evidence, not external notarization.
++
++The strict diagnostic profile rejects unsupported JSON-RPC versions and duplicate object keys, including escaped spellings, before normalization. Missing/non-string identities cannot become observations. Research admission also refuses invalid alphabet/width identities. Invalid strict-profile observations cannot advance the monitor's slot head. Existing generic journal fixture behavior remains compatible; this is an explicit research admission policy.
++
++Tests cover byte-exact wire→observation→durable refusal/restart, missing/malformed/versioned payloads, ambiguous keys, same-program duplicates/conflicts, cross-program identity scope, unbound subscriptions, sanitizer limits and creation-wire capture. [Tests](../tests/phase13-wire-identity.test.ts). Changed payloads still do not prove chain forks or provider culpability. No signature is manufactured, substituted or refreshed.
+--- before/scripts/phase11-prior-forensics.py
++++ after/scripts/phase11-prior-forensics.py
+@@ -1,7 +1,7 @@
+ """Offline retained-byte classification; no fork, token-risk or provider-cause guesses."""
+ from pathlib import Path
+-import json,collections,hashlib,argparse
+-parser=argparse.ArgumentParser();parser.add_argument('--run',default='docs/phase10/runtime/mainnet-validated');parser.add_argument('--reconciliation',default='docs/phase10/runtime-reconciliation.json');parser.add_argument('--output',default='docs/phase11/phase10-forensics.json');args=parser.parse_args()
++import json,collections,hashlib,argparse,re
++parser=argparse.ArgumentParser();parser.add_argument('--run',default='docs/phase10/runtime/mainnet-validated');parser.add_argument('--reconciliation',default='docs/phase10/runtime-reconciliation.json');parser.add_argument('--output',default='docs/phase11/phase10-forensics.json');parser.add_argument('--allow-retained-subset',action='store_true');args=parser.parse_args()
+ out=Path('docs/phase11');run=Path(args.run)
+ e=json.loads((run/'evidence.json').read_text())
+ frames=[]
+@@ -9,7 +9,7 @@
+  f=json.loads(line);record=f['record'];assert hashlib.sha256(json.dumps(record,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()==f['sha256'];frames.append(f)
+ q=json.loads(Path(args.reconciliation).read_text())['quarantined']
+ refusals=[]
+-for p in sorted(run.glob('refusals*.jsonl')):
++for p in sorted(p for p in run.iterdir() if p.is_file() and (p.name.startswith('refusals') and p.name.endswith('.jsonl') or re.fullmatch(r'refusals\.jsonl\.archive-\d+',p.name))):
+  for line in p.read_text().splitlines():
+   r=json.loads(line);observed=r['event'];old=r.get('retainedObservation');differences=None
+   if old:
+@@ -17,6 +17,9 @@
+   refusals.append({'id':r['id'],'at':r['at'],'status':r['status'],'reason':r.get('reason'),'observedFingerprint':r.get('observedFingerprint'),'retainedFingerprint':r.get('retainedFingerprint'),'retainedPayloadAvailable':old is not None,'differences':differences,'originalEvent':observed,'retainedObservation':old})
+ incidents=[r for r in e['supervisor']['events'] if r['kind']=='incident'];backpressure=[r for r in e['supervisor']['events'] if r['kind']=='backpressure-pause']
+ result={'generatedFrom':str(run)+'; retained final evidence, no source payloads modified','walFrames':len(frames),'quarantineCount':len(q),'quarantineCauses':dict(collections.Counter(r['lastFailure']['message'] for r in q)),'quarantines':q,'refusalCount':len(refusals),'recordedRefusalReasons':dict(collections.Counter(r.get('reason') or r['status'] for r in refusals)),'knownDuplicatesSeparate':e['telemetry']['counters'].get('ingest.duplicates',0),'conflictsWithRetainedPayload':sum(r['retainedPayloadAvailable'] for r in refusals),'refusalRotation':e['refusalStorage'],'refusals':refusals,'transport':{'totalIncidents':e['supervisor']['incidents'],'transportFaultEvents':len(incidents),'backpressurePauses':len(backpressure),'faults':dict(collections.Counter(r.get('code') or r.get('reason','unknown') for r in incidents))},'historicalGap':e['journal']['gaps'],'liveTrading':False,'scope':'All available retained refusal records and checksummed WAL frames. A changed payload is not proof of a fork, malicious token or provider culpability. Original bytes remain immutable; this analysis neither retries nor deletes ownership.'}
+-assert len(refusals)==e['refused']
++if args.allow_retained_subset:
++ assert len(refusals)<=e['refused']
++ result.update({'reportedRefusalCount':e['refused'],'missingRefusalPayloads':e['refused']-len(refusals),'retainedSubsetOnly':len(refusals)!=e['refused'],'missingPayloadDisposition':'Unavailable predecessor or rotated payload remains unknown; no recovery/identity/authorization inferred.'})
++else:assert len(refusals)==e['refused']
+ Path(args.output).write_text(json.dumps(result,indent=2)+'\n')
+ print(json.dumps({k:result[k] for k in ['walFrames','quarantineCount','quarantineCauses','refusalCount','recordedRefusalReasons','knownDuplicatesSeparate','conflictsWithRetainedPayload','transport']}))
+--- before/scripts/phase12-launch-monitor.py
++++ after/scripts/phase12-launch-monitor.py
+@@ -1,13 +1,19 @@
+ """Run only after a completed same-budget clock preflight; never combines prior elapsed periods."""
+ from pathlib import Path
+-import json,subprocess,datetime,argparse,re
+-p=argparse.ArgumentParser();p.add_argument('--seconds',type=int,default=300);p.add_argument('--clock-directory',default='docs/phase12/clock-stability');p.add_argument('--run-name',default='mainnet');p.add_argument('--container-name',default='mintbot-phase12-mainnet');p.add_argument('--launch-record',default='runtime-launch.json');p.add_argument('--history',default='docs/phase11/coverage-history.json,docs/phase11/phase11-coverage-history.json');cfg=p.parse_args()
++import json,subprocess,datetime,argparse,re,os
++p=argparse.ArgumentParser();p.add_argument('--seconds',type=int,default=300);p.add_argument('--clock-directory',default='docs/phase12/clock-stability');p.add_argument('--run-name',default='mainnet');p.add_argument('--container-name',default='mintbot-phase12-mainnet');p.add_argument('--launch-record',default='runtime-launch.json');p.add_argument('--history',default='docs/phase11/coverage-history.json,docs/phase11/phase11-coverage-history.json');p.add_argument('--output-root',default='docs/phase12');p.add_argument('--image',default='mintbot:phase12-readonly');p.add_argument('--identity-diagnostics',action='store_true');p.add_argument('--bounded-verification',action='store_true');p.add_argument('--wait',action='store_true');cfg=p.parse_args()
+ assert re.fullmatch(r'[A-Za-z0-9_-]{1,64}',cfg.run_name)
+-root=Path.cwd();out=root/'docs/phase12';clock=Path(cfg.clock_directory).resolve();pre=json.loads((clock/'evidence.json').read_text());assert pre['stableForRequestedInterval'] and pre['actualMonotonicSeconds']>=cfg.seconds
++root=Path.cwd();out=(root/cfg.output_root).resolve();clock=Path(cfg.clock_directory).resolve();pre=json.loads((clock/'evidence.json').read_text());assert pre['stableForRequestedInterval'] and pre['actualMonotonicSeconds']>=cfg.seconds
+ assert not (out/cfg.launch_record).exists(),'Existing launch record preserved'
+ (out/'runtime').mkdir(exist_ok=True);(out/'control').mkdir(exist_ok=True)
+ history=[Path(p).resolve() for p in cfg.history.split(',')];historyArg=','.join('/app/history/input-'+str(i)+'.json' for i in range(len(history)))
+-image=subprocess.check_output(['docker','image','inspect','mintbot:phase12-readonly','--format','{{.Id}}'],text=True).strip()
+-a=['docker','run','-d','--init','--name',cfg.container_name,'--read-only','--network','host','--cap-drop','ALL','--security-opt','no-new-privileges','--mount',f'type=bind,source={out}/runtime,target=/app/data','--mount',f'type=bind,source={out}/control,target=/app/control','--mount',f'type=bind,source={clock},target=/app/host-health,readonly',*[item for i,p in enumerate(history) for item in ['--mount',f'type=bind,source={p},target=/app/history/input-{i}.json,readonly']],'-e','MODE=paper','-e','RESEARCH_STOP_PATH=/app/control/global-stop.json','-e','RESEARCH_OWNER_PATH=/app/control/owner.lock','-e','RESEARCH_REQUIRE_HOST_HEALTH=true','-e','RESEARCH_HOST_HEALTH_PATH=/app/host-health/evidence.json','--health-cmd',f"node -e \"try{{const p=JSON.parse(require('fs').readFileSync('/app/data/{cfg.run_name}/run-progress.json'));process.exit(Date.now()-p.updatedAt<15000&&p.supervisor.liveReady&&!p.pipeline.fatal&&!p.journal.writerFailure&&p.journal.quarantined===0&&p.journal.gaps.every(g=>g.status==='recovered')&&p.coverageEpoch.researchPolicyReview==='verified'?0:1)}}catch{{process.exit(1)}}\"",'--health-interval','15s','--health-timeout','3s','--health-retries','2',image,'node','dist/scripts/phase11-mainnet.js','--run','--seconds',str(cfg.seconds),'--max-candidates','120','--history-evidence',historyArg,'--output',f'/app/data/{cfg.run_name}']
++image=subprocess.check_output(['docker','image','inspect',cfg.image,'--format','{{.Id}}'],text=True).strip()
++a=['docker','run','-d','--init','--name',cfg.container_name,'--read-only','--network','host','--cap-drop','ALL','--security-opt','no-new-privileges','--mount',f'type=bind,source={out}/runtime,target=/app/data','--mount',f'type=bind,source={out}/control,target=/app/control','--mount',f'type=bind,source={clock},target=/app/host-health,readonly',*[item for i,p in enumerate(history) for item in ['--mount',f'type=bind,source={p},target=/app/history/input-{i}.json,readonly']],*[item for key in ['SOLANA_RPC_URL','SOLANA_WS_URL','SOLANA_SECONDARY_RPC_URL','SOLANA_SECONDARY_WS_URL'] if key in os.environ for item in ['-e',key]],*(['-e','RESEARCH_IDENTITY_DIAGNOSTICS=true'] if cfg.identity_diagnostics else []),*(['-e','RESEARCH_BOUNDED_VERIFICATION=true'] if cfg.bounded_verification else []),'-e','MODE=paper','-e','RESEARCH_STOP_PATH=/app/control/global-stop.json','-e','RESEARCH_OWNER_PATH=/app/control/owner.lock','-e','RESEARCH_REQUIRE_HOST_HEALTH=true','-e','RESEARCH_HOST_HEALTH_PATH=/app/host-health/evidence.json','--health-cmd',f"node -e \"try{{const p=JSON.parse(require('fs').readFileSync('/app/data/{cfg.run_name}/run-progress.json'));process.exit(Date.now()-p.updatedAt<15000&&p.supervisor.liveReady&&!p.pipeline.fatal&&!p.journal.writerFailure&&p.journal.quarantined===0&&p.journal.gaps.every(g=>g.status==='recovered')&&p.coverageEpoch.researchPolicyReview==='verified'?0:1)}}catch{{process.exit(1)}}\"",'--health-interval','15s','--health-timeout','3s','--health-retries','2',image,'node','dist/scripts/phase11-mainnet.js','--run','--seconds',str(cfg.seconds),'--max-candidates','120','--history-evidence',historyArg,'--output',f'/app/data/{cfg.run_name}']
+ r=subprocess.run(a,capture_output=True,text=True);assert r.returncode==0,r.stderr
+ (out/cfg.launch_record).write_text(json.dumps({'launchedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'args':a,'container':r.stdout.strip(),'image':image,'clockPreflight':str(clock/'evidence.json'),'independentPolicyReview':'unmet','requestedSeconds':cfg.seconds,'scope':'Fresh bounded four-venue run after at-least-equal timing preflight; prior periods never added.'},indent=2)+'\n');print(r.stdout.strip())
++
++if cfg.wait:
++ result=subprocess.run(['docker','wait',cfg.container_name],capture_output=True,text=True,timeout=cfg.seconds+180)
++ exitCode=int(result.stdout.strip()) if result.returncode==0 and result.stdout.strip().isdigit() else -1
++ (out/(Path(cfg.launch_record).stem+'-exit.json')).write_text(json.dumps({'dockerWaitExitCode':result.returncode,'containerExitCode':exitCode,'finishedAt':datetime.datetime.now(datetime.timezone.utc).isoformat()},indent=2)+'\n')
++ raise SystemExit(0 if exitCode==0 else 2)
+--- before/scripts/phase12-official-evidence.py
++++ after/scripts/phase12-official-evidence.py
+@@ -1,7 +1,8 @@
+ """Bounded immutable official documentation/IDL capture; no deployed-behavior approval."""
+ from pathlib import Path
+-import urllib.request,json,hashlib,datetime
+-out=Path('docs/phase12/official');out.mkdir()
++import urllib.request,json,hashlib,datetime,argparse
++parser=argparse.ArgumentParser();parser.add_argument('--output',default='docs/phase12/official');cfg=parser.parse_args()
++out=Path(cfg.output);out.mkdir()
+ def fetch(url,limit=4*1024*1024):
+  with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mintbot-read-only-protocol-review'}),timeout=15) as r:
+   data=r.read(limit+1)
+--- before/scripts/phase13-creation-validation.ts
++++ after/scripts/phase13-creation-validation.ts
+@@ -0,0 +1,62 @@
++/** Actual retained finalized creations and bounded current rereads; never promotes history to a fresh entry. */
++import { readFile, writeFile } from 'node:fs/promises';
++import { createHash } from 'node:crypto';
++import { VerifiedReadRpc } from '../src/verified-rpc.js';
++import { VERIFIED_INSTRUCTIONS, decodeVerifiedTransaction, type ParsedChainTransaction,
++  type AccountEvidence } from '../src/verified-decoders.js';
++import { Telemetry } from '../src/telemetry.js';
++
++const args = process.argv.slice(2);
++if (!args.includes('--run')) throw Error('Explicit --run required');
++const option = (name: string, fallback: string) => args.includes(name) ? args[args.indexOf(name) + 1]! : fallback;
++const output = option('--output', 'docs/phase13/creation-validation.json');
++const endpoint = process.env.SOLANA_RPC_URL ?? 'https://solana-rpc.publicnode.com';
++const metrics = new Telemetry(), captured: unknown[] = [], rows: any[] = [];
++class Capture extends VerifiedReadRpc {
++  override async transaction(signature: string): Promise<ParsedChainTransaction | null> {
++    const result = await super.transaction(signature);
++    captured.push({ method: 'getTransaction', signature, result }); return result;
++  }
++  override async accounts(keys: string[]): Promise<AccountEvidence> {
++    const result = await super.accounts(keys);
++    captured.push({ method: 'getMultipleAccounts', keys, result }); return result;
++  }
++}
++const rpc = new Capture(endpoint, { minimumIntervalMs: 350, deadlineMs: 8000, maximumAttempts: 2, capacity: 4, metrics });
++const rayPath = 'docs/phase12/raydium-current-creation-fixture.json';
++const rayBytes = await readFile(rayPath), ray = JSON.parse(rayBytes.toString());
++const dlmmPath = 'docs/phase3/fixtures/meteora-dlmm-creation.json';
++const dlmmBytes = await readFile(dlmmPath), dlmm = JSON.parse(dlmmBytes.toString());
++const subjects = [
++  { venue: 'raydium-cpmm', path: rayPath, bytes: rayBytes,
++    transaction: ray.capturedFinalizedTransactionsAndAccounts.find((r: any) => r.method === 'getTransaction').result,
++    accounts: ray.capturedFinalizedTransactionsAndAccounts.find((r: any) => r.method === 'getMultipleAccounts').result },
++  { venue: 'meteora-dlmm', path: dlmmPath, bytes: dlmmBytes, transaction: dlmm.result,
++    accounts: JSON.parse(await readFile('docs/phase3/fixtures/meteora-dlmm-accounts.json', 'utf8')) },
++];
++for (const subject of subjects) {
++  const tx: ParsedChainTransaction = subject.transaction;
++  const row: any = { venue: subject.venue, source: subject.path,
++    fixtureSha256: createHash('sha256').update(subject.bytes).digest('hex'),
++    signature: tx.transaction.signatures[0], slot: tx.slot,
++    originalFixtureVerification: decodeVerifiedTransaction(subject.venue, tx, subject.accounts),
++    currentRead: null, freshnessOrigin: 'history', eligibleForPaper: false };
++  try { row.currentRead = await rpc.verify(subject.venue, row.signature, row.slot); }
++  catch (error) { row.currentReadIssue = (error as Error).message; }
++  rows.push(row);
++}
++const official = JSON.parse(await readFile('docs/phase13/official/MeteoraAg-dlmm-sdk-idls-dlmm.json', 'utf8'));
++const matrix = [
++  ...['initialize', 'initialize_with_permission'].map(name => ({ venue: 'raydium-cpmm', name })),
++  ...official.instructions.filter((i: any) => /^initialize_.*lb_pair2?$/.test(i.name))
++    .map((i: any) => ({ venue: 'meteora-dlmm', name: i.name, discriminator: i.discriminator })),
++].map((variant: any) => ({ ...variant,
++  supportedStrictVerifier: VERIFIED_INSTRUCTIONS[variant.venue]?.includes(variant.name) ?? false,
++  finalizedFixtureAvailable: rows.some(r => r.venue === variant.venue && r.originalFixtureVerification.some((v: any) => v.instruction === variant.name)),
++  newVariantEnabled: false,
++}));
++await writeFile(output, JSON.stringify({ generatedAt: new Date().toISOString(), provider: new URL(endpoint).host,
++  rows, matrix, captured, telemetry: metrics.report(), newVariantsEnabled: false, eligibleForPaper: false,
++  liveTrading: false, scope: 'Two genuine retained finalized fixtures, at most two HTTP attempts per scheduled current read. Earlier finalized transactions and current account rereads are not identical historical account-bank reconstruction. No API list, swap, liquidity adjustment or historical receipt becomes a fresh launch.' }, null, 2) + '\n', { flag: 'wx' });
++console.log(JSON.stringify(rows.map(row => ({ venue: row.venue, fixtureCreations: row.originalFixtureVerification.length,
++  currentCreations: row.currentRead?.length, issue: row.currentReadIssue }))));
+--- before/scripts/phase13-final-validation.py
++++ after/scripts/phase13-final-validation.py
+@@ -0,0 +1,150 @@
++"""Seal Phase 13 delivery only after primary evidence and reports exist. Never authorizes an epoch or trade."""
++from pathlib import Path
++import datetime
++import difflib
++import hashlib
++import json
++import re
++import tarfile
++
++ROOT = Path(__file__).resolve().parents[1]
++OUT = ROOT / 'docs/phase13'
++
++
++def read(name):
++    return json.loads((OUT / name).read_text())
++
++
++def digest(path):
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++
++def save(name, value):
++    (OUT / name).write_text(json.dumps(value, indent=2) + '\n')
++
++
++def unchanged(manifest):
++    changes = [p for p, h in manifest.items() if not (ROOT / p).is_file() or digest(ROOT / p) != h]
++    assert not changes, changes
++    return len(manifest)
++
++
++prior_count = unchanged(read('prior-artifact-sha256.json'))
++start = read('source-at-start-sha256.json')['files']
++original_tests = unchanged({p: h for p, h in start.items() if p.startswith('tests/')})
++critical = {p: h for p, h in start.items() if p.startswith('vendor/') or p in [
++    'package-lock.json', 'src/market/deployment-pins.json', 'src/market/pump-layouts.json',
++    'src/market/pumpswap-layouts.json', 'src/market/meteora-layouts.json', 'src/protocol-layouts.json']}
++unchanged(critical)
++
++e = read('runtime/mainnet-validated/evidence.json')
++assert e.get('endedAt') and e['liveTrading'] is False
++assert e['coverageEpoch']['researchPolicyReview'] != 'verified'
++assert not e['ledger']['trades'], 'Trades under an unapproved epoch require investigation'
++funnel = read('candidate-outcomes.json')
++assert len(e['rows']) == funnel['selectedReceipts'] == sum(funnel['counts'].values())
++assert funnel['paperEntries'] == funnel['paperExits'] == 0
++for name in ['identity-probe-analysis.json', 'identity-mainnet-analysis.json']:
++    analysis = read(name)
++    assert not analysis['paperEntries'] and not analysis['paperExits']
++assert read('identity-probe-analysis.json')['remotePayloadOriginDemonstrated']
++assert read('provider-validation.json')['eligible'] is False
++assert read('provider-history.json')['eligible'] is False
++assert read('current-protocol-assessment.json')['newVariantsEnabled'] is False
++
++for name, expected in [('builder-reference.json', 8), ('quote-reference.json', 16)]:
++    rows = read(name)['rows']
++    assert len(rows) == expected and all(r.get('equal') for r in rows), name
++
++build = read('clean-delivery-validation/clean-build.json')
++assert build['node'].startswith('v22.')
++assert {r['check'] for r in build['checks']} == {'install', 'typecheck', 'build', 'audit', 'python-clock-tests'}
++assert all(r['exitCode'] == 0 for r in build['checks'])
++assert 'Ran 5 tests' in (OUT / 'clean-delivery-validation/python-tests.log').read_text()
++log = (OUT / 'delivery-validation/after-tests.log').read_text()
++match = re.search(r'# tests (\d+).*?# pass (\d+).*?# fail (\d+)', log, re.S)
++assert match and int(match[1]) >= 323 and match[1] == match[2] and match[3] == '0'
++assert json.loads((OUT / 'clean-delivery-validation/audit.log').read_text())['metadata']['vulnerabilities']['total'] == 0
++
++coherence = {}
++clean_root = Path(build['directory'])
++for run in ['mainnet-validated', 'final-release-probe']:
++    directory = OUT / 'runtime' / run
++    manifest = json.loads((directory / 'runtime-manifest.json').read_text())['hashes']
++    checks = {}
++    for p, h in manifest.items():
++        if not (p.startswith('dist/src/') or p in ['dist/scripts/phase9-mainnet.js', 'dist/scripts/phase11-mainnet.js']):
++            continue
++        checks[p] = {'loaded': h, 'copiedAtRunStart': digest(directory / 'source-at-start' / p),
++                     'currentBuild': digest(ROOT / p), 'cleanNode22Build': digest(clean_root / p)}
++    assert checks and all(len(set(row.values())) == 1 for row in checks.values()), run
++    coherence[run] = checks
++save('loaded-runtime-coherence.json', coherence)
++
++ops = read('final-release-probe-stop-owner-smoke.json')
++assert ops['secondOwnerExitCode'] != 0 and ops['ownerReleased'] and ops['ledgerKilled'] and ops['stopRequested']
++assert not ops['paperTrades']
++smoke = read('production-delivery-smoke.json')['checks']
++assert smoke['unauthorized'] == smoke['researchUnauthorized'] == 401
++assert smoke['authorized'] == smoke['dashboard'] == smoke['researchHttp'] == 200
++assert smoke['liveModeRejected'] and smoke['researchLive'] is False
++
++summary = read('validation-summary.json')
++assert summary['tests']['total'] == int(match[1]) and summary['fullPhaseAcceptance'] is False
++assert summary['paperEntries'] == summary['paperExits'] == 0
++assert summary['notifications'] == e['notifications']
++assert summary['monitoring']['elapsedMs'] == e['supervisor']['elapsedMs']
++
++reports = ['phase13-engineering-report.md', 'zero-signature-root-cause.md',
++           'stable-monitoring-validation.md', 'current-protocol-compatibility.md',
++           'raydium-meteora-creation-validation.md', 'independent-provider-and-coverage.md',
++           'end-to-end-paper-evidence.md', 'performance-and-security.md', 'phase-status.md',
++           'remaining-funded-trading-blockers.md']
++paths = [ROOT / 'docs' / name for name in reports] + [ROOT / 'README.md', OUT / 'README.md']
++links = 0
++planned = {OUT / name for name in ['delivery-source-sha256.json', 'delivery-artifact-sha256.json']}
++for path in paths:
++    assert path.is_file(), path
++    for target in re.findall(r'\]\(([^)]+)\)', path.read_text()):
++        if '://' in target or target.startswith('#'):
++            continue
++        links += 1
++        destination = (path.parent / target.split('#')[0]).resolve()
++        assert destination.exists() or destination in planned, (path, target)
++
++summary['priorPhase11And12ArtifactFilesUnchanged'] = prior_count
++summary['originalTestFilesUnchanged'] = original_tests
++summary['reviewedCriticalFilesUnchanged'] = len(critical)
++summary['compiledRuntimeAndCleanBuildModulesMatch'] = {run: len(rows) for run, rows in coherence.items()}
++summary['reportLinksChecked'] = links
++save('validation-summary.json', summary)
++
++# A reviewable source diff is available even though this workspace has no .git directory.
++source_paths = {p for root in ['src', 'scripts', 'tests', 'config', 'vendor', 'frontend/src']
++                for p in (ROOT / root).rglob('*') if p.is_file() and '__pycache__' not in p.parts}
++source_paths.update(paths)
++source_paths.update(ROOT / name for name in ['package.json', 'package-lock.json', 'Dockerfile', 'tsconfig.json'])
++diffs = []
++with tarfile.open(OUT / 'source-at-start.tar.gz') as archive:
++    archived = {member.name: archive.extractfile(member).read() for member in archive.getmembers() if member.isfile()}
++for path in sorted(source_paths):
++    name = str(path.relative_to(ROOT))
++    if not name.endswith(('.ts', '.mjs', '.js', '.py', '.md', '.yaml', '.json')):
++        continue
++    try:
++        before = archived.get(name, b'').decode().splitlines(keepends=True)
++        after = path.read_text().splitlines(keepends=True)
++    except UnicodeError:
++        continue
++    diffs.extend(difflib.unified_diff(before, after, fromfile='before/' + name, tofile='after/' + name))
++(OUT / 'delivery-source.diff').write_text(''.join(diffs))
++now = datetime.datetime.now(datetime.timezone.utc).isoformat()
++save('delivery-source-sha256.json', {'generatedAt': now, 'files': {
++    str(path.relative_to(ROOT)): digest(path) for path in sorted(source_paths) if path.is_file()}})
++active_logs = {'integrity-delivery.log', 'postrun-wrapper.log'}
++save('delivery-artifact-sha256.json', {'generatedAt': now,
++    'excludedActiveOutputLogs': sorted(active_logs), 'files': {
++    str(path.relative_to(ROOT)): digest(path) for path in sorted(OUT.rglob('*'))
++    if path.is_file() and path.name != 'delivery-artifact-sha256.json' and path.name not in active_logs}})
++print(json.dumps({k: summary[k] for k in ['tests', 'notifications', 'paperEntries', 'paperExits',
++      'priorPhase11And12ArtifactFilesUnchanged', 'compiledRuntimeAndCleanBuildModulesMatch', 'fullPhaseAcceptance']}))
+--- before/scripts/phase13-identity-report.py
++++ after/scripts/phase13-identity-report.py
+@@ -0,0 +1,72 @@
++"""Verify retained public wire bytes and link them to research admission, without touching WALs."""
++from pathlib import Path
++import argparse
++import base64
++import collections
++import datetime
++import hashlib
++import json
++
++parser = argparse.ArgumentParser()
++parser.add_argument('--run-directory', required=True)
++parser.add_argument('--output', required=True)
++args = parser.parse_args()
++run = Path(args.run_directory)
++evidence = json.loads((run / 'evidence.json').read_text())
++paths = sorted(run.glob('wire-identity.jsonl*'))
++paths = [p for p in paths if p.name == 'wire-identity.jsonl' or '.archive-' in p.name]
++assert sum(p.stat().st_size for p in paths) <= 50 * 1024 * 1024
++records = [json.loads(line) for path in paths for line in path.read_text().splitlines() if line]
++wire = [r for r in records if r['stage'] == 'wire-to-observation']
++admissions = [r for r in records if r['stage'] == 'stable-identity-and-wal-admission']
++proofs = []
++unlinked = []
++for record in wire:
++    if not record.get('byteExact'):
++        continue
++    raw = base64.b64decode(record['sanitizedBase64'], validate=True)
++    assert len(raw) == record['originalBytes']
++    assert hashlib.sha256(raw).hexdigest() == record['originalSha256']
++    message = json.loads(raw)
++    signature = message.get('params', {}).get('result', {}).get('value', {}).get('signature')
++    if signature != '1' * 64:
++        continue
++    assert record['extractedSignature'] == record['observationSignature'] == signature
++    linked = [r for r in admissions if r['wireIdentitySha256'] == record['originalSha256']
++              and r['signature'] == signature and r['program'] == record['program']
++              and r['slot'] == record['slot']]
++    if not linked:
++        unlinked.append({'wireSha256': record['originalSha256'], 'program': record['program'],
++                         'slot': record['slot'], 'status': 'WAL admission link unavailable; excluded from joined proof'})
++        continue
++    assert all(r['result']['reason'] == 'unverifiable-zero-signature'
++               and r['result']['status'] == 'unrecoverable' and r['durable'] for r in linked)
++    proofs.append({
++        'providerHost': record['providerHost'], 'connection': record['connection'],
++        'slot': record['slot'], 'program': record['program'],
++        'wireSha256': record['originalSha256'], 'wireBytes': len(raw),
++        'incomingSignature': signature, 'normalizedSignature': record['observationSignature'],
++        'admission': linked,
++    })
++result = {
++    'generatedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
++    'runDirectory': str(run), 'sourceManifest': str(run / 'runtime-manifest.json'),
++    'recordCounts': dict(collections.Counter(r['stage'] for r in records)),
++    'wireOutcomeCounts': dict(collections.Counter(r['outcome'] for r in wire)),
++    'byteExactZeroProofs': proofs,
++    'byteExactZeroSamplesWithoutAdmissionLink': unlinked,
++    'remotePayloadOriginDemonstrated': bool(proofs),
++    'remoteServerInternalReason': 'unknown; incoming envelopes do not identify the remote emission mechanism',
++    'applicationFallbackResponsibleForCapturedCases': False if proofs else None,
++    'captureLimits': evidence['identityAudit'],
++    'notifications': evidence['notifications'], 'refusals': evidence['refusalCounts'],
++    'paperEntries': sum(t['side'] == 'buy' for t in evidence['ledger']['trades']),
++    'paperExits': sum(t['side'] == 'sell' for t in evidence['ledger']['trades']),
++    'artifacts': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},
++    'scope': 'Proves the supplied sampled bytes at the local WebSocket receive boundary, not an upstream chain transaction, provider culpability, or the historical cause of unavailable Phase12 envelopes. No signature is substituted. Non-exact/redacted/truncated captures are excluded from byte-exact proof.',
++    'liveTrading': False,
++}
++with Path(args.output).open('x') as output:
++    output.write(json.dumps(result, indent=2) + '\n')
++print(json.dumps({'byteExactZeroProofs': len(proofs), 'notifications': result['notifications'],
++                  'remotePayloadOriginDemonstrated': bool(proofs)}))
+--- before/scripts/phase13-postrun.py
++++ after/scripts/phase13-postrun.py
+@@ -0,0 +1,92 @@
++"""Derive reviewable reports only from the finished primary Phase 13 window."""
++from pathlib import Path
++import argparse
++import datetime
++import hashlib
++import json
++import os
++import subprocess
++import time
++
++parser = argparse.ArgumentParser()
++parser.add_argument('--run', action='store_true')
++args = parser.parse_args()
++if not args.run:
++    raise SystemExit('Explicit --run required for final evidence derivation')
++out = Path('docs/phase13')
++run = out / 'runtime/mainnet-validated'
++deadline = time.monotonic() + 2200
++while not (run / 'evidence.json').exists() or not (out / 'mainnet-validated-stable-monitor-exit.json').exists():
++    if time.monotonic() > deadline:
++        raise SystemExit('Final primary evidence unavailable; no report acceptance inferred')
++    time.sleep(2)
++env = dict(os.environ)
++env['PATH'] = '/home/lkazaz/.nvm/versions/node/v22.22.0/bin:' + env['PATH']
++jobs = [
++    ('reconciliation', ['node', '--import', 'tsx', 'scripts/phase10-reconciliation.ts',
++        '--wal', str(run / 'ingestion.wal'), '--evidence', str(run / 'evidence.json'),
++        '--source-manifest', str(run / 'runtime-manifest.json'), '--output', str(out / 'runtime-reconciliation.json')]),
++    ('forensics', ['python3', 'scripts/phase11-prior-forensics.py', '--run', str(run),
++        '--reconciliation', str(out / 'runtime-reconciliation.json'), '--allow-retained-subset',
++        '--output', str(out / 'run-forensics.json')]),
++    ('outcomes', ['node', 'scripts/phase11-candidate-outcomes.mjs', '--root', str(out),
++        '--run-name', 'mainnet-validated', '--reconciliation', 'runtime-reconciliation.json']),
++    ('identity-analysis', ['python3', 'scripts/phase13-identity-report.py', '--run-directory', str(run),
++        '--output', str(out / 'identity-mainnet-analysis.json')]),
++    ('postrun-creations', ['node', '--import', 'tsx', 'scripts/phase12-postrun-verification.ts', '--run',
++        '--evidence', str(run / 'evidence.json'), '--output', str(out / 'postrun-creation-verification.json')]),
++]
++commands = []
++for name, command in jobs:
++    with (out / (name + '.log')).open('x') as stream:
++        result = subprocess.run(command, env=env, stdout=stream, stderr=subprocess.STDOUT)
++    commands.append({'name': name, 'args': command, 'exitCode': result.returncode})
++    if result.returncode:
++        (out / 'postrun-command-failure.json').write_text(json.dumps(commands, indent=2) + '\n')
++        raise SystemExit(result.returncode)
++
++e = json.loads((run / 'evidence.json').read_text())
++postrun = json.loads((out / 'postrun-creation-verification.json').read_text())
++reconciliation = json.loads((out / 'runtime-reconciliation.json').read_text())
++for row in postrun['rows']:
++    verified = [launch for attempt in row['attempts'] for launch in (attempt.get('verified') or [])]
++    if not verified: continue
++    event = row['original']
++    selected = next(item for item in e['rows'] if item['event']['program'] == event['program'] and item['event']['signature'] == event['signature'])
++    quarantine = next((item for item in reconciliation['quarantined'] if item['observation']['program'] == event['program'] and item['observation']['signature'] == event['signature']), None)
++    target = out / (event['program'].split('-')[0]+'-current-creation-fixture.json')
++    with target.open('x') as stream:
++        stream.write(json.dumps({'sourceEvidenceSha256': hashlib.sha256((run/'evidence.json').read_bytes()).hexdigest(), 'originalObservation': event,
++            'wireIdentitySha256': selected.get('wireIdentitySha256'), 'originalQuarantine': quarantine, 'postrunVerifiedLaunches': verified,
++            'capturedFinalizedTransactionsAndAccounts': postrun['captured'], 'eligibleForPaper': False,
++            'scope': 'Actual selected live receipt, late finalized proof retained for independent review. Original WAL quarantine remains unchanged; no fresh receipt, retry authorization or entry is inferred.'}, indent=2)+'\n')
++source = run / 'evidence.json'
++with (out / 'coverage-history.json').open('x') as stream:
++    stream.write(json.dumps({'endedAt': e['endedAt'], 'journal': e['journal'],
++        'sourceArtifact': {'path': str(source), 'sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
++                           'bytes': source.stat().st_size},
++        'scope': 'One completed Phase13 primary window, unresolved evidence retained; epoch approval remains unmet.'}, indent=2) + '\n')
++diagnostics = {}
++for name in ['current-buy-simulations.json', 'current-sell-simulations.json']:
++    value = json.loads((out / name).read_text())
++    diagnostics[name] = {'telemetry': value.get('telemetry'), 'elapsedMs': value.get('elapsedMs'),
++                         'memoryBefore': value.get('memoryBefore'), 'memoryAfter': value.get('memoryAfter'),
++                         'eventLoopDelayMs': value.get('eventLoopDelayMs')}
++with (out / 'performance-summary.json').open('x') as stream:
++    stream.write(json.dumps({'generatedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
++        'comparisonKind': 'Descriptive metric populations only; no matched performance improvement claim',
++        'primaryTelemetry': e['telemetry'], 'primaryResources': e['resources'],
++        'finalSample': e['samples'][-1] if e['samples'] else None,
++        'identityAudit': e['identityAudit'], 'diagnosticPopulationsSeparate': diagnostics,
++        'scope': 'WAL fsync/group sizes, decision queues, backpressure and CPU/memory describe the actual primary run. Simulation diagnostics are separate public-inventory subjects. No eligible-event latency population is invented.'}, indent=2) + '\n')
++with (out / 'postrun-commands.json').open('x') as stream:
++    stream.write(json.dumps(commands, indent=2) + '\n')
++
++for name, command in [('report', ['python3', 'scripts/phase13-report.py']),
++                       ('integrity', ['python3', 'scripts/phase13-final-validation.py'])]:
++    # The output logs exist before artifact sealing, but the final integrity log is excluded from its own digest.
++    with (out / (name + '-delivery.log')).open('x') as stream:
++        result = subprocess.run(command, env=env, stdout=stream, stderr=subprocess.STDOUT)
++    if result.returncode:
++        raise SystemExit(result.returncode)
++print('Finished primary evidence derivation; inspect validation-summary.json for unmet acceptance gates.')
+--- before/scripts/phase13-provider-history.ts
++++ after/scripts/phase13-provider-history.ts
+@@ -0,0 +1,53 @@
++/** Public diagnostics only: matching transactions do not establish authenticated independent operators or equal account banks. */
++import { readFile, open } from 'node:fs/promises';
++import { dirname } from 'node:path';
++import { createHash } from 'node:crypto';
++import { VerifiedReadRpc } from '../src/verified-rpc.js';
++import { boundedProviderRead } from '../src/research/providers.js';
++const args = process.argv.slice(2);
++if (!args.includes('--run')) throw Error('Explicit --run required');
++const output = args.includes('--output') ? args[args.indexOf('--output') + 1]! : 'docs/phase13/provider-history.json';
++const fixture = JSON.parse(await readFile('docs/phase12/raydium-current-creation-fixture.json', 'utf8'));
++const signature: string = fixture.originalObservation.signature;
++const expectedSlot: number = fixture.originalObservation.slot;
++const pool: string = fixture.postrunVerifiedLaunch.address;
++const providers = [{ id: 'solana-public', endpoint: 'https://api.mainnet-beta.solana.com' },
++  { id: 'publicnode', endpoint: 'https://solana-rpc.publicnode.com' }];
++const observations: any[] = [];
++function canonical(value: any): any {
++  if (Array.isArray(value)) return value.map(canonical);
++  if (value && typeof value === 'object') return Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical(value[key])]));
++  return value;
++}
++const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(canonical(value))).digest('hex');
++for (const provider of providers) {
++  const row: any = { provider: provider.id, host: new URL(provider.endpoint).host, authenticated: false, operatorIndependence: 'unknown' };
++  try { row.genesis = await boundedProviderRead(provider, 'getGenesisHash', []); }
++  catch (error) { row.genesisIssue = (error as Error).message; }
++  try {
++    row.transaction = await new VerifiedReadRpc(provider.endpoint).transaction(signature);
++    row.requestedSignature = signature;
++    row.transactionIdentityMatches = row.transaction?.slot === expectedSlot && row.transaction?.transaction?.signatures?.[0] === signature;
++    if (row.transaction) row.transactionDigest = digest(row.transaction.transaction);
++  } catch (error) { row.transactionIssue = (error as Error).message; }
++  try {
++    row.accounts = await boundedProviderRead(provider, 'getMultipleAccounts', [[pool], { commitment: 'finalized', encoding: 'base64' }]);
++    row.accountsDigest = digest(row.accounts.value);
++  } catch (error) { row.accountIssue = (error as Error).message; }
++  observations.push(row);
++}
++const txAvailable = observations.every(row => row.transactionIdentityMatches === true);
++const transactionConflict = txAvailable && new Set(observations.map(row => row.transactionDigest)).size !== 1;
++const banksAvailable = observations.every(row => Number.isSafeInteger(row.accounts?.context?.slot));
++const sameBank = banksAvailable && new Set(observations.map(row => row.accounts.context.slot)).size === 1;
++const accountConflict = sameBank && new Set(observations.map(row => row.accountsDigest)).size !== 1;
++const value = { generatedAt: new Date().toISOString(), signature, expectedSlot, pool, observations,
++  finalizedTransactionPayloadAgreement: txAvailable ? transactionConflict ? 'conflict' : 'matching-selected-transaction-payload' : 'unknown',
++  sameAccountBank: sameBank, accountStateAgreement: sameBank ? accountConflict ? 'conflict' : 'matching-at-reported-equal-bank' : 'unknown',
++  independentlyOperatedAuthenticatedProviders: false, eligible: false, paperAuthorized: false,
++  conflicts: transactionConflict || accountConflict ? [{ signature, pool, transactionConflict, accountConflict, disposition: 'Retain immutable evidence; manual review required. No automatic provider/epoch authorization.' }] : [],
++  liveTrading: false, scope: 'At most three public read-only calls per endpoint. Complete captured transactions are retained; transaction digest compares signed message and signatures, not every metadata field. Equal reported context slots are a conditional observation, not operator authentication or a universal identical-bank RPC guarantee. Missing data and different-bank evidence remain unknown.' };
++const file = await open(output, 'wx', 0o600);
++try { await file.writeFile(JSON.stringify(value, null, 2) + '\n'); await file.sync(); } finally { await file.close(); }
++const directory = await open(dirname(output), 'r'); try { await directory.sync(); } finally { await directory.close(); }
++console.log(JSON.stringify({ transactionAgreement: value.finalizedTransactionPayloadAgreement, sameBank, conflicts: value.conflicts.length, eligible: false }));
+--- before/scripts/phase13-report.py
++++ after/scripts/phase13-report.py
+@@ -0,0 +1,267 @@
++"""Generate Phase 13 acceptance reports from a finished single run, never from a progress file."""
++from pathlib import Path
++import collections
++import datetime
++import json
++import re
++
++ROOT = Path(__file__).resolve().parents[1]
++OUT = ROOT / 'docs/phase13'
++
++
++def read(name):
++    return json.loads((OUT / name).read_text())
++
++
++def doc(name, text):
++    (ROOT / 'docs' / name).write_text(text.strip() + '\n')
++
++
++e = read('runtime/mainnet-validated/evidence.json')
++assert e.get('endedAt'), 'Final run evidence required'
++s, j = e['supervisor'], e['journal']
++funnel = read('candidate-outcomes.json')
++identity = read('identity-mainnet-analysis.json')
++probe = read('identity-probe-analysis.json')
++postrun = read('postrun-creation-verification.json')
++late_verified = [launch for row in postrun['rows'] for attempt in row['attempts'] for launch in (attempt.get('verified') or [])]
++clock = read('timing/during-mainnet-validated/evidence.json')
++preflight = read('timing/preflight-1800/evidence.json')
++short = read('timing/preflight-300-validated/evidence.json')
++entry, exit = funnel['paperEntries'], funnel['paperExits']
++log = (OUT / 'delivery-validation/after-tests.log').read_text()
++tests = re.search(r'# tests (\d+).*?# pass (\d+).*?# fail (\d+)', log, re.S)
++assert tests
++test_ok = tests[1] == tests[2] and tests[3] == '0'
++build = read('clean-delivery-validation/clean-build.json')
++audit = json.loads((OUT / 'clean-delivery-validation/audit.log').read_text())
++checks_ok = test_ok and all(r['exitCode'] == 0 for r in build['checks']) and audit['metadata']['vulnerabilities']['total'] == 0
++duration_ok = (s['elapsedMs'] >= 1800000 and abs(s['clockDiscontinuityMs']) <= 1000
++               and s['state'] != 'terminal' and clock['stableForRequestedInterval']
++               and clock['containerBoundsPassed'] and preflight['stableForRequestedInterval'])
++gaps = dict(collections.Counter(g['status'] for g in j['gaps']))
++coverage_ok = (not any(g['status'] != 'recovered' for g in j['gaps']) and j['quarantined'] == 0
++               and e['unverifiableIdentities'] == 0 and not e['pipeline']['fatal'] and not j['writerFailure']
++               and e['coverageEpoch']['researchPolicyReview'] == 'verified')
++gates = [
++    ('Zero-identity origin', 'PASS' if identity['remotePayloadOriginDemonstrated'] or probe['remotePayloadOriginDemonstrated'] else 'PARTIAL', 'Byte-exact incoming envelopes and linked admission evidence; remote internal cause remains unknown.'),
++    ('Invalid-identity admission', 'PASS' if test_ok else 'FAIL', 'Research rejects zero, malformed and wrong-width signatures; strict diagnostic profile rejects ambiguous/version/mapping payloads.'),
++    ('1,800-second stable monitoring', 'PASS' if duration_ok else 'FAIL', f"One supervisor: {s['elapsedMs']/1000:.6f} monotonic seconds; wall discrepancy {s['clockDiscontinuityMs']:.3f} ms."),
++    ('Continuous required coverage', 'PASS' if coverage_ok else 'FAIL', f"Current gaps {gaps}; quarantines {j['quarantined']}; invalid identities {e['unverifiableIdentities']}."),
++    ('Current Pump/PumpSwap variants', 'PARTIAL', 'Both observed variants remain blocked. Reviewed diagnostic semantics do not complete financial compatibility.'),
++    ('Raydium/Meteora creation detection', 'PARTIAL', f'Raydium: {len(late_verified)} actual selected creation verified after the run, excluded from entries. Meteora legacy detection is validated offline; current delivery/new initializer coverage remains incomplete.'),
++    ('Independent providers', 'PARTIAL', 'Unavailable: public endpoints are not an authenticated independently operated pair; different account banks remain unknown.'),
++    ('Genuine current paper entry/exit', 'PASS' if entry and exit else 'FAIL', f'{entry} entries / {exit} exits. Historical unsigned public-inventory diagnostics are excluded.'),
++    ('Tests/build/security checks', 'PASS' if checks_ok else 'FAIL', f'{tests[2]}/{tests[1]} TypeScript tests, five Python clock tests; clean Node22 install/build/typecheck, container and PostgreSQL checks; audit capture retained.'),
++    ('Funded execution disabled', 'PASS' if e['liveTrading'] is False else 'FAIL', 'No signing, submission, funding or spending authorized or introduced.'),
++]
++summary = {'generatedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
++           'fullPhaseAcceptance': False, 'endToEndCurrentPaperValidated': bool(entry and exit),
++           'gates': [{'gate': name, 'status': status, 'detail': detail} for name, status, detail in gates],
++           'tests': {'total': int(tests[1]), 'passed': int(tests[2]), 'failed': int(tests[3]), 'pythonClockTests': 5},
++           'monitoring': s, 'notifications': e['notifications'], 'selectedCandidates': len(e['rows']),
++           'verifiedCreationsDuringRun': sum(r.get('verifiedLaunches', 0) for r in e['rows']),
++           'verifiedCreationsAfterRunExcludedFromEntries': len(late_verified),
++           'candidateOutcomes': funnel['counts'], 'venueCounts': e['venueCounts'], 'gaps': j['gaps'],
++           'quarantines': j['quarantined'], 'refusalCounts': e['refusalCounts'],
++           'wireZeroProofs': len(identity['byteExactZeroProofs']), 'identityCapture': e['identityAudit'],
++           'independentProviderAgreement': False, 'independentEpochApproval': False,
++           'paperEntries': entry, 'paperExits': exit, 'liveTrading': False,
++           'signingBroadcastSpending': False, 'audit': audit['metadata']['vulnerabilities']}
++(OUT / 'validation-summary.json').write_text(json.dumps(summary, indent=2) + '\n')
++table = '\n'.join(f'| {name} | **{status}** | {detail} |' for name, status, detail in gates)
++venue_table = '\n'.join(f"| {name} | {v['notifications']} | {v['creationHints']} | {v['selected']} | {v['unverifiableIdentities']} |" for name, v in e['venueCounts'].items())
++funnel_table = '\n'.join(f'| {name} | {count} |' for name, count in funnel['counts'].items())
++
++doc('phase13-engineering-report.md', f'''
++# Phase 13 engineering report
++
++**Full phase acceptance remains unmet.** The delivered pipeline identifies zero signatures at the incoming transport boundary and refuses invalid research identities. Current protocol, coverage/provider and genuine paper-lifecycle blockers remain explicit. Signing, broadcasting and spending remain disabled.
++
++| Acceptance gate | Result | Evidence-backed assessment |
++|---|---|---|
++{table}
++
++The exact [Phase 12 starting source](phase13/source-at-start-sha256.json), [source archive](phase13/source-at-start.tar.gz), [prior evidence manifest](phase13/prior-artifact-sha256.json) and [earlier root documents](phase13/prior-root-docs/docs/phase12-engineering-report.md) preserve the baseline. No original test, deployment pin, reviewed financial layout or dependency lock was changed. Current source and loaded compiled modules are checked by the [delivery verifier](../scripts/phase13-final-validation.py).
++
++The first 120-second identity diagnostic captured {probe['notifications']:,} notifications and two exact zero-signature envelopes. Its raw bytes, parsed field, normalized signature, stable key and fsynced refusal are linked by SHA-256. The new primary run supplies {len(identity['byteExactZeroProofs'])} further byte-exact zero proofs. This establishes incoming remote-payload origin for these samples, not the remote server's internal reason or the missing historical Phase 12 envelopes. There was no signature fallback to remove. [Root-cause report](zero-signature-root-cause.md).
++
++The existing shared supervisor, risk/market services, simulation gate, WAL and paper ledger remain in use. Changes add bounded sanitized wire diagnostics, strict JSON-RPC envelope handling in the explicit diagnostic profile, canonical 64-byte signature checks at research admission, and a bounded single-reader verification schedule. HTTP 429 retries honor cooldown and stop at evidence deadlines; finality, ownership, schema, provider, coverage and freshness requirements remain mandatory. Creation hints retain wire provenance between regular samples and remain hints until finalized verification.
++
++The primary run measured {s['elapsedMs']/1000:.6f} monotonic seconds, received {e['notifications']:,} notifications, selected {len(e['rows'])} receipts and verified {summary['verifiedCreationsDuringRun']} creations during monitoring. Fully ACKed time was {s['acknowledgedMs']/1000:.6f} seconds, distinct from connected time {s['connectedMs']/1000:.6f} and disconnected time {s['disconnectedMs']/1000:.6f}. Final gaps: {gaps}; current quarantines: {j['quarantined']}. Preflights, diagnostic and owner probes are excluded from that duration. [Monitoring](stable-monitoring-validation.md), [coverage/providers](independent-provider-and-coverage.md).
++
++| Venue | Notifications | Creation hints | Selected | Invalid identities |
++|---|---:|---:|---:|---:|
++{venue_table}
++
++Current Pump and the observed reversed PumpSwap route remain disabled. A current selected Raydium creation is verified after the run; Meteora's retained legacy fixture remains valid offline but its current historical reread is unavailable. Public discovery API HTTP 403 and unsupported initializers are recorded rather than inferred away. [Protocols](current-protocol-compatibility.md), [creation validation](raydium-meteora-creation-validation.md).
++
++All selected outcomes are accounted for, with **{entry} paper entries and {exit} exits**. No historical public inventory is treated as a fresh position. [Execution evidence](end-to-end-paper-evidence.md). The delivered image also passes shared-owner refusal and authenticated sticky stop. Existing crash/restart and PostgreSQL recovery checks remain in the complete suite. [Performance/security](performance-and-security.md), [funded blockers](remaining-funded-trading-blockers.md), [commands and immutable artifacts](phase13/README.md).
++''')
++
++doc('zero-signature-root-cause.md', f'''
++# Zero-signature root cause — Phase 13
++
++**PASS at the local transport boundary: captured zero identities are already present in incoming provider notification data.** Their remote emission mechanism remains unknown. Phase 12 retained normalized observations, so its unavailable raw envelopes cannot be retrospectively verified.
++
++| Stage | Result |
++|---|---|
++| Raw WebSocket bytes | Sanitized bounded base64 envelopes retain original SHA-256/length and an explicit byte-exact flag. Two probe samples and {len(identity['byteExactZeroProofs'])} primary-run samples are byte-exact zero proofs. |
++| Provider notification | JSON-RPC `params.result.value.signature` contains 64 base58 `1` characters, encoding 64 zero bytes. |
++| Subscription normalization | Acknowledged subscription IDs bind to the registered program; unbound mappings in the strict profile fail and open recovery gaps. |
++| ProgramObservation | `signature: value.signature` copies the field; no empty/default/generated signature is inserted. |
++| Signature extraction | Canonical base58 width and all-zero checks operate without replacing the input. |
++| Stable identity | The existing key is verified program address plus original signature. Cross-program signatures remain distinct. |
++| WAL admission | Invalid identities create a fsynced gap/refusal; no pending/completed ownership or anchor is created. The audit records the returned refusal after that boundary. |
++
++[Probe analysis](phase13/identity-probe-analysis.json), [primary analysis](phase13/identity-mainnet-analysis.json) and their `wire-identity.jsonl` files preserve the joins. Redacted or truncated envelopes are excluded from byte-exact proof. The corpus is bounded; retention and dropped-record counts are explicit. No endpoint path, request credential or authorization header is captured. Local hashes provide tamper evidence, not external notarization.
++
++The strict diagnostic profile rejects unsupported JSON-RPC versions and duplicate object keys, including escaped spellings, before normalization. Missing/non-string identities cannot become observations. Research admission also refuses invalid alphabet/width identities. Invalid strict-profile observations cannot advance the monitor's slot head. Existing generic journal fixture behavior remains compatible; this is an explicit research admission policy.
++
++Tests cover byte-exact wire→observation→durable refusal/restart, missing/malformed/versioned payloads, ambiguous keys, same-program duplicates/conflicts, cross-program identity scope, unbound subscriptions, sanitizer limits and creation-wire capture. [Tests](../tests/phase13-wire-identity.test.ts). Changed payloads still do not prove chain forks or provider culpability. No signature is manufactured, substituted or refreshed.
++''')
++
++doc('stable-monitoring-validation.md', f'''
++# Stable monitoring validation — Phase 13
++
++**Duration gate: {'PASS' if duration_ok else 'FAIL'}. Continuous required coverage: {'PASS' if coverage_ok else 'FAIL'}.** Elapsed time and complete event coverage are assessed separately.
++
++| Separate experiment | Monotonic seconds | Result |
++|---|---:|---|
++| Corrected fresh 300-second preflight | {short['actualMonotonicSeconds']:.9f} | Stable: {short['stableForRequestedInterval']} |
++| Required same-budget preflight | {preflight['actualMonotonicSeconds']:.9f} | Stable: {preflight['stableForRequestedInterval']} |
++| Primary supervisor, one run | {s['elapsedMs']/1000:.9f} | State: {s['state']} |
++| Concurrent independent clock observer | {clock['actualMonotonicSeconds']:.9f} | Stable: {clock['stableForRequestedInterval']} |
++
++The Phase 12 timing guard still requires a completed preflight at least as long as the proposed monitoring interval. The additional 1,800-second preflight preserves that rule after the requested fresh 300-second check. Their durations are never added to monitoring. The earlier 120-second identity probe and roughly ten-second owner probes are also excluded.
++
++Temporary `systemd-inhibit --what=sleep:idle --mode=block` locks are held during preflights and across launch/wait of the actual research container. [Inhibitor evidence](phase13/timing/inhibitors-during-preflight.json), [driver](../scripts/phase13-stable-monitor.py), [launch record](phase13/validated-runtime-launch.json). No permanent desktop sleep policy is changed. Kernel suspend counters, realtime/monotonic/boottime/raw clocks, scheduler/process/cgroup CPU and NTP journals are retained under `phase13/timing/`.
++
++Primary supervisor wall seconds: {s['wallElapsedMs']/1000:.6f}; wall/monotonic discrepancy: {s['clockDiscontinuityMs']:.6f} ms. Connected: {s['connectedMs']/1000:.6f} seconds; fully ACKed: {s['acknowledgedMs']/1000:.6f}; disconnected: {s['disconnectedMs']/1000:.6f}. Connections: {s['connections']}; incidents: {s['incidents']}. Exact socket/ACK/fault chronology is in `supervisor.intervals` and `supervisor.events` in [final evidence](phase13/runtime/mainnet-validated/evidence.json). The clock observer uses a persistent same-host container; the research wrapper additionally checks its own current boot and coherent wall/monotonic ages.
++
++The initial `runtime/mainnet/` container failed a five-second public RPC genesis bootstrap before monitoring started. Its source/ledger/launch and container logs are preserved and contribute no supervisor time. The distinct primary `runtime/mainnet-validated/` uses PublicNode as primary and Solana public RPC as secondary; neither is authenticated or independently authorized.
++
++The first 300-second observer wrote successful evidence, but its one-off outer launch command raised an exit-handling TypeError. That failed log is preserved. A corrected separate fresh 300-second launch returned success. No failure was overwritten or counted as extra coverage.
++
++Final gap states are {gaps}, quarantines {j['quarantined']}, invalid identities {e['unverifiableIdentities']}. WAL writer failure: {j['writerFailure']}; pipeline fatal: {e['pipeline']['fatal']}. These facts prevent a duration-only coverage claim. [Coverage reconciliation](independent-provider-and-coverage.md).
++''')
++
++doc('current-protocol-compatibility.md', '''
++# Current protocol compatibility — Phase 13
++
++**Current Pump deployment and the observed reversed PumpSwap variant remain blocked. No financial adapter, deployment pin or allocation whitelist was broadened.**
++
++[Current finalized Pump capture](phase13/pump-deployment/evidence.json) again observes deployment slot 469055660 against reviewed slot 458921440. Referenced ELF SHA-256 remains `0630a8108569c1c7a5b833c6e11276ebac03c801c495b1685fcfac99bf865cc5`; full ProgramData and padded payload hashes are separately retained. The [Global read](phase13/current-network/evidence.json) is 1096 bytes, while the pinned official Global schema accounts for 1088. Tail `1e00000000000000` still has no established authoritative field meaning. Public source/interface publication is not deployed binary/financial-contract equivalence.
++
++The freshly captured [official revision and IDLs](phase13/official/evidence.json) remain pinned to commit `639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22` for Pump. Native/non-native quotes, Mayhem supply/reserves, recursive depth, configurable fees, reward custody, transfer restrictions and new instructions are not globally approved by matching selected fields. [Phase 12 financial review](current-pump-financial-contract.md) and the [current assessment](phase13/current-protocol-assessment.json) preserve the missing proof chain.
++
++The observed PumpSwap pool is `DLEu6cVEPJ9Y64WG9Qs9ZtciWV4e9EjLWP8QH7vki5VA`. Its base mint is wrapped SOL, quote mint `Bj1XKzJ4MRj5gpJ9K4VWEjQsEvSyGuCP8JDjF53pAEHX`. [Current equal-batch custody](phase13/pumpswap-contract.json) validates vault mint/authority relationships and signed accounting bounds. The SOL-side vault holds only **585 lamports**, below the unchanged strategy minimum. Current signed offset and retained fee buckets are zero; the original offset was -8,859,839 with matching retained protocol fees. No intervening sweep is inferred without transaction proof.
++
++Official [signed-reserve semantics](https://raw.githubusercontent.com/pump-fun/pump-public-docs/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/docs/NEGATIVE_VIRTUAL_QUOTE_RESERVES.md) define effective quote reserves as quote custody plus a signed i128 offset. Retained fees are liabilities, not extra liquidity. Values are never clamped or reinterpreted as unsigned. SOL-base/native mint supply is zero, so the retained SDK market-cap equality is degenerate and cannot validate bidirectional quotes. Reversed routing, fee denomination, independent integer buy/sell wires, complete custody/authority evidence and actual two-sided variant simulations remain incomplete.
++
++Independent [wire vectors](phase13/builder-reference.json) match 8/8 and [captured-state quote vectors](phase13/quote-reference.json) match 16/16 for already reviewed subjects. UNIT wire accounts and historical fixtures remain diagnostic. [Current buy](phase13/current-buy-simulations.json) and [sell](phase13/current-sell-simulations.json) calls succeed on a separate supported PumpSwap subject; Raydium sell also reconciles. They do not validate the observed reversed route or establish an eligible paper entry, owned inventory, full fresh-position lifecycle or profitability. Fees, rent and balance effects remain in the exact simulation accounting records.
++''')
++
++doc('raydium-meteora-creation-validation.md', f'''
++# Raydium/Meteora creation validation — Phase 13
++
++**PARTIAL. Existing strict finalized creation detection is validated; exhaustive current coverage and newer initializer support are not claimed.** The [coverage matrix](phase13/creation-validation.json) separates supported variants, actual finalized fixtures and current reread availability.
++
++The actual Phase 12 Raydium `initialize` receipt at slot 469514659 is reverified against current finalized reads. Meteora's actual retained `initialize_lb_pair` fixture verifies against its retained finalized/account evidence; PublicNode returned null for its historical transaction reread, which remains unavailable, not zero creations. Neither historical receipt becomes a fresh entry. The public Meteora pool-discovery API returned HTTP 403; the failed requests are preserved under [discovery evidence](phase13/dlmm-discovery/). A separate [per-venue delivery check](phase13/venue-delivery-check.json) found recent successful Meteora history on both public RPC endpoints while the primary notification counter was zero. [Single-venue controls](phase13/venue-controls.json) are separate bounded experiments, never added to primary duration or interpreted as creation proof. In the 60-second controls, the same monitor received 6,591 Meteora notifications from Solana public RPC and zero from PublicNode despite acknowledgements; PublicNode reached the receipt-stale watchdog. This establishes a provider/connection-specific delivery gap in that sample, with the remote internal mechanism unknown. Subscription ACKs and aggregate traffic therefore cannot demonstrate all-venue delivery. These are observations and swaps, not 6,591 pool creations.
++
++Raydium `initialize_with_permission` and Meteora `initialize_lb_pair2`, permissioned and customizable variants remain unsupported without complete finalized fixtures and invocation/account/PDA proof. Pool creation is distinct from bin-array initialization, position initialization, liquidity changes and swaps. Existing decoder checks still require exact successful invocation attribution, instruction data, event identity and account relationships.
++
++| Venue | Notifications in primary run | Creation hints | Selected |
++|---|---:|---:|---:|
++| Raydium CPMM | {e['venueCounts']['raydium-cpmm']['notifications']} | {e['venueCounts']['raydium-cpmm']['creationHints']} | {e['venueCounts']['raydium-cpmm']['selected']} |
++| Meteora DLMM | {e['venueCounts']['meteora-dlmm']['notifications']} | {e['venueCounts']['meteora-dlmm']['creationHints']} | {e['venueCounts']['meteora-dlmm']['selected']} |
++
++The primary run selected one new Raydium `initialize` receipt at slot 469745467, signature `25UYv2XuXoA5oXgeABN69icevLsGziurJoJewzpKeYhKsn7KQ8KaUEpRetUciqoMPui7vwMva6hXnqXAt7dHJMgx`. It was quarantined from incomplete/truncated live invocation logs. A bounded finalized post-run reread proves pool `Fy2GNqA73qDqDsFANKM2WrhDH6fppoyLT9hqStQdNJS1`; the [new actual creation fixture](phase13/raydium-current-creation-fixture.json) retains original receipt, wire provenance, quarantine cause and full finalized proof. It remains history-bound and ineligible for a fresh entry. This late proof is counted separately from creations verified during monitoring.
++
++[Primary selected outcomes](phase13/candidate-outcomes.json) retain every verification result. [Post-run rereads](phase13/postrun-creation-verification.json) preserve original timestamps and explicitly history-bound freshness. Hint counts are not verified creation counts, and missing/failed reads do not estimate genuine creation frequency. Sampling caps, gaps and rate limits remain visible.
++
++The existing verifier now optionally uses one bounded reader, capacity 16, minimum spacing 350 ms, at most two HTTP attempts and an eight-second per-request budget in this research run. HTTP 429 cooldown is honored, including refusal when Retry-After exceeds the evidence deadline. This does not relax finalized or mandatory account evidence, share a global quota with every RPC client, or prove an improvement across unequal live workloads. [Scheduling tests](../tests/phase13-verification-scheduling.test.ts).
++''')
++
++doc('independent-provider-and-coverage.md', f'''
++# Independent provider and coverage evidence — Phase 13
++
++**Independent authenticated providers are unavailable; current-window authorization remains blocked.** No provider-related credentials were configured in the execution environment. Public endpoint brands cannot establish independent infrastructure or authentication.
++
++[Provider observations](phase13/provider-validation.json) retain genesis, finalized slots and account reads. [Historical transaction comparison](phase13/provider-history.json) compares the actual Raydium signed message/signatures across both public endpoints. Its matching selected payload does not prove equal account banks or operator independence. The market account reads have different reported banks; account agreement remains unknown. `minContextSlot` is never interpreted as exact-bank equality. Missing history, HTTP/RPC errors and any conflicts remain explicit; a conflicting diagnostic requires manual review, not automatic quarantine release or epoch approval.
++
++The primary run ended with gaps {gaps}, current quarantines {j['quarantined']}, refusals {e['refusalCounts']}. [WAL reconciliation](phase13/runtime-reconciliation.json), [forensics](phase13/run-forensics.json) and [coverage history](phase13/coverage-history.json) preserve status and original identities. Prior Phase 11/12 gaps and quarantines remain referenced by hash in the five supplied history artifacts; new run IDs and empty queues grant no permission. Zero identities remain a run-level coverage failure even if a provider scan labels a gap recovered.
++
++Recovery is bounded and provider-reported. Page/transaction/window limits cannot prove completeness once anchors or predecessor evidence are unavailable. No original WAL is rewritten by offline reconciliation, and no historical zero/refusal is relabeled a verified transaction or proven fork. Quarantine mutation still requires separate authorized, expiring WAL/plan/fingerprint-bound review with durable audit.
++
++The existing [draft epoch policy](phase12/current-window-policy-proposal.json) is unapproved. No new policy authority was manufactured for this run. Common-state evidence, authenticated independent operator provenance, complete required current-window coverage, reviewed protocol support and fresh strategy/risk checks remain entry prerequisites.
++''')
++
++doc('end-to-end-paper-evidence.md', f'''
++# End-to-end current-chain paper evidence — Phase 13
++
++**Acceptance {'PASS' if entry and exit else 'FAIL / UNMET'}: {entry} genuine paper entries, {exit} exits. No realized paper P&L is inferred from diagnostics.** The existing shared supervisor, market adapter, mandatory risk engine, simulation gate and file-backed paper ledger are retained.
++
++Primary notifications: {e['notifications']:,}; selected receipts: {len(e['rows'])}; finalized creations during run: {summary['verifiedCreationsDuringRun']}. Invalid-identity refusals occur before candidate admission and are separately retained. Original live receipt/time, wire links where captured, finalized verification and every selected outcome are in [the complete selected funnel](phase13/candidate-outcomes.json).
++
++| Selected outcome | Count |
++|---|---:|
++{funnel_table}
++
++This is complete for selected receipts, not all launches on the network. Sampling limits and capture drops remain in [final evidence](phase13/runtime/mainnet-validated/evidence.json). Market rejection reasons are {e['rejectionCounts']}; verification reasons are {e['verificationRejectionCounts']}. Unresolved or quarantined work never becomes an eligible entry.
++
++The full required path remains original live receipt → finalized identity → current reviewed protocol/account custody → token/extension/holder/liquidity evidence → fresh integer buy/full-position sell quotes → independently validated unsigned instructions → reconciled simulation effects/costs → current provider/coverage/freshness/strategy/stop recheck → durable entry → fresh executable sell monitoring → normal exit and terminal ledger/P&L. Historical post-run proof cannot satisfy the original receipt's freshness or fill a missing stage.
++
++Unsigned [buy diagnostics](phase13/current-buy-simulations.json) and [sell diagnostics](phase13/current-sell-simulations.json) retain actual errors, fees, rent, public inventory and reconciled effects. Supported PumpSwap and Raydium diagnostic subjects are different from unapproved current variants. Public inventory impersonation with `sigVerify:false` is neither user-owned inventory nor a fresh paper entry. Separate buys/sells on different public accounts cannot form a synthetic round trip or establish profitability.
++
++With no qualified position, fresh full-position exit monitoring and terminal paper P&L remain unproved. No strategy limit, concentration requirement, deployment guard, provider rule or coverage policy was bypassed to force a trade.
++''')
++
++doc('performance-and-security.md', f'''
++# Performance and security — Phase 13
++
++**Validation {'PASS' if checks_ok else 'FAIL'}; no speedup claim.** [Final regression](phase13/delivery-validation/after-tests.log): {tests[2]}/{tests[1]} TypeScript tests, all original 312 retained byte-for-byte. Five original Python clock tests pass. [Clean Node22 validation](phase13/clean-delivery-validation/clean-build.json) records isolated npm ci, typecheck, backend/frontend build and audit. Audit vulnerabilities at capture: {audit['metadata']['vulnerabilities']['total']}. Earlier validation logs remain intact.
++
++[Final image smoke](phase13/production-delivery-smoke.json) verifies authentication, dashboard, no-store research projection, SQL assets and live-mode rejection in an actual read-only, network-disabled container. [Final wrapper owner/stop probe](phase13/final-release-probe-stop-owner-smoke.json) refuses a concurrent shared-namespace owner, accepts authenticated sticky kill, drains the ledger and releases ownership. Its short duration is excluded from primary monitoring. No cross-host/distributed lease is claimed.
++
++The unchanged regression suite executes PostgreSQL SCRAM privilege/rotation, immediate crash/restart, uncertainty fencing and backup/restore checks. Fresh [database evidence](phase13/delivery-validation/prior-helper-rerun/docs/phase8/database-validation.json) and [persistent intent evidence](phase13/delivery-validation/prior-helper-rerun/docs/phase7/persistent-database-validation.json) are retained. These private single-node test clusters are not HA or production deployment proof. The first Phase 13 regression invocation refreshed the mutable root summaries `docs/phase7/persistent-database-validation.json` and `docs/phase8/database-validation.json` before the preservation wrapper was used. Their pre-invocation bytes were not included in the Phase 13 snapshot and cannot be asserted unchanged. The new summaries are retained in `phase13/initial-database-evidence/`; subsequent passes preserve summaries and retain reruns separately. This is an archival limitation. Earlier per-phase logs and all hashed Phase 11/12 immutable artifacts remain unchanged.
++
++The implementation preserves worker fsync ownership and queue bounds. Wire diagnostics have explicit byte/record retention limits, sanitization/exactness flags and failure propagation. Research refuses ambiguous JSON keys and malformed identities; generic fixture compatibility does not grant research eligibility. Verification scheduling honors provider cooldown, limits admission/retries and never converts missing mandatory evidence into a verified result.
++
++[Primary telemetry](phase13/runtime/mainnet-validated/evidence.json) records WAL fsync/group sizes, receipt-to-decision times, queue/backpressure, process CPU, memory, event-loop delay and RPC errors. Actual unsigned simulation queue/execution and account-retrieval timings are retained in the buy/sell diagnostic artifacts. There is no eligible-event simulation latency population when no entry qualifies. The separate [performance summary](phase13/performance-summary.json) preserves metric populations without comparing unequal live durations or claiming source improvements. Phase 12 A/A/source controls remain immutable and are not reused as Phase 13 speedup evidence.
++
++Unapproved financial variants, independent-provider/epoch authority, complete coverage and genuine paper lifecycle remain deployment blockers. A zero npm audit does not establish external application security approval or funded readiness. Signing, broadcasting and spending remain disabled.
++''')
++
++headline = f"Phase 13: **full current-chain paper acceptance remains unmet**. The final suite passes {tests[2]}/{tests[1]} tests plus five Python clock tests. Incoming remote zero signatures are proven and refused. The single primary supervisor measured {s['elapsedMs']/1000:.3f} seconds; continuous required coverage remains {'demonstrated' if coverage_ok else 'unmet'}. Current observed protocol variants and independent provider/epoch approval remain blocked; paper entries/exits are {entry}/{exit}. [Engineering report](docs/phase13-engineering-report.md), [evidence and commands](docs/phase13/README.md), [funded blockers](docs/remaining-funded-trading-blockers.md)."
++readme = ROOT / 'README.md'
++text = readme.read_text()
++text = re.sub(r'\nPhase 1[23]:.*?\n', '\n', text, count=1)
++text = text.replace('# Mintbot\n', '# Mintbot\n\n' + headline + '\n', 1)
++readme.write_text(text)
++status = ROOT / 'docs/phase-status.md'
++text = status.read_text().replace('## Current Phase 12 acceptance', '## Historical Phase 12 acceptance')
++text = re.sub(r'\n## Current Phase 13 acceptance.*?(?=\n## |\Z)', '', text, flags=re.S)
++first, rest = text.split('\n', 1)
++status.write_text(first + '\n\n## Current Phase 13 acceptance — November 15, 2026\n\n' + headline.replace('docs/', '') + '\n' + rest)
++blockers = ROOT / 'docs/remaining-funded-trading-blockers.md'
++text = blockers.read_text()
++if text.startswith('# Phase 12'):
++    text = text.replace('# Phase 12 remaining funded-trading blockers', '## Retained Phase 12 funded-trading assessment', 1)
++if not text.startswith('# Phase 13'):
++    blockers.write_text(f'''# Phase 13 remaining funded-trading blockers
++
++**Funded execution and genuine current-chain paper lifecycle acceptance remain blocked.** [Current verdict](phase13-engineering-report.md).
++
++- Pump's current executable/Global tail lacks approved financial-contract evidence; the observed reversed signed-reserve PumpSwap variant remains unvalidated and currently has only 585 lamports on its SOL side.
++- Current required continuous coverage is {'demonstrated only within the measured scope' if coverage_ok else 'unmet'}; unresolved/unknown history and invalid identities remain retained. Duration success does not approve an epoch.
++- Authenticated independently operated providers and defensible common-state account evidence are unavailable. Independent epoch-policy review remains required.
++- Genuine eligible paper entry/exit and terminal exact P&L are {entry}/{exit}; historical public inventory and unsigned diagnostics cannot supply missing fresh positions.
++- Selective WebSocket delivery must be resolved and per-venue receipt evidence reviewed: the Meteora control received 6,591 Solana-public notifications and zero PublicNode notifications despite ACKs. Newer initializer completeness, mandatory holder/authority/concentration evidence, operational recovery review and production alerting remain bounded or incomplete.
++- Distributed leases/storage, isolated signer/spend authorization, settlement/uncertainty controls, independent security review, HA/PITR and separately authorized funded validation remain outside the tested single-host paper system.
++
++Earlier phase assessments below are historical and do not satisfy current acceptance.
++
++''' + text)
++print(json.dumps({'tests': summary['tests'], 'monitoringSeconds': s['elapsedMs']/1000,
++                  'paperEntries': entry, 'paperExits': exit, 'fullPhaseAcceptance': False}))
+--- before/scripts/phase13-stable-monitor.py
++++ after/scripts/phase13-stable-monitor.py
+@@ -0,0 +1,77 @@
++"""Hold a temporary host sleep inhibitor across one bounded research container and clock observer."""
++from pathlib import Path
++import argparse
++import datetime
++import json
++import subprocess
++import time
++
++parser = argparse.ArgumentParser()
++parser.add_argument('--run', action='store_true')
++parser.add_argument('--inside-inhibitor', action='store_true', help=argparse.SUPPRESS)
++parser.add_argument('--run-name',default='mainnet')
++parser.add_argument('--launch-record',default='runtime-launch.json')
++args = parser.parse_args()
++if not args.run:
++    raise SystemExit('Explicit --run required; no signing or submission exists')
++out = Path('docs/phase13').resolve()
++if not args.inside_inhibitor:
++    command = ['systemd-inhibit', '--what=sleep:idle', '--who=Mintbot',
++               '--why=Authorized Phase13 bounded read-only monitoring', '--mode=block',
++               'python3', str(Path(__file__).resolve()), '--run', '--inside-inhibitor','--run-name',args.run_name,'--launch-record',args.launch_record]
++    with (out / (args.run_name+'-stable-monitor-command.json')).open('x') as stream:
++        stream.write(json.dumps({'args': command, 'startedAt': datetime.datetime.now(datetime.timezone.utc).isoformat()}, indent=2) + '\n')
++    raise SystemExit(subprocess.call(command))
++
++certificate = out / 'timing/preflight-1800/evidence.json'
++deadline = time.monotonic() + 2000
++while not certificate.exists():
++    if time.monotonic() >= deadline:
++        raise SystemExit('Completed same-budget preflight unavailable; monitoring not started')
++    time.sleep(1)
++preflight = json.loads(certificate.read_text())
++assert preflight['stableForRequestedInterval'] and preflight['containerBoundsPassed']
++assert preflight['actualMonotonicSeconds'] >= 1800
++assert json.loads((out / 'timing/preflight-300-validated/evidence.json').read_text())['stableForRequestedInterval']
++assert not (out / args.launch_record).exists(), 'Existing run evidence preserved'
++history = ','.join(['docs/phase11/coverage-history.json', 'docs/phase11/phase11-coverage-history.json',
++                    'docs/phase12/coverage-history.json', 'docs/phase12/final-coverage-history.json',
++                    'docs/phase13/identity-probe-coverage-history.json'])
++command = ['python3', 'scripts/phase12-launch-monitor.py', '--seconds', '1800',
++           '--clock-directory', str(certificate.parent), '--output-root', str(out),
++           '--image', 'mintbot:phase13-readonly', '--run-name', args.run_name,
++           '--container-name', 'mintbot-phase13-'+args.run_name, '--launch-record', args.launch_record,
++           '--history', history, '--identity-diagnostics', '--bounded-verification', '--wait']
++with (out / (args.run_name+'-launcher.log')).open('x') as launch_log:
++    process = subprocess.Popen(command, stdout=launch_log, stderr=subprocess.STDOUT)
++    try:
++        launch_deadline = time.monotonic() + 90
++        while not (out / args.launch_record).exists():
++            if process.poll() is not None or time.monotonic() > launch_deadline:
++                raise RuntimeError('Container launch failed; inspect immutable launcher log')
++            time.sleep(0.2)
++        # This persistent container remains available after the finite research process exits.
++        clock_command = ['python3', 'scripts/phase12-host-health.py', '--seconds', '1800',
++                         '--container', 'mintbot-phase12-clock', '--output', str(out / ('timing/during-'+args.run_name))]
++        with (out / ('timing/during-'+args.run_name+'-command.json')).open('x') as stream:
++            stream.write(json.dumps({'args': clock_command}, indent=2) + '\n')
++        with (out / ('timing/during-'+args.run_name+'.log')).open('x') as clock_log:
++            observer = subprocess.Popen(clock_command, stdout=clock_log, stderr=subprocess.STDOUT)
++            code = process.wait(timeout=2000)
++            if code != 0 and observer.poll() is None: observer.terminate()
++            clock_code = observer.wait(timeout=90)
++        inspected = json.loads(subprocess.check_output(['docker', 'inspect', 'mintbot-phase13-'+args.run_name]))[0]
++        with (out / (args.run_name+'-runtime-container-inspect.json')).open('x') as stream:
++            stream.write(json.dumps({k: inspected[k] for k in ['Id', 'Image', 'State']}, indent=2) + '\n')
++        with (out / (args.run_name+'-runtime-container.log')).open('x') as stream:
++            subprocess.run(['docker', 'logs', 'mintbot-phase13-'+args.run_name], stdout=stream, stderr=subprocess.STDOUT)
++        with (out / (args.run_name+'-stable-monitor-exit.json')).open('x') as stream:
++            stream.write(json.dumps({'launcherExitCode': code, 'clockExitCode': clock_code,
++                'finishedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
++                'scope': 'One finite primary supervisor. Preflights and control probes are never concatenated. Duration alone does not grant continuous coverage or trade eligibility.'}, indent=2) + '\n')
++        raise SystemExit(0 if code == clock_code == 0 else 2)
++    finally:
++        if process.poll() is None:
++            # Never leave the paper owner running after its timing/inhibition wrapper fails.
++            subprocess.run(['docker', 'stop', '--time', '45', 'mintbot-phase13-'+args.run_name], capture_output=True)
++            process.wait(timeout=60)
+--- before/scripts/phase13-venue-control.mjs
++++ after/scripts/phase13-venue-control.mjs
+@@ -0,0 +1,37 @@
++/** Separate bounded transport control; no research decisions, WAL ownership or paper ledger. */
++import { writeFile } from 'node:fs/promises';
++import { MonitorSupervisor } from '../src/research/monitor-supervisor.js';
++import { VERIFIED_PROGRAMS } from '../src/chain.js';
++import { transactionIdentityIssue } from '../src/research/wire-identity.js';
++import WebSocket from 'ws';
++const args = process.argv.slice(2);
++if (!args.includes('--run')) throw Error('Explicit --run required');
++const output = args.includes('--output') ? args[args.indexOf('--output') + 1] : 'docs/phase13/venue-controls.json';
++const results = await Promise.all(['wss://solana-rpc.publicnode.com', 'wss://api.mainnet-beta.solana.com'].map(async endpoint => {
++  const row = { providerHost: new URL(endpoint).host, notifications: 0, invalidIdentities: {}, samples: [], wire: [], acks: [], errors: [] };
++  let bytes = 0;
++  const monitor = new MonitorSupervisor([endpoint], VERIFIED_PROGRAMS.filter(program => program.name === 'meteora-dlmm'), event => {
++    row.notifications++;
++    const issue = transactionIdentityIssue(event.signature);
++    if (issue) row.invalidIdentities[issue] = (row.invalidIdentities[issue] ?? 0) + 1;
++    if (row.samples.length < 5) row.samples.push({ ...event, wireIdentitySha256: event.wireIdentitySha256 });
++  }, { maxDurationMs: 60000, maxConnections: 8, maxIncidents: 8, strictRpcNotifications: true,
++    onIdentityTrace: trace => { const size = Buffer.byteLength(JSON.stringify(trace)); if (bytes + size <= 1024 * 1024) { row.wire.push(trace); bytes += size; } },
++    onError: error => row.errors.push(error.message),
++    socketFactory: url => {
++      const socket = new WebSocket(url, { maxPayload: 262144, handshakeTimeout: 10000 });
++      socket.on('message', raw => {
++        try { const message = JSON.parse(raw.toString()); if (message.id !== undefined && row.acks.length < 16) row.acks.push(message); }
++        catch { /* The supervisor's strict parser retains rejected-payload diagnostics. */ }
++      });
++      return socket;
++    },
++  });
++  monitor.start();
++  await new Promise(resolve => setTimeout(resolve, 60500));
++  monitor.stop(); row.supervisor = monitor.snapshot(); return row;
++}));
++await writeFile(output, JSON.stringify({ generatedAt: new Date().toISOString(), results,
++  scope: 'Two distinct 60-second single-venue transport controls, not added to the primary window, not creation verification, not independent authenticated providers, no market decisions or fills.',
++  paperEntries: 0, paperExits: 0, liveTrading: false }, null, 2) + '\n', { flag: 'wx' });
++console.log(JSON.stringify(results.map(row => ({ provider: row.providerHost, notifications: row.notifications, acks: row.acks.length, errors: row.errors }))));
+--- before/scripts/phase13-venue-delivery.mjs
++++ after/scripts/phase13-venue-delivery.mjs
+@@ -0,0 +1,31 @@
++/** Bounded read-only comparison: subscription ACKs are not proof of per-venue delivery. */
++import { readFile, writeFile } from 'node:fs/promises';
++import { HttpRecoveryRpc } from '../src/backfill.js';
++import { VERIFIED_PROGRAMS } from '../src/chain.js';
++const args = process.argv.slice(2);
++if (!args.includes('--run')) throw Error('Explicit --run required');
++const output = args.includes('--output') ? args[args.indexOf('--output') + 1] : 'docs/phase13/venue-delivery-check.json';
++const progressPath = 'docs/phase13/runtime/mainnet-validated/run-progress.json';
++const before = JSON.parse(await readFile(progressPath, 'utf8'));
++const rows = [];
++for (const endpoint of ['https://solana-rpc.publicnode.com', 'https://api.mainnet-beta.solana.com']) {
++  const rpc = new HttpRecoveryRpc(endpoint, 5000, 4 * 1024 * 1024, 'finalized');
++  for (const name of ['raydium-cpmm', 'meteora-dlmm']) {
++    const program = VERIFIED_PROGRAMS.find(program => program.name === name);
++    const row = { host: new URL(endpoint).host, program: name, observedAt: Date.now() };
++    try { const result = await rpc.getSignaturesForAddress(program.address, { limit: 5 }); if (!Array.isArray(result)) throw Error('Provider signature list unavailable'); row.recentFinalizedSignatures = result; }
++    catch (error) { row.issue = error.message; }
++    rows.push(row);
++  }
++}
++const after = JSON.parse(await readFile(progressPath, 'utf8'));
++await writeFile(output, JSON.stringify({ generatedAt: new Date().toISOString(), rows,
++  progressBefore: { startedAt: before.startedAt, updatedAt: before.updatedAt, venueCounts: before.venueCounts, supervisor: before.supervisor },
++  progressAfter: { updatedAt: after.updatedAt, venueCounts: after.venueCounts, supervisor: after.supervisor },
++  findings: rows.map(row => ({ host: row.host, program: row.program,
++    reportedSuccessfulActivityWithinRun: row.recentFinalizedSignatures?.filter(record => record.err === null && record.blockTime * 1000 >= before.startedAt && record.blockTime * 1000 <= after.updatedAt).length,
++    notificationsObservedInRun: after.venueCounts[row.program].notifications,
++    interpretation: 'Provider-reported recent history and notification counters are distinct. ACKs alone do not establish complete delivery. This sample is not creation verification, independent-provider proof or gap recovery.' })),
++  eligibleForPaper: false, liveTrading: false }, null, 2) + '\n', { flag: 'wx' });
++console.log(JSON.stringify(rows.map(row => ({ host: row.host, program: row.program,
++  recentSignatures: row.recentFinalizedSignatures?.length, issue: row.issue }))));
+--- before/scripts/phase9-mainnet.ts
++++ after/scripts/phase9-mainnet.ts
+@@ -106,15 +106,26 @@
+  return {status:assessment.status==="verified"&&exactBank?"verified":assessment.status==="failed"?"failed":"unknown",reasons:[...assessment.reasons,...(exactBank?[]:["Provider comparison does not match the quote bank"])]};
+ }});
+ const market = new MarketService(paper, reader,metrics);
+-const verifier = new CaptureVerifier(endpoint);
++const verifier = new CaptureVerifier(endpoint,process.env.RESEARCH_BOUNDED_VERIFICATION==='true'?{minimumIntervalMs:350,deadlineMs:8000,maximumAttempts:2,capacity:16,metrics}:undefined);
+ const journal = await AsyncEventJournal.open({path:`${output}/ingestion.wal`},metrics);
+ const raw=await RotatingJsonl.open(`${output}/observations.jsonl`,{maxBytes:8*1024*1024,maxArchives:2,capacity:128},metrics);
+ const refusalAudit=await RotatingJsonl.open(`${output}/refusals.jsonl`,{maxBytes:4*1024*1024,maxArchives:2,capacity:256},metrics);
++const identityAudit=process.env.RESEARCH_IDENTITY_DIAGNOSTICS==='true'
++ ?await RotatingJsonl.open(`${output}/wire-identity.jsonl`,{maxBytes:16*1024*1024,maxArchives:2,capacity:256},metrics):undefined;
++let identityAuditBytes=0,identityAuditDropped=0,identityAuditRecords=0;
++function identityTrace(record:Record<string,unknown>){
++ if(!identityAudit)return;
++ const bytes=Buffer.byteLength(JSON.stringify(record))+1;
++ if(identityAuditBytes+bytes>32*1024*1024){identityAuditDropped++;return;}
++ identityAuditBytes+=bytes;identityAuditRecords++;
++ void identityAudit.append(record).catch(failIngestion);
++}
++const identityAuditStatus=()=>({enabled:!!identityAudit,records:identityAuditRecords,bytes:identityAuditBytes,dropped:identityAuditDropped,storage:identityAudit?.status(),scope:'Bounded first/every-1000th/invalid wire population and linked admission results; public incoming envelopes only. Sanitized captures expose byteExact and original SHA; no raw endpoint credentials.'});
+ const refusalCounts:Record<string,number>={};
+ async function recordRefusal(event:ProgramObservation,status:string,reason?:string){
+  const category=reason??status;refusalCounts[category]=(refusalCounts[category]??0)+1;
+  const id=eventIdentity(event),previous=journal.pending.get(id),completed=journal.completed.get(id);
+- await refusalAudit.append({at:Date.now(),id,status,reason,event,observedFingerprint:createHash("sha256").update(JSON.stringify([event.slot,event.failed,event.logs])).digest("hex"),retainedObservation:previous?.observation,retainedFingerprint:completed?.fingerprint,scope:"Original refusal diagnostic; fork versus provider corruption/truncation is not inferred. WAL gap remains authoritative."});
++ await refusalAudit.append({at:Date.now(),id,status,reason,event,observedFingerprint:createHash("sha256").update(JSON.stringify([event.slot,event.failed,event.logs])).digest("hex"),retainedObservation:previous?.observation,retainedFingerprint:completed?.fingerprint,wireIdentitySha256:event.wireIdentitySha256,scope:"Original refusal diagnostic; fork versus provider corruption/truncation is not inferred. WAL gap remains authoritative."});
+ }
+ const recoveryProgress:unknown[]=[];
+ async function persistProgress(record:unknown){recoveryProgress.push(record);if(recoveryProgress.length>128)recoveryProgress.shift();const f=await open(`${output}/recovery-progress.tmp`,"w",0o600);try{await f.writeFile(JSON.stringify(recoveryProgress));await f.sync();}finally{await f.close();}await rename(`${output}/recovery-progress.tmp`,`${output}/recovery-progress.json`);const d=await open(output,"r");try{await d.sync();}finally{await d.close();}}
+@@ -169,13 +180,13 @@
+  if(identityIssue)venueCounts[event.program]!.unverifiableIdentities++;else{head=Math.max(head,event.slot);pipeline.setChainHead(head);}
+  if(!identityIssue&&creationHint(event)){creationNotifications++;venueCounts[event.program]!.creationHints++;
+   if(rows.length<maxCandidates&&venueCounts[event.program]!.selected<Math.ceil(maxCandidates/venueNames.length)&&performance.now()-(lastByVenue.get(event.program)??-Infinity)>=seconds*1000*venueNames.length/maxCandidates&&!rows.some(r=>r.event.program===event.program&&r.event.signature===event.signature)){
+-   lastSelected=performance.now();lastByVenue.set(event.program,lastSelected);venueCounts[event.program]!.selected++;rows.push({event,receiptProvider:monitor.snapshot().providerHosts[monitor.snapshot().provider],finalityPolls:0,receiptCommitment:"confirmed",receivedMonoOffsetMs:performance.now()-startMono});
++   lastSelected=performance.now();lastByVenue.set(event.program,lastSelected);venueCounts[event.program]!.selected++;rows.push({event,wireIdentitySha256:event.wireIdentitySha256,receiptProvider:monitor.snapshot().providerHosts[monitor.snapshot().provider],finalityPolls:0,receiptCommitment:"confirmed",receivedMonoOffsetMs:performance.now()-startMono});
+   }else skippedSampling++;
+  }
+  const job=admission.offer(event);
+  if(!job){refused++;void recordRefusal(event,"admission-capacity").catch(failIngestion);const anchor=journal.anchors.get(event.program);pipeline.recordGap(event.program,Math.max(0,(anchor?.slot??event.slot)-32),event.slot,"research-admission-capacity",anchor,1);monitor.pauseForBackpressure();return;}
+- void job.then(async r=>{if(!["accepted","deferred","duplicate"].includes(r.status)){refused++;await recordRefusal(event,r.status,r.reason);}}).catch(error=>{refused++;failIngestion(error);});
+-}, {metrics,maxDurationMs:seconds*1000,maxConnections:512,maxIncidents:512,attemptsPerIncident:3,cooldownMs:30000,
++ void job.then(async r=>{if(event.wireIdentitySha256)identityTrace({stage:'stable-identity-and-wal-admission',at:Date.now(),program:event.program,signature:event.signature,slot:event.slot,wireIdentitySha256:event.wireIdentitySha256,stableIdentity:eventIdentity(event),result:r,durable:journal.status().durable});if(!["accepted","deferred","duplicate"].includes(r.status)){refused++;await recordRefusal(event,r.status,r.reason);}}).catch(error=>{refused++;failIngestion(error);});
++}, {onIdentityTrace:identityAudit?(record=>identityTrace({...record})):undefined,strictRpcNotifications:!!identityAudit,metrics,maxDurationMs:seconds*1000,maxConnections:512,maxIncidents:512,attemptsPerIncident:3,cooldownMs:30000,
+  onStopped:()=>resolveFailure(),
+  onDisconnect:context=>{for(const program of venueNames){const anchor=journal.anchors.get(program);pipeline.recordGap(program,Math.max(0,(anchor?.slot??context.latestSlot)-32),Math.max(context.latestSlot,anchor?.slot??0),(monitor.snapshot().state==="paused"?"ingestion-backpressure-pause":"supervised-websocket-disconnect"),anchor);gaps.push({program,at:Date.now(),fromSlot:anchor?.slot??context.latestSlot,status:"pending",reason:"Transport incident; paper admission suspended until provider-reported recovery"});}while(gaps.length>1000)gaps.shift();},
+  onReady:context=>{if(context.reconnected)for(const program of venueNames)recovery.request(program,journal.gaps.get(program)?.anchor);},onError:error=>issue("websocket",error)});
+@@ -198,7 +209,7 @@
+    launches:researchLaunches(rows,store.state.marketReviews??[],paper.diagnostics),
+    paper:{positions:store.state.positions.length,trades:store.state.trades.length,realizedPnlSol:String(store.state.realizedPnlSol)},providers:[{identity:`WS:${monitor.snapshot().providerHosts[monitor.snapshot().provider]}`,status:monitor.snapshot().liveReady?"healthy":"unknown",errors:rpcIssues.filter(i=>i.stage==="websocket").length,rateLimits:0},{identity:`RPC:${new URL(endpoint).host}`,status:"unknown",errors:report.counters["rpc.errors"]??0,rateLimits:report.counters["research.rpc_rate_limits"]??0}],
+    wal:{status:j.writerFailure?"failed":"healthy",bytes:j.walBytes,queueDepth:j.pending,backlogAgeMs:j.oldestPendingAgeMs,recoveryGaps:j.gaps.filter(g=>g.status!=="recovered").length,detail:"Worker fsync ownership; pending age includes quarantined work; transport receipt is not complete chain coverage"},intents:[],latencies:histogramEntries.map(([name,h])=>({name,count:h.count,p50:h.p50,p95:h.p95,p99:h.p99})),readiness:[...(epoch?[{name:"Epoch research policy",status:"unknown",detail:"Independent policy review unmet; new window never clears historical authorization"}]:[]),{name:"Research coverage",status:researchCoverage(monitor.snapshot(),coverageJournal(j),pipeline.status().fatal).status,detail:researchCoverage(monitor.snapshot(),coverageJournal(j),pipeline.status().fatal).reasons.join("; ")||"Current receipt and configured processing coverage checks passed; independent agreement still required"},{name:"Funded execution",status:"blocked",detail:"No signer or broadcaster; live mode rejected"},{name:"Independent provider agreement",status:"unknown",detail:"Separate provider validation evidence required; notification head is not a finalized-provider agreement"},{name:"Qualifying real paper entry",status:store.state.trades.some(t=>t.side==="buy")?"verified":"unknown",detail:"No synthetic opportunities or mandatory-risk overrides"}]});
+-  await writeFile(`${output}/run-progress.tmp`,JSON.stringify(publicEvidence({startedAt,updatedAt:Date.now(),seconds,notifications,venueCounts,unverifiableIdentities:identityRefusalCount(),coverageEpoch:epoch,refused,refusalCounts,creationNotifications,candidates:rows.length,supervisor:monitor.snapshot(),journal:j,recoveryProgress,rpcIssues,sample:entry,telemetry:report,paper:{trades:store.state.trades.length,reviews:store.state.marketReviews?.length??0},pipeline:{fatal:pipeline.status().fatal,inFlight:pipeline.status().inFlight,admissionPending:admission.pending,admissionBytes:admission.pendingBytes},scope:"Interim observation only; transport duration is not recovered chain coverage",liveTrading:false})));await rename(`${output}/run-progress.tmp`,`${output}/run-progress.json`);
++  await writeFile(`${output}/run-progress.tmp`,JSON.stringify(publicEvidence({startedAt,updatedAt:Date.now(),seconds,notifications,venueCounts,unverifiableIdentities:identityRefusalCount(),identityAudit:identityAuditStatus(),coverageEpoch:epoch,refused,refusalCounts,creationNotifications,candidates:rows.length,supervisor:monitor.snapshot(),journal:j,recoveryProgress,rpcIssues,sample:entry,telemetry:report,paper:{trades:store.state.trades.length,reviews:store.state.marketReviews?.length??0},pipeline:{fatal:pipeline.status().fatal,inFlight:pipeline.status().inFlight,admissionPending:admission.pending,admissionBytes:admission.pendingBytes},scope:"Interim observation only; transport duration is not recovered chain coverage",liveTrading:false})));await rename(`${output}/run-progress.tmp`,`${output}/run-progress.json`);
+   await writeFile(`${output}/research-status.tmp`,JSON.stringify(snapshot));await rename(`${output}/research-status.tmp`,`${output}/research-status.json`);
+  }catch(error){issue("research.sample",error);}finally{polling=false;}
+ }
+@@ -214,10 +225,10 @@
+ await sample();shuttingDown=true;delay.disable();gc.disconnect();
+ await market.poll().catch(error=>issue("shutdown.poll",error));
+ await store.paperTransaction(s=>{s.running=false;});
+-await market.close().catch(error=>issue("shutdown.market",error)); await pipeline.close().catch(error=>issue("shutdown.pipeline",error));await raw.close().catch(error=>issue("shutdown.raw",error));await refusalAudit.close().catch(error=>issue("shutdown.refusals",error));
++await market.close().catch(error=>issue("shutdown.market",error)); await pipeline.close().catch(error=>issue("shutdown.pipeline",error));await raw.close().catch(error=>issue("shutdown.raw",error));await identityAudit?.close().catch(error=>issue("shutdown.identity-audit",error));await refusalAudit.close().catch(error=>issue("shutdown.refusals",error));
+ const restarted = await load(`${output}/ledger.json`,initializeMarketLedger(initial(strategy)),metrics,true);
+ await writeFile(`${output}/evidence.json`,JSON.stringify(publicEvidence({startedAt,endedAt:Date.now(),seconds,
+-  stopRequested,maxCandidates,notifications,venueCounts,unverifiableIdentities:identityRefusalCount(),coverageEpoch:epoch,refused,refusalCounts,creationNotifications,skippedSampling,captureDropped,captureBytes,samples,gaps,rpcIssues,supervisor:monitor.snapshot(),recoveryProgress,rawStorage:raw.status(),refusalStorage:refusalAudit.status(),resources:{cpuMicroseconds:process.cpuUsage(cpuStart),resourceBefore:resourceStart,resourceAfter:process.resourceUsage(),memory:process.memoryUsage(),gcCount,gcMs},provider:new URL(endpoint).host,policy:paper.policy,rows,captured,
++  stopRequested,maxCandidates,notifications,venueCounts,unverifiableIdentities:identityRefusalCount(),identityAudit:identityAuditStatus(),coverageEpoch:epoch,refused,refusalCounts,creationNotifications,skippedSampling,captureDropped,captureBytes,samples,gaps,rpcIssues,supervisor:monitor.snapshot(),recoveryProgress,rawStorage:raw.status(),refusalStorage:refusalAudit.status(),resources:{cpuMicroseconds:process.cpuUsage(cpuStart),resourceBefore:resourceStart,resourceAfter:process.resourceUsage(),memory:process.memoryUsage(),gcCount,gcMs},provider:new URL(endpoint).host,policy:paper.policy,rows,captured,
+   pipeline:{fatal:pipeline.status().fatal,inFlight:pipeline.status().inFlight,admissionPending:admission.pending,admissionBytes:admission.pendingBytes},journal:journal.status(),telemetry:metrics.report(), ledger:store.state,
+   restart:{running:restarted.state.running,positions:restarted.state.positions.length,trades:restarted.state.trades.length,
+     seenRetained:JSON.stringify(restarted.state.seen)===JSON.stringify(store.state.seen)},
+--- before/src/chain.ts
++++ after/src/chain.ts
+@@ -15,6 +15,9 @@
+ } from "@solana/spl-token";
+ import bs58 from "bs58";
+ import WebSocket from "ws";
++import { hasDuplicateJsonKeys, transactionIdentityIssue, wireIdentityTrace,
++  type WireIdentityTrace } from './research/wire-identity.js';
++import { creationHint } from './research/candidates.js';
+ export interface ProgramDefinition {
+   name: string;
+   address: string;
+@@ -73,12 +76,16 @@
+   observedAt: number;
+   /** Process-local, non-enumerable receipt clock; never compare across restarts. */
+   receivedAtMonoMs?: number;
++  /** Non-enumerable link to a bounded public wire capture, never part of stable event identity. */
++  wireIdentitySha256?: string;
+ }
+ export interface MonitorScheduler {
+   schedule(callback: () => void, delayMs: number): unknown;
+   cancel(handle: unknown): void;
+ }
+ export interface MonitorOptions {
++  strictRpcNotifications?: boolean;
++  onIdentityTrace?: (record: WireIdentityTrace) => void;
+   deduplicate?: boolean;
+   maxMessageBytes?: number;
+   heartbeatMs?: number;
+@@ -269,9 +276,21 @@
+         reconnect();
+       }
+     });
++    let wireSequence = 0;
+     socket.on("message", (raw: unknown) => {
+       if (closed || this.stopped || generation !== this.generation) return;
+       const receivedAtMonoMs = this.metrics.now();
++      const sequence = ++wireSequence;
++      let traced = false;
++      const trace = (outcome: string, fields: Partial<WireIdentityTrace> = {}) => {
++        if (!this.options.onIdentityTrace || traced) return undefined;
++        traced = true;
++        const bytes = Buffer.isBuffer(raw) ? raw : Buffer.from(String(raw));
++        const record = wireIdentityTrace(bytes, { at: Date.now(), receivedMonoMs: receivedAtMonoMs,
++          connection: generation, sequence, providerHost: new URL(this.endpoint).host, outcome, ...fields });
++        this.options.onIdentityTrace(record);
++        return record.originalSha256;
++      };
+       this.metrics.increment("rpc.messages");
+       const endIngestion = this.metrics.start("monitor.ingestion_ms");
+       try {
+@@ -301,6 +320,11 @@
+             };
+           };
+         };
++        if (!message || typeof message !== 'object' || Array.isArray(message))
++          throw Error('Malformed RPC message');
++        if (this.options.strictRpcNotifications &&
++            ((message as {jsonrpc?:unknown}).jsonrpc !== '2.0' || hasDuplicateJsonKeys(String(raw))))
++          throw Error('Unsupported RPC version or duplicate JSON keys');
+         if (message.error) {
+           this.metrics.increment("rpc.errors");
+           const detail = typeof message.error === "object" && message.error !== null
+@@ -356,9 +380,14 @@
+         }
+         if (message.method !== "logsNotification" || !message.params) return;
+         const program = this.subscriptions.get(message.params.subscription);
+-        if (!program) return;
++        if (!program) {
++          trace('unbound-subscription');
++          if (this.options.strictRpcNotifications) throw Error('Unbound RPC notification subscription');
++          return;
++        }
+         const { context, value } = message.params.result;
+         if (
++          !context || !value ||
+           !Number.isSafeInteger(context.slot) ||
+           context.slot < 0 ||
+           typeof value.signature !== "string" ||
+@@ -366,6 +395,17 @@
+           !value.logs.every((log) => typeof log === "string")
+         )
+           throw new Error("Malformed logs notification");
++        if (this.options.strictRpcNotifications &&
++            (!Number.isSafeInteger(message.params.subscription) ||
++             !Object.prototype.hasOwnProperty.call(value, 'err')))
++          throw Error('Malformed RPC notification identity');
++        const identityIssue = transactionIdentityIssue(value.signature);
++        const auditSignature = /^[1-9A-HJ-NP-Za-km-z]{64,88}$/.test(value.signature) ? value.signature : undefined;
++        const wireDigest = (identityIssue || sequence <= 8 || sequence % 1000 === 0 ||
++          creationHint({ program: program.name, failed: value.err !== null, logs: value.logs }))
++          ? trace(identityIssue ?? 'normalized-observation', { program: program.name,
++              subscription: message.params.subscription, slot: context.slot,
++              extractedSignature: auditSignature, observationSignature: auditSignature }) : undefined;
+         this.metrics.increment("observations.received");
+         const duplicate = this.metrics.measure(
+           "monitor.deduplication_ms",
+@@ -385,7 +425,8 @@
+           this.metrics.increment("observations.duplicates");
+           return;
+         }
+-        this.latestSlot = Math.max(this.latestSlot, context.slot);
++        if (!this.options.strictRpcNotifications || !identityIssue)
++          this.latestSlot = Math.max(this.latestSlot, context.slot);
+         const event: ProgramObservation = {
+           program: program.name,
+           signature: value.signature,
+@@ -398,6 +439,7 @@
+           value: receivedAtMonoMs,
+           enumerable: false,
+         });
++        if (wireDigest) Object.defineProperty(event, 'wireIdentitySha256', { value: wireDigest, enumerable: false });
+         try {
+           this.onObservation(event);
+           this.metrics.increment("observations.delivered");
+@@ -406,6 +448,7 @@
+           throw error;
+         }
+       } catch (error) {
++        try { trace('message-rejected'); } catch { this.metrics.increment('monitor.identity_audit_errors'); }
+         this.metrics.increment("monitor.message_errors");
+         this.report(error);
+       } finally {
+--- before/src/research/candidates.ts
++++ after/src/research/candidates.ts
+@@ -1,11 +1,12 @@
+ import type { ProgramObservation } from '../chain.js';
++import { transactionIdentityIssue } from './wire-identity.js';
+ /** A sampling hint only. Finalized instruction, event attribution and accounts remain mandatory. */
+ const hints: Readonly<Record<string, readonly string[]>> = {
+  pump: ['Create', 'CreateV2'], pumpswap: ['CreatePool'],
+  'raydium-cpmm': ['Initialize', 'InitializeWithPermission'],
+  'meteora-dlmm': ['InitializeLbPair', 'InitializeLbPair2', 'InitializePermissionLbPair', 'InitializeCustomizablePermissionlessLbPair', 'InitializeCustomizablePermissionlessLbPair2'],
+ };
+-export function creationHint(event: ProgramObservation): boolean {
++export function creationHint(event: Pick<ProgramObservation, 'program' | 'failed' | 'logs'>): boolean {
+  return !event.failed && (hints[event.program] ?? []).some(name => event.logs.includes(`Program log: Instruction: ${name}`));
+ }
+ export function researchPrograms(value: string, allowed: readonly {name:string}[]): string[] {
+@@ -14,7 +15,7 @@
+  return names;
+ }
+ 
+-/** A zero signature cannot supply independently finalized identity; its source/cause stays unknown. */
++/** Invalid signatures cannot supply finalized identity; never invent or substitute one. */
+ export function researchIdentityIssue(event:Pick<ProgramObservation,'signature'>):string|undefined {
+- return event.signature==='1'.repeat(64)?'unverifiable-zero-signature':undefined;
++ return transactionIdentityIssue(event.signature);
+ }
+--- before/src/research/monitor-supervisor.ts
++++ after/src/research/monitor-supervisor.ts
+@@ -2,7 +2,7 @@
+ import { performance } from "node:perf_hooks";
+ import { SolanaMonitor,type ProgramDefinition,type ProgramObservation,type MonitorOptions,type MonitorScheduler,type SocketLike } from "../chain.js";
+ import { Telemetry } from "../telemetry.js";
+-export interface SupervisorOptions extends Pick<MonitorOptions,"onReady"|"onDisconnect"|"onError"> {
++export interface SupervisorOptions extends Pick<MonitorOptions,"onReady"|"onDisconnect"|"onError"|"onIdentityTrace"|"strictRpcNotifications"> {
+  onStopped?:(reason:string)=>void;
+  metrics?:Telemetry; maxDurationMs?:number; maxConnections?:number; maxIncidents?:number;
+  attemptsPerIncident?:number; cooldownMs?:number; stableMs?:number; ackTimeoutMs?:number; receiptStaleMs?:number;
+@@ -65,7 +65,7 @@
+    this.receiptAt=this.clock();this.stableSince??=this.clock();
+    if(this.clock()-this.stableSince>=(this.options.stableMs??30000))this.attempts=0;
+    this.metrics.increment("supervisor.notifications");try{this.observe(e);}catch{this.finish("terminal-observer-failure");}
+-  },{telemetry:this.metrics,scheduler:this.scheduler,deduplicate:false,maxReconnects:0,onReady:context=>{if(gen!==this.generation||this.stopped||!this.timeReady())return;this.acked=true;this.acknowledgedAt=this.clock();this.event("subscriptions-ready");try{this.options.onReady?.({...context,reconnected:this.connections>1});}catch{this.finish("terminal-observer-failure");}},onDisconnect:()=>fail(Error("WebSocket disconnected")),onError:error=>{
++  },{onIdentityTrace:this.options.onIdentityTrace?(record=>this.options.onIdentityTrace!({...record,connection:this.connections})):undefined,strictRpcNotifications:this.options.strictRpcNotifications,telemetry:this.metrics,scheduler:this.scheduler,deduplicate:false,maxReconnects:0,onReady:context=>{if(gen!==this.generation||this.stopped||!this.timeReady())return;this.acked=true;this.acknowledgedAt=this.clock();this.event("subscriptions-ready");try{this.options.onReady?.({...context,reconnected:this.connections>1});}catch{this.finish("terminal-observer-failure");}},onDisconnect:()=>fail(Error("WebSocket disconnected")),onError:error=>{
+    if(gen!==this.generation)return;if(!error.message.includes("reconnect budget exhausted"))fail(error);
+   }},factory);
+   this.active.start();
+--- before/src/research/wire-identity.ts
++++ after/src/research/wire-identity.ts
+@@ -0,0 +1,77 @@
++import { createHash } from 'node:crypto';
++import bs58 from 'bs58';
++
++/** A transaction signature is canonical base58 encoding of exactly 64 nonzero bytes. */
++export function transactionIdentityIssue(signature: unknown): string | undefined {
++  if (typeof signature !== 'string' || signature.length < 64 || signature.length > 88)
++    return 'invalid-transaction-signature';
++  try {
++    const bytes = bs58.decode(signature);
++    if (bytes.length !== 64 || bs58.encode(bytes) !== signature) return 'invalid-transaction-signature';
++    if (bytes.every(byte => byte === 0)) return 'unverifiable-zero-signature';
++  } catch { return 'invalid-transaction-signature'; }
++  return undefined;
++}
++
++/** Run only after JSON.parse succeeds. Detect ambiguous keys, including escaped spellings. */
++export function hasDuplicateJsonKeys(text: string): boolean {
++  const stack: { object: boolean; key: boolean; keys: Set<string> }[] = [];
++  const tokens = /"(?:\\.|[^"\\])*"|[{}\[\],:]|true|false|null|-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g;
++  for (const token of text.matchAll(tokens)) {
++    const value = token[0];
++    if (value === '{' || value === '[') {
++      stack.push({ object: value === '{', key: value === '{', keys: new Set() });
++    } else if (value === '}' || value === ']') stack.pop();
++    else {
++      const frame = stack.at(-1);
++      if (value === ',') { if (frame?.object) frame.key = true; }
++      else if (value.startsWith('"') && frame?.object && frame.key) {
++        const key: string = JSON.parse(value);
++        if (frame.keys.has(key)) return true;
++        frame.keys.add(key); frame.key = false;
++      }
++    }
++  }
++  return false;
++}
++
++export interface WireIdentityTrace {
++  stage: 'wire-to-observation';
++  at: number; receivedMonoMs: number; connection: number; sequence: number;
++  providerHost: string; outcome: string; program?: string; subscription?: number;
++  slot?: number; extractedSignature?: string; observationSignature?: string;
++  originalSha256: string; originalBytes: number; sanitizedBase64: string;
++  byteExact: boolean; sanitizedBytes: number;
++  captureTruncated: boolean;
++}
++
++/** Incoming public envelopes only; never requests, endpoint paths, headers or credentials. */
++export function wireIdentityTrace(
++  raw: Buffer, fields: Omit<WireIdentityTrace, 'stage' | 'originalSha256' | 'originalBytes' |
++    'sanitizedBase64' | 'byteExact' | 'sanitizedBytes' | 'captureTruncated'>,
++): WireIdentityTrace {
++  const text = raw.toString('utf8');
++  let sanitized = text
++    .replace(/(?:https?|wss?):\/\/[^\s"\\]+/gi, '[url-redacted]')
++    .replace(/("(?:authorization|api[_-]?key|password|access[_-]?token)"\s*:\s*)"(?:\\.|[^"\\])*"/gi,
++      '$1"[credential-redacted]"');
++  // Decode escaped key names before deciding whether an otherwise exact envelope is safe to retain.
++  try {
++    let changed = false;
++    const parsed: unknown = JSON.parse(text, (key, value: unknown) => {
++      if (/^(authorization|api[_-]?key|password|access[_-]?token)$/i.test(key)) {
++        changed = true; return '[credential-redacted]';
++      }
++      if (typeof value === 'string' && /(?:https?|wss?):\/\//i.test(value)) {
++        changed = true; return value.replace(/(?:https?|wss?):\/\/\S+/gi, '[url-redacted]');
++      }
++      return value;
++    });
++    if (changed) sanitized = JSON.stringify(parsed);
++  } catch { /* Malformed JSON retains only the regex-sanitized bounded diagnostic. */ }
++  const allBytes = Buffer.from(sanitized), bytes = allBytes.subarray(0, 128 * 1024);
++  return { stage: 'wire-to-observation', ...fields,
++    originalSha256: createHash('sha256').update(raw).digest('hex'), originalBytes: raw.length,
++    sanitizedBase64: bytes.toString('base64'), sanitizedBytes: bytes.length,
++    captureTruncated: allBytes.length > bytes.length, byteExact: bytes.equals(raw) };
++}
+--- before/src/verified-rpc.ts
++++ after/src/verified-rpc.ts
+@@ -6,22 +6,73 @@
+   type VerifiedLaunch,
+   type AccountEvidence,
+ } from "./verified-decoders.js";
++import { BoundedStage } from './stages.js';
++import { Telemetry } from './telemetry.js';
++export interface VerificationSchedule {
++  minimumIntervalMs: number;
++  deadlineMs: number;
++  maximumAttempts: number;
++  capacity: number;
++  metrics?: Telemetry;
++}
+ export class UnknownProtocolLayoutError extends Error {}
+ /** Native JSON RPC reader supports parsed legacy/v0/v1 without the legacy SDK's response validator. */
+ export class VerifiedReadRpc extends HttpRecoveryRpc {
+-  constructor(private endpoint: string) {
++  private schedule?: BoundedStage;
++  private nextReadMonoMs = 0;
++  private metrics: Telemetry;
++  constructor(private endpoint: string, private scheduling?: VerificationSchedule) {
+     super(endpoint);
++    this.metrics = scheduling?.metrics ?? new Telemetry();
++    if (scheduling) {
++      for (const [value, low, high] of [[scheduling.minimumIntervalMs, 0, 5000],
++          [scheduling.deadlineMs, 1, 30000], [scheduling.maximumAttempts, 1, 3], [scheduling.capacity, 1, 64]])
++        if (!Number.isSafeInteger(value) || value < low || value > high) throw Error('Verification scheduling bound');
++      this.schedule = new BoundedStage('verification.rpc', scheduling.capacity, 1, this.metrics);
++    }
+   }
+   private async read(method: string, params: unknown[]) {
++    if (!this.schedule || !this.scheduling) return this.readOnce(method, params, 5000);
++    const began = this.metrics.now(), deadline = began + this.scheduling.deadlineMs;
++    const task = this.schedule.trySubmit(async () => {
++      for (let attempt = 0; attempt < this.scheduling!.maximumAttempts; attempt++) {
++        const wait = Math.max(0, this.nextReadMonoMs - this.metrics.now());
++        if (this.metrics.now() + wait >= deadline) throw Error('Verification scheduling deadline exceeded');
++        if (wait) await new Promise(resolve => setTimeout(resolve, wait));
++        this.nextReadMonoMs = this.metrics.now() + this.scheduling!.minimumIntervalMs;
++        try {
++          return await this.readOnce(method, params, Math.max(1, Math.min(5000, deadline - this.metrics.now())));
++        } catch (error) {
++          const detail = error as { httpStatus?: number; retryAfterMs?: number };
++          if (detail.httpStatus !== 429) throw error;
++          this.metrics.increment('verification.http_429');
++          const delay = Math.max(this.scheduling!.minimumIntervalMs, detail.retryAfterMs ?? 1000);
++          this.nextReadMonoMs = Math.max(this.nextReadMonoMs, this.metrics.now() + delay);
++          if (attempt + 1 >= this.scheduling!.maximumAttempts || this.nextReadMonoMs >= deadline) throw error;
++          this.metrics.increment('verification.bounded_retries');
++        }
++      }
++      throw Error('Verification retry budget exhausted');
++    }, began, method === 'getTransaction' && (params[1] as {commitment?:string})?.commitment === 'finalized' ? 1 : 0);
++    if (!task) throw Error('Verification scheduling capacity exceeded');
++    return task;
++  }
++  private async readOnce(method: string, params: unknown[], timeoutMs: number) {
+     const response = await fetch(this.endpoint, {
+       method: "POST",
+       headers: { "content-type": "application/json" },
+       body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }),
+-      signal: AbortSignal.timeout(5000),
++      signal: AbortSignal.timeout(Math.max(1, Math.ceil(timeoutMs))),
+     });
+     if (!response.ok) {
+       await response.body?.cancel();
+-      throw Error(`Read-only verification HTTP ${response.status}`);
++      const header = response.headers.get('retry-after');
++      const parsed = header === null ? undefined : /^\d+(?:\.\d+)?$/.test(header)
++        ? Number(header) * 1000 : Date.parse(header) - Date.now();
++      throw Object.assign(Error(`Read-only verification HTTP ${response.status}`), {
++        httpStatus: response.status,
++        retryAfterMs: parsed !== undefined && Number.isFinite(parsed) ? Math.max(0, parsed) : undefined,
++      });
+     }
+     const reader = response.body!.getReader();
+     const chunks: Uint8Array[] = [];
+@@ -41,7 +92,8 @@
+       reader.releaseLock();
+     }
+     const body = JSON.parse(Buffer.concat(chunks).toString("utf8"));
+-    if (body.error) throw Error("Read-only verification RPC error");
++    if (body.error || body.id !== 1 || body.jsonrpc !== '2.0' || !Object.prototype.hasOwnProperty.call(body, 'result'))
++      throw Error("Read-only verification RPC error or invalid response identity");
+     return body.result;
+   }
+   /** Confirmed preparation only: exposes candidate keys, never a VerifiedLaunch or finalized account evidence. */
+--- before/tests/phase13-verification-scheduling.test.ts
++++ after/tests/phase13-verification-scheduling.test.ts
+@@ -0,0 +1,75 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import { createServer, type RequestListener } from 'node:http';
++import { once } from 'node:events';
++import { performance } from 'node:perf_hooks';
++import { VerifiedReadRpc } from '../src/verified-rpc.js';
++import { Telemetry } from '../src/telemetry.js';
++
++async function serve(handler: RequestListener) {
++  const server = createServer(handler);
++  server.listen(0, '127.0.0.1'); await once(server, 'listening');
++  const address = server.address(); assert.ok(address && typeof address !== 'string');
++  return { endpoint: `http://127.0.0.1:${address.port}`,
++    close: async () => { server.closeAllConnections(); await new Promise<void>(resolve => server.close(() => resolve())); } };
++}
++
++test('Bounded verification retries HTTP 429 after Retry-After and retains finalized request parameters', async () => {
++  const requests: any[] = [], times: number[] = [], metrics = new Telemetry();
++  const server = await serve((request, response) => {
++    let body = ''; request.on('data', chunk => { body += chunk; }); request.on('end', () => {
++      requests.push(JSON.parse(body)); times.push(performance.now());
++      if (requests.length === 1) { response.writeHead(429, { 'retry-after': '0.03' }); response.end(); }
++      else { response.setHeader('content-type', 'application/json'); response.end(JSON.stringify({ jsonrpc: '2.0', id: 1, result: null })); }
++    });
++  });
++  try {
++    const reader = new VerifiedReadRpc(server.endpoint, { minimumIntervalMs: 10, deadlineMs: 2000, maximumAttempts: 2, capacity: 2, metrics });
++    assert.equal(await reader.transaction('public-signature'), null);
++    assert.equal(requests.length, 2); assert.deepEqual(requests[0], requests[1]);
++    assert.equal(requests[0].params[1].commitment, 'finalized');
++    assert.ok(times[1]! - times[0]! >= 25);
++    assert.equal(metrics.report().counters['verification.http_429'], 1);
++    assert.equal(metrics.report().counters['verification.bounded_retries'], 1);
++  } finally { await server.close(); }
++});
++
++test('Retry-After beyond the evidence deadline fails without ignoring the provider cooldown', async () => {
++  let requests = 0;
++  const server = await serve((_request, response) => { requests++; response.writeHead(429, { 'retry-after': '30' }); response.end(); });
++  try {
++    const reader = new VerifiedReadRpc(server.endpoint, { minimumIntervalMs: 10, deadlineMs: 500, maximumAttempts: 2, capacity: 2 });
++    await assert.rejects(reader.transaction('public-signature'), /HTTP 429/);
++    await assert.rejects(reader.transaction('other-signature'), /deadline/);
++    assert.equal(requests, 1);
++  } finally { await server.close(); }
++});
++
++test('Verification queue capacity bounds in-flight work and refuses excess requests before provider work', async () => {
++  let requests = 0, release: (() => void) | undefined;
++  const server = await serve((_request, response) => {
++    requests++; release = () => response.end(JSON.stringify({ jsonrpc: '2.0', id: 1, result: null }));
++  });
++  try {
++    const reader = new VerifiedReadRpc(server.endpoint, { minimumIntervalMs: 500, deadlineMs: 1000, maximumAttempts: 1, capacity: 1 });
++    const first = reader.transaction('first');
++    await assert.rejects(reader.transaction('overflow'), /capacity/);
++    while (!release) await new Promise(resolve => setTimeout(resolve, 5));
++    release(); assert.equal(await first, null); assert.equal(requests, 1);
++  } finally { await server.close(); }
++});
++
++test('Wrong response identity and RPC errors do not receive HTTP retry treatment or become verified results', async () => {
++  let requests = 0;
++  const server = await serve((_request, response) => {
++    requests++; response.end(JSON.stringify(requests === 1
++      ? { jsonrpc: '2.0', id: 99, result: null }
++      : { jsonrpc: '2.0', id: 1, error: { code: -32000, message: 'unavailable' } }));
++  });
++  try {
++    const reader = new VerifiedReadRpc(server.endpoint, { minimumIntervalMs: 0, deadlineMs: 1000, maximumAttempts: 3, capacity: 2 });
++    await assert.rejects(reader.transaction('first'), /invalid response identity/);
++    await assert.rejects(reader.transaction('second'), /RPC error/);
++    assert.equal(requests, 2);
++  } finally { await server.close(); }
++});
+--- before/tests/phase13-wire-identity.test.ts
++++ after/tests/phase13-wire-identity.test.ts
+@@ -0,0 +1,144 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import { EventEmitter } from 'node:events';
++import { createHash } from 'node:crypto';
++import { mkdtemp, rm } from 'node:fs/promises';
++import { join } from 'node:path';
++import { tmpdir } from 'node:os';
++import bs58 from 'bs58';
++import { SolanaMonitor, VERIFIED_PROGRAMS, type ProgramObservation } from '../src/chain.js';
++import { EventJournal, eventIdentity } from '../src/event-journal.js';
++import { AsyncEventJournal } from '../src/async-journal.js';
++import { EventIngestion } from '../src/ingestion.js';
++import { researchIdentityIssue } from '../src/research/candidates.js';
++import { hasDuplicateJsonKeys, transactionIdentityIssue, wireIdentityTrace,
++  type WireIdentityTrace } from '../src/research/wire-identity.js';
++
++const signature = bs58.encode(Buffer.alloc(64, 7));
++class Socket extends EventEmitter {
++  sent: string[] = [];
++  send(data: string) { this.sent.push(data); }
++  close() { this.emit('close'); }
++}
++function harness() {
++  const socket = new Socket(), events: ProgramObservation[] = [], traces: WireIdentityTrace[] = [], errors: string[] = [];
++  const monitor = new SolanaMonitor('wss://example.test/private?api_key=never-log', VERIFIED_PROGRAMS.slice(0, 2),
++    event => events.push(event), { strictRpcNotifications: true, deduplicate: false,
++      onIdentityTrace: record => traces.push(record), onError: error => errors.push(error.message) }, () => socket);
++  monitor.start(); socket.emit('open');
++  socket.emit('message', JSON.stringify({ jsonrpc: '2.0', id: 1, result: 10 }));
++  socket.emit('message', JSON.stringify({ jsonrpc: '2.0', id: 2, result: 11 }));
++  const envelope = (sig: unknown = signature, sub = 10, slot = 100) => JSON.stringify({ jsonrpc: '2.0',
++    method: 'logsNotification', params: { subscription: sub,
++      result: { context: { slot }, value: { signature: sig, err: null, logs: [] } } } });
++  return { socket, monitor, events, traces, errors, envelope };
++}
++
++test('Raw zero signature is copied exactly through normalization, linked to a durable refusal, and never becomes a WAL owner', async () => {
++  const h = harness(), directory = await mkdtemp(join(tmpdir(), 'mintbot-phase13-wire-'));
++  let journal: AsyncEventJournal | undefined;
++  try {
++    const raw = Buffer.from(h.envelope('1'.repeat(64)));
++    h.socket.emit('message', raw);
++    assert.equal(h.events.length, 1);
++    const event = h.events[0]!, trace = h.traces[0]!;
++    assert.equal(trace.providerHost, 'example.test');
++    assert.equal(trace.byteExact, true);
++    assert.deepEqual(Buffer.from(trace.sanitizedBase64, 'base64'), raw);
++    assert.equal(trace.originalSha256, createHash('sha256').update(raw).digest('hex'));
++    assert.equal(trace.extractedSignature, event.signature);
++    assert.equal(event.wireIdentitySha256, trace.originalSha256);
++    assert.equal(Object.keys(event).includes('wireIdentitySha256'), false);
++    assert.equal(h.monitor.latestSlot, 0);
++    journal = await AsyncEventJournal.open({ path: join(directory, 'identity.wal') });
++    const pipeline = new EventIngestion({ journal, observationIssue: researchIdentityIssue });
++    const result = await pipeline.acceptDurable(event);
++    assert.equal(result.reason, 'unverifiable-zero-signature');
++    assert.equal(journal.status().unacknowledged, 0);
++    assert.equal(journal.anchors.size, 0);
++    await pipeline.close();
++    journal = await AsyncEventJournal.open({ path: join(directory, 'identity.wal') });
++    assert.equal(journal.pending.size + journal.completed.size + journal.anchors.size, 0);
++    assert.equal(journal.gaps.get('pump')?.reason, 'unverifiable-zero-signature');
++  } finally { h.monitor.stop(); await journal?.shutdown(); await rm(directory, { recursive: true, force: true }); }
++});
++
++test('Missing, malformed, unsupported-version and ambiguous duplicate-key envelopes are diagnosed without a fallback observation', () => {
++  const h = harness();
++  try {
++    const source = h.envelope();
++    for (const raw of [source.replace(`"signature":"${signature}",`, ''),
++      h.envelope(null), source.replace('"2.0"', '"1.0"'),
++      source.replace('"signature":', '"signature":"other","signature":'),
++      source.replace('"signature":', '"signat\\u0075re":"other","signature":'),
++      '{', 'null', '[]', '{"jsonrpc":"2.0","method":"logsNotification","params":{"subscription":10}}'])
++      h.socket.emit('message', raw);
++    assert.equal(h.events.length, 0);
++    assert.equal(h.errors.length, 9);
++    assert.equal(h.traces.length, 9);
++    assert.ok(h.traces.every(trace => trace.outcome === 'message-rejected'));
++  } finally { h.monitor.stop(); }
++});
++
++test('Duplicate-key scanner ignores quoted log text and detects escaped names at any nested object', () => {
++  for (const raw of ['{"x":{"a":1,"a":2}}', '{"a":1,"\\u0061":2}', '{"a":[],"a":[]}'])
++    assert.equal(hasDuplicateJsonKeys(raw), true);
++  for (const value of [{ a: '"a":1,"a":2', b: [{ a: 1 }, { a: 2 }] }, { a: [null, true, 4e5] }])
++    assert.equal(hasDuplicateJsonKeys(JSON.stringify(value)), false);
++});
++
++test('Canonical 64-byte identities stay program-scoped, exact duplicates deduplicate and conflicting payloads refuse', async () => {
++  const h = harness(), journal = new EventJournal(), pipeline = new EventIngestion({ journal, observationIssue: researchIdentityIssue });
++  try {
++    h.socket.emit('message', h.envelope(signature, 10));
++    h.socket.emit('message', h.envelope(signature, 11));
++    h.socket.emit('message', h.envelope(signature, 999));
++    assert.equal(h.events.length, 2);
++    assert.notEqual(eventIdentity(h.events[0]!), eventIdentity(h.events[1]!));
++    assert.equal(h.traces.at(-1)?.outcome, 'unbound-subscription');
++    for (const event of h.events) assert.equal(pipeline.accept(event).status, 'accepted');
++    await pipeline.drain();
++    assert.equal(pipeline.accept(h.events[0]!).status, 'duplicate');
++    assert.equal(pipeline.accept({ ...h.events[0]!, logs: ['changed'] }).reason, 'fork-or-provider-conflict');
++    assert.equal(journal.completed.size, 2);
++  } finally { h.monitor.stop(); await pipeline.close(); }
++});
++
++test('Research admission rejects non-base58 and wrong-width identities, preserving generic journal fixture compatibility', async () => {
++  assert.equal(transactionIdentityIssue(signature), undefined);
++  for (const value of [undefined, '', 'unit-fixture', '0'.repeat(88), bs58.encode(Buffer.alloc(63, 1)), bs58.encode(Buffer.alloc(65, 1))])
++    assert.equal(transactionIdentityIssue(value), 'invalid-transaction-signature');
++  const event = { program: 'pump', signature: 'unit-fixture', slot: 100, logs: [], failed: false, observedAt: 1 };
++  const generic = new EventJournal(); assert.equal(generic.offer(event).status, 'accepted'); generic.close();
++  const journal = new EventJournal(), pipeline = new EventIngestion({ journal, observationIssue: researchIdentityIssue });
++  try {
++    assert.equal(pipeline.accept(event).reason, 'invalid-transaction-signature');
++    assert.equal(journal.anchors.size + journal.completed.size + journal.pending.size, 0);
++    assert.equal(journal.gaps.get('pump')?.reason, 'invalid-transaction-signature');
++  } finally { await pipeline.close(); }
++});
++
++test('Wire capture redacts endpoint credentials, including escaped keys, and bounds retained bytes explicitly', () => {
++  const fields = { at: 1, receivedMonoMs: 2, connection: 3, sequence: 4, providerHost: 'example.test', outcome: 'test' };
++  const raw = Buffer.from('{"api_\\u006bey":"SECRET","error":"https:\\/\\/example.test/path?key=SECRET"}');
++  const trace = wireIdentityTrace(raw, fields), sanitized = Buffer.from(trace.sanitizedBase64, 'base64').toString();
++  assert.equal(sanitized.includes('SECRET'), false); assert.equal(trace.byteExact, false);
++  const bounded = wireIdentityTrace(Buffer.from('x'.repeat(200000)), fields);
++  assert.equal(bounded.sanitizedBytes, 128 * 1024); assert.equal(bounded.captureTruncated, true);
++  assert.equal(bounded.byteExact, false);
++});
++
++test('Creation hints retain wire provenance between regular samples without becoming finalized creation proof', () => {
++  const h = harness();
++  try {
++    for (let n = 0; n < 20; n++) h.socket.emit('message', h.envelope(signature, 10, 100 + n));
++    const message = JSON.parse(h.envelope(signature, 10, 200));
++    message.params.result.value.logs = ['Program log: Instruction: CreateV2'];
++    h.socket.emit('message', JSON.stringify(message));
++    const trace = h.traces.at(-1)!;
++    assert.equal(trace.slot, 200);
++    assert.equal(trace.outcome, 'normalized-observation');
++    assert.equal(h.events.at(-1)!.wireIdentitySha256, trace.originalSha256);
++    assert.equal(Object.keys(h.events.at(-1)!).includes('executionEligible'), false);
++  } finally { h.monitor.stop(); }
++});

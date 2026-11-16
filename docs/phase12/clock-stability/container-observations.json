@@ -1,0 +1,1087 @@
+[
+  {
+    "before": {
+      "realtime": 1794697296773449642,
+      "monotonic": 25918044154117,
+      "boottime": 105569819367619,
+      "raw": 25917592333343
+    },
+    "after": {
+      "realtime": 1794697296947951050,
+      "monotonic": 25918218656880,
+      "boottime": 105569993870778,
+      "raw": 25917766835521
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25918195548002\",\"realtimeMs\":1794697296924,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25918195548002",
+      "realtimeMs": 1794697296924,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697306981897075,
+      "monotonic": 25928252601790,
+      "boottime": 105580027815537,
+      "raw": 25927800708027
+    },
+    "after": {
+      "realtime": 1794697307171644384,
+      "monotonic": 25928442350568,
+      "boottime": 105580217564857,
+      "raw": 25927990456141
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25928409184885\",\"realtimeMs\":1794697307138,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25928409184885",
+      "realtimeMs": 1794697307138,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697317205269284,
+      "monotonic": 25938475973888,
+      "boottime": 105590251187451,
+      "raw": 25938024006396
+    },
+    "after": {
+      "realtime": 1794697317378896946,
+      "monotonic": 25938649602583,
+      "boottime": 105590424816337,
+      "raw": 25938197634240
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25938629630630\",\"realtimeMs\":1794697317358,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25938629630630",
+      "realtimeMs": 1794697317358,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697327409720657,
+      "monotonic": 25948680425139,
+      "boottime": 105600455639012,
+      "raw": 25948228384612
+    },
+    "after": {
+      "realtime": 1794697327576030900,
+      "monotonic": 25948846736828,
+      "boottime": 105600621950585,
+      "raw": 25948394695154
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25948825549919\",\"realtimeMs\":1794697327554,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25948825549919",
+      "realtimeMs": 1794697327554,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697337608898917,
+      "monotonic": 25958879603539,
+      "boottime": 105610654817112,
+      "raw": 25958427489434
+    },
+    "after": {
+      "realtime": 1794697337778845414,
+      "monotonic": 25959049551242,
+      "boottime": 105610824765053,
+      "raw": 25958597436298
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25959028367463\",\"realtimeMs\":1794697337757,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25959028367463",
+      "realtimeMs": 1794697337757,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697346816226664,
+      "monotonic": 25968086931153,
+      "boottime": 105619862144637,
+      "raw": 25967634750810
+    },
+    "after": {
+      "realtime": 1794697346979634953,
+      "monotonic": 25968250341189,
+      "boottime": 105620025555029,
+      "raw": 25967798160293
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25968230099673\",\"realtimeMs\":1794697346959,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25968230099673",
+      "realtimeMs": 1794697346959,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697357013562372,
+      "monotonic": 25978284266988,
+      "boottime": 105630059480339,
+      "raw": 25977832013145
+    },
+    "after": {
+      "realtime": 1794697357186553002,
+      "monotonic": 25978457259027,
+      "boottime": 105630232472923,
+      "raw": 25978005004853
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25978436419643\",\"realtimeMs\":1794697357165,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25978436419643",
+      "realtimeMs": 1794697357165,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697367216869104,
+      "monotonic": 25988487573930,
+      "boottime": 105640262787717,
+      "raw": 25988035247131
+    },
+    "after": {
+      "realtime": 1794697367413781450,
+      "monotonic": 25988684487114,
+      "boottime": 105640459700882,
+      "raw": 25988232159137
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25988660079620\",\"realtimeMs\":1794697367389,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25988660079620",
+      "realtimeMs": 1794697367389,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697377450166690,
+      "monotonic": 25998720871295,
+      "boottime": 105650496084794,
+      "raw": 25998268470624
+    },
+    "after": {
+      "realtime": 1794697377634803197,
+      "monotonic": 25998905509077,
+      "boottime": 105650680722916,
+      "raw": 25998453107674
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"25998882355252\",\"realtimeMs\":1794697377611,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "25998882355252",
+      "realtimeMs": 1794697377611,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697387670194051,
+      "monotonic": 26008940898672,
+      "boottime": 105660716112559,
+      "raw": 26008469264990
+    },
+    "after": {
+      "realtime": 1794697387868979977,
+      "monotonic": 26009139686742,
+      "boottime": 105660914901127,
+      "raw": 26008666825346
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26009116203425\",\"realtimeMs\":1794697387845,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26009116203425",
+      "realtimeMs": 1794697387845,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697396904348348,
+      "monotonic": 26018175052885,
+      "boottime": 105669950266407,
+      "raw": 26017669219256
+    },
+    "after": {
+      "realtime": 1794697397102670420,
+      "monotonic": 26018373376690,
+      "boottime": 105670148590489,
+      "raw": 26017867125962
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26018344748786\",\"realtimeMs\":1794697397074,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26018344748786",
+      "realtimeMs": 1794697397074,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697407138259713,
+      "monotonic": 26028408964471,
+      "boottime": 105680184178061,
+      "raw": 26027888944873
+    },
+    "after": {
+      "realtime": 1794697407305045528,
+      "monotonic": 26028575751661,
+      "boottime": 105680350965846,
+      "raw": 26028055583635
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26028554835751\",\"realtimeMs\":1794697407284,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26028554835751",
+      "realtimeMs": 1794697407284,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697417342131608,
+      "monotonic": 26038612836042,
+      "boottime": 105690388049549,
+      "raw": 26038085811350
+    },
+    "after": {
+      "realtime": 1794697417505190765,
+      "monotonic": 26038775896521,
+      "boottime": 105690551110367,
+      "raw": 26038248962327
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26038752399531\",\"realtimeMs\":1794697417481,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26038752399531",
+      "realtimeMs": 1794697417481,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697427538485622,
+      "monotonic": 26048809190259,
+      "boottime": 105700584404001,
+      "raw": 26048285316463
+    },
+    "after": {
+      "realtime": 1794697427697062918,
+      "monotonic": 26048967768944,
+      "boottime": 105700742982859,
+      "raw": 26048443912450
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26048947928936\",\"realtimeMs\":1794697427677,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26048947928936",
+      "realtimeMs": 1794697427677,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697437735924875,
+      "monotonic": 26059006629380,
+      "boottime": 105710781843474,
+      "raw": 26058482504031
+    },
+    "after": {
+      "realtime": 1794697437910842400,
+      "monotonic": 26059181549453,
+      "boottime": 105710956763698,
+      "raw": 26058657402750
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26059160152228\",\"realtimeMs\":1794697437889,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26059160152228",
+      "realtimeMs": 1794697437889,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697446945244091,
+      "monotonic": 26068215948612,
+      "boottime": 105719991162224,
+      "raw": 26067690053495
+    },
+    "after": {
+      "realtime": 1794697447140813032,
+      "monotonic": 26068411520814,
+      "boottime": 105720186735133,
+      "raw": 26067885579537
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26068385386207\",\"realtimeMs\":1794697447114,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26068385386207",
+      "realtimeMs": 1794697447114,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697457178934244,
+      "monotonic": 26078449638798,
+      "boottime": 105730224852764,
+      "raw": 26077920870383
+    },
+    "after": {
+      "realtime": 1794697457365830757,
+      "monotonic": 26078636536589,
+      "boottime": 105730411750385,
+      "raw": 26078107709541
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26078616148231\",\"realtimeMs\":1794697457345,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26078616148231",
+      "realtimeMs": 1794697457345,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697467406194214,
+      "monotonic": 26088676898823,
+      "boottime": 105740452112473,
+      "raw": 26088144752778
+    },
+    "after": {
+      "realtime": 1794697467676933673,
+      "monotonic": 26088947640315,
+      "boottime": 105740722855021,
+      "raw": 26088415402316
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26088896967453\",\"realtimeMs\":1794697467626,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26088896967453",
+      "realtimeMs": 1794697467626,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697477723637057,
+      "monotonic": 26098994341907,
+      "boottime": 105750769555753,
+      "raw": 26098458534782
+    },
+    "after": {
+      "realtime": 1794697477900016668,
+      "monotonic": 26099170723088,
+      "boottime": 105750945937913,
+      "raw": 26098634844019
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26099147430976\",\"realtimeMs\":1794697477876,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26099147430976",
+      "realtimeMs": 1794697477876,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697486932174840,
+      "monotonic": 26108202879473,
+      "boottime": 105759978093023,
+      "raw": 26107667840068
+    },
+    "after": {
+      "realtime": 1794697487106231949,
+      "monotonic": 26108376938832,
+      "boottime": 105760152153079,
+      "raw": 26107841970392
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26108356289682\",\"realtimeMs\":1794697487085,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26108356289682",
+      "realtimeMs": 1794697487085,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697497142364486,
+      "monotonic": 26118413069943,
+      "boottime": 105770188283785,
+      "raw": 26117881109547
+    },
+    "after": {
+      "realtime": 1794697497309263265,
+      "monotonic": 26118579969241,
+      "boottime": 105770355183075,
+      "raw": 26118048043175
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26118560307270\",\"realtimeMs\":1794697497289,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26118560307270",
+      "realtimeMs": 1794697497289,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697507353430611,
+      "monotonic": 26128624136462,
+      "boottime": 105780399350807,
+      "raw": 26128093598509
+    },
+    "after": {
+      "realtime": 1794697507537476324,
+      "monotonic": 26128808182060,
+      "boottime": 105780583395900,
+      "raw": 26128277656481
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26128786953902\",\"realtimeMs\":1794697507516,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26128786953902",
+      "realtimeMs": 1794697507516,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697517571518161,
+      "monotonic": 26138842222898,
+      "boottime": 105790617436453,
+      "raw": 26138311907173
+    },
+    "after": {
+      "realtime": 1794697517775002023,
+      "monotonic": 26139045707738,
+      "boottime": 105790820921626,
+      "raw": 26138515387539
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26139021806021\",\"realtimeMs\":1794697517751,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26139021806021",
+      "realtimeMs": 1794697517751,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697526803455837,
+      "monotonic": 26148074161240,
+      "boottime": 105799849375403,
+      "raw": 26147543296733
+    },
+    "after": {
+      "realtime": 1794697526993965999,
+      "monotonic": 26148264671899,
+      "boottime": 105800039886008,
+      "raw": 26147733789784
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26148241041012\",\"realtimeMs\":1794697526970,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26148241041012",
+      "realtimeMs": 1794697526970,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697537036661276,
+      "monotonic": 26158307365768,
+      "boottime": 105810082579235,
+      "raw": 26157775279341
+    },
+    "after": {
+      "realtime": 1794697537199091769,
+      "monotonic": 26158469797874,
+      "boottime": 105810245011738,
+      "raw": 26157937688354
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26158450302100\",\"realtimeMs\":1794697537179,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26158450302100",
+      "realtimeMs": 1794697537179,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697547239805535,
+      "monotonic": 26168510510527,
+      "boottime": 105820285724232,
+      "raw": 26167976740235
+    },
+    "after": {
+      "realtime": 1794697547408165445,
+      "monotonic": 26168678871015,
+      "boottime": 105820454084909,
+      "raw": 26168145070188
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26168658150464\",\"realtimeMs\":1794697547387,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26168658150464",
+      "realtimeMs": 1794697547387,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697557444380374,
+      "monotonic": 26178715084901,
+      "boottime": 105830490298392,
+      "raw": 26178179293449
+    },
+    "after": {
+      "realtime": 1794697557599853857,
+      "monotonic": 26178870560640,
+      "boottime": 105830645775293,
+      "raw": 26178334738655
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26178850429754\",\"realtimeMs\":1794697557579,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26178850429754",
+      "realtimeMs": 1794697557579,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697567678371222,
+      "monotonic": 26188949076162,
+      "boottime": 105840724289774,
+      "raw": 26188411013162
+    },
+    "after": {
+      "realtime": 1794697567893073939,
+      "monotonic": 26189163781250,
+      "boottime": 105840938996048,
+      "raw": 26188625670383
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26189134737689\",\"realtimeMs\":1794697567864,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26189134737689",
+      "realtimeMs": 1794697567864,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697576971020289,
+      "monotonic": 26198241725463,
+      "boottime": 105850016939516,
+      "raw": 26197701445812
+    },
+    "after": {
+      "realtime": 1794697577170084043,
+      "monotonic": 26198440789832,
+      "boottime": 105850216003773,
+      "raw": 26197900461057
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26198416141471\",\"realtimeMs\":1794697577145,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26198416141471",
+      "realtimeMs": 1794697577145,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697587205865016,
+      "monotonic": 26208476570663,
+      "boottime": 105860251784808,
+      "raw": 26207933724268
+    },
+    "after": {
+      "realtime": 1794697587484626252,
+      "monotonic": 26208755332826,
+      "boottime": 105860530547188,
+      "raw": 26208212415248
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26208722291378\",\"realtimeMs\":1794697587451,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26208722291378",
+      "realtimeMs": 1794697587451,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  },
+  {
+    "before": {
+      "realtime": 1794697596773680653,
+      "monotonic": 26218044385855,
+      "boottime": 105869819600014,
+      "raw": 26217499052981
+    },
+    "after": {
+      "realtime": 1794697597116363439,
+      "monotonic": 26218387070134,
+      "boottime": 105870162284645,
+      "raw": 26217841647447
+    },
+    "command": {
+      "args": [
+        "docker",
+        "exec",
+        "mintbot-phase12-clock",
+        "node",
+        "-e",
+        "console.log(JSON.stringify({monotonicNs:process.hrtime.bigint().toString(),realtimeMs:Date.now(),timeNamespace:require('fs').readlinkSync('/proc/self/ns/time'),clocksource:require('fs').readFileSync('/sys/devices/system/clocksource/clocksource0/current_clocksource','utf8')}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"monotonicNs\":\"26218346271960\",\"realtimeMs\":1794697597075,\"timeNamespace\":\"time:[4026531834]\",\"clocksource\":\"tsc\\n\"}\n",
+      "stderr": ""
+    },
+    "container": {
+      "monotonicNs": "26218346271960",
+      "realtimeMs": 1794697597075,
+      "timeNamespace": "time:[4026531834]",
+      "clocksource": "tsc\n"
+    },
+    "containerMonotonicWithinHostCallBounds": true,
+    "containerRealtimeWithinHostCallBoundsPlus1ms": true
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-11-10T16:29:04.769Z",
+  "provider": "api.mainnet-beta.solana.com",
+  "rows": [
+    {
+      "venue": "pump",
+      "issue": "Holder discovery HTTP 429",
+      "attempts": [],
+      "elapsedMs": 2303.319502
+    },
+    {
+      "venue": "pumpswap",
+      "issue": "Holder discovery HTTP 429",
+      "attempts": [],
+      "elapsedMs": 2055.408439
+    },
+    {
+      "venue": "raydium-cpmm",
+      "issue": "Holder discovery HTTP 429",
+      "attempts": [],
+      "elapsedMs": 3627.8722800000005
+    },
+    {
+      "venue": "meteora-dlmm",
+      "issue": "Holder discovery HTTP 429",
+      "attempts": [],
+      "elapsedMs": 2282.849016
+    }
+  ],
+  "captured": [],
+  "telemetry": {
+    "uptimeMs": 10272.909169999999,
+    "counters": {
+      "rpc.calls": 4,
+      "rpc.errors": 4
+    },
+    "gauges": {},
+    "histograms": {
+      "rpc.sell.getTokenLargestAccounts_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 2045.568358,
+        "p95": 2276.9439079999993,
+        "p99": 2276.9439079999993,
+        "max": 3617.1248880000003
+      }
+    }
+  },
+  "elapsedMs": 10273.243650999999,
+  "cpuMicroseconds": {
+    "user": 477273,
+    "system": 59517
+  },
+  "memoryBefore": {
+    "rss": 139718656,
+    "heapTotal": 59334656,
+    "heapUsed": 32942600,
+    "external": 4098037,
+    "arrayBuffers": 45187
+  },
+  "memoryAfter": {
+    "rss": 163008512,
+    "heapTotal": 73367552,
+    "heapUsed": 31312128,
+    "external": 6315793,
+    "arrayBuffers": 1158045
+  },
+  "eventLoopDelayMs": {
+    "p50": 20.119551,
+    "p95": 21.200895,
+    "p99": 23.805951,
+    "max": 30.146559
+  },
+  "liveTrading": false,
+  "scope": "Bounded actual finalized mainnet sell simulations using public holder inventory and zero signatures. Public address impersonation is not signer authorization. No invented balances, signing, broadcasts, funding or paper entry. Each venue at most two public holders; discovery is not complete concentration evidence."
+}

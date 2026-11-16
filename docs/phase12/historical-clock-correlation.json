@@ -1,0 +1,52 @@
+[
+  {
+    "evidence": "docs/phase9/mainnet-2026-11-13/evidence.json",
+    "supervisor": {
+      "elapsedMs": 3464805.868175,
+      "wallElapsedMs": null,
+      "clockDiscontinuityMs": null
+    },
+    "journalCommand": [
+      "journalctl",
+      "--no-pager",
+      "-n",
+      "120",
+      "-k",
+      "--since",
+      "2026-11-13 17:50:21 UTC",
+      "--until",
+      "2026-11-14 13:36:54 UTC",
+      "--grep",
+      "(?i)PM: suspend entry|PM: suspend exit|timekeeping|clock.*jump"
+    ],
+    "exitCode": 0,
+    "stdout": "Nov 14 13:29:55 lkazaz kernel: PM: suspend exit\nNov 13 18:41:13 lkazaz kernel: PM: suspend entry (s2idle)\n",
+    "stderr": "",
+    "scope": "Kernel suspend markers are realtime journal observations. Correlation supports suspension; missing journal entries do not prove absence of adjustments."
+  },
+  {
+    "evidence": "docs/phase11/runtime/mainnet-validated/evidence.json",
+    "supervisor": {
+      "elapsedMs": 584319.3883669999,
+      "wallElapsedMs": 7854626,
+      "clockDiscontinuityMs": 7270306.611633
+    },
+    "journalCommand": [
+      "journalctl",
+      "--no-pager",
+      "-n",
+      "120",
+      "-k",
+      "--since",
+      "2026-11-14 20:17:58 UTC",
+      "--until",
+      "2026-11-14 22:28:59 UTC",
+      "--grep",
+      "(?i)PM: suspend entry|PM: suspend exit|timekeeping|clock.*jump"
+    ],
+    "exitCode": 0,
+    "stdout": "Nov 14 22:28:56 lkazaz kernel: PM: suspend exit\nNov 14 20:27:44 lkazaz kernel: PM: suspend entry (s2idle)\n",
+    "stderr": "",
+    "scope": "Kernel suspend markers are realtime journal observations. Correlation supports suspension; missing journal entries do not prove absence of adjustments."
+  }
+]

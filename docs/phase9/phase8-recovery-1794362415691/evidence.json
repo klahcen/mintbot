@@ -1,0 +1,213 @@
+{
+  "generatedAt": "2026-11-11T02:00:18.249Z",
+  "provider": "solana-rpc.publicnode.com",
+  "originalAnchor": {
+    "signature": "7NJttECNp9yB8fb1dLEw36rdjp2r49E5mnk3HBJsdRFPqFG1U67wVxQzrCn3SeapD9LMWX9p8YYukfwXgPr4WJS",
+    "slot": 467796386
+  },
+  "originalTransportGapRecords": [
+    {
+      "at": 1794329599888,
+      "fromSlot": 467794664,
+      "status": "unrecovered",
+      "reason": "Read-only research monitor disconnected; continuous coverage not established"
+    },
+    {
+      "at": 1794329600713,
+      "toSlot": 467794664,
+      "status": "unrecovered",
+      "reason": "Reconnected; bounded research capture does not claim historical gap recovery"
+    },
+    {
+      "at": 1794329693848,
+      "fromSlot": 467794889,
+      "status": "unrecovered",
+      "reason": "Read-only research monitor disconnected; continuous coverage not established"
+    },
+    {
+      "at": 1794329695006,
+      "toSlot": 467794889,
+      "status": "unrecovered",
+      "reason": "Reconnected; bounded research capture does not claim historical gap recovery"
+    },
+    {
+      "at": 1794329785088,
+      "fromSlot": 467795317,
+      "status": "unrecovered",
+      "reason": "Read-only research monitor disconnected; continuous coverage not established"
+    },
+    {
+      "at": 1794329786966,
+      "toSlot": 467795317,
+      "status": "unrecovered",
+      "reason": "Reconnected; bounded research capture does not claim historical gap recovery"
+    },
+    {
+      "at": 1794329834524,
+      "fromSlot": 467795686,
+      "status": "unrecovered",
+      "reason": "Read-only research monitor disconnected; continuous coverage not established"
+    },
+    {
+      "at": 1794329836909,
+      "toSlot": 467795686,
+      "status": "unrecovered",
+      "reason": "Reconnected; bounded research capture does not claim historical gap recovery"
+    },
+    {
+      "at": 1794329935188,
+      "fromSlot": 467795953,
+      "status": "unrecovered",
+      "reason": "Read-only research monitor disconnected; continuous coverage not established"
+    },
+    {
+      "at": 1794329939600,
+      "toSlot": 467795953,
+      "status": "unrecovered",
+      "reason": "Reconnected; bounded research capture does not claim historical gap recovery"
+    },
+    {
+      "at": 1794329966989,
+      "fromSlot": 467796389,
+      "status": "unrecovered",
+      "reason": "Read-only research monitor disconnected; continuous coverage not established"
+    }
+  ],
+  "result": {
+    "status": "partial",
+    "program": "pump",
+    "fromSlot": 467945739,
+    "toSlot": 467947739,
+    "pages": 2,
+    "retrieved": 0,
+    "duplicates": 0,
+    "unavailable": 0,
+    "reason": "slot-window-cap"
+  },
+  "progress": [
+    {
+      "program": "pump",
+      "target": 467947739,
+      "fromSlot": 467945739,
+      "pages": 1,
+      "cursor": "HDh7TBQWVUuVHMDtJ5FUfCYdCtEhDy9CtDsAtSx4LqNZNL2hbGoLDXN1HTupgQepZP5s1NJdsYGj5ShGXxxE67Y",
+      "retrieved": 0,
+      "duplicates": 0,
+      "unavailable": 0,
+      "anchorSeen": false,
+      "boundary": false
+    },
+    {
+      "program": "pump",
+      "target": 467947739,
+      "fromSlot": 467945739,
+      "pages": 2,
+      "cursor": "yYYuNpxqgqLVQMg2iN29UU9aofwFqpygfXV3uB21t2iCJhN5sMhXZzJ3uyZex11G7Z2nGGUDArJj6aNxVtAJX1r",
+      "retrieved": 0,
+      "duplicates": 0,
+      "unavailable": 0,
+      "anchorSeen": false,
+      "boundary": false
+    }
+  ],
+  "journal": {
+    "pending": 0,
+    "pendingPeak": 0,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 0,
+    "quarantined": 0,
+    "completedRetained": 0,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 0,
+    "walBytes": 2373,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {},
+    "dedupeFloors": {},
+    "gaps": [
+      {
+        "program": "pump",
+        "fromSlot": 467796354,
+        "toSlot": 467947739,
+        "reason": "slot-window-cap",
+        "anchor": {
+          "signature": "7NJttECNp9yB8fb1dLEw36rdjp2r49E5mnk3HBJsdRFPqFG1U67wVxQzrCn3SeapD9LMWX9p8YYukfwXgPr4WJS",
+          "slot": 467796386
+        },
+        "attempts": 1,
+        "status": "partial",
+        "knownRefused": 0
+      }
+    ],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 71067398144,
+    "fsyncBatches": 4,
+    "writerFailure": null
+  },
+  "telemetry": {
+    "uptimeMs": 2558.970804,
+    "counters": {
+      "ingest.resumed_from_wal": 0,
+      "rpc.calls": 3,
+      "journal.fsync_batches": 3,
+      "backfill.partial": 1
+    },
+    "gauges": {
+      "journal.unacked": {
+        "current": 0,
+        "peak": 3
+      },
+      "journal.unacked_bytes": {
+        "current": 0,
+        "peak": 877
+      }
+    },
+    "histograms": {
+      "journal.worker_append_ms": {
+        "count": 3,
+        "samples": 3,
+        "p50": 0.39609599999994316,
+        "p95": 0.39609599999994316,
+        "p99": 0.39609599999994316,
+        "max": 1.1368290000000343
+      },
+      "journal.worker_fsync_ms": {
+        "count": 3,
+        "samples": 3,
+        "p50": 2.15807599999971,
+        "p95": 2.15807599999971,
+        "p99": 2.15807599999971,
+        "max": 2.47418800000014
+      },
+      "journal.batch_records": {
+        "count": 3,
+        "samples": 3,
+        "p50": 2,
+        "p95": 2,
+        "p99": 2,
+        "max": 3
+      },
+      "rpc.getSlot_ms": {
+        "count": 1,
+        "samples": 1,
+        "p50": 593.3337310000002,
+        "p95": 593.3337310000002,
+        "p99": 593.3337310000002,
+        "max": 593.3337310000002
+      },
+      "rpc.getSignaturesForAddress_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 113.68220399999973,
+        "p95": 113.68220399999973,
+        "p99": 113.68220399999973,
+        "max": 532.8263689999999
+      }
+    }
+  },
+  "liveTrading": false,
+  "scope": "Bounded current finalized history attempt from last selected Phase8 anchor; cannot prove earlier disconnect coverage or public RPC completeness. No historical trading."
+}

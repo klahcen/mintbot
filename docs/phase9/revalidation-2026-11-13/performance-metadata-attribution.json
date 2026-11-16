@@ -1,0 +1,14 @@
+{
+  "capturedAt": "2026-11-13T17:57:25.695032+00:00",
+  "rawArtifact": "performance-comparison.json",
+  "rawSha256": "b128adca2a3508cdc2241e454923334adf911acea18c9641366d0a58d10e08a7",
+  "harnessAtRunSha256": "afa9155ed62a6bf9db418003051945fc340d989eb4421540fead2605777e8d3e",
+  "rawMetadataLimit": "The inherited default concurrentLoad and gap-status labels describe the older harness session. They do not attribute this run. Raw values retained unmodified.",
+  "actualBaseline": "../mainnet-2026-11-13/source-at-start",
+  "changedMeasuredModules": [
+    "chain"
+  ],
+  "actualChange": "Subscription acknowledgement validation in chain.ts. The direct-ingestion benchmark does not exercise socket acknowledgements or supervisor completion.",
+  "actualConcurrentMintbotLoad": "Read-only mainnet observer; first seconds overlapped production-container smoke. No concurrent test/build/database benchmark. Other host processes uncontrolled.",
+  "improvementClaim": false
+}

@@ -1,0 +1,1411 @@
+{
+  "generatedAt": "2026-11-06T16:34:59.464Z",
+  "node": "v20.19.5",
+  "scope": "Offline replay of one recorded market snapshot per venue, repeated 100 times in three runs; no live RPC latency, distinct-launch throughput or actual mainnet fills measured. Cold Store per historical evaluation, including validation and fail-closed review. Unit execution uses explicitly simulated freshness/concentration/fee/deployment safety evidence, with recorded Pump reserves. Burst has synthetic event IDs/freshness, recorded accounts, unknown mandatory safety and no fills.",
+  "rows": [
+    {
+      "repetition": 1,
+      "venue": "pump",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 100,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1896.1418469999999,
+      "eventsPerSecond": 52.73867045243267,
+      "cpuMicroseconds": {
+        "user": 2745209,
+        "system": 21576
+      },
+      "telemetry": {
+        "uptimeMs": 1897.3490869999998,
+        "counters": {
+          "fixture.account_reads": 200,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 9.285421000000042,
+            "p95": 13.535080999999991,
+            "p99": 17.762791000000107,
+            "max": 20.349183999999696
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 3.02852299999995,
+            "p95": 5.647633000000042,
+            "p99": 8.59786000000031,
+            "max": 43.47600699999998
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.02356899999995221,
+            "p95": 0.06557900000007066,
+            "p99": 0.4250999999999294,
+            "max": 0.47509599999989405
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.02098599999999351,
+            "p95": 0.048365000000103464,
+            "p99": 0.4079580000000078,
+            "max": 0.435095000000274
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07585199999994074,
+            "p95": 0.19778100000030463,
+            "p99": 0.411160000000109,
+            "max": 0.5124080000000504
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0845089999997981,
+            "p95": 0.21396699999968405,
+            "p99": 0.4505439999998089,
+            "max": 1.5196240000000216
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.016252999999778694,
+            "p95": 0.0407759999998234,
+            "p99": 0.17188600000008591,
+            "max": 0.24168299999996634
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.03431700000010096,
+            "p95": 0.08335799999986193,
+            "p99": 0.46361899999965317,
+            "max": 0.7063889999999446
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.040917999999692256,
+            "p95": 0.09270999999989726,
+            "p99": 0.52541999999994,
+            "max": 0.8417260000001079
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.637518,
+            "p95": 1.74827600000026,
+            "p99": 2.7507369999998446,
+            "max": 8.954680000000053
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.5815780000002633,
+            "p95": 3.263619999999719,
+            "p99": 4.289822000000186,
+            "max": 14.687912000000097
+          }
+        }
+      }
+    },
+    {
+      "repetition": 1,
+      "venue": "pumpswap",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 100,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1881.771206,
+      "eventsPerSecond": 53.1414231874478,
+      "cpuMicroseconds": {
+        "user": 2501263,
+        "system": 21015
+      },
+      "telemetry": {
+        "uptimeMs": 1882.3920949999997,
+        "counters": {
+          "fixture.account_reads": 300,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 6.23106800000005,
+            "p95": 9.655141000000185,
+            "p99": 10.6944510000003,
+            "max": 13.146527999999307
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 7.6197030000003,
+            "p95": 10.764288999999735,
+            "p99": 12.284507999999732,
+            "max": 13.732903999999508
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.054545999999390915,
+            "p95": 0.11330699999962235,
+            "p99": 0.42311000000017884,
+            "max": 0.6904720000002271
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.02040099999976519,
+            "p95": 0.04194600000028004,
+            "p99": 0.048628999999891676,
+            "max": 0.0713049999994837
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07213300000057643,
+            "p95": 0.12873100000069826,
+            "p99": 0.2549279999998362,
+            "max": 0.2687580000001617
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.079913999999917,
+            "p95": 0.13057900000057998,
+            "p99": 0.1560669999998936,
+            "max": 0.22169299999995928
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.012939999999616703,
+            "p95": 0.024112000000059197,
+            "p99": 0.029798999999911757,
+            "max": 0.03810200000043551
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.02605700000003708,
+            "p95": 0.04396399999950518,
+            "p99": 0.057318999999552034,
+            "max": 0.13005100000009406
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.029755999999906635,
+            "p95": 0.049769999999625725,
+            "p99": 0.06300699999974313,
+            "max": 0.1366570000000138
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.4700149999998757,
+            "p95": 0.920470000000023,
+            "p99": 1.2447659999997995,
+            "max": 3.0964599999997517
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.234730000000127,
+            "p95": 2.2542059999996127,
+            "p99": 3.512141000000156,
+            "max": 3.9965910000000804
+          }
+        }
+      }
+    },
+    {
+      "repetition": 1,
+      "venue": "raydium-cpmm",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 0,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1518.2674939999997,
+      "eventsPerSecond": 65.86454652766216,
+      "cpuMicroseconds": {
+        "user": 1826344,
+        "system": 27601
+      },
+      "telemetry": {
+        "uptimeMs": 1518.700422,
+        "counters": {
+          "fixture.account_reads": 300,
+          "market.quote_failed": 100,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 5.230155000000195,
+            "p95": 7.780076999999437,
+            "p99": 8.86176499999965,
+            "max": 8.891826000000037
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 5.281809999999496,
+            "p95": 8.118343999999524,
+            "p99": 8.541250999999647,
+            "max": 10.082932999999684
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.08125300000028801,
+            "p95": 0.12772300000051473,
+            "p99": 0.17020199999933538,
+            "max": 0.22584699999970326
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.018716999999924155,
+            "p95": 0.02804699999978766,
+            "p99": 0.047528000000056636,
+            "max": 0.09456200000022363
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07264000000031956,
+            "p95": 0.22198200000002544,
+            "p99": 0.2727340000001277,
+            "max": 0.2784719999999652
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.13264800000069954,
+            "p95": 0.18513700000039535,
+            "p99": 0.22214999999960128,
+            "max": 0.22216699999989942
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.33378300000003946,
+            "p95": 0.5567320000000109,
+            "p99": 0.6460999999999331,
+            "max": 0.6663829999997688
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.0047249999997803,
+            "p95": 1.5053280000001905,
+            "p99": 1.6203620000005685,
+            "max": 1.7082979999995587
+          }
+        }
+      }
+    },
+    {
+      "repetition": 1,
+      "venue": "meteora-dlmm",
+      "iterations": 100,
+      "snapshots": 0,
+      "buyQuotes": 0,
+      "sellQuotes": 0,
+      "rejectedStates": 100,
+      "realMarketFills": 0,
+      "elapsedMs": 1550.1840950000005,
+      "eventsPerSecond": 64.50846729916937,
+      "cpuMicroseconds": {
+        "user": 2028718,
+        "system": 21110
+      },
+      "telemetry": {
+        "uptimeMs": 1550.4681439999995,
+        "counters": {
+          "fixture.account_reads": 300
+        },
+        "gauges": {},
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 3.7569439999997485,
+            "p95": 5.743680999999924,
+            "p99": 6.786627000000408,
+            "max": 10.803512999999839
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 10.786192000000483,
+            "p95": 15.152252000000772,
+            "p99": 23.048660000000382,
+            "max": 25.290523000000576
+          }
+        }
+      }
+    },
+    {
+      "repetition": 2,
+      "venue": "pump",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 100,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1628.5866509999996,
+      "eventsPerSecond": 61.40293483223449,
+      "cpuMicroseconds": {
+        "user": 2018123,
+        "system": 26217
+      },
+      "telemetry": {
+        "uptimeMs": 1628.9927939999998,
+        "counters": {
+          "fixture.account_reads": 200,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 9.02524000000085,
+            "p95": 13.535391999999774,
+            "p99": 16.019118000000162,
+            "max": 16.048130999999557
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 2.727566999999908,
+            "p95": 4.394546000001355,
+            "p99": 4.598556000000826,
+            "max": 6.700678000001062
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.02404699999897275,
+            "p95": 0.03789700000015728,
+            "p99": 0.04731600000013714,
+            "max": 0.04837500000030559
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.019884999999703723,
+            "p95": 0.03427200000078301,
+            "p99": 0.04617400000097405,
+            "max": 0.05181599999923492
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.06766900000002352,
+            "p95": 0.11383500000010827,
+            "p99": 0.1275080000013986,
+            "max": 0.20103699999890523
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07240100000126404,
+            "p95": 0.11581899999873713,
+            "p99": 0.12932199999886507,
+            "max": 0.1546440000001894
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.012402000000292901,
+            "p95": 0.022214999999050633,
+            "p99": 0.03196399999978894,
+            "max": 0.0325780000002851
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.02373999999872467,
+            "p95": 0.04426899999998568,
+            "p99": 0.05588200000056531,
+            "max": 0.058267000000341795
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.027159000001120148,
+            "p95": 0.05194699999992736,
+            "p99": 0.06052500000077998,
+            "max": 0.06300299999929848
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.4582329999993817,
+            "p95": 0.693091999999524,
+            "p99": 0.8154440000016621,
+            "max": 0.8778710000005958
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.2049560000014026,
+            "p95": 1.7655139999988023,
+            "p99": 1.9730060000001686,
+            "max": 2.049913999999262
+          }
+        }
+      }
+    },
+    {
+      "repetition": 2,
+      "venue": "pumpswap",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 100,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1792.024311000001,
+      "eventsPerSecond": 55.802814384921554,
+      "cpuMicroseconds": {
+        "user": 1964994,
+        "system": 14076
+      },
+      "telemetry": {
+        "uptimeMs": 1792.4247209999994,
+        "counters": {
+          "fixture.account_reads": 300,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 5.760920000000624,
+            "p95": 9.403215000000273,
+            "p99": 10.865512000000308,
+            "max": 11.317863000000216
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 7.055191999999806,
+            "p95": 10.962002000000211,
+            "p99": 11.190932999999859,
+            "max": 11.68325300000106
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.06092099999841594,
+            "p95": 0.09874700000000303,
+            "p99": 0.11951899999985471,
+            "max": 0.12480000000141445
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.018765999999232008,
+            "p95": 0.028809999999793945,
+            "p99": 0.03832500000135042,
+            "max": 0.08293100000082632
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07287299999916286,
+            "p95": 0.11934100000144099,
+            "p99": 0.1439490000011574,
+            "max": 0.22203300000001036
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0746369999997114,
+            "p95": 0.12756400000034773,
+            "p99": 0.1592000000000553,
+            "max": 0.16565199999968172
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01292000000103144,
+            "p95": 0.02037000000018452,
+            "p99": 0.029751000000032946,
+            "max": 0.044065000000045984
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.024575999999797205,
+            "p95": 0.0391010000003007,
+            "p99": 0.046861999999237014,
+            "max": 0.06116199999996752
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.027948000000833417,
+            "p95": 0.04344099999980244,
+            "p99": 0.053382000000055996,
+            "max": 0.0659510000004957
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.41106000000036147,
+            "p95": 0.7243479999997362,
+            "p99": 0.7766360000005079,
+            "max": 4.154053000000204
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.1679350000013073,
+            "p95": 1.8879089999991265,
+            "p99": 2.0056100000001607,
+            "max": 5.2468599999992875
+          }
+        }
+      }
+    },
+    {
+      "repetition": 2,
+      "venue": "raydium-cpmm",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 0,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1390.7618750000001,
+      "eventsPerSecond": 71.90303516193237,
+      "cpuMicroseconds": {
+        "user": 1590690,
+        "system": 17022
+      },
+      "telemetry": {
+        "uptimeMs": 1391.516015000001,
+        "counters": {
+          "fixture.account_reads": 300,
+          "market.quote_failed": 100,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 4.8108309999988705,
+            "p95": 7.294390000000931,
+            "p99": 8.120757000000594,
+            "max": 8.97054500000013
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 4.653613000000405,
+            "p95": 7.78522299999895,
+            "p99": 9.23222799999894,
+            "max": 10.01845399999911
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.08455400000093505,
+            "p95": 0.12621600000056787,
+            "p99": 0.14121199999863165,
+            "max": 0.17173400000137917
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.015035000000352738,
+            "p95": 0.021979999999530264,
+            "p99": 0.027292999999190215,
+            "max": 0.03402500000083819
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07058499999948253,
+            "p95": 0.12563699999918754,
+            "p99": 0.2251269999997021,
+            "max": 0.25071200000093086
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.1300759999994625,
+            "p95": 0.196737000000212,
+            "p99": 0.2222459999993589,
+            "max": 0.22715799999969022
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.3177640000012616,
+            "p95": 0.5447789999998349,
+            "p99": 0.5667119999998249,
+            "max": 0.7169420000009268
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.9892909999998665,
+            "p95": 1.480413999999655,
+            "p99": 1.6067419999999402,
+            "max": 1.7406190000001516
+          }
+        }
+      }
+    },
+    {
+      "repetition": 2,
+      "venue": "meteora-dlmm",
+      "iterations": 100,
+      "snapshots": 0,
+      "buyQuotes": 0,
+      "sellQuotes": 0,
+      "rejectedStates": 100,
+      "realMarketFills": 0,
+      "elapsedMs": 1407.7845180000004,
+      "eventsPerSecond": 71.03359833937311,
+      "cpuMicroseconds": {
+        "user": 1599568,
+        "system": 4959
+      },
+      "telemetry": {
+        "uptimeMs": 1408.3291639999989,
+        "counters": {
+          "fixture.account_reads": 300
+        },
+        "gauges": {},
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 3.274500999999873,
+            "p95": 5.480719000001045,
+            "p99": 6.42209400000138,
+            "max": 7.03590499999882
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 10.038708000000042,
+            "p95": 12.444252999999662,
+            "p99": 13.837746000001061,
+            "max": 16.159552000000986
+          }
+        }
+      }
+    },
+    {
+      "repetition": 3,
+      "venue": "pump",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 100,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1598.314870000002,
+      "eventsPerSecond": 62.5658947914311,
+      "cpuMicroseconds": {
+        "user": 1740828,
+        "system": 24016
+      },
+      "telemetry": {
+        "uptimeMs": 1598.8954620000004,
+        "counters": {
+          "fixture.account_reads": 200,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 8.52073399999972,
+            "p95": 12.32385400000021,
+            "p99": 17.045554000000266,
+            "max": 35.206592999998975
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 2.890625,
+            "p95": 4.234515000000101,
+            "p99": 4.961072000000058,
+            "max": 5.374428000000989
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.024765000000115833,
+            "p95": 0.043945999999777996,
+            "p99": 0.06309699999837903,
+            "max": 0.0797999999995227
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.01443700000163517,
+            "p95": 0.029746000000159256,
+            "p99": 0.03224000000045635,
+            "max": 0.03500499999972817
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07042299999920942,
+            "p95": 0.14429699999891454,
+            "p99": 0.27226300000074843,
+            "max": 0.28596399999878486
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07344999999986612,
+            "p95": 0.11756000000241329,
+            "p99": 0.13914199999999255,
+            "max": 0.16995300000053248
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.013134999999238062,
+            "p95": 0.020829999999477877,
+            "p99": 0.031101999999009422,
+            "max": 0.03605500000048778
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.026125000000320142,
+            "p95": 0.03902300000117975,
+            "p99": 0.046523000000888715,
+            "max": 0.04882999999972526
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.029712999999901513,
+            "p95": 0.04407999999966705,
+            "p99": 0.05073699999957171,
+            "max": 0.05280500000117172
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.41423500000018976,
+            "p95": 0.6252559999993537,
+            "p99": 0.7033050000009098,
+            "max": 1.7496859999992012
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.1666040000000066,
+            "p95": 1.684943000000203,
+            "p99": 1.9440250000006927,
+            "max": 2.837657999998555
+          }
+        }
+      }
+    },
+    {
+      "repetition": 3,
+      "venue": "pumpswap",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 100,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1704.368615000003,
+      "eventsPerSecond": 58.67275372235121,
+      "cpuMicroseconds": {
+        "user": 1891151,
+        "system": 17201
+      },
+      "telemetry": {
+        "uptimeMs": 1704.9004859999986,
+        "counters": {
+          "fixture.account_reads": 300,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 6.166128000000754,
+            "p95": 8.418010000001232,
+            "p99": 9.304727999999159,
+            "max": 9.428061000002344
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 6.172915999999532,
+            "p95": 9.660148999999365,
+            "p99": 10.852120999999897,
+            "max": 10.899681999999302
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.05750799999805167,
+            "p95": 0.1007129999998142,
+            "p99": 0.114504000001034,
+            "max": 0.11470600000029663
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0159349999994447,
+            "p95": 0.02530800000022282,
+            "p99": 0.04302000000097905,
+            "max": 0.09515100000135135
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07570100000157254,
+            "p95": 0.12537199999860604,
+            "p99": 0.24149799999941024,
+            "max": 0.33966099999815924
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.08408199999757926,
+            "p95": 0.12885299999834388,
+            "p99": 0.15727400000105263,
+            "max": 0.16477799999847775
+          },
+          "risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.015522000001510605,
+            "p95": 0.02349099999992177,
+            "p99": 0.033534999998664716,
+            "max": 0.03799599999911152
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.029113000000506872,
+            "p95": 0.04299399999945308,
+            "p99": 0.05242599999837694,
+            "max": 0.06591599999956088
+          },
+          "market.strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.03290299999935087,
+            "p95": 0.04864599999928032,
+            "p99": 0.062075000001641456,
+            "max": 0.07253299999865703
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.48636700000133715,
+            "p95": 0.748288999999204,
+            "p99": 0.7941620000019611,
+            "max": 0.8027409999995143
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 1.2987619999985327,
+            "p95": 1.898786999998265,
+            "p99": 2.0498200000001816,
+            "max": 4.648362999996607
+          }
+        }
+      }
+    },
+    {
+      "repetition": 3,
+      "venue": "raydium-cpmm",
+      "iterations": 100,
+      "snapshots": 100,
+      "buyQuotes": 100,
+      "sellQuotes": 0,
+      "rejectedStates": 0,
+      "realMarketFills": 0,
+      "elapsedMs": 1388.5772770000003,
+      "eventsPerSecond": 72.0161575854449,
+      "cpuMicroseconds": {
+        "user": 1538193,
+        "system": 21031
+      },
+      "telemetry": {
+        "uptimeMs": 1388.8621859999985,
+        "counters": {
+          "fixture.account_reads": 300,
+          "market.quote_failed": 100,
+          "market.rejected": 100,
+          "store.committed": 100
+        },
+        "gauges": {
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 4.788055000000895,
+            "p95": 7.308342999996967,
+            "p99": 8.75359600000229,
+            "max": 9.294808999999077
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 4.715524000002915,
+            "p95": 7.398197999998956,
+            "p99": 8.151702999999543,
+            "max": 8.402476999999635
+          },
+          "market.quote_computation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.08156299999973271,
+            "p95": 0.129811000002519,
+            "p99": 0.17472300000008545,
+            "max": 0.18375599999853875
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.015045000000100117,
+            "p95": 0.023119999998016283,
+            "p99": 0.03507300000273972,
+            "max": 0.044019000000844244
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0727919999990263,
+            "p95": 0.1465310000021418,
+            "p99": 0.22547800000029383,
+            "max": 0.2255939999995462
+          },
+          "market.risk_evaluation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.13348000000041793,
+            "p95": 0.19120299999849522,
+            "p99": 0.232798000000912,
+            "max": 0.2533149999981106
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.29584500000055414,
+            "p95": 0.5139209999979357,
+            "p99": 0.9062970000013593,
+            "max": 3.0880079999988084
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.943980999996711,
+            "p95": 1.6005760000007285,
+            "p99": 1.8730040000009467,
+            "max": 3.6585400000003574
+          }
+        }
+      }
+    },
+    {
+      "repetition": 3,
+      "venue": "meteora-dlmm",
+      "iterations": 100,
+      "snapshots": 0,
+      "buyQuotes": 0,
+      "sellQuotes": 0,
+      "rejectedStates": 100,
+      "realMarketFills": 0,
+      "elapsedMs": 1494.1842859999997,
+      "eventsPerSecond": 66.92614889405952,
+      "cpuMicroseconds": {
+        "user": 1508833,
+        "system": 9973
+      },
+      "telemetry": {
+        "uptimeMs": 1494.4735260000016,
+        "counters": {
+          "fixture.account_reads": 300
+        },
+        "gauges": {},
+        "histograms": {
+          "market.transaction_verification_cpu_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 3.7597830000013346,
+            "p95": 5.5934200000010605,
+            "p99": 5.854300999999396,
+            "max": 5.970757999999478
+          },
+          "market.state_retrieval_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 10.417394000000058,
+            "p95": 14.16591200000039,
+            "p99": 16.50836799999888,
+            "max": 16.530589999998483
+          }
+        }
+      }
+    }
+  ],
+  "unitExecution": {
+    "unitBuys": 100,
+    "unitSells": 100,
+    "realMarketFills": 0,
+    "telemetry": {
+      "uptimeMs": 2252.247116999999,
+      "counters": {
+        "market.buys_committed": 100,
+        "store.committed": 200,
+        "market.sells_committed": 100
+      },
+      "gauges": {
+        "store.queue_depth": {
+          "current": 0,
+          "peak": 1
+        },
+        "store.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "histograms": {
+        "store.queue_wait_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 0.01182899999912479,
+          "p95": 0.023708000000624452,
+          "p99": 0.038103000002593035,
+          "max": 0.05554900000061025
+        },
+        "store.clone_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 0.28376099999877624,
+          "p95": 0.516620000002149,
+          "p99": 0.6070660000004864,
+          "max": 1.0805150000014692
+        },
+        "market.risk_evaluation_ms": {
+          "count": 100,
+          "samples": 100,
+          "p50": 0.07024299999829964,
+          "p95": 0.11863799999991897,
+          "p99": 0.2713759999969625,
+          "max": 0.5090149999996356
+        },
+        "risk_evaluation_ms": {
+          "count": 100,
+          "samples": 100,
+          "p50": 0.013671000000613276,
+          "p95": 0.022167999999510357,
+          "p99": 0.025241999999707332,
+          "max": 0.02695099999982631
+        },
+        "strategy_decision_ms": {
+          "count": 100,
+          "samples": 100,
+          "p50": 0.02616699999998673,
+          "p95": 0.040610000000015134,
+          "p99": 0.04540800000177114,
+          "max": 0.061850000001868466
+        },
+        "market.strategy_decision_ms": {
+          "count": 100,
+          "samples": 100,
+          "p50": 0.029361000000790227,
+          "p95": 0.04490399999849615,
+          "p99": 0.05377500000031432,
+          "max": 0.07105899999805843
+        },
+        "market.paper_execution_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 0.19155699999828357,
+          "p95": 0.38855599999806145,
+          "p99": 0.5495209999971848,
+          "max": 1.1846439999972063
+        },
+        "store.validation_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 0.5420469999990019,
+          "p95": 1.055978000000323,
+          "p99": 1.7519009999996342,
+          "max": 9.56075299999793
+        },
+        "store.transaction_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 1.3134229999996023,
+          "p95": 2.242646999999124,
+          "p99": 3.181884000001446,
+          "max": 12.825346000001446
+        }
+      }
+    }
+  },
+  "burst": {
+    "offered": 64,
+    "admitted": 32,
+    "admissionRejected": 32,
+    "duplicates": 8,
+    "realMarketFills": 0,
+    "telemetry": {
+      "uptimeMs": 271.8490660000025,
+      "counters": {
+        "market.pipeline.offered": 72,
+        "market.pipeline.admitted": 40,
+        "market.pipeline.backpressure": 32,
+        "market.quote_failed": 32,
+        "market.rejected": 32,
+        "store.committed": 32,
+        "market.pipeline.completed": 40
+      },
+      "gauges": {
+        "market.pipeline.pending": {
+          "current": 0,
+          "peak": 32
+        },
+        "market.pipeline.queue_depth": {
+          "current": 0,
+          "peak": 32
+        },
+        "market.pipeline.in_flight": {
+          "current": 0,
+          "peak": 2
+        },
+        "store.queue_depth": {
+          "current": 0,
+          "peak": 2
+        },
+        "store.in_flight": {
+          "current": 0,
+          "peak": 1
+        }
+      },
+      "histograms": {
+        "market.pipeline.queue_wait_ms": {
+          "count": 40,
+          "samples": 40,
+          "p50": 59.73408299999937,
+          "p95": 219.6151490000011,
+          "p99": 242.99297899999874,
+          "max": 243.0932759999996
+        },
+        "market.queue_backlog_age_ms": {
+          "count": 40,
+          "samples": 40,
+          "p50": 60.75755199999912,
+          "p95": 221.14942399999927,
+          "p99": 243.02658899999733,
+          "max": 243.98218199999974
+        },
+        "market.state_retrieval_ms": {
+          "count": 32,
+          "samples": 32,
+          "p50": 5.258789999999863,
+          "p95": 8.887432999999874,
+          "p99": 8.972634000001563,
+          "max": 10.373892999999953
+        },
+        "market.quote_computation_ms": {
+          "count": 32,
+          "samples": 32,
+          "p50": 0.09463300000061281,
+          "p95": 0.1705820000024687,
+          "p99": 0.18329499999890686,
+          "max": 0.30873200000132783
+        },
+        "store.queue_wait_ms": {
+          "count": 32,
+          "samples": 32,
+          "p50": 0.07318999999915832,
+          "p95": 1.5214150000028894,
+          "p99": 1.6862760000003618,
+          "max": 1.8853989999988698
+        },
+        "store.clone_ms": {
+          "count": 32,
+          "samples": 32,
+          "p50": 3.251471000003221,
+          "p95": 6.288151000000653,
+          "p99": 7.255280000001221,
+          "max": 7.847959000002447
+        },
+        "market.risk_evaluation_ms": {
+          "count": 32,
+          "samples": 32,
+          "p50": 0.1451600000000326,
+          "p95": 0.22319399999832967,
+          "p99": 0.23973199999818462,
+          "max": 0.317192000002251
+        },
+        "store.validation_ms": {
+          "count": 32,
+          "samples": 32,
+          "p50": 0.5829589999993914,
+          "p95": 1.048334999999497,
+          "p99": 1.0499839999974938,
+          "max": 1.2781979999999749
+        },
+        "store.transaction_ms": {
+          "count": 32,
+          "samples": 32,
+          "p50": 5.156033999999636,
+          "p95": 8.921461999998428,
+          "p99": 9.272350000002916,
+          "max": 9.35286300000007
+        },
+        "market.pipeline.processing_ms": {
+          "count": 40,
+          "samples": 40,
+          "p50": 14.59029499999815,
+          "p95": 21.541011000001163,
+          "p99": 23.404939000000013,
+          "max": 23.443280999999843
+        },
+        "market.pipeline.end_to_end_ms": {
+          "count": 40,
+          "samples": 40,
+          "p50": 74.3543589999972,
+          "p95": 243.06714400000055,
+          "p99": 264.02012500000274,
+          "max": 264.0411039999999
+        }
+      }
+    }
+  },
+  "fixtures": {
+    "pump": "d11ebbd244866d7b63dfbe3e87b04aab3de24d7f5c99768d3218f3b8f22624a7",
+    "pumpswap": "ee04a01905a39b1876c950fed932b4eecff68292e500256d3c91fb429ff96bae",
+    "raydium-cpmm": "8e7681518d2125a9a15ebe08e40f73822ded6d96c7c625aaec8679097d2dc77c",
+    "meteora-dlmm": "155e3e87966890f10351d2e15dae8fae7793a551481c2cc1e7b7a09c53bb166c"
+  }
+}

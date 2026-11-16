@@ -1,0 +1,76 @@
+[
+  {
+    "name": "reconciliation",
+    "args": [
+      "node",
+      "--import",
+      "tsx",
+      "scripts/phase10-reconciliation.ts",
+      "--wal",
+      "docs/phase13/runtime/mainnet-validated/ingestion.wal",
+      "--evidence",
+      "docs/phase13/runtime/mainnet-validated/evidence.json",
+      "--source-manifest",
+      "docs/phase13/runtime/mainnet-validated/runtime-manifest.json",
+      "--output",
+      "docs/phase13/runtime-reconciliation.json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "forensics",
+    "args": [
+      "python3",
+      "scripts/phase11-prior-forensics.py",
+      "--run",
+      "docs/phase13/runtime/mainnet-validated",
+      "--reconciliation",
+      "docs/phase13/runtime-reconciliation.json",
+      "--allow-retained-subset",
+      "--output",
+      "docs/phase13/run-forensics.json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "outcomes",
+    "args": [
+      "node",
+      "scripts/phase11-candidate-outcomes.mjs",
+      "--root",
+      "docs/phase13",
+      "--run-name",
+      "mainnet-validated",
+      "--reconciliation",
+      "runtime-reconciliation.json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "identity-analysis",
+    "args": [
+      "python3",
+      "scripts/phase13-identity-report.py",
+      "--run-directory",
+      "docs/phase13/runtime/mainnet-validated",
+      "--output",
+      "docs/phase13/identity-mainnet-analysis.json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "postrun-creations",
+    "args": [
+      "node",
+      "--import",
+      "tsx",
+      "scripts/phase12-postrun-verification.ts",
+      "--run",
+      "--evidence",
+      "docs/phase13/runtime/mainnet-validated/evidence.json",
+      "--output",
+      "docs/phase13/postrun-creation-verification.json"
+    ],
+    "exitCode": 0
+  }
+]

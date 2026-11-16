@@ -1,0 +1,517 @@
+{
+  "generatedAt": "2026-11-15T12:25:39.227560+00:00",
+  "fullPhaseAcceptance": false,
+  "endToEndCurrentPaperValidated": false,
+  "tests": {
+    "total": 312,
+    "passed": 312,
+    "failed": 0,
+    "originalPhase11TestsRetained": 307,
+    "pythonClockTestsPassed": 5
+  },
+  "priorArtifactFilesUnchanged": 1818,
+  "retainedPhase12FilesUnchanged": 717,
+  "originalTestFilesUnchanged": 61,
+  "cleanBuild": {
+    "generatedAt": "2026-11-15T12:20:31.955831+00:00",
+    "directory": "/tmp/mintbot-phase12-clean-gu9oq26a",
+    "node": "v22.22.0",
+    "checks": [
+      {
+        "check": "install",
+        "args": [
+          "npm",
+          "ci"
+        ],
+        "exitCode": 0
+      },
+      {
+        "check": "typecheck",
+        "args": [
+          "npm",
+          "run",
+          "typecheck"
+        ],
+        "exitCode": 0
+      },
+      {
+        "check": "build",
+        "args": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exitCode": 0
+      },
+      {
+        "check": "audit",
+        "args": [
+          "npm",
+          "audit",
+          "--json"
+        ],
+        "exitCode": 0
+      },
+      {
+        "check": "python-clock-tests",
+        "exitCode": 0
+      }
+    ]
+  },
+  "audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "cleanBuildCompiledCoreMatchesDelivered": 70,
+  "stableHostExperimentSeconds": 300.000130316,
+  "completionClockExperiment": {
+    "startedClocksNs": {
+      "realtime": 1794745213934974378,
+      "monotonic": 30239031580406,
+      "boottime": 153486980894489,
+      "raw": 30238553614201
+    },
+    "endedClocksNs": {
+      "realtime": 1794745243935090341,
+      "monotonic": 30269031698235,
+      "boottime": 153516981012711,
+      "raw": 30268555537771
+    },
+    "exportClocksNs": {
+      "realtime": 1794745244119879230,
+      "monotonic": 30269216484123,
+      "boottime": 153517165798019,
+      "raw": 30268740334022
+    },
+    "requestedSeconds": 30,
+    "actualMonotonicSeconds": 30.000117829,
+    "actualRealtimeSeconds": 30.000115963,
+    "stableForRequestedInterval": true,
+    "issues": [],
+    "sampleCount": 31,
+    "maxSampleMonotonicIntervalMs": 1329.810994,
+    "maxAbsRealtimeMonotonicStepMs": 0.018790999999964697,
+    "containerSamples": 4,
+    "containerBoundsPassed": true,
+    "scope": "Host/process clock measurements only, no chain timestamps or coverage authorization. CLOCK_BOOTTIME/RAW and journals constrain possible causes; unavailable facts and VM scheduling remain unknown. A bounded stable sample is not a future-host reliability guarantee.",
+    "liveTrading": false
+  },
+  "monitoringRunsNeverCombined": {
+    "mainnet": {
+      "notifications": 29847,
+      "selectedCandidates": 15,
+      "verifiedCreationsDuringRun": 6,
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 300000.537795,
+        "wallElapsedMs": 300001,
+        "clockDiscontinuityMs": 0.46220499998889863,
+        "connectedMs": 295181.83646400005,
+        "acknowledgedMs": 292995.5198250001,
+        "disconnectedMs": 4818.70133099996,
+        "connections": 4,
+        "incidents": 3,
+        "attemptsThisIncident": 0,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 1045.3406330000003,
+            "toMs": 81793.320907,
+            "subscribed": true,
+            "acknowledgedFromMs": 1178.380581,
+            "lastReceiptMs": 81789.975632
+          },
+          {
+            "provider": 0,
+            "fromMs": 83237.778335,
+            "toMs": 162854.93431500002,
+            "subscribed": true,
+            "acknowledgedFromMs": 84720.615161,
+            "lastReceiptMs": 162852.760679
+          },
+          {
+            "provider": 0,
+            "fromMs": 164171.54756,
+            "toMs": 206894.74598900002,
+            "subscribed": true,
+            "acknowledgedFromMs": 164233.575465,
+            "lastReceiptMs": 206894.019735
+          },
+          {
+            "provider": 0,
+            "fromMs": 207907.02157,
+            "toMs": 300000.52335100004,
+            "subscribed": true,
+            "acknowledgedFromMs": 208415.43353,
+            "lastReceiptMs": 299975.136503
+          }
+        ],
+        "events": [
+          {
+            "atMs": 1045.4173289999999,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 1178.3912100000002,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 81792.744301,
+            "provider": 0,
+            "kind": "transport-error",
+            "code": "WS_ERR_INVALID_CLOSE_CODE"
+          },
+          {
+            "atMs": 81793.813694,
+            "provider": 0,
+            "kind": "incident",
+            "code": "WS_ERR_INVALID_CLOSE_CODE",
+            "reason": "Invalid WebSocket frame: invalid status code 1006"
+          },
+          {
+            "atMs": 83237.78616199999,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 84720.62475,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 162854.49895200002,
+            "provider": 0,
+            "kind": "transport-error",
+            "code": "WS_ERR_INVALID_CLOSE_CODE"
+          },
+          {
+            "atMs": 162855.40442,
+            "provider": 0,
+            "kind": "incident",
+            "code": "WS_ERR_INVALID_CLOSE_CODE",
+            "reason": "Invalid WebSocket frame: invalid status code 1006"
+          },
+          {
+            "atMs": 164171.557248,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 164233.60059500003,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 206894.712126,
+            "provider": 0,
+            "kind": "transport-error",
+            "code": "WS_ERR_INVALID_CLOSE_CODE"
+          },
+          {
+            "atMs": 206895.034554,
+            "provider": 0,
+            "kind": "incident",
+            "code": "WS_ERR_INVALID_CLOSE_CODE",
+            "reason": "Invalid WebSocket frame: invalid status code 1006"
+          },
+          {
+            "atMs": 207907.02594800002,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 208415.440078,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 300001.005153,
+            "provider": 0,
+            "kind": "run-deadline"
+          }
+        ],
+        "liveTrading": false
+      },
+      "funnel": {
+        "market-rejected": 6,
+        "verification-http-429": 8,
+        "verification-rpc-or-finality-unavailable": 1
+      },
+      "gaps": [
+        {
+          "program": "meteora-dlmm",
+          "fromSlot": 469506340,
+          "toSlot": 469507355,
+          "reason": "fork-or-provider-conflict",
+          "anchor": {
+            "signature": "ntZGCn6JEU7yMVs4To61dyTEFk4AmjUvwFaNiEQW8AGp796gucPsZbZHu6zA9AXWMnLoRr6pBTK6bZtBGNY1iBk",
+            "slot": 469506372
+          },
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 209
+        },
+        {
+          "program": "pump",
+          "fromSlot": 469506351,
+          "toSlot": 469507352,
+          "reason": "fork-or-provider-conflict",
+          "anchor": {
+            "signature": "5kXf8H23u8U9vwCyTgLcG4xy2KdHZgFPgPWvdN1giaxaBQz6er4svhEiDPtwySZUbbBMHVDUU89UK77NWHXKiX15",
+            "slot": 469506383
+          },
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 6
+        },
+        {
+          "program": "pumpswap",
+          "fromSlot": 469506382,
+          "toSlot": 469507342,
+          "reason": "fork-or-provider-conflict",
+          "anchor": {
+            "signature": "2EwNNCDYyXZ1yrKuUPSJKaTFPk4TbSHHSqWy16QC9GJY9uUcnYFRSwsWwmtai36VckmLFoDmhTms1h55P1TdDiuZ",
+            "slot": 469506414
+          },
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 1
+        },
+        {
+          "program": "raydium-cpmm",
+          "fromSlot": 469506383,
+          "toSlot": 469507222,
+          "reason": "supervised-websocket-disconnect",
+          "anchor": {
+            "signature": "4MxZypHXcwikCDUJG68M5vFzjFpP8KoNDFDBNf4BjZghoCg4o2miAB2WBd9K6e458Kfe83jehHW2yGuSnPVJQEqk",
+            "slot": 469506415
+          },
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 0
+        }
+      ],
+      "refusals": {
+        "fork-or-provider-conflict": 216
+      },
+      "paperEntries": 0,
+      "paperExits": 0
+    },
+    "final-mainnet": {
+      "notifications": 15484,
+      "selectedCandidates": 5,
+      "verifiedCreationsDuringRun": 2,
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 1,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 120005.478819,
+        "wallElapsedMs": 120005,
+        "clockDiscontinuityMs": -0.4788189999962924,
+        "connectedMs": 116437.170799,
+        "acknowledgedMs": 116227.961615,
+        "disconnectedMs": 3568.3080199999968,
+        "connections": 5,
+        "incidents": 4,
+        "attemptsThisIncident": 0,
+        "cooldownsUntilMono": [
+          73925.65959299999,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 262.41976799999975,
+            "toMs": 37995.680533,
+            "subscribed": true,
+            "acknowledgedFromMs": 362.51658,
+            "lastReceiptMs": 37990.40822
+          },
+          {
+            "provider": 1,
+            "fromMs": 41301.550725,
+            "toMs": 120005.460759,
+            "subscribed": true,
+            "acknowledgedFromMs": 41410.663097000004,
+            "lastReceiptMs": 119987.87848099999
+          }
+        ],
+        "events": [
+          {
+            "atMs": 262.50694699999985,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 362.5303259999996,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 37995.04907,
+            "provider": 0,
+            "kind": "transport-error",
+            "code": "WS_ERR_INVALID_CLOSE_CODE"
+          },
+          {
+            "atMs": 37996.493867000005,
+            "provider": 0,
+            "kind": "incident",
+            "code": "WS_ERR_INVALID_CLOSE_CODE",
+            "reason": "Invalid WebSocket frame: invalid status code 1006"
+          },
+          {
+            "atMs": 38617.69032,
+            "provider": 0,
+            "kind": "transport-error"
+          },
+          {
+            "atMs": 38618.390927,
+            "provider": 0,
+            "kind": "incident",
+            "reason": "Unexpected server response: 429"
+          },
+          {
+            "atMs": 39423.538571000005,
+            "provider": 0,
+            "kind": "transport-error"
+          },
+          {
+            "atMs": 39423.628868,
+            "provider": 0,
+            "kind": "incident",
+            "reason": "Unexpected server response: 429"
+          },
+          {
+            "atMs": 40752.592949,
+            "provider": 0,
+            "kind": "transport-error"
+          },
+          {
+            "atMs": 40752.70595,
+            "provider": 0,
+            "kind": "incident",
+            "reason": "Unexpected server response: 429"
+          },
+          {
+            "atMs": 40753.249433000005,
+            "provider": 0,
+            "kind": "provider-cooldown"
+          },
+          {
+            "atMs": 41301.555976,
+            "provider": 1,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 41410.669516,
+            "provider": 1,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 120006.897109,
+            "provider": 1,
+            "kind": "run-deadline"
+          }
+        ],
+        "liveTrading": false
+      },
+      "funnel": {
+        "market-rejected": 2,
+        "verification-http-429": 3
+      },
+      "gaps": [
+        {
+          "program": "meteora-dlmm",
+          "fromSlot": 469514585,
+          "toSlot": 469514667,
+          "reason": "supervised-websocket-disconnect",
+          "anchor": {
+            "signature": "52bS71ggHtiNNYu5nJg64srzvvqKxXdACrEP9kLQpxbCg2Sb3dSSmyNAy8Rk6HmSX4gVXcDhGnRXpSwjrEs69Rcn",
+            "slot": 469514617
+          },
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 55
+        },
+        {
+          "program": "pumpswap",
+          "fromSlot": 469514589,
+          "toSlot": 469514757,
+          "reason": "cycle-budget-exhausted:rpc-or-processing-budget-exhausted",
+          "anchor": {
+            "signature": "2Kcpn31cG5dP7nW5ypC6dkh1DsKCTQeVHoC6mCwGqeogBCWAoJ7EyoW9fAKoTk65hWSpD8o3AV2yeRDxBj2V18Po",
+            "slot": 469514621
+          },
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 4
+        },
+        {
+          "program": "pump",
+          "fromSlot": 469514600,
+          "toSlot": 469514825,
+          "reason": "cycle-budget-exhausted:rpc-or-processing-budget-exhausted",
+          "anchor": {
+            "signature": "3sjF7FZPpFETrczWN9LUA5Qa76691JL7fqY4b8UgMWrHh4amZNwCKTyL7ak6sJwwMmxCP1F21f7MTpz8difUc9DG",
+            "slot": 469514632
+          },
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 4
+        },
+        {
+          "program": "raydium-cpmm",
+          "fromSlot": 469514632,
+          "toSlot": 469514918,
+          "reason": "provider-window-covered",
+          "anchor": {
+            "signature": "3vFRtQnz3EXKQ769QXFijqNuex3drtj5sJSXmSBES79qdv7c1nyEcMnC473CxL4YGc9zzCDhqC4kmLuXqAssHqYc",
+            "slot": 469514664
+          },
+          "attempts": 1,
+          "status": "recovered",
+          "knownRefused": 0
+        }
+      ],
+      "refusals": {
+        "unverifiable-zero-signature": 58,
+        "fork-or-provider-conflict": 5
+      },
+      "paperEntries": 0,
+      "paperExits": 0
+    }
+  },
+  "extended1800SecondAcceptance": false,
+  "currentPumpApproved": false,
+  "observedPumpSwapVariantApproved": false,
+  "raydiumCreationFinalizedAfterRun": true,
+  "meteoraCreationAcceptance": false,
+  "independentAuthenticatedProviders": "unavailable",
+  "independentEpochApproval": false,
+  "paperEntries": 0,
+  "paperExits": 0,
+  "signingBroadcastSpending": false,
+  "liveTrading": false,
+  "reportLinksChecked": 159
+}

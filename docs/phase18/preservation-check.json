@@ -1,0 +1,24 @@
+{
+  "repositoryStatus": "PASS for baseline-hashed files",
+  "baselineFiles": 2938,
+  "unchangedBaselineFiles": 2930,
+  "intentionalModifiedFiles": [
+    ".dockerignore",
+    "compose.research.yaml",
+    "scripts/phase10-mainnet.ts",
+    "scripts/phase11-mainnet.ts",
+    "scripts/phase8-mainnet.ts",
+    "scripts/phase9-mainnet.ts",
+    "src/research/providers.ts",
+    "src/research/validation-probe.ts"
+  ],
+  "deletedFiles": [],
+  "existingDocumentationFilesUnchanged": 2602,
+  "existingTestFilesUnchanged": 69,
+  "environmentBytesUnchanged": true,
+  "privateProviderBytesUnchanged": true,
+  "applicationPostgresAccess": "not used by diagnostics or regression tests",
+  "databasePreservation": "EXCEPTION: inherited initial tests wrote retained Phase7/8 regression clusters and rotated runtime test credential; no restoration claimed",
+  "finalTestDatabasesDisposable": true,
+  "scope": "Hashes cover original files excluding node_modules, dist, Git metadata and Python caches; database records and passwords are not part of repository hash preservation."
+}

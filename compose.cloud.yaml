@@ -1,0 +1,158 @@
+# Standalone deployment: never merge with local compose.yaml.
+name: mintbot-cloud
+x-logging: &logging
+  driver: json-file
+  options: {max-size: "10m", max-file: "3"}
+x-app: &app
+  image: ${MINTBOT_IMAGE:?Set an immutable release tag or digest}
+  build: .
+  init: true
+  user: "1000:1000"
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  tmpfs: ["/tmp:rw,noexec,nosuid,size=64m,uid=1000,gid=1000"]
+  logging: *logging
+  pids_limit: 128
+  mem_limit: 1g
+  cpus: 1.5
+  stop_grace_period: 45s
+services:
+  app:
+    <<: *app
+    restart: unless-stopped
+    command: [node, dist/scripts/cloud-runtime.js, server]
+    environment:
+      MODE: paper
+      REAL_MARKET_PAPER: "false"
+      MONITOR_PROGRAMS: ""
+      RESEARCH_STATUS_PATH: /app/research-data/${RESEARCH_RUN_NAME:-run}/research-status.json
+      RESEARCH_STOP_PATH: /app/research-control/global-stop.json
+    volumes:
+      - type: bind
+        source: ./private/cloud-runtime.json
+        target: /run/secrets/runtime.json
+        read_only: true
+        bind: {create_host_path: false}
+      - paper-state:/app/data
+      - research-state:/app/research-data:ro
+      - research-control:/app/research-control
+    networks: [edge, database]
+    depends_on:
+      postgres: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, node, dist/scripts/cloud-health.js]
+      interval: 30s
+      timeout: 8s
+      retries: 3
+      start_period: 30s
+  postgres:
+    image: ${POSTGRES_IMAGE:-postgres:17-alpine}
+    user: postgres
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=64m", "/var/run/postgresql:rw,nosuid,size=16m,mode=0777"]
+    environment:
+      POSTGRES_USER: mintbot_owner
+      POSTGRES_DB: mintbot
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres-password
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - type: bind
+        source: ./private/postgres-password
+        target: /run/secrets/postgres-password
+        read_only: true
+        bind: {create_host_path: false}
+      - type: bind
+        source: ./private/database-app-password
+        target: /run/secrets/app-password
+        read_only: true
+        bind: {create_host_path: false}
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/10-schema.sql:ro
+      - ./deploy/cloud/20-runtime-role.sh:/docker-entrypoint-initdb.d/20-runtime-role.sh:ro
+    networks: [database]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -h 127.0.0.1 -U mintbot_owner -d mintbot"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    logging: *logging
+    pids_limit: 128
+    mem_limit: 1g
+    cpus: 1.5
+    stop_grace_period: 60s
+  caddy:
+    image: ${CADDY_IMAGE:-caddy:2-alpine}
+    profiles: [https]
+    user: "1000:1000"
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    environment:
+      MINTBOT_DOMAIN: ${MINTBOT_DOMAIN:-localhost}
+      ACME_EMAIL: ${ACME_EMAIL:-}
+    ports: ["80:8080", "443:8443"]
+    volumes:
+      - ./deploy/cloud/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=32m,uid=1000,gid=1000"]
+    networks: [edge]
+    depends_on:
+      app: {condition: service_healthy}
+    logging: *logging
+    pids_limit: 64
+    mem_limit: 256m
+    cpus: 0.5
+  research:
+    <<: *app
+    profiles: [research]
+    restart: "no"
+    command: [node, dist/scripts/cloud-runtime.js, research, --run, --seconds, "${RESEARCH_SECONDS:-1800}", --venues, "${RESEARCH_VENUES:-pump,pumpswap,raydium-cpmm,meteora-dlmm}", --history-evidence, /app/history/phase10.json, --output, "/app/data/${RESEARCH_RUN_NAME:-run}"]
+    environment:
+      MODE: paper
+      REAL_MARKET_PAPER: "false"
+      RESEARCH_REQUIRE_HOST_HEALTH: "true"
+      RESEARCH_HOST_HEALTH_PATH: /app/host-health/evidence.json
+      RESEARCH_PROVIDERS_PATH: /app/private/research-providers.json
+      RESEARCH_OWNER_PATH: /app/research-control/decision-owner.lock
+      RESEARCH_STOP_PATH: /app/research-control/global-stop.json
+      RESEARCH_PROGRESS_PATH: /app/data/${RESEARCH_RUN_NAME:-run}/run-progress.json
+    volumes:
+      - type: bind
+        source: ./private/cloud-runtime.json
+        target: /run/secrets/runtime.json
+        read_only: true
+        bind: {create_host_path: false}
+      - type: bind
+        source: ./private/research-providers.json
+        target: /app/private/research-providers.json
+        read_only: true
+        bind: {create_host_path: false}
+      - type: bind
+        source: ./private/research-clock
+        target: /app/host-health
+        read_only: true
+        bind: {create_host_path: false}
+      - ./docs/phase11/coverage-history.json:/app/history/phase10.json:ro
+      - research-state:/app/data
+      - research-control:/app/research-control
+    networks: [edge]
+    healthcheck:
+      test: [CMD, node, -e, "const f=require('fs');try{const e=JSON.parse(f.readFileSync(process.env.RESEARCH_PROGRESS_PATH));process.exit(Date.now()-e.updatedAt<15000&&e.supervisor.liveReady&&!e.pipeline.fatal&&!e.journal.writerFailure&&e.journal.quarantined===0&&e.journal.gaps.every(g=>g.status==='recovered')&&e.coverageEpoch.researchPolicyReview==='verified'?0:1)}catch{process.exit(1)}"]
+      interval: 15s
+      timeout: 3s
+      retries: 2
+networks:
+  edge:
+  database: {internal: true}
+volumes:
+  pg-data:
+  paper-state:
+  research-state:
+  research-control:
+  caddy-data:
+  caddy-config:

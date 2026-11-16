@@ -1,0 +1,100 @@
+{
+  "node": "v22.22.0",
+  "directory": "/tmp/mintbot-phase14-clean-7hxcmz_o",
+  "checks": [
+    {
+      "name": "install",
+      "args": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 24.658172912000737
+    },
+    {
+      "name": "typecheck",
+      "args": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 44.783000570001605
+    },
+    {
+      "name": "build",
+      "args": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 27.666446038994764
+    },
+    {
+      "name": "tests",
+      "args": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 1,
+      "durationSeconds": 94.27099676099897
+    },
+    {
+      "name": "python-clock-tests",
+      "args": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_phase12_host_health.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.19195845400099643
+    },
+    {
+      "name": "audit",
+      "args": [
+        "npm",
+        "audit",
+        "--json"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 1.2721070779953152
+    },
+    {
+      "name": "typecheck-final",
+      "args": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "build-final",
+      "args": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "tests-retest",
+      "args": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "tests": 328,
+      "passed": 328,
+      "failed": 0,
+      "evidence": "clean-tests-retest.log"
+    }
+  ],
+  "originalFailuresRetained": true
+}

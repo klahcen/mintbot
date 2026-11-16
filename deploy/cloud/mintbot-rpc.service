@@ -1,0 +1,9 @@
+[Unit]
+Description=Mintbot bounded read-only RPC and venue delivery observation
+After=docker.service
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/mintbot
+ExecStart=/usr/bin/python3 /opt/mintbot/scripts/cloud/manage.py rpc-check
+UMask=0077
+TimeoutStartSec=75

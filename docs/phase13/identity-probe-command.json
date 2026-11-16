@@ -1,0 +1,31 @@
+{
+  "args": [
+    "systemd-inhibit",
+    "--what=sleep:idle",
+    "--who=Mintbot",
+    "--why=Authorized Phase13 raw-identity diagnostic",
+    "--mode=block",
+    "node",
+    "--import",
+    "tsx",
+    "scripts/phase11-mainnet.ts",
+    "--run",
+    "--seconds",
+    "120",
+    "--max-candidates",
+    "16",
+    "--host-health-evidence",
+    "docs/phase13/timing/preflight-300/evidence.json",
+    "--history-evidence",
+    "docs/phase11/coverage-history.json,docs/phase11/phase11-coverage-history.json,docs/phase12/final-coverage-history.json",
+    "--output",
+    "docs/phase13/runtime/identity-probe"
+  ],
+  "startedAt": "2026-11-15T12:41:09.378228+00:00",
+  "environmentKeys": {
+    "MODE": "paper",
+    "RESEARCH_IDENTITY_DIAGNOSTICS": "true",
+    "RESEARCH_REQUIRE_HOST_HEALTH": "true",
+    "RESEARCH_STOP_PATH": "/home/lkazaz/Desktop/mintbot/docs/phase13/probe-control/global-stop.json"
+  }
+}

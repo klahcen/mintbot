@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-11-15T12:47:15.521817+00:00",
+  "jobs": [
+    {
+      "name": "pump-deployment",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase10-pump-evidence.ts",
+        "--run",
+        "--output-dir",
+        "docs/phase13/pump-deployment"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "current-network",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase11-current-network.ts",
+        "--run",
+        "--output",
+        "docs/phase13/current-network"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "pumpswap-contract",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase12-pumpswap-contract.ts",
+        "--run",
+        "--output",
+        "docs/phase13/pumpswap-contract.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "provider-validation",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase9-provider-validation.ts",
+        "--run",
+        "--output",
+        "docs/phase13/provider-validation.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "builder-reference",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase9-builder-reference.ts",
+        "--output",
+        "docs/phase13/builder-reference.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "quote-reference",
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/phase9-quote-reference.ts",
+        "--output",
+        "docs/phase13/quote-reference.json"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

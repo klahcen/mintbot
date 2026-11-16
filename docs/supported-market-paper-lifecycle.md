@@ -1,0 +1,7 @@
+# Phase 15 supported market and paper lifecycle
+
+**EXTERNALLY BLOCKED. Acceptance unmet. Paper entries: 0. Paper exits: 0.** No fresh candidate was detected or assessed in a Phase15 research process. The rejection funnel stops at infrastructure Gate 0; candidate counts below that gate are not measured, not zero eligible observations from a running feed. Realized paper P&L is not applicable; no position or inventory was manufactured.
+
+Prioritize the existing native-quote PumpSwap route after independent approval, with Raydium CPMM as the alternative. Phase14 unsigned buy/sell diagnostics are historical route controls, not proof of current fresh-launch eligibility. Original finalized creation, deployment, token authority/extensions, custody/concentration/liquidity, strategy constraints and fresh account evidence must all pass together. Preserve exact integer inputs/outputs, fee denomination, rent, minimum output, quote expiry and simulated reservation limits; require instruction-policy and complete balance-effect reconciliation in both directions.
+
+Only after those requirements and infrastructure/epoch approval pass may the existing pipeline commit a durable paper entry exactly once, monitor fresh executable sells, apply normal exit conditions and reconcile terminal costs/P&L. No synthetic balance, public-owner diagnostic, forced fill or threshold reduction grants eligibility. Current Pump and reversed PumpSwap variants remain disabled. No signer, broadcaster, spending or funded keys were added. [Gate matrix](external-gate-assessment.md).

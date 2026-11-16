@@ -1,0 +1,46 @@
+{
+  "api": {
+    "http": 200,
+    "result": {
+      "running": false,
+      "killed": true,
+      "researchStop": {
+        "status": "requested",
+        "action": "kill",
+        "scope": "Durable stop intent; sidecar completion must be confirmed from its stopped status. No restart/reset granted."
+      }
+    }
+  },
+  "secondOwnerExitCode": 1,
+  "secondOwnerStderr": "node:internal/fs/promises:639\n  return new FileHandle(await PromisePrototypeThen(\n                        ^\n\nError: EEXIST: file already exists, open '/app/control/owner.lock'\n    at async open (node:internal/fs/promises:639:25)\n    at async acquireResearchOwner (file:///app/dist/src/research/owner.js:8:18)\n    at async file:///app/dist/scripts/phase11-mainnet.js:87:22 {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/app/control/owner.lock'\n}\n\nNode.js v22.23.4\n",
+  "container": {
+    "Image": "sha256:b37f6b69b73addace3107edee7ba68115157e2e600d1754085ef96fecf2bfd00",
+    "State": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-14T22:37:30.23365313Z",
+      "FinishedAt": "2026-11-14T22:37:58.021879755Z",
+      "Health": {
+        "Status": "unhealthy",
+        "FailingStreak": 0,
+        "Log": []
+      }
+    }
+  },
+  "observedSeconds": 10.00016031,
+  "clockDiscontinuityMs": -0.16030999999929918,
+  "stopRequested": true,
+  "ledgerKilled": true,
+  "ownerReleased": true,
+  "historicalEpochsRetained": 2,
+  "paperTrades": 0,
+  "liveTrading": false,
+  "scope": "Actual separate read-only supervisor, shared owner refusal, authenticated API stop intent, controller drain/ledger stop. This time is excluded from primary monitoring."
+}

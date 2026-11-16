@@ -1,0 +1,373 @@
+{
+  "generatedAt": "2026-11-15T13:45:11.371901+00:00",
+  "fullPhaseAcceptance": false,
+  "endToEndCurrentPaperValidated": false,
+  "gates": [
+    {
+      "gate": "Zero-identity origin",
+      "status": "PASS",
+      "detail": "Byte-exact incoming envelopes and linked admission evidence; remote internal cause remains unknown."
+    },
+    {
+      "gate": "Invalid-identity admission",
+      "status": "PASS",
+      "detail": "Research rejects zero, malformed and wrong-width signatures; strict diagnostic profile rejects ambiguous/version/mapping payloads."
+    },
+    {
+      "gate": "1,800-second stable monitoring",
+      "status": "PASS",
+      "detail": "One supervisor: 1800.000344 monotonic seconds; wall discrepancy 0.656 ms."
+    },
+    {
+      "gate": "Continuous required coverage",
+      "status": "FAIL",
+      "detail": "Current gaps {'unrecoverable': 3, 'recovered': 1}; quarantines 752; invalid identities 69."
+    },
+    {
+      "gate": "Current Pump/PumpSwap variants",
+      "status": "PARTIAL",
+      "detail": "Both observed variants remain blocked. Reviewed diagnostic semantics do not complete financial compatibility."
+    },
+    {
+      "gate": "Raydium/Meteora creation detection",
+      "status": "PARTIAL",
+      "detail": "Raydium: 1 actual selected creation verified after the run, excluded from entries. Meteora legacy detection is validated offline; current delivery/new initializer coverage remains incomplete."
+    },
+    {
+      "gate": "Independent providers",
+      "status": "PARTIAL",
+      "detail": "Unavailable: public endpoints are not an authenticated independently operated pair; different account banks remain unknown."
+    },
+    {
+      "gate": "Genuine current paper entry/exit",
+      "status": "FAIL",
+      "detail": "0 entries / 0 exits. Historical unsigned public-inventory diagnostics are excluded."
+    },
+    {
+      "gate": "Tests/build/security checks",
+      "status": "PASS",
+      "detail": "323/323 TypeScript tests, five Python clock tests; clean Node22 install/build/typecheck, container and PostgreSQL checks; audit capture retained."
+    },
+    {
+      "gate": "Funded execution disabled",
+      "status": "PASS",
+      "detail": "No signing, submission, funding or spending authorized or introduced."
+    }
+  ],
+  "tests": {
+    "total": 323,
+    "passed": 323,
+    "failed": 0,
+    "pythonClockTests": 5
+  },
+  "monitoring": {
+    "state": "stopped",
+    "liveReady": false,
+    "provider": 0,
+    "providerHosts": [
+      "solana-rpc.publicnode.com",
+      "api.mainnet-beta.solana.com"
+    ],
+    "elapsedMs": 1800000.344329,
+    "wallElapsedMs": 1800001,
+    "clockDiscontinuityMs": 0.6556710000149906,
+    "connectedMs": 1789034.8000909998,
+    "acknowledgedMs": 1778861.819025,
+    "disconnectedMs": 10965.544238000177,
+    "connections": 6,
+    "incidents": 5,
+    "attemptsThisIncident": 0,
+    "cooldownsUntilMono": [
+      0,
+      0
+    ],
+    "intervals": [
+      {
+        "provider": 0,
+        "fromMs": 231.81279200000017,
+        "toMs": 271403.396991,
+        "subscribed": true,
+        "acknowledgedFromMs": 304.64425500000016,
+        "lastReceiptMs": 271402.178118
+      },
+      {
+        "provider": 0,
+        "fromMs": 275449.012549,
+        "toMs": 545472.736961,
+        "subscribed": true,
+        "acknowledgedFromMs": 275512.598725,
+        "lastReceiptMs": 528538.0522960001
+      },
+      {
+        "provider": 0,
+        "fromMs": 545949.073704,
+        "toMs": 550376.8815090001,
+        "subscribed": true,
+        "acknowledgedFromMs": 546008.058955,
+        "lastReceiptMs": 550376.243124
+      },
+      {
+        "provider": 0,
+        "fromMs": 555444.471562,
+        "toMs": 565259.2103680001,
+        "subscribed": false,
+        "lastReceiptMs": 565245.860459
+      },
+      {
+        "provider": 0,
+        "fromMs": 565947.7241580001,
+        "toMs": 1041217.376068,
+        "subscribed": true,
+        "acknowledgedFromMs": 566046.730232,
+        "lastReceiptMs": 1041179.2823000001
+      },
+      {
+        "provider": 0,
+        "fromMs": 1041673.037476,
+        "toMs": 1800000.330435,
+        "subscribed": true,
+        "acknowledgedFromMs": 1041736.870772,
+        "lastReceiptMs": 1798523.416064
+      }
+    ],
+    "events": [
+      {
+        "atMs": 231.9105239999999,
+        "provider": 0,
+        "kind": "socket-open"
+      },
+      {
+        "atMs": 304.6559010000001,
+        "provider": 0,
+        "kind": "subscriptions-ready"
+      },
+      {
+        "atMs": 271404.752277,
+        "provider": 0,
+        "kind": "backpressure-pause"
+      },
+      {
+        "atMs": 275016.416591,
+        "provider": 0,
+        "kind": "backpressure-resume"
+      },
+      {
+        "atMs": 275449.02488499996,
+        "provider": 0,
+        "kind": "socket-open"
+      },
+      {
+        "atMs": 275512.61346599995,
+        "provider": 0,
+        "kind": "subscriptions-ready"
+      },
+      {
+        "atMs": 545474.164114,
+        "provider": 0,
+        "kind": "incident",
+        "reason": "RPC heartbeat timeout"
+      },
+      {
+        "atMs": 545949.087028,
+        "provider": 0,
+        "kind": "socket-open"
+      },
+      {
+        "atMs": 546008.081841,
+        "provider": 0,
+        "kind": "subscriptions-ready"
+      },
+      {
+        "atMs": 550377.682839,
+        "provider": 0,
+        "kind": "backpressure-pause"
+      },
+      {
+        "atMs": 555047.640624,
+        "provider": 0,
+        "kind": "backpressure-resume"
+      },
+      {
+        "atMs": 555444.508854,
+        "provider": 0,
+        "kind": "socket-open"
+      },
+      {
+        "atMs": 565259.94498,
+        "provider": 0,
+        "kind": "incident",
+        "reason": "Subscription acknowledgement deadline exceeded"
+      },
+      {
+        "atMs": 565947.74086,
+        "provider": 0,
+        "kind": "socket-open"
+      },
+      {
+        "atMs": 566046.7568610001,
+        "provider": 0,
+        "kind": "subscriptions-ready"
+      },
+      {
+        "atMs": 1041216.788495,
+        "provider": 0,
+        "kind": "socket-close",
+        "code": 1006
+      },
+      {
+        "atMs": 1041217.780383,
+        "provider": 0,
+        "kind": "incident",
+        "reason": "WebSocket disconnected"
+      },
+      {
+        "atMs": 1041673.042124,
+        "provider": 0,
+        "kind": "socket-open"
+      },
+      {
+        "atMs": 1041736.875578,
+        "provider": 0,
+        "kind": "subscriptions-ready"
+      },
+      {
+        "atMs": 1800001.420886,
+        "provider": 0,
+        "kind": "run-deadline"
+      }
+    ],
+    "liveTrading": false
+  },
+  "notifications": 275760,
+  "selectedCandidates": 30,
+  "verifiedCreationsDuringRun": 22,
+  "verifiedCreationsAfterRunExcludedFromEntries": 1,
+  "candidateOutcomes": {
+    "market-rejected": 22,
+    "strict-creation-verification-rejected": 2,
+    "quarantined-processing": 6
+  },
+  "venueCounts": {
+    "pump": {
+      "notifications": 268353,
+      "creationHints": 709,
+      "selected": 29,
+      "unverifiableIdentities": 65
+    },
+    "pumpswap": {
+      "notifications": 2235,
+      "creationHints": 0,
+      "selected": 0,
+      "unverifiableIdentities": 0
+    },
+    "raydium-cpmm": {
+      "notifications": 5172,
+      "creationHints": 1,
+      "selected": 1,
+      "unverifiableIdentities": 4
+    },
+    "meteora-dlmm": {
+      "notifications": 0,
+      "creationHints": 0,
+      "selected": 0,
+      "unverifiableIdentities": 0
+    }
+  },
+  "gaps": [
+    {
+      "program": "pump",
+      "fromSlot": 469741732,
+      "toSlot": 469749958,
+      "reason": "unverifiable-zero-signature",
+      "anchor": {
+        "signature": "42TAbzKWbp5bcTvRNgHqnFWFi9XB6HzxEheoa43x5wnfi8kThpFqxA3zhVSomavcDDdA58eUZszdnqpYRgQkkm6o",
+        "slot": 469741764
+      },
+      "attempts": 3,
+      "status": "unrecoverable",
+      "knownRefused": 87
+    },
+    {
+      "program": "raydium-cpmm",
+      "fromSlot": 469748730,
+      "toSlot": 469748771,
+      "reason": "provider-window-covered",
+      "anchor": {
+        "signature": "4stdBMXM176M7vANdYkxSbQpEYGP6e42KkDfEJY8SgxXzcQuz6cptqmSMX5FSy5GGAoTsoDXbYtAR5dRKd7p1Hcb",
+        "slot": 469748761
+      },
+      "attempts": 1,
+      "status": "recovered",
+      "knownRefused": 1
+    },
+    {
+      "program": "pumpswap",
+      "fromSlot": 469742908,
+      "toSlot": 469746544,
+      "reason": "supervised-websocket-disconnect",
+      "attempts": 3,
+      "status": "unrecoverable",
+      "knownRefused": 1
+    },
+    {
+      "program": "meteora-dlmm",
+      "fromSlot": 469742908,
+      "toSlot": 469746544,
+      "reason": "supervised-websocket-disconnect",
+      "attempts": 3,
+      "status": "unrecoverable",
+      "knownRefused": 0
+    }
+  ],
+  "quarantines": 752,
+  "refusalCounts": {
+    "unverifiable-zero-signature": 69,
+    "admission-capacity": 2,
+    "fork-or-provider-conflict": 21
+  },
+  "wireZeroProofs": 69,
+  "identityCapture": {
+    "enabled": true,
+    "records": 2152,
+    "bytes": 11408097,
+    "dropped": 0,
+    "storage": {
+      "removedCoverage": {
+        "fromSlot": null,
+        "toSlot": null,
+        "unknown": false
+      },
+      "bytes": 11408097,
+      "archives": 0,
+      "archiveBytes": 0,
+      "deletedFiles": 0,
+      "deletedBytes": 0,
+      "diskAvailableBytes": 57196609536,
+      "maxBytes": 16777216,
+      "maxArchives": 2
+    },
+    "scope": "Bounded first/every-1000th/invalid wire population and linked admission results; public incoming envelopes only. Sanitized captures expose byteExact and original SHA; no raw endpoint credentials."
+  },
+  "independentProviderAgreement": false,
+  "independentEpochApproval": false,
+  "paperEntries": 0,
+  "paperExits": 0,
+  "liveTrading": false,
+  "signingBroadcastSpending": false,
+  "audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "priorPhase11And12ArtifactFilesUnchanged": 1394,
+  "originalTestFilesUnchanged": 63,
+  "reviewedCriticalFilesUnchanged": 41,
+  "compiledRuntimeAndCleanBuildModulesMatch": {
+    "mainnet-validated": 71,
+    "final-release-probe": 71
+  },
+  "reportLinksChecked": 134
+}

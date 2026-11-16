@@ -1,0 +1,295 @@
+{
+  "generatedAt": "2026-11-06T15:07:37.190Z",
+  "requestedSeconds": 30,
+  "targetEventsPerSecond": 200,
+  "totalEventCap": 10000,
+  "offered": 6020,
+  "completed": 6020,
+  "refused": 0,
+  "duplicateCallbacks": 0,
+  "offerWindowMs": 30015.55234,
+  "elapsedMs": 30015.919080000003,
+  "completedPerSecond": 200.56024218199616,
+  "peakRssBytes": 270110720,
+  "peakHeapBytes": 48787416,
+  "cpuMicroseconds": {
+    "user": 3808517,
+    "system": 410972
+  },
+  "latencies": {
+    "receipt_to_completion_ms": {
+      "count": 6020,
+      "samples": 6020,
+      "p50": 12.177956999999878,
+      "p95": 17.495128999999906,
+      "p99": 26.395700999999463,
+      "max": 48.69290000000001
+    }
+  },
+  "eventLoopDelayMs": {
+    "p95": 10.625023,
+    "p99": 11.214847,
+    "max": 17.416191
+  },
+  "journal": {
+    "pending": 0,
+    "pendingPeak": 20,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 0,
+    "quarantined": 0,
+    "completedRetained": 6020,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 0,
+    "walBytes": 3343790,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {
+      "pumpswap": {
+        "signature": "soak-6019",
+        "slot": 106019
+      }
+    },
+    "dedupeFloors": {},
+    "gaps": [],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 72661700608,
+    "fsyncBatches": 904,
+    "writerFailure": null
+  },
+  "telemetry": {
+    "uptimeMs": 31513.030637,
+    "counters": {
+      "ingest.resumed_from_wal": 0,
+      "ingest.offered": 6020,
+      "journal.fsync_batches": 904,
+      "journal.ownership_acks": 6020,
+      "ingest.decode.offered": 6020,
+      "ingest.decode.admitted": 6020,
+      "ingest.decode.completed": 6020,
+      "ingest.observation_only": 6020,
+      "ingest.enrichment.offered": 6020,
+      "ingest.enrichment.admitted": 6020,
+      "ingest.enrichment.completed": 6020,
+      "ingest.strategy.offered": 6020,
+      "ingest.strategy.admitted": 6020,
+      "ingest.strategy.completed": 6020,
+      "ingest.persistence.offered": 6020,
+      "ingest.persistence.admitted": 6020,
+      "journal.completion_acks": 6020,
+      "ingest.persistence.completed": 6020,
+      "ingest.completed": 6020
+    },
+    "gauges": {
+      "journal.unacked": {
+        "current": 0,
+        "peak": 20
+      },
+      "journal.unacked_bytes": {
+        "current": 0,
+        "peak": 5480
+      },
+      "ingest.in_flight": {
+        "current": 0,
+        "peak": 20
+      },
+      "ingest.decode.pending": {
+        "current": 0,
+        "peak": 20
+      },
+      "ingest.decode.queue_depth": {
+        "current": 0,
+        "peak": 20
+      },
+      "ingest.decode.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "ingest.enrichment.pending": {
+        "current": 0,
+        "peak": 11
+      },
+      "ingest.enrichment.queue_depth": {
+        "current": 0,
+        "peak": 11
+      },
+      "ingest.enrichment.in_flight": {
+        "current": 0,
+        "peak": 4
+      },
+      "ingest.strategy.pending": {
+        "current": 0,
+        "peak": 17
+      },
+      "ingest.strategy.queue_depth": {
+        "current": 0,
+        "peak": 17
+      },
+      "ingest.strategy.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "ingest.persistence.pending": {
+        "current": 0,
+        "peak": 20
+      },
+      "ingest.persistence.queue_depth": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.persistence.in_flight": {
+        "current": 0,
+        "peak": 16
+      }
+    },
+    "histograms": {
+      "journal.worker_append_ms": {
+        "count": 904,
+        "samples": 904,
+        "p50": 0.5939440000001923,
+        "p95": 1.4518800000005285,
+        "p99": 2.1363579999997455,
+        "max": 11.208674999999857
+      },
+      "journal.worker_fsync_ms": {
+        "count": 904,
+        "samples": 904,
+        "p50": 1.8325389999990875,
+        "p95": 3.1465769999995246,
+        "p99": 3.6043749999989814,
+        "max": 6.470793000000413
+      },
+      "journal.batch_records": {
+        "count": 904,
+        "samples": 904,
+        "p50": 16,
+        "p95": 20,
+        "p99": 20,
+        "max": 20
+      },
+      "journal.ownership_ack_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 5.835397999999259,
+        "p95": 7.6544470000008005,
+        "p99": 9.796661000000313,
+        "max": 26.50745199999983
+      },
+      "ingest.receipt_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 5.926504999999452,
+        "p95": 7.755120000001625,
+        "p99": 10.024454999998852,
+        "max": 36.13779400000021
+      },
+      "ingest.decode.queue_wait_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.6796450000001641,
+        "p95": 1.4841300000002775,
+        "p99": 3.2677530000000843,
+        "max": 9.052276000000347
+      },
+      "ingest.decode.processing_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.038833999999042135,
+        "p95": 0.10322900000028312,
+        "p99": 0.15438300000005256,
+        "max": 2.548063999999613
+      },
+      "ingest.decode.end_to_end_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.8922190000012051,
+        "p95": 1.8057459999999992,
+        "p99": 3.8165170000002036,
+        "max": 9.459896999999728
+      },
+      "ingest.enrichment.queue_wait_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.014331000002130168,
+        "p95": 0.048466000000189524,
+        "p99": 0.2085350000006656,
+        "max": 2.0242660000003525
+      },
+      "ingest.enrichment.processing_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.03303500000038184,
+        "p95": 0.09415200000148616,
+        "p99": 0.14742000000114786,
+        "max": 2.534867000000304
+      },
+      "ingest.enrichment.end_to_end_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.9353609999998298,
+        "p95": 1.888359999999011,
+        "p99": 3.9797969999999623,
+        "max": 10.976167999999689
+      },
+      "ingest.strategy.queue_wait_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.02230500000223401,
+        "p95": 0.5631560000001627,
+        "p99": 0.9156789999997272,
+        "max": 6.117083999999522
+      },
+      "ingest.strategy.processing_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.02824299999701907,
+        "p95": 0.08912700000018958,
+        "p99": 0.14300399999956426,
+        "max": 2.521620000000439
+      },
+      "ingest.strategy.end_to_end_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 1.1295259999997143,
+        "p95": 2.240686999997706,
+        "p99": 5.159407999999985,
+        "max": 11.384467999999742
+      },
+      "ingest.persistence.queue_wait_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 0.02809999999954016,
+        "p95": 4.365343000001303,
+        "p99": 5.445467000001372,
+        "max": 7.800142000000051
+      },
+      "ingest.end_to_end_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 5.738562999998976,
+        "p95": 11.228720999999496,
+        "p99": 14.573707000001377,
+        "max": 21.464199000000008
+      },
+      "ingest.persistence.processing_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 4.63637000000017,
+        "p95": 6.395297000002756,
+        "p99": 8.90879600000153,
+        "max": 15.288829000000987
+      },
+      "ingest.persistence.end_to_end_ms": {
+        "count": 6020,
+        "samples": 6020,
+        "p50": 5.740879999999379,
+        "p95": 11.241011999999955,
+        "p99": 14.576716000001397,
+        "max": 21.47614799999974
+      }
+    }
+  },
+  "scope": "Single bounded-duration durable worker-journal ingestion soak; empty observation-only logs, no paper quotes/trades, RPC, raw writes or Store snapshots. Paced cohorts of 20, fixed total event cap, no catch-up timer queue. All offers must complete once. After-only health observation, not a comparative performance improvement or production endurance proof."
+}

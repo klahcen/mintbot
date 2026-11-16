@@ -1,0 +1,95 @@
+TAP version 13
+# Subtest: verified programs are valid and missing protocol decoder fails closed
+ok 1 - verified programs are valid and missing protocol decoder fails closed
+  ---
+  duration_ms: 4.033443
+  ...
+# Subtest: pinned Pump CreateEvent decodes bounded strings, verifies PDA and rejects failed or malformed data
+ok 2 - pinned Pump CreateEvent decodes bounded strings, verifies PDA and rejects failed or malformed data
+  ---
+  duration_ms: 10.751642
+  ...
+# Subtest: spoofed event from nested malicious program is ignored despite a genuine Pump parent
+ok 3 - spoofed event from nested malicious program is ignored despite a genuine Pump parent
+  ---
+  duration_ms: 3.506057
+  ...
+# Subtest: historical finalized mainnet fixture replays observed compute and CPI inventory
+ok 4 - historical finalized mainnet fixture replays observed compute and CPI inventory
+  ---
+  duration_ms: 14.529279
+  ...
+# Subtest: official compute budget binary encoding including u64 precision
+ok 5 - official compute budget binary encoding including u64 precision
+  ---
+  duration_ms: 2.465266
+  ...
+# Subtest: WebSocket subscribes per program, deduplicates, tracks monotonic slot and stops
+ok 6 - WebSocket subscribes per program, deduplicates, tracks monotonic slot and stops
+  ---
+  duration_ms: 3.073436
+  ...
+# Subtest: WebSocket reconnect budget terminates after repeated disconnection
+ok 7 - WebSocket reconnect budget terminates after repeated disconnection
+  ---
+  duration_ms: 12.18792
+  ...
+# Subtest: transaction inspection inventories top-level, inner and compute instructions
+ok 8 - transaction inspection inventories top-level, inner and compute instructions
+  ---
+  duration_ms: 1.370044
+  ...
+# Subtest: mint scanner decodes official token layout and keeps unknown evidence explicit
+ok 9 - mint scanner decodes official token layout and keeps unknown evidence explicit
+  ---
+  duration_ms: 3.598767
+  ...
+# Subtest: 1000-event duplicate burst, provider overlap and out-of-order slots process once with bounded concurrent stages
+ok 10 - 1000-event duplicate burst, provider overlap and out-of-order slots process once with bounded concurrent stages
+  ---
+  duration_ms: 557.169263
+  ...
+# Subtest: saturation persists deferred work, exposes rejected unpersistable offers and recovers the pending WAL after restart
+ok 11 - saturation persists deferred work, exposes rejected unpersistable offers and recovers the pending WAL after restart
+  ---
+  duration_ms: 31.446939
+  ...
+# Subtest: dedupe eviction rejects too-old unknown work explicitly rather than double processing
+ok 12 - dedupe eviction rejects too-old unknown work explicitly rather than double processing
+  ---
+  duration_ms: 8.418918
+  ...
+# Subtest: malformed receipt does not poison healthy ingestion and permanent decode failures are quarantined
+ok 13 - malformed receipt does not poison healthy ingestion and permanent decode failures are quarantined
+  ---
+  duration_ms: 14.583323
+  ...
+# Subtest: historical pagination recovers disconnected slots through verified decoder and dedupes live/history overlap
+ok 14 - historical pagination recovers disconnected slots through verified decoder and dedupes live/history overlap
+  ---
+  duration_ms: 22.909744
+  ...
+# Subtest: missing transactions and pagination/retention caps never report full recovery
+ok 15 - missing transactions and pagination/retention caps never report full recovery
+  ---
+  duration_ms: 36.378491
+  ...
+# Subtest: 429 retry-after is honored within a bounded retry budget
+ok 16 - 429 retry-after is honored within a bounded retry budget
+  ---
+  duration_ms: 11.616021
+  ...
+# Subtest: bounded stage worker budget and failure isolation remain observable
+ok 17 - bounded stage worker budget and failure isolation remain observable
+  ---
+  duration_ms: 1.360496
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2593.073961

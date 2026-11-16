@@ -1,0 +1,42 @@
+services:
+  app:
+    build: .
+    init: true
+    restart: unless-stopped
+    ports: ["127.0.0.1:3001:3001"]
+    environment:
+      SOLANA_SECONDARY_RPC_URL: ${SOLANA_SECONDARY_RPC_URL}
+      SOLANA_SECONDARY_WS_URL: ${SOLANA_SECONDARY_WS_URL}
+      API_TOKEN: ${API_TOKEN:?Set a random API_TOKEN of at least 32 characters}
+      MODE: paper
+      DATABASE_URL: postgres://mintbot:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/mintbot
+    volumes: ["paper-state:/app/data"]
+    depends_on:
+      postgres: { condition: service_healthy }
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: mintbot
+      POSTGRES_DB: mintbot
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mintbot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  redis:
+    image: redis:7-alpine
+    profiles: ["future-queue"]
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: ["redis-data:/data"]
+    # Reserved for a future queue; current single-process runtime does not use Redis.
+volumes:
+  paper-state:
+  pg-data:
+  redis-data:

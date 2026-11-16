@@ -1,0 +1,286 @@
+{
+  "checkedAt": "2026-11-15T18:17:49.471Z",
+  "mode": "paper",
+  "realMarketPaper": false,
+  "runtime": {
+    "uid": 1000,
+    "gid": 1000,
+    "fileUid": 1000,
+    "fileGid": 1000,
+    "fileMode": "600",
+    "privateFileReadable": true
+  },
+  "providers": [
+    {
+      "id": "primary",
+      "operatorMetadataPresent": false,
+      "health": {
+        "ok": true
+      },
+      "identity": {
+        "genesisMatches": true,
+        "finalizedSlot": 469827073
+      },
+      "history": {
+        "firstAvailableBlock": 0,
+        "coverageApproved": false
+      },
+      "http": [
+        {
+          "method": "getHealth",
+          "at": 1794766662686,
+          "elapsedMs": 439.5473239999999,
+          "ok": true
+        },
+        {
+          "method": "getFirstAvailableBlock",
+          "at": 1794766663785,
+          "elapsedMs": 160.68806600000016,
+          "ok": true
+        },
+        {
+          "method": "getGenesisHash",
+          "at": 1794766664886,
+          "elapsedMs": 94.10088600000017,
+          "ok": true
+        },
+        {
+          "method": "getSlot",
+          "at": 1794766665986,
+          "elapsedMs": 89.55944,
+          "ok": true
+        },
+        {
+          "method": "getGenesisHash",
+          "at": 1794766667086,
+          "elapsedMs": 85.86252999999942,
+          "ok": true
+        },
+        {
+          "method": "getSlot",
+          "at": 1794766668187,
+          "elapsedMs": 99.55718799999977,
+          "ok": true
+        },
+        {
+          "method": "getMultipleAccounts",
+          "at": 1794766669287,
+          "elapsedMs": 96.20658899999944,
+          "ok": true
+        }
+      ],
+      "websocket": {
+        "closeObserved": true,
+        "closeCode": 1000,
+        "forcedTerminate": false,
+        "status": "unknown",
+        "opened": true,
+        "pongs": 1,
+        "failures": 0,
+        "invalidEnvelopes": 0,
+        "venues": [
+          {
+            "venue": "pump",
+            "requestId": 1,
+            "subscriptionId": 266831600,
+            "ack": true,
+            "notifications": 99,
+            "validIdentities": 99,
+            "invalidIdentities": 0,
+            "firstReceiptAt": 1794766663544,
+            "lastReceiptAt": 1794766664967
+          },
+          {
+            "venue": "pumpswap",
+            "requestId": 2,
+            "subscriptionId": 266855666,
+            "ack": true,
+            "notifications": 0,
+            "validIdentities": 0,
+            "invalidIdentities": 0
+          },
+          {
+            "venue": "raydium-cpmm",
+            "requestId": 3,
+            "subscriptionId": 266537071,
+            "ack": true,
+            "notifications": 1,
+            "validIdentities": 1,
+            "invalidIdentities": 0,
+            "firstReceiptAt": 1794766663385,
+            "lastReceiptAt": 1794766663385
+          },
+          {
+            "venue": "meteora-dlmm",
+            "requestId": 4,
+            "subscriptionId": 266855667,
+            "ack": true,
+            "notifications": 0,
+            "validIdentities": 0,
+            "invalidIdentities": 0
+          }
+        ],
+        "scope": "Bounded finalized logs subscriptions; acknowledgements and valid-identity delivery only. Quiet venues remain unknown; no completeness, authentication or operator independence inferred."
+      },
+      "rateLimits": 0,
+      "failures": 0
+    },
+    {
+      "id": "secondary",
+      "operatorMetadataPresent": true,
+      "health": {
+        "ok": true
+      },
+      "identity": {
+        "genesisMatches": true,
+        "finalizedSlot": 469827073
+      },
+      "history": {
+        "unavailable": true,
+        "coverageApproved": false
+      },
+      "http": [
+        {
+          "method": "getHealth",
+          "at": 1794766662799,
+          "elapsedMs": 263.5428810000003,
+          "ok": true
+        },
+        {
+          "method": "getFirstAvailableBlock",
+          "at": 1794766663899,
+          "elapsedMs": 65.11898399999973,
+          "ok": false,
+          "kind": "http",
+          "httpStatus": 403
+        },
+        {
+          "method": "getGenesisHash",
+          "at": 1794766664999,
+          "elapsedMs": 67.10625099999925,
+          "ok": true
+        },
+        {
+          "method": "getSlot",
+          "at": 1794766666099,
+          "elapsedMs": 59.93617300000005,
+          "ok": true
+        },
+        {
+          "method": "getGenesisHash",
+          "at": 1794766667199,
+          "elapsedMs": 61.379493999999795,
+          "ok": true
+        },
+        {
+          "method": "getSlot",
+          "at": 1794766668298,
+          "elapsedMs": 63.95503600000029,
+          "ok": true
+        },
+        {
+          "method": "getMultipleAccounts",
+          "at": 1794766669398,
+          "elapsedMs": 72.46076200000061,
+          "ok": true
+        }
+      ],
+      "websocket": {
+        "closeObserved": true,
+        "closeCode": 1000,
+        "forcedTerminate": false,
+        "status": "unknown",
+        "opened": true,
+        "pongs": 1,
+        "failures": 0,
+        "invalidEnvelopes": 0,
+        "venues": [
+          {
+            "venue": "pump",
+            "requestId": 1,
+            "subscriptionId": 147530,
+            "ack": true,
+            "notifications": 8,
+            "validIdentities": 8,
+            "invalidIdentities": 0,
+            "firstReceiptAt": 1794766663400,
+            "lastReceiptAt": 1794766663405
+          },
+          {
+            "venue": "pumpswap",
+            "requestId": 2,
+            "subscriptionId": 147531,
+            "ack": true,
+            "notifications": 78,
+            "validIdentities": 78,
+            "invalidIdentities": 0,
+            "firstReceiptAt": 1794766663180,
+            "lastReceiptAt": 1794766663395
+          },
+          {
+            "venue": "raydium-cpmm",
+            "requestId": 3,
+            "subscriptionId": 147533,
+            "ack": true,
+            "notifications": 0,
+            "validIdentities": 0,
+            "invalidIdentities": 0
+          },
+          {
+            "venue": "meteora-dlmm",
+            "requestId": 4,
+            "subscriptionId": 147532,
+            "ack": true,
+            "notifications": 14,
+            "validIdentities": 14,
+            "invalidIdentities": 0,
+            "firstReceiptAt": 1794766663395,
+            "lastReceiptAt": 1794766663400
+          }
+        ],
+        "scope": "Bounded finalized logs subscriptions; acknowledgements and valid-identity delivery only. Quiet venues remain unknown; no completeness, authentication or operator independence inferred."
+      },
+      "rateLimits": 0,
+      "failures": 1
+    }
+  ],
+  "consistency": {
+    "status": "unknown",
+    "eligible": false,
+    "reasons": [
+      "Independent provider operation lacks distinct source attribution"
+    ],
+    "independence": "unknown",
+    "independentlyVerified": false,
+    "observations": [
+      {
+        "provider": "primary",
+        "genesisMatches": true,
+        "finalizedSlot": 469827084,
+        "state": {
+          "slot": 469827088,
+          "digest": "590e3aeeb3984e982c371548947717f94d4ba5c1c4199bfa82ba46f173af597b",
+          "missingAccounts": 0
+        }
+      },
+      {
+        "provider": "secondary",
+        "genesisMatches": true,
+        "finalizedSlot": 469827084,
+        "state": {
+          "slot": 469827088,
+          "digest": "590e3aeeb3984e982c371548947717f94d4ba5c1c4199bfa82ba46f173af597b",
+          "missingAccounts": 0
+        }
+      }
+    ],
+    "quarantineCount": 0,
+    "gaps": 0
+  },
+  "historicalCoverage": "Not approved; firstAvailableBlock alone cannot establish original gap recovery or transaction retention",
+  "operatorIndependence": "Not independently verified; configured metadata is not approval",
+  "executionEligible": false,
+  "liveTrading": false,
+  "entries": 0,
+  "exits": 0
+}

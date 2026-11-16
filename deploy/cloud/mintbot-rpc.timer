@@ -1,0 +1,7 @@
+[Unit]
+Description=Observe RPC availability every fifteen minutes (never coverage approval)
+[Timer]
+OnBootSec=180
+OnUnitActiveSec=15min
+[Install]
+WantedBy=timers.target

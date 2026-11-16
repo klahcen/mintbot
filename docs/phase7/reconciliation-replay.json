@@ -1,0 +1,368 @@
+{
+  "kind": "offline-injected-execution-replay",
+  "actualBroadcast": false,
+  "independentRealProviderAgreement": false,
+  "source": {
+    "path": "docs/phase3/fixtures/pump-creation.json",
+    "sha256": "e81ffbcdbe4307499825078e9fa3f8978b79d9ad311b88e282cafc8d6d7ec9bd",
+    "signature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+    "slot": 465020951,
+    "realRecordedError": null,
+    "packetDigestEncoding": "SHA256 of recorded parsed transaction JSON, not a serialized wire transaction"
+  },
+  "injectedBlockHeights": true,
+  "rows": {
+    "attempt": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        }
+      ],
+      "state": "SIMULATED_SUBMISSION_ATTEMPTED",
+      "attempts": 1,
+      "lastObservedSlot": null,
+      "agreement": "none",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "timeout": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "rpc-timeout"
+        }
+      ],
+      "state": "UNKNOWN",
+      "attempts": 1,
+      "lastObservedSlot": null,
+      "agreement": "none",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "unknown": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "rpc-timeout"
+        },
+        {
+          "kind": "status-round",
+          "evidence": [
+            {
+              "provider": "injected-provider-a",
+              "status": "missing",
+              "commitment": "processed",
+              "slot": 465020951
+            },
+            {
+              "provider": "injected-provider-b",
+              "status": "missing",
+              "commitment": "processed",
+              "slot": 465020951
+            }
+          ]
+        }
+      ],
+      "state": "UNKNOWN",
+      "attempts": 1,
+      "lastObservedSlot": null,
+      "agreement": "multiple-providers",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "failed": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "status-round",
+          "evidence": [
+            {
+              "provider": "injected-provider-a",
+              "status": "failure",
+              "commitment": "finalized",
+              "slot": 465020951,
+              "error": "Injected InstructionError"
+            },
+            {
+              "provider": "injected-provider-b",
+              "status": "failure",
+              "commitment": "finalized",
+              "slot": 465020951,
+              "error": "Injected InstructionError"
+            }
+          ]
+        }
+      ],
+      "state": "EXECUTION_FAILED",
+      "attempts": 1,
+      "lastObservedSlot": 465020951,
+      "agreement": "multiple-providers",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "confirmed": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "status-round",
+          "evidence": [
+            {
+              "provider": "injected-provider-a",
+              "status": "success",
+              "commitment": "confirmed",
+              "slot": 465020951
+            },
+            {
+              "provider": "injected-provider-b",
+              "status": "success",
+              "commitment": "confirmed",
+              "slot": 465020951
+            }
+          ]
+        }
+      ],
+      "state": "CONFIRMED",
+      "attempts": 1,
+      "lastObservedSlot": 465020951,
+      "agreement": "multiple-providers",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "finalized": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "status-round",
+          "evidence": [
+            {
+              "provider": "injected-provider-a",
+              "status": "success",
+              "commitment": "confirmed",
+              "slot": 465020951
+            },
+            {
+              "provider": "injected-provider-b",
+              "status": "success",
+              "commitment": "confirmed",
+              "slot": 465020951
+            }
+          ]
+        },
+        {
+          "kind": "status-round",
+          "evidence": [
+            {
+              "provider": "injected-provider-a",
+              "status": "success",
+              "commitment": "finalized",
+              "slot": 465020951
+            },
+            {
+              "provider": "injected-provider-b",
+              "status": "success",
+              "commitment": "finalized",
+              "slot": 465020951
+            }
+          ]
+        }
+      ],
+      "state": "FINALIZED",
+      "attempts": 1,
+      "lastObservedSlot": 465020951,
+      "agreement": "multiple-providers",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "rolledBack": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "status-round",
+          "evidence": [
+            {
+              "provider": "injected-provider-a",
+              "status": "success",
+              "commitment": "confirmed",
+              "slot": 465020951
+            },
+            {
+              "provider": "injected-provider-b",
+              "status": "success",
+              "commitment": "confirmed",
+              "slot": 465020951
+            }
+          ]
+        },
+        {
+          "kind": "injected-rollback",
+          "previousSlot": 465020951,
+          "rootedSlot": 465020952
+        }
+      ],
+      "state": "ROLLED_BACK",
+      "attempts": 1,
+      "lastObservedSlot": 465020951,
+      "agreement": "multiple-providers",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "expired": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "rpc-timeout"
+        },
+        {
+          "kind": "block-height",
+          "height": 101
+        }
+      ],
+      "state": "EXPIRED_UNRESOLVED",
+      "attempts": 1,
+      "lastObservedSlot": null,
+      "agreement": "none",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "providerConflict": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "status-round",
+          "evidence": [
+            {
+              "provider": "injected-provider-a",
+              "status": "success",
+              "commitment": "confirmed",
+              "slot": 465020951
+            },
+            {
+              "provider": "injected-provider-b",
+              "status": "missing",
+              "commitment": "confirmed",
+              "slot": 465020951
+            }
+          ]
+        }
+      ],
+      "state": "PROVIDER_CONFLICT",
+      "attempts": 1,
+      "lastObservedSlot": null,
+      "agreement": "multiple-providers",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    },
+    "restartDuringUncertainty": {
+      "version": 1,
+      "identity": {
+        "intentId": "phase7-offline-recorded-public-transaction",
+        "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52",
+        "recordedSignature": "3TB3UkCpwxETmbgG5e36sWqURmgPYa1DGkbG5wGKywPVwJwZbMSKsdLZ1Fs9sGbwqA2AbvZMK2kfmKX3hUGcpEM5",
+        "lastValidBlockHeight": 100
+      },
+      "events": [
+        {
+          "kind": "simulated-submission-attempt",
+          "packetDigest": "3c89512554da6ccd41809d18e70b11b714b00c4702e1d43c2951dfe48e2a4e52"
+        },
+        {
+          "kind": "rpc-timeout"
+        }
+      ],
+      "state": "UNKNOWN",
+      "attempts": 1,
+      "lastObservedSlot": null,
+      "agreement": "none",
+      "actualBroadcast": false,
+      "automaticSecondSpendAllowed": false
+    }
+  }
+}

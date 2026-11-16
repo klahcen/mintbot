@@ -1,0 +1,35 @@
+{
+  "scope": "disposable local containers; internal test CA; no public ACME or VPS deployment",
+  "project": "mintbot-cloud-test-1674121c94",
+  "checks": {
+    "composeSyntax": true,
+    "isolationSecretsAndRestartPolicy": true,
+    "researchStoppedByDefault": true,
+    "authenticatedDatabaseReadiness": true,
+    "authenticationAndPaperFence": true,
+    "requestErrorAndLogRedaction": true,
+    "databaseRuntimeCannotCreateTables": true,
+    "databaseAndPaperVolumeRecreation": true,
+    "failure": "Failure: Decryption or isolated restore verification failed",
+    "serviceFailureState": [
+      {
+        "Service": "app",
+        "State": "running",
+        "Health": "unhealthy",
+        "ExitCode": 0
+      },
+      {
+        "Service": "caddy",
+        "State": "running",
+        "Health": "",
+        "ExitCode": 0
+      },
+      {
+        "Service": "postgres",
+        "State": "running",
+        "Health": "healthy",
+        "ExitCode": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "artifact": "performance-delivery.json",
+  "correction": "This intervening run loaded the earlier copied harness. Its hardcoded A/A comparison label and harnessSha256 reference to scripts/phase8-performance-benchmark.ts are stale metadata. The source hash maps correctly show the EventJournal gap-state difference. Raw timing values are retained. Use performance-observer-only.json for the final accurately self-hashed harness and explicit concurrent-load scope. Earlier runs are retained, not presented as quiet-host comparisons."
+}

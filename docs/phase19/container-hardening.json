@@ -1,0 +1,60 @@
+{
+  "scope": "actual final disposable integration containers; test proxy ports are loopback only",
+  "containers": [
+    {
+      "service": "app",
+      "image": "sha256:87b4f7608ac384172320f1522c2f7b84766f731c0f7948f2f24d1bece7f19780",
+      "user": "1000:1000",
+      "readOnlyRoot": true,
+      "capDrop": [
+        "ALL"
+      ],
+      "securityOpt": [
+        "no-new-privileges:true"
+      ],
+      "restartPolicy": "unless-stopped",
+      "ports": {}
+    },
+    {
+      "service": "postgres",
+      "image": "sha256:ab20e934b27ba3ff927c1b4c9ff8cf6c32f315f743efe68dd3441182a87fb085",
+      "user": "postgres",
+      "readOnlyRoot": true,
+      "capDrop": [
+        "ALL"
+      ],
+      "securityOpt": [
+        "no-new-privileges:true"
+      ],
+      "restartPolicy": "unless-stopped",
+      "ports": {}
+    },
+    {
+      "service": "caddy",
+      "image": "sha256:5813f7eb9b94fac4970f9f576695fe1ed1d53d41586fd3eaa350caf7c4627d9c",
+      "user": "1000:1000",
+      "readOnlyRoot": true,
+      "capDrop": [
+        "ALL"
+      ],
+      "securityOpt": [
+        "no-new-privileges:true"
+      ],
+      "restartPolicy": "unless-stopped",
+      "ports": {
+        "8080/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": ""
+          }
+        ],
+        "8443/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": ""
+          }
+        ]
+      }
+    }
+  ]
+}

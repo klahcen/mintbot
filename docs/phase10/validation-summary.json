@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-11-14T19:11:42.376263+00:00",
+  "engineeringDelivered": true,
+  "fullPhaseAcceptance": false,
+  "tests": {
+    "total": 299,
+    "passed": 299,
+    "failed": 0,
+    "originalTestsRetained": 288,
+    "originalFilesUnchanged": 58
+  },
+  "priorPhase9ArtifactsUnchanged": 759,
+  "compiledCoreAssetsAndEntrypointsMatching": 64,
+  "dependencyVulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "releaseEvidence": {
+    "typecheck": "support-final-typecheck.log",
+    "build": "support-final-build.log",
+    "cleanNode22TwoStageBuild": "validation/docker-build-clean-node22.log",
+    "productionSmoke": "release-validation/production-container-smoke.json",
+    "liveSidecarApiSmoke": "dashboard-sidecar-smoke.json",
+    "postgresFaultTests": "complete-validation/after-tests.log",
+    "sdkWireVectors": "builder-reference.json",
+    "sdkQuoteVectors": "quote-reference.json"
+  },
+  "monitoring": {
+    "elapsedMs": 7200000.336296,
+    "wallElapsedMs": 7200000,
+    "clockDiscontinuityMs": -0.3362959995865822,
+    "connectedMs": 7020967.264849999,
+    "acknowledgedMs": 7004942.127455997,
+    "disconnectedMs": 179033.0714460006,
+    "connections": 111,
+    "incidents": 110,
+    "state": "stopped"
+  },
+  "monotonicTargetMet": true,
+  "continuousProviderCoverage": false,
+  "providerIndependence": "unmet",
+  "notifications": 898515,
+  "selectedReceipts": 105,
+  "verifiedCreations": 69,
+  "paperReviews": 69,
+  "paperEntries": 0,
+  "paperExits": 0,
+  "candidateOutcomes": {
+    "market-rejected": 69,
+    "strict-creation-verification-rejected": 36
+  },
+  "quarantined": 79,
+  "activePending": 0,
+  "writerFailure": null,
+  "pipelineFailure": null,
+  "pumpCompatibility": "blocked: unreviewed deployment 469055660 and 1096-byte Global; reviewed pin unchanged",
+  "performance": "Historical 13.4% attribution unresolved; current Node20 median -15.5%, disk-backed Node22 -4.9%; RAM-backed controls excluded from persistent-storage claims",
+  "liveTrading": false,
+  "signingBroadcastAndSpending": false
+}

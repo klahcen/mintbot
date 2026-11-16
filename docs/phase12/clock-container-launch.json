@@ -1,0 +1,27 @@
+{
+  "args": [
+    "docker",
+    "run",
+    "-d",
+    "--name",
+    "mintbot-phase12-clock",
+    "--network",
+    "none",
+    "--read-only",
+    "--no-healthcheck",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "mintbot:phase11-readonly",
+    "node",
+    "-e",
+    "setInterval(()=>{},60000)"
+  ],
+  "container": "170b521adad03b3998fa7d264a101ec8db843fb83bfea21e1dfa76ee1bd29d8d",
+  "launchedAt": "2026-11-14T23:01:35.371330+00:00",
+  "scope": "Network-disabled clock observer only; no monitor/server/paper engine",
+  "diagnosticSourceSha256": "bd2f2690974af5078ec6a133069e313a98143f8bdf509b8a885b336897014fe2",
+  "sourceCopyAt": "2026-11-14T23:02:04.406720+00:00",
+  "scopeOfSourceCopy": "Copied after process launch; script has not changed since launch. No claim that its timestamp precedes launch."
+}

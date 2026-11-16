@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: weighted fairness gives live work prompt admission and eventual service to historical work
+ok 1 - weighted fairness gives live work prompt admission and eventual service to historical work
+  ---
+  duration_ms: 109.777105
+  ...
+# Subtest: missing chain head/time and recovered launches cannot silently become fresh paper entries
+ok 2 - missing chain head/time and recovered launches cannot silently become fresh paper entries
+  ---
+  duration_ms: 35.444675
+  ...
+# Subtest: fork or provider changes to an owned identity are explicit gaps and never second strategy callbacks
+ok 3 - fork or provider changes to an owned identity are explicit gaps and never second strategy callbacks
+  ---
+  duration_ms: 7.193137
+  ...
+# Subtest: group acknowledgements follow fsync, duplicates await ownership and checkpoints preserve pending work
+ok 4 - group acknowledgements follow fsync, duplicates await ownership and checkpoints preserve pending work
+  ---
+  duration_ms: 1624.117683
+  ...
+# Subtest: write ENOSPC failure never acknowledges ownership and surfaces durable failure
+ok 5 - write ENOSPC failure never acknowledges ownership and surfaces durable failure
+  ---
+  duration_ms: 1573.292177
+  ...
+# Subtest: sync ENOSPC failure never acknowledges ownership and surfaces durable failure
+ok 6 - sync ENOSPC failure never acknowledges ownership and surfaces durable failure
+  ---
+  duration_ms: 1541.859486
+  ...
+# Subtest: worker journal pipeline drains only fsynced ownership and bounded completion acknowledgements
+ok 7 - worker journal pipeline drains only fsynced ownership and bounded completion acknowledgements
+  ---
+  duration_ms: 1687.292518
+  ...
+# Subtest: complete WAL corruption fails closed; a truncated final record is discarded explicitly on restart
+ok 8 - complete WAL corruption fails closed; a truncated final record is discarded explicitly on restart
+  ---
+  duration_ms: 4585.294976
+  ...
+# Subtest: SIGKILL after worker ownership and paper commit replays once without a second purchase or fee
+ok 9 - SIGKILL after worker ownership and paper commit replays once without a second purchase or fee
+  ---
+  duration_ms: 4737.066553
+  ...
+# Subtest: checksummed records detect otherwise valid JSON corruption
+ok 10 - checksummed records detect otherwise valid JSON corruption
+  ---
+  duration_ms: 3054.043352
+  ...
+# Subtest: pump: finalized public creation fixture validates instructions/events/accounts and stable discovery identity
+ok 11 - pump: finalized public creation fixture validates instructions/events/accounts and stable discovery identity
+  ---
+  duration_ms: 95.83414
+  ...
+# Subtest: pump: failed, unsupported-version, corrupt account and malformed creation data fail closed
+ok 12 - pump: failed, unsupported-version, corrupt account and malformed creation data fail closed
+  ---
+  duration_ms: 45.241764
+  ...
+# Subtest: pumpswap: finalized public creation fixture validates instructions/events/accounts and stable discovery identity
+ok 13 - pumpswap: finalized public creation fixture validates instructions/events/accounts and stable discovery identity
+  ---
+  duration_ms: 20.070258
+  ...
+# Subtest: pumpswap: failed, unsupported-version, corrupt account and malformed creation data fail closed
+ok 14 - pumpswap: failed, unsupported-version, corrupt account and malformed creation data fail closed
+  ---
+  duration_ms: 16.899372
+  ...
+# Subtest: raydium-cpmm: finalized public creation fixture validates instructions/events/accounts and stable discovery identity
+ok 15 - raydium-cpmm: finalized public creation fixture validates instructions/events/accounts and stable discovery identity
+  ---
+  duration_ms: 13.760281
+  ...
+# Subtest: raydium-cpmm: failed, unsupported-version, corrupt account and malformed creation data fail closed
+ok 16 - raydium-cpmm: failed, unsupported-version, corrupt account and malformed creation data fail closed
+  ---
+  duration_ms: 11.429205
+  ...
+# Subtest: meteora-dlmm: finalized public creation fixture validates instructions/events/accounts and stable discovery identity
+ok 17 - meteora-dlmm: finalized public creation fixture validates instructions/events/accounts and stable discovery identity
+  ---
+  duration_ms: 11.426211
+  ...
+# Subtest: meteora-dlmm: failed, unsupported-version, corrupt account and malformed creation data fail closed
+ok 18 - meteora-dlmm: failed, unsupported-version, corrupt account and malformed creation data fail closed
+  ---
+  duration_ms: 6.375628
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 21246.259936

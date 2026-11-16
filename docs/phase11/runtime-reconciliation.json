@@ -1,0 +1,321 @@
+{
+  "generatedAt": "2026-11-14T22:36:38.404Z",
+  "wal": "docs/phase11/runtime/mainnet-validated/ingestion.wal",
+  "runEvidence": "docs/phase11/runtime/mainnet-validated/evidence.json",
+  "sourceManifest": "docs/phase11/runtime/mainnet-validated/runtime-manifest.json",
+  "walSha256": "56982d663b2a833014ea031b5d07745b4c97798f267f00dc42e62f88f463c419",
+  "frames": 10279,
+  "incompleteTailBytes": 0,
+  "status": {
+    "pending": 1,
+    "pendingPeak": 24,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 7828148,
+    "activePending": 0,
+    "oldestActiveAgeMs": 0,
+    "quarantined": 1,
+    "completedRetained": 20000,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 10957,
+    "walBytes": 0,
+    "maxBytes": 67108864,
+    "durable": false,
+    "anchors": {
+      "pump": {
+        "signature": "317wqng1STzrtLvuX6YhVv2QYBmHdQSdGhUdfzhwE2SCdaLbVa5wFP2u33Um348TZa1JruiSNoQBNo2uRNnDQfTL",
+        "slot": 469461417
+      },
+      "meteora-dlmm": {
+        "signature": "3oGkHy8tZu3LGi4VkQw8VRWUUDu4ii67s4drNhzfXHww5TrVwuqYbTTTZAQpcqib9EfQ6996JUJBLtngsmwpfNiq",
+        "slot": 469461418
+      },
+      "pumpswap": {
+        "signature": "4pw5EJa8hSU8Zcdb32fyHHwnPAZjXzXC6XM5wd1j8JWNNeuawgyKcybHYgE3k8y87CfosNN36Ru759kvJia1jPEC",
+        "slot": 469461418
+      },
+      "raydium-cpmm": {
+        "signature": "5GiUw3eQQEKjVQVbpH32yTP8jXgEwxFRrXPD4XJGAcUs7d6WdDmt2k6H6myvuxZJkm28W3zp3Fth5uPd5dYQuupZ",
+        "slot": 469461412
+      }
+    },
+    "dedupeFloors": {
+      "meteora-dlmm": 469460647,
+      "pumpswap": 469460647,
+      "pump": 469460756,
+      "raydium-cpmm": 469460647
+    },
+    "gaps": [
+      {
+        "program": "meteora-dlmm",
+        "fromSlot": 469458861,
+        "toSlot": 469461414,
+        "reason": "fork-or-provider-conflict",
+        "anchor": {
+          "signature": "1111111111111111111111111111111111111111111111111111111111111111",
+          "slot": 469458893
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 258
+      },
+      {
+        "program": "pump",
+        "fromSlot": 469458872,
+        "toSlot": 469461190,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "3E3o3DXJobyiKzUzmqGMCfU7Q5gUVbW3WMH4yaWKfL9aeDNdoJng12RLFKLQKM85wF7qxAGNeGnTmYWRSkuv6rZ7",
+          "slot": 469458904
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 2
+      },
+      {
+        "program": "pumpswap",
+        "fromSlot": 469458876,
+        "toSlot": 469461190,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "aA5XirtarFN26BgurQx4pCTWhFQWVzZ8qciX7KfviRQ8qTCz15TRHshigJ2oJaaULTrW2fRCdbuSc9jwEDW8pk2",
+          "slot": 469458908
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 0
+      },
+      {
+        "program": "raydium-cpmm",
+        "fromSlot": 469458873,
+        "toSlot": 469461190,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "4LMAHPxjNqw2LrKBXfhZFR9KmUvdSLiH8GKVFRXpYnctCTkMJUPcjGzhe7dXwxaQE1FeC9LvZEy6BkKe1aEucbPk",
+          "slot": 469458905
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 0
+      }
+    ]
+  },
+  "decoderHashes": {
+    "src/decoders.ts": {
+      "atRunCompiled": "0e113b9bcd4e7a9797dbd73895fd468902d5ac0bdc8315238cbf8167e3a98f1b",
+      "currentSource": "344d2fb030b6d0fa622ae17429372aa53d34702a00201b8dd5d9b29456e36fc6"
+    },
+    "src/borsh-reader.ts": {
+      "atRunCompiled": "17fa8c331d703eeb86e93547d424631367dfb0b4087fab4c5edc5154d66260bf",
+      "currentSource": "167d70e54c4eefdc8aee8d471a2e8ffb7241883e7402098c68b5ff1b0e30304a"
+    },
+    "src/chain.ts": {
+      "atRunCompiled": "2c5efdab767755b9d36b7e49ea6d07fe42eb24dadee18f306cc73518ffd35731",
+      "currentSource": "92947c107662427db2ce3b1f3285e216a7ebef7400ed818f991b33c7129ef5a0"
+    }
+  },
+  "quarantined": [
+    {
+      "id": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P:HK6tLWNEdDsnvouv4T6qcXjauWWFaHgD5tAVjQHy47XndNHxhM1gCF5oku6jwr72okrfwdvA2RhGDUwDncvRvQp",
+      "observation": {
+        "program": "pump",
+        "signature": "HK6tLWNEdDsnvouv4T6qcXjauWWFaHgD5tAVjQHy47XndNHxhM1gCF5oku6jwr72okrfwdvA2RhGDUwDncvRvQp",
+        "slot": 469460985,
+        "logs": [
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: GetAccountDataSize",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1495 of 1394736 compute units",
+          "Program return: TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb qgAAAAAAAAA=",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: InitializeImmutableOwner",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 734 of 1388419 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: InitializeAccount3",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3107 of 1385350 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 18040 of 1400000 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 invoke [1]",
+          "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 consumed 696 of 1381960 compute units",
+          "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 7338 of 1381264 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 179 of 1368575 compute units",
+          "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 37 of 1363486 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 229 of 1361025 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 13413 of 1373926 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 1360363 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA invoke [1]",
+          "Program log: Instruction: Buy",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ invoke [2]",
+          "Program log: Instruction: GetFeesWithQuoteMint",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ consumed 5688 of 1320451 compute units",
+          "Program return: pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ GQAAAAAAAAAFAAAAAAAAAAAAAAAAAAAA",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1310993 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1308321 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1305387 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1299386 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program data: Z/RSHyz1d3e8w/hqAAAAAG9wjAsAAAAAgC/BuwAAAADb/xwjAAAAAIAvwbsAAAAANTVxOT4CAAAe35RDQR8AAIlS7qAAAAAAGQAAAAAAAADu/mYAAAAAAAUAAAAAAAAAY5kUAAAAAAB3UVWhAAAAANrqaaEAAAAA6KMk0MFc9epmamCnr2kB/eZ8c1spZ1JtCUM0pLKBI7mbtUYDEWReFRGexGj9d0ek4RO9sNvP3TqesIDYdyjwnb8EcRFDCMdCDfDj0YFLGcxZ05K2i2FdnFVsMTnsylZTsEX8xtAISm/zyQe8skIgREs7AVjPFz6GaGuD4cIg6cP/g4OBi6j6KMPNO21ek/n6uPCXm8NyFazFskaHe6jDybnwRqOiz07iErT6kv2dAPpPsLP8/TYeQK5TkflgNepjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAb3CMCwAAAAADAAAAYnV5AAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAAsUwKAAAAAADR3pn9////////////////AIKwcBJGlB8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+          "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA invoke [2]",
+          "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA consumed 2116 of 1291150 compute units",
+          "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA success",
+          "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA consumed 73559 of 1360162 compute units",
+          "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 118 of 1286603 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [1]",
+          "Program log: Instruction: BuyExactQuoteInV2",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ invoke [2]",
+          "Program log: Instruction: GetFeesWithQuoteMint",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ consumed 3436 of 1215825 compute units",
+          "Program return: pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ AAAAAAAAAABfAAAAAAAAAB4AAAAAAAAA",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2977 of 1207226 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1201039 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1198336 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1195378 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1192689 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program data: vdt/007mYe6NL4CNsVe/cQi13hjcYe1fuB0tokXr+mGxy8/VZtjMHwAAAAAAAAAAhDM7t20ZAAABm7VGAxFkXhURnsRo/XdHpOETvbDbz906nrCA2Hco8J28w/hqAAAAAAAAAAAAAAAA73ycu9DwAgAAAAAAAAAAAO/kiW8/8gEAY4NzAA6iLLJk00r/ZKBLXvq/u3TdzQSJl7GYFUfX0RBfAAAAAAAAADtaGgAAAAAApLpbsbYudUrnlWFtuMpJl8Cgm7qW90rFyPw55d/ovJceAAAAAAAAAGRSCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAGJ1eV9leGFjdF9xdW90ZV9pbgAAAAAAAAAAAAAAAAAAAAAAiBMAAAAAAAAdLQ0AAAAAAAAAAADG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYWTx1QoAAAAAI8egSwEAAAAjDs5LAAAAAB4AAAAAAAAAZFIIAAAAAADaDT4AAAAAAAAAAAAAAAAA",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [2]",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2170 of 1185386 compute units",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 106452 of 1286485 compute units",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [1]",
+          "Program log: Instruction: SweepCreatorFee",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1152501 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program data: dCtNvRF6SCu8w/hqAAAAAI0vgI2xV79xCLXeGNxh7V+4HS2iRev6YbHLz9Vm2MwfpEwnGsbDhJTmf4exXZMaqSgUGTiKUObqqNBhi5o8R/DG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYa716pNYpNSbVr+AYtbwXxczrGygeUlElcBUDCM6wupc2g0+AAAAAAAB",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [2]",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2170 of 1148733 compute units",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 34927 of 1180033 compute units",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1145106 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 179 of 1139573 compute units",
+          "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 37 of 1134484 compute units",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+          "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+          "Log truncated"
+        ],
+        "failed": false,
+        "observedAt": 1794687970297
+      },
+      "origin": "live",
+      "attempts": 1,
+      "notBefore": 1794687970774,
+      "quarantined": true,
+      "lastFailure": {
+        "at": 1794687970749,
+        "stage": "decode",
+        "name": "Error",
+        "message": "Truncated invocation logs; cannot validate launch attribution"
+      },
+      "fingerprint": "7337e7ae6f115aa2c42f938042162c8f15d675f2ae3316b26ac212ab5e8e84cc",
+      "decode": {
+        "status": "decoder-failure-reproduced",
+        "name": "Error",
+        "message": "Truncated invocation logs; cannot validate launch attribution"
+      },
+      "classification": "decoder-content-rejected; original truncation/layout cause unproven",
+      "truncatedMarker": true,
+      "originalCallbackFailureRecorded": true,
+      "disposition": "Retain pending ownership; no entry authorization or gap recovery from this diagnosis"
+    }
+  ],
+  "admission": {
+    "total": 260,
+    "capacityRefusals": 0,
+    "stableIdentityConflicts": 260,
+    "knownDuplicatesNotCountedAsRefusals": 0,
+    "perRefusalOriginalPayloads": {
+      "removedCoverage": {
+        "fromSlot": null,
+        "toSlot": null,
+        "unknown": false
+      },
+      "bytes": 1493655,
+      "archives": 0,
+      "archiveBytes": 0,
+      "deletedFiles": 0,
+      "deletedBytes": 0,
+      "diskAvailableBytes": 64890056704,
+      "maxBytes": 4194304,
+      "maxArchives": 2
+    }
+  },
+  "reviewPlan": [
+    {
+      "id": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P:HK6tLWNEdDsnvouv4T6qcXjauWWFaHgD5tAVjQHy47XndNHxhM1gCF5oku6jwr72okrfwdvA2RhGDUwDncvRvQp",
+      "expectedFingerprint": "7337e7ae6f115aa2c42f938042162c8f15d675f2ae3316b26ac212ab5e8e84cc",
+      "review": {
+        "at": 1794695798445,
+        "reviewer": "phase10-forensic-review",
+        "decision": "retain",
+        "evidenceSha256": "56982d663b2a833014ea031b5d07745b4c97798f267f00dc42e62f88f463c419",
+        "reason": "Exact decoder replay retained; unsupported or malformed cause remains unverified. Preserve ownership and gap."
+      }
+    }
+  ],
+  "liveTrading": false,
+  "scope": "All available checksummed WAL frames replayed into memory. Original WAL is never opened for writing. Decoder reproduction is not proof of the historical callback stage or malicious tokens. Old missing error metadata remains unknown."
+}

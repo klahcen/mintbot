@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "endedAt": 1794683032541,
+  "journal": {
+    "pending": 79,
+    "pendingPeak": 687,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 7194440,
+    "activePending": 0,
+    "oldestActiveAgeMs": 0,
+    "quarantined": 79,
+    "completedRetained": 20000,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 867982,
+    "walBytes": 23072279,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {
+      "pump": {
+        "signature": "3C2D32Awx7Weesjoe19JStPRJytqP2RwL9ezJvZFA3AScw6rSKt5MTmLCAWLka1QmnPxRy4zSSnPnf2PNv2uXamN",
+        "slot": 469438053
+      }
+    },
+    "dedupeFloors": {
+      "pump": 469437180
+    },
+    "gaps": [
+      {
+        "program": "pump",
+        "fromSlot": 469404738,
+        "toSlot": 469437712,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "3QoTYothkAWABa1oSmFa83cXdoQkCNbPVjAiCHiW1vPHM5LgknktZhGschtMUqQuJKENKVbZ4Uc6Fi1HBAdyB1Ap",
+          "slot": 469404771
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 357
+      }
+    ],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 67682865152,
+    "fsyncBatches": 389577,
+    "writerFailure": null
+  },
+  "sourceArtifact": {
+    "path": "docs/phase10/runtime/mainnet-validated/evidence.json",
+    "sha256": "96a68a63fa6bd53b3cc8a6f27d765a58bc213618e8592725c936755ddeab7998",
+    "bytes": 90981342
+  },
+  "scope": "Compact exact coverage index extracted from retained final Phase10 evidence, not a new observation or recovery claim. Original entire file digest retained."
+}

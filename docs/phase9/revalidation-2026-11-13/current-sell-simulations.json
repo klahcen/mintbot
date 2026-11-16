@@ -1,0 +1,231 @@
+{
+  "generatedAt": "2026-11-13T17:58:53.704Z",
+  "provider": "api.mainnet-beta.solana.com",
+  "rows": [
+    {
+      "venue": "pump",
+      "issue": "Largest inventory has no supported on-curve canonical owned ATA",
+      "attempts": [],
+      "elapsedMs": 3252.3353369999995
+    },
+    {
+      "venue": "pumpswap",
+      "issue": "No positive public token inventory",
+      "attempts": [],
+      "elapsedMs": 3956.916089000001
+    },
+    {
+      "venue": "raydium-cpmm",
+      "issue": "Market read failed or timed out",
+      "attempts": [],
+      "elapsedMs": 705.5114949999988
+    },
+    {
+      "venue": "meteora-dlmm",
+      "issue": "No positive public token inventory",
+      "attempts": [],
+      "elapsedMs": 1040.8867439999995
+    }
+  ],
+  "captured": [
+    {
+      "method": "inventory-discovery-summary",
+      "venue": "pump",
+      "keys": [
+        "6vd5URWsqkduEzUL86ZDyyGdxCXa2dSV8Ev5UTA8AgEp"
+      ],
+      "slot": 0,
+      "issues": [
+        "Public inventory getTokenLargestAccounts HTTP 429"
+      ]
+    },
+    {
+      "method": "getMultipleAccounts",
+      "keys": [
+        "6vd5URWsqkduEzUL86ZDyyGdxCXa2dSV8Ev5UTA8AgEp"
+      ],
+      "batch": {
+        "contextSlot": 469018430,
+        "commitment": "finalized",
+        "provider": "api.mainnet-beta.solana.com",
+        "retrievedAt": 1794592727996,
+        "retrievedMono": 5260.651269,
+        "accounts": {
+          "6vd5URWsqkduEzUL86ZDyyGdxCXa2dSV8Ev5UTA8AgEp": {
+            "data": [
+              "CdDuJO+TntFjFdvt2bUQyl9J8TQNUgxXhjLpaIItBQ+aEdwRee0Cgy/3+tm+geyp8CBCfh3OApOXgOBijIcZPQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgcAAAA=",
+              "base64"
+            ],
+            "executable": false,
+            "lamports": 1513840,
+            "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+            "rentEpoch": 18446744073709552000,
+            "space": 170
+          }
+        }
+      }
+    },
+    {
+      "method": "getSignaturesForAddress",
+      "params": [
+        "CeJfcbzgrQxWs1jbfTsFmR1Ae4iREN5Y3nMN8G72h4Xy",
+        {
+          "commitment": "finalized",
+          "limit": 4
+        }
+      ],
+      "observedAt": 1794592730552,
+      "result": [
+        {
+          "blockTime": 1794439940,
+          "confirmationStatus": "finalized",
+          "err": null,
+          "memo": null,
+          "signature": "2ooPPZBrecyiHarvX3gtF8kUTGCaS5dNr9CMJrKbfk4ko1vyDHT9GktHCbVnYUYMwAb9Ds8KZPmYMWo3JrkHuG68",
+          "slot": 468308636,
+          "transactionIndex": 381
+        },
+        {
+          "blockTime": 1794439628,
+          "confirmationStatus": "finalized",
+          "err": null,
+          "memo": null,
+          "signature": "qwMk7ABQWiqTwjnppXwZ2NbXQa2uz4WdYCGcfUfYb4dB7bJgiWuZ6RraHEwJoYUSvahHJ6jFX1ievbPMcvtPLg3",
+          "slot": 468307190,
+          "transactionIndex": 592
+        },
+        {
+          "blockTime": 1794418351,
+          "confirmationStatus": "finalized",
+          "err": null,
+          "memo": null,
+          "signature": "3FCU1Q2bXbDfTpZDweCex2fC1kcipaEQHF8FhZ2R7KM4jpxiTFtmY1WwmAsX51HwQDYt8NdynBJsqwH3njByCtLU",
+          "slot": 468208359,
+          "transactionIndex": 482
+        },
+        {
+          "blockTime": 1794320599,
+          "confirmationStatus": "finalized",
+          "err": null,
+          "memo": null,
+          "signature": "2iXkgDwbQs2NrnDTDGhop6UKWaydaamZAp9ujz8T5D1zPiEvAyCMeTQVvDvXxXgTdbXbKTAJMXMgD4QRPGMktTx8",
+          "slot": 467752781,
+          "transactionIndex": 1
+        }
+      ]
+    },
+    {
+      "method": "inventory-discovery-summary",
+      "venue": "pumpswap",
+      "keys": [],
+      "slot": 0,
+      "issues": [
+        "Public inventory getTokenLargestAccounts HTTP 429",
+        "Public inventory getTransaction HTTP 429",
+        "Public inventory getTransaction HTTP 429",
+        "Public inventory getTransaction HTTP 429",
+        "Public inventory getTransaction HTTP 429",
+        "Public inventory getProgramAccounts HTTP 429"
+      ]
+    },
+    {
+      "method": "inventory-discovery-summary",
+      "venue": "raydium-cpmm",
+      "keys": [
+        "2R9mbSSJF2UjLVwHVh3be9J3D6GtZWuk3Nbqr2Qm1K4J"
+      ],
+      "slot": 0,
+      "issues": [
+        "Public inventory getTokenLargestAccounts HTTP 429"
+      ]
+    },
+    {
+      "method": "inventory-discovery-summary",
+      "venue": "meteora-dlmm",
+      "keys": [],
+      "slot": 0,
+      "issues": [
+        "Public inventory getTokenLargestAccounts HTTP 429",
+        "Public inventory getSignaturesForAddress HTTP 429",
+        "Public inventory getProgramAccounts HTTP 429"
+      ]
+    }
+  ],
+  "telemetry": {
+    "uptimeMs": 8959.936341999999,
+    "counters": {
+      "rpc.calls": 14,
+      "rpc.errors": 12
+    },
+    "gauges": {},
+    "histograms": {
+      "rpc.sell.getTokenLargestAccounts_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 366.620081,
+        "p95": 374.94203500000003,
+        "p99": 374.94203500000003,
+        "max": 378.7154449999998
+      },
+      "rpc.market.getMultipleAccounts_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 304.400224,
+        "p95": 304.400224,
+        "p99": 304.400224,
+        "max": 314.1647320000011
+      },
+      "rpc.sell.getSignaturesForAddress_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 319.36762400000043,
+        "p95": 319.36762400000043,
+        "p99": 319.36762400000043,
+        "max": 2171.802391
+      },
+      "rpc.sell.getTransaction_ms": {
+        "count": 4,
+        "samples": 4,
+        "p50": 244.50233700000172,
+        "p95": 340.46191499999986,
+        "p99": 340.46191499999986,
+        "max": 378.7300930000001
+      },
+      "rpc.sell.getProgramAccounts_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 332.8387039999998,
+        "p95": 332.8387039999998,
+        "p99": 332.8387039999998,
+        "max": 363.765754
+      }
+    }
+  },
+  "elapsedMs": 8960.270585,
+  "cpuMicroseconds": {
+    "user": 1005599,
+    "system": 65109
+  },
+  "memoryBefore": {
+    "rss": 145625088,
+    "heapTotal": 60383232,
+    "heapUsed": 32217136,
+    "external": 4096559,
+    "arrayBuffers": 44443
+  },
+  "memoryAfter": {
+    "rss": 168800256,
+    "heapTotal": 72581120,
+    "heapUsed": 33678744,
+    "external": 6389746,
+    "arrayBuffers": 1231998
+  },
+  "eventLoopDelayMs": {
+    "p50": 20.103167,
+    "p95": 20.889599,
+    "p99": 28.409855,
+    "max": 41.844735
+  },
+  "liveTrading": false,
+  "scope": "Bounded actual finalized mainnet sell simulations using public holder inventory and zero signatures. Public address impersonation is not signer authorization. No invented balances, signing, broadcasts, funding or paper entry. Each venue at most two public holders; discovery is not complete concentration evidence."
+}

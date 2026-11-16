@@ -1,0 +1,109 @@
+{
+  "endedAt": 1794698010577,
+  "journal": {
+    "pending": 1,
+    "pendingPeak": 657,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 294534,
+    "activePending": 0,
+    "oldestActiveAgeMs": 0,
+    "quarantined": 1,
+    "completedRetained": 20000,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 10977,
+    "walBytes": 29848754,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {
+      "meteora-dlmm": {
+        "signature": "2M24gWdeEHAQfVcSBRcr1BsvHpm3P2c6Lo97PhNgkUMbwqHdYxCd4H8hVoaK1YUXttRj3nSZMXwHCL3ps6NeL87G",
+        "slot": 469507357
+      },
+      "raydium-cpmm": {
+        "signature": "4agySNHUM9hgqoVTgvzdV9JG4PfaRNtyZYdXW96kGfmK4sQryyTWR8kdXFwepdx5gJ6bHginTcZUzD3SVD3Eve9",
+        "slot": 469507357
+      },
+      "pump": {
+        "signature": "wpVzKdRSnnnCJCjrYhALaKDbX9hbaqZ2W6dKCpRyMXfcZUs33yemCHNzzaGJF2zv2TMLqcV7StAhpeU96wJ7TV2",
+        "slot": 469507357
+      },
+      "pumpswap": {
+        "signature": "4MSWNwvMPt6ozKX9hCHLtL74dncugny9FgUG6kBkhyysUdyY2vkBGnvZo7oxkfDZr7hE6M9PDv2pHoW1MFmrg8bj",
+        "slot": 469507357
+      }
+    },
+    "dedupeFloors": {
+      "meteora-dlmm": 469506759,
+      "raydium-cpmm": 469506756,
+      "pump": 469506809,
+      "pumpswap": 469506760
+    },
+    "gaps": [
+      {
+        "program": "meteora-dlmm",
+        "fromSlot": 469506340,
+        "toSlot": 469507355,
+        "reason": "fork-or-provider-conflict",
+        "anchor": {
+          "signature": "ntZGCn6JEU7yMVs4To61dyTEFk4AmjUvwFaNiEQW8AGp796gucPsZbZHu6zA9AXWMnLoRr6pBTK6bZtBGNY1iBk",
+          "slot": 469506372
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 209
+      },
+      {
+        "program": "pump",
+        "fromSlot": 469506351,
+        "toSlot": 469507352,
+        "reason": "fork-or-provider-conflict",
+        "anchor": {
+          "signature": "5kXf8H23u8U9vwCyTgLcG4xy2KdHZgFPgPWvdN1giaxaBQz6er4svhEiDPtwySZUbbBMHVDUU89UK77NWHXKiX15",
+          "slot": 469506383
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 6
+      },
+      {
+        "program": "pumpswap",
+        "fromSlot": 469506382,
+        "toSlot": 469507342,
+        "reason": "fork-or-provider-conflict",
+        "anchor": {
+          "signature": "2EwNNCDYyXZ1yrKuUPSJKaTFPk4TbSHHSqWy16QC9GJY9uUcnYFRSwsWwmtai36VckmLFoDmhTms1h55P1TdDiuZ",
+          "slot": 469506414
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 1
+      },
+      {
+        "program": "raydium-cpmm",
+        "fromSlot": 469506383,
+        "toSlot": 469507222,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "4MxZypHXcwikCDUJG68M5vFzjFpP8KoNDFDBNf4BjZghoCg4o2miAB2WBd9K6e458Kfe83jehHW2yGuSnPVJQEqk",
+          "slot": 469506415
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 0
+      }
+    ],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 62671847424,
+    "fsyncBatches": 12099,
+    "writerFailure": null
+  },
+  "sourceArtifact": {
+    "path": "docs/phase12/runtime/mainnet/evidence.json",
+    "sha256": "aa3d6ea94e56d9b824ec29138c2e4fef72c8621a39e39b0bf51a1307d0d3deb6",
+    "bytes": 1389562
+  },
+  "scope": "Stopped Phase12 primary run; retained unresolved current gaps, not recovery"
+}

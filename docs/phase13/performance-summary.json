@@ -1,0 +1,1341 @@
+{
+  "generatedAt": "2026-11-15T13:42:40.443245+00:00",
+  "comparisonKind": "Descriptive metric populations only; no matched performance improvement claim",
+  "primaryTelemetry": {
+    "uptimeMs": 1801481.063138,
+    "counters": {
+      "store.committed": 48,
+      "ingest.resumed_from_wal": 0,
+      "supervisor.connections": 6,
+      "rpc.subscription_requests": 24,
+      "rpc.messages": 275791,
+      "raw.persistence.offered": 279217,
+      "raw.persistence.admitted": 279217,
+      "observations.received": 275760,
+      "supervisor.notifications": 275760,
+      "research.admission.offered": 275760,
+      "research.admission.admitted": 275758,
+      "observations.delivered": 275760,
+      "ingest.offered": 277815,
+      "raw.persistence.completed": 279217,
+      "journal.fsync_batches": 150905,
+      "journal.ownership_acks": 277725,
+      "research.admission.completed": 275758,
+      "ingest.decode.offered": 277725,
+      "ingest.decode.admitted": 277725,
+      "ingest.decode.completed": 276973,
+      "ingest.observation_only": 9368,
+      "ingest.enrichment.offered": 276973,
+      "ingest.enrichment.admitted": 276973,
+      "ingest.enrichment.completed": 276973,
+      "ingest.strategy.offered": 276973,
+      "ingest.strategy.admitted": 276973,
+      "ingest.strategy.completed": 276973,
+      "ingest.persistence.offered": 276973,
+      "ingest.persistence.admitted": 276973,
+      "journal.completion_acks": 276973,
+      "ingest.persistence.completed": 276973,
+      "ingest.completed": 276973,
+      "decoding.completed": 95566,
+      "decoding.launches": 618,
+      "decoding.pda_cache_misses": 708,
+      "verification.rpc.offered": 71,
+      "verification.rpc.admitted": 71,
+      "verification.rpc.completed": 71,
+      "decoding.errors": 752,
+      "ingest.decode.errors": 752,
+      "ingest.processing_errors": 752,
+      "ingest.quarantined": 752,
+      "ingest.deferred": 276939,
+      "ingest.deferred_completed": 276191,
+      "market.pipeline.offered": 22,
+      "market.pipeline.admitted": 22,
+      "rpc.calls": 2392,
+      "market.accounts.offered": 43,
+      "market.accounts.admitted": 43,
+      "market.accounts.completed": 41,
+      "rpc.errors": 80,
+      "market.failed": 22,
+      "market.rejected_before_quote": 22,
+      "market.pipeline.completed": 22,
+      "raw.rotations": 77,
+      "ingest.observation_policy_refusals": 69,
+      "ingest.recovered": 2057,
+      "backfill.partial": 5,
+      "research.wal_checkpoints": 31,
+      "backfill.recovered": 8,
+      "research.admission.backpressure": 2,
+      "supervisor.backpressure_pauses": 2,
+      "backfill.unavailable": 446,
+      "backfill.unrecoverable": 6,
+      "backfill.retries": 44,
+      "research.rpc_rate_limits": 4,
+      "backfill.cycle_budget_exhausted": 10,
+      "market.accounts.errors": 2,
+      "supervisor.incidents": 3,
+      "ingest.fork_or_provider_conflicts": 21,
+      "rpc.disconnects": 1,
+      "rpc.reconnect_exhausted": 1,
+      "decoding.pda_cache_evictions": 196
+    },
+    "gauges": {
+      "store.queue_depth": {
+        "current": 0,
+        "peak": 1
+      },
+      "store.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "raw.persistence.pending": {
+        "current": 0,
+        "peak": 11
+      },
+      "raw.persistence.queue_depth": {
+        "current": 0,
+        "peak": 9
+      },
+      "research.admission.pending": {
+        "current": 0,
+        "peak": 1024
+      },
+      "research.admission.queue_depth": {
+        "current": 0,
+        "peak": 1016
+      },
+      "raw.persistence.in_flight": {
+        "current": 0,
+        "peak": 3
+      },
+      "research.admission.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "journal.unacked": {
+        "current": 0,
+        "peak": 20
+      },
+      "journal.unacked_bytes": {
+        "current": 0,
+        "peak": 76536
+      },
+      "ingest.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.queue_depth": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "ingest.enrichment.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.enrichment.queue_depth": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.enrichment.in_flight": {
+        "current": 0,
+        "peak": 2
+      },
+      "ingest.strategy.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.strategy.queue_depth": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.strategy.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "ingest.persistence.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.persistence.queue_depth": {
+        "current": 0,
+        "peak": 7
+      },
+      "ingest.persistence.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "verification.rpc.pending": {
+        "current": 0,
+        "peak": 1
+      },
+      "verification.rpc.queue_depth": {
+        "current": 0,
+        "peak": 1
+      },
+      "verification.rpc.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "market.pipeline.pending": {
+        "current": 0,
+        "peak": 1
+      },
+      "market.pipeline.queue_depth": {
+        "current": 0,
+        "peak": 1
+      },
+      "market.pipeline.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "market.accounts.pending": {
+        "current": 0,
+        "peak": 1
+      },
+      "market.accounts.queue_depth": {
+        "current": 0,
+        "peak": 1
+      },
+      "market.accounts.in_flight": {
+        "current": 0,
+        "peak": 1
+      }
+    },
+    "histograms": {
+      "store.queue_wait_ms": {
+        "count": 48,
+        "samples": 48,
+        "p50": 0.013218000065535307,
+        "p95": 0.20282600005157292,
+        "p99": 0.23080200000549667,
+        "max": 0.38159399999995003
+      },
+      "store.clone_ms": {
+        "count": 48,
+        "samples": 48,
+        "p50": 0.5106200000154786,
+        "p95": 0.8707380001433194,
+        "p99": 1.018489999929443,
+        "max": 1.1493949999567121
+      },
+      "store.validation_ms": {
+        "count": 48,
+        "samples": 48,
+        "p50": 1.181692999904044,
+        "p95": 2.6647990001365542,
+        "p99": 3.4156819999998334,
+        "max": 5.037815000000137
+      },
+      "store.persistence_ms": {
+        "count": 48,
+        "samples": 48,
+        "p50": 10.61888900003396,
+        "p95": 20.856764999999996,
+        "p99": 27.712331999995513,
+        "max": 256.08523899991997
+      },
+      "store.transaction_ms": {
+        "count": 48,
+        "samples": 48,
+        "p50": 12.587367000000086,
+        "p95": 24.227068999956828,
+        "p99": 31.005050999985542,
+        "max": 258.4062880000565
+      },
+      "monitor.json_decoding_ms": {
+        "count": 275791,
+        "samples": 10000,
+        "p50": 0.030942999990656972,
+        "p95": 0.05818199994973838,
+        "p99": 0.07703800010494888,
+        "max": 0.23664000001735985
+      },
+      "monitor.ingestion_ms": {
+        "count": 275791,
+        "samples": 10000,
+        "p50": 0.2965869999025017,
+        "p95": 0.46283599990420043,
+        "p99": 0.6083780000917614,
+        "max": 2.7849589998368174
+      },
+      "monitor.deduplication_ms": {
+        "count": 275760,
+        "samples": 10000,
+        "p50": 0.0010689999908208847,
+        "p95": 0.001993000041693449,
+        "p99": 0.00240200012922287,
+        "max": 0.048669999931007624
+      },
+      "raw.persistence.queue_wait_ms": {
+        "count": 279217,
+        "samples": 10000,
+        "p50": 2.219420999987051,
+        "p95": 8.096726999850944,
+        "p99": 13.17349600000307,
+        "max": 217.97006399999373
+      },
+      "research.admission.queue_wait_ms": {
+        "count": 275758,
+        "samples": 10000,
+        "p50": 85.09753500018269,
+        "p95": 383.87707899999805,
+        "p99": 514.8407829999924,
+        "max": 675.9929720000364
+      },
+      "raw.persistence.processing_ms": {
+        "count": 279217,
+        "samples": 10000,
+        "p50": 0.5347140000667423,
+        "p95": 2.514796999981627,
+        "p99": 4.359053999884054,
+        "max": 215.72460100008175
+      },
+      "raw.persistence.end_to_end_ms": {
+        "count": 279217,
+        "samples": 10000,
+        "p50": 2.960359999909997,
+        "p95": 9.185526000102982,
+        "p99": 14.630641000112519,
+        "max": 218.41707999981008
+      },
+      "journal.worker_append_ms": {
+        "count": 150905,
+        "samples": 10000,
+        "p50": 0.56144900014624,
+        "p95": 1.3259000000543892,
+        "p99": 1.8498360000085086,
+        "max": 5.1678150000516325
+      },
+      "journal.worker_fsync_ms": {
+        "count": 150905,
+        "samples": 10000,
+        "p50": 2.9247769999783486,
+        "p95": 6.138291999930516,
+        "p99": 9.736020999960601,
+        "max": 21.336473000003025
+      },
+      "journal.batch_records": {
+        "count": 150905,
+        "samples": 10000,
+        "p50": 4,
+        "p95": 8,
+        "p99": 9,
+        "max": 13
+      },
+      "journal.ownership_ack_ms": {
+        "count": 277725,
+        "samples": 10000,
+        "p50": 7.489356999984011,
+        "p95": 12.052691000048071,
+        "p99": 19.016531999921426,
+        "max": 492.6615229998715
+      },
+      "ingest.receipt_ms": {
+        "count": 277746,
+        "samples": 10000,
+        "p50": 7.618017999920994,
+        "p95": 12.23854499985464,
+        "p99": 19.177338999928907,
+        "max": 493.0377459998708
+      },
+      "research.admission.processing_ms": {
+        "count": 275758,
+        "samples": 10000,
+        "p50": 18.890518999891356,
+        "p95": 43.165042999899015,
+        "p99": 59.90969499992207,
+        "max": 496.2772029999178
+      },
+      "research.admission.end_to_end_ms": {
+        "count": 275758,
+        "samples": 10000,
+        "p50": 109.0926459999755,
+        "p95": 407.71237899991684,
+        "p99": 549.5626379998866,
+        "max": 698.1308310001623
+      },
+      "ingest.decode.queue_wait_ms": {
+        "count": 277725,
+        "samples": 10000,
+        "p50": 0.1480919998139143,
+        "p95": 1.0556059998925775,
+        "p99": 2.139075000071898,
+        "max": 210.30051199998707
+      },
+      "ingest.decode.processing_ms": {
+        "count": 277725,
+        "samples": 10000,
+        "p50": 0.034764999989420176,
+        "p95": 0.14408700005151331,
+        "p99": 0.21302499994635582,
+        "max": 1.6815979999955744
+      },
+      "ingest.decode.end_to_end_ms": {
+        "count": 277725,
+        "samples": 10000,
+        "p50": 104.6361100000795,
+        "p95": 404.5064799999818,
+        "p99": 549.8311540000141,
+        "max": 697.9425389999524
+      },
+      "ingest.enrichment.queue_wait_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 0.011759000131860375,
+        "p95": 0.024561000056564808,
+        "p99": 1.0303390000481158,
+        "max": 205.85080200014636
+      },
+      "ingest.enrichment.processing_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 0.06714499997906387,
+        "p95": 0.1844640001654625,
+        "p99": 0.2675520000047982,
+        "max": 1.4539469999726862
+      },
+      "ingest.enrichment.end_to_end_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 104.67309900000691,
+        "p95": 404.774965000106,
+        "p99": 549.9599230000749,
+        "max": 698.0028709999751
+      },
+      "ingest.strategy.queue_wait_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 0.06642600009217858,
+        "p95": 0.8863640001509339,
+        "p99": 1.8195490001235157,
+        "max": 4.0967029999010265
+      },
+      "ingest.strategy.processing_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 0.03892800002358854,
+        "p95": 0.16483499994501472,
+        "p99": 0.23240599990822375,
+        "max": 1.2669720000121742
+      },
+      "ingest.strategy.end_to_end_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 104.90231300005689,
+        "p95": 405.08584400010295,
+        "p99": 550.1022469999734,
+        "max": 698.0555590000004
+      },
+      "ingest.persistence.queue_wait_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 0.010339000029489398,
+        "p95": 0.029349999967962503,
+        "p99": 0.8453919999301434,
+        "max": 9.14241399988532
+      },
+      "ingest.end_to_end_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 121.03295800019987,
+        "p95": 418.24769299989566,
+        "p99": 560.5789689999074,
+        "max": 711.1478760000318
+      },
+      "ingest.persistence.processing_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 13.068047000095248,
+        "p95": 21.93360299989581,
+        "p99": 30.48357000015676,
+        "max": 231.79014099994674
+      },
+      "ingest.persistence.end_to_end_ms": {
+        "count": 276973,
+        "samples": 10000,
+        "p50": 121.03549600020051,
+        "p95": 418.2492740000598,
+        "p99": 560.5812009999063,
+        "max": 711.155242000008
+      },
+      "decoding_ms": {
+        "count": 96318,
+        "samples": 10000,
+        "p50": 0.03739599999971688,
+        "p95": 0.12763199978508055,
+        "p99": 0.22859499999321997,
+        "max": 3.375971999950707
+      },
+      "verification.rpc.queue_wait_ms": {
+        "count": 71,
+        "samples": 71,
+        "p50": 0.017557999992277473,
+        "p95": 0.048532000000250264,
+        "p99": 0.08768300001975149,
+        "max": 0.10865699988789856
+      },
+      "verification.rpc.processing_ms": {
+        "count": 71,
+        "samples": 71,
+        "p50": 263.57390499999747,
+        "p95": 359.97850099997595,
+        "p99": 419.09195999999065,
+        "max": 458.565494999988
+      },
+      "verification.rpc.end_to_end_ms": {
+        "count": 71,
+        "samples": 71,
+        "p50": 263.62327400000504,
+        "p95": 360.01738500001375,
+        "p99": 419.12022400001297,
+        "max": 458.6022450000746
+      },
+      "phase9.confirmed_preparation_ms": {
+        "count": 24,
+        "samples": 24,
+        "p50": 170.75857300008647,
+        "p95": 289.995939000044,
+        "p99": 419.7148140000645,
+        "max": 461.49938699998893
+      },
+      "market.transaction_verification_ms": {
+        "count": 24,
+        "samples": 24,
+        "p50": 607.8954949999461,
+        "p95": 695.9647170000244,
+        "p99": 701.0786500000004,
+        "max": 774.2563630000222
+      },
+      "market.pipeline.queue_wait_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 0.004473000066354871,
+        "p95": 0.008733999995456543,
+        "p99": 0.011003999970853329,
+        "max": 0.03718899999967107
+      },
+      "market.queue_backlog_age_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 0.018967000069096684,
+        "p95": 0.03004799992777407,
+        "p99": 0.034401999990222976,
+        "max": 0.45539999999982683
+      },
+      "market.receipt_to_evaluation_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 820.3240440000081,
+        "p95": 994.9933090000413,
+        "p99": 1003.2214239999885,
+        "max": 1033.684928999981
+      },
+      "market.accounts.queue_wait_ms": {
+        "count": 43,
+        "samples": 43,
+        "p50": 0.19433399999979883,
+        "p95": 6.938396000005014,
+        "p99": 6.997632999991765,
+        "max": 9.741978000000017
+      },
+      "rpc.market.getLatestBlockhash_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 90.14073899993673,
+        "p95": 182.70107099995948,
+        "p99": 192.92485299997497,
+        "max": 262.44536600005813
+      },
+      "rpc.market.getMultipleAccounts_ms": {
+        "count": 86,
+        "samples": 86,
+        "p50": 155.04900899995118,
+        "p95": 696.046532999957,
+        "p99": 3138.853539999982,
+        "max": 3244.643044000026
+      },
+      "market.accounts.processing_ms": {
+        "count": 43,
+        "samples": 43,
+        "p50": 135.89954600000056,
+        "p95": 321.6623949999921,
+        "p99": 585.0647090000566,
+        "max": 3129.9360279999673
+      },
+      "market.accounts.end_to_end_ms": {
+        "count": 43,
+        "samples": 43,
+        "p50": 142.01987399999052,
+        "p95": 327.172869999893,
+        "p99": 589.17205500009,
+        "max": 3136.9131079999497
+      },
+      "rpc.market.getMinimumBalanceForRentExemption_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 152.21467499999562,
+        "p95": 419.73191800003406,
+        "p99": 428.65399900008924,
+        "max": 589.6837949999608
+      },
+      "rpc.market.getRecentPrioritizationFees_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 160.74731099999917,
+        "p95": 318.76356799993664,
+        "p99": 438.7410369999707,
+        "max": 798.6729969999287
+      },
+      "rpc.market.getProgramAccounts_ms": {
+        "count": 20,
+        "samples": 20,
+        "p50": 76.74157200000627,
+        "p95": 194.30111900006887,
+        "p99": 194.30111900006887,
+        "max": 3086.6512789999833
+      },
+      "rpc.market.getFeeForMessage_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 75.1200040000258,
+        "p95": 124.25469299999531,
+        "p99": 129.32308000000194,
+        "max": 161.33801000000676
+      },
+      "market.state_retrieval_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 337.63635700009763,
+        "p95": 895.5142390000401,
+        "p99": 3137.768026000005,
+        "max": 3323.710479000001
+      },
+      "market.pipeline.processing_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 350.94461700017564,
+        "p95": 916.0499869999476,
+        "p99": 3152.5354499999667,
+        "max": 3349.6184270000085
+      },
+      "market.pipeline.end_to_end_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 350.9614340001717,
+        "p95": 916.0708840000443,
+        "p99": 3152.554042999982,
+        "max": 3349.6446710000164
+      },
+      "research.receipt_to_paper_decision_ms": {
+        "count": 22,
+        "samples": 22,
+        "p50": 1178.0688259999733,
+        "p95": 1909.908657999942,
+        "p99": 4048.1106309999595,
+        "max": 4153.334091000026
+      },
+      "rpc.getSlot_ms": {
+        "count": 19,
+        "samples": 19,
+        "p50": 147.90054600000076,
+        "p95": 371.33614100003615,
+        "p99": 371.33614100003615,
+        "max": 445.8081339999335
+      },
+      "rpc.getSignaturesForAddress_ms": {
+        "count": 68,
+        "samples": 68,
+        "p50": 85.16366299998481,
+        "p95": 170.7236930001527,
+        "p99": 210.54483400000026,
+        "max": 332.5572319999992
+      },
+      "rpc.getTransaction_ms": {
+        "count": 2111,
+        "samples": 2111,
+        "p50": 75.99421299999813,
+        "p95": 147.3419559999602,
+        "p99": 3066.1489259999944,
+        "max": 3321.5895179999643
+      }
+    }
+  },
+  "primaryResources": {
+    "cpuMicroseconds": {
+      "user": 808055740,
+      "system": 114561318
+    },
+    "resourceBefore": {
+      "userCPUTime": 1493342,
+      "systemCPUTime": 188169,
+      "maxRSS": 98160,
+      "sharedMemorySize": 0,
+      "unsharedDataSize": 0,
+      "unsharedStackSize": 0,
+      "minorPageFault": 14989,
+      "majorPageFault": 0,
+      "swappedOut": 0,
+      "fsRead": 9376,
+      "fsWrite": 1944,
+      "ipcSent": 0,
+      "ipcReceived": 0,
+      "signalsCount": 0,
+      "voluntaryContextSwitches": 1792,
+      "involuntaryContextSwitches": 381
+    },
+    "resourceAfter": {
+      "userCPUTime": 809549422,
+      "systemCPUTime": 114749535,
+      "maxRSS": 355872,
+      "sharedMemorySize": 0,
+      "unsharedDataSize": 0,
+      "unsharedStackSize": 0,
+      "minorPageFault": 356878,
+      "majorPageFault": 17219,
+      "swappedOut": 0,
+      "fsRead": 207624,
+      "fsWrite": 4795136,
+      "ipcSent": 0,
+      "ipcReceived": 0,
+      "signalsCount": 0,
+      "voluntaryContextSwitches": 3112151,
+      "involuntaryContextSwitches": 160186
+    },
+    "memory": {
+      "rss": 182636544,
+      "heapTotal": 103669760,
+      "heapUsed": 62388264,
+      "external": 4181903,
+      "arrayBuffers": 534023
+    },
+    "gcCount": 5519,
+    "gcMs": 9956.011523067951
+  },
+  "finalSample": {
+    "pipeline": {
+      "fatal": null,
+      "inFlight": 0,
+      "admissionPending": 0,
+      "admissionBytes": 0
+    },
+    "at": 1794750108956,
+    "elapsedMs": 1801387.320712,
+    "notifications": 275760,
+    "candidates": 30,
+    "verifiedCreations": 22,
+    "memory": {
+      "rss": 322691072,
+      "heapTotal": 103407616,
+      "heapUsed": 58650472,
+      "external": 3971326,
+      "arrayBuffers": 323446
+    },
+    "cpuMicroseconds": {
+      "user": 807993418,
+      "system": 114525325
+    },
+    "eventLoopDelayMs": {
+      "p50": 20.119551,
+      "p95": 22.298623,
+      "p99": 25.804799,
+      "max": 372.506623
+    },
+    "gc": {
+      "count": 5515,
+      "totalMs": 9950.976976081729
+    },
+    "wal": {
+      "pending": 752,
+      "pendingPeak": 805,
+      "truncatedTailBytes": 0,
+      "oldestPendingAgeMs": 1799018,
+      "activePending": 0,
+      "oldestActiveAgeMs": 0,
+      "quarantined": 752,
+      "completedRetained": 20000,
+      "maxPending": 10000,
+      "maxCompleted": 20000,
+      "pendingBytes": 8253599,
+      "walBytes": 25899735,
+      "maxBytes": 67108864,
+      "durable": true,
+      "anchors": {
+        "raydium-cpmm": {
+          "signature": "md9888gnz96m2QWNLi1AzUv2BzNDUq6xfWYAU7eTMzvwiqZ5ZkmNNQ3dQ287NM8SdvVfAWxk4GBYGQFfmtzV4NB",
+          "slot": 469750065
+        },
+        "pump": {
+          "signature": "3okr96kHyhc9AHy8rrhY99xQZdRmUF6YZyUtRwrxnYkcj2KmHYdLk4WsgLVPXBYdjNv9n8jtw4XNnDWQe2abS1jX",
+          "slot": 469749972
+        },
+        "pumpswap": {
+          "signature": "4MsHA8HiZRkox8kpzCoys28F4uTE7gdT2jD9yqeJAscXWQk712UnAuEtmkWHFWCVs9bvPYyX19ctvgnntLFZ2W4Y",
+          "slot": 469744164
+        },
+        "meteora-dlmm": {
+          "signature": "2Hr45oGCj1S3UKwwCaxiQ7RPPXYEmQMQCqDjCYKZhpBT5xEPhahbxRtrFpkAR9cmaZe31tc6oSc3UoqH8CuMB22a",
+          "slot": 469743450
+        }
+      },
+      "dedupeFloors": {
+        "raydium-cpmm": 469749738,
+        "pump": 469749739,
+        "pumpswap": 469744164,
+        "meteora-dlmm": 469743450
+      },
+      "gaps": [
+        {
+          "program": "pump",
+          "fromSlot": 469741732,
+          "toSlot": 469749958,
+          "reason": "unverifiable-zero-signature",
+          "anchor": {
+            "signature": "42TAbzKWbp5bcTvRNgHqnFWFi9XB6HzxEheoa43x5wnfi8kThpFqxA3zhVSomavcDDdA58eUZszdnqpYRgQkkm6o",
+            "slot": 469741764
+          },
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 87
+        },
+        {
+          "program": "raydium-cpmm",
+          "fromSlot": 469748730,
+          "toSlot": 469748771,
+          "reason": "provider-window-covered",
+          "anchor": {
+            "signature": "4stdBMXM176M7vANdYkxSbQpEYGP6e42KkDfEJY8SgxXzcQuz6cptqmSMX5FSy5GGAoTsoDXbYtAR5dRKd7p1Hcb",
+            "slot": 469748761
+          },
+          "attempts": 1,
+          "status": "recovered",
+          "knownRefused": 1
+        },
+        {
+          "program": "pumpswap",
+          "fromSlot": 469742908,
+          "toSlot": 469746544,
+          "reason": "supervised-websocket-disconnect",
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 1
+        },
+        {
+          "program": "meteora-dlmm",
+          "fromSlot": 469742908,
+          "toSlot": 469746544,
+          "reason": "supervised-websocket-disconnect",
+          "attempts": 3,
+          "status": "unrecoverable",
+          "knownRefused": 0
+        }
+      ],
+      "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+      "unacknowledged": 0,
+      "unacknowledgedBytes": 0,
+      "diskAvailableBytes": 57194336256,
+      "fsyncBatches": 150936,
+      "writerFailure": null
+    },
+    "supervisor": {
+      "state": "stopped",
+      "liveReady": false,
+      "provider": 0,
+      "providerHosts": [
+        "solana-rpc.publicnode.com",
+        "api.mainnet-beta.solana.com"
+      ],
+      "elapsedMs": 1800000.344329,
+      "wallElapsedMs": 1800001,
+      "clockDiscontinuityMs": 0.6556710000149906,
+      "connectedMs": 1789034.8000909998,
+      "acknowledgedMs": 1778861.819025,
+      "disconnectedMs": 10965.544238000177,
+      "connections": 6,
+      "incidents": 5,
+      "attemptsThisIncident": 0,
+      "cooldownsUntilMono": [
+        0,
+        0
+      ],
+      "intervals": [
+        {
+          "provider": 0,
+          "fromMs": 231.81279200000017,
+          "toMs": 271403.396991,
+          "subscribed": true,
+          "acknowledgedFromMs": 304.64425500000016,
+          "lastReceiptMs": 271402.178118
+        },
+        {
+          "provider": 0,
+          "fromMs": 275449.012549,
+          "toMs": 545472.736961,
+          "subscribed": true,
+          "acknowledgedFromMs": 275512.598725,
+          "lastReceiptMs": 528538.0522960001
+        },
+        {
+          "provider": 0,
+          "fromMs": 545949.073704,
+          "toMs": 550376.8815090001,
+          "subscribed": true,
+          "acknowledgedFromMs": 546008.058955,
+          "lastReceiptMs": 550376.243124
+        },
+        {
+          "provider": 0,
+          "fromMs": 555444.471562,
+          "toMs": 565259.2103680001,
+          "subscribed": false,
+          "lastReceiptMs": 565245.860459
+        },
+        {
+          "provider": 0,
+          "fromMs": 565947.7241580001,
+          "toMs": 1041217.376068,
+          "subscribed": true,
+          "acknowledgedFromMs": 566046.730232,
+          "lastReceiptMs": 1041179.2823000001
+        },
+        {
+          "provider": 0,
+          "fromMs": 1041673.037476,
+          "toMs": 1800000.330435,
+          "subscribed": true,
+          "acknowledgedFromMs": 1041736.870772,
+          "lastReceiptMs": 1798523.416064
+        }
+      ],
+      "events": [
+        {
+          "atMs": 231.9105239999999,
+          "provider": 0,
+          "kind": "socket-open"
+        },
+        {
+          "atMs": 304.6559010000001,
+          "provider": 0,
+          "kind": "subscriptions-ready"
+        },
+        {
+          "atMs": 271404.752277,
+          "provider": 0,
+          "kind": "backpressure-pause"
+        },
+        {
+          "atMs": 275016.416591,
+          "provider": 0,
+          "kind": "backpressure-resume"
+        },
+        {
+          "atMs": 275449.02488499996,
+          "provider": 0,
+          "kind": "socket-open"
+        },
+        {
+          "atMs": 275512.61346599995,
+          "provider": 0,
+          "kind": "subscriptions-ready"
+        },
+        {
+          "atMs": 545474.164114,
+          "provider": 0,
+          "kind": "incident",
+          "reason": "RPC heartbeat timeout"
+        },
+        {
+          "atMs": 545949.087028,
+          "provider": 0,
+          "kind": "socket-open"
+        },
+        {
+          "atMs": 546008.081841,
+          "provider": 0,
+          "kind": "subscriptions-ready"
+        },
+        {
+          "atMs": 550377.682839,
+          "provider": 0,
+          "kind": "backpressure-pause"
+        },
+        {
+          "atMs": 555047.640624,
+          "provider": 0,
+          "kind": "backpressure-resume"
+        },
+        {
+          "atMs": 555444.508854,
+          "provider": 0,
+          "kind": "socket-open"
+        },
+        {
+          "atMs": 565259.94498,
+          "provider": 0,
+          "kind": "incident",
+          "reason": "Subscription acknowledgement deadline exceeded"
+        },
+        {
+          "atMs": 565947.74086,
+          "provider": 0,
+          "kind": "socket-open"
+        },
+        {
+          "atMs": 566046.7568610001,
+          "provider": 0,
+          "kind": "subscriptions-ready"
+        },
+        {
+          "atMs": 1041216.788495,
+          "provider": 0,
+          "kind": "socket-close",
+          "code": 1006
+        },
+        {
+          "atMs": 1041217.780383,
+          "provider": 0,
+          "kind": "incident",
+          "reason": "WebSocket disconnected"
+        },
+        {
+          "atMs": 1041673.042124,
+          "provider": 0,
+          "kind": "socket-open"
+        },
+        {
+          "atMs": 1041736.875578,
+          "provider": 0,
+          "kind": "subscriptions-ready"
+        },
+        {
+          "atMs": 1800001.420886,
+          "provider": 0,
+          "kind": "run-deadline"
+        }
+      ],
+      "liveTrading": false
+    },
+    "recoveryProvider": 0
+  },
+  "identityAudit": {
+    "enabled": true,
+    "records": 2152,
+    "bytes": 11408097,
+    "dropped": 0,
+    "storage": {
+      "removedCoverage": {
+        "fromSlot": null,
+        "toSlot": null,
+        "unknown": false
+      },
+      "bytes": 11408097,
+      "archives": 0,
+      "archiveBytes": 0,
+      "deletedFiles": 0,
+      "deletedBytes": 0,
+      "diskAvailableBytes": 57196609536,
+      "maxBytes": 16777216,
+      "maxArchives": 2
+    },
+    "scope": "Bounded first/every-1000th/invalid wire population and linked admission results; public incoming envelopes only. Sanitized captures expose byteExact and original SHA; no raw endpoint credentials."
+  },
+  "diagnosticPopulationsSeparate": {
+    "current-buy-simulations.json": {
+      "telemetry": {
+        "uptimeMs": 19217.487769,
+        "counters": {
+          "rpc.calls": 33,
+          "simulation.pipeline.offered": 3,
+          "simulation.pipeline.admitted": 3,
+          "simulation.pipeline.completed": 1,
+          "rpc.errors": 1,
+          "simulation.pipeline.errors": 2
+        },
+        "gauges": {
+          "simulation.pipeline.pending": {
+            "current": 0,
+            "peak": 1
+          },
+          "simulation.pipeline.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "simulation.pipeline.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "intent.commit_ms": {
+            "count": 14,
+            "samples": 14,
+            "p50": 11.074110999999903,
+            "p95": 69.9107929999991,
+            "p99": 69.9107929999991,
+            "max": 176.48115999999936
+          },
+          "rpc.market.getMultipleAccounts_ms": {
+            "count": 19,
+            "samples": 19,
+            "p50": 98.73155300000144,
+            "p95": 268.01714899999934,
+            "p99": 268.01714899999934,
+            "max": 483.2866409999988
+          },
+          "rpc.market.getProgramAccounts_ms": {
+            "count": 3,
+            "samples": 3,
+            "p50": 775.1810939999996,
+            "p95": 775.1810939999996,
+            "p99": 775.1810939999996,
+            "max": 5002.377161
+          },
+          "rpc.simulation.getMinimumBalanceForRentExemption_ms": {
+            "count": 6,
+            "samples": 6,
+            "p50": 263.4728530000011,
+            "p95": 278.955998999998,
+            "p99": 278.955998999998,
+            "max": 288.5174530000004
+          },
+          "rpc.simulation.getLatestBlockhash_ms": {
+            "count": 3,
+            "samples": 3,
+            "p50": 126.83451499999865,
+            "p95": 126.83451499999865,
+            "p99": 126.83451499999865,
+            "max": 268.63940399999956
+          },
+          "simulation.pipeline.queue_wait_ms": {
+            "count": 3,
+            "samples": 3,
+            "p50": 0.14385799999945448,
+            "p95": 0.14385799999945448,
+            "p99": 0.14385799999945448,
+            "max": 0.5530830000006972
+          },
+          "simulation.build_ms": {
+            "count": 3,
+            "samples": 3,
+            "p50": 81.59682600000087,
+            "p95": 81.59682600000087,
+            "p99": 81.59682600000087,
+            "max": 110.36528100000032
+          },
+          "simulation.serialization_ms": {
+            "count": 3,
+            "samples": 3,
+            "p50": 4.575286999999662,
+            "p95": 4.575286999999662,
+            "p99": 4.575286999999662,
+            "max": 33.03723100000025
+          },
+          "rpc.simulation.getBlockHeight_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 82.93714499999987,
+            "p95": 82.93714499999987,
+            "p99": 82.93714499999987,
+            "max": 82.93714499999987
+          },
+          "rpc.simulation.simulateTransaction_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 89.81074500000068,
+            "p95": 89.81074500000068,
+            "p99": 89.81074500000068,
+            "max": 89.81074500000068
+          },
+          "simulation.rpc_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 90.04373699999996,
+            "p95": 90.04373699999996,
+            "p99": 90.04373699999996,
+            "max": 90.04373699999996
+          },
+          "simulation.evidence_to_result_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 492.72386000000006,
+            "p95": 492.72386000000006,
+            "p99": 492.72386000000006,
+            "max": 492.72386000000006
+          },
+          "simulation.pipeline.processing_ms": {
+            "count": 3,
+            "samples": 3,
+            "p50": 102.88080300000001,
+            "p95": 102.88080300000001,
+            "p99": 102.88080300000001,
+            "max": 518.8148600000004
+          },
+          "simulation.pipeline.end_to_end_ms": {
+            "count": 3,
+            "samples": 3,
+            "p50": 103.05346199999985,
+            "p95": 103.05346199999985,
+            "p99": 103.05346199999985,
+            "max": 519.8175749999991
+          }
+        }
+      },
+      "elapsedMs": null,
+      "memoryBefore": null,
+      "memoryAfter": null,
+      "eventLoopDelayMs": null
+    },
+    "current-sell-simulations.json": {
+      "telemetry": {
+        "uptimeMs": 28458.414661999996,
+        "counters": {
+          "rpc.calls": 43,
+          "rpc.errors": 8
+        },
+        "gauges": {},
+        "histograms": {
+          "rpc.sell.getTokenLargestAccounts_ms": {
+            "count": 4,
+            "samples": 4,
+            "p50": 69.83557800000199,
+            "p95": 87.4428310000003,
+            "p99": 87.4428310000003,
+            "max": 302.46263799999997
+          },
+          "rpc.market.getMultipleAccounts_ms": {
+            "count": 19,
+            "samples": 19,
+            "p50": 83.79695899999933,
+            "p95": 248.65072099999998,
+            "p99": 248.65072099999998,
+            "max": 255.44227300000057
+          },
+          "rpc.sell.getSignaturesForAddress_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 1909.452177000001,
+            "p95": 1909.452177000001,
+            "p99": 1909.452177000001,
+            "max": 2175.263888999998
+          },
+          "rpc.sell.getTransaction_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 2454.697494,
+            "p95": 2692.531013,
+            "p99": 2692.531013,
+            "max": 2990.869305
+          },
+          "rpc.sell.getProgramAccounts_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 161.7409430000007,
+            "p95": 161.7409430000007,
+            "p99": 161.7409430000007,
+            "max": 161.7409430000007
+          },
+          "rpc.market.getProgramAccounts_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 96.41164900000149,
+            "p95": 96.41164900000149,
+            "p99": 96.41164900000149,
+            "max": 5003.341657000001
+          },
+          "rpc.simulation.getLatestBlockhash_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 79.91175699999803,
+            "p95": 79.91175699999803,
+            "p99": 79.91175699999803,
+            "max": 249.5394210000013
+          },
+          "rpc.simulation.getMinimumBalanceForRentExemption_ms": {
+            "count": 4,
+            "samples": 4,
+            "p50": 259.0091140000004,
+            "p95": 275.76535400000284,
+            "p99": 275.76535400000284,
+            "max": 279.1292170000015
+          },
+          "sell.market_preparation_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 834.8784620000006,
+            "p95": 834.8784620000006,
+            "p99": 834.8784620000006,
+            "max": 5873.03254
+          },
+          "sell.build_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 35.313790000000154,
+            "p95": 35.313790000000154,
+            "p99": 35.313790000000154,
+            "max": 68.44563500000004
+          },
+          "sell.serialization_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 3.7576370000024326,
+            "p95": 3.7576370000024326,
+            "p99": 3.7576370000024326,
+            "max": 22.175132000000303
+          },
+          "rpc.simulation.getBlockHeight_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 79.96376400000008,
+            "p95": 79.96376400000008,
+            "p99": 79.96376400000008,
+            "max": 105.54095799999777
+          },
+          "rpc.simulation.simulateTransaction_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 77.76475500000015,
+            "p95": 77.76475500000015,
+            "p99": 77.76475500000015,
+            "max": 81.53588200000013
+          },
+          "simulation.rpc_ms": {
+            "count": 2,
+            "samples": 2,
+            "p50": 77.82649999999921,
+            "p95": 77.82649999999921,
+            "p99": 77.82649999999921,
+            "max": 81.79373499999929
+          }
+        }
+      },
+      "elapsedMs": 28458.943457,
+      "memoryBefore": {
+        "rss": 149422080,
+        "heapTotal": 61296640,
+        "heapUsed": 31810808,
+        "external": 4319266,
+        "arrayBuffers": 122931
+      },
+      "memoryAfter": {
+        "rss": 183271424,
+        "heapTotal": 74280960,
+        "heapUsed": 37271840,
+        "external": 7269010,
+        "arrayBuffers": 1903237
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.135935,
+        "p95": 22.642687,
+        "p99": 33.783807,
+        "max": 166.985727
+      }
+    }
+  },
+  "scope": "WAL fsync/group sizes, decision queues, backpressure and CPU/memory describe the actual primary run. Simulation diagnostics are separate public-inventory subjects. No eligible-event latency population is invented."
+}

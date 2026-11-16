@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-11-15T12:03:39.709Z",
+  "wal": "docs/phase12/runtime/final-mainnet/ingestion.wal",
+  "runEvidence": "docs/phase12/runtime/final-mainnet/evidence.json",
+  "sourceManifest": "docs/phase12/runtime/final-mainnet/runtime-manifest.json",
+  "walSha256": "29e2bb1c9fdde8225c6367c02076708da7152da36997b6888f79e3dc455f8fa9",
+  "frames": 9329,
+  "incompleteTailBytes": 0,
+  "status": {
+    "pending": 0,
+    "pendingPeak": 24,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 0,
+    "activePending": 0,
+    "oldestActiveAgeMs": 0,
+    "quarantined": 0,
+    "completedRetained": 16149,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 0,
+    "walBytes": 0,
+    "maxBytes": 67108864,
+    "durable": false,
+    "anchors": {
+      "meteora-dlmm": {
+        "signature": "3VJqFe3pv9B98BJym4xfM7zBLdsRaDk17TeWwJdXPoGbzJSsMZfUaXTfMW8dqJcC1s71js5Nr9TXPedHpQ6BfkTf",
+        "slot": 469515166
+      },
+      "pumpswap": {
+        "signature": "5W1CMFV267D9B2AZimg5f6k9WK7JzEzDUjkiXcBQmLGeaiGrokCN7JNc4J8eZ7MA3E9s8AvmK2adPmgNsGwN6SNh",
+        "slot": 469514757
+      },
+      "pump": {
+        "signature": "5xmGYbMqbzQU4u18T1pTckMYJJ2XeLeFDXWezqDePURfi6zQhnEHrviArKkhpAAXFiT8R2bW6QuRRy8SuMAjVwuG",
+        "slot": 469514825
+      },
+      "raydium-cpmm": {
+        "signature": "2XgMxT93QvrpCHFouHXayxqGLFLhrHRUN9CZv6puyMHsDqbe3RwbdrG3krpf2sSmfC76pnWiseCiNaBwnpoTEWUh",
+        "slot": 469515166
+      }
+    },
+    "dedupeFloors": {},
+    "gaps": [
+      {
+        "program": "meteora-dlmm",
+        "fromSlot": 469514585,
+        "toSlot": 469514667,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "52bS71ggHtiNNYu5nJg64srzvvqKxXdACrEP9kLQpxbCg2Sb3dSSmyNAy8Rk6HmSX4gVXcDhGnRXpSwjrEs69Rcn",
+          "slot": 469514617
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 55
+      },
+      {
+        "program": "pumpswap",
+        "fromSlot": 469514589,
+        "toSlot": 469514757,
+        "reason": "cycle-budget-exhausted:rpc-or-processing-budget-exhausted",
+        "anchor": {
+          "signature": "2Kcpn31cG5dP7nW5ypC6dkh1DsKCTQeVHoC6mCwGqeogBCWAoJ7EyoW9fAKoTk65hWSpD8o3AV2yeRDxBj2V18Po",
+          "slot": 469514621
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 4
+      },
+      {
+        "program": "pump",
+        "fromSlot": 469514600,
+        "toSlot": 469514825,
+        "reason": "cycle-budget-exhausted:rpc-or-processing-budget-exhausted",
+        "anchor": {
+          "signature": "3sjF7FZPpFETrczWN9LUA5Qa76691JL7fqY4b8UgMWrHh4amZNwCKTyL7ak6sJwwMmxCP1F21f7MTpz8difUc9DG",
+          "slot": 469514632
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 4
+      },
+      {
+        "program": "raydium-cpmm",
+        "fromSlot": 469514632,
+        "toSlot": 469514918,
+        "reason": "provider-window-covered",
+        "anchor": {
+          "signature": "3vFRtQnz3EXKQ769QXFijqNuex3drtj5sJSXmSBES79qdv7c1nyEcMnC473CxL4YGc9zzCDhqC4kmLuXqAssHqYc",
+          "slot": 469514664
+        },
+        "attempts": 1,
+        "status": "recovered",
+        "knownRefused": 0
+      }
+    ]
+  },
+  "decoderHashes": {
+    "src/decoders.ts": {
+      "atRunCompiled": "0e113b9bcd4e7a9797dbd73895fd468902d5ac0bdc8315238cbf8167e3a98f1b",
+      "currentSource": "344d2fb030b6d0fa622ae17429372aa53d34702a00201b8dd5d9b29456e36fc6"
+    },
+    "src/borsh-reader.ts": {
+      "atRunCompiled": "17fa8c331d703eeb86e93547d424631367dfb0b4087fab4c5edc5154d66260bf",
+      "currentSource": "167d70e54c4eefdc8aee8d471a2e8ffb7241883e7402098c68b5ff1b0e30304a"
+    },
+    "src/chain.ts": {
+      "atRunCompiled": "2c5efdab767755b9d36b7e49ea6d07fe42eb24dadee18f306cc73518ffd35731",
+      "currentSource": "92947c107662427db2ce3b1f3285e216a7ebef7400ed818f991b33c7129ef5a0"
+    }
+  },
+  "quarantined": [],
+  "admission": {
+    "total": 63,
+    "capacityRefusals": 0,
+    "stableIdentityConflicts": 5,
+    "knownDuplicatesNotCountedAsRefusals": 8,
+    "perRefusalOriginalPayloads": {
+      "removedCoverage": {
+        "fromSlot": null,
+        "toSlot": null,
+        "unknown": false
+      },
+      "bytes": 344147,
+      "archives": 0,
+      "archiveBytes": 0,
+      "deletedFiles": 0,
+      "deletedBytes": 0,
+      "diskAvailableBytes": 60357050368,
+      "maxBytes": 4194304,
+      "maxArchives": 2
+    }
+  },
+  "reviewPlan": [],
+  "liveTrading": false,
+  "scope": "All available checksummed WAL frames replayed into memory. Original WAL is never opened for writing. Decoder reproduction is not proof of the historical callback stage or malicious tokens. Old missing error metadata remains unknown."
+}

@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-11-14T13:50:02.842521+00:00",
+  "tests": {
+    "total": 288,
+    "passed": 288,
+    "failed": 0,
+    "skipped": 0,
+    "originalTests": 266,
+    "additionalTests": 22,
+    "log": "clock-release/after-tests.log"
+  },
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "twoStageDockerBuild": "passed",
+  "productionContainerSmoke": "passed",
+  "liveModeRejected": true,
+  "productionImage": "sha256:21838328d21c84144b6a07fe98eeba6b3fc663e13f09d297388919914890e678",
+  "dependencyAdvisories": 0,
+  "postgresql": "Authenticated crash/restart/SCRAM/privilege/restore/fencing tests passed; separate 300-second isolated heartbeat 61 successes, zero failures, clean shutdown. Earlier overlapping probe invalidated and retained.",
+  "sourceSnapshot": "delivery-source-sha256.json",
+  "originalTestsUnchanged": true,
+  "originalTestFixtureFilesChecked": 52,
+  "priorArtifactIntegrity": {
+    "checked": 100,
+    "mismatches": []
+  },
+  "mainnet": {
+    "final": true,
+    "notifications": 421018,
+    "sampledCandidates": 52,
+    "verifiedCreations": 34,
+    "marketReviews": 34,
+    "parsedStates": 6,
+    "pairedQuotes": 4,
+    "paperTrades": 0,
+    "supervisorElapsedMs": 3464805.868175,
+    "processWallMs": 71190455,
+    "requestedMonitoredWindowComplete": false,
+    "interruption": "Host wall/monotonic clock discontinuity; unobserved interval excluded from coverage and transport claims"
+  },
+  "currentSourceMainnetSmoke": {
+    "path": "clock-release/mainnet-smoke/evidence.json",
+    "requestedSeconds": 15,
+    "notifications": 2201,
+    "state": "stopped",
+    "elapsedMs": 15000.522779000003,
+    "wallElapsedMs": 15001,
+    "liveTrading": false
+  },
+  "releaseLogHashes": {
+    "after-tests.log": "24d1fef4b7c4c2d43a55492590e3689644243dd1ea96e5f8a65c0a8c59688f48",
+    "typecheck.log": "fb21896d7b84728b42e52cb06a1145629a0b75b9d107672efd006b39ee87193d",
+    "build.log": "dc86d7887af0f897c2e510d526304f2691f517b7b2d6597cb4f4c103bde54468",
+    "docker-build.log": "bfd379d6f1a12cf798ed8a51dce1df71932103b1fb341aff72787062e7fa8dda",
+    "production-container-smoke.json": "5cbe06de4e910176402ddc598b27f96696466af8011804ecebbcffa44eb04ab2",
+    "dependency-audit-release.json": "15084f382af88160472282ed88d830147e9dce53ad787735b86963c5f70d3c05"
+  },
+  "liveTrading": false,
+  "phase9Acceptance": "Incomplete monitored-duration/continuous-coverage/provider-independence/positive real-launch paper proof; engineering and bounded failure evidence delivered.",
+  "latestProtocolRefresh": {
+    "capturedAt": "2026-11-14T13:47:48.962Z",
+    "pumpReviewedSlot": 458921440,
+    "pumpObservedSlot": "469055660",
+    "pumpPinUnchanged": true,
+    "pumpBlockedByExistingGate": true,
+    "otherLoaderHeaders": "PumpSwap, Raydium CPMM and Meteora DLMM matched retained pins",
+    "independentProviderAgreement": "unknown"
+  }
+}

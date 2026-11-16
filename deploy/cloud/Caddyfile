@@ -1,0 +1,39 @@
+{
+	admin off
+	auto_https disable_redirects
+	email {$ACME_EMAIL}
+	http_port 8080
+	https_port 8443
+	servers {
+		max_header_size 16KB
+		timeouts {
+			read_header 5s
+			read_body 15s
+			write 30s
+			idle 60s
+		}
+	}
+}
+http://{$MINTBOT_DOMAIN}:8080 {
+	redir https://{$MINTBOT_DOMAIN}{uri} 308
+}
+https://{$MINTBOT_DOMAIN}:8443 {
+	request_body {
+		max_size 32KB
+	}
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy no-referrer
+		-Server
+	}
+	reverse_proxy app:3001 {
+		transport http {
+			dial_timeout 3s
+			response_header_timeout 15s
+			read_timeout 30s
+			write_timeout 15s
+		}
+	}
+}

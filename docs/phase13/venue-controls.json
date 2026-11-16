@@ -1,0 +1,558 @@
+{
+  "generatedAt": "2026-11-15T13:25:20.989Z",
+  "results": [
+    {
+      "providerHost": "solana-rpc.publicnode.com",
+      "notifications": 0,
+      "invalidIdentities": {},
+      "samples": [],
+      "wire": [],
+      "acks": [
+        {
+          "jsonrpc": "2.0",
+          "result": 349719,
+          "id": 1
+        },
+        {
+          "jsonrpc": "2.0",
+          "result": 292400,
+          "id": 1
+        }
+      ],
+      "errors": [
+        "Notification receipt stale; open socket is not healthy coverage"
+      ],
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 60001.474869,
+        "wallElapsedMs": 60001,
+        "clockDiscontinuityMs": -0.47486899999785237,
+        "connectedMs": 58783.408316,
+        "acknowledgedMs": 58475.211323999996,
+        "disconnectedMs": 1218.066552999997,
+        "connections": 2,
+        "incidents": 1,
+        "attemptsThisIncident": 2,
+        "cooldownsUntilMono": [
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 498.06885299999976,
+            "toMs": 31062.986826,
+            "subscribed": true,
+            "acknowledgedFromMs": 617.41498
+          },
+          {
+            "provider": 0,
+            "fromMs": 31782.967374,
+            "toMs": 60001.457717,
+            "subscribed": true,
+            "acknowledgedFromMs": 31971.818239
+          }
+        ],
+        "events": [
+          {
+            "atMs": 498.19136500000013,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 617.4245329999999,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 31064.760393999997,
+            "provider": 0,
+            "kind": "incident",
+            "reason": "Notification receipt stale; open socket is not healthy coverage"
+          },
+          {
+            "atMs": 31783.002496,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 31971.827658000002,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 60002.139672,
+            "provider": 0,
+            "kind": "run-deadline"
+          }
+        ],
+        "liveTrading": false
+      }
+    },
+    {
+      "providerHost": "api.mainnet-beta.solana.com",
+      "notifications": 6591,
+      "invalidIdentities": {},
+      "samples": [
+        {
+          "program": "meteora-dlmm",
+          "signature": "2s4nbU9HZsizxzC2exM7ZahXVdDybqtSkcyWju6YCqrTbR1kceL5AmRMyjTjau7trkF76egDRziwUMR2RTkTLgW6",
+          "slot": 469745191,
+          "logs": [
+            "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+            "Program ComputeBudget111111111111111111111111111111 success",
+            "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+            "Program ComputeBudget111111111111111111111111111111 success",
+            "Program 4Qv3mbzcq1bKmrhGG4voS3EemfPd7f838FLUU7wBHSyi invoke [1]",
+            "Program log: No profitable route",
+            "Program 4Qv3mbzcq1bKmrhGG4voS3EemfPd7f838FLUU7wBHSyi consumed 38141 of 399882 compute units",
+            "Program 4Qv3mbzcq1bKmrhGG4voS3EemfPd7f838FLUU7wBHSyi success"
+          ],
+          "failed": false,
+          "observedAt": 1794749061556,
+          "wireIdentitySha256": "8054e303187da859a070acd8a1eb279103cea761bf4e0ca6cecc6fe742e6479f"
+        },
+        {
+          "program": "meteora-dlmm",
+          "signature": "kA4FnLmAetRTRBEswaZp2CkvXCUHGoFpfyV4zaFkW3JQfn2PJ4K4yT6XibpzH94srmnDZnJNEjbSKetyxFMZYuY",
+          "slot": 469745191,
+          "logs": [
+            "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+            "Program ComputeBudget111111111111111111111111111111 success",
+            "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+            "Program ComputeBudget111111111111111111111111111111 success",
+            "Program 11111111111111111111111111111111 invoke [1]",
+            "Program 11111111111111111111111111111111 success",
+            "Program 4Qv3mbzcq1bKmrhGG4voS3EemfPd7f838FLUU7wBHSyi invoke [1]",
+            "Program log: No profitable route",
+            "Program 4Qv3mbzcq1bKmrhGG4voS3EemfPd7f838FLUU7wBHSyi consumed 38141 of 399732 compute units",
+            "Program 4Qv3mbzcq1bKmrhGG4voS3EemfPd7f838FLUU7wBHSyi success"
+          ],
+          "failed": false,
+          "observedAt": 1794749061561,
+          "wireIdentitySha256": "ea006d73cfd7fdcdc581830fb214f16e6bcbd372b49f53db109b74d2846e82c6"
+        },
+        {
+          "program": "meteora-dlmm",
+          "signature": "v6AaMLvoeFDn2PM166qjFE2abck8wyFsNVdEPVozrbWTN9pD6hFZnn4PvbL5zKx43qdivk3Z92XQngRRV4KMvo3",
+          "slot": 469745191,
+          "logs": [
+            "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+            "Program log: CreateIdempotent",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+            "Program log: Instruction: GetAccountDataSize",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1495 of 558916 compute units",
+            "Program return: TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb qgAAAAAAAAA=",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+            "Program 11111111111111111111111111111111 invoke [2]",
+            "Program 11111111111111111111111111111111 success",
+            "Program log: Initialize the associated token account",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+            "Program log: Instruction: InitializeImmutableOwner",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 734 of 552599 compute units",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+            "Program log: Instruction: InitializeAccount3",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3107 of 549530 compute units",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+            "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 21040 of 567180 compute units",
+            "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+            "Program Cvf5Gb7wgS3LvCDeecw5yoaAWo8SyPG3624CzRFkrfZp invoke [1]",
+            "Program log: 0x512ee, 0x6, 0xffffffffffffffff, 0x0, 0x0",
+            "Program log: 0x512f7, 0x600000000029a49, 0x0, 0x0, 0x0",
+            "Program Cvf5Gb7wgS3LvCDeecw5yoaAWo8SyPG3624CzRFkrfZp consumed 53231 of 546140 compute units",
+            "Program Cvf5Gb7wgS3LvCDeecw5yoaAWo8SyPG3624CzRFkrfZp failed: custom program error: 0xa007"
+          ],
+          "failed": true,
+          "observedAt": 1794749061563,
+          "wireIdentitySha256": "78ed304378559a4a05306636fd834074faaf27738bdb0b14d3f48e5785d4a0b8"
+        },
+        {
+          "program": "meteora-dlmm",
+          "signature": "5yor1nGmccHPZ2i1kt8a82779ppcFNuMmm5DzVHjCpAUfEPQxaNKu7CfzrGmk7mQ2Dxnt5RymcAk6RPxrVdMqEws",
+          "slot": 469745191,
+          "logs": [
+            "Program 11111111111111111111111111111111 invoke [1]",
+            "Program 11111111111111111111111111111111 success",
+            "Program fxckso1g4zPGWcoAtsgKsatficCCPSHAL1bWFMvSSzA invoke [1]",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo invoke [2]",
+            "Program log: Instruction: Swap2",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo invoke [3]",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo consumed 772 of 89679 compute units",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo success",
+            "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+            "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 86865 compute units",
+            "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+            "Program log: Instruction: TransferChecked",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 4008 of 83614 compute units",
+            "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo invoke [3]",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo consumed 772 of 76895 compute units",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo success",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo consumed 39847 of 114801 compute units",
+            "Program LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo success",
+            "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA invoke [2]",
+            "Program log: Instruction: BuyExactQuoteInV2",
+            "Program log: AnchorError thrown in programs/pump-amm/src/instructions/swap/trade_v2.rs:816. Error Code: BuySlippageBelowMinBaseAmountOut. Error Number: 6040. Error Message: buy: slippage - would buy less tokens than expected min_base_amount_out.",
+            "Program log: Left: 809155529272",
+            "Program log: Right: 898422052295",
+            "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA consumed 31449 of 70004 compute units",
+            "Program pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA failed: custom program error: 0x1798",
+            "Program fxckso1g4zPGWcoAtsgKsatficCCPSHAL1bWFMvSSzA consumed 85304 of 123859 compute units",
+            "Program fxckso1g4zPGWcoAtsgKsatficCCPSHAL1bWFMvSSzA failed: custom program error: 0x1798"
+          ],
+          "failed": true,
+          "observedAt": 1794749061566,
+          "wireIdentitySha256": "d4cfabe63efbef1036fd17337d8006960ed2d90760df49c451e4493478490c4e"
+        },
+        {
+          "program": "meteora-dlmm",
+          "signature": "43HJi6aDJvnb9BAEWb7hoNRqRmj6Z7MCyCCx9KqKVPhdKGZfRWqEN82zYLDFxhaj5QADBzNEVDB8GV2jmP7rVP6a",
+          "slot": 469745191,
+          "logs": [
+            "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+            "Program ComputeBudget111111111111111111111111111111 success",
+            "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+            "Program ComputeBudget111111111111111111111111111111 success",
+            "Program Prism8hsRo6Ww5jiN5Zeh3YDPLZHqHduCPSAV7JF7qv invoke [1]",
+            "Program log: https://copychain.cc",
+            "Program data: UFJTTQUIAAD//////wAAAAAAAAAAAAAAAAAAAAAAAAD///8AGFBWMlQBAAIDAwADAAYAAAD///8AAAAAAA==",
+            "Program log: No profitable buy/sell pair was found.",
+            "Program Prism8hsRo6Ww5jiN5Zeh3YDPLZHqHduCPSAV7JF7qv consumed 13901 of 349700 compute units",
+            "Program Prism8hsRo6Ww5jiN5Zeh3YDPLZHqHduCPSAV7JF7qv failed: custom program error: 0x1388"
+          ],
+          "failed": true,
+          "observedAt": 1794749061569,
+          "wireIdentitySha256": "c633e14b27f7800e2e2e2b43fdc800b4bb71f493829a16a1db32ce4e9edd1580"
+        }
+      ],
+      "wire": [
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749061554,
+          "receivedMonoMs": 2868.760051,
+          "connection": 1,
+          "sequence": 2,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745191,
+          "extractedSignature": "2s4nbU9HZsizxzC2exM7ZahXVdDybqtSkcyWju6YCqrTbR1kceL5AmRMyjTjau7trkF76egDRziwUMR2RTkTLgW6",
+          "observationSignature": "2s4nbU9HZsizxzC2exM7ZahXVdDybqtSkcyWju6YCqrTbR1kceL5AmRMyjTjau7trkF76egDRziwUMR2RTkTLgW6",
+          "originalSha256": "8054e303187da859a070acd8a1eb279103cea761bf4e0ca6cecc6fe742e6479f",
+          "originalBytes": 766,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUxOTF9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiIyczRuYlU5SFpzaXp4ekMyZXhNN1phaFhWZER5YnF0U2tjeVdqdTZZQ3FyVGJSMWtjZUw1QW1STXlqVGphdTd0cmtGNzZlZ0RSeml3VU1SMlJUa1RMZ1c2IiwiZXJyIjpudWxsLCJsb2dzIjpbIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIENvbXB1dGVCdWRnZXQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBzdWNjZXNzIiwiUHJvZ3JhbSA0UXYzbWJ6Y3ExYkttcmhHRzR2b1MzRWVtZlBkN2Y4MzhGTFVVN3dCSFN5aSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBsb2c6IE5vIHByb2ZpdGFibGUgcm91dGUiLCJQcm9ncmFtIDRRdjNtYnpjcTFiS21yaEdHNHZvUzNFZW1mUGQ3ZjgzOEZMVVU3d0JIU3lpIGNvbnN1bWVkIDM4MTQxIG9mIDM5OTg4MiBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSA0UXYzbWJ6Y3ExYkttcmhHRzR2b1MzRWVtZlBkN2Y4MzhGTFVVN3dCSFN5aSBzdWNjZXNzIl19fSwic3Vic2NyaXB0aW9uIjoyNDcxNzMwMTN9fQ==",
+          "sanitizedBytes": 766,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749061560,
+          "receivedMonoMs": 2875.669763,
+          "connection": 1,
+          "sequence": 3,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745191,
+          "extractedSignature": "kA4FnLmAetRTRBEswaZp2CkvXCUHGoFpfyV4zaFkW3JQfn2PJ4K4yT6XibpzH94srmnDZnJNEjbSKetyxFMZYuY",
+          "observationSignature": "kA4FnLmAetRTRBEswaZp2CkvXCUHGoFpfyV4zaFkW3JQfn2PJ4K4yT6XibpzH94srmnDZnJNEjbSKetyxFMZYuY",
+          "originalSha256": "ea006d73cfd7fdcdc581830fb214f16e6bcbd372b49f53db109b74d2846e82c6",
+          "originalBytes": 870,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUxOTF9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiJrQTRGbkxtQWV0UlRSQkVzd2FacDJDa3ZYQ1VIR29GcGZ5VjR6YUZrVzNKUWZuMlBKNEs0eVQ2WGlicHpIOTRzcm1uRFpuSk5FamJTS2V0eXhGTVpZdVkiLCJlcnIiOm51bGwsImxvZ3MiOlsiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIGludm9rZSBbMV0iLCJQcm9ncmFtIENvbXB1dGVCdWRnZXQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgc3VjY2VzcyIsIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIGludm9rZSBbMV0iLCJQcm9ncmFtIDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIDRRdjNtYnpjcTFiS21yaEdHNHZvUzNFZW1mUGQ3ZjgzOEZMVVU3d0JIU3lpIGludm9rZSBbMV0iLCJQcm9ncmFtIGxvZzogTm8gcHJvZml0YWJsZSByb3V0ZSIsIlByb2dyYW0gNFF2M21iemNxMWJLbXJoR0c0dm9TM0VlbWZQZDdmODM4RkxVVTd3QkhTeWkgY29uc3VtZWQgMzgxNDEgb2YgMzk5NzMyIGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIDRRdjNtYnpjcTFiS21yaEdHNHZvUzNFZW1mUGQ3ZjgzOEZMVVU3d0JIU3lpIHN1Y2Nlc3MiXX19LCJzdWJzY3JpcHRpb24iOjI0NzE3MzAxM319",
+          "sanitizedBytes": 870,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749061563,
+          "receivedMonoMs": 2879.237877,
+          "connection": 1,
+          "sequence": 4,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745191,
+          "extractedSignature": "v6AaMLvoeFDn2PM166qjFE2abck8wyFsNVdEPVozrbWTN9pD6hFZnn4PvbL5zKx43qdivk3Z92XQngRRV4KMvo3",
+          "observationSignature": "v6AaMLvoeFDn2PM166qjFE2abck8wyFsNVdEPVozrbWTN9pD6hFZnn4PvbL5zKx43qdivk3Z92XQngRRV4KMvo3",
+          "originalSha256": "78ed304378559a4a05306636fd834074faaf27738bdb0b14d3f48e5785d4a0b8",
+          "originalBytes": 1950,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUxOTF9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiJ2NkFhTUx2b2VGRG4yUE0xNjZxakZFMmFiY2s4d3lGc05WZEVQVm96cmJXVE45cEQ2aEZabm40UHZiTDV6S3g0M3FkaXZrM1o5MlhRbmdSUlY0S012bzMiLCJlcnIiOnsiSW5zdHJ1Y3Rpb25FcnJvciI6WzEseyJDdXN0b20iOjQwOTY3fV19LCJsb2dzIjpbIlByb2dyYW0gQVRva2VuR1B2YmRHVnhyMWIyaHZaYnNpcVc1eFdIMjVlZlROc0xKQThrbkwgaW52b2tlIFsxXSIsIlByb2dyYW0gbG9nOiBDcmVhdGVJZGVtcG90ZW50IiwiUHJvZ3JhbSBUb2tlbnpRZEJOYkxxUDVWRWhka0FTNkVQRkxDMVBIbkJxQ1hFcFB4dUViIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IEdldEFjY291bnREYXRhU2l6ZSIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBjb25zdW1lZCAxNDk1IG9mIDU1ODkxNiBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSByZXR1cm46IFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgcWdBQUFBQUFBQUE9IiwiUHJvZ3JhbSBUb2tlbnpRZEJOYkxxUDVWRWhka0FTNkVQRkxDMVBIbkJxQ1hFcFB4dUViIHN1Y2Nlc3MiLCJQcm9ncmFtIDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIGludm9rZSBbMl0iLCJQcm9ncmFtIDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIGxvZzogSW5pdGlhbGl6ZSB0aGUgYXNzb2NpYXRlZCB0b2tlbiBhY2NvdW50IiwiUHJvZ3JhbSBUb2tlbnpRZEJOYkxxUDVWRWhka0FTNkVQRkxDMVBIbkJxQ1hFcFB4dUViIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IEluaXRpYWxpemVJbW11dGFibGVPd25lciIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBjb25zdW1lZCA3MzQgb2YgNTUyNTk5IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgc3VjY2VzcyIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBpbnZva2UgWzJdIiwiUHJvZ3JhbSBsb2c6IEluc3RydWN0aW9uOiBJbml0aWFsaXplQWNjb3VudDMiLCJQcm9ncmFtIFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgY29uc3VtZWQgMzEwNyBvZiA1NDk1MzAgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBzdWNjZXNzIiwiUHJvZ3JhbSBBVG9rZW5HUHZiZEdWeHIxYjJodlpic2lxVzV4V0gyNWVmVE5zTEpBOGtuTCBjb25zdW1lZCAyMTA0MCBvZiA1NjcxODAgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gQVRva2VuR1B2YmRHVnhyMWIyaHZaYnNpcVc1eFdIMjVlZlROc0xKQThrbkwgc3VjY2VzcyIsIlByb2dyYW0gQ3ZmNUdiN3dnUzNMdkNEZWVjdzV5b2FBV284U3lQRzM2MjRDelJGa3JmWnAgaW52b2tlIFsxXSIsIlByb2dyYW0gbG9nOiAweDUxMmVlLCAweDYsIDB4ZmZmZmZmZmZmZmZmZmZmZiwgMHgwLCAweDAiLCJQcm9ncmFtIGxvZzogMHg1MTJmNywgMHg2MDAwMDAwMDAwMjlhNDksIDB4MCwgMHgwLCAweDAiLCJQcm9ncmFtIEN2ZjVHYjd3Z1MzTHZDRGVlY3c1eW9hQVdvOFN5UEczNjI0Q3pSRmtyZlpwIGNvbnN1bWVkIDUzMjMxIG9mIDU0NjE0MCBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSBDdmY1R2I3d2dTM0x2Q0RlZWN3NXlvYUFXbzhTeVBHMzYyNEN6UkZrcmZacCBmYWlsZWQ6IGN1c3RvbSBwcm9ncmFtIGVycm9yOiAweGEwMDciXX19LCJzdWJzY3JpcHRpb24iOjI0NzE3MzAxM319",
+          "sanitizedBytes": 1950,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749061566,
+          "receivedMonoMs": 2881.919944,
+          "connection": 1,
+          "sequence": 5,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745191,
+          "extractedSignature": "5yor1nGmccHPZ2i1kt8a82779ppcFNuMmm5DzVHjCpAUfEPQxaNKu7CfzrGmk7mQ2Dxnt5RymcAk6RPxrVdMqEws",
+          "observationSignature": "5yor1nGmccHPZ2i1kt8a82779ppcFNuMmm5DzVHjCpAUfEPQxaNKu7CfzrGmk7mQ2Dxnt5RymcAk6RPxrVdMqEws",
+          "originalSha256": "d4cfabe63efbef1036fd17337d8006960ed2d90760df49c451e4493478490c4e",
+          "originalBytes": 2422,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUxOTF9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiI1eW9yMW5HbWNjSFBaMmkxa3Q4YTgyNzc5cHBjRk51TW1tNUR6VkhqQ3BBVWZFUFF4YU5LdTdDZnpyR21rN21RMkR4bnQ1UnltY0FrNlJQeHJWZE1xRXdzIiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOlsxLHsiQ3VzdG9tIjo2MDQwfV19LCJsb2dzIjpbIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgc3VjY2VzcyIsIlByb2dyYW0gZnhja3NvMWc0elBHV2NvQXRzZ0tzYXRmaWNDQ1BTSEFMMWJXRk12U1N6QSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IFN3YXAyIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbM10iLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gY29uc3VtZWQgNzcyIG9mIDg5Njc5IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gc3VjY2VzcyIsIlByb2dyYW0gVG9rZW5rZWdRZmVaeWlOd0FKYk5iR0tQRlhDV3VCdmY5U3M2MjNWUTVEQSBpbnZva2UgWzNdIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIGNvbnN1bWVkIDExMiBvZiA4Njg2NSBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIHN1Y2Nlc3MiLCJQcm9ncmFtIFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgaW52b2tlIFszXSIsIlByb2dyYW0gbG9nOiBJbnN0cnVjdGlvbjogVHJhbnNmZXJDaGVja2VkIiwiUHJvZ3JhbSBUb2tlbnpRZEJOYkxxUDVWRWhka0FTNkVQRkxDMVBIbkJxQ1hFcFB4dUViIGNvbnN1bWVkIDQwMDggb2YgODM2MTQgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBzdWNjZXNzIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbM10iLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gY29uc3VtZWQgNzcyIG9mIDc2ODk1IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gc3VjY2VzcyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBjb25zdW1lZCAzOTg0NyBvZiAxMTQ4MDEgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBzdWNjZXNzIiwiUHJvZ3JhbSBwQU1NQmF5Nm9jZUg5ZkpLQlJIR1A1RDRiRDRzV3BtU3dNbjUyRk1mWEVBIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IEJ1eUV4YWN0UXVvdGVJblYyIiwiUHJvZ3JhbSBsb2c6IEFuY2hvckVycm9yIHRocm93biBpbiBwcm9ncmFtcy9wdW1wLWFtbS9zcmMvaW5zdHJ1Y3Rpb25zL3N3YXAvdHJhZGVfdjIucnM6ODE2LiBFcnJvciBDb2RlOiBCdXlTbGlwcGFnZUJlbG93TWluQmFzZUFtb3VudE91dC4gRXJyb3IgTnVtYmVyOiA2MDQwLiBFcnJvciBNZXNzYWdlOiBidXk6IHNsaXBwYWdlIC0gd291bGQgYnV5IGxlc3MgdG9rZW5zIHRoYW4gZXhwZWN0ZWQgbWluX2Jhc2VfYW1vdW50X291dC4iLCJQcm9ncmFtIGxvZzogTGVmdDogODA5MTU1NTI5MjcyIiwiUHJvZ3JhbSBsb2c6IFJpZ2h0OiA4OTg0MjIwNTIyOTUiLCJQcm9ncmFtIHBBTU1CYXk2b2NlSDlmSktCUkhHUDVENGJENHNXcG1Td01uNTJGTWZYRUEgY29uc3VtZWQgMzE0NDkgb2YgNzAwMDQgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gcEFNTUJheTZvY2VIOWZKS0JSSEdQNUQ0YkQ0c1dwbVN3TW41MkZNZlhFQSBmYWlsZWQ6IGN1c3RvbSBwcm9ncmFtIGVycm9yOiAweDE3OTgiLCJQcm9ncmFtIGZ4Y2tzbzFnNHpQR1djb0F0c2dLc2F0ZmljQ0NQU0hBTDFiV0ZNdlNTekEgY29uc3VtZWQgODUzMDQgb2YgMTIzODU5IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIGZ4Y2tzbzFnNHpQR1djb0F0c2dLc2F0ZmljQ0NQU0hBTDFiV0ZNdlNTekEgZmFpbGVkOiBjdXN0b20gcHJvZ3JhbSBlcnJvcjogMHgxNzk4Il19fSwic3Vic2NyaXB0aW9uIjoyNDcxNzMwMTN9fQ==",
+          "sanitizedBytes": 2422,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749061568,
+          "receivedMonoMs": 2884.441798,
+          "connection": 1,
+          "sequence": 6,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745191,
+          "extractedSignature": "43HJi6aDJvnb9BAEWb7hoNRqRmj6Z7MCyCCx9KqKVPhdKGZfRWqEN82zYLDFxhaj5QADBzNEVDB8GV2jmP7rVP6a",
+          "observationSignature": "43HJi6aDJvnb9BAEWb7hoNRqRmj6Z7MCyCCx9KqKVPhdKGZfRWqEN82zYLDFxhaj5QADBzNEVDB8GV2jmP7rVP6a",
+          "originalSha256": "c633e14b27f7800e2e2e2b43fdc800b4bb71f493829a16a1db32ce4e9edd1580",
+          "originalBytes": 984,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUxOTF9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiI0M0hKaTZhREp2bmI5QkFFV2I3aG9OUnFSbWo2WjdNQ3lDQ3g5S3FLVlBoZEtHWmZSV3FFTjgyellMREZ4aGFqNVFBREJ6TkVWREI4R1Yyam1QN3JWUDZhIiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOlsyLHsiQ3VzdG9tIjo1MDAwfV19LCJsb2dzIjpbIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIENvbXB1dGVCdWRnZXQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBzdWNjZXNzIiwiUHJvZ3JhbSBQcmlzbThoc1JvNld3NWppTjVaZWgzWURQTFpIcUhkdUNQU0FWN0pGN3F2IGludm9rZSBbMV0iLCJQcm9ncmFtIGxvZzogW3VybC1yZWRhY3RlZF0iLCJQcm9ncmFtIGRhdGE6IFVGSlRUUVVJQUFELy8vLy8vd0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy84QUdGQldNbFFCQUFJREF3QURBQVlBQUFELy8vOEFBQUFBQUE9PSIsIlByb2dyYW0gbG9nOiBObyBwcm9maXRhYmxlIGJ1eS9zZWxsIHBhaXIgd2FzIGZvdW5kLiIsIlByb2dyYW0gUHJpc204aHNSbzZXdzVqaU41WmVoM1lEUExaSHFIZHVDUFNBVjdKRjdxdiBjb25zdW1lZCAxMzkwMSBvZiAzNDk3MDAgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gUHJpc204aHNSbzZXdzVqaU41WmVoM1lEUExaSHFIZHVDUFNBVjdKRjdxdiBmYWlsZWQ6IGN1c3RvbSBwcm9ncmFtIGVycm9yOiAweDEzODgiXX19LCJzdWJzY3JpcHRpb24iOjI0NzE3MzAxM319",
+          "sanitizedBytes": 978,
+          "captureTruncated": false,
+          "byteExact": false
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749061572,
+          "receivedMonoMs": 2887.540333,
+          "connection": 1,
+          "sequence": 7,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745191,
+          "extractedSignature": "3MQgFuFHvnLgdj3T6sEs4J3UEEJGBxSUj8oXtX5oXezMtj9Ugp2zxYAfK77tG6eri4pCeEaKhxEUobeRBRWFpS1o",
+          "observationSignature": "3MQgFuFHvnLgdj3T6sEs4J3UEEJGBxSUj8oXtX5oXezMtj9Ugp2zxYAfK77tG6eri4pCeEaKhxEUobeRBRWFpS1o",
+          "originalSha256": "6add9ea5c54a44ffe04ff2a3a6cb242549e539f6a9354ba832d52c818397cb6f",
+          "originalBytes": 984,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUxOTF9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiIzTVFnRnVGSHZuTGdkajNUNnNFczRKM1VFRUpHQnhTVWo4b1h0WDVvWGV6TXRqOVVncDJ6eFlBZks3N3RHNmVyaTRwQ2VFYUtoeEVVb2JlUkJSV0ZwUzFvIiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOlsyLHsiQ3VzdG9tIjo1MDAwfV19LCJsb2dzIjpbIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIENvbXB1dGVCdWRnZXQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBzdWNjZXNzIiwiUHJvZ3JhbSBQcmlzbThoc1JvNld3NWppTjVaZWgzWURQTFpIcUhkdUNQU0FWN0pGN3F2IGludm9rZSBbMV0iLCJQcm9ncmFtIGxvZzogW3VybC1yZWRhY3RlZF0iLCJQcm9ncmFtIGRhdGE6IFVGSlRUUVVJQUFELy8vLy8vd0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvLy84QUdGQldNbFFCQUFJRkJRQUZBQlFBQUFELy8vOEFBQUFBQUE9PSIsIlByb2dyYW0gbG9nOiBObyBwcm9maXRhYmxlIGJ1eS9zZWxsIHBhaXIgd2FzIGZvdW5kLiIsIlByb2dyYW0gUHJpc204aHNSbzZXdzVqaU41WmVoM1lEUExaSHFIZHVDUFNBVjdKRjdxdiBjb25zdW1lZCAyMDQxMyBvZiAzNDk3MDAgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gUHJpc204aHNSbzZXdzVqaU41WmVoM1lEUExaSHFIZHVDUFNBVjdKRjdxdiBmYWlsZWQ6IGN1c3RvbSBwcm9ncmFtIGVycm9yOiAweDEzODgiXX19LCJzdWJzY3JpcHRpb24iOjI0NzE3MzAxM319",
+          "sanitizedBytes": 978,
+          "captureTruncated": false,
+          "byteExact": false
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749061573,
+          "receivedMonoMs": 2889.522629,
+          "connection": 1,
+          "sequence": 8,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745191,
+          "extractedSignature": "5nKmQChMUTn2W9RL6kLdwFHC4hgkcwor9KVUfWgjkj6P4KbqrHxNomWC4gtt9BAX3dVRhASt2EZUkHd4tG3wgjKH",
+          "observationSignature": "5nKmQChMUTn2W9RL6kLdwFHC4hgkcwor9KVUfWgjkj6P4KbqrHxNomWC4gtt9BAX3dVRhASt2EZUkHd4tG3wgjKH",
+          "originalSha256": "b8f36569ae558817e3b94da5fbb8c6be68df76654889deccac032bfc38db3da0",
+          "originalBytes": 477,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUxOTF9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiI1bkttUUNoTVVUbjJXOVJMNmtMZHdGSEM0aGdrY3dvcjlLVlVmV2dqa2o2UDRLYnFySHhOb21XQzRndHQ5QkFYM2RWUmhBU3QyRVpVa0hkNHRHM3dnaktIIiwiZXJyIjpudWxsLCJsb2dzIjpbIlByb2dyYW0gQ21RazNMcFNUWGZWbmFkM1o1dWt4SE50Y01RTHRlWnczelZSVjJnU1BMZlAgaW52b2tlIFsxXSIsIlByb2dyYW0gQ21RazNMcFNUWGZWbmFkM1o1dWt4SE50Y01RTHRlWnczelZSVjJnU1BMZlAgY29uc3VtZWQgOTc2MDIgb2YgMzIwMzc0IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIENtUWszTHBTVFhmVm5hZDNaNXVreEhOdGNNUUx0ZVp3M3pWUlYyZ1NQTGZQIHN1Y2Nlc3MiXX19LCJzdWJzY3JpcHRpb24iOjI0NzE3MzAxM319",
+          "sanitizedBytes": 477,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749068595,
+          "receivedMonoMs": 9911.755709,
+          "connection": 1,
+          "sequence": 1000,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745211,
+          "extractedSignature": "3NijVRpCZU8H6rjDECC167X6BoyvTL21tzQdFKoHeBd8r2J4hFnc3veraFTSUuAQzXdXMrnV2g76cVK2VcmgnPF5",
+          "observationSignature": "3NijVRpCZU8H6rjDECC167X6BoyvTL21tzQdFKoHeBd8r2J4hFnc3veraFTSUuAQzXdXMrnV2g76cVK2VcmgnPF5",
+          "originalSha256": "d9474fd4af907ced2b208aec7f4aa58123ce077311beb95ba345ab2bedcb19ad",
+          "originalBytes": 3939,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUyMTF9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiIzTmlqVlJwQ1pVOEg2cmpERUNDMTY3WDZCb3l2VEwyMXR6UWRGS29IZUJkOHIySjRoRm5jM3ZlcmFGVFNVdUFRelhkWE1yblYyZzc2Y1ZLMlZjbWduUEY1IiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOlsxLHsiQ3VzdG9tIjoyODY3Nn1dfSwibG9ncyI6WyJQcm9ncmFtIDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIGludm9rZSBbMV0iLCJQcm9ncmFtIDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIHBxQkM3cWlUVXlEbXhCWnVkd2EydmQ3ZUJBR2EzdkxHTURKdXEzeVBXdlkgaW52b2tlIFsxXSIsIlByb2dyYW0gbG9nOiAweDcwMDEsIDB4MCwgMHgwLCAweDdkMjBjNzksIDB4MCIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBpbnZva2UgWzJdIiwiUHJvZ3JhbSBsb2c6IEluc3RydWN0aW9uOiBTd2FwMiIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBpbnZva2UgWzNdIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGNvbnN1bWVkIDc3MiBvZiAxNzA1MzkgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBzdWNjZXNzIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIGludm9rZSBbM10iLCJQcm9ncmFtIFRva2Vua2VnUWZlWnlpTndBSmJOYkdLUEZYQ1d1QnZmOVNzNjIzVlE1REEgY29uc3VtZWQgMTEyIG9mIDE2NzcyNSBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIHN1Y2Nlc3MiLCJQcm9ncmFtIFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgaW52b2tlIFszXSIsIlByb2dyYW0gbG9nOiBJbnN0cnVjdGlvbjogVHJhbnNmZXJDaGVja2VkIiwiUHJvZ3JhbSBUb2tlbnpRZEJOYkxxUDVWRWhka0FTNkVQRkxDMVBIbkJxQ1hFcFB4dUViIGNvbnN1bWVkIDI4NTcgb2YgMTY0ODUyIGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgc3VjY2VzcyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBpbnZva2UgWzNdIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGNvbnN1bWVkIDc3MiBvZiAxNTkyODQgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBzdWNjZXNzIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGNvbnN1bWVkIDM4MzgzIG9mIDE5NTY4MSBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIHN1Y2Nlc3MiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gaW52b2tlIFsyXSIsIlByb2dyYW0gbG9nOiBJbnN0cnVjdGlvbjogU3dhcDIiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gaW52b2tlIFszXSIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBjb25zdW1lZCA3NzIgb2YgMTE3NTIyIGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gc3VjY2VzcyIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBpbnZva2UgWzNdIiwiUHJvZ3JhbSBsb2c6IEluc3RydWN0aW9uOiBUcmFuc2ZlckNoZWNrZWQiLCJQcm9ncmFtIFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgY29uc3VtZWQgMjg1NyBvZiAxMTQzNDUgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBzdWNjZXNzIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIGludm9rZSBbM10iLCJQcm9ncmFtIFRva2Vua2VnUWZlWnlpTndBSmJOYkdLUEZYQ1d1QnZmOVNzNjIzVlE1REEgY29uc3VtZWQgMTA1IG9mIDEwOTI4MyBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIHN1Y2Nlc3MiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gaW52b2tlIFszXSIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBjb25zdW1lZCA3NzIgb2YgMTA2NDY3IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gc3VjY2VzcyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBjb25zdW1lZCA0ODU3NSBvZiAxNTMwNTYgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBzdWNjZXNzIiwiUHJvZ3JhbSBjcGFtZHBaQ0dLVXk1SnhRWEI0ZGNwR1BpaWtIYXd2U1dBZDZtRW4xc0dHIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IFN3YXAiLCJQcm9ncmFtIFRva2Vua2VnUWZlWnlpTndBSmJOYkdLUEZYQ1d1QnZmOVNzNjIzVlE1REEgaW52b2tlIFszXSIsIlByb2dyYW0gVG9rZW5rZWdRZmVaeWlOd0FKYk5iR0tQRlhDV3VCdmY5U3M2MjNWUTVEQSBjb25zdW1lZCAxMDUgb2YgOTE5MTEgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gVG9rZW5rZWdRZmVaeWlOd0FKYk5iR0tQRlhDV3VCdmY5U3M2MjNWUTVEQSBzdWNjZXNzIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIGludm9rZSBbM10iLCJQcm9ncmFtIFRva2Vua2VnUWZlWnlpTndBSmJOYkdLUEZYQ1d1QnZmOVNzNjIzVlE1REEgY29uc3VtZWQgMTEyIG9mIDkwNTkwIGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIFRva2Vua2VnUWZlWnlpTndBSmJOYkdLUEZYQ1d1QnZmOVNzNjIzVlE1REEgc3VjY2VzcyIsIlByb2dyYW0gY3BhbWRwWkNHS1V5NUp4UVhCNGRjcEdQaWlrSGF3dlNXQWQ2bUVuMXNHRyBpbnZva2UgWzNdIiwiUHJvZ3JhbSBjcGFtZHBaQ0dLVXk1SnhRWEI0ZGNwR1BpaWtIYXd2U1dBZDZtRW4xc0dHIGNvbnN1bWVkIDgxIG9mIDg3NjE3IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIGNwYW1kcFpDR0tVeTVKeFFYQjRkY3BHUGlpa0hhd3ZTV0FkNm1FbjFzR0cgc3VjY2VzcyIsIlByb2dyYW0gY3BhbWRwWkNHS1V5NUp4UVhCNGRjcEdQaWlrSGF3dlNXQWQ2bUVuMXNHRyBjb25zdW1lZCAxNDEwNiBvZiAxMDE2MjAgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gY3BhbWRwWkNHS1V5NUp4UVhCNGRjcEdQaWlrSGF3dlNXQWQ2bUVuMXNHRyBzdWNjZXNzIiwiUHJvZ3JhbSBwcUJDN3FpVFV5RG14Qlp1ZHdhMnZkN2VCQUdhM3ZMR01ESnVxM3lQV3ZZIGNvbnN1bWVkIDEyMTk1MCBvZiAyMDkzNzkgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gcHFCQzdxaVRVeURteEJadWR3YTJ2ZDdlQkFHYTN2TEdNREp1cTN5UFd2WSBmYWlsZWQ6IGN1c3RvbSBwcm9ncmFtIGVycm9yOiAweDcwMDQiXX19LCJzdWJzY3JpcHRpb24iOjI0NzE3MzAxM319",
+          "sanitizedBytes": 3939,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749078255,
+          "receivedMonoMs": 19572.240842,
+          "connection": 1,
+          "sequence": 2000,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745242,
+          "extractedSignature": "3SKHoYbCgXX8c3rUTXXEXEXJWVXw8ay3DMc8ndWZRTHFrvytvc8Za7mQtyWMtGti69dySNZYix5iKwFvoLAGkzJV",
+          "observationSignature": "3SKHoYbCgXX8c3rUTXXEXEXJWVXw8ay3DMc8ndWZRTHFrvytvc8Za7mQtyWMtGti69dySNZYix5iKwFvoLAGkzJV",
+          "originalSha256": "114b080b91d8e4a65ff90e52cef059355fe7602766c5fb3eae63c9c01b5f828d",
+          "originalBytes": 1114,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUyNDJ9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiIzU0tIb1liQ2dYWDhjM3JVVFhYRVhFWEpXVlh3OGF5M0RNYzhuZFdaUlRIRnJ2eXR2YzhaYTdtUXR5V010R3RpNjlkeVNOWllpeDVpS3dGdm9MQUdrekpWIiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOls0LHsiQ3VzdG9tIjo3fV19LCJsb2dzIjpbIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgc3VjY2VzcyIsIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIENvbXB1dGVCdWRnZXQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBzdWNjZXNzIiwiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIGludm9rZSBbMV0iLCJQcm9ncmFtIENvbXB1dGVCdWRnZXQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgc3VjY2VzcyIsIlByb2dyYW0gRGlhYkxva3hpc0dSOFA0UXFwMlFMNlBtQmhoVnNkelBzdENFNFdvTHhjNXogaW52b2tlIFsxXSIsIlByb2dyYW0gRGlhYkxva3hpc0dSOFA0UXFwMlFMNlBtQmhoVnNkelBzdENFNFdvTHhjNXogY29uc3VtZWQgNTg1ODIgb2YgMzI3NDAwIGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIHJldHVybjogRGlhYkxva3hpc0dSOFA0UXFwMlFMNlBtQmhoVnNkelBzdENFNFdvTHhjNXogL3dBQUFBQUFBQUFBQUFBQUFBQUFBQUFHQUE9PSIsIlByb2dyYW0gRGlhYkxva3hpc0dSOFA0UXFwMlFMNlBtQmhoVnNkelBzdENFNFdvTHhjNXogZmFpbGVkOiBjdXN0b20gcHJvZ3JhbSBlcnJvcjogMHg3Il19fSwic3Vic2NyaXB0aW9uIjoyNDcxNzMwMTN9fQ==",
+          "sanitizedBytes": 1114,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749090739,
+          "receivedMonoMs": 32055.927316,
+          "connection": 1,
+          "sequence": 3000,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745273,
+          "extractedSignature": "5hWdd7GPF2C4WwCJi1kcbYn3sdXoL4eEcL4kcLWGVTTWt7U8Rqa9kYQvKXXPSWLPdrS14EYPMwW8cZj4ELtNxeuC",
+          "observationSignature": "5hWdd7GPF2C4WwCJi1kcbYn3sdXoL4eEcL4kcLWGVTTWt7U8Rqa9kYQvKXXPSWLPdrS14EYPMwW8cZj4ELtNxeuC",
+          "originalSha256": "d3cc9a141ed04b7bbe909827373c6031d0971551460b449f82a76609c6230e5c",
+          "originalBytes": 2422,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUyNzN9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiI1aFdkZDdHUEYyQzRXd0NKaTFrY2JZbjNzZFhvTDRlRWNMNGtjTFdHVlRUV3Q3VThScWE5a1lRdktYWFBTV0xQZHJTMTRFWVBNd1c4Y1pqNEVMdE54ZXVDIiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOlsxLHsiQ3VzdG9tIjo2MDQwfV19LCJsb2dzIjpbIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgc3VjY2VzcyIsIlByb2dyYW0gZnhja3NvMWc0elBHV2NvQXRzZ0tzYXRmaWNDQ1BTSEFMMWJXRk12U1N6QSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IFN3YXAyIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbM10iLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gY29uc3VtZWQgNzcyIG9mIDg5Njc5IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gc3VjY2VzcyIsIlByb2dyYW0gVG9rZW5rZWdRZmVaeWlOd0FKYk5iR0tQRlhDV3VCdmY5U3M2MjNWUTVEQSBpbnZva2UgWzNdIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIGNvbnN1bWVkIDExMiBvZiA4Njg2NSBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIHN1Y2Nlc3MiLCJQcm9ncmFtIFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgaW52b2tlIFszXSIsIlByb2dyYW0gbG9nOiBJbnN0cnVjdGlvbjogVHJhbnNmZXJDaGVja2VkIiwiUHJvZ3JhbSBUb2tlbnpRZEJOYkxxUDVWRWhka0FTNkVQRkxDMVBIbkJxQ1hFcFB4dUViIGNvbnN1bWVkIDQwMDggb2YgODM2MTQgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBzdWNjZXNzIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbM10iLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gY29uc3VtZWQgNzcyIG9mIDc2ODk1IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gc3VjY2VzcyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBjb25zdW1lZCAzOTg0NyBvZiAxMTQ4MDEgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBzdWNjZXNzIiwiUHJvZ3JhbSBwQU1NQmF5Nm9jZUg5ZkpLQlJIR1A1RDRiRDRzV3BtU3dNbjUyRk1mWEVBIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IEJ1eUV4YWN0UXVvdGVJblYyIiwiUHJvZ3JhbSBsb2c6IEFuY2hvckVycm9yIHRocm93biBpbiBwcm9ncmFtcy9wdW1wLWFtbS9zcmMvaW5zdHJ1Y3Rpb25zL3N3YXAvdHJhZGVfdjIucnM6ODE2LiBFcnJvciBDb2RlOiBCdXlTbGlwcGFnZUJlbG93TWluQmFzZUFtb3VudE91dC4gRXJyb3IgTnVtYmVyOiA2MDQwLiBFcnJvciBNZXNzYWdlOiBidXk6IHNsaXBwYWdlIC0gd291bGQgYnV5IGxlc3MgdG9rZW5zIHRoYW4gZXhwZWN0ZWQgbWluX2Jhc2VfYW1vdW50X291dC4iLCJQcm9ncmFtIGxvZzogTGVmdDogODYyODkzOTcyNDU0IiwiUHJvZ3JhbSBsb2c6IFJpZ2h0OiA5MjE1ODczMzg1MzQiLCJQcm9ncmFtIHBBTU1CYXk2b2NlSDlmSktCUkhHUDVENGJENHNXcG1Td01uNTJGTWZYRUEgY29uc3VtZWQgMzE0NDkgb2YgNzAwMDQgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gcEFNTUJheTZvY2VIOWZKS0JSSEdQNUQ0YkQ0c1dwbVN3TW41MkZNZlhFQSBmYWlsZWQ6IGN1c3RvbSBwcm9ncmFtIGVycm9yOiAweDE3OTgiLCJQcm9ncmFtIGZ4Y2tzbzFnNHpQR1djb0F0c2dLc2F0ZmljQ0NQU0hBTDFiV0ZNdlNTekEgY29uc3VtZWQgODUzMDQgb2YgMTIzODU5IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIGZ4Y2tzbzFnNHpQR1djb0F0c2dLc2F0ZmljQ0NQU0hBTDFiV0ZNdlNTekEgZmFpbGVkOiBjdXN0b20gcHJvZ3JhbSBlcnJvcjogMHgxNzk4Il19fSwic3Vic2NyaXB0aW9uIjoyNDcxNzMwMTN9fQ==",
+          "sanitizedBytes": 2422,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749097162,
+          "receivedMonoMs": 38478.982602,
+          "connection": 1,
+          "sequence": 4000,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745307,
+          "extractedSignature": "4LTU7W7CfCjnmWnvnWsbk3J8Hyc2p1LKZoqSRgwdrfjLC7Zc56DT1dhFB3s5JHU5m26hLitQB3bcxtFoe5VqiDuj",
+          "observationSignature": "4LTU7W7CfCjnmWnvnWsbk3J8Hyc2p1LKZoqSRgwdrfjLC7Zc56DT1dhFB3s5JHU5m26hLitQB3bcxtFoe5VqiDuj",
+          "originalSha256": "400b7b562301e88f58b290083f95a4e710f5761a099e65c0e553f20100d7be79",
+          "originalBytes": 658,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUzMDd9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiI0TFRVN1c3Q2ZDam5tV252bldzYmszSjhIeWMycDFMS1pvcVNSZ3dkcmZqTEM3WmM1NkRUMWRoRkIzczVKSFU1bTI2aExpdFFCM2JjeHRGb2U1VnFpRHVqIiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOlswLHsiQ3VzdG9tIjo0MDk2N31dfSwibG9ncyI6WyJQcm9ncmFtIEN2ZjVHYjd3Z1MzTHZDRGVlY3c1eW9hQVdvOFN5UEczNjI0Q3pSRmtyZlpwIGludm9rZSBbMV0iLCJQcm9ncmFtIGxvZzogMHg1MTJlZSwgMHg2LCAweGZmZmZmZmZmZmZmZmZmZmYsIDB4MCwgMHgwIiwiUHJvZ3JhbSBsb2c6IDB4NTEyZjcsIDB4NjAwMDAwMDAwMDA5YTY5LCAweDAsIDB4MCwgMHgwIiwiUHJvZ3JhbSBDdmY1R2I3d2dTM0x2Q0RlZWN3NXlvYUFXbzhTeVBHMzYyNEN6UkZrcmZacCBjb25zdW1lZCA1MjA3MCBvZiA1MzM1ODAgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gQ3ZmNUdiN3dnUzNMdkNEZWVjdzV5b2FBV284U3lQRzM2MjRDelJGa3JmWnAgZmFpbGVkOiBjdXN0b20gcHJvZ3JhbSBlcnJvcjogMHhhMDA3Il19fSwic3Vic2NyaXB0aW9uIjoyNDcxNzMwMTN9fQ==",
+          "sanitizedBytes": 658,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749103600,
+          "receivedMonoMs": 44917.173341,
+          "connection": 1,
+          "sequence": 5000,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745344,
+          "extractedSignature": "23fea4C2d1G8sseqQTrbgTND6m4cJ5WMJYNoo5XmLKa9oBPBjtpZTkjVKfqwZzCen6PvDR5u2kGw4UZZ1qoESeBX",
+          "observationSignature": "23fea4C2d1G8sseqQTrbgTND6m4cJ5WMJYNoo5XmLKa9oBPBjtpZTkjVKfqwZzCen6PvDR5u2kGw4UZZ1qoESeBX",
+          "originalSha256": "5019b2d0580f191a5bf578ee7a6aa5c405e361e47b135cb7bbee7bc4e2c7b7a6",
+          "originalBytes": 2422,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUzNDR9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiIyM2ZlYTRDMmQxRzhzc2VxUVRyYmdUTkQ2bTRjSjVXTUpZTm9vNVhtTEthOW9CUEJqdHBaVGtqVktmcXdaekNlbjZQdkRSNXUya0d3NFVaWjFxb0VTZUJYIiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOlsxLHsiQ3VzdG9tIjo2MDQwfV19LCJsb2dzIjpbIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgc3VjY2VzcyIsIlByb2dyYW0gZnhja3NvMWc0elBHV2NvQXRzZ0tzYXRmaWNDQ1BTSEFMMWJXRk12U1N6QSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IFN3YXAyIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbM10iLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gY29uc3VtZWQgNzcyIG9mIDg1NzIzIGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gc3VjY2VzcyIsIlByb2dyYW0gVG9rZW5rZWdRZmVaeWlOd0FKYk5iR0tQRlhDV3VCdmY5U3M2MjNWUTVEQSBpbnZva2UgWzNdIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIGNvbnN1bWVkIDExMiBvZiA4MjkwOSBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSBUb2tlbmtlZ1FmZVp5aU53QUpiTmJHS1BGWENXdUJ2ZjlTczYyM1ZRNURBIHN1Y2Nlc3MiLCJQcm9ncmFtIFRva2VuelFkQk5iTHFQNVZFaGRrQVM2RVBGTEMxUEhuQnFDWEVwUHh1RWIgaW52b2tlIFszXSIsIlByb2dyYW0gbG9nOiBJbnN0cnVjdGlvbjogVHJhbnNmZXJDaGVja2VkIiwiUHJvZ3JhbSBUb2tlbnpRZEJOYkxxUDVWRWhka0FTNkVQRkxDMVBIbkJxQ1hFcFB4dUViIGNvbnN1bWVkIDQwMDggb2YgNzk2NTggY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gVG9rZW56UWRCTmJMcVA1VkVoZGtBUzZFUEZMQzFQSG5CcUNYRXBQeHVFYiBzdWNjZXNzIiwiUHJvZ3JhbSBMQlVaS2hSeFBGM1hVcEJDanA0WXpUS2dMY2NqWmhUU0RNOVl1VmFQd3hvIGludm9rZSBbM10iLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gY29uc3VtZWQgNzcyIG9mIDcyOTM5IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIExCVVpLaFJ4UEYzWFVwQkNqcDRZelRLZ0xjY2paaFRTRE05WXVWYVB3eG8gc3VjY2VzcyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBjb25zdW1lZCA0NTM4MyBvZiAxMTYzODEgY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gTEJVWktoUnhQRjNYVXBCQ2pwNFl6VEtnTGNjalpoVFNETTlZdVZhUHd4byBzdWNjZXNzIiwiUHJvZ3JhbSBwQU1NQmF5Nm9jZUg5ZkpLQlJIR1A1RDRiRDRzV3BtU3dNbjUyRk1mWEVBIGludm9rZSBbMl0iLCJQcm9ncmFtIGxvZzogSW5zdHJ1Y3Rpb246IEJ1eUV4YWN0UXVvdGVJblYyIiwiUHJvZ3JhbSBsb2c6IEFuY2hvckVycm9yIHRocm93biBpbiBwcm9ncmFtcy9wdW1wLWFtbS9zcmMvaW5zdHJ1Y3Rpb25zL3N3YXAvdHJhZGVfdjIucnM6ODE2LiBFcnJvciBDb2RlOiBCdXlTbGlwcGFnZUJlbG93TWluQmFzZUFtb3VudE91dC4gRXJyb3IgTnVtYmVyOiA2MDQwLiBFcnJvciBNZXNzYWdlOiBidXk6IHNsaXBwYWdlIC0gd291bGQgYnV5IGxlc3MgdG9rZW5zIHRoYW4gZXhwZWN0ZWQgbWluX2Jhc2VfYW1vdW50X291dC4iLCJQcm9ncmFtIGxvZzogTGVmdDogNzA1NTc3OTk4OTEzIiwiUHJvZ3JhbSBsb2c6IFJpZ2h0OiA3OTQ4NzQ5OTk4NTUiLCJQcm9ncmFtIHBBTU1CYXk2b2NlSDlmSktCUkhHUDVENGJENHNXcG1Td01uNTJGTWZYRUEgY29uc3VtZWQgMzI5NDggb2YgNjYwNDggY29tcHV0ZSB1bml0cyIsIlByb2dyYW0gcEFNTUJheTZvY2VIOWZKS0JSSEdQNUQ0YkQ0c1dwbVN3TW41MkZNZlhFQSBmYWlsZWQ6IGN1c3RvbSBwcm9ncmFtIGVycm9yOiAweDE3OTgiLCJQcm9ncmFtIGZ4Y2tzbzFnNHpQR1djb0F0c2dLc2F0ZmljQ0NQU0hBTDFiV0ZNdlNTekEgY29uc3VtZWQgOTIzMzkgb2YgMTI1NDM5IGNvbXB1dGUgdW5pdHMiLCJQcm9ncmFtIGZ4Y2tzbzFnNHpQR1djb0F0c2dLc2F0ZmljQ0NQU0hBTDFiV0ZNdlNTekEgZmFpbGVkOiBjdXN0b20gcHJvZ3JhbSBlcnJvcjogMHgxNzk4Il19fSwic3Vic2NyaXB0aW9uIjoyNDcxNzMwMTN9fQ==",
+          "sanitizedBytes": 2422,
+          "captureTruncated": false,
+          "byteExact": true
+        },
+        {
+          "stage": "wire-to-observation",
+          "at": 1794749112218,
+          "receivedMonoMs": 53534.607732,
+          "connection": 1,
+          "sequence": 6000,
+          "providerHost": "api.mainnet-beta.solana.com",
+          "outcome": "normalized-observation",
+          "program": "meteora-dlmm",
+          "subscription": 247173013,
+          "slot": 469745392,
+          "extractedSignature": "2dmMHAY3fCEH7aKJVfAUNBTdGeDvpfqyzKJU9ozj4xWSFEK1gZbk79ss1425npzLeaYkRXa8EXibeyL9MK85MgL3",
+          "observationSignature": "2dmMHAY3fCEH7aKJVfAUNBTdGeDvpfqyzKJU9ozj4xWSFEK1gZbk79ss1425npzLeaYkRXa8EXibeyL9MK85MgL3",
+          "originalSha256": "033b96d54c81269352d41b14a8dd1ab423546b530e8bfa6e9c7169f6658b0942",
+          "originalBytes": 1157,
+          "sanitizedBase64": "eyJqc29ucnBjIjoiMi4wIiwibWV0aG9kIjoibG9nc05vdGlmaWNhdGlvbiIsInBhcmFtcyI6eyJyZXN1bHQiOnsiY29udGV4dCI6eyJzbG90Ijo0Njk3NDUzOTJ9LCJ2YWx1ZSI6eyJzaWduYXR1cmUiOiIyZG1NSEFZM2ZDRUg3YUtKVmZBVU5CVGRHZUR2cGZxeXpLSlU5b3pqNHhXU0ZFSzFnWmJrNzlzczE0MjVucHpMZWFZa1JYYThFWGliZXlMOU1LODVNZ0wzIiwiZXJyIjp7Ikluc3RydWN0aW9uRXJyb3IiOls0LHsiQ3VzdG9tIjo5MTAxfV19LCJsb2dzIjpbIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgc3VjY2VzcyIsIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBpbnZva2UgWzFdIiwiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIHN1Y2Nlc3MiLCJQcm9ncmFtIENvbXB1dGVCdWRnZXQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgaW52b2tlIFsxXSIsIlByb2dyYW0gQ29tcHV0ZUJ1ZGdldDExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSBzdWNjZXNzIiwiUHJvZ3JhbSBDb21wdXRlQnVkZ2V0MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIGludm9rZSBbMV0iLCJQcm9ncmFtIENvbXB1dGVCdWRnZXQxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEgc3VjY2VzcyIsIlByb2dyYW0gRUhicGRpOFdyYUhnamNRZWJrUFRqZ1JRRUhVaGlheURyM1NYRnljMnVQcHIgaW52b2tlIFsxXSIsIlByb2dyYW0gRUhicGRpOFdyYUhnamNRZWJrUFRqZ1JRRUhVaGlheURyM1NYRnljMnVQcHIgY29uc3VtZWQgMTI5OTY4IG9mIDMzNzA1MCBjb21wdXRlIHVuaXRzIiwiUHJvZ3JhbSByZXR1cm46IEVIYnBkaThXcmFIZ2pjUWVia1BUamdSUUVIVWhpYXlEcjNTWEZ5YzJ1UHByIEFRSC9BQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUNnQ1MzUU1Ba3QwREFBPT0iLCJQcm9ncmFtIEVIYnBkaThXcmFIZ2pjUWVia1BUamdSUUVIVWhpYXlEcjNTWEZ5YzJ1UHByIGZhaWxlZDogY3VzdG9tIHByb2dyYW0gZXJyb3I6IDB4MjM4ZCJdfX0sInN1YnNjcmlwdGlvbiI6MjQ3MTczMDEzfX0=",
+          "sanitizedBytes": 1157,
+          "captureTruncated": false,
+          "byteExact": true
+        }
+      ],
+      "acks": [
+        {
+          "jsonrpc": "2.0",
+          "result": 247173013,
+          "id": 1
+        }
+      ],
+      "errors": [],
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com"
+        ],
+        "elapsedMs": 60001.536066,
+        "wallElapsedMs": 60001,
+        "clockDiscontinuityMs": -0.5360660000005737,
+        "connectedMs": 59100.206406000005,
+        "acknowledgedMs": 58935.626711000004,
+        "disconnectedMs": 901.3296599999958,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 0,
+        "cooldownsUntilMono": [
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 901.3082399999998,
+            "toMs": 60001.514646,
+            "subscribed": true,
+            "acknowledgedFromMs": 1065.8879350000002,
+            "lastReceiptMs": 59944.050528
+          }
+        ],
+        "events": [
+          {
+            "atMs": 901.3149779999999,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 1065.8959989999998,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 60002.690498,
+            "provider": 0,
+            "kind": "run-deadline"
+          }
+        ],
+        "liveTrading": false
+      }
+    }
+  ],
+  "scope": "Two distinct 60-second single-venue transport controls, not added to the primary window, not creation verification, not independent authenticated providers, no market decisions or fills.",
+  "paperEntries": 0,
+  "paperExits": 0,
+  "liveTrading": false
+}

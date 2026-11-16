@@ -1,0 +1,20 @@
+{
+  "cwd": "/home/lkazaz/Desktop/mintbot",
+  "args": [
+    "node",
+    "--import",
+    "tsx",
+    "scripts/phase9-performance-benchmark.ts",
+    "--before-root",
+    "/tmp/mintbot-phase10-phase9-final-k4l7lpn_",
+    "--runs",
+    "3",
+    "--scenarios",
+    "durable-burst-200",
+    "--load-scope",
+    "Single bounded Node22 mainnet research container only; no concurrent Mintbot tests, builds or DB probes during measurement; other shared-host load uncontrolled",
+    "--output",
+    "/home/lkazaz/Desktop/mintbot/docs/phase10/performance-current-delivery.json"
+  ],
+  "scope": "Current delivered ingestion/WAL changes versus archived final Phase9. Shared dependencies, fixed offers, same durability; single observer and uncontrolled other host load."
+}

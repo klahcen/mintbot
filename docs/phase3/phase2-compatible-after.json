@@ -1,0 +1,4102 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-06T15:00:51.956Z",
+  "environment": {
+    "node": "v20.19.5",
+    "cpu": "11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz",
+    "platform": "linux"
+  },
+  "sourceRoot": "/home/lkazaz/Desktop/mintbot",
+  "staged": true,
+  "sourceSha256": {
+    "engine": "19fece5ccd8f759d683a58828c808ddc089f2caf3d83134b1c47101b8e32b161",
+    "store": "42c7168b3e5f26359b8c4db0b5b150ce5e438270ca11b4c98c0efd37065a07a1",
+    "chain": "81c9483f082e0625fa30975f95418be2b334fc605b5dca1829541ea42cce0459",
+    "model": "56f76f1a7c1b205d1a9cdec51a268fd4f64319c29d3748044536b0fb1f7c2c82",
+    "queue": "2d216059da36ab41446297c0d47f7de8da52ae1eed3dfb68f343fc991c4aaca4",
+    "ingestion": "279f20f0e7763940d0d730507e3f7329d0159e9ddbd9cd8e7a217af40658dcaa",
+    "event-journal": "16aca9c075f9fbda40757aab8acd1145a1548f08d87fde5762bb7860dc2a285e",
+    "backfill": "f2103f6ea7a3a82392639bf966c27f0ea1cc5445a007d889280e3e1464ccda96",
+    "stages": "459509ec514826da72bb77a79cb4bd496d39d72b008cabcf9a1ba03ab240c94d"
+  },
+  "harnessSha256": "ca4fab09540f7bc6584fe2ddc604508e6f625863043a0f712836c8957301680d",
+  "scope": "Offline synthetic Pump logs and independent paper quotes; mocked historical swap reads and bounded RPC backfill. Each scenario is one run. Before/after use the same harness with legacy/staged adapters and identical offers. Legacy queue capacity 1024 (64 in saturation); new RAM flow 128 and journal pending 10000 (64 in saturation). Durable-burst includes actual filesystem writes, new WAL fsync and Store snapshots. Other scenarios are in-memory. Withheld fixture emission times are known only to this harness; they are not blockchain detection times. Memory peaks are sampled, process maxRSS includes earlier scenarios, event-loop delay uses 10ms sampling. One repeated mint in main fixtures has deliberate PDA cache locality; unique-mint cold decode is measured separately.",
+  "results": [
+    {
+      "scenario": "burst-1000",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 0,
+      "completed": 1000,
+      "completedEventsPerSecond": 876.742789646037,
+      "elapsedMs": 1140.5853710000001,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 872,
+      "deferredCompleted": 872,
+      "recovered": 0,
+      "rpcErrors": 59,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 650.5080029999999,
+          "p95": 985.5325710000002,
+          "p99": 1003.257355,
+          "max": 1005.578315
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 1231.8823140000002,
+        "counters": {
+          "ingest.resumed_from_wal": 0,
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "ingest.offered": 1000,
+          "observations.delivered": 1000,
+          "ingest.deferred": 872,
+          "ingest.decode.offered": 1000,
+          "ingest.decode.admitted": 1000,
+          "decoding.pda_cache_misses": 1,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "ingest.decode.completed": 1000,
+          "ingest.enrichment.offered": 1000,
+          "ingest.enrichment.admitted": 1000,
+          "rpc.calls": 1000,
+          "decoding.pda_cache_hits": 999,
+          "rpc.errors": 59,
+          "ingest.enrichment.completed": 1000,
+          "ingest.strategy.offered": 1000,
+          "ingest.strategy.admitted": 1000,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "ingest.strategy.completed": 1000,
+          "ingest.persistence.offered": 1000,
+          "ingest.persistence.admitted": 1000,
+          "ingest.persistence.completed": 1000,
+          "ingest.completed": 1000,
+          "strategy.rejected": 995,
+          "ingest.deferred_completed": 872
+        },
+        "gauges": {
+          "ingest.in_flight": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.pending": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.queue_depth": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.enrichment.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.in_flight": {
+            "current": 0,
+            "peak": 4
+          },
+          "ingest.strategy.pending": {
+            "current": 0,
+            "peak": 63
+          },
+          "ingest.strategy.queue_depth": {
+            "current": 0,
+            "peak": 63
+          },
+          "ingest.strategy.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.007454000000052474,
+            "p95": 0.015266999999994368,
+            "p99": 0.02424099999984719,
+            "max": 0.08124999999995453
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.10446900000010828,
+            "p95": 0.15944600000011633,
+            "p99": 0.3560299999999188,
+            "max": 3.257517999999891
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.000354999999899519,
+            "p95": 0.0011529999999311258,
+            "p99": 0.0017879999998058338,
+            "max": 0.1302290000000994
+          },
+          "ingest.receipt_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07957600000008824,
+            "p95": 0.11454500000013468,
+            "p99": 0.2888479999999163,
+            "max": 2.978067999999894
+          },
+          "ingest.decode.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 25.27511800000002,
+            "p95": 114.48729200000002,
+            "p99": 147.66936699999997,
+            "max": 171.00037099999986
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.10533299999997325,
+            "p95": 0.23658799999998337,
+            "p99": 0.38348099999984697,
+            "max": 3.7815120000000206
+          },
+          "ingest.decode.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.13774100000000544,
+            "p95": 0.31383599999981016,
+            "p99": 0.9347549999999956,
+            "max": 7.686077999999952
+          },
+          "ingest.decode.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 593.427882,
+            "p95": 929.4873729999999,
+            "p99": 952.5242430000003,
+            "max": 976.3790820000002
+          },
+          "ingest.enrichment.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.12202900000011141,
+            "p95": 5.39925600000015,
+            "p99": 21.673399000000245,
+            "max": 26.84408799999983
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.10606200000029276,
+            "p95": 0.25684000000001106,
+            "p99": 0.5063419999999041,
+            "max": 6.116111000000046
+          },
+          "ingest.enrichment.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.4118119999998271,
+            "p95": 0.8496459999998933,
+            "p99": 2.7340979999999035,
+            "max": 18.18400799999995
+          },
+          "ingest.enrichment.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 593.9413420000001,
+            "p95": 929.9752710000002,
+            "p99": 952.9069170000002,
+            "max": 976.7425350000001
+          },
+          "ingest.strategy.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 43.48930100000007,
+            "p95": 52.10274900000013,
+            "p99": 54.039077000000134,
+            "max": 55.92401700000005
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.020042999999986932,
+            "p95": 0.06271500000002561,
+            "p99": 0.14583599999991748,
+            "max": 4.622483999999986
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0028690000003734895,
+            "p95": 0.006991000000198255,
+            "p99": 0.12616000000002714,
+            "max": 0.47292300000003706
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.08284499999990658,
+            "p95": 0.16068300000006275,
+            "p99": 0.2567409999996926,
+            "max": 1.813993999999866
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.05483800000001793,
+            "p95": 0.11378800000011324,
+            "p99": 0.16588499999988926,
+            "max": 0.32454199999983757
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.004050000000006548,
+            "p95": 0.009726000000227941,
+            "p99": 0.017440999999962514,
+            "max": 0.2145509999998012
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.007716000000073109,
+            "p95": 0.01607300000023315,
+            "p99": 0.038598000000092725,
+            "max": 0.24943199999984245
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.22232700000017758,
+            "p95": 0.22737499999993815,
+            "p99": 0.22737499999993815,
+            "max": 0.3048039999998764
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.23666800000000876,
+            "p95": 0.48835799999983465,
+            "p99": 1.2180069999999432,
+            "max": 7.144880000000057
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.42415200000004916,
+            "p95": 0.8978900000001886,
+            "p99": 1.8417239999998856,
+            "max": 8.700890000000072
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.44953899999973146,
+            "p95": 0.9218869999999697,
+            "p99": 2.2670889999999417,
+            "max": 16.106915000000072
+          },
+          "ingest.strategy.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.4644429999998465,
+            "p95": 0.938658999999916,
+            "p99": 2.5259329999998954,
+            "max": 18.275120000000015
+          },
+          "ingest.strategy.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 634.827311,
+            "p95": 973.1394530000002,
+            "p99": 998.7883999999999,
+            "max": 1004.4990060000002
+          },
+          "ingest.persistence.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 18.551822000000357,
+            "p95": 27.911648000000014,
+            "p99": 30.336720000000014,
+            "max": 31.743831000000228
+          },
+          "ingest.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 650.49288,
+            "p95": 985.51079,
+            "p99": 1003.2400260000002,
+            "max": 1005.566311
+          },
+          "ingest.persistence.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.03825700000015786,
+            "p95": 0.17416199999979654,
+            "p99": 2.1689360000000306,
+            "max": 3.648149000000103
+          },
+          "ingest.persistence.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 650.496175,
+            "p95": 985.5148120000001,
+            "p99": 1003.2439219999999,
+            "max": 1005.5689499999999
+          }
+        }
+      },
+      "recovery": null,
+      "journal": {
+        "accepting": true,
+        "fatal": null,
+        "inFlight": 0,
+        "capacity": 128,
+        "resumedPending": 0,
+        "decodedCoverage": [
+          {
+            "program": "pump",
+            "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "verifiedDecoder": true,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_v2"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": "https://github.com/pump-fun/pump-public-docs/blob/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json"
+          },
+          {
+            "program": "pumpswap",
+            "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_pool"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "raydium-cpmm",
+            "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+            "verifiedInstructions": [
+              "initialize"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "meteora-dlmm",
+            "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "af36dd53ab180783ccecda306926189a4700953c",
+            "verifiedInstructions": [
+              "initialize_lb_pair"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          }
+        ],
+        "pending": 0,
+        "pendingPeak": 1000,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 0,
+        "maxBytes": 67108864,
+        "durable": false,
+        "anchors": {
+          "pump": {
+            "signature": "fixture-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "memory": {
+        "before": {
+          "rss": 137285632,
+          "heapTotal": 61956096,
+          "heapUsed": 26232560,
+          "external": 4291278,
+          "arrayBuffers": 109041
+        },
+        "after": {
+          "rss": 153583616,
+          "heapTotal": 63528960,
+          "heapUsed": 35222904,
+          "external": 4226760,
+          "arrayBuffers": 44483
+        },
+        "sampledPeakRssBytes": 155103232,
+        "sampledPeakHeapUsedBytes": 44536056,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 28.201088,
+        "p95": 35.520511,
+        "p99": 36.470783,
+        "max": 36.470783
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "stress-10000",
+      "offered": 10000,
+      "uniqueOffered": 10000,
+      "networkWithheld": 0,
+      "completed": 10000,
+      "completedEventsPerSecond": 590.0732005649463,
+      "elapsedMs": 16947.049942999998,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 9872,
+      "deferredCompleted": 9872,
+      "recovered": 0,
+      "rpcErrors": 589,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 10000,
+          "samples": 10000,
+          "p50": 5957.214534,
+          "p95": 15074.159599999999,
+          "p99": 16153.172905000001,
+          "max": 16349.10168
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 17687.490634,
+        "counters": {
+          "ingest.resumed_from_wal": 0,
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 10001,
+          "observations.received": 10000,
+          "ingest.offered": 10000,
+          "observations.delivered": 10000,
+          "ingest.deferred": 9872,
+          "ingest.decode.offered": 10000,
+          "ingest.decode.admitted": 10000,
+          "decoding.pda_cache_hits": 10000,
+          "decoding.completed": 10000,
+          "decoding.launches": 10000,
+          "ingest.decode.completed": 10000,
+          "ingest.enrichment.offered": 10000,
+          "ingest.enrichment.admitted": 10000,
+          "rpc.calls": 10000,
+          "rpc.errors": 589,
+          "ingest.enrichment.completed": 10000,
+          "ingest.strategy.offered": 10000,
+          "ingest.strategy.admitted": 10000,
+          "ingestion.received": 10000,
+          "strategy.decisions": 10000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 10000,
+          "ingestion.completed": 10000,
+          "ingestion.buys_committed": 5,
+          "ingest.strategy.completed": 10000,
+          "ingest.persistence.offered": 10000,
+          "ingest.persistence.admitted": 10000,
+          "ingest.persistence.completed": 10000,
+          "ingest.completed": 10000,
+          "strategy.rejected": 9995,
+          "ingest.deferred_completed": 9872
+        },
+        "gauges": {
+          "ingest.in_flight": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.pending": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.queue_depth": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.enrichment.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.in_flight": {
+            "current": 0,
+            "peak": 4
+          },
+          "ingest.strategy.pending": {
+            "current": 0,
+            "peak": 63
+          },
+          "ingest.strategy.queue_depth": {
+            "current": 0,
+            "peak": 63
+          },
+          "ingest.strategy.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 10001,
+            "samples": 10000,
+            "p50": 0.005142999999861786,
+            "p95": 0.008962999999766907,
+            "p99": 0.013099000000238448,
+            "max": 0.06653999999980442
+          },
+          "monitor.ingestion_ms": {
+            "count": 10001,
+            "samples": 10000,
+            "p50": 0.03768900000022768,
+            "p95": 0.06519199999956982,
+            "p99": 0.08908599999995204,
+            "max": 3.759737000000314
+          },
+          "monitor.deduplication_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.0002620000000206346,
+            "p95": 0.0003390000001672888,
+            "p99": 0.00044699999989461503,
+            "max": 0.01415499999984604
+          },
+          "ingest.receipt_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.02727900000036243,
+            "p95": 0.0476979999998548,
+            "p99": 0.06563799999958064,
+            "max": 3.236626999999771
+          },
+          "ingest.decode.queue_wait_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 47.691350000000966,
+            "p95": 80.42172299999947,
+            "p99": 87.9585619999998,
+            "max": 104.97749699999986
+          },
+          "decoding_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.0739819999998872,
+            "p95": 0.14641300000221236,
+            "p99": 0.19495499999902677,
+            "max": 0.7779690000006667
+          },
+          "ingest.decode.processing_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.09138700000039535,
+            "p95": 0.19990799999959563,
+            "p99": 0.2810260000001108,
+            "max": 0.8426720000006753
+          },
+          "ingest.decode.end_to_end_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 5840.9063160000005,
+            "p95": 14902.323015999998,
+            "p99": 15980.83885,
+            "max": 16227.985116000002
+          },
+          "ingest.enrichment.queue_wait_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.1036020000001372,
+            "p95": 0.19684300000017174,
+            "p99": 55.30334400000174,
+            "max": 99.5830930000011
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.07578500000090571,
+            "p95": 0.16379800000140676,
+            "p99": 0.23321599999871978,
+            "max": 0.7914369999998598
+          },
+          "ingest.enrichment.processing_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.30350299999918207,
+            "p95": 0.5252339999997275,
+            "p99": 0.6806470000010449,
+            "max": 1.5466820000001462
+          },
+          "ingest.enrichment.end_to_end_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 5841.236459,
+            "p95": 14902.70063,
+            "p99": 15981.232285000002,
+            "max": 16228.202468000001
+          },
+          "ingest.strategy.queue_wait_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 72.56340099999943,
+            "p95": 132.8087940000005,
+            "p99": 151.91207399999985,
+            "max": 184.18052799999896
+          },
+          "ingestion.validation_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.009178999998766812,
+            "p95": 0.028744000000187953,
+            "p99": 0.049641999999948894,
+            "max": 8.323168999999325
+          },
+          "store.queue_wait_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.002278999998452491,
+            "p95": 0.0050449999998818384,
+            "p99": 0.008377999999538588,
+            "max": 0.30428500000016356
+          },
+          "store.clone_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.09288799999922048,
+            "p95": 0.18925800000033632,
+            "p99": 0.8273489999992307,
+            "max": 1.727748999999676
+          },
+          "engine.deduplication_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.48309300000073563,
+            "p95": 1.0804930000012973,
+            "p99": 1.692017000001215,
+            "max": 5.015851999998631
+          },
+          "risk_evaluation_ms": {
+            "count": 20000,
+            "samples": 10000,
+            "p50": 0.0035170000010111835,
+            "p95": 0.010654000001522945,
+            "p99": 0.015533999998297077,
+            "max": 0.06280500000139
+          },
+          "strategy_decision_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.0036179999988235068,
+            "p95": 0.01053200000023935,
+            "p99": 0.019647000000986736,
+            "max": 0.3341609999997672
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.08988499999986743,
+            "p95": 0.11114399999996749,
+            "p99": 0.11114399999996749,
+            "max": 0.20222000000012486
+          },
+          "store.validation_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.5731959999993705,
+            "p95": 1.0851949999996577,
+            "p99": 1.7587509999993927,
+            "max": 3.1960780000008526
+          },
+          "store.transaction_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 1.213132000000769,
+            "p95": 2.443546000000424,
+            "p99": 3.14154199999939,
+            "max": 7.905258999999205
+          },
+          "ingestion_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 1.2291189999996277,
+            "p95": 2.475976999998238,
+            "p99": 3.1622989999996207,
+            "max": 13.386966000001848
+          },
+          "ingest.strategy.processing_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 1.2498279999999795,
+            "p95": 2.5081970000010188,
+            "p99": 3.1971690000009403,
+            "max": 13.426942999998573
+          },
+          "ingest.strategy.end_to_end_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 5918.480380999999,
+            "p95": 15058.66242,
+            "p99": 16100.583512000001,
+            "max": 16347.176672
+          },
+          "ingest.persistence.queue_wait_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 24.906693000000814,
+            "p95": 61.999479000000065,
+            "p99": 74.69630700000198,
+            "max": 96.85079500000211
+          },
+          "ingest.end_to_end_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 5957.20018,
+            "p95": 15074.149205999998,
+            "p99": 16153.163482999998,
+            "max": 16349.092848000002
+          },
+          "ingest.persistence.processing_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 0.027947999999014428,
+            "p95": 0.061625000000276486,
+            "p99": 0.19731899999987945,
+            "max": 1.4661090000008699
+          },
+          "ingest.persistence.end_to_end_ms": {
+            "count": 10000,
+            "samples": 10000,
+            "p50": 5957.203947,
+            "p95": 15074.152229,
+            "p99": 16153.166632999999,
+            "max": 16349.095760999999
+          }
+        }
+      },
+      "recovery": null,
+      "journal": {
+        "accepting": true,
+        "fatal": null,
+        "inFlight": 0,
+        "capacity": 128,
+        "resumedPending": 0,
+        "decodedCoverage": [
+          {
+            "program": "pump",
+            "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "verifiedDecoder": true,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_v2"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": "https://github.com/pump-fun/pump-public-docs/blob/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json"
+          },
+          {
+            "program": "pumpswap",
+            "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_pool"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "raydium-cpmm",
+            "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+            "verifiedInstructions": [
+              "initialize"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "meteora-dlmm",
+            "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "af36dd53ab180783ccecda306926189a4700953c",
+            "verifiedInstructions": [
+              "initialize_lb_pair"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          }
+        ],
+        "pending": 0,
+        "pendingPeak": 10000,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 10000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 0,
+        "maxBytes": 67108864,
+        "durable": false,
+        "anchors": {
+          "pump": {
+            "signature": "fixture-9999",
+            "slot": 10999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "memory": {
+        "before": {
+          "rss": 153714688,
+          "heapTotal": 63528960,
+          "heapUsed": 36457216,
+          "external": 4234277,
+          "arrayBuffers": 44483
+        },
+        "after": {
+          "rss": 167403520,
+          "heapTotal": 88612864,
+          "heapUsed": 57674280,
+          "external": 4428862,
+          "arrayBuffers": 372163
+        },
+        "sampledPeakRssBytes": 206630912,
+        "sampledPeakHeapUsedBytes": 95277600,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 52.15058607028754,
+        "p95": 83.951615,
+        "p99": 90.898431,
+        "max": 118.358015
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "sustained",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 0,
+      "completed": 1000,
+      "completedEventsPerSecond": 1230.920310519441,
+      "elapsedMs": 812.4002760000003,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 59,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 6.867913000001863,
+          "p95": 15.610555999999633,
+          "p99": 25.840157999999064,
+          "max": 32.02081499999986
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 896.3115070000022,
+        "counters": {
+          "ingest.resumed_from_wal": 0,
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "ingest.offered": 1000,
+          "observations.delivered": 1000,
+          "ingest.decode.offered": 1000,
+          "ingest.decode.admitted": 1000,
+          "decoding.pda_cache_hits": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "ingest.decode.completed": 1000,
+          "ingest.enrichment.offered": 1000,
+          "ingest.enrichment.admitted": 1000,
+          "rpc.calls": 1000,
+          "rpc.errors": 59,
+          "ingest.enrichment.completed": 1000,
+          "ingest.strategy.offered": 1000,
+          "ingest.strategy.admitted": 1000,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "ingest.strategy.completed": 1000,
+          "ingest.persistence.offered": 1000,
+          "ingest.persistence.admitted": 1000,
+          "ingest.persistence.completed": 1000,
+          "ingest.completed": 1000,
+          "strategy.rejected": 995
+        },
+        "gauges": {
+          "ingest.in_flight": {
+            "current": 0,
+            "peak": 17
+          },
+          "ingest.decode.pending": {
+            "current": 0,
+            "peak": 11
+          },
+          "ingest.decode.queue_depth": {
+            "current": 0,
+            "peak": 11
+          },
+          "ingest.decode.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.enrichment.pending": {
+            "current": 0,
+            "peak": 11
+          },
+          "ingest.enrichment.queue_depth": {
+            "current": 0,
+            "peak": 11
+          },
+          "ingest.enrichment.in_flight": {
+            "current": 0,
+            "peak": 4
+          },
+          "ingest.strategy.pending": {
+            "current": 0,
+            "peak": 13
+          },
+          "ingest.strategy.queue_depth": {
+            "current": 0,
+            "peak": 13
+          },
+          "ingest.strategy.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.pending": {
+            "current": 0,
+            "peak": 17
+          },
+          "ingest.persistence.queue_depth": {
+            "current": 0,
+            "peak": 17
+          },
+          "ingest.persistence.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.0053299999999580905,
+            "p95": 0.0222490000014659,
+            "p99": 0.025570999998308253,
+            "max": 0.05748200000016368
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.03729100000055041,
+            "p95": 0.09632799999963026,
+            "p99": 0.11933199999839417,
+            "max": 0.1541109999998298
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.00026200000138487667,
+            "p95": 0.0008369999995920807,
+            "p99": 0.0011240000021643937,
+            "max": 0.0016160000013769604
+          },
+          "ingest.receipt_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.02734700000291923,
+            "p95": 0.0587840000007418,
+            "p99": 0.0765430000028573,
+            "max": 0.12067600000227685
+          },
+          "ingest.decode.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1.4755409999997937,
+            "p95": 3.8140520000015385,
+            "p99": 6.353798000000097,
+            "max": 9.69713099999717
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07926399999996647,
+            "p95": 0.1516559999981837,
+            "p99": 0.1917170000015176,
+            "max": 0.29543699999703676
+          },
+          "ingest.decode.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.12043400000038673,
+            "p95": 0.3783479999983683,
+            "p99": 0.518181999999797,
+            "max": 0.7680230000005395
+          },
+          "ingest.decode.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 2.5451929999981076,
+            "p95": 5.546737000000576,
+            "p99": 7.868721000002552,
+            "max": 10.651863999999478
+          },
+          "ingest.enrichment.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.11402900000030058,
+            "p95": 0.7644550000004529,
+            "p99": 3.09586599999966,
+            "max": 5.1141050000005635
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.08549300000231597,
+            "p95": 0.1727919999975711,
+            "p99": 0.23417799999879207,
+            "max": 0.42062799999985145
+          },
+          "ingest.enrichment.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.4158769999994547,
+            "p95": 0.9830860000001849,
+            "p99": 1.206250999999611,
+            "max": 1.9030149999998685
+          },
+          "ingest.enrichment.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 3.260193000001891,
+            "p95": 6.447868999999628,
+            "p99": 9.172954000001482,
+            "max": 11.21686899999986
+          },
+          "ingest.strategy.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 1.856618999998318,
+            "p95": 3.6270760000006703,
+            "p99": 5.291197999998985,
+            "max": 15.077949999998964
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.006016999999701511,
+            "p95": 0.017465000000811415,
+            "p99": 0.027363000001059845,
+            "max": 0.27339099999881
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.03135099999781232,
+            "p95": 0.05687699999907636,
+            "p99": 0.08243899999797577,
+            "max": 0.328337000002648
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07587199999761651,
+            "p95": 0.1266219999997702,
+            "p99": 0.18425500000012107,
+            "max": 0.5112449999978708
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.047964999997930136,
+            "p95": 0.10810199999832548,
+            "p99": 0.14607600000090315,
+            "max": 0.4353229999978794
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.0022579999968002085,
+            "p95": 0.004699000000982778,
+            "p99": 0.006986000000324566,
+            "max": 0.020739000003231922
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.007647000002179993,
+            "p95": 0.013294000000314554,
+            "p99": 0.021624999997584382,
+            "max": 0.03298799999902258
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.016615999997156905,
+            "p95": 0.02515000000130385,
+            "p99": 0.02515000000130385,
+            "max": 0.06315600000016275
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.20353400000021793,
+            "p95": 0.30116699999780394,
+            "p99": 0.5067539999981818,
+            "max": 1.6462369999971997
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.3845660000006319,
+            "p95": 0.5970190000007278,
+            "p99": 0.8655020000005607,
+            "max": 1.9462230000026466
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.41147900000214577,
+            "p95": 0.8247630000005302,
+            "p99": 1.0927150000024994,
+            "max": 1.9759740000008605
+          },
+          "ingest.strategy.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.42790400000012596,
+            "p95": 1.1459700000013981,
+            "p99": 1.438160000001517,
+            "max": 2.187728999997489
+          },
+          "ingest.strategy.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 5.800440000002709,
+            "p95": 9.441790000000765,
+            "p99": 13.63524900000266,
+            "max": 20.080182000001514
+          },
+          "ingest.persistence.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.01932699999815668,
+            "p95": 6.76304700000037,
+            "p99": 9.842408999997133,
+            "max": 17.457949999999983
+          },
+          "ingest.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 6.858006999998906,
+            "p95": 15.600325999999768,
+            "p99": 25.829719000001205,
+            "max": 32.007142999998905
+          },
+          "ingest.persistence.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.29223500000080094,
+            "p95": 0.8031300000002375,
+            "p99": 1.006708000000799,
+            "max": 1.6460479999987
+          },
+          "ingest.persistence.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 6.862479999999778,
+            "p95": 15.604334999999992,
+            "p99": 25.833324999999604,
+            "max": 32.130528000001505
+          }
+        }
+      },
+      "recovery": null,
+      "journal": {
+        "accepting": true,
+        "fatal": null,
+        "inFlight": 0,
+        "capacity": 128,
+        "resumedPending": 0,
+        "decodedCoverage": [
+          {
+            "program": "pump",
+            "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "verifiedDecoder": true,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_v2"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": "https://github.com/pump-fun/pump-public-docs/blob/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json"
+          },
+          {
+            "program": "pumpswap",
+            "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_pool"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "raydium-cpmm",
+            "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+            "verifiedInstructions": [
+              "initialize"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "meteora-dlmm",
+            "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "af36dd53ab180783ccecda306926189a4700953c",
+            "verifiedInstructions": [
+              "initialize_lb_pair"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          }
+        ],
+        "pending": 0,
+        "pendingPeak": 27,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 0,
+        "maxBytes": 67108864,
+        "durable": false,
+        "anchors": {
+          "pump": {
+            "signature": "fixture-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "memory": {
+        "before": {
+          "rss": 167403520,
+          "heapTotal": 88612864,
+          "heapUsed": 59765944,
+          "external": 4428862,
+          "arrayBuffers": 372163
+        },
+        "after": {
+          "rss": 157896704,
+          "heapTotal": 78733312,
+          "heapUsed": 28270672,
+          "external": 4117566,
+          "arrayBuffers": 60867
+        },
+        "sampledPeakRssBytes": 167403520,
+        "sampledPeakHeapUsedBytes": 64647864,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 12.632064,
+        "p95": 16.662527,
+        "p99": 18.235391,
+        "max": 21.708799
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "duplicate-heavy",
+      "offered": 1000,
+      "uniqueOffered": 100,
+      "networkWithheld": 0,
+      "completed": 100,
+      "completedEventsPerSecond": 885.74208738693,
+      "elapsedMs": 112.8996819999993,
+      "duplicateOffers": 900,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 0,
+      "rpcErrors": 6,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 100,
+          "samples": 100,
+          "p50": 64.47186100000181,
+          "p95": 79.28118299999915,
+          "p99": 81.49503499999992,
+          "max": 81.89058500000101
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 134.0198130000026,
+        "counters": {
+          "ingest.resumed_from_wal": 0,
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "ingest.offered": 1000,
+          "observations.delivered": 1000,
+          "ingest.duplicates": 900,
+          "ingest.decode.offered": 100,
+          "ingest.decode.admitted": 100,
+          "decoding.pda_cache_hits": 100,
+          "decoding.completed": 100,
+          "decoding.launches": 100,
+          "ingest.decode.completed": 100,
+          "ingest.enrichment.offered": 100,
+          "ingest.enrichment.admitted": 100,
+          "rpc.calls": 100,
+          "rpc.errors": 6,
+          "ingest.enrichment.completed": 100,
+          "ingest.strategy.offered": 100,
+          "ingest.strategy.admitted": 100,
+          "ingestion.received": 100,
+          "strategy.decisions": 100,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 100,
+          "ingestion.completed": 100,
+          "ingestion.buys_committed": 5,
+          "ingest.strategy.completed": 100,
+          "ingest.persistence.offered": 100,
+          "ingest.persistence.admitted": 100,
+          "ingest.persistence.completed": 100,
+          "ingest.completed": 100,
+          "strategy.rejected": 95
+        },
+        "gauges": {
+          "ingest.in_flight": {
+            "current": 0,
+            "peak": 100
+          },
+          "ingest.decode.pending": {
+            "current": 0,
+            "peak": 100
+          },
+          "ingest.decode.queue_depth": {
+            "current": 0,
+            "peak": 100
+          },
+          "ingest.decode.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.enrichment.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.in_flight": {
+            "current": 0,
+            "peak": 4
+          },
+          "ingest.strategy.pending": {
+            "current": 0,
+            "peak": 56
+          },
+          "ingest.strategy.queue_depth": {
+            "current": 0,
+            "peak": 56
+          },
+          "ingest.strategy.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.005166999999346444,
+            "p95": 0.009170000001176959,
+            "p99": 0.012504000002081739,
+            "max": 0.031216999999742256
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.03771000000051572,
+            "p95": 0.06498800000190386,
+            "p99": 0.08443500000066706,
+            "max": 0.2122239999989688
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0001559999982418958,
+            "p95": 0.00032899999860092066,
+            "p99": 0.00046099999963189475,
+            "max": 0.06931599999734317
+          },
+          "ingest.receipt_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.027948999999352964,
+            "p95": 0.0476490000000922,
+            "p99": 0.06081599999743048,
+            "max": 0.1940359999971406
+          },
+          "ingest.decode.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 21.02200399999856,
+            "p95": 33.99166599999808,
+            "p99": 42.83060099999784,
+            "max": 43.00214899999992
+          },
+          "decoding_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.08606299999883049,
+            "p95": 0.15376000000105705,
+            "p99": 0.20847199999843724,
+            "max": 0.28416699999797856
+          },
+          "ingest.decode.processing_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.12619600000107312,
+            "p95": 0.31095899999854737,
+            "p99": 0.38084800000069663,
+            "max": 0.43346200000087265
+          },
+          "ingest.decode.end_to_end_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 49.037907000001724,
+            "p95": 55.4856120000004,
+            "p99": 56.44997700000022,
+            "max": 56.81508499999836
+          },
+          "ingest.enrichment.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.17588500000056229,
+            "p95": 7.877050000002782,
+            "p99": 8.109900999999809,
+            "max": 8.110466000001907
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.07219999999870197,
+            "p95": 0.1485050000010233,
+            "p99": 0.1808149999997113,
+            "max": 0.18619000000035157
+          },
+          "ingest.enrichment.processing_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.4048580000016955,
+            "p95": 0.8410860000003595,
+            "p99": 1.1661270000004151,
+            "max": 1.2431480000013835
+          },
+          "ingest.enrichment.end_to_end_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 51.8489840000002,
+            "p95": 60.177457999998296,
+            "p99": 61.78215300000011,
+            "max": 62.22799899999882
+          },
+          "ingest.strategy.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 11.31176300000152,
+            "p95": 15.815748000000895,
+            "p99": 15.89172999999937,
+            "max": 15.931008999999904
+          },
+          "ingestion.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0049450000005890615,
+            "p95": 0.01667299999826355,
+            "p99": 0.02907000000050175,
+            "max": 0.0575779999999213
+          },
+          "store.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.00145899999915855,
+            "p95": 0.04939400000148453,
+            "p99": 0.07516599999871687,
+            "max": 0.07635400000071968
+          },
+          "store.clone_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.05939299999954528,
+            "p95": 0.11930600000050617,
+            "p99": 0.1440149999980349,
+            "max": 0.16342399999848567
+          },
+          "engine.deduplication_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0020149999982095324,
+            "p95": 0.004759999999805586,
+            "p99": 0.007306000003154622,
+            "max": 0.007956000001286156
+          },
+          "risk_evaluation_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.0020179999992251396,
+            "p95": 0.0044589999997697305,
+            "p99": 0.00698000000193133,
+            "max": 0.014259999999922002
+          },
+          "strategy_decision_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.0058429999990039505,
+            "p95": 0.012899999997898703,
+            "p99": 0.016953999998804647,
+            "max": 0.019779999998718267
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.01777100000253995,
+            "p95": 0.021553999999014195,
+            "p99": 0.021553999999014195,
+            "max": 0.03231000000232598
+          },
+          "store.validation_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.10354299999744399,
+            "p95": 0.1919400000006135,
+            "p99": 0.25140100000135135,
+            "max": 0.5920610000030138
+          },
+          "store.transaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.19295100000090315,
+            "p95": 0.4089120000026014,
+            "p99": 0.47178400000120746,
+            "max": 0.7965400000030058
+          },
+          "ingestion_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.2009990000005928,
+            "p95": 0.6245720000006258,
+            "p99": 0.8385200000011537,
+            "max": 1.1436779999967257
+          },
+          "ingest.strategy.processing_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.20932099999845377,
+            "p95": 0.9276260000006005,
+            "p99": 1.1591669999979786,
+            "max": 1.4503179999992426
+          },
+          "ingest.strategy.end_to_end_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 62.23520400000052,
+            "p95": 71.70055700000012,
+            "p99": 73.02486800000042,
+            "max": 73.22798599999805
+          },
+          "ingest.persistence.queue_wait_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 3.3872190000001865,
+            "p95": 7.547632000001613,
+            "p99": 8.411267000003136,
+            "max": 8.581398999998783
+          },
+          "ingest.end_to_end_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 64.46250600000349,
+            "p95": 79.27121899999838,
+            "p99": 81.47635900000023,
+            "max": 81.87897599999997
+          },
+          "ingest.persistence.processing_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.029866999997466337,
+            "p95": 0.6754730000029667,
+            "p99": 0.8153590000001714,
+            "max": 0.9106049999973038
+          },
+          "ingest.persistence.end_to_end_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 64.46470200000113,
+            "p95": 79.27331300000151,
+            "p99": 81.4813979999999,
+            "max": 81.88554799999838
+          }
+        }
+      },
+      "recovery": null,
+      "journal": {
+        "accepting": true,
+        "fatal": null,
+        "inFlight": 0,
+        "capacity": 128,
+        "resumedPending": 0,
+        "decodedCoverage": [
+          {
+            "program": "pump",
+            "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "verifiedDecoder": true,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_v2"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": "https://github.com/pump-fun/pump-public-docs/blob/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json"
+          },
+          {
+            "program": "pumpswap",
+            "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_pool"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "raydium-cpmm",
+            "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+            "verifiedInstructions": [
+              "initialize"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "meteora-dlmm",
+            "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "af36dd53ab180783ccecda306926189a4700953c",
+            "verifiedInstructions": [
+              "initialize_lb_pair"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          }
+        ],
+        "pending": 0,
+        "pendingPeak": 100,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 100,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 0,
+        "maxBytes": 67108864,
+        "durable": false,
+        "anchors": {
+          "pump": {
+            "signature": "fixture-99",
+            "slot": 1099
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "memory": {
+        "before": {
+          "rss": 157896704,
+          "heapTotal": 78733312,
+          "heapUsed": 29357320,
+          "external": 4117566,
+          "arrayBuffers": 60867
+        },
+        "after": {
+          "rss": 157896704,
+          "heapTotal": 78733312,
+          "heapUsed": 32865104,
+          "external": 4261438,
+          "arrayBuffers": 69059
+        },
+        "sampledPeakRssBytes": 157896704,
+        "sampledPeakHeapUsedBytes": 41406736,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 12.242944,
+        "p95": 16.089087,
+        "p99": 16.089087,
+        "max": 16.089087
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "saturation",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 0,
+      "completed": 1000,
+      "completedEventsPerSecond": 1064.7205539704432,
+      "elapsedMs": 939.2135769999986,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 936,
+      "droppedOffers": 936,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 0,
+      "deferredCompleted": 0,
+      "recovered": 936,
+      "rpcErrors": 59,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 440.2270690000005,
+          "p95": 887.7799679999989,
+          "p99": 920.190552,
+          "max": 931.6569009999985
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 1023.0041950000013,
+        "counters": {
+          "ingest.resumed_from_wal": 0,
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "ingest.offered": 1936,
+          "observations.delivered": 1000,
+          "ingest.unpersisted": 936,
+          "ingest.decode.offered": 1000,
+          "ingest.decode.admitted": 1000,
+          "decoding.pda_cache_hits": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "ingest.decode.completed": 1000,
+          "ingest.enrichment.offered": 1000,
+          "ingest.enrichment.admitted": 1000,
+          "rpc.calls": 1947,
+          "rpc.errors": 59,
+          "ingest.enrichment.completed": 1000,
+          "ingest.strategy.offered": 1000,
+          "ingest.strategy.admitted": 1000,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "ingest.strategy.completed": 1000,
+          "ingest.persistence.offered": 1000,
+          "ingest.persistence.admitted": 1000,
+          "ingest.persistence.completed": 1000,
+          "ingest.completed": 1000,
+          "strategy.rejected": 995,
+          "ingest.recovered": 936,
+          "backfill.recovered": 1
+        },
+        "gauges": {
+          "ingest.in_flight": {
+            "current": 0,
+            "peak": 64
+          },
+          "ingest.decode.pending": {
+            "current": 0,
+            "peak": 64
+          },
+          "ingest.decode.queue_depth": {
+            "current": 0,
+            "peak": 64
+          },
+          "ingest.decode.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.enrichment.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.in_flight": {
+            "current": 0,
+            "peak": 4
+          },
+          "ingest.strategy.pending": {
+            "current": 0,
+            "peak": 33
+          },
+          "ingest.strategy.queue_depth": {
+            "current": 0,
+            "peak": 33
+          },
+          "ingest.strategy.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.005554999999731081,
+            "p95": 0.010240999999950873,
+            "p99": 0.015384000002086395,
+            "max": 0.03497299999798997
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.04355600000053528,
+            "p95": 0.07517200000074808,
+            "p99": 0.11216400000193971,
+            "max": 1.5103180000005523
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.00020900000163237564,
+            "p95": 0.0003040000010514632,
+            "p99": 0.000415000002249144,
+            "max": 0.0015889999995124526
+          },
+          "ingest.receipt_ms": {
+            "count": 1936,
+            "samples": 1936,
+            "p50": 0.03700600000229315,
+            "p95": 0.17887400000108755,
+            "p99": 0.2756740000004356,
+            "max": 1.430355000000418
+          },
+          "ingest.decode.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 20.36956000000282,
+            "p95": 32.80433300000004,
+            "p99": 41.90513699999792,
+            "max": 52.74721899999713
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07955500000025495,
+            "p95": 0.16284300000188523,
+            "p99": 0.205841999999393,
+            "max": 0.37992099999974016
+          },
+          "ingest.decode.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.121846000001824,
+            "p95": 0.42617600000085076,
+            "p99": 0.5415609999981825,
+            "max": 0.9514709999966726
+          },
+          "ingest.decode.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 24.567534999998315,
+            "p95": 73.34657600000355,
+            "p99": 92.06165999999939,
+            "max": 96.2237669999995
+          },
+          "ingest.enrichment.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.11629100000209291,
+            "p95": 3.326986999996734,
+            "p99": 12.86362299999746,
+            "max": 17.859639999998763
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.089163999997254,
+            "p95": 0.18040900000050897,
+            "p99": 0.27308699999775854,
+            "max": 0.40329099999871687
+          },
+          "ingest.enrichment.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.3903309999986959,
+            "p95": 1.1700430000018969,
+            "p99": 1.334445999997115,
+            "max": 1.63501599999654
+          },
+          "ingest.enrichment.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 25.431696999999986,
+            "p95": 74.7630100000024,
+            "p99": 95.87255300000106,
+            "max": 96.33083299999998
+          },
+          "ingest.strategy.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 8.426666999999725,
+            "p95": 12.787422999997943,
+            "p99": 15.156382999997732,
+            "max": 17.300693000001047
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.005616000002191868,
+            "p95": 0.022357999998348532,
+            "p99": 0.036581000000296626,
+            "max": 0.06538800000271294
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.004733999998279614,
+            "p95": 0.0711890000020503,
+            "p99": 0.10073099999863189,
+            "max": 0.5624650000027032
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07322600000043167,
+            "p95": 0.14603599999827566,
+            "p99": 0.19513000000006286,
+            "max": 0.540432999998302
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.05030299999998533,
+            "p95": 0.11144600000261562,
+            "p99": 0.15414700000110315,
+            "max": 1.3837320000020554
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.0021639999977196567,
+            "p95": 0.005661999999574618,
+            "p99": 0.008112999999866588,
+            "max": 0.028851000002759974
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0032199999986914918,
+            "p95": 0.006939000002603279,
+            "p99": 0.01628799999889452,
+            "max": 0.053002000000560656
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.028826999998273095,
+            "p95": 0.042678000001615146,
+            "p99": 0.042678000001615146,
+            "max": 0.0444599999973434
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.2065309999998135,
+            "p95": 0.3515660000011849,
+            "p99": 0.5234490000002552,
+            "max": 1.6609109999990324
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.3906749999987369,
+            "p95": 0.6795359999996435,
+            "p99": 0.9787300000025425,
+            "max": 1.9852580000006128
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.41021399999954156,
+            "p95": 0.9467179999992368,
+            "p99": 1.2023130000015954,
+            "max": 2.0286340000020573
+          },
+          "ingest.strategy.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.427017000001797,
+            "p95": 1.28278599999976,
+            "p99": 1.7033120000014605,
+            "max": 2.140752999999677
+          },
+          "ingest.strategy.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 33.10665800000061,
+            "p95": 86.22185300000274,
+            "p99": 102.11350499999753,
+            "max": 105.64704699999857
+          },
+          "ingest.persistence.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.18537099999957718,
+            "p95": 12.72485400000005,
+            "p99": 15.8707370000011,
+            "max": 18.327516999997897
+          },
+          "ingest.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 38.19313400000101,
+            "p95": 86.64602200000081,
+            "p99": 105.69783900000039,
+            "max": 105.79982899999959
+          },
+          "ingest.persistence.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.08618899999783025,
+            "p95": 0.9459729999980482,
+            "p99": 1.2656910000005155,
+            "max": 2.023055999998178
+          },
+          "ingest.persistence.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 38.195802000002004,
+            "p95": 86.6513150000028,
+            "p99": 105.70039700000052,
+            "max": 105.8216109999994
+          },
+          "rpc.getSlot_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 0.14903600000252482,
+            "p95": 0.14903600000252482,
+            "p99": 0.14903600000252482,
+            "max": 0.14903600000252482
+          },
+          "rpc.getSignaturesForAddress_ms": {
+            "count": 10,
+            "samples": 10,
+            "p50": 0.0878950000005716,
+            "p95": 0.15450000000055297,
+            "p99": 0.15450000000055297,
+            "max": 0.16564699999798904
+          },
+          "rpc.getTransaction_ms": {
+            "count": 936,
+            "samples": 936,
+            "p50": 0.044918999999936204,
+            "p95": 0.11029699999926379,
+            "p99": 0.16766500000085216,
+            "max": 0.4826500000017404
+          }
+        }
+      },
+      "recovery": {
+        "status": "recovered",
+        "program": "pump",
+        "fromSlot": 1032,
+        "toSlot": 2000,
+        "pages": 10,
+        "retrieved": 936,
+        "duplicates": 32,
+        "unavailable": 0,
+        "reason": "provider-window-covered"
+      },
+      "journal": {
+        "accepting": true,
+        "fatal": null,
+        "inFlight": 0,
+        "capacity": 128,
+        "resumedPending": 0,
+        "decodedCoverage": [
+          {
+            "program": "pump",
+            "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "verifiedDecoder": true,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_v2"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": "https://github.com/pump-fun/pump-public-docs/blob/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json"
+          },
+          {
+            "program": "pumpswap",
+            "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_pool"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "raydium-cpmm",
+            "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+            "verifiedInstructions": [
+              "initialize"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "meteora-dlmm",
+            "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "af36dd53ab180783ccecda306926189a4700953c",
+            "verifiedInstructions": [
+              "initialize_lb_pair"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          }
+        ],
+        "pending": 0,
+        "pendingPeak": 64,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 64,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 0,
+        "maxBytes": 67108864,
+        "durable": false,
+        "anchors": {
+          "pump": {
+            "signature": "fixture-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [
+          {
+            "program": "pump",
+            "fromSlot": 1032,
+            "toSlot": 2000,
+            "reason": "provider-window-covered",
+            "anchor": {
+              "signature": "fixture-63",
+              "slot": 1063
+            },
+            "attempts": 1,
+            "status": "recovered",
+            "knownRefused": 936
+          }
+        ]
+      },
+      "memory": {
+        "before": {
+          "rss": 158027776,
+          "heapTotal": 78733312,
+          "heapUsed": 33339568,
+          "external": 4261438,
+          "arrayBuffers": 69059
+        },
+        "after": {
+          "rss": 158683136,
+          "heapTotal": 78733312,
+          "heapUsed": 45539344,
+          "external": 4133950,
+          "arrayBuffers": 77251
+        },
+        "sampledPeakRssBytes": 158683136,
+        "sampledPeakHeapUsedBytes": 44312072,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 20.082785523809523,
+        "p95": 34.766847,
+        "p99": 37.257215,
+        "max": 37.257215
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "disconnect-backfill",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 100,
+      "completed": 1000,
+      "completedEventsPerSecond": 1214.4796034386986,
+      "elapsedMs": 823.3979369999979,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 772,
+      "deferredCompleted": 772,
+      "recovered": 100,
+      "rpcErrors": 59,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 339.42685100000017,
+          "p95": 720.762827999999,
+          "p99": 763.6800169999988,
+          "max": 793.0522380000002
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 936.706986000001,
+        "counters": {
+          "ingest.resumed_from_wal": 0,
+          "rpc.subscription_requests": 2,
+          "rpc.messages": 902,
+          "observations.received": 900,
+          "ingest.offered": 1000,
+          "observations.delivered": 900,
+          "ingest.deferred": 772,
+          "rpc.disconnects": 1,
+          "rpc.reconnects": 1,
+          "ingest.decode.offered": 1000,
+          "ingest.decode.admitted": 1000,
+          "decoding.pda_cache_hits": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "ingest.decode.completed": 1000,
+          "ingest.enrichment.offered": 1000,
+          "ingest.enrichment.admitted": 1000,
+          "rpc.calls": 1108,
+          "rpc.errors": 59,
+          "ingest.enrichment.completed": 1000,
+          "ingest.strategy.offered": 1000,
+          "ingest.strategy.admitted": 1000,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "ingest.strategy.completed": 1000,
+          "ingest.persistence.offered": 1000,
+          "ingest.persistence.admitted": 1000,
+          "ingest.persistence.completed": 1000,
+          "ingest.completed": 1000,
+          "strategy.rejected": 995,
+          "rpc.reconnect_succeeded": 1,
+          "ingest.deferred_completed": 772,
+          "ingest.recovered": 100,
+          "backfill.recovered": 1
+        },
+        "gauges": {
+          "ingest.in_flight": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.pending": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.queue_depth": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.enrichment.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.in_flight": {
+            "current": 0,
+            "peak": 4
+          },
+          "ingest.strategy.pending": {
+            "current": 0,
+            "peak": 63
+          },
+          "ingest.strategy.queue_depth": {
+            "current": 0,
+            "peak": 63
+          },
+          "ingest.strategy.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 902,
+            "samples": 902,
+            "p50": 0.005531999999220716,
+            "p95": 0.009248000002116896,
+            "p99": 0.015418999999383232,
+            "max": 0.02554700000109733
+          },
+          "monitor.ingestion_ms": {
+            "count": 902,
+            "samples": 902,
+            "p50": 0.05032299999948009,
+            "p95": 0.08277999999700114,
+            "p99": 0.10565499999938766,
+            "max": 1.8463139999985287
+          },
+          "monitor.deduplication_ms": {
+            "count": 900,
+            "samples": 900,
+            "p50": 0.00021300000298651867,
+            "p95": 0.0002480000002833549,
+            "p99": 0.0004199999966658652,
+            "max": 0.0015659999990020879
+          },
+          "ingest.receipt_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.03647800000180723,
+            "p95": 0.093338999999105,
+            "p99": 0.15681300000142073,
+            "max": 1.8217189999995753
+          },
+          "ingest.decode.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 19.10772899999938,
+            "p95": 72.37007799999992,
+            "p99": 83.16588100000081,
+            "max": 116.19347800000105
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07445499999812455,
+            "p95": 0.1533980000021984,
+            "p99": 0.23287499999787542,
+            "max": 0.44381499999872176
+          },
+          "ingest.decode.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.09254000000146334,
+            "p95": 0.2505470000032801,
+            "p99": 0.4347140000027139,
+            "max": 0.7729490000019723
+          },
+          "ingest.decode.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 252.4265149999992,
+            "p95": 529.8250119999975,
+            "p99": 556.0746429999999,
+            "max": 574.132284000003
+          },
+          "ingest.enrichment.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.10432700000092154,
+            "p95": 3.623333999999886,
+            "p99": 15.130135999999766,
+            "max": 36.88520300000164
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07654099999854225,
+            "p95": 0.18394400000033784,
+            "p99": 0.2890509999997448,
+            "max": 0.4484310000007099
+          },
+          "ingest.enrichment.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.3137059999971825,
+            "p95": 0.7252989999979036,
+            "p99": 1.2191879999991215,
+            "max": 1.9707029999990482
+          },
+          "ingest.enrichment.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 252.97396800000206,
+            "p95": 530.2552240000005,
+            "p99": 556.6321769999995,
+            "max": 574.3419510000022
+          },
+          "ingest.strategy.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 30.714328999998543,
+            "p95": 40.37821800000165,
+            "p99": 43.64161400000012,
+            "max": 45.82042199999705
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.005192000000533881,
+            "p95": 0.016889999998966232,
+            "p99": 0.03539399999863235,
+            "max": 0.12506199999916134
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0016649999997753184,
+            "p95": 0.030704000000696396,
+            "p99": 0.06462200000169105,
+            "max": 0.10866499999974621
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.06770899999901303,
+            "p95": 0.1463690000018687,
+            "p99": 0.25095800000053714,
+            "max": 0.555793999999878
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.04841599999781465,
+            "p95": 0.1682829999990645,
+            "p99": 0.1995840000017779,
+            "max": 1.5230149999988498
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.002090000001771841,
+            "p95": 0.005134999999427237,
+            "p99": 0.00819000000046799,
+            "max": 0.052685000002384186
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.00283800000033807,
+            "p95": 0.0058209999988321215,
+            "p99": 0.008932000000640983,
+            "max": 0.1288730000014766
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.02535400000124355,
+            "p95": 0.025606999999581603,
+            "p99": 0.025606999999581603,
+            "max": 0.04173300000184099
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.19280499999877065,
+            "p95": 0.43033199999990757,
+            "p99": 0.5809559999979683,
+            "max": 7.717152000001079
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.33937800000057905,
+            "p95": 0.7940589999998338,
+            "p99": 1.126459999999497,
+            "max": 8.081128999998327
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.34877500000220607,
+            "p95": 0.8245540000025358,
+            "p99": 1.4840629999998782,
+            "max": 8.110156999999163
+          },
+          "ingest.strategy.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.3606370000015886,
+            "p95": 0.8605090000019118,
+            "p99": 1.7696759999998903,
+            "max": 8.148538000001281
+          },
+          "ingest.strategy.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 283.11472799999683,
+            "p95": 570.4046939999971,
+            "p99": 590.1581269999988,
+            "max": 596.1556150000033
+          },
+          "ingest.persistence.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 13.692829999999958,
+            "p95": 23.712600999999268,
+            "p99": 31.22362300000168,
+            "max": 38.88772899999822
+          },
+          "ingest.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 300.78873999999996,
+            "p95": 578.6990069999993,
+            "p99": 594.3202189999975,
+            "max": 596.873262000001
+          },
+          "ingest.persistence.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.02776899999662419,
+            "p95": 0.2244570000002568,
+            "p99": 0.8543669999999111,
+            "max": 1.8981260000000475
+          },
+          "ingest.persistence.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 300.7910860000011,
+            "p95": 578.7015410000022,
+            "p99": 594.3224599999994,
+            "max": 596.878256
+          },
+          "rpc.reconnect_wait_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 19.127252999998746,
+            "p95": 19.127252999998746,
+            "p99": 19.127252999998746,
+            "max": 19.127252999998746
+          },
+          "rpc.recovery_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 19.300865000001068,
+            "p95": 19.300865000001068,
+            "p99": 19.300865000001068,
+            "max": 19.300865000001068
+          },
+          "rpc.getSlot_ms": {
+            "count": 1,
+            "samples": 1,
+            "p50": 0.011446000000432832,
+            "p95": 0.011446000000432832,
+            "p99": 0.011446000000432832,
+            "max": 0.011446000000432832
+          },
+          "rpc.getSignaturesForAddress_ms": {
+            "count": 7,
+            "samples": 7,
+            "p50": 0.017099000000598608,
+            "p95": 0.019539000000804663,
+            "p99": 0.019539000000804663,
+            "max": 0.030625000003055902
+          },
+          "rpc.getTransaction_ms": {
+            "count": 100,
+            "samples": 100,
+            "p50": 0.05660300000090501,
+            "p95": 0.10363299999880837,
+            "p99": 0.13761599999997998,
+            "max": 0.14316499999767984
+          }
+        }
+      },
+      "recovery": {
+        "status": "recovered",
+        "program": "pump",
+        "fromSlot": 1367,
+        "toSlot": 2000,
+        "pages": 7,
+        "retrieved": 100,
+        "duplicates": 533,
+        "unavailable": 0,
+        "reason": "provider-window-covered"
+      },
+      "journal": {
+        "accepting": true,
+        "fatal": null,
+        "inFlight": 0,
+        "capacity": 128,
+        "resumedPending": 0,
+        "decodedCoverage": [
+          {
+            "program": "pump",
+            "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "verifiedDecoder": true,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_v2"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": "https://github.com/pump-fun/pump-public-docs/blob/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json"
+          },
+          {
+            "program": "pumpswap",
+            "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_pool"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "raydium-cpmm",
+            "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+            "verifiedInstructions": [
+              "initialize"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "meteora-dlmm",
+            "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "af36dd53ab180783ccecda306926189a4700953c",
+            "verifiedInstructions": [
+              "initialize_lb_pair"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          }
+        ],
+        "pending": 0,
+        "pendingPeak": 869,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 0,
+        "maxBytes": 67108864,
+        "durable": false,
+        "anchors": {
+          "pump": {
+            "signature": "fixture-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [
+          {
+            "program": "pump",
+            "fromSlot": 1367,
+            "toSlot": 2000,
+            "reason": "provider-window-covered",
+            "anchor": {
+              "signature": "fixture-399",
+              "slot": 1399
+            },
+            "attempts": 1,
+            "status": "recovered",
+            "knownRefused": 0
+          }
+        ]
+      },
+      "memory": {
+        "before": {
+          "rss": 158683136,
+          "heapTotal": 78733312,
+          "heapUsed": 30093448,
+          "external": 4133950,
+          "arrayBuffers": 77251
+        },
+        "after": {
+          "rss": 158814208,
+          "heapTotal": 78733312,
+          "heapUsed": 35251968,
+          "external": 4142142,
+          "arrayBuffers": 85443
+        },
+        "sampledPeakRssBytes": 158814208,
+        "sampledPeakHeapUsedBytes": 47939688,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 21.68868141176471,
+        "p95": 29.360127,
+        "p99": 41.549823,
+        "max": 41.549823
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "out-of-order",
+      "offered": 1000,
+      "uniqueOffered": 1000,
+      "networkWithheld": 0,
+      "completed": 1000,
+      "completedEventsPerSecond": 1341.8747742010564,
+      "elapsedMs": 745.2260219999989,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 872,
+      "deferredCompleted": 872,
+      "recovered": 0,
+      "rpcErrors": 59,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 371.96195499999885,
+          "p95": 663.6715489999988,
+          "p99": 676.2061169999979,
+          "max": 679.2171110000018
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 820.182804,
+        "counters": {
+          "ingest.resumed_from_wal": 0,
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 1001,
+          "observations.received": 1000,
+          "ingest.offered": 1000,
+          "observations.delivered": 1000,
+          "ingest.deferred": 872,
+          "ingest.decode.offered": 1000,
+          "ingest.decode.admitted": 1000,
+          "decoding.pda_cache_hits": 1000,
+          "decoding.completed": 1000,
+          "decoding.launches": 1000,
+          "ingest.decode.completed": 1000,
+          "ingest.enrichment.offered": 1000,
+          "ingest.enrichment.admitted": 1000,
+          "rpc.calls": 1000,
+          "ingest.enrichment.completed": 1000,
+          "ingest.strategy.offered": 1000,
+          "ingest.strategy.admitted": 1000,
+          "ingestion.received": 1000,
+          "strategy.decisions": 1000,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 1000,
+          "ingestion.completed": 1000,
+          "ingestion.buys_committed": 5,
+          "ingest.strategy.completed": 1000,
+          "ingest.persistence.offered": 1000,
+          "ingest.persistence.admitted": 1000,
+          "ingest.persistence.completed": 1000,
+          "ingest.completed": 1000,
+          "rpc.errors": 59,
+          "strategy.rejected": 995,
+          "ingest.deferred_completed": 872
+        },
+        "gauges": {
+          "ingest.in_flight": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.pending": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.queue_depth": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.enrichment.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.in_flight": {
+            "current": 0,
+            "peak": 4
+          },
+          "ingest.strategy.pending": {
+            "current": 0,
+            "peak": 63
+          },
+          "ingest.strategy.queue_depth": {
+            "current": 0,
+            "peak": 63
+          },
+          "ingest.strategy.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.persistence.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.0058380000009492505,
+            "p95": 0.010078000002977205,
+            "p99": 0.020079999998415587,
+            "max": 0.029284000000188826
+          },
+          "monitor.ingestion_ms": {
+            "count": 1001,
+            "samples": 1001,
+            "p50": 0.04425700000138022,
+            "p95": 0.07455299999855924,
+            "p99": 0.1014869999999064,
+            "max": 1.7543249999980617
+          },
+          "monitor.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0001609999999345746,
+            "p95": 0.00026499999876250513,
+            "p99": 0.00035600000046542846,
+            "max": 0.0011259999992034864
+          },
+          "ingest.receipt_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.030910000001313165,
+            "p95": 0.05261600000085309,
+            "p99": 0.06912999999985914,
+            "max": 1.7333419999995385
+          },
+          "ingest.decode.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 18.5094190000018,
+            "p95": 40.50862000000052,
+            "p99": 44.36546199999793,
+            "max": 57.39481499999965
+          },
+          "decoding_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07207800000105635,
+            "p95": 0.15069399999993038,
+            "p99": 0.25049399999988964,
+            "max": 0.5478720000028261
+          },
+          "ingest.decode.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.08807299999898532,
+            "p95": 0.2047920000004524,
+            "p99": 0.37223699999958626,
+            "max": 0.7028290000016568
+          },
+          "ingest.decode.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 324.26661799999783,
+            "p95": 623.4068609999995,
+            "p99": 644.4646779999966,
+            "max": 659.3345090000003
+          },
+          "ingest.enrichment.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.10268599999835715,
+            "p95": 3.107041000002937,
+            "p99": 15.456772000001365,
+            "max": 24.67740799999956
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.07368899999710266,
+            "p95": 0.16709199999968405,
+            "p99": 0.2571650000027148,
+            "max": 0.6675069999982952
+          },
+          "ingest.enrichment.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.29680699999880744,
+            "p95": 0.6219860000019253,
+            "p99": 0.9326289999989967,
+            "max": 1.3709299999973155
+          },
+          "ingest.enrichment.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 324.6532479999987,
+            "p95": 623.7502139999997,
+            "p99": 644.7558329999993,
+            "max": 659.6107860000011
+          },
+          "ingest.strategy.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 31.472780000000057,
+            "p95": 45.39868799999749,
+            "p99": 48.344992999998794,
+            "max": 49.69543899999917
+          },
+          "ingestion.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.005101999999169493,
+            "p95": 0.013702000000193948,
+            "p99": 0.03508499999952619,
+            "max": 0.12444200000027195
+          },
+          "store.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.00153399999908288,
+            "p95": 0.005709000000933884,
+            "p99": 0.04623899999933201,
+            "max": 0.09841200000300887
+          },
+          "store.clone_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.06436899999971502,
+            "p95": 0.1301339999990887,
+            "p99": 0.2035390000019106,
+            "max": 1.31415499999639
+          },
+          "engine.deduplication_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.047582999999576714,
+            "p95": 0.09736999999950058,
+            "p99": 0.12489699999787263,
+            "max": 1.4991620000000694
+          },
+          "risk_evaluation_ms": {
+            "count": 2000,
+            "samples": 2000,
+            "p50": 0.0020440000007511117,
+            "p95": 0.004707000000053085,
+            "p99": 0.006400999998732004,
+            "max": 0.018761999999696855
+          },
+          "strategy_decision_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.0032200000023294706,
+            "p95": 0.006494000001111999,
+            "p99": 0.009911000001011416,
+            "max": 0.2070370000001276
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.017844999998487765,
+            "p95": 0.02113399999871035,
+            "p99": 0.02113399999871035,
+            "max": 0.040357999998377636
+          },
+          "store.validation_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.1798110000017914,
+            "p95": 0.28756300000168267,
+            "p99": 0.4012079999993148,
+            "max": 2.2936230000013893
+          },
+          "store.transaction_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.32054799999968964,
+            "p95": 0.5282250000018394,
+            "p99": 0.7749890000013693,
+            "max": 2.3946670000004815
+          },
+          "ingestion_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.32931299999836483,
+            "p95": 0.5784340000027441,
+            "p99": 0.8200919999981124,
+            "max": 2.4130460000014864
+          },
+          "ingest.strategy.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.33918400000038673,
+            "p95": 0.6022589999993215,
+            "p99": 1.0684829999991052,
+            "max": 2.433564999999362
+          },
+          "ingest.strategy.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 355.7965249999979,
+            "p95": 656.7234119999994,
+            "p99": 673.473611999998,
+            "max": 678.4595579999987
+          },
+          "ingest.persistence.queue_wait_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 13.918122999999468,
+            "p95": 21.433742000001075,
+            "p99": 27.807560000001104,
+            "max": 30.35913100000107
+          },
+          "ingest.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 371.95238999999856,
+            "p95": 663.6620660000008,
+            "p99": 676.1900139999998,
+            "max": 679.2085189999998
+          },
+          "ingest.persistence.processing_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 0.02791399999841815,
+            "p95": 0.10915500000191969,
+            "p99": 0.31374700000014855,
+            "max": 0.8897030000007362
+          },
+          "ingest.persistence.end_to_end_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 371.95484999999826,
+            "p95": 663.664041,
+            "p99": 676.213495,
+            "max": 679.2108609999996
+          }
+        }
+      },
+      "recovery": null,
+      "journal": {
+        "accepting": true,
+        "fatal": null,
+        "inFlight": 0,
+        "capacity": 128,
+        "resumedPending": 0,
+        "decodedCoverage": [
+          {
+            "program": "pump",
+            "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "verifiedDecoder": true,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_v2"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": "https://github.com/pump-fun/pump-public-docs/blob/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json"
+          },
+          {
+            "program": "pumpswap",
+            "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_pool"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "raydium-cpmm",
+            "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+            "verifiedInstructions": [
+              "initialize"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "meteora-dlmm",
+            "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "af36dd53ab180783ccecda306926189a4700953c",
+            "verifiedInstructions": [
+              "initialize_lb_pair"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          }
+        ],
+        "pending": 0,
+        "pendingPeak": 1000,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 0,
+        "maxBytes": 67108864,
+        "durable": false,
+        "anchors": {
+          "pump": {
+            "signature": "fixture-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "memory": {
+        "before": {
+          "rss": 158945280,
+          "heapTotal": 78733312,
+          "heapUsed": 36237976,
+          "external": 4142142,
+          "arrayBuffers": 85443
+        },
+        "after": {
+          "rss": 154722304,
+          "heapTotal": 73490432,
+          "heapUsed": 33534760,
+          "external": 4162622,
+          "arrayBuffers": 105923
+        },
+        "sampledPeakRssBytes": 159862784,
+        "sampledPeakHeapUsedBytes": 52362880,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 21.830724266666667,
+        "p95": 36.208639,
+        "p99": 36.667391,
+        "max": 36.667391
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    },
+    {
+      "scenario": "durable-burst",
+      "offered": 200,
+      "uniqueOffered": 200,
+      "networkWithheld": 0,
+      "completed": 200,
+      "completedEventsPerSecond": 155.20165585888233,
+      "elapsedMs": 1288.6460450000013,
+      "duplicateOffers": 0,
+      "knownRefusedAdmissions": 0,
+      "droppedOffers": 0,
+      "uncompletedFixtureEvents": 0,
+      "deferred": 72,
+      "deferredCompleted": 72,
+      "recovered": 0,
+      "rpcErrors": 12,
+      "duplicateLogicalProcessing": 0,
+      "latencies": {
+        "end_to_end_ms": {
+          "count": 200,
+          "samples": 200,
+          "p50": 637.3524180000022,
+          "p95": 893.7206820000029,
+          "p99": 913.7939909999986,
+          "max": 918.026976000001
+        }
+      },
+      "telemetry": {
+        "uptimeMs": 1308.7270260000005,
+        "counters": {
+          "ingest.resumed_from_wal": 0,
+          "rpc.subscription_requests": 1,
+          "rpc.messages": 201,
+          "observations.received": 200,
+          "ingest.offered": 200,
+          "observations.delivered": 200,
+          "ingest.deferred": 72,
+          "ingest.decode.offered": 200,
+          "ingest.decode.admitted": 200,
+          "decoding.pda_cache_hits": 200,
+          "decoding.completed": 200,
+          "decoding.launches": 200,
+          "ingest.decode.completed": 200,
+          "ingest.enrichment.offered": 200,
+          "ingest.enrichment.admitted": 200,
+          "rpc.calls": 200,
+          "rpc.errors": 12,
+          "ingest.enrichment.completed": 200,
+          "ingest.strategy.offered": 200,
+          "ingest.strategy.admitted": 200,
+          "ingestion.received": 200,
+          "strategy.decisions": 200,
+          "strategy.allowed": 5,
+          "paper.buy_attempts": 5,
+          "store.committed": 200,
+          "ingestion.completed": 200,
+          "ingestion.buys_committed": 5,
+          "ingest.strategy.completed": 200,
+          "ingest.persistence.offered": 200,
+          "ingest.persistence.admitted": 200,
+          "ingest.persistence.completed": 200,
+          "ingest.completed": 200,
+          "strategy.rejected": 195,
+          "ingest.deferred_completed": 72
+        },
+        "gauges": {
+          "ingest.in_flight": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.pending": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.queue_depth": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.decode.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.enrichment.pending": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.queue_depth": {
+            "current": 0,
+            "peak": 32
+          },
+          "ingest.enrichment.in_flight": {
+            "current": 0,
+            "peak": 4
+          },
+          "ingest.strategy.pending": {
+            "current": 0,
+            "peak": 128
+          },
+          "ingest.strategy.queue_depth": {
+            "current": 0,
+            "peak": 127
+          },
+          "ingest.strategy.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "store.in_flight": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.pending": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.queue_depth": {
+            "current": 0,
+            "peak": 1
+          },
+          "ingest.persistence.in_flight": {
+            "current": 0,
+            "peak": 1
+          }
+        },
+        "histograms": {
+          "monitor.json_decoding_ms": {
+            "count": 201,
+            "samples": 201,
+            "p50": 0.019909000002371613,
+            "p95": 0.033527999999932945,
+            "p99": 0.04789099999834434,
+            "max": 0.054957000000285916
+          },
+          "monitor.ingestion_ms": {
+            "count": 201,
+            "samples": 201,
+            "p50": 1.7025450000001001,
+            "p95": 2.789366000000882,
+            "p99": 4.283182999999553,
+            "max": 5.4487109999972745
+          },
+          "monitor.deduplication_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.00051299999904586,
+            "p95": 0.000826999999844702,
+            "p99": 0.0010709999987739138,
+            "max": 0.0024740000008023344
+          },
+          "ingest.receipt_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 1.6573529999986931,
+            "p95": 2.732112000001507,
+            "p99": 4.232048000001669,
+            "max": 5.4162969999997586
+          },
+          "ingest.decode.queue_wait_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 7.669599999997445,
+            "p95": 27.28891300000032,
+            "p99": 29.067019999998593,
+            "max": 31.465768999998545
+          },
+          "decoding_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.08082699999795295,
+            "p95": 0.19439600000259816,
+            "p99": 0.21734400000059395,
+            "max": 0.276371999996627
+          },
+          "ingest.decode.processing_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.10194000000046799,
+            "p95": 0.22011600000041653,
+            "p99": 0.277804000001197,
+            "max": 0.3102499999986321
+          },
+          "ingest.decode.end_to_end_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 256.383425,
+            "p95": 355.27423799999815,
+            "p99": 367.21478299999944,
+            "max": 372.92531600000075
+          },
+          "ingest.enrichment.queue_wait_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.10062499999912689,
+            "p95": 3.442542000000685,
+            "p99": 3.6051680000018678,
+            "max": 3.689836000001378
+          },
+          "rpc.getParsedTransaction_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.010704000000259839,
+            "p95": 0.11012699999992037,
+            "p99": 0.15403800000058254,
+            "max": 0.21072300000014366
+          },
+          "ingest.enrichment.processing_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.28422199999840814,
+            "p95": 0.43110599999999977,
+            "p99": 0.6777540000002773,
+            "max": 1.7914369999998598
+          },
+          "ingest.enrichment.end_to_end_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 256.6920969999992,
+            "p95": 355.69119800000044,
+            "p99": 369.13740400000097,
+            "max": 373.3023099999991
+          },
+          "ingest.strategy.queue_wait_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 417.26610000000073,
+            "p95": 573.0863729999983,
+            "p99": 574.0473359999996,
+            "max": 575.5390829999997
+          },
+          "ingestion.validation_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.026420000001962762,
+            "p95": 0.04686299999957555,
+            "p99": 0.054944999999861466,
+            "max": 0.0735820000008971
+          },
+          "store.queue_wait_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.004668000001402106,
+            "p95": 0.007137000000511762,
+            "p99": 0.027082999997219304,
+            "max": 0.18682500000068103
+          },
+          "store.clone_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.1241809999992256,
+            "p95": 0.1884730000019772,
+            "p99": 0.22561700000005658,
+            "max": 0.2278279999991355
+          },
+          "engine.deduplication_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.007110000002285233,
+            "p95": 0.024055000001681037,
+            "p99": 0.03210699999908684,
+            "max": 0.04229200000190758
+          },
+          "risk_evaluation_ms": {
+            "count": 400,
+            "samples": 400,
+            "p50": 0.003691000001708744,
+            "p95": 0.007397000001219567,
+            "p99": 0.018926000000647036,
+            "max": 0.02799100000265753
+          },
+          "strategy_decision_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.005229999998846324,
+            "p95": 0.008527999998477753,
+            "p99": 0.009463999998843065,
+            "max": 0.0272289999993518
+          },
+          "paper_execution_ms": {
+            "count": 5,
+            "samples": 5,
+            "p50": 0.02702599999975064,
+            "p95": 0.027979999998933636,
+            "p99": 0.027979999998933636,
+            "max": 0.03884000000107335
+          },
+          "store.validation_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.22397799999816925,
+            "p95": 0.3419030000004568,
+            "p99": 0.42237200000090525,
+            "max": 0.5035300000017742
+          },
+          "store.persistence_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 3.6274689999991097,
+            "p95": 5.041181000000506,
+            "p99": 6.881695000000036,
+            "max": 30.590494000000035
+          },
+          "store.transaction_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 4.109167999999045,
+            "p95": 5.549102999997558,
+            "p99": 7.335463999999774,
+            "max": 31.364669999999023
+          },
+          "ingestion_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 4.152760000000853,
+            "p95": 5.588603000000148,
+            "p99": 7.389265000001615,
+            "max": 31.401772000001074
+          },
+          "ingest.strategy.processing_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 4.2772750000003725,
+            "p95": 5.7314320000004955,
+            "p99": 7.544233000000531,
+            "max": 31.504987999996956
+          },
+          "ingest.strategy.end_to_end_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 634.0960859999977,
+            "p95": 888.880975,
+            "p99": 908.752701999998,
+            "max": 915.3602810000011
+          },
+          "ingest.persistence.queue_wait_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 0.02943799999775365,
+            "p95": 0.05682700000033947,
+            "p99": 0.6722589999990305,
+            "max": 0.8318540000000212
+          },
+          "ingest.end_to_end_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 637.3223819999985,
+            "p95": 893.696017000002,
+            "p99": 913.7610729999979,
+            "max": 918.0015920000005
+          },
+          "ingest.persistence.processing_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 3.5057029999989027,
+            "p95": 4.914534999999887,
+            "p99": 5.688849000001937,
+            "max": 6.935152999998536
+          },
+          "ingest.persistence.end_to_end_ms": {
+            "count": 200,
+            "samples": 200,
+            "p50": 637.332320999998,
+            "p95": 893.7085399999996,
+            "p99": 913.7717019999982,
+            "max": 918.0099740000005
+          }
+        }
+      },
+      "recovery": null,
+      "journal": {
+        "accepting": true,
+        "fatal": null,
+        "inFlight": 0,
+        "capacity": 128,
+        "resumedPending": 0,
+        "decodedCoverage": [
+          {
+            "program": "pump",
+            "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+            "verifiedDecoder": true,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_v2"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": "https://github.com/pump-fun/pump-public-docs/blob/639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22/idl/pump.json"
+          },
+          {
+            "program": "pumpswap",
+            "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "639b87fb45c3adeffa6f7c4a1bf0cb85e392bf22",
+            "verifiedInstructions": [
+              "create_pool"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "raydium-cpmm",
+            "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "3d69122790e97cd6aff24e8ba95940793773f58c",
+            "verifiedInstructions": [
+              "initialize"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          },
+          {
+            "program": "meteora-dlmm",
+            "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+            "verifiedDecoder": false,
+            "verifiedTransactionDecoder": true,
+            "transactionVersions": [
+              "legacy",
+              0,
+              1
+            ],
+            "layoutRevision": "af36dd53ab180783ccecda306926189a4700953c",
+            "verifiedInstructions": [
+              "initialize_lb_pair"
+            ],
+            "verificationRequires": "successful finalized transaction, attributed instruction/event and compatible account snapshot",
+            "source": null
+          }
+        ],
+        "pending": 0,
+        "pendingPeak": 200,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 200,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 185870,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "fixture-199",
+            "slot": 1199
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "memory": {
+        "before": {
+          "rss": 154722304,
+          "heapTotal": 73490432,
+          "heapUsed": 34569400,
+          "external": 4162622,
+          "arrayBuffers": 105923
+        },
+        "after": {
+          "rss": 156819456,
+          "heapTotal": 73490432,
+          "heapUsed": 32148208,
+          "external": 7313883,
+          "arrayBuffers": 114115
+        },
+        "sampledPeakRssBytes": 156819456,
+        "sampledPeakHeapUsedBytes": 45043256,
+        "processLifetimeMaxRssBytes": 352448512
+      },
+      "eventLoopDelayMs": {
+        "mean": 10.552058046511627,
+        "p95": 12.419071,
+        "p99": 13.295615,
+        "max": 13.336575
+      },
+      "stateIntegrity": {
+        "valid": true,
+        "balanceReconciles": true,
+        "uniqueOpenMints": true,
+        "paperOnly": true,
+        "paperPositions": 5,
+        "paperTrades": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+
+> mintbot@0.1.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: authenticated HTTP paper lifecycle, rejection, persistence and restart
+ok 1 - authenticated HTTP paper lifecycle, rejection, persistence and restart
+  ---
+  duration_ms: 4943.855302
+  ...
+# Subtest: verified programs are valid and missing protocol decoder fails closed
+ok 2 - verified programs are valid and missing protocol decoder fails closed
+  ---
+  duration_ms: 4.885593
+  ...
+# Subtest: pinned Pump CreateEvent decodes bounded strings, verifies PDA and rejects failed or malformed data
+ok 3 - pinned Pump CreateEvent decodes bounded strings, verifies PDA and rejects failed or malformed data
+  ---
+  duration_ms: 18.375471
+  ...
+# Subtest: spoofed event from nested malicious program is ignored despite a genuine Pump parent
+ok 4 - spoofed event from nested malicious program is ignored despite a genuine Pump parent
+  ---
+  duration_ms: 6.725718
+  ...
+# Subtest: historical finalized mainnet fixture replays observed compute and CPI inventory
+ok 5 - historical finalized mainnet fixture replays observed compute and CPI inventory
+  ---
+  duration_ms: 20.021745
+  ...
+# Subtest: official compute budget binary encoding including u64 precision
+ok 6 - official compute budget binary encoding including u64 precision
+  ---
+  duration_ms: 2.373841
+  ...
+# Subtest: WebSocket subscribes per program, deduplicates, tracks monotonic slot and stops
+ok 7 - WebSocket subscribes per program, deduplicates, tracks monotonic slot and stops
+  ---
+  duration_ms: 2.617181
+  ...
+# Subtest: WebSocket reconnect budget terminates after repeated disconnection
+ok 8 - WebSocket reconnect budget terminates after repeated disconnection
+  ---
+  duration_ms: 11.659078
+  ...
+# Subtest: transaction inspection inventories top-level, inner and compute instructions
+ok 9 - transaction inspection inventories top-level, inner and compute instructions
+  ---
+  duration_ms: 1.236999
+  ...
+# Subtest: mint scanner decodes official token layout and keeps unknown evidence explicit
+ok 10 - mint scanner decodes official token layout and keeps unknown evidence explicit
+  ---
+  duration_ms: 2.803709
+  ...
+# Subtest: default startup is stopped paper trading
+ok 11 - default startup is stopped paper trading
+  ---
+  duration_ms: 4.157691
+  ...
+# Subtest: safe fixture enters; duplicate event and concurrent event cannot double spend
+ok 12 - safe fixture enters; duplicate event and concurrent event cannot double spend
+  ---
+  duration_ms: 32.678271
+  ...
+# Subtest: reserve, daily spend, max risk, kill, position limits reject
+ok 13 - reserve, daily spend, max risk, kill, position limits reject
+  ---
+  duration_ms: 2.359012
+  ...
+# Subtest: stale and future prices never authorize entries
+ok 14 - stale and future prices never authorize entries
+  ---
+  duration_ms: 0.689873
+  ...
+# Subtest: partial sell conserves allocated basis and nets all modeled costs
+ok 15 - partial sell conserves allocated basis and nets all modeled costs
+  ---
+  duration_ms: 6.326261
+  ...
+# Subtest: concurrent full exits create one sell
+ok 16 - concurrent full exits create one sell
+  ---
+  duration_ms: 11.581092
+  ...
+# Subtest: failed sells and missing liquidity increment failures, preserve position
+ok 17 - failed sells and missing liquidity increment failures, preserve position
+  ---
+  duration_ms: 3.275512
+  ...
+# Subtest: take profit, stop loss, trailing and time exits evaluate fresh marks only
+ok 18 - take profit, stop loss, trailing and time exits evaluate fresh marks only
+  ---
+  duration_ms: 2.497165
+  ...
+# Subtest: stale manual sells and fees exceeding proceeds reject without mutation
+ok 19 - stale manual sells and fees exceeding proceeds reject without mutation
+  ---
+  duration_ms: 4.228953
+  ...
+# Subtest: failed transaction rolls back entire mutation and queue remains usable
+ok 20 - failed transaction rolls back entire mutation and queue remains usable
+  ---
+  duration_ms: 2.565103
+  ...
+# Subtest: all strategy filters and mandatory unknown signals reject independently
+ok 21 - all strategy filters and mandatory unknown signals reject independently
+  ---
+  duration_ms: 4.894231
+  ...
+# Subtest: position and failure caps remain enforced during concurrent entries
+ok 22 - position and failure caps remain enforced during concurrent entries
+  ---
+  duration_ms: 8.437294
+  ...
+# Subtest: malformed internal events and restored state fail closed
+ok 23 - malformed internal events and restored state fail closed
+  ---
+  duration_ms: 50.324772
+  ...
+# Subtest: delayed entries recheck current limits after delay and retain duplicate protection
+ok 24 - delayed entries recheck current limits after delay and retain duplicate protection
+  ---
+  duration_ms: 28.08751
+  ...
+# Subtest: stale delayed evidence rejects rather than inventing refreshed prices
+ok 25 - stale delayed evidence rejects rather than inventing refreshed prices
+  ---
+  duration_ms: 10.996471
+  ...
+# Subtest: timer can enforce time exit with fresh stored evidence, stale prices still block
+ok 26 - timer can enforce time exit with fresh stored evidence, stale prices still block
+  ---
+  duration_ms: 22.734089
+  ...
+# Subtest: unexpected automatic exit costs preserve new observations and halt on failure threshold
+ok 27 - unexpected automatic exit costs preserve new observations and halt on failure threshold
+  ---
+  duration_ms: 3.313002
+  ...
+# Subtest: submission success requires chain confirmation and duplicate IDs submit once
+ok 28 - submission success requires chain confirmation and duplicate IDs submit once
+  ---
+  duration_ms: 77.497984
+  ...
+# Subtest: RPC disconnect after submission remains unresolved and never re-signs
+ok 29 - RPC disconnect after submission remains unresolved and never re-signs
+  ---
+  duration_ms: 29.408455
+  ...
+# Subtest: simulation rejection prevents send
+ok 30 - simulation rejection prevents send
+  ---
+  duration_ms: 11.121136
+  ...
+# Subtest: expired blockhash without historical signature stays explicitly unobserved
+ok 31 - expired blockhash without historical signature stays explicitly unobserved
+  ---
+  duration_ms: 23.081125
+  ...
+# Subtest: confirmed instruction failure is failed despite accepted submission
+ok 32 - confirmed instruction failure is failed despite accepted submission
+  ---
+  duration_ms: 25.414488
+  ...
+# Subtest: AES GCM vault authenticates password, identity and ciphertext
+ok 33 - AES GCM vault authenticates password, identity and ciphertext
+  ---
+  duration_ms: 869.47563
+  ...
+# Subtest: API bearer auth rejects missing token and timing-safe mismatches
+ok 34 - API bearer auth rejects missing token and timing-safe mismatches
+  ---
+  duration_ms: 0.856884
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5867.770514

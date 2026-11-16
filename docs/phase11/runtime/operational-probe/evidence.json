@@ -1,0 +1,1875 @@
+{
+  "startedAt": 1794695851374,
+  "endedAt": 1794695877962,
+  "seconds": 120,
+  "stopRequested": true,
+  "maxCandidates": 120,
+  "notifications": 1356,
+  "venueCounts": {
+    "pump": {
+      "notifications": 375,
+      "creationHints": 1,
+      "selected": 1
+    },
+    "pumpswap": {
+      "notifications": 714,
+      "creationHints": 0,
+      "selected": 0
+    },
+    "raydium-cpmm": {
+      "notifications": 2,
+      "creationHints": 0,
+      "selected": 0
+    },
+    "meteora-dlmm": {
+      "notifications": 265,
+      "creationHints": 0,
+      "selected": 0
+    }
+  },
+  "coverageEpoch": {
+    "schemaVersion": 1,
+    "id": "eb59f346-c31f-4ee0-b2c0-1b0566bdbfd2",
+    "createdAt": 1794695851119,
+    "programs": [
+      "pump",
+      "pumpswap",
+      "raydium-cpmm",
+      "meteora-dlmm"
+    ],
+    "history": [
+      {
+        "path": "/app/history/phase10.json",
+        "sha256": "0141b530953d1b29115f76ad5a6af9698fa0dac605fad03e11d4d75ae192fefd",
+        "unresolvedGaps": 1,
+        "quarantined": 79,
+        "sourceArtifact": {
+          "path": "docs/phase10/runtime/mainnet-validated/evidence.json",
+          "sha256": "96a68a63fa6bd53b3cc8a6f27d765a58bc213618e8592725c936755ddeab7998",
+          "bytes": 90981342
+        }
+      },
+      {
+        "path": "/app/history/phase11.json",
+        "sha256": "c1b5df65b4ab4a73f882bdd7f60be3c03c619990d834c324dc8d024706438836",
+        "unresolvedGaps": 4,
+        "quarantined": 1,
+        "sourceArtifact": {
+          "path": "docs/phase11/runtime/mainnet-validated/evidence.json",
+          "sha256": "f6025d44645e6af6baa2bd787c21734d45a80a97ca76aad57a559771c7f029d2",
+          "bytes": 1797230
+        }
+      }
+    ],
+    "researchPolicyReview": "unmet",
+    "fundedAuthorized": false
+  },
+  "refused": 4,
+  "refusalCounts": {
+    "fork-or-provider-conflict": 4
+  },
+  "creationNotifications": 1,
+  "skippedSampling": 0,
+  "captureDropped": 0,
+  "captureBytes": 151,
+  "samples": [
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 7,
+        "admissionPending": 247,
+        "admissionBytes": 447223
+      },
+      "at": 1794695857786,
+      "elapsedMs": 6411.814148,
+      "notifications": 848,
+      "candidates": 0,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 179625984,
+        "heapTotal": 59883520,
+        "heapUsed": 38336504,
+        "external": 4581457,
+        "arrayBuffers": 929198
+      },
+      "cpuMicroseconds": {
+        "user": 2769212,
+        "system": 355242
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.119551,
+        "p95": 21.921791,
+        "p99": 31.621119,
+        "max": 104.398847
+      },
+      "gc": {
+        "count": 5,
+        "totalMs": 18.460827000439167
+      },
+      "wal": {
+        "pending": 8,
+        "pendingPeak": 24,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 242,
+        "activePending": 8,
+        "oldestActiveAgeMs": 242,
+        "quarantined": 0,
+        "completedRetained": 598,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 10678,
+        "walBytes": 1332654,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "3k7pVmx8UV7kHVg9g1kY1kLDz1YEDTmwFYCcMbYQ4fQXckzPFXXosAu47m2NwNGi2comJwzneWPu5QZ2SRn4r74J",
+            "slot": 469497741
+          },
+          "meteora-dlmm": {
+            "signature": "dv9swXeQ5bwVELfvEtVRfJZ4ddDsTQUHgKtvHX3pejxzJKj8VCmAcq4f11BNFXaXB2qomsvQmGgHsoNhiLLXP5E",
+            "slot": 469497741
+          },
+          "pumpswap": {
+            "signature": "5m8gE9xGEAN3ptVwBJLEfi6AT1DkgNpcSndERWm95Wvf1UKKFYaU37dpTqNtAEd37n817jjWj9vN4N9S14YqvuwQ",
+            "slot": 469497741
+          },
+          "raydium-cpmm": {
+            "signature": "4ZPLku4iXrdRoFAgmVwtty8JuMaytQpU48zj7sFbSLY4vSeFms3VgxSjpwYSZhzvy9SyQBhyMhSwrUhLFGBQgmQW",
+            "slot": 469497741
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [
+          {
+            "program": "meteora-dlmm",
+            "fromSlot": 469497709,
+            "toSlot": 469497741,
+            "reason": "recovery-attempt",
+            "anchor": {
+              "signature": "dv9swXeQ5bwVELfvEtVRfJZ4ddDsTQUHgKtvHX3pejxzJKj8VCmAcq4f11BNFXaXB2qomsvQmGgHsoNhiLLXP5E",
+              "slot": 469497741
+            },
+            "attempts": 1,
+            "status": "recovering",
+            "knownRefused": 3
+          }
+        ],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 15,
+        "unacknowledgedBytes": 11247,
+        "diskAvailableBytes": 64512622592,
+        "fsyncBatches": 249,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "receiving",
+        "liveReady": true,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 5014.698671,
+        "wallElapsedMs": 5014,
+        "clockDiscontinuityMs": -0.698671000000104,
+        "connectedMs": 4045.562671,
+        "acknowledgedMs": 3539.1505100000004,
+        "disconnectedMs": 969.136,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 969.136,
+            "toMs": 5014.698671,
+            "subscribed": true,
+            "acknowledgedFromMs": 1475.5481609999997,
+            "lastReceiptMs": 4807.261734
+          }
+        ],
+        "events": [
+          {
+            "atMs": 969.2013239999997,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 1475.5572909999996,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          }
+        ],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    },
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 8,
+        "admissionPending": 23,
+        "admissionBytes": 35614
+      },
+      "at": 1794695862824,
+      "elapsedMs": 11450.021081,
+      "notifications": 1356,
+      "candidates": 1,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 193912832,
+        "heapTotal": 63553536,
+        "heapUsed": 39496152,
+        "external": 4545928,
+        "arrayBuffers": 893629
+      },
+      "cpuMicroseconds": {
+        "user": 4499787,
+        "system": 639159
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.119551,
+        "p95": 22.315007,
+        "p99": 28.164095,
+        "max": 104.398847
+      },
+      "gc": {
+        "count": 11,
+        "totalMs": 33.596774000674486
+      },
+      "wal": {
+        "pending": 10,
+        "pendingPeak": 25,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 77,
+        "activePending": 10,
+        "oldestActiveAgeMs": 77,
+        "quarantined": 0,
+        "completedRetained": 1337,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 21594,
+        "walBytes": 2843542,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "jWAmc8onPS9jHCpii6CZaDYejkwugA8FvkXvVZ4626zbyDCwP9aXbpTXvdRKtMJXZTLSv6GcNySje3swzavYXDH",
+            "slot": 469497743
+          },
+          "meteora-dlmm": {
+            "signature": "3V2Td7RZrKnTyPFtgzo6jYY1F6apYXPeyDRNA478nkxkzB6wsUPcdSWhvDytruu5mkqhL12mhcvDnGuzSAbtJMLE",
+            "slot": 469497762
+          },
+          "pumpswap": {
+            "signature": "45eTLwYWDviKLPGJY1v3ESbp7LMFb6sbaGhUWamaFtSWLtCScM2psBE8E8GBuH7FtJLgyRBTfRdnrXduBFHyvRiH",
+            "slot": 469497742
+          },
+          "raydium-cpmm": {
+            "signature": "4ZPLku4iXrdRoFAgmVwtty8JuMaytQpU48zj7sFbSLY4vSeFms3VgxSjpwYSZhzvy9SyQBhyMhSwrUhLFGBQgmQW",
+            "slot": 469497741
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [
+          {
+            "program": "meteora-dlmm",
+            "fromSlot": 469497709,
+            "toSlot": 469497762,
+            "reason": "reconnect-or-capacity-gap",
+            "anchor": {
+              "signature": "dv9swXeQ5bwVELfvEtVRfJZ4ddDsTQUHgKtvHX3pejxzJKj8VCmAcq4f11BNFXaXB2qomsvQmGgHsoNhiLLXP5E",
+              "slot": 469497741
+            },
+            "attempts": 1,
+            "status": "recovering",
+            "knownRefused": 4
+          }
+        ],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 6,
+        "unacknowledgedBytes": 929,
+        "diskAvailableBytes": 64508518400,
+        "fsyncBatches": 577,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 10000.16031,
+        "wallElapsedMs": 10000,
+        "clockDiscontinuityMs": -0.16030999999929918,
+        "connectedMs": 9031.011395,
+        "acknowledgedMs": 8524.599234000001,
+        "disconnectedMs": 969.1489149999998,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 969.136,
+            "toMs": 10000.147395,
+            "subscribed": true,
+            "acknowledgedFromMs": 1475.5481609999997,
+            "lastReceiptMs": 9982.571609
+          }
+        ],
+        "events": [
+          {
+            "atMs": 969.2013239999997,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 1475.5572909999996,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 10001.717564999999,
+            "provider": 0,
+            "kind": "operator-stop"
+          }
+        ],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    },
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 0,
+        "admissionPending": 0,
+        "admissionBytes": 0
+      },
+      "at": 1794695867805,
+      "elapsedMs": 16430.916158,
+      "notifications": 1356,
+      "candidates": 1,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 194699264,
+        "heapTotal": 64864256,
+        "heapUsed": 37969464,
+        "external": 4312265,
+        "arrayBuffers": 607806
+      },
+      "cpuMicroseconds": {
+        "user": 4849749,
+        "system": 669234
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.119551,
+        "p95": 22.020095,
+        "p99": 28.164095,
+        "max": 104.398847
+      },
+      "gc": {
+        "count": 12,
+        "totalMs": 35.45149900019169
+      },
+      "wal": {
+        "pending": 0,
+        "pendingPeak": 25,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "activePending": 0,
+        "oldestActiveAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1362,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 2876521,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "4fojfbtCPg9Ssod4xWsxAowJASvop8g5a38nyUaiuTkQwRHtevmf5Go93Vp8YPNqKegkdKEvT3pE83XZrAtHfsZo",
+            "slot": 469497743
+          },
+          "meteora-dlmm": {
+            "signature": "3V2Td7RZrKnTyPFtgzo6jYY1F6apYXPeyDRNA478nkxkzB6wsUPcdSWhvDytruu5mkqhL12mhcvDnGuzSAbtJMLE",
+            "slot": 469497762
+          },
+          "pumpswap": {
+            "signature": "45eTLwYWDviKLPGJY1v3ESbp7LMFb6sbaGhUWamaFtSWLtCScM2psBE8E8GBuH7FtJLgyRBTfRdnrXduBFHyvRiH",
+            "slot": 469497742
+          },
+          "raydium-cpmm": {
+            "signature": "4ZPLku4iXrdRoFAgmVwtty8JuMaytQpU48zj7sFbSLY4vSeFms3VgxSjpwYSZhzvy9SyQBhyMhSwrUhLFGBQgmQW",
+            "slot": 469497741
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [
+          {
+            "program": "meteora-dlmm",
+            "fromSlot": 469497709,
+            "toSlot": 469497762,
+            "reason": "reconnect-or-capacity-gap",
+            "anchor": {
+              "signature": "dv9swXeQ5bwVELfvEtVRfJZ4ddDsTQUHgKtvHX3pejxzJKj8VCmAcq4f11BNFXaXB2qomsvQmGgHsoNhiLLXP5E",
+              "slot": 469497741
+            },
+            "attempts": 1,
+            "status": "recovering",
+            "knownRefused": 4
+          }
+        ],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 64508444672,
+        "fsyncBatches": 589,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 10000.16031,
+        "wallElapsedMs": 10000,
+        "clockDiscontinuityMs": -0.16030999999929918,
+        "connectedMs": 9031.011395,
+        "acknowledgedMs": 8524.599234000001,
+        "disconnectedMs": 969.1489149999998,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 969.136,
+            "toMs": 10000.147395,
+            "subscribed": true,
+            "acknowledgedFromMs": 1475.5481609999997,
+            "lastReceiptMs": 9982.571609
+          }
+        ],
+        "events": [
+          {
+            "atMs": 969.2013239999997,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 1475.5572909999996,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 10001.717564999999,
+            "provider": 0,
+            "kind": "operator-stop"
+          }
+        ],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    },
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 0,
+        "admissionPending": 0,
+        "admissionBytes": 0
+      },
+      "at": 1794695872802,
+      "elapsedMs": 21428.066198,
+      "notifications": 1356,
+      "candidates": 1,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 195092480,
+        "heapTotal": 65126400,
+        "heapUsed": 31834832,
+        "external": 4445412,
+        "arrayBuffers": 621472
+      },
+      "cpuMicroseconds": {
+        "user": 5131073,
+        "system": 694501
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.119551,
+        "p95": 21.921791,
+        "p99": 28.016639,
+        "max": 104.398847
+      },
+      "gc": {
+        "count": 12,
+        "totalMs": 35.45149900019169
+      },
+      "wal": {
+        "pending": 0,
+        "pendingPeak": 25,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "activePending": 0,
+        "oldestActiveAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1362,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 2876521,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "4fojfbtCPg9Ssod4xWsxAowJASvop8g5a38nyUaiuTkQwRHtevmf5Go93Vp8YPNqKegkdKEvT3pE83XZrAtHfsZo",
+            "slot": 469497743
+          },
+          "meteora-dlmm": {
+            "signature": "3V2Td7RZrKnTyPFtgzo6jYY1F6apYXPeyDRNA478nkxkzB6wsUPcdSWhvDytruu5mkqhL12mhcvDnGuzSAbtJMLE",
+            "slot": 469497762
+          },
+          "pumpswap": {
+            "signature": "45eTLwYWDviKLPGJY1v3ESbp7LMFb6sbaGhUWamaFtSWLtCScM2psBE8E8GBuH7FtJLgyRBTfRdnrXduBFHyvRiH",
+            "slot": 469497742
+          },
+          "raydium-cpmm": {
+            "signature": "4ZPLku4iXrdRoFAgmVwtty8JuMaytQpU48zj7sFbSLY4vSeFms3VgxSjpwYSZhzvy9SyQBhyMhSwrUhLFGBQgmQW",
+            "slot": 469497741
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [
+          {
+            "program": "meteora-dlmm",
+            "fromSlot": 469497709,
+            "toSlot": 469497762,
+            "reason": "reconnect-or-capacity-gap",
+            "anchor": {
+              "signature": "dv9swXeQ5bwVELfvEtVRfJZ4ddDsTQUHgKtvHX3pejxzJKj8VCmAcq4f11BNFXaXB2qomsvQmGgHsoNhiLLXP5E",
+              "slot": 469497741
+            },
+            "attempts": 1,
+            "status": "recovering",
+            "knownRefused": 4
+          }
+        ],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 64508444672,
+        "fsyncBatches": 589,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 10000.16031,
+        "wallElapsedMs": 10000,
+        "clockDiscontinuityMs": -0.16030999999929918,
+        "connectedMs": 9031.011395,
+        "acknowledgedMs": 8524.599234000001,
+        "disconnectedMs": 969.1489149999998,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 969.136,
+            "toMs": 10000.147395,
+            "subscribed": true,
+            "acknowledgedFromMs": 1475.5481609999997,
+            "lastReceiptMs": 9982.571609
+          }
+        ],
+        "events": [
+          {
+            "atMs": 969.2013239999997,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 1475.5572909999996,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 10001.717564999999,
+            "provider": 0,
+            "kind": "operator-stop"
+          }
+        ],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    },
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 0,
+        "admissionPending": 0,
+        "admissionBytes": 0
+      },
+      "at": 1794695877802,
+      "elapsedMs": 26428.090667,
+      "notifications": 1356,
+      "candidates": 1,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 195354624,
+        "heapTotal": 65126400,
+        "heapUsed": 39718408,
+        "external": 4358731,
+        "arrayBuffers": 660792
+      },
+      "cpuMicroseconds": {
+        "user": 5320867,
+        "system": 711204
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.135935,
+        "p95": 21.790719,
+        "p99": 27.066367,
+        "max": 104.398847
+      },
+      "gc": {
+        "count": 13,
+        "totalMs": 37.85301300138235
+      },
+      "wal": {
+        "pending": 0,
+        "pendingPeak": 25,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "activePending": 0,
+        "oldestActiveAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1362,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 2876521,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "4fojfbtCPg9Ssod4xWsxAowJASvop8g5a38nyUaiuTkQwRHtevmf5Go93Vp8YPNqKegkdKEvT3pE83XZrAtHfsZo",
+            "slot": 469497743
+          },
+          "meteora-dlmm": {
+            "signature": "3V2Td7RZrKnTyPFtgzo6jYY1F6apYXPeyDRNA478nkxkzB6wsUPcdSWhvDytruu5mkqhL12mhcvDnGuzSAbtJMLE",
+            "slot": 469497762
+          },
+          "pumpswap": {
+            "signature": "45eTLwYWDviKLPGJY1v3ESbp7LMFb6sbaGhUWamaFtSWLtCScM2psBE8E8GBuH7FtJLgyRBTfRdnrXduBFHyvRiH",
+            "slot": 469497742
+          },
+          "raydium-cpmm": {
+            "signature": "4ZPLku4iXrdRoFAgmVwtty8JuMaytQpU48zj7sFbSLY4vSeFms3VgxSjpwYSZhzvy9SyQBhyMhSwrUhLFGBQgmQW",
+            "slot": 469497741
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [
+          {
+            "program": "meteora-dlmm",
+            "fromSlot": 469497709,
+            "toSlot": 469497762,
+            "reason": "reconnect-or-capacity-gap",
+            "anchor": {
+              "signature": "dv9swXeQ5bwVELfvEtVRfJZ4ddDsTQUHgKtvHX3pejxzJKj8VCmAcq4f11BNFXaXB2qomsvQmGgHsoNhiLLXP5E",
+              "slot": 469497741
+            },
+            "attempts": 1,
+            "status": "recovering",
+            "knownRefused": 4
+          }
+        ],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 64508444672,
+        "fsyncBatches": 589,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 10000.16031,
+        "wallElapsedMs": 10000,
+        "clockDiscontinuityMs": -0.16030999999929918,
+        "connectedMs": 9031.011395,
+        "acknowledgedMs": 8524.599234000001,
+        "disconnectedMs": 969.1489149999998,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 969.136,
+            "toMs": 10000.147395,
+            "subscribed": true,
+            "acknowledgedFromMs": 1475.5481609999997,
+            "lastReceiptMs": 9982.571609
+          }
+        ],
+        "events": [
+          {
+            "atMs": 969.2013239999997,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 1475.5572909999996,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 10001.717564999999,
+            "provider": 0,
+            "kind": "operator-stop"
+          }
+        ],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    },
+    {
+      "pipeline": {
+        "fatal": null,
+        "inFlight": 0,
+        "admissionPending": 0,
+        "admissionBytes": 0
+      },
+      "at": 1794695877922,
+      "elapsedMs": 26548.349796,
+      "notifications": 1356,
+      "candidates": 1,
+      "verifiedCreations": 0,
+      "memory": {
+        "rss": 197320704,
+        "heapTotal": 65126400,
+        "heapUsed": 46146888,
+        "external": 4388713,
+        "arrayBuffers": 690774
+      },
+      "cpuMicroseconds": {
+        "user": 5355663,
+        "system": 714410
+      },
+      "eventLoopDelayMs": {
+        "p50": 20.135935,
+        "p95": 21.790719,
+        "p99": 27.492351,
+        "max": 104.398847
+      },
+      "gc": {
+        "count": 13,
+        "totalMs": 37.85301300138235
+      },
+      "wal": {
+        "pending": 0,
+        "pendingPeak": 25,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "activePending": 0,
+        "oldestActiveAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1362,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 2877357,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "4fojfbtCPg9Ssod4xWsxAowJASvop8g5a38nyUaiuTkQwRHtevmf5Go93Vp8YPNqKegkdKEvT3pE83XZrAtHfsZo",
+            "slot": 469497743
+          },
+          "meteora-dlmm": {
+            "signature": "3V2Td7RZrKnTyPFtgzo6jYY1F6apYXPeyDRNA478nkxkzB6wsUPcdSWhvDytruu5mkqhL12mhcvDnGuzSAbtJMLE",
+            "slot": 469497762
+          },
+          "pumpswap": {
+            "signature": "45eTLwYWDviKLPGJY1v3ESbp7LMFb6sbaGhUWamaFtSWLtCScM2psBE8E8GBuH7FtJLgyRBTfRdnrXduBFHyvRiH",
+            "slot": 469497742
+          },
+          "raydium-cpmm": {
+            "signature": "4ZPLku4iXrdRoFAgmVwtty8JuMaytQpU48zj7sFbSLY4vSeFms3VgxSjpwYSZhzvy9SyQBhyMhSwrUhLFGBQgmQW",
+            "slot": 469497741
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [
+          {
+            "program": "meteora-dlmm",
+            "fromSlot": 469497709,
+            "toSlot": 469497762,
+            "reason": "rpc-or-processing-budget-exhausted",
+            "anchor": {
+              "signature": "dv9swXeQ5bwVELfvEtVRfJZ4ddDsTQUHgKtvHX3pejxzJKj8VCmAcq4f11BNFXaXB2qomsvQmGgHsoNhiLLXP5E",
+              "slot": 469497741
+            },
+            "attempts": 1,
+            "status": "partial",
+            "knownRefused": 4
+          }
+        ],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 64508342272,
+        "fsyncBatches": 591,
+        "writerFailure": null
+      },
+      "supervisor": {
+        "state": "stopped",
+        "liveReady": false,
+        "provider": 0,
+        "providerHosts": [
+          "api.mainnet-beta.solana.com",
+          "solana-rpc.publicnode.com"
+        ],
+        "elapsedMs": 10000.16031,
+        "wallElapsedMs": 10000,
+        "clockDiscontinuityMs": -0.16030999999929918,
+        "connectedMs": 9031.011395,
+        "acknowledgedMs": 8524.599234000001,
+        "disconnectedMs": 969.1489149999998,
+        "connections": 1,
+        "incidents": 0,
+        "attemptsThisIncident": 1,
+        "cooldownsUntilMono": [
+          0,
+          0
+        ],
+        "intervals": [
+          {
+            "provider": 0,
+            "fromMs": 969.136,
+            "toMs": 10000.147395,
+            "subscribed": true,
+            "acknowledgedFromMs": 1475.5481609999997,
+            "lastReceiptMs": 9982.571609
+          }
+        ],
+        "events": [
+          {
+            "atMs": 969.2013239999997,
+            "provider": 0,
+            "kind": "socket-open"
+          },
+          {
+            "atMs": 1475.5572909999996,
+            "provider": 0,
+            "kind": "subscriptions-ready"
+          },
+          {
+            "atMs": 10001.717564999999,
+            "provider": 0,
+            "kind": "operator-stop"
+          }
+        ],
+        "liveTrading": false
+      },
+      "recoveryProvider": 0
+    }
+  ],
+  "gaps": [],
+  "rpcIssues": [
+    {
+      "at": 1794695861257,
+      "stage": "confirmed-verification",
+      "message": "Read-only verification HTTP 429"
+    },
+    {
+      "at": 1794695861736,
+      "stage": "finalized-verification",
+      "message": "Read-only verification HTTP 429"
+    }
+  ],
+  "supervisor": {
+    "state": "stopped",
+    "liveReady": false,
+    "provider": 0,
+    "providerHosts": [
+      "api.mainnet-beta.solana.com",
+      "solana-rpc.publicnode.com"
+    ],
+    "elapsedMs": 10000.16031,
+    "wallElapsedMs": 10000,
+    "clockDiscontinuityMs": -0.16030999999929918,
+    "connectedMs": 9031.011395,
+    "acknowledgedMs": 8524.599234000001,
+    "disconnectedMs": 969.1489149999998,
+    "connections": 1,
+    "incidents": 0,
+    "attemptsThisIncident": 1,
+    "cooldownsUntilMono": [
+      0,
+      0
+    ],
+    "intervals": [
+      {
+        "provider": 0,
+        "fromMs": 969.136,
+        "toMs": 10000.147395,
+        "subscribed": true,
+        "acknowledgedFromMs": 1475.5481609999997,
+        "lastReceiptMs": 9982.571609
+      }
+    ],
+    "events": [
+      {
+        "atMs": 969.2013239999997,
+        "provider": 0,
+        "kind": "socket-open"
+      },
+      {
+        "atMs": 1475.5572909999996,
+        "provider": 0,
+        "kind": "subscriptions-ready"
+      },
+      {
+        "atMs": 10001.717564999999,
+        "provider": 0,
+        "kind": "operator-stop"
+      }
+    ],
+    "liveTrading": false
+  },
+  "recoveryProgress": [
+    {
+      "program": "meteora-dlmm",
+      "target": 469497762,
+      "fromSlot": 469497709,
+      "pages": 1,
+      "cursor": "5Dg3XprBemC4Lho1QjPucqWKbv28Yufg3BU4HvPurMdbwBqWvPHG7bXqgK4GpKQbdm5MfXuGd8ihxC9S7egEFr3E",
+      "retrieved": 10,
+      "duplicates": 0,
+      "unavailable": 11,
+      "anchorSeen": false,
+      "boundary": false,
+      "provider": 0,
+      "observedAt": 1794695862019,
+      "scope": "Finalized provider-reported scan; persisted cursor is audit progress, restart safely rescans/deduplicates from head"
+    },
+    {
+      "program": "meteora-dlmm",
+      "target": 469497762,
+      "fromSlot": 469497709,
+      "pages": 2,
+      "cursor": "3t4K1vdW95UX5xgFpz4E5ceEiGVAtFnCWRnAPzh4bvDinjro63AssXHn7SCTKqWAddxkUY9wJPDDTJkDVQzydVCW",
+      "retrieved": 10,
+      "duplicates": 0,
+      "unavailable": 111,
+      "anchorSeen": false,
+      "boundary": false,
+      "provider": 0,
+      "observedAt": 1794695877882,
+      "scope": "Finalized provider-reported scan; persisted cursor is audit progress, restart safely rescans/deduplicates from head"
+    }
+  ],
+  "rawStorage": {
+    "removedCoverage": {
+      "fromSlot": null,
+      "toSlot": null,
+      "unknown": false
+    },
+    "bytes": 2055279,
+    "archives": 0,
+    "archiveBytes": 0,
+    "deletedFiles": 0,
+    "deletedBytes": 0,
+    "diskAvailableBytes": 64508444672,
+    "maxBytes": 8388608,
+    "maxArchives": 2
+  },
+  "refusalStorage": {
+    "removedCoverage": {
+      "fromSlot": null,
+      "toSlot": null,
+      "unknown": false
+    },
+    "bytes": 21932,
+    "archives": 0,
+    "archiveBytes": 0,
+    "deletedFiles": 0,
+    "deletedBytes": 0,
+    "diskAvailableBytes": 64512512000,
+    "maxBytes": 4194304,
+    "maxArchives": 2
+  },
+  "resources": {
+    "cpuMicroseconds": {
+      "user": 5377181,
+      "system": 730953
+    },
+    "resourceBefore": {
+      "userCPUTime": 1223408,
+      "systemCPUTime": 174487,
+      "maxRSS": 95520,
+      "sharedMemorySize": 0,
+      "unsharedDataSize": 0,
+      "unsharedStackSize": 0,
+      "minorPageFault": 15792,
+      "majorPageFault": 0,
+      "swappedOut": 0,
+      "fsRead": 288,
+      "fsWrite": 1920,
+      "ipcSent": 0,
+      "ipcReceived": 0,
+      "signalsCount": 0,
+      "voluntaryContextSwitches": 1274,
+      "involuntaryContextSwitches": 118
+    },
+    "resourceAfter": {
+      "userCPUTime": 6600552,
+      "systemCPUTime": 905435,
+      "maxRSS": 193848,
+      "sharedMemorySize": 0,
+      "unsharedDataSize": 0,
+      "unsharedStackSize": 0,
+      "minorPageFault": 42866,
+      "majorPageFault": 36,
+      "swappedOut": 0,
+      "fsRead": 3288,
+      "fsWrite": 16952,
+      "ipcSent": 0,
+      "ipcReceived": 0,
+      "signalsCount": 0,
+      "voluntaryContextSwitches": 17277,
+      "involuntaryContextSwitches": 997
+    },
+    "memory": {
+      "rss": 146714624,
+      "heapTotal": 66174976,
+      "heapUsed": 32272096,
+      "external": 4323694,
+      "arrayBuffers": 671395
+    },
+    "gcCount": 14,
+    "gcMs": 40.14968300238252
+  },
+  "provider": "api.mainnet-beta.solana.com",
+  "policy": {
+    "name": "finalized-paper-research",
+    "requiredCommitment": "finalized",
+    "maxReceiptAgeMs": 60000,
+    "maxEventAgeMs": 60000,
+    "maxSlotLag": 160,
+    "maxMarketSlotLag": 160,
+    "allowHistorical": false
+  },
+  "rows": [
+    {
+      "event": {
+        "program": "pump",
+        "signature": "4Lk1nEvXEaamyVqz6x1nJhpwwBSv2QjP2Q8qVPyqxR8u5ryFU7ZhvmiFAU5o2YB3tf4WcYP8JLs3nMErtN64CB4i",
+        "slot": 469497742,
+        "logs": [
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [1]",
+          "Program log: Instruction: CreateV2",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: MetadataPointerInstruction::Initialize",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1331 of 487478 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: InitializeMint2",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2094 of 484484 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+          "Program log: Create",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+          "Program log: Instruction: GetAccountDataSize",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1426 of 459701 compute units",
+          "Program return: TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb qgAAAAAAAAA=",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program 11111111111111111111111111111111 invoke [3]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+          "Program log: Instruction: InitializeImmutableOwner",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 734 of 453453 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+          "Program log: Instruction: InitializeAccount3",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2852 of 450383 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 20807 of 468034 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: TokenMetadataInstruction: Initialize",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 4677 of 422530 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: TokenMetadataInstruction: UpdateAuthority",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 5019 of 415603 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e invoke [2]",
+          "Program log: Instruction: InitializeMayhemState",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [3]",
+          "Program log: Create",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [4]",
+          "Program log: Instruction: GetAccountDataSize",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1495 of 391143 compute units",
+          "Program return: TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb qgAAAAAAAAA=",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program 11111111111111111111111111111111 invoke [4]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [4]",
+          "Program log: Instruction: InitializeImmutableOwner",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 734 of 384826 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [4]",
+          "Program log: Instruction: InitializeAccount3",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3107 of 381755 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 18133 of 396477 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 11111111111111111111111111111111 invoke [3]",
+          "Program 11111111111111111111111111111111 success",
+          "Program MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e consumed 47475 of 404120 compute units",
+          "Program MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: MintTo",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2126 of 354245 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: MintTo",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2126 of 349969 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: SetAuthority",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1477 of 345909 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program data: G3KpTd7rY3YIAAAAQkxBQ0tPVVQIAAAAQmxhY2tvdXRDAAAAaHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1WMUQ5cjFqZWFnNUpyQjNnRldzS2FBM0xzcGVBM05ZWlZqdk1IazRvTnlra9SSxCxhP7O0f1S70ZbnmfY+QDV/7RwyR+RdupTscgavnwEi9YlimeQ4nNgSgx3fT6mR1WPwkeIPwVOMmR2I/2uv/+telbK9VIDKitJkctypPzfwiYrLzsib5TZHgbsa8q//616Vsr1UgMqK0mRy3Kk/N/CJisvOyJvlNkeBuxryreL4agAAAAAAENhH488DAACsI/wGAAAAAHjF+1HRAgAAgMakfo0DAAbd9uHudY/eGEJdvORszdq2GvxNg7kNJ/69+SjYoYv8AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsI/wGAAAAAAAAAAAAAAAAAA==",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [2]",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2170 of 338058 compute units",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 165545 of 499850 compute units",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+          "Program log: CreateIdempotent",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: GetAccountDataSize",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1495 of 329045 compute units",
+          "Program return: TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb qgAAAAAAAAA=",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program log: Initialize the associated token account",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: InitializeImmutableOwner",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 734 of 322728 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: InitializeAccount3",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3107 of 319661 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 18034 of 334305 compute units",
+          "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [1]",
+          "Program log: Instruction: BuyV2",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ invoke [2]",
+          "Program log: Instruction: GetFeesWithQuoteMint",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ consumed 3360 of 258163 compute units",
+          "Program return: pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ AAAAAAAAAABfAAAAAAAAAB4AAAAAAAAA",
+          "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ success",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+          "Program log: Instruction: TransferChecked",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2977 of 251362 compute units",
+          "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program 11111111111111111111111111111111 invoke [2]",
+          "Program 11111111111111111111111111111111 success",
+          "Program data: vdt/007mYe7UksQsYT+ztH9Uu9GW55n2PkA1f+0cMkfkXbqU7HIGr5pqhgMAAAAAcMi7h+sBAAABr//rXpWyvVSAyorSZHLcqT838ImKy87Im+U2R4G7GvKt4vhqAAAAAJoWqv8GAAAAkEccwPfNAwCaaoYDAAAAAJCvCXRmzwIA6JMUH7GOnxV02BDheOGeMGBOMXWqLkoy38hgByfRBwlfAAAAAAAAAK6SCAAAAAAAr//rXpWyvVSAyorSZHLcqT838ImKy87Im+U2R4G7GvIeAAAAAAAAAA+1AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAGJ1eQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJpqhgMAAAAAmhaq/wYAAACaaoYDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [2]",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2170 of 234672 compute units",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 86984 of 316271 compute units",
+          "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+          "Program 11111111111111111111111111111111 invoke [1]",
+          "Program 11111111111111111111111111111111 success"
+        ],
+        "failed": false,
+        "observedAt": 1794695860848
+      },
+      "receiptProvider": "api.mainnet-beta.solana.com",
+      "finalityPolls": 0,
+      "receiptCommitment": "confirmed",
+      "receivedMonoOffsetMs": 9474.561928,
+      "preparationIssue": "Read-only verification HTTP 429",
+      "verificationIssue": "Read-only verification HTTP 429"
+    }
+  ],
+  "captured": [
+    {
+      "method": "getGenesisHash",
+      "provider": "api.mainnet-beta.solana.com",
+      "observedAt": 1794695851921,
+      "result": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+    }
+  ],
+  "pipeline": {
+    "fatal": null,
+    "inFlight": 0,
+    "admissionPending": 0,
+    "admissionBytes": 0
+  },
+  "journal": {
+    "pending": 0,
+    "pendingPeak": 25,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 0,
+    "activePending": 0,
+    "oldestActiveAgeMs": 0,
+    "quarantined": 0,
+    "completedRetained": 1362,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 0,
+    "walBytes": 2877357,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {
+      "pump": {
+        "signature": "4fojfbtCPg9Ssod4xWsxAowJASvop8g5a38nyUaiuTkQwRHtevmf5Go93Vp8YPNqKegkdKEvT3pE83XZrAtHfsZo",
+        "slot": 469497743
+      },
+      "meteora-dlmm": {
+        "signature": "3V2Td7RZrKnTyPFtgzo6jYY1F6apYXPeyDRNA478nkxkzB6wsUPcdSWhvDytruu5mkqhL12mhcvDnGuzSAbtJMLE",
+        "slot": 469497762
+      },
+      "pumpswap": {
+        "signature": "45eTLwYWDviKLPGJY1v3ESbp7LMFb6sbaGhUWamaFtSWLtCScM2psBE8E8GBuH7FtJLgyRBTfRdnrXduBFHyvRiH",
+        "slot": 469497742
+      },
+      "raydium-cpmm": {
+        "signature": "4ZPLku4iXrdRoFAgmVwtty8JuMaytQpU48zj7sFbSLY4vSeFms3VgxSjpwYSZhzvy9SyQBhyMhSwrUhLFGBQgmQW",
+        "slot": 469497741
+      }
+    },
+    "dedupeFloors": {},
+    "gaps": [
+      {
+        "program": "meteora-dlmm",
+        "fromSlot": 469497709,
+        "toSlot": 469497762,
+        "reason": "rpc-or-processing-budget-exhausted",
+        "anchor": {
+          "signature": "dv9swXeQ5bwVELfvEtVRfJZ4ddDsTQUHgKtvHX3pejxzJKj8VCmAcq4f11BNFXaXB2qomsvQmGgHsoNhiLLXP5E",
+          "slot": 469497741
+        },
+        "attempts": 1,
+        "status": "partial",
+        "knownRefused": 4
+      }
+    ],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 64508342272,
+    "fsyncBatches": 592,
+    "writerFailure": null
+  },
+  "telemetry": {
+    "uptimeMs": 26588.825944,
+    "counters": {
+      "store.committed": 8,
+      "ingest.resumed_from_wal": 0,
+      "supervisor.connections": 1,
+      "rpc.subscription_requests": 4,
+      "rpc.messages": 1360,
+      "observations.received": 1356,
+      "supervisor.notifications": 1356,
+      "research.admission.offered": 1356,
+      "research.admission.admitted": 1356,
+      "observations.delivered": 1356,
+      "ingest.offered": 1366,
+      "journal.fsync_batches": 591,
+      "journal.ownership_acks": 1362,
+      "research.admission.completed": 1356,
+      "ingest.decode.offered": 1362,
+      "ingest.decode.admitted": 1362,
+      "ingest.decode.completed": 1362,
+      "ingest.enrichment.offered": 1362,
+      "ingest.enrichment.admitted": 1362,
+      "decoding.completed": 77,
+      "decoding.launches": 1,
+      "ingest.enrichment.completed": 1362,
+      "ingest.strategy.offered": 1362,
+      "ingest.strategy.admitted": 1362,
+      "ingest.strategy.completed": 1362,
+      "ingest.persistence.offered": 1362,
+      "ingest.persistence.admitted": 1362,
+      "raw.persistence.offered": 1366,
+      "raw.persistence.admitted": 1366,
+      "raw.persistence.completed": 1366,
+      "ingest.deferred": 859,
+      "journal.completion_acks": 1362,
+      "ingest.persistence.completed": 1362,
+      "ingest.completed": 1362,
+      "ingest.deferred_completed": 859,
+      "ingest.observation_only": 987,
+      "ingest.fork_or_provider_conflicts": 4,
+      "rpc.calls": 84,
+      "ingest.recovered": 10,
+      "rpc.errors": 71,
+      "backfill.unavailable": 111,
+      "decoding.pda_cache_misses": 1,
+      "research.rpc_rate_limits": 2,
+      "backfill.unrecoverable": 1
+    },
+    "gauges": {
+      "store.queue_depth": {
+        "current": 0,
+        "peak": 1
+      },
+      "store.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "research.admission.pending": {
+        "current": 0,
+        "peak": 359
+      },
+      "research.admission.queue_depth": {
+        "current": 0,
+        "peak": 351
+      },
+      "research.admission.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "journal.unacked": {
+        "current": 0,
+        "peak": 16
+      },
+      "journal.unacked_bytes": {
+        "current": 0,
+        "peak": 39291
+      },
+      "ingest.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.queue_depth": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.decode.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "ingest.enrichment.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.enrichment.queue_depth": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.enrichment.in_flight": {
+        "current": 0,
+        "peak": 2
+      },
+      "ingest.strategy.pending": {
+        "current": 0,
+        "peak": 7
+      },
+      "ingest.strategy.queue_depth": {
+        "current": 0,
+        "peak": 7
+      },
+      "ingest.strategy.in_flight": {
+        "current": 0,
+        "peak": 1
+      },
+      "ingest.persistence.pending": {
+        "current": 0,
+        "peak": 8
+      },
+      "ingest.persistence.queue_depth": {
+        "current": 0,
+        "peak": 7
+      },
+      "ingest.persistence.in_flight": {
+        "current": 0,
+        "peak": 8
+      },
+      "raw.persistence.pending": {
+        "current": 0,
+        "peak": 10
+      },
+      "raw.persistence.queue_depth": {
+        "current": 0,
+        "peak": 8
+      },
+      "raw.persistence.in_flight": {
+        "current": 0,
+        "peak": 2
+      }
+    },
+    "histograms": {
+      "store.queue_wait_ms": {
+        "count": 8,
+        "samples": 8,
+        "p50": 0.043542000003071735,
+        "p95": 0.07121100000040315,
+        "p99": 0.07121100000040315,
+        "max": 0.6196840000000066
+      },
+      "store.clone_ms": {
+        "count": 8,
+        "samples": 8,
+        "p50": 0.183324999998149,
+        "p95": 0.2569679999996879,
+        "p99": 0.2569679999996879,
+        "max": 0.4433169999999791
+      },
+      "store.validation_ms": {
+        "count": 8,
+        "samples": 8,
+        "p50": 0.748960000000011,
+        "p95": 2.0214299999970535,
+        "p99": 2.0214299999970535,
+        "max": 3.7794229999999516
+      },
+      "store.persistence_ms": {
+        "count": 8,
+        "samples": 8,
+        "p50": 8.752307999999175,
+        "p95": 16.677688000000103,
+        "p99": 16.677688000000103,
+        "max": 22.66463399999884
+      },
+      "store.transaction_ms": {
+        "count": 8,
+        "samples": 8,
+        "p50": 9.452471999997215,
+        "p95": 18.85605099999998,
+        "p99": 18.85605099999998,
+        "max": 24.08930799999871
+      },
+      "monitor.json_decoding_ms": {
+        "count": 1360,
+        "samples": 1360,
+        "p50": 0.015867999998590676,
+        "p95": 0.05278100000032282,
+        "p99": 0.07609900000034031,
+        "max": 2.2172129999999015
+      },
+      "monitor.ingestion_ms": {
+        "count": 1360,
+        "samples": 1360,
+        "p50": 0.05485500000031607,
+        "p95": 0.1750900000006368,
+        "p99": 0.25989899999967747,
+        "max": 2.514506999999867
+      },
+      "monitor.deduplication_ms": {
+        "count": 1356,
+        "samples": 1356,
+        "p50": 0.0004399999997986015,
+        "p95": 0.0012990000000172586,
+        "p99": 0.00333100000034392,
+        "max": 0.23007899999993242
+      },
+      "research.admission.queue_wait_ms": {
+        "count": 1356,
+        "samples": 1356,
+        "p50": 143.77404000000024,
+        "p95": 586.2634189999999,
+        "p99": 684.9781029999995,
+        "max": 714.7805769999995
+      },
+      "journal.worker_append_ms": {
+        "count": 591,
+        "samples": 591,
+        "p50": 0.5255870000000868,
+        "p95": 1.7478229999996984,
+        "p99": 3.0691679999999906,
+        "max": 11.03584600000022
+      },
+      "journal.worker_fsync_ms": {
+        "count": 591,
+        "samples": 591,
+        "p50": 2.906938999999511,
+        "p95": 5.46972999999889,
+        "p99": 7.209536000000298,
+        "max": 9.707718999999997
+      },
+      "journal.batch_records": {
+        "count": 591,
+        "samples": 591,
+        "p50": 4,
+        "p95": 8,
+        "p99": 9,
+        "max": 12
+      },
+      "journal.ownership_ack_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 7.017039000000295,
+        "p95": 12.565350000000763,
+        "p99": 23.23248700000113,
+        "max": 53.1069320000006
+      },
+      "ingest.receipt_ms": {
+        "count": 1366,
+        "samples": 1366,
+        "p50": 7.162406000000374,
+        "p95": 12.769998999999189,
+        "p99": 26.141787000000022,
+        "max": 53.35900500000025
+      },
+      "research.admission.processing_ms": {
+        "count": 1356,
+        "samples": 1356,
+        "p50": 13.744519999999284,
+        "p95": 40.729449999999815,
+        "p99": 58.548657000001185,
+        "max": 91.40318599999955
+      },
+      "research.admission.end_to_end_ms": {
+        "count": 1356,
+        "samples": 1356,
+        "p50": 161.84870900000078,
+        "p95": 598.2999810000001,
+        "p99": 714.966504,
+        "max": 722.9976189999998
+      },
+      "ingest.decode.queue_wait_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 0.15153300000019954,
+        "p95": 0.7923289999998815,
+        "p99": 2.5207999999993262,
+        "max": 9.216682000000219
+      },
+      "ingest.decode.processing_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 0.0286469999991823,
+        "p95": 0.17355200000019977,
+        "p99": 0.29261200000019016,
+        "max": 4.847471000000951
+      },
+      "ingest.decode.end_to_end_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 156.72959800000035,
+        "p95": 599.4291349999994,
+        "p99": 701.3576000000003,
+        "max": 723.9523959999997
+      },
+      "ingest.enrichment.queue_wait_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 0.015468000000510074,
+        "p95": 0.25863400000162073,
+        "p99": 0.6569350000008853,
+        "max": 4.714261999999508
+      },
+      "decoding_ms": {
+        "count": 77,
+        "samples": 77,
+        "p50": 0.0823709999995117,
+        "p95": 0.3236300000007759,
+        "p99": 1.3902949999996963,
+        "max": 3.827726999999868
+      },
+      "ingest.enrichment.processing_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 0.0641589999995631,
+        "p95": 0.22677400000065973,
+        "p99": 0.33890699999983553,
+        "max": 828.800056
+      },
+      "ingest.enrichment.end_to_end_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 157.17280299999948,
+        "p95": 599.6261909999994,
+        "p99": 701.4699369999998,
+        "max": 888.0068859999992
+      },
+      "ingest.strategy.queue_wait_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 0.060806000000411586,
+        "p95": 0.286207000000104,
+        "p99": 0.41330200000084005,
+        "max": 8.834944000000178
+      },
+      "ingest.strategy.processing_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 0.04597199999989243,
+        "p95": 0.20242299999972602,
+        "p99": 0.2998729999999341,
+        "max": 1.0008319999997184
+      },
+      "ingest.strategy.end_to_end_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 157.4551819999997,
+        "p95": 599.7723980000001,
+        "p99": 701.6678769999999,
+        "max": 888.0779490000004
+      },
+      "ingest.persistence.queue_wait_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 0.013631000000714266,
+        "p95": 0.06556900000032329,
+        "p99": 0.3095789999997578,
+        "max": 3.9706420000002254
+      },
+      "raw.persistence.queue_wait_ms": {
+        "count": 1366,
+        "samples": 1366,
+        "p50": 2.309911000000284,
+        "p95": 8.926650999999765,
+        "p99": 16.72632899999917,
+        "max": 56.14428699999917
+      },
+      "raw.persistence.processing_ms": {
+        "count": 1366,
+        "samples": 1366,
+        "p50": 0.6070700000000215,
+        "p95": 2.9337329999998474,
+        "p99": 7.126000000000204,
+        "max": 42.8858309999996
+      },
+      "raw.persistence.end_to_end_ms": {
+        "count": 1366,
+        "samples": 1366,
+        "p50": 3.2247340000003533,
+        "p95": 11.423616000000038,
+        "p99": 20.148584999999002,
+        "max": 57.18797199999972
+      },
+      "ingest.end_to_end_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 170.23286199999984,
+        "p95": 610.2170919999999,
+        "p99": 712.4179979999999,
+        "max": 895.2135099999996
+      },
+      "ingest.persistence.processing_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 10.562116999999489,
+        "p95": 20.897330000000693,
+        "p99": 38.5867189999999,
+        "max": 74.86847400000079
+      },
+      "ingest.persistence.end_to_end_ms": {
+        "count": 1362,
+        "samples": 1362,
+        "p50": 170.2394430000004,
+        "p95": 610.2185460000001,
+        "p99": 712.4204770000006,
+        "max": 895.2202080000006
+      },
+      "rpc.getSlot_ms": {
+        "count": 1,
+        "samples": 1,
+        "p50": 886.0320420000007,
+        "p95": 886.0320420000007,
+        "p99": 886.0320420000007,
+        "max": 886.0320420000007
+      },
+      "rpc.getSignaturesForAddress_ms": {
+        "count": 2,
+        "samples": 2,
+        "p50": 107.19938999999977,
+        "p95": 107.19938999999977,
+        "p99": 107.19938999999977,
+        "max": 630.1784719999996
+      },
+      "rpc.getTransaction_ms": {
+        "count": 81,
+        "samples": 81,
+        "p50": 561.1746230000008,
+        "p95": 1051.8926620000002,
+        "p99": 2687.9588870000007,
+        "max": 4748.0600220000015
+      },
+      "phase9.confirmed_preparation_ms": {
+        "count": 1,
+        "samples": 1,
+        "p50": 331.3056880000004,
+        "p95": 331.3056880000004,
+        "p99": 331.3056880000004,
+        "max": 331.3056880000004
+      },
+      "market.transaction_verification_ms": {
+        "count": 1,
+        "samples": 1,
+        "p50": 478.37758199999917,
+        "p95": 478.37758199999917,
+        "p99": 478.37758199999917,
+        "max": 478.37758199999917
+      }
+    }
+  },
+  "ledger": {
+    "version": 1,
+    "mode": "paper",
+    "running": false,
+    "killed": true,
+    "balanceSol": 10,
+    "day": "2026-11-14",
+    "dailySpendSol": 0,
+    "failures": 0,
+    "strategies": [
+      {
+        "name": "Conservative launch",
+        "kind": "launch",
+        "enabled": true,
+        "tradeSol": 0.1,
+        "maxTradeSol": 0.25,
+        "maxDailySpendSol": 1,
+        "maxPositions": 5,
+        "maxSlippageBps": 100,
+        "reserveSol": 1,
+        "maxRiskScore": 30,
+        "maxFailures": 3,
+        "minLiquiditySol": 20,
+        "minMarketCapSol": 0,
+        "maxMarketCapSol": 100000,
+        "minVolumeSol": 0,
+        "minMomentumBps": 0,
+        "delayMs": 0,
+        "maxPriceAgeMs": 15000,
+        "takeProfitBps": 3000,
+        "stopLossBps": 1500,
+        "trailingStopBps": 1000,
+        "maxHoldMs": 3600000,
+        "creatorAllowlist": [],
+        "creatorBlocklist": []
+      }
+    ],
+    "launches": [],
+    "positions": [],
+    "trades": [],
+    "alerts": [],
+    "seen": [],
+    "pendingLaunches": [],
+    "metrics": {},
+    "rpc": {
+      "status": "not-configured"
+    },
+    "realizedPnlSol": 0,
+    "marketLedger": {
+      "balanceLamports": "10000000000",
+      "dailySpendLamports": "0",
+      "realizedPnlLamports": "0",
+      "day": "2026-11-14"
+    },
+    "marketReviews": [],
+    "marketLifecycle": [
+      {
+        "id": "pump:4Lk1nEvXEaamyVqz6x1nJhpwwBSv2QjP2Q8qVPyqxR8u5ryFU7ZhvmiFAU5o2YB3tf4WcYP8JLs3nMErtN64CB4i",
+        "signature": "4Lk1nEvXEaamyVqz6x1nJhpwwBSv2QjP2Q8qVPyqxR8u5ryFU7ZhvmiFAU5o2YB3tf4WcYP8JLs3nMErtN64CB4i",
+        "program": "pump",
+        "slot": 469497742,
+        "receiptAt": 1794695860848,
+        "invalidated": false,
+        "transitions": [
+          {
+            "state": "DETECTED",
+            "commitment": "confirmed",
+            "at": 1794695860908,
+            "ageMs": 60,
+            "provider": "api.mainnet-beta.solana.com",
+            "reason": "Notification; creation instruction remains unverified"
+          },
+          {
+            "state": "PROVISIONAL",
+            "commitment": "confirmed",
+            "at": 1794695860908,
+            "ageMs": 60,
+            "provider": "api.mainnet-beta.solana.com",
+            "reason": "Read-only preparation permitted; no eligibility or finalized proof claimed"
+          }
+        ]
+      }
+    ]
+  },
+  "restart": {
+    "running": false,
+    "positions": 0,
+    "trades": 0,
+    "seenRetained": true
+  },
+  "simulationDiagnostics": [],
+  "providerAssessments": [],
+  "verificationRejectionCounts": {
+    "Read-only verification HTTP 429": 1
+  },
+  "rejectionCounts": {},
+  "liveTrading": false,
+  "scope": "Supervised bounded mainnet transport and WAL of delivered notifications; market candidates sampled. Connected transport is not proof of chain coverage. Recovery status is explicit provider-reported evidence.  No database pool is attached to this monitor; database responsiveness is separately validated. Current confirmed WebSocket receipts; strict finalized creation verification; current finalized accounts. Both actual buy and sell simulations required before an entry; mandatory-risk failures are durably rejected before simulation. No invented fill or risk overrides. Public RPC errors and unsupported variants are retained."
+}

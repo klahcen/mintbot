@@ -1,0 +1,576 @@
+{
+  "generatedAt": "2026-11-06T14:56:10.785Z",
+  "environment": {
+    "node": "v20.19.5",
+    "cpu": "11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz"
+  },
+  "events": 1000,
+  "repetitions": 3,
+  "seed": 34711,
+  "durability": "Both paths fsync WAL data before receipt/completion acknowledgement; worker also fsyncs directory. Same 64-offer groups and completion population. Worker startup excluded. Randomized adapter order per repetition.",
+  "baselineSha256": "47683be912787116b98abaf6bc4fc1e2ecf3f8fdf32652bb5a4fe5c3cdb15f36",
+  "harnessSha256": "d62366884e54edcec80eeb2b80b1a414fd76e445f22b0aea619b1062b6c9f7ee",
+  "rows": [
+    {
+      "repetition": 1,
+      "adapter": "worker",
+      "completed": 1000,
+      "elapsedMs": 436.5632609999998,
+      "completedPerSecond": 2290.6187701397084,
+      "latency": {
+        "receipt_to_completion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 20.407578999999714,
+          "p95": 52.53408499999978,
+          "p99": 63.71673200000032,
+          "max": 80.12299699999994
+        }
+      },
+      "cpuMicroseconds": {
+        "user": 705152,
+        "system": 36668
+      },
+      "memoryBefore": {
+        "rss": 245477376,
+        "heapTotal": 59596800,
+        "heapUsed": 37579224,
+        "external": 4410215,
+        "arrayBuffers": 60289
+      },
+      "memoryAfter": {
+        "rss": 256385024,
+        "heapTotal": 68509696,
+        "heapUsed": 26286184,
+        "external": 4086583,
+        "arrayBuffers": 36307
+      },
+      "sampledPeakRssBytes": 256385024,
+      "eventLoopDelayMs": {
+        "p95": 15.007743,
+        "p99": 42.008575,
+        "max": 42.008575
+      },
+      "journal": {
+        "pending": 0,
+        "pendingPeak": 64,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 1134670,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "journal-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 72664403968,
+        "fsyncBatches": 32,
+        "writerFailure": null
+      },
+      "telemetry": {
+        "uptimeMs": 2091.7037490000002,
+        "counters": {
+          "journal.fsync_batches": 32,
+          "journal.ownership_acks": 1000,
+          "journal.completion_acks": 1000
+        },
+        "gauges": {
+          "journal.unacked": {
+            "current": 0,
+            "peak": 64
+          },
+          "journal.unacked_bytes": {
+            "current": 0,
+            "peak": 54464
+          }
+        },
+        "histograms": {
+          "journal.worker_append_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 4.459487000000081,
+            "p95": 7.01855599999999,
+            "p99": 8.089763999999832,
+            "max": 30.423261999999795
+          },
+          "journal.worker_fsync_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 1.8108259999999063,
+            "p95": 3.4892680000002656,
+            "p99": 3.902646999999888,
+            "max": 6.548470000000179
+          },
+          "journal.batch_records": {
+            "count": 32,
+            "samples": 32,
+            "p50": 64,
+            "p95": 64,
+            "p99": 64,
+            "max": 64
+          },
+          "journal.ownership_ack_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 11.65841300000011,
+            "p95": 41.291347000000314,
+            "p99": 52.11814699999968,
+            "max": 57.954279999999926
+          }
+        }
+      }
+    },
+    {
+      "repetition": 1,
+      "adapter": "sync",
+      "completed": 1000,
+      "elapsedMs": 3645.305876,
+      "completedPerSecond": 274.32540204206447,
+      "latency": {
+        "receipt_to_completion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 109.62211500000012,
+          "p95": 179.3479610000004,
+          "p99": 195.93181100000038,
+          "max": 199.8680629999999
+        }
+      },
+      "cpuMicroseconds": {
+        "user": 460622,
+        "system": 101740
+      },
+      "memoryBefore": {
+        "rss": 166629376,
+        "heapTotal": 68509696,
+        "heapUsed": 26517616,
+        "external": 4094303,
+        "arrayBuffers": 36510
+      },
+      "memoryAfter": {
+        "rss": 165638144,
+        "heapTotal": 68771840,
+        "heapUsed": 26904456,
+        "external": 4470932,
+        "arrayBuffers": 413139
+      },
+      "sampledPeakRssBytes": 166760448,
+      "eventLoopDelayMs": {
+        "p95": 3653.238783,
+        "p99": 3653.238783,
+        "max": 3653.238783
+      },
+      "journal": {
+        "pending": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 930670,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "journal-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "telemetry": {
+        "uptimeMs": 3679.1315240000004,
+        "counters": {},
+        "gauges": {},
+        "histograms": {}
+      }
+    },
+    {
+      "repetition": 2,
+      "adapter": "worker",
+      "completed": 1000,
+      "elapsedMs": 392.12450799999897,
+      "completedPerSecond": 2550.210404089312,
+      "latency": {
+        "receipt_to_completion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 21.411605999999665,
+          "p95": 39.39981500000067,
+          "p99": 42.26473699999951,
+          "max": 43.37366800000018
+        }
+      },
+      "cpuMicroseconds": {
+        "user": 618469,
+        "system": 18568
+      },
+      "memoryBefore": {
+        "rss": 255938560,
+        "heapTotal": 68771840,
+        "heapUsed": 26990016,
+        "external": 4471135,
+        "arrayBuffers": 413342
+      },
+      "memoryAfter": {
+        "rss": 258953216,
+        "heapTotal": 68771840,
+        "heapUsed": 33061616,
+        "external": 4471135,
+        "arrayBuffers": 44499
+      },
+      "sampledPeakRssBytes": 258953216,
+      "eventLoopDelayMs": {
+        "p95": 12.541951,
+        "p99": 12.812287,
+        "max": 12.812287
+      },
+      "journal": {
+        "pending": 0,
+        "pendingPeak": 64,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 1134670,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "journal-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 72663171072,
+        "fsyncBatches": 32,
+        "writerFailure": null
+      },
+      "telemetry": {
+        "uptimeMs": 2075.3517200000006,
+        "counters": {
+          "journal.fsync_batches": 32,
+          "journal.ownership_acks": 1000,
+          "journal.completion_acks": 1000
+        },
+        "gauges": {
+          "journal.unacked": {
+            "current": 0,
+            "peak": 64
+          },
+          "journal.unacked_bytes": {
+            "current": 0,
+            "peak": 54464
+          }
+        },
+        "histograms": {
+          "journal.worker_append_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 5.050785999999789,
+            "p95": 7.8821959999986575,
+            "p99": 8.32049999999981,
+            "max": 19.797417000001587
+          },
+          "journal.worker_fsync_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 1.8942370000004303,
+            "p95": 3.3305710000004183,
+            "p99": 3.482374000001073,
+            "max": 5.922076999999263
+          },
+          "journal.batch_records": {
+            "count": 32,
+            "samples": 32,
+            "p50": 64,
+            "p95": 64,
+            "p99": 64,
+            "max": 64
+          },
+          "journal.ownership_ack_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 11.726189999999406,
+            "p95": 25.79722899999979,
+            "p99": 28.628240000000005,
+            "max": 29.40986300000077
+          }
+        }
+      }
+    },
+    {
+      "repetition": 2,
+      "adapter": "sync",
+      "completed": 1000,
+      "elapsedMs": 3261.8377150000015,
+      "completedPerSecond": 306.5756445826121,
+      "latency": {
+        "receipt_to_completion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 104.18825900000047,
+          "p95": 116.19711399999869,
+          "p99": 118.38791599999968,
+          "max": 119.2960490000005
+        }
+      },
+      "cpuMicroseconds": {
+        "user": 296258,
+        "system": 120113
+      },
+      "memoryBefore": {
+        "rss": 164884480,
+        "heapTotal": 68771840,
+        "heapUsed": 33254056,
+        "external": 4102495,
+        "arrayBuffers": 44702
+      },
+      "memoryAfter": {
+        "rss": 165015552,
+        "heapTotal": 68771840,
+        "heapUsed": 31729032,
+        "external": 4946068,
+        "arrayBuffers": 888275
+      },
+      "sampledPeakRssBytes": 165015552,
+      "eventLoopDelayMs": {
+        "p95": 3269.459967,
+        "p99": 3269.459967,
+        "max": 3269.459967
+      },
+      "journal": {
+        "pending": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 930670,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "journal-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "telemetry": {
+        "uptimeMs": 3294.2427050000006,
+        "counters": {},
+        "gauges": {},
+        "histograms": {}
+      }
+    },
+    {
+      "repetition": 3,
+      "adapter": "worker",
+      "completed": 1000,
+      "elapsedMs": 329.9970570000005,
+      "completedPerSecond": 3030.3300553374283,
+      "latency": {
+        "receipt_to_completion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 18.458152999999584,
+          "p95": 35.099200999999084,
+          "p99": 37.38675299999886,
+          "max": 38.28479200000038
+        }
+      },
+      "cpuMicroseconds": {
+        "user": 420566,
+        "system": 14170
+      },
+      "memoryBefore": {
+        "rss": 261062656,
+        "heapTotal": 68771840,
+        "heapUsed": 31804912,
+        "external": 4946271,
+        "arrayBuffers": 888478
+      },
+      "memoryAfter": {
+        "rss": 261193728,
+        "heapTotal": 68771840,
+        "heapUsed": 24779312,
+        "external": 4102292,
+        "arrayBuffers": 44499
+      },
+      "sampledPeakRssBytes": 261193728,
+      "eventLoopDelayMs": {
+        "p95": 11.206655,
+        "p99": 12.853247,
+        "max": 12.853247
+      },
+      "journal": {
+        "pending": 0,
+        "pendingPeak": 64,
+        "truncatedTailBytes": 0,
+        "oldestPendingAgeMs": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 1134670,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "journal-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": [],
+        "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+        "unacknowledged": 0,
+        "unacknowledgedBytes": 0,
+        "diskAvailableBytes": 72662638592,
+        "fsyncBatches": 32,
+        "writerFailure": null
+      },
+      "telemetry": {
+        "uptimeMs": 2042.126534000001,
+        "counters": {
+          "journal.fsync_batches": 32,
+          "journal.ownership_acks": 1000,
+          "journal.completion_acks": 1000
+        },
+        "gauges": {
+          "journal.unacked": {
+            "current": 0,
+            "peak": 64
+          },
+          "journal.unacked_bytes": {
+            "current": 0,
+            "peak": 54464
+          }
+        },
+        "histograms": {
+          "journal.worker_append_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 3.91649900000084,
+            "p95": 6.421816000000035,
+            "p99": 6.752340000000913,
+            "max": 16.95506000000023
+          },
+          "journal.worker_fsync_ms": {
+            "count": 32,
+            "samples": 32,
+            "p50": 2.0065359999989596,
+            "p95": 3.312456999999995,
+            "p99": 3.325129000000743,
+            "max": 3.3614510000006703
+          },
+          "journal.batch_records": {
+            "count": 32,
+            "samples": 32,
+            "p50": 64,
+            "p95": 64,
+            "p99": 64,
+            "max": 64
+          },
+          "journal.ownership_ack_ms": {
+            "count": 1000,
+            "samples": 1000,
+            "p50": 10.155037000000448,
+            "p95": 26.36748500000067,
+            "p99": 28.669879999999466,
+            "max": 29.318849999999657
+          }
+        }
+      }
+    },
+    {
+      "repetition": 3,
+      "adapter": "sync",
+      "completed": 1000,
+      "elapsedMs": 3336.1818109999986,
+      "completedPerSecond": 299.74385589622784,
+      "latency": {
+        "receipt_to_completion_ms": {
+          "count": 1000,
+          "samples": 1000,
+          "p50": 105.89272800000072,
+          "p95": 133.30095699999947,
+          "p99": 163.89149199999883,
+          "max": 165.54913699999815
+        }
+      },
+      "cpuMicroseconds": {
+        "user": 362366,
+        "system": 125035
+      },
+      "memoryBefore": {
+        "rss": 165953536,
+        "heapTotal": 68771840,
+        "heapUsed": 24931584,
+        "external": 4102495,
+        "arrayBuffers": 44702
+      },
+      "memoryAfter": {
+        "rss": 153518080,
+        "heapTotal": 68771840,
+        "heapUsed": 23588272,
+        "external": 5544287,
+        "arrayBuffers": 52691
+      },
+      "sampledPeakRssBytes": 166084608,
+      "eventLoopDelayMs": {
+        "p95": 3342.860287,
+        "p99": 3342.860287,
+        "max": 3342.860287
+      },
+      "journal": {
+        "pending": 0,
+        "quarantined": 0,
+        "completedRetained": 1000,
+        "maxPending": 10000,
+        "maxCompleted": 20000,
+        "pendingBytes": 0,
+        "walBytes": 930670,
+        "maxBytes": 67108864,
+        "durable": true,
+        "anchors": {
+          "pump": {
+            "signature": "journal-999",
+            "slot": 1999
+          }
+        },
+        "dedupeFloors": {},
+        "gaps": []
+      },
+      "telemetry": {
+        "uptimeMs": 3369.293534000002,
+        "counters": {},
+        "gauges": {},
+        "histograms": {}
+      }
+    }
+  ]
+}

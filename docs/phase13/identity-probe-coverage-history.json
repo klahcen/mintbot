@@ -1,0 +1,104 @@
+{
+  "endedAt": 1794746602321,
+  "journal": {
+    "pending": 0,
+    "pendingPeak": 53,
+    "truncatedTailBytes": 0,
+    "oldestPendingAgeMs": 0,
+    "activePending": 0,
+    "oldestActiveAgeMs": 0,
+    "quarantined": 0,
+    "completedRetained": 16829,
+    "maxPending": 10000,
+    "maxCompleted": 20000,
+    "pendingBytes": 0,
+    "walBytes": 27093172,
+    "maxBytes": 67108864,
+    "durable": true,
+    "anchors": {
+      "meteora-dlmm": {
+        "signature": "3mzG93JpX59KWEreGk6rc8EWJ9D4UsK1LR11c7CB4MvHp8BG2Zzf91GCRjb9Dr6TNz9179PGwYmrKpC2j2jQGspK",
+        "slot": 469733667
+      },
+      "pumpswap": {
+        "signature": "tvVGhgp6mZxrayhDWLNkdWfhApfUBsmWbLyGnAFEFRgm4iuhziKEZQrkqrsFKpxsanKCYE3qQaatcU4f59XiSYq",
+        "slot": 469733667
+      },
+      "pump": {
+        "signature": "qdCHs8Ukvjchqfe9FXp38aDR89RASdS9jwqL2UYAuxHgT1RTpi3hVQLP3EKxDFGXbqr8gYtBqbkNMTJWMdCWtf8",
+        "slot": 469733667
+      },
+      "raydium-cpmm": {
+        "signature": "4JHXY79bRfoisUaUoMHc959AfWir3vn5szPfEkLUPKEdyFa6AHHt7eq8wsK1ZASvvQeMS6JoeTSgcqfFaJumkL8G",
+        "slot": 469733665
+      }
+    },
+    "dedupeFloors": {},
+    "gaps": [
+      {
+        "program": "pump",
+        "fromSlot": 469733103,
+        "toSlot": 469733436,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "T5czjvqYeiKtyVxvYZseu2Cvq4qSmW6WMyXRegD7fdtcdQCiJYp6Shss1jZVnB5i7YSR6xHrD1Wrv33W8hPGsPD",
+          "slot": 469733135
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 4
+      },
+      {
+        "program": "pumpswap",
+        "fromSlot": 469733148,
+        "toSlot": 469733564,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "3pwaL69Sh6zDtYg9YXmbKZYTwziMowzStMzct8pcWFAGG4t5b6qXgizxypKtYLjVujxapGeYadi8BeFgU6hzeVJZ",
+          "slot": 469733180
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 0
+      },
+      {
+        "program": "raydium-cpmm",
+        "fromSlot": 469733147,
+        "toSlot": 469733464,
+        "reason": "supervised-websocket-disconnect",
+        "anchor": {
+          "signature": "61yeKsh7jZXFhqcXzX278RmAn3MVkrjUQkx7PhZGt3QtwfpUUwjhMVfmb8UWKVvK5reLAgPNBu4uMjZrPDMTkRkN",
+          "slot": 469733179
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 0
+      },
+      {
+        "program": "meteora-dlmm",
+        "fromSlot": 469733148,
+        "toSlot": 469733662,
+        "reason": "cycle-budget-exhausted:rpc-or-processing-budget-exhausted",
+        "anchor": {
+          "signature": "3Cv9bjgeWh3ycUEdQVWnbCSqjBUj2Hu3Mu3rJrH6sjTKMrrWRr2Uzc7NAs7FNrNuiJCkLGxJXjMZSEiWdprsC56b",
+          "slot": 469733180
+        },
+        "attempts": 3,
+        "status": "unrecoverable",
+        "knownRefused": 0
+      }
+    ],
+    "durability": "worker fsync(file) + fsync(directory) before acknowledgement",
+    "unacknowledged": 0,
+    "unacknowledgedBytes": 0,
+    "diskAvailableBytes": 59969875968,
+    "fsyncBatches": 7742,
+    "writerFailure": null
+  },
+  "sourceArtifact": {
+    "path": "docs/phase13/runtime/identity-probe/evidence.json",
+    "sha256": "f7e3aec6eb7891dbf6312c371c726c2bf139111ba64cdad5fb1337cacc59c33b",
+    "bytes": 394995
+  },
+  "scope": "Retained separate Phase13 identity diagnostic; not concatenated monitoring or an authorized new epoch"
+}
